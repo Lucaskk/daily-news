@@ -1,0 +1,404 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Daily News Slides 2026-05-28</title>
+  <!--
+    Background image attribution:
+    - title/world: https://images.unsplash.com/photo-1500530855697-b586d89ba3ee (NASA on Unsplash)
+    - conflict/public affairs: https://images.unsplash.com/photo-1495020689067-958852a7765e (Maksym Kaharlytskyi on Unsplash)
+    - health/science: https://images.unsplash.com/photo-1576086213369-97a306d36557 (National Cancer Institute on Unsplash)
+    - tech/finance: https://images.unsplash.com/photo-1518186285589-2f7649de83e0 (Timon Studler on Unsplash)
+  -->
+  <style>
+    :root {
+      --ink: #f7f4ec;
+      --muted: #eee5d5;
+      --panel: rgba(20, 27, 37, 0.78);
+      --line: rgba(255, 244, 221, 0.18);
+      --accent: #f4c95d;
+      --title-bg: url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1800&q=80");
+      --world-bg: url("https://images.unsplash.com/photo-1495020689067-958852a7765e?auto=format&fit=crop&w=1800&q=80");
+      --health-bg: url("https://images.unsplash.com/photo-1576086213369-97a306d36557?auto=format&fit=crop&w=1800&q=80");
+      --tech-bg: url("https://images.unsplash.com/photo-1518186285589-2f7649de83e0?auto=format&fit=crop&w=1800&q=80");
+      font-family: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: #10151d;
+      color: var(--ink);
+      overflow: hidden;
+    }
+    .deck {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+    }
+    .slide {
+      position: absolute;
+      inset: 0;
+      display: grid;
+      place-items: center;
+      padding: clamp(20px, 4vw, 48px);
+      background-image:
+        linear-gradient(120deg, rgba(15, 22, 32, 0.82), rgba(15, 22, 32, 0.58), rgba(15, 22, 32, 0.8)),
+        var(--bg, var(--title-bg));
+      background-position: center;
+      background-size: cover;
+      opacity: 0;
+      transform: translateX(2%);
+      pointer-events: none;
+      transition: opacity 180ms ease, transform 180ms ease;
+    }
+    .slide.active {
+      opacity: 1;
+      transform: translateX(0);
+      pointer-events: auto;
+    }
+    .content {
+      width: min(1120px, 100%);
+      max-height: calc(100vh - 132px);
+      overflow: auto;
+      padding: clamp(24px, 4vw, 42px);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: var(--panel);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 24px 90px rgba(0, 0, 0, 0.34);
+    }
+    .kicker {
+      margin: 0 0 12px;
+      color: var(--accent);
+      font-size: 0.92rem;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    h1, h2 {
+      margin: 0;
+      line-height: 1.08;
+    }
+    h1 {
+      font-size: clamp(2.7rem, 7vw, 5.8rem);
+      max-width: 930px;
+    }
+    h2 {
+      font-size: clamp(2rem, 4vw, 3.5rem);
+    }
+    p {
+      color: var(--muted);
+      line-height: 1.62;
+      font-size: clamp(1rem, 1.5vw, 1.24rem);
+      max-width: 940px;
+    }
+    ul {
+      margin: 22px 0 0;
+      padding-left: 1.2rem;
+      display: grid;
+      gap: 12px;
+      color: var(--muted);
+      font-size: clamp(1rem, 1.36vw, 1.14rem);
+      line-height: 1.5;
+    }
+    .rank-list,
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 24px;
+    }
+    .rank-list {
+      list-style: none;
+      padding: 0;
+    }
+    .rank-list li,
+    .card {
+      padding: 18px;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: rgba(255, 255, 255, 0.07);
+    }
+    .rank-list li {
+      display: grid;
+      grid-template-columns: 34px 1fr;
+      gap: 10px;
+      align-items: start;
+      color: var(--muted);
+    }
+    .rank-list b {
+      display: grid;
+      place-items: center;
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      color: #17202a;
+      background: var(--accent);
+      font-size: 0.92rem;
+    }
+    .card h3 {
+      margin: 0 0 10px;
+      color: #fff8ea;
+      font-size: 1.06rem;
+    }
+    .card p {
+      margin: 0;
+      font-size: 0.98rem;
+      max-width: none;
+    }
+    .source-corner {
+      position: absolute;
+      left: 20px;
+      bottom: 18px;
+      z-index: 15;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      max-width: 68vw;
+      padding: 10px 12px;
+      border: 1px solid rgba(255, 244, 226, 0.18);
+      border-radius: 16px;
+      background: rgba(15, 22, 32, 0.84);
+      backdrop-filter: blur(12px);
+      font-size: 0.77rem;
+      line-height: 1.2;
+    }
+    .source-corner span {
+      color: var(--accent);
+      font-weight: 800;
+    }
+    .source-corner a {
+      max-width: 250px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      color: #fff3da;
+      text-decoration: none;
+    }
+    .source-corner a:hover { text-decoration: underline; }
+    .controls {
+      position: fixed;
+      left: 50%;
+      bottom: 18px;
+      z-index: 20;
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      transform: translateX(-50%);
+      padding: 10px 12px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(15, 22, 32, 0.84);
+      backdrop-filter: blur(12px);
+    }
+    button {
+      width: 42px;
+      height: 42px;
+      border: 0;
+      border-radius: 999px;
+      background: var(--accent);
+      color: #18202c;
+      font: inherit;
+      font-weight: 900;
+      cursor: pointer;
+    }
+    .counter {
+      min-width: 78px;
+      text-align: center;
+      color: #fff3da;
+      font-size: 0.9rem;
+    }
+    @media (max-width: 860px) {
+      .rank-list,
+      .cards { grid-template-columns: 1fr; }
+      .source-corner { max-width: calc(100vw - 40px); }
+      .content { max-height: calc(100vh - 150px); }
+    }
+  </style>
+</head>
+<body>
+  <div class="deck">
+    <section class="slide active" style="--bg: var(--title-bg);">
+      <div class="content">
+        <p class="kicker">Daily Global + Tech / AI News</p>
+        <h1>2026-05-28 每日全球與科技 AI 新聞</h1>
+        <p>今天的主線是三個壓力點同時變硬：俄烏空防、Gaza 國際法責任、以及 DRC Ebola 跨境外溢。科技段則不是新模型跑分，而是 AI 已直接進入勞動轉型、零售金融交易與科研基礎設施。</p>
+      </div>
+      <div class="source-corner"><span>來源</span><a href="daily-news-2026-05-28.md">本日報告：2026-05-28</a></div>
+    </section>
+
+    <section class="slide" style="--bg: var(--world-bg);">
+      <div class="content">
+        <p class="kicker">Executive Brief</p>
+        <h2>今天不是單一爆點，而是後果開始落地</h2>
+        <ul>
+          <li>烏克蘭從承受威脅，進一步走到正式向美國索取更多防空攔截器。</li>
+          <li>Gaza 的爭議從持續空襲，轉成聯合國直接點名可能涉及 unlawful killings 與 war crimes。</li>
+          <li>剛果 Ebola 從區域公衛危機變成邊境封鎖與停火呼籲的複合事件。</li>
+          <li>菲律賓、匈牙利、西班牙三條線一起顯示：制度追責比前幾天更有實體。</li>
+        </ul>
+      </div>
+      <div class="source-corner"><span>來源</span><a href="https://www.internazionale.it/ultime-notizie-reuters/2026/05/27/zelenskiy-asks-trump-for-air-defences-as-russia-escalates-strike-threats">Reuters：烏克蘭防空求援</a><a href="https://www.investing.com/news/world-news/un-raises-alarm-over-israels-killings-of-gazans-near-armistice-line-4712672">Reuters：Gaza armistice line</a><a href="https://www.streetinsider.com/Reuters/WHO%2Burges%2Bceasefire%2Bin%2BCongo%2Bto%2Bcontain%2BEbola%2Bas%2Bcases%2Bsurge/26554842.html">Reuters：WHO / Ebola</a></div>
+    </section>
+
+    <section class="slide" style="--bg: var(--world-bg);">
+      <div class="content">
+        <p class="kicker">Top 10</p>
+        <h2>世界新聞 1-5</h2>
+        <ol class="rank-list">
+          <li><b>1</b><span>Zelenskyy 致函 Trump 與國會，要求更多防空系統與攔截彈。</span></li>
+          <li><b>2</b><span>聯合國警告以軍在 Gaza armistice line 附近的殺戮可能構成戰爭罪。</span></li>
+          <li><b>3</b><span>WHO 要求剛果東部停火，烏干達同步關閉邊境遏止 Ebola 外溢。</span></li>
+          <li><b>4</b><span>ICC 將 Duterte 危害人類罪審判排定於 11 月 30 日。</span></li>
+          <li><b>5</b><span>中國稱已在南海驅離荷蘭巡防艦，Paracel Islands 再起摩擦。</span></li>
+        </ol>
+      </div>
+      <div class="source-corner"><span>來源</span><a href="https://www.internazionale.it/ultime-notizie-reuters/2026/05/27/zelenskiy-asks-trump-for-air-defences-as-russia-escalates-strike-threats">Reuters：烏克蘭防空</a><a href="https://www.investing.com/news/world-news/un-raises-alarm-over-israels-killings-of-gazans-near-armistice-line-4712672">Reuters：Gaza 法律風險</a><a href="https://www.streetinsider.com/Reuters/ICC%2Bsets%2Btrial%2Bdate%2Bfor%2BPhilippines%27%2BDuterte%2Bover%2Balleged%2Bcrimes%2Bagainst%2Bhumanity/26554808.html">Reuters：Duterte 審判</a></div>
+    </section>
+
+    <section class="slide" style="--bg: var(--world-bg);">
+      <div class="content">
+        <p class="kicker">Top 10</p>
+        <h2>世界新聞 6-10</h2>
+        <ol class="rank-list">
+          <li><b>6</b><span>南韓稱荷莫茲貨輪攻擊極可能使用伊朗反艦飛彈。</span></li>
+          <li><b>7</b><span>西班牙警方進入執政社會黨總部，調查疑似非法付款與融資。</span></li>
+          <li><b>8</b><span>匈牙利國會通過法律維持 ICC 會員資格，逆轉 Orban 退群路線。</span></li>
+          <li><b>9</b><span>NATO 北翼連續出現漂移軍用無人機，戰場外溢風險上升。</span></li>
+          <li><b>10</b><span>美墨啟動三輪貿易協議談判，公告未提加拿大。</span></li>
+        </ol>
+      </div>
+      <div class="source-corner"><span>來源</span><a href="https://kfgo.com/2026/05/27/south-korea-says-attack-on-ship-in-strait-of-hormuz-likely-involved-an-iranian-missile/">Reuters：荷莫茲貨輪</a><a href="https://www.streetinsider.com/Reuters/Spanish%2Bpolice%2Benter%2BSocialist%2BPartys%2BHQ%2Bin%2Bpayments%2Bprobe/26552489.html">Reuters：西班牙社會黨</a><a href="https://www.investing.com/news/stock-market-news/us-mexico-set-three-rounds-of-trade-deal-talks-without-canada-4712769">Reuters：美墨貿易談判</a></div>
+    </section>
+
+    <section class="slide" style="--bg: var(--health-bg);">
+      <div class="content">
+        <p class="kicker">Deep Dive</p>
+        <h2>三條最值得持續追蹤的世界線</h2>
+        <div class="cards">
+          <article class="card">
+            <h3>烏克蘭空防消耗</h3>
+            <p>新意不在俄方又威脅一次，而在烏方已正式把「交付速度不夠」寫進給 Trump 與國會的求援信。</p>
+          </article>
+          <article class="card">
+            <h3>Gaza 法律壓力</h3>
+            <p>聯合國把停火後 near-boundary killings 具體化成可討論 war-crimes 的框架，後續若升級到調查或制裁，語氣會更硬。</p>
+          </article>
+          <article class="card">
+            <h3>DRC Ebola 外溢</h3>
+            <p>當 WHO 開始要求停火、烏干達開始關邊，代表疫情已不只是醫療資源不足，而是衝突本身正在擴散疾病。</p>
+          </article>
+          <article class="card">
+            <h3>NATO 北翼誤判風險</h3>
+            <p>烏克蘭無人機偏航碰到 NATO 領空，讓「支援烏克蘭」和「避免直接擴戰」的界線更難維持。</p>
+          </article>
+        </div>
+      </div>
+      <div class="source-corner"><span>來源</span><a href="https://www.internazionale.it/ultime-notizie-reuters/2026/05/27/zelenskiy-asks-trump-for-air-defences-as-russia-escalates-strike-threats">Reuters：空防求援</a><a href="https://www.investing.com/news/world-news/un-raises-alarm-over-israels-killings-of-gazans-near-armistice-line-4712672">Reuters：Gaza 戰爭罪疑慮</a><a href="https://www.marketscreener.com/news/uganda-closes-border-with-congo-to-try-to-contain-ebola-outbreak-ce7f5ad3db88f227">Reuters：烏干達關邊</a><a href="https://www.investing.com/news/world-news/drone-incursions-sow-fear-chaos-along-natos-baltic-and-finnish-borders-4711239">Reuters：NATO 漂移無人機</a></div>
+    </section>
+
+    <section class="slide" style="--bg: var(--world-bg);">
+      <div class="content">
+        <p class="kicker">Institutions</p>
+        <h2>制度後果開始落地</h2>
+        <ul>
+          <li><b>Duterte / ICC：</b>審判日期意味著國際究責真正進入倒數，不再只是象徵性拘押。</li>
+          <li><b>西班牙 / PSOE：</b>調查已經碰到執政黨總部，對 Sánchez 的壓力等級上升。</li>
+          <li><b>匈牙利 / ICC：</b>新政府把國際法機構立場從 Orban 時代重新拉回歐洲主流。</li>
+          <li><b>美墨談判：</b>北美貿易秩序出現三邊改雙邊的實質訊號。</li>
+        </ul>
+      </div>
+      <div class="source-corner"><span>來源</span><a href="https://www.streetinsider.com/Reuters/ICC%2Bsets%2Btrial%2Bdate%2Bfor%2BPhilippines%27%2BDuterte%2Bover%2Balleged%2Bcrimes%2Bagainst%2Bhumanity/26554808.html">Reuters：ICC / Duterte</a><a href="https://www.streetinsider.com/Reuters/Spanish%2Bpolice%2Benter%2BSocialist%2BPartys%2BHQ%2Bin%2Bpayments%2Bprobe/26552489.html">Reuters：PSOE 調查</a><a href="https://www.marketscreener.com/news/parliament-approves-law-to-keep-hungary-s-membership-of-the-international-criminal-court-ce7f5ad2d18cf421">Reuters：匈牙利 ICC</a></div>
+    </section>
+
+    <section class="slide" style="--bg: var(--tech-bg);">
+      <div class="content">
+        <p class="kicker">Technology / AI</p>
+        <h2>今天的 AI 重點：制度、交易、科學</h2>
+        <div class="cards">
+          <article class="card">
+            <h3>OpenAI Foundation：2.5 億美元</h3>
+            <p>AI 勞動衝擊首次被放進具體資金池，重點是研究、過渡支援與收益分配實驗。</p>
+          </article>
+          <article class="card">
+            <h3>Robinhood：Open to Agents</h3>
+            <p>AI agents 可直接連到專用交易帳戶與信用卡，零售金融正式進入 agentic execution。</p>
+          </article>
+          <article class="card">
+            <h3>Biohub：蛋白質世界模型</h3>
+            <p>把 AI 生物學能力做成公開可用研究基礎設施，讓藥物發現與蛋白質設計更像平台。</p>
+          </article>
+          <article class="card">
+            <h3>總結</h3>
+            <p>今天最重要的不是誰又發了更大的模型，而是 AI 正接上就業分配、金流風控與生命科學核心流程。</p>
+          </article>
+        </div>
+      </div>
+      <div class="source-corner"><span>來源</span><a href="https://openaifoundation.org/news/economic-futures-in-the-age-of-ai">OpenAI Foundation：Economic Futures</a><a href="https://robinhood.com/us/en/newsroom/robinhood-is-now-open-to-agents/">Robinhood：Open to Agents</a><a href="https://biohub.org/news/world-model-of-protein-biology/">Biohub：Protein World Model</a></div>
+    </section>
+
+    <section class="slide" style="--bg: var(--title-bg);">
+      <div class="content">
+        <p class="kicker">Watchlist</p>
+        <h2>接下來要盯的不是更多 headline，而是三種驗證</h2>
+        <ul>
+          <li>美國是否真的補上烏克蘭防空缺口。</li>
+          <li>Gaza 的聯合國指控會不會被轉成更正式的追責程序。</li>
+          <li>Robinhood 類型的 agentic finance，會不會逼出更快的金融監管反應。</li>
+        </ul>
+        <p>完整文字版、去重理由與來源整理，已放在同目錄的 `daily-news-2026-05-28.md` 與 `source-notes-2026-05-28.md`。</p>
+      </div>
+      <div class="source-corner"><span>來源</span><a href="daily-news-2026-05-28.md">本日報告</a><a href="source-notes-2026-05-28.md">Source Notes</a></div>
+    </section>
+  </div>
+
+  <div class="controls">
+    <button id="prev" aria-label="上一張">←</button>
+    <div class="counter" id="counter">1 / 8</div>
+    <button id="next" aria-label="下一張">→</button>
+  </div>
+
+  <script>
+    const slides = Array.from(document.querySelectorAll(".slide"));
+    const counter = document.getElementById("counter");
+    const prev = document.getElementById("prev");
+    const next = document.getElementById("next");
+    let index = 0;
+
+    function render() {
+      slides.forEach((slide, i) => slide.classList.toggle("active", i === index));
+      counter.textContent = `${index + 1} / ${slides.length}`;
+    }
+
+    function move(delta) {
+      index = (index + delta + slides.length) % slides.length;
+      render();
+    }
+
+    prev.addEventListener("click", () => move(-1));
+    next.addEventListener("click", () => move(1));
+
+    window.addEventListener("keydown", (event) => {
+      if (["ArrowRight", "PageDown", " "].includes(event.key)) {
+        event.preventDefault();
+        move(1);
+      }
+      if (["ArrowLeft", "PageUp"].includes(event.key)) {
+        event.preventDefault();
+        move(-1);
+      }
+      if (event.key === "Home") {
+        index = 0;
+        render();
+      }
+      if (event.key === "End") {
+        index = slides.length - 1;
+        render();
+      }
+    });
+
+    render();
+  </script>
+</body>
+</html>
