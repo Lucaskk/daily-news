@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Daily News Slides 2026-05-29</title>
+  <!--
+    Background image attribution:
+    - title/world map: https://images.unsplash.com/photo-1521295121783-8a321d551ad2 (NASA on Unsplash)
+    - conflict/city lights: https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b (Denys Nevozhai on Unsplash)
+    - policy/europe: https://images.unsplash.com/photo-1467269204594-9661b134dd2b (Jacek Dylag on Unsplash)
+    - tech/infrastructure: https://images.unsplash.com/photo-1516321318423-f06f85e504b3 (ThisisEngineering on Unsplash)
+  -->
+  <style>
+    :root {
+      --ink: #f8f4ea;
+      --muted: #e8ddc8;
+      --panel: rgba(16, 24, 35, 0.78);
+      --line: rgba(255, 242, 217, 0.16);
+      --accent: #ffcc66;
+      --title-bg: url("https://images.unsplash.com/photo-1521295121783-8a321d551ad2?auto=format&fit=crop&w=1800&q=80");
+      --conflict-bg: url("https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?auto=format&fit=crop&w=1800&q=80");
+      --policy-bg: url("https://images.unsplash.com/photo-1467269204594-9661b134dd2b?auto=format&fit=crop&w=1800&q=80");
+      --tech-bg: url("https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1800&q=80");
+      font-family: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: #0e141b; color: var(--ink); overflow: hidden; }
+    .deck { position: relative; width: 100vw; height: 100vh; }
+    .slide {
+      position: absolute;
+      inset: 0;
+      display: grid;
+      place-items: center;
+      padding: clamp(18px, 3vw, 40px);
+      background-image: linear-gradient(120deg, rgba(12, 18, 27, 0.82), rgba(12, 18, 27, 0.58), rgba(12, 18, 27, 0.8)), var(--bg, var(--title-bg));
+      background-position: center;
+      background-size: cover;
+      opacity: 0;
+      transform: translateX(2%);
+      pointer-events: none;
+      transition: opacity 180ms ease, transform 180ms ease;
+    }
+    .slide.active { opacity: 1; transform: translateX(0); pointer-events: auto; }
+    .content {
+      width: min(1120px, 100%);
+      max-height: calc(100vh - 128px);
+      overflow: auto;
+      padding: clamp(24px, 4vw, 40px);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: var(--panel);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 24px 90px rgba(0, 0, 0, 0.36);
+    }
+    .kicker { margin: 0 0 10px; color: var(--accent); font-size: 0.9rem; font-weight: 800; letter-spacing: 0.05em; text-transform: uppercase; }
+    h1, h2 { margin: 0; line-height: 1.08; }
+    h1 { font-size: clamp(2.5rem, 7vw, 5.8rem); max-width: 920px; }
+    h2 { font-size: clamp(1.95rem, 4vw, 3.4rem); }
+    p { color: var(--muted); line-height: 1.62; font-size: clamp(1rem, 1.45vw, 1.2rem); max-width: 940px; }
+    ul { margin: 18px 0 0; padding-left: 1.1rem; display: grid; gap: 10px; color: var(--muted); font-size: clamp(1rem, 1.35vw, 1.12rem); line-height: 1.5; }
+    .rank-list, .cards { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; margin-top: 22px; }
+    .rank-list { list-style: none; padding: 0; }
+    .rank-list li, .card { padding: 18px; border: 1px solid var(--line); border-radius: 14px; background: rgba(255, 255, 255, 0.07); }
+    .rank-list li { display: grid; grid-template-columns: 34px 1fr; gap: 10px; align-items: start; color: var(--muted); }
+    .rank-list b { display: grid; place-items: center; width: 34px; height: 34px; border-radius: 50%; color: #18212c; background: var(--accent); font-size: 0.92rem; }
+    .card h3 { margin: 0 0 10px; color: #fff8ea; font-size: 1.08rem; }
+    .card p { margin: 0; font-size: 0.98rem; max-width: none; }
+    .source-corner {
+      position: absolute;
+      left: 18px;
+      bottom: 16px;
+      z-index: 15;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      max-width: 70vw;
+      padding: 10px 12px;
+      border: 1px solid rgba(255, 242, 217, 0.18);
+      border-radius: 16px;
+      background: rgba(12, 18, 27, 0.84);
+      backdrop-filter: blur(12px);
+      font-size: 0.77rem;
+      line-height: 1.2;
+    }
+    .source-corner span { color: var(--accent); font-weight: 800; }
+    .source-corner a { max-width: 260px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: #fff1d5; text-decoration: none; }
+    .source-corner a:hover { text-decoration: underline; }
+    .controls {
+      position: fixed;
+      left: 50%;
+      bottom: 18px;
+      z-index: 20;
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      transform: translateX(-50%);
+      padding: 10px 12px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(12, 18, 27, 0.84);
+      backdrop-filter: blur(12px);
+    }
+    button { width: 42px; height: 42px; border: 0; border-radius: 999px; background: var(--accent); color: #17212b; font: inherit; font-weight: 900; cursor: pointer; }
+    .counter { min-width: 78px; text-align: center; color: #fff1d5; font-size: 0.9rem; }
+    @media (max-width: 860px) {
+      .rank-list, .cards { grid-template-columns: 1fr; }
+      .source-corner { max-width: calc(100vw - 36px); }
+      .content { max-height: calc(100vh - 146px); }
+    }
+  </style>
+</head>
+<body>
+  <div class="deck">
+    <section class="slide active" style="--bg: var(--title-bg);">
+      <div class="content">
+        <p class="kicker">Daily Global + Tech / AI News</p>
+        <h1>2026-05-29 每日全球與科技 AI 新聞</h1>
+        <p>今天的主線是危機制度化：Kyiv 威脅升到聯合國公開交鋒、Gaza 控制目標被推到 70%、Ebola 進入臨床試驗治理期。科技段則顯示 AI 競爭已轉向資本、CPU 與可信部署。</p>
+      </div>
+      <div class="source-corner"><span>來源</span><a href="daily-news-2026-05-29.md">本日報告：2026-05-29</a></div>
+    </section>
+    <section class="slide" style="--bg: var(--conflict-bg);">
+      <div class="content">
+        <p class="kicker">Executive Brief</p>
+        <h2>今天不是單點爆炸，而是多條線都變硬</h2>
+        <ul>
+          <li>Ukraine：美國不再只是旁觀威脅，而是在聯合國直接點名俄方不要再打 Kyiv。</li>
+          <li>Gaza：從 war-crimes scrutiny 走到 Netanyahu 明言要把控制區擴到 70%。</li>
+          <li>Ebola：從停火與關邊，走到 WHO 明確限制疫苗與療法只能進試驗。</li>
+          <li>Europe：Latvia 換政府、Iceland 啟動 EU 公投程序、EU 對中貿易手段升級。</li>
+        </ul>
+      </div>
+      <div class="source-corner"><span>來源</span><a href="https://openrss.org/www.reuters.com/world/">Reuters：世界焦點</a><a href="https://apnews.com/article/24df97c6c41ecc2615aa24285674f31d">AP：Gaza 70%</a><a href="https://www.marketscreener.com/news/latvia-parliament-approves-new-government-after-drone-row-topples-coalition-ce7f5ddadd8ef22d">Reuters：Latvia 新政府</a></div>
+    </section>
+    <section class="slide" style="--bg: var(--conflict-bg);">
+      <div class="content">
+        <p class="kicker">Top 10</p>
+        <h2>世界新聞 1-5</h2>
+        <ol class="rank-list">
+          <li><b>1</b><span>美國在聯合國警告俄羅斯不要對 Kyiv 發動「systemic strikes」。</span></li>
+          <li><b>2</b><span>Netanyahu 下令把 Gaza 控制區推到 70%。</span></li>
+          <li><b>3</b><span>美國制裁伊朗軍方石油銷售，荷莫茲停火談判仍未定案。</span></li>
+          <li><b>4</b><span>WHO 指 Bundibugyo Ebola 的療法與疫苗只能在臨床試驗中使用。</span></li>
+          <li><b>5</b><span>印度「Cockroach Janta Party」成為 Gen Z 抗議失業與洩題的政治出口。</span></li>
+        </ol>
+      </div>
+      <div class="source-corner"><span>來源</span><a href="https://openrss.org/www.reuters.com/world/">Reuters：Kyiv / Iran / Ebola / India</a><a href="https://www.aljazeera.com/news/2026/5/28/israels-netanyahu-directs-army-to-seize-70-percent-of-gaza-strip">Al Jazeera：Gaza 70%</a></div>
+    </section>
+    <section class="slide" style="--bg: var(--policy-bg);">
+      <div class="content">
+        <p class="kicker">Top 10</p>
+        <h2>世界新聞 6-10</h2>
+        <ol class="rank-list">
+          <li><b>6</b><span>Latvia 批准新政府，前朝因無人機入境處置爭議而垮台。</span></li>
+          <li><b>7</b><span>Iceland 國會拍板 8 月公投，決定是否重啟 EU 入盟談判。</span></li>
+          <li><b>8</b><span>EU 擬擴大對中配額與關稅，中方警告反制。</span></li>
+          <li><b>9</b><span>Carney 為 USMCA 檢討呼籲建立新的美加夥伴關係。</span></li>
+          <li><b>10</b><span>以色列稱已擊殺 Hamas 新任武裝首長 Mohammed Odeh。</span></li>
+        </ol>
+      </div>
+      <div class="source-corner"><span>來源</span><a href="https://www.marketscreener.com/news/latvia-parliament-approves-new-government-after-drone-row-topples-coalition-ce7f5ddadd8ef22d">Reuters：Latvia</a><a href="https://www.internazionale.it/ultime-notizie-reuters/2026/05/28/iceland-s-parliament-votes-to-hold-referendum-on-eu-accession-talks-in-august">Reuters：Iceland</a><a href="https://www.investing.com/news/economy-news/carney-seeks-new-uscanada-partnership-as-world-undergoes-rupture-4715104">Reuters：Carney</a></div>
+    </section>
+    <section class="slide" style="--bg: var(--policy-bg);">
+      <div class="content">
+        <p class="kicker">Synthesis</p>
+        <h2>今天的三個大圖像</h2>
+        <div class="cards">
+          <article class="card"><h3>停火正在被重新定義</h3><p>Kyiv、Gaza、Hormuz 都不是穩定的停火，而是各方爭奪下一輪槓桿的過渡狀態。</p></article>
+          <article class="card"><h3>外溢已開始改寫內政</h3><p>Latvia 因無人機事件換政府，Iceland 把 EU 議題拉回中心，危機已進入制度層。</p></article>
+          <article class="card"><h3>經貿去風險更硬</h3><p>EU 對中更強硬，美加也在重談合作框架，供應鏈與安全正在被一起重構。</p></article>
+          <article class="card"><h3>青年不滿找到新語言</h3><p>印度的 CJP 不是單純迷因，而是 Gen Z 對就業與代表性不滿的高擴散載體。</p></article>
+        </div>
+      </div>
+      <div class="source-corner"><span>來源</span><a href="https://openrss.org/www.reuters.com/world/">Reuters：世界焦點</a><a href="https://apnews.com/article/7f8a39c5f9d5e9a487bedca68dbd88a6">AP：Latvia</a><a href="https://www.marketscreener.com/news/eu-to-broaden-import-quotas-and-tariffs-against-china-official-tells-ft-ce7f5ad3de8ef123">Reuters：EU-China</a></div>
+    </section>
+    <section class="slide" style="--bg: var(--tech-bg);">
+      <div class="content">
+        <p class="kicker">Tech / AI</p>
+        <h2>AI 今天的關鍵不是模型分數</h2>
+        <div class="cards">
+          <article class="card"><h3>Anthropic：資本密度繼續上升</h3><p>Series H 融資 650 億美元、估值 9,650 億美元，代表算力與企業平台戰還能吃下更多資本。</p></article>
+          <article class="card"><h3>ByteDance：開始自研 CPU</h3><p>大型應用平台也開始往上游做矽，說明 inference 與 agent rollout 已把 CPU 變成瓶頸。</p></article>
+          <article class="card"><h3>Google：影片也要有來源憑證</h3><p>Pixel 將把 Content Credentials 擴展到 video，可信內容基礎設施正在補齊動態媒體。</p></article>
+          <article class="card"><h3>OpenAI：供應鏈安全進入用戶端</h3><p>TanStack 事件後要求 macOS app 升級，AI 公司正面對更典型的軟體供應鏈攻擊面。</p></article>
+        </div>
+      </div>
+      <div class="source-corner"><span>來源</span><a href="https://www.anthropic.com/news/series-h">Anthropic：Series H</a><a href="https://m.investing.com/news/stock-market-news/exclusivebytedance-developing-custom-cpu-chips-to-support-ai-rollout-sources-say-4713631?ampMode=1">Reuters：ByteDance CPU</a><a href="https://blog.google/innovation-and-ai/technology/ai/io-2026-keynote-moment-videos/">Google：Content Credentials</a><a href="https://openai.com/index/our-response-to-the-tanstack-npm-supply-chain-attack/">OpenAI：TanStack 回應</a></div>
+    </section>
+    <section class="slide" style="--bg: var(--tech-bg);">
+      <div class="content">
+        <p class="kicker">Takeaway</p>
+        <h2>2026 下半年的 AI 更像基礎設施競爭</h2>
+        <ul>
+          <li>資本：能不能持續拿到大錢，決定 frontier lab 的產品節奏與算力配置。</li>
+          <li>矽：CPU、GPU、網路與資料中心的供應，開始決定誰能把 agent 真正推到大規模。</li>
+          <li>可信：內容來源與供應鏈安全，正在從附加值變成平台基本盤。</li>
+          <li>結論：deployment economics 比單一 benchmark 更值得盯。</li>
+        </ul>
+      </div>
+      <div class="source-corner"><span>來源</span><a href="https://www.investing.com/news/stock-market-news/anthropic-raises-65-billion-now-valued-at-965-billion-4715214">Reuters：Anthropic 資金</a><a href="https://openai.com/index/our-response-to-the-tanstack-npm-supply-chain-attack/">OpenAI：macOS 更新</a></div>
+    </section>
+    <section class="slide" style="--bg: var(--title-bg);">
+      <div class="content">
+        <p class="kicker">Watchlist</p>
+        <h2>接下來最該追的五件事</h2>
+        <ul>
+          <li>俄方是否真的展開下一輪對 Kyiv 的系統性打擊。</li>
+          <li>Gaza 70% 控制目標會不會把停火框架徹底打穿。</li>
+          <li>Ebola 試驗能否在 DRC / Uganda 的安全條件下落地。</li>
+          <li>Latvia 新政府是否觸發更多 NATO 東翼反無人機協調。</li>
+          <li>Anthropic 與 ByteDance 是否帶動更多 AI 公司往自有基礎設施收斂。</li>
+        </ul>
+      </div>
+      <div class="source-corner"><span>來源</span><a href="daily-news-2026-05-29.md">本日報告：追蹤問題</a></div>
+    </section>
+  </div>
+  <div class="controls" aria-label="Slide Controls">
+    <button id="prev" type="button" aria-label="Previous slide">‹</button>
+    <div class="counter"><span id="current">1</span> / <span id="total">8</span></div>
+    <button id="next" type="button" aria-label="Next slide">›</button>
+  </div>
+  <script>
+    const slides = Array.from(document.querySelectorAll(".slide"));
+    const currentEl = document.getElementById("current");
+    const totalEl = document.getElementById("total");
+    const prevBtn = document.getElementById("prev");
+    const nextBtn = document.getElementById("next");
+    let index = 0;
+    function render() {
+      slides.forEach((slide, i) => slide.classList.toggle("active", i === index));
+      currentEl.textContent = String(index + 1);
+      totalEl.textContent = String(slides.length);
+    }
+    function move(delta) {
+      index = (index + delta + slides.length) % slides.length;
+      render();
+    }
+    prevBtn.addEventListener("click", () => move(-1));
+    nextBtn.addEventListener("click", () => move(1));
+    window.addEventListener("keydown", (event) => {
+      if (["ArrowRight", "PageDown", " "].includes(event.key)) { event.preventDefault(); move(1); }
+      if (["ArrowLeft", "PageUp"].includes(event.key)) { event.preventDefault(); move(-1); }
+      if (event.key === "Home") { index = 0; render(); }
+      if (event.key === "End") { index = slides.length - 1; render(); }
+    });
+    render();
+  </script>
+</body>
+</html>
