@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Daily News Slides 2026-05-30</title>
+  <!--
+    Background image attribution:
+    - title / globe lights: https://images.unsplash.com/photo-1462331940025-496dfbfc7564 (NASA on Unsplash)
+    - conflict / border city: https://images.unsplash.com/photo-1477959858617-67f85cf4f1df (Denys Nevozhai on Unsplash)
+    - institutions / europe: https://images.unsplash.com/photo-1513635269975-59663e0ac1ad (Jacek Dylag on Unsplash)
+    - tech / compute: https://images.unsplash.com/photo-1518770660439-4636190af475 (Possessed Photography on Unsplash)
+  -->
+  <style>
+    :root {
+      --ink: #f6f2e8;
+      --muted: #e5dccb;
+      --panel: rgba(18, 24, 34, 0.8);
+      --line: rgba(255, 241, 210, 0.18);
+      --accent: #f7c873;
+      --title-bg: url("https://images.unsplash.com/photo-1462331940025-496dfbfc7564?auto=format&fit=crop&w=1800&q=80");
+      --conflict-bg: url("https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?auto=format&fit=crop&w=1800&q=80");
+      --policy-bg: url("https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&fit=crop&w=1800&q=80");
+      --tech-bg: url("https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1800&q=80");
+      font-family: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: #0c1219; color: var(--ink); overflow: hidden; }
+    .deck { position: relative; width: 100vw; height: 100vh; }
+    .slide {
+      position: absolute;
+      inset: 0;
+      display: grid;
+      place-items: center;
+      padding: clamp(18px, 3vw, 40px);
+      background-image: linear-gradient(120deg, rgba(10, 16, 24, 0.84), rgba(10, 16, 24, 0.58), rgba(10, 16, 24, 0.82)), var(--bg, var(--title-bg));
+      background-position: center;
+      background-size: cover;
+      opacity: 0;
+      transform: translateX(2%);
+      pointer-events: none;
+      transition: opacity 180ms ease, transform 180ms ease;
+    }
+    .slide.active { opacity: 1; transform: translateX(0); pointer-events: auto; }
+    .content {
+      width: min(1120px, 100%);
+      max-height: calc(100vh - 128px);
+      overflow: auto;
+      padding: clamp(24px, 4vw, 40px);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: var(--panel);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 24px 90px rgba(0, 0, 0, 0.36);
+    }
+    .kicker { margin: 0 0 10px; color: var(--accent); font-size: 0.9rem; font-weight: 800; letter-spacing: 0.05em; text-transform: uppercase; }
+    h1, h2 { margin: 0; line-height: 1.08; }
+    h1 { font-size: clamp(2.45rem, 6.8vw, 5.6rem); max-width: 920px; }
+    h2 { font-size: clamp(1.95rem, 4vw, 3.3rem); }
+    p { color: var(--muted); line-height: 1.62; font-size: clamp(1rem, 1.45vw, 1.18rem); max-width: 940px; }
+    ul { margin: 18px 0 0; padding-left: 1.1rem; display: grid; gap: 10px; color: var(--muted); font-size: clamp(1rem, 1.35vw, 1.1rem); line-height: 1.5; }
+    .rank-list, .cards { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; margin-top: 22px; }
+    .rank-list { list-style: none; padding: 0; }
+    .rank-list li, .card { padding: 18px; border: 1px solid var(--line); border-radius: 14px; background: rgba(255, 255, 255, 0.07); }
+    .rank-list li { display: grid; grid-template-columns: 34px 1fr; gap: 10px; align-items: start; color: var(--muted); }
+    .rank-list b { display: grid; place-items: center; width: 34px; height: 34px; border-radius: 50%; color: #18212c; background: var(--accent); font-size: 0.92rem; }
+    .card h3 { margin: 0 0 10px; color: #fff8ea; font-size: 1.08rem; }
+    .card p { margin: 0; font-size: 0.98rem; max-width: none; }
+    .source-corner {
+      position: absolute;
+      left: 18px;
+      bottom: 16px;
+      z-index: 15;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      max-width: 72vw;
+      padding: 10px 12px;
+      border: 1px solid rgba(255, 241, 210, 0.2);
+      border-radius: 16px;
+      background: rgba(10, 16, 24, 0.86);
+      backdrop-filter: blur(12px);
+      font-size: 0.77rem;
+      line-height: 1.2;
+    }
+    .source-corner span { color: var(--accent); font-weight: 800; }
+    .source-corner a { max-width: 280px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: #fff1d5; text-decoration: none; }
+    .source-corner a:hover { text-decoration: underline; }
+    .controls {
+      position: fixed;
+      left: 50%;
+      bottom: 18px;
+      z-index: 20;
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      transform: translateX(-50%);
+      padding: 10px 12px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(10, 16, 24, 0.86);
+      backdrop-filter: blur(12px);
+    }
+    button { width: 42px; height: 42px; border: 0; border-radius: 999px; background: var(--accent); color: #17212b; font: inherit; font-weight: 900; cursor: pointer; }
+    .counter { min-width: 78px; text-align: center; color: #fff1d5; font-size: 0.9rem; }
+    @media (max-width: 860px) {
+      .rank-list, .cards { grid-template-columns: 1fr; }
+      .source-corner { max-width: calc(100vw - 36px); }
+      .content { max-height: calc(100vh - 146px); }
+    }
+  </style>
+</head>
+<body>
+  <div class="deck">
+    <section class="slide active" style="--bg: var(--title-bg);">
+      <div class="content">
+        <p class="kicker">Daily Global + Tech / AI News</p>
+        <h1>2026-05-30 每日全球與科技 AI 新聞</h1>
+        <p>今天的重點從前線本身，轉向衝突外溢、制度摩擦與可部署的 AI 治理。羅馬尼亞受傷平民、法國司法轉介、歐盟資金解凍，以及 AI 私密對話與選舉 safeguards，構成今天的核心畫面。</p>
+      </div>
+      <div class="source-corner"><span>來源</span><a href="daily-news-2026-05-30.md">本日報告：2026-05-30</a></div>
+    </section>
+
+    <section class="slide" style="--bg: var(--conflict-bg);">
+      <div class="content">
+        <p class="kicker">Executive Brief</p>
+        <h2>今天的世界，不是單一爆點，而是邊界開始被碰撞</h2>
+        <ul>
+          <li>俄烏戰爭第一次在羅馬尼亞住宅造成民眾受傷，外溢風險變得更具體。</li>
+          <li>法國把 flotilla 爭議送進檢方，Gaza 問題繼續往歐洲司法體系滲透。</li>
+          <li>歐盟對匈牙利解凍資金，顯示 Europe 內部規範政治正被快速重排。</li>
+          <li>氣候、宗教與救援故事同時升溫，說明今天的全球關注點更分散但不更輕。</li>
+        </ul>
+      </div>
+      <div class="source-corner"><span>來源</span><a href="https://apnews.com/article/aa90986c237b8fa1d9116685c8c32f95">AP：Romania drone</a><a href="https://apnews.com/article/gaza-flotilla-france-prosecutors-5c97c0888e8da286fc19db3240835f4a">AP：France flotilla</a><a href="https://apnews.com/article/hungary-magyar-eu-funds-8e560d62f308b004f104d6f5b3a15353">AP：Hungary funds</a></div>
+    </section>
+
+    <section class="slide" style="--bg: var(--conflict-bg);">
+      <div class="content">
+        <p class="kicker">Top 10</p>
+        <h2>世界新聞 1-5</h2>
+        <ol class="rank-list">
+          <li><b>1</b><span>俄軍無人機擊中羅馬尼亞 Galati 公寓，2 人受傷。</span></li>
+          <li><b>2</b><span>法國要求檢方調查以色列對 Gaza flotilla 法籍人士的待遇。</span></li>
+          <li><b>3</b><span>歐盟向匈牙利新政府解凍 164 億歐元資金。</span></li>
+          <li><b>4</b><span>WMO 警告未來五年有 75% 機率平均升溫超過 1.5°C。</span></li>
+          <li><b>5</b><span>馬來西亞總理 Anwar 表示不排除提前大選。</span></li>
+        </ol>
+      </div>
+      <div class="source-corner"><span>來源</span><a href="https://apnews.com/article/aa90986c237b8fa1d9116685c8c32f95">AP：Romania</a><a href="https://apnews.com/article/climate-change-warming-heat-wave-record-future-53d79525a06f09d9ace45a141dbebb01">AP：WMO climate</a><a href="https://openrss.org/www.reuters.com/world/">Reuters：Malaysia</a></div>
+    </section>
+
+    <section class="slide" style="--bg: var(--policy-bg);">
+      <div class="content">
+        <p class="kicker">Top 10</p>
+        <h2>世界新聞 6-10</h2>
+        <ol class="rank-list">
+          <li><b>6</b><span>波蘭討論是否撤銷授予 Zelenskyy 的最高榮譽。</span></li>
+          <li><b>7</b><span>保加利亞以免簽爭議為由，縮短美軍機停留安排。</span></li>
+          <li><b>8</b><span>加拿大軍艦穿越台灣海峽後，中國再拉高主權回應。</span></li>
+          <li><b>9</b><span>Pope Leo XIV 就梵蒂岡曾為奴隸制度正名公開道歉。</span></li>
+          <li><b>10</b><span>寮國受困洞穴逾一週的 5 名村民被發現仍生還。</span></li>
+        </ol>
+      </div>
+      <div class="source-corner"><span>來源</span><a href="https://openrss.org/www.reuters.com/world/">Reuters：Poland</a><a href="https://www.marketscreener.com/news/bulgaria-to-cut-us-military-aircraft-stay-over-visa-issue-pm-radev-says-ce7f5ddbdb8ff727">Reuters：Bulgaria</a><a href="https://www.internazionale.it/ultime-notizie-reuters/2026/05/29/china-opposes-any-country-using-freedom-of-navigation-to-undermine-its-sovereignty-2">Reuters：Taiwan Strait</a><a href="https://apnews.com/article/pope-apologizes-slavery-role-holy-see-vatican-78df993c5604eb098b19f255b89b3155">AP：Pope</a></div>
+    </section>
+
+    <section class="slide" style="--bg: var(--policy-bg);">
+      <div class="content">
+        <p class="kicker">Synthesis</p>
+        <h2>今天的三個大圖像</h2>
+        <div class="cards">
+          <article class="card"><h3>戰爭正外溢到鄰國生活世界</h3><p>羅馬尼亞事件證明，灰區外溢不再只是殘骸或警報，而是直接進入 NATO 成員國住宅安全。</p></article>
+          <article class="card"><h3>司法與歷史都在追上衝突</h3><p>法國 flotilla 調查與波蘭-烏克蘭記憶衝突，顯示前線之外的制度帳開始被追討。</p></article>
+          <article class="card"><h3>歐洲內部秩序在重排</h3><p>匈牙利資金解凍與保加利亞的交易式防務姿態，說明歐洲團結正在變得更條件化。</p></article>
+          <article class="card"><h3>全球風險分布更廣</h3><p>氣候升溫預警、宗教歷史道歉與洞穴救援同時上榜，代表注意力不只集中在戰區。</p></article>
+        </div>
+      </div>
+      <div class="source-corner"><span>來源</span><a href="https://apnews.com/article/hungary-magyar-eu-funds-8e560d62f308b004f104d6f5b3a15353">AP：EU-Hungary</a><a href="https://apnews.com/article/climate-change-warming-heat-wave-record-future-53d79525a06f09d9ace45a141dbebb01">AP：1.5C risk</a><a href="https://apnews.com/article/gaza-flotilla-france-prosecutors-5c97c0888e8da286fc19db3240835f4a">AP：France legal move</a></div>
+    </section>
+
+    <section class="slide" style="--bg: var(--tech-bg);">
+      <div class="content">
+        <p class="kicker">Tech / AI</p>
+        <h2>今天的 AI 焦點：可部署能力與治理介面</h2>
+        <div class="cards">
+          <article class="card"><h3>Claude Opus 4.8</h3><p>Anthropic 把 frontier 競爭點往長任務可靠度、computer use 與 agentic collaboration 再推一步。</p></article>
+          <article class="card"><h3>Anthropic 收購 Stainless</h3><p>把 SDK、CLI、MCP server tooling 直接拉進平台核心，強化 agent 對外部系統的連接層。</p></article>
+          <article class="card"><h3>Meta Incognito Chat</h3><p>WhatsApp 與 Meta AI app 開始主打連 Meta 也看不到的 AI 對話，私密性成為產品賣點。</p></article>
+          <article class="card"><h3>OpenAI election safeguards</h3><p>把 AP 選舉結果、provenance、vote info 與 cyber defender tools 串成一整套高風險部署方案。</p></article>
+        </div>
+      </div>
+      <div class="source-corner"><span>來源</span><a href="https://www.anthropic.com/news/claude-opus-4-8">Anthropic：Opus 4.8</a><a href="https://www.anthropic.com/news/anthropic-acquires-stainless">Anthropic：Stainless</a><a href="https://about.fb.com/news/2026/05/incognito-chat-whatsapp-meta-ai/">Meta：Incognito Chat</a><a href="https://openai.com/index/election-safeguards-2026/">OpenAI：Election safeguards</a></div>
+    </section>
+
+    <section class="slide" style="--bg: var(--tech-bg);">
+      <div class="content">
+        <p class="kicker">Takeaway</p>
+        <h2>下一輪 AI 競爭，更像「可信工作系統」競爭</h2>
+        <ul>
+          <li>能力：不是只看模型分數，而是能否穩定完成多步任務與代理協作。</li>
+          <li>連接：Stainless 類工具層正被收編，agent 是否碰得到真實系統變成核心戰場。</li>
+          <li>隱私：Meta 把私密對話做成產品主張，說明高敏感 AI 場景正在商業化。</li>
+          <li>治理：OpenAI 的選舉 safeguards 顯示 public-interest use cases 已要求完整部署框架。</li>
+        </ul>
+      </div>
+      <div class="source-corner"><span>來源</span><a href="https://www.anthropic.com/news/claude-opus-4-8">Anthropic：agent reliability</a><a href="https://about.fb.com/news/2026/05/incognito-chat-whatsapp-meta-ai/">Meta：private AI</a><a href="https://openai.com/index/election-safeguards-2026/">OpenAI：public safeguards</a></div>
+    </section>
+
+    <section class="slide" style="--bg: var(--title-bg);">
+      <div class="content">
+        <p class="kicker">Watchlist</p>
+        <h2>接下來最該追的五件事</h2>
+        <ul>
+          <li>羅馬尼亞事件是否推升 NATO 對灰區越境事件的正式反應門檻。</li>
+          <li>法國司法轉介會不會帶動更多歐洲國家處理 Gaza 相關拘押爭議。</li>
+          <li>馬來西亞提前大選如果成真，會如何重排東協內部政治節奏。</li>
+          <li>波蘭與烏克蘭的歷史記憶衝突是否會傷到實際戰略合作。</li>
+          <li>AI 平台戰會不會從模型分數，進一步全面轉向部署可靠度、隱私與治理。</li>
+        </ul>
+      </div>
+      <div class="source-corner"><span>來源</span><a href="daily-news-2026-05-30.md">本日報告：追蹤問題</a></div>
+    </section>
+  </div>
+
+  <div class="controls" aria-label="Slide Controls">
+    <button id="prev" type="button" aria-label="Previous slide">‹</button>
+    <div class="counter"><span id="current">1</span> / <span id="total">8</span></div>
+    <button id="next" type="button" aria-label="Next slide">›</button>
+  </div>
+
+  <script>
+    const slides = Array.from(document.querySelectorAll(".slide"));
+    const currentEl = document.getElementById("current");
+    const totalEl = document.getElementById("total");
+    const prevBtn = document.getElementById("prev");
+    const nextBtn = document.getElementById("next");
+    let index = 0;
+    function render() {
+      slides.forEach((slide, i) => slide.classList.toggle("active", i === index));
+      currentEl.textContent = String(index + 1);
+      totalEl.textContent = String(slides.length);
+    }
+    function move(delta) {
+      index = (index + delta + slides.length) % slides.length;
+      render();
+    }
+    prevBtn.addEventListener("click", () => move(-1));
+    nextBtn.addEventListener("click", () => move(1));
+    window.addEventListener("keydown", (event) => {
+      if (["ArrowRight", "PageDown", " "].includes(event.key)) { event.preventDefault(); move(1); }
+      if (["ArrowLeft", "PageUp"].includes(event.key)) { event.preventDefault(); move(-1); }
+      if (event.key === "Home") { index = 0; render(); }
+      if (event.key === "End") { index = slides.length - 1; render(); }
+    });
+    render();
+  </script>
+</body>
+</html>
