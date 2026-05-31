@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Daily News Slides 2026-05-31</title>
+  <!--
+    Background image attribution:
+    - title / earth horizon: https://images.unsplash.com/photo-1446776811953-b23d57bd21aa (NASA on Unsplash)
+    - politics / civic crowd: https://images.unsplash.com/photo-1529156069898-49953e39b3ac (Mufid Majnun on Unsplash)
+    - conflict / coastline city: https://images.unsplash.com/photo-1500530855697-b586d89ba3ee (Pedro Sanz on Unsplash)
+    - tech / circuitry: https://images.unsplash.com/photo-1516321318423-f06f85e504b3 (Alex Knight on Unsplash)
+  -->
+  <style>
+    :root {
+      --ink: #f6f3eb;
+      --muted: #e1d8ca;
+      --panel: rgba(19, 25, 33, 0.8);
+      --line: rgba(255, 244, 224, 0.18);
+      --accent: #efc36f;
+      --title-bg: url("https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?auto=format&fit=crop&w=1800&q=80");
+      --politics-bg: url("https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1800&q=80");
+      --conflict-bg: url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1800&q=80");
+      --tech-bg: url("https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1800&q=80");
+      font-family: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: #0b1117; color: var(--ink); overflow: hidden; }
+    .deck { position: relative; width: 100vw; height: 100vh; }
+    .slide {
+      position: absolute;
+      inset: 0;
+      display: grid;
+      place-items: center;
+      padding: clamp(18px, 3vw, 40px);
+      background-image: linear-gradient(120deg, rgba(9, 14, 20, 0.82), rgba(9, 14, 20, 0.58), rgba(9, 14, 20, 0.84)), var(--bg, var(--title-bg));
+      background-position: center;
+      background-size: cover;
+      opacity: 0;
+      transform: translateX(2%);
+      pointer-events: none;
+      transition: opacity 180ms ease, transform 180ms ease;
+    }
+    .slide.active { opacity: 1; transform: translateX(0); pointer-events: auto; }
+    .content {
+      width: min(1120px, 100%);
+      max-height: calc(100vh - 128px);
+      overflow: auto;
+      padding: clamp(24px, 4vw, 40px);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: var(--panel);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 24px 90px rgba(0, 0, 0, 0.38);
+    }
+    .kicker { margin: 0 0 10px; color: var(--accent); font-size: 0.9rem; font-weight: 800; letter-spacing: 0.05em; text-transform: uppercase; }
+    h1, h2 { margin: 0; line-height: 1.08; }
+    h1 { font-size: clamp(2.4rem, 6.5vw, 5.4rem); max-width: 920px; }
+    h2 { font-size: clamp(1.95rem, 4vw, 3.3rem); }
+    p { color: var(--muted); line-height: 1.62; font-size: clamp(1rem, 1.45vw, 1.18rem); max-width: 940px; }
+    ul { margin: 18px 0 0; padding-left: 1.1rem; display: grid; gap: 10px; color: var(--muted); font-size: clamp(1rem, 1.35vw, 1.1rem); line-height: 1.5; }
+    .rank-list, .cards { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; margin-top: 22px; }
+    .rank-list { list-style: none; padding: 0; }
+    .rank-list li, .card { padding: 18px; border: 1px solid var(--line); border-radius: 14px; background: rgba(255, 255, 255, 0.07); }
+    .rank-list li { display: grid; grid-template-columns: 34px 1fr; gap: 10px; align-items: start; color: var(--muted); }
+    .rank-list b { display: grid; place-items: center; width: 34px; height: 34px; border-radius: 50%; color: #18212c; background: var(--accent); font-size: 0.92rem; }
+    .card h3 { margin: 0 0 10px; color: #fff8ea; font-size: 1.08rem; }
+    .card p { margin: 0; font-size: 0.98rem; max-width: none; }
+    .source-corner {
+      position: absolute;
+      left: 18px;
+      bottom: 16px;
+      z-index: 15;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      max-width: 72vw;
+      padding: 10px 12px;
+      border: 1px solid rgba(255, 244, 224, 0.2);
+      border-radius: 16px;
+      background: rgba(9, 14, 20, 0.88);
+      backdrop-filter: blur(12px);
+      font-size: 0.77rem;
+      line-height: 1.2;
+    }
+    .source-corner span { color: var(--accent); font-weight: 800; }
+    .source-corner a { max-width: 280px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: #fff1d5; text-decoration: none; }
+    .source-corner a:hover { text-decoration: underline; }
+    .controls {
+      position: fixed;
+      left: 50%;
+      bottom: 18px;
+      z-index: 20;
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      transform: translateX(-50%);
+      padding: 10px 12px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(9, 14, 20, 0.88);
+      backdrop-filter: blur(12px);
+    }
+    button { width: 42px; height: 42px; border: 0; border-radius: 999px; background: var(--accent); color: #17212b; font: inherit; font-weight: 900; cursor: pointer; }
+    .counter { min-width: 78px; text-align: center; color: #fff1d5; font-size: 0.9rem; }
+    @media (max-width: 860px) {
+      .rank-list, .cards { grid-template-columns: 1fr; }
+      .source-corner { max-width: calc(100vw - 36px); }
+      .content { max-height: calc(100vh - 146px); }
+    }
+  </style>
+</head>
+<body>
+  <div class="deck">
+    <section class="slide active" style="--bg: var(--title-bg);">
+      <div class="content">
+        <p class="kicker">Daily Global + Tech / AI News</p>
+        <h1>2026-05-31 每日全球與科技 AI 新聞</h1>
+        <p>今天的主題是政治授權、戰爭外溢與 AI 工作系統。哥倫比亞大選、南海巡航、土耳其反對派動員，以及 Codex / Gemini / Mistral 的工作流更新，構成今天最清楚的全球畫面。</p>
+      </div>
+      <div class="source-corner"><span>來源</span><a href="daily-news-2026-05-31.md">本日報告：2026-05-31</a></div>
+    </section>
+
+    <section class="slide" style="--bg: var(--politics-bg);">
+      <div class="content">
+        <p class="kicker">Executive Brief</p>
+        <h2>今天最重要的訊號，是制度現場開始一起發熱</h2>
+        <ul>
+          <li>哥倫比亞總統大選首輪投票，直接檢驗 Petro 的和平與治理路線。</li>
+          <li>南海、俄烏與中東都沒有降溫，反而各自往海上、能源與鄰國邊界擴散。</li>
+          <li>土耳其反對派危機走向街頭，顯示司法介入已變成政權正當性問題。</li>
+          <li>科技段則明顯轉向「AI 工作流產品化」與資料連接層競爭。</li>
+        </ul>
+      </div>
+      <div class="source-corner"><span>來源</span><a href="https://apnews.com/article/c8b2170044646266ccdfce0e8bfb1bfb">AP：Colombia election</a><a href="https://www.internazionale.it/ultime-notizie-reuters/2026/05/31/china-patrols-scarborough-shoal-after-philippines-warns-of-threat-2">Reuters：Scarborough</a><a href="https://apnews.com/article/a5c30da2de4af6e9f48d660ce665c8d9">AP：Turkey protest</a></div>
+    </section>
+
+    <section class="slide" style="--bg: var(--politics-bg);">
+      <div class="content">
+        <p class="kicker">Top 10</p>
+        <h2>世界新聞 1-5</h2>
+        <ol class="rank-list">
+          <li><b>1</b><span>哥倫比亞總統大選首輪投票登場，成為 Petro 路線公投。</span></li>
+          <li><b>2</b><span>烏克蘭再打俄羅斯能源目標，並否認攻擊被俄占核電廠。</span></li>
+          <li><b>3</b><span>中國在 Scarborough Shoal 附近巡航，回應菲律賓「仍受威脅」說法。</span></li>
+          <li><b>4</b><span>土耳其數萬人上街聲援被法院撤換的反對派領袖 Ozgur Ozel。</span></li>
+          <li><b>5</b><span>Gaza City 再現平民傷亡，停火名義下空襲持續。</span></li>
+        </ol>
+      </div>
+      <div class="source-corner"><span>來源</span><a href="https://apnews.com/article/c8b2170044646266ccdfce0e8bfb1bfb">AP：Colombia</a><a href="https://apnews.com/article/4168345770d6d3a3808ba9dcb9dc3305">AP：Ukraine energy</a><a href="https://www.internazionale.it/ultime-notizie-reuters/2026/05/31/china-patrols-scarborough-shoal-after-philippines-warns-of-threat-2">Reuters：South China Sea</a><a href="https://www.aljazeera.com/news/2026/5/28/israeli-attack-on-gaza-city-kills-at-least-10-including-four-children">Al Jazeera：Gaza City</a></div>
+    </section>
+
+    <section class="slide" style="--bg: var(--conflict-bg);">
+      <div class="content">
+        <p class="kicker">Top 10</p>
+        <h2>世界新聞 6-10</h2>
+        <ol class="rank-list">
+          <li><b>6</b><span>續報：以黎直接接觸後，Beaufort 一帶空襲與撤離警告仍持續。</span></li>
+          <li><b>7</b><span>續報：DRC Ebola 首批 5 名康復者出現，新治療中心啟用。</span></li>
+          <li><b>8</b><span>續報：EU 正式譴責俄軍無人機撞入羅馬尼亞住宅，升級為對俄表態。</span></li>
+          <li><b>9</b><span>委內瑞拉反對派要求重新舉行總統選舉。</span></li>
+          <li><b>10</b><span>印度官方把今年季風預測下修到低於常年。</span></li>
+        </ol>
+      </div>
+      <div class="source-corner"><span>來源</span><a href="https://apnews.com/article/5c4421bef28c5860a438c2892bc2983b">AP：Lebanon clashes</a><a href="https://apnews.com/article/0adc9baa6828a95869febd14c78e8846">AP：Ebola recoveries</a><a href="https://www.consilium.europa.eu/ro/press/press-releases/2026/05/29/statement-by-the-high-representative-on-behalf-of-the-eu-on-the-reckless-violation-of-the-eu-s-airspace-by-russia/pdf/">EU：Romania airspace</a><a href="https://apnews.com/article/df17266e6fca62750de600609b03ebe1">AP：Venezuela</a></div>
+    </section>
+
+    <section class="slide" style="--bg: var(--conflict-bg);">
+      <div class="content">
+        <p class="kicker">Synthesis</p>
+        <h2>今天的三個大圖像</h2>
+        <div class="cards">
+          <article class="card"><h3>選舉與授權重新變成全球主題</h3><p>哥倫比亞投票、土耳其街頭動員、委內瑞拉再選訴求，說明政治正當性是今天最強背景噪音。</p></article>
+          <article class="card"><h3>衝突正跨出原本邊界</h3><p>俄烏從能源打到核設施指控，南海從口水回到巡航，歐盟也被迫直接回應羅馬尼亞事件。</p></article>
+          <article class="card"><h3>停火框架的名義性越來越強</h3><p>Gaza 與 Lebanon 都顯示：談判、會談或停火仍在，但現場保護效果不足。</p></article>
+          <article class="card"><h3>公共衛生仍是制度壓力測試</h3><p>DRC Ebola 有首批康復者是好消息，但沒有疫苗與跨境壓力的結構問題沒變。</p></article>
+        </div>
+      </div>
+      <div class="source-corner"><span>來源</span><a href="https://apnews.com/article/a5c30da2de4af6e9f48d660ce665c8d9">AP：Turkey</a><a href="https://apnews.com/article/4168345770d6d3a3808ba9dcb9dc3305">AP：Ukraine risk</a><a href="https://apnews.com/article/0adc9baa6828a95869febd14c78e8846">AP：Bunia center</a></div>
+    </section>
+
+    <section class="slide" style="--bg: var(--tech-bg);">
+      <div class="content">
+        <p class="kicker">Tech / AI</p>
+        <h2>今天的 AI 焦點：工作流、常駐代理、連接層</h2>
+        <div class="cards">
+          <article class="card"><h3>Codex 行動化與遠端化</h3><p>OpenAI 讓 Codex 進入手機 app，並把 Remote SSH、hooks、access tokens 一起拉進工作流。</p></article>
+          <article class="card"><h3>ChatGPT 個人理財預覽</h3><p>把金融帳戶接入對話介面，代表 ChatGPT 正往高信任 consumer workflow 前進。</p></article>
+          <article class="card"><h3>Gemini app 更 agentic</h3><p>Google 推主動式 daily briefs 與 Gemini Spark，競爭點從聊天轉向全天候代辦。</p></article>
+          <article class="card"><h3>Mistral Search Toolkit</h3><p>把 ingestion、retrieval、evaluation 整成一個框架，降低 RAG 系統的工程摩擦。</p></article>
+        </div>
+      </div>
+      <div class="source-corner"><span>來源</span><a href="https://openai.com/index/work-with-codex-from-anywhere/">OpenAI：Codex mobile</a><a href="https://openai.com/index/personal-finance-chatgpt/">OpenAI：personal finance</a><a href="https://blog.google/innovation-and-ai/products/gemini-app/next-evolution-gemini-app/">Google：Gemini app</a><a href="https://mistral.ai/news/search-toolkit">Mistral：Search Toolkit</a></div>
+    </section>
+
+    <section class="slide" style="--bg: var(--tech-bg);">
+      <div class="content">
+        <p class="kicker">Takeaway</p>
+        <h2>今天的產品訊號：AI 不只在變強，而是在變成工作系統</h2>
+        <ul>
+          <li>OpenAI 把 Codex 從桌面 agent 擴成跨裝置、可遠端接續的工作系統。</li>
+          <li>Google 把 Gemini 轉向更主動、更持續存在的助理角色。</li>
+          <li>Mistral 的重點不在模型分數，而在讓 search pipeline 成為可重複部署的基礎建設。</li>
+          <li>個人理財這類高敏感場景進入 ChatGPT，表示產品競爭正往高信任領域推進。</li>
+        </ul>
+      </div>
+      <div class="source-corner"><span>來源</span><a href="https://openai.com/index/work-with-codex-from-anywhere/">OpenAI：workflow</a><a href="https://blog.google/innovation-and-ai/products/gemini-app/next-evolution-gemini-app/">Google：agentic UX</a><a href="https://mistral.ai/news/search-toolkit">Mistral：search infra</a></div>
+    </section>
+
+    <section class="slide" style="--bg: var(--title-bg);">
+      <div class="content">
+        <p class="kicker">Watchlist</p>
+        <h2>接下來最該追的五件事</h2>
+        <ul>
+          <li>哥倫比亞首輪結果是否導向高度極化的決選。</li>
+          <li>俄烏能源與核設施指控會不會推升新的國際警戒門檻。</li>
+          <li>Scarborough Shoal 巡航是否只是訊號，還是下一輪海上摩擦前奏。</li>
+          <li>土耳其反對派能否把街頭動員轉成制度性反制力量。</li>
+          <li>AI 產品戰是否正式從模型比較，轉為工作流整合與資料接口能力比較。</li>
+        </ul>
+      </div>
+      <div class="source-corner"><span>來源</span><a href="daily-news-2026-05-31.md">本日報告：追蹤問題</a></div>
+    </section>
+  </div>
+
+  <div class="controls" aria-label="Slide Controls">
+    <button id="prev" type="button" aria-label="Previous slide">‹</button>
+    <div class="counter"><span id="current">1</span> / <span id="total">8</span></div>
+    <button id="next" type="button" aria-label="Next slide">›</button>
+  </div>
+
+  <script>
+    const slides = Array.from(document.querySelectorAll(".slide"));
+    const currentEl = document.getElementById("current");
+    const totalEl = document.getElementById("total");
+    const prevBtn = document.getElementById("prev");
+    const nextBtn = document.getElementById("next");
+    let index = 0;
+    function render() {
+      slides.forEach((slide, i) => slide.classList.toggle("active", i === index));
+      currentEl.textContent = String(index + 1);
+      totalEl.textContent = String(slides.length);
+    }
+    function move(delta) {
+      index = (index + delta + slides.length) % slides.length;
+      render();
+    }
+    prevBtn.addEventListener("click", () => move(-1));
+    nextBtn.addEventListener("click", () => move(1));
+    window.addEventListener("keydown", (event) => {
+      if (["ArrowRight", "PageDown", " "].includes(event.key)) { event.preventDefault(); move(1); }
+      if (["ArrowLeft", "PageUp"].includes(event.key)) { event.preventDefault(); move(-1); }
+      if (event.key === "Home") { index = 0; render(); }
+      if (event.key === "End") { index = slides.length - 1; render(); }
+    });
+    render();
+  </script>
+</body>
+</html>
