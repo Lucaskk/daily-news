@@ -10,13 +10,14 @@ sources:
   - "https://apnews.com/article/c8b2170044646266ccdfce0e8bfb1bfb"
   - "https://www.aljazeera.com/news/2026/5/29/ethiopia-to-vote-on-june-1-as-abiys-ruling-party-eyes-landslide"
   - "https://www.amnesty.org/en/latest/news/2026/05/ethiopia-international-community-must-act-to-safeguard-press-freedom-ahead-of-national-election/"
+  - "https://apnews.com/article/7209128eeee29c565c4ea5a6892f73c6"
+  - "https://apnews.com/article/990438940784f429084996306c0b3960"
+  - "https://www.internazionale.it/ultime-notizie-reuters/2026/05/31/analysis-the-great-indo-pacific-hedge-deeper-defence-ties-as-us-doubts-grow-and-china-ascends"
+  - "https://www.internazionale.it/ultime-notizie-reuters/2026/06/01/philippines-vietnam-elevate-ties-to-enhanced-strategic-partnership"
+  - "https://www.internazionale.it/ultime-notizie-reuters/2026/06/01/china-patrols-waters-east-of-taiwan-in-response-to-japan-philippine-maritime-border-talks-2"
   - "https://apnews.com/article/5946c95f92ca91472fb30a57438234ec"
   - "https://apnews.com/article/3903824943aa2c57c0726fc2eaa0d0c2"
   - "https://www.internazionale.it/ultime-notizie-reuters/2026/05/30/us-planning-faster-troop-withdrawal-from-europe-newspaper-says"
-  - "https://apnews.com/article/c402f763a23e08f33724061d4996adb4"
-  - "https://www.aljazeera.com/amp/news/2026/5/31/iran-%E2%81%A0says-some-gas-production-restored-at-south-pars-facility"
-  - "https://www.aljazeera.com/amp/news/2026/5/31/iran-reinstates-some-internet-access-but-restrictions-remain-for-most"
-  - "https://www.aljazeera.com/amp/news/2026/5/31/us-measure-to-deepen-israel-military-cooperation-faces-bipartisan-pushback"
   - "https://github.blog/news-insights/company-news/github-copilot-is-moving-to-usage-based-billing/"
   - "https://github.blog/changelog/2026-04-27-github-copilot-code-review-will-start-consuming-github-actions-minutes-on-june-1-2026/"
   - "https://help.openai.com/en/articles/6825453-chatgpt-versionshinweise"
@@ -29,19 +30,19 @@ date: 2026-06-01
 
 ## Executive Brief
 
-今天的世界新聞，比昨天更集中在「制度節點正式落地」而非單純高張力敘事。最重要的新進展是以軍奪取黎南 Beaufort 山頂城堡，形成 26 年來最深對黎巴嫩地面推進；哥倫比亞則從投票日進入明確決選格局，Iván Cepeda 與 Abelardo de la Espriella 將在 2026-06-21 對決。與此同時，衣索比亞 6 月 1 日大選正式登場，但伴隨媒體打壓、區域排除與公信力質疑，說明今天的選舉新聞不是單一開票戲碼，而是合法性與治理能力的測試。
+今天的世界新聞，比昨天更明顯地集中在「制度與安全邊界被正式改寫」。最重要的續報仍然是以軍奪取黎南 Beaufort 山頂城堡，這讓前幾天的以黎衝突從持續交火，升級成 26 年來最深的對黎地面推進。哥倫比亞則從昨天的首輪投票，進入 Iván Cepeda 對 Abelardo de la Espriella 的明確決選格局；衣索比亞 6 月 1 日全國大選正式舉行，但公信力與包容性疑慮沒有隨著投票開始而消失。
 
-今天也有幾條高權重的新故事，來自災難、人權與地緣安全交界。緬甸撣邦爆炸物倉庫爆炸造成至少 45 人死亡；尼加拉瓜原住民領袖 Brooklyn Rivera 在拘押中死亡，讓 Ortega 政權的人權壓力再次升高；美國擬加速自歐洲撤軍，則把 NATO 安全承諾重新推回國際頭條。伊朗部分恢復 South Pars 氣田產能，也開始恢復部分國際網路，但兩者都只代表有限修復，不代表戰爭後遺症消退。
+今天也有幾條更值得納入「全球討論度」的制度型新聞。Trump 政府準備上訴關稅退款命令，讓美國法院、行政權與全球供應鏈之間的關係再次成為焦點。Shangri-La Dialogue 則把「美國盟友對承諾的不安」與「亞洲國家彼此加速結盟」放上同一個版面；菲律賓與越南升級為 enhanced strategic partnership，中國則在台灣東側水域巡航回應，說明區域安全競爭正在多點同步升溫。
 
-科技 / AI 方面，今天刻意避開昨天已收錄的 `Codex mobile`、`個人理財`、`Gemini app` 與 `Search Toolkit`。改抓對 6 月第一天更有實際影響的官方更新：GitHub Copilot 今天正式切到 `AI Credits` 計費，連 code review 也開始吃 GitHub Actions 分鐘；OpenAI 則在 5 月 29 日把 Codex 推到 Windows computer use、remote control 與 usage profiles；Google 持續把 agent 平台化到 Gemini API；Mistral 則把 AI Now Summit 的工業工程方案與 Airbus 合作推上檯面。今天的產品訊號不是「哪家模型更強」，而是誰先把 AI 變成可治理、可計費、可部署的工作系統。
+科技 / AI 方面，今天刻意避開昨天已收錄的 `Codex mobile`、`個人理財`、`Gemini app` 與 `Search Toolkit`。這次改抓更接近 6 月 1 日實際生效或對開發者更直接的更新：GitHub Copilot 正式改為 `AI Credits` 計費，code review 也開始消耗 GitHub Actions 分鐘；OpenAI 的 release notes 則把 Codex 推到 Windows computer use、remote control 與 usage profiles；Google 把 managed agents 納入 Gemini API；Mistral 持續把工業工程與 Airbus 類部署推向產品敘事核心。今天的產品主線不是模型排行，而是 AI 如何被制度化成成本、平台與部署能力。
 
 ## Ranking Method
 
 本排名不是照搬單一媒體首頁，而是綜合以下訊號：
 
-- AP、Reuters、Al Jazeera、Amnesty 與官方產品/政策公告在 2026-05-31 至 2026-06-01 之間的可見度。
-- 是否相較 `wiki/daily/2026/05/2026-05-31/` 與更早日報出現了新的制度節點，而非同事件換句話重寫。
-- 事件是否牽動選舉合法性、聯盟承諾、人權拘押、區域戰線擴大、基礎設施恢復或平台計費規則變更。
+- AP、Reuters、Al Jazeera、Amnesty 與官方產品公告在 2026-05-31 至 2026-06-01 的可見度。
+- 與 `wiki/daily/2026/05/2026-05-31/` 及更早日報相比，是否出現新的制度節點，而不是同事件換句話重寫。
+- 是否牽動戰線控制、選舉合法性、國際同盟、關稅秩序、人權拘押或區域安全結盟。
 - 科技 / AI 段優先採第一方官方文件與 release notes。
 
 ## Top 10 Global / World News
@@ -51,20 +52,20 @@ date: 2026-06-01
 | 1 | 續報｜以軍奪取 Beaufort 山頂城堡，形成 26 年來最深對黎巴嫩地面推進 | 這把前幾天的「停火侵蝕」正式推進成更深層的地面控制問題，也讓以黎衝突更難回到有限交火。 | [AP](https://apnews.com/article/206c3d6c4dc9a139007f043556a0019b), [2026-05-31 Daily News](../../05/2026-05-31/daily-news-2026-05-31.md) |
 | 2 | 續報｜哥倫比亞首輪結果出爐，Cepeda 與 de la Espriella 進入 6 月 21 日決選 | 從投票日進入雙強對決後，哥倫比亞大選正式變成和平進程、治安政策與對美路線的直接對撞。 | [AP](https://apnews.com/article/c8b2170044646266ccdfce0e8bfb1bfb), [2026-05-31 Daily News](../../05/2026-05-31/daily-news-2026-05-31.md) |
 | 3 | 衣索比亞大選登場，逾 5,000 萬選民投票但公信力與包容性受質疑 | 非洲之角大國今天正式投票，但排除地區、媒體壓力與安全風險使這場選舉更像合法性壓力測試。 | [Al Jazeera](https://www.aljazeera.com/news/2026/5/29/ethiopia-to-vote-on-june-1-as-abiys-ruling-party-eyes-landslide), [Amnesty](https://www.amnesty.org/en/latest/news/2026/05/ethiopia-international-community-must-act-to-safeguard-press-freedom-ahead-of-national-election/) |
-| 4 | 緬甸撣邦爆炸物倉庫爆炸，至少 45 人死亡 | 這是今日最顯著的突發災難之一，也凸顯緬甸衝突區域的安全治理失靈。 | [AP](https://apnews.com/article/5946c95f92ca91472fb30a57438234ec) |
-| 5 | 尼加拉瓜確認原住民領袖 Brooklyn Rivera 在拘押中死亡 | 事件讓 Ortega 政權的政治拘押與原住民族權利問題重新獲得國際關注。 | [AP](https://apnews.com/article/3903824943aa2c57c0726fc2eaa0d0c2), [Al Jazeera](https://www.aljazeera.com/news/2026/5/31/nicaragua-confirms-death-in-custody-of-indigenous-leader-brooklyn-rivera) |
-| 6 | 美國擬加速自歐洲撤軍，NATO 安全承諾再受測試 | 若成真，這不是一般駐軍調整，而是歐洲安全架構與美國對盟承諾的新壓力測試。 | [Reuters / Internazionale](https://www.internazionale.it/ultime-notizie-reuters/2026/05/30/us-planning-faster-troop-withdrawal-from-europe-newspaper-says) |
-| 7 | 寮國洞穴搜救受豪雨拖延，仍有 2 人失聯 | 這是持續多日仍吸引跨國關注的救援故事，今天的新點是天候明顯削弱搜救節奏。 | [AP](https://apnews.com/article/c402f763a23e08f33724061d4996adb4) |
-| 8 | 伊朗 South Pars 三座海上平台恢復產能 | South Pars 是伊朗能源命脈，有限復產直接關聯區域能源供應、經濟壓力與戰後恢復能力。 | [Al Jazeera](https://www.aljazeera.com/amp/news/2026/5/31/iran-%E2%81%A0says-some-gas-production-restored-at-south-pars-facility) |
-| 9 | 伊朗恢復部分國際網路，但大多數人仍受白名單式限制 | 這顯示數位生活正有限解封，但戰時資訊管制與經濟傷害仍遠未結束。 | [Al Jazeera](https://www.aljazeera.com/amp/news/2026/5/31/iran-reinstates-some-internet-access-but-restrictions-remain-for-most), [AP](https://apnews.com/article/a9a473245d9c6a6fc41822d844847c17) |
-| 10 | 美國國會推進更深軍事整合以色列的法案，兩黨內部都出現反彈 | 這不只是華府程序新聞，而是美以安全關係是否被制度化綁得更深的問題。 | [Al Jazeera](https://www.aljazeera.com/amp/news/2026/5/31/us-measure-to-deepen-israel-military-cooperation-faces-bipartisan-pushback) |
+| 4 | Trump 政府準備上訴關稅退款命令，全球供應鏈再次面對政策不確定性 | 這不只是美國內政官司，而是已被法院推翻的關稅是否仍會拖住企業退款、價格與貿易預期。 | [AP](https://apnews.com/article/7209128eeee29c565c4ea5a6892f73c6) |
+| 5 | Shangri-La 對話凸顯盟友要求團結，印太國家也在加速彼此軍事互補 | 這代表「美國還在不在場」已不足以描述局勢，亞洲盟友正在開始對沖並彼此補位。 | [AP](https://apnews.com/article/990438940784f429084996306c0b3960), [Reuters / Internazionale](https://www.internazionale.it/ultime-notizie-reuters/2026/05/31/analysis-the-great-indo-pacific-hedge-deeper-defence-ties-as-us-doubts-grow-and-china-ascends) |
+| 6 | 菲律賓與越南升級為 enhanced strategic partnership | 南海周邊國家正在把過去較鬆散的合作，升級成更正式的政治與防務協作。 | [Reuters / Internazionale](https://www.internazionale.it/ultime-notizie-reuters/2026/06/01/philippines-vietnam-elevate-ties-to-enhanced-strategic-partnership) |
+| 7 | 中國在台灣東側水域巡航，回應日菲海事邊界談判 | 這顯示北京對區域協作的反應不只停留在外交抗議，而是即時進入海上執法與訊號投射。 | [Reuters / Internazionale](https://www.internazionale.it/ultime-notizie-reuters/2026/06/01/china-patrols-waters-east-of-taiwan-in-response-to-japan-philippine-maritime-border-talks-2) |
+| 8 | 緬甸撣邦爆炸物倉庫爆炸，至少 45 人死亡 | 這是今日最顯著的突發災難之一，也凸顯緬甸衝突區域的安全治理失靈。 | [AP](https://apnews.com/article/5946c95f92ca91472fb30a57438234ec) |
+| 9 | 尼加拉瓜確認原住民領袖 Brooklyn Rivera 在拘押中死亡 | 事件讓 Ortega 政權的政治拘押與原住民族權利問題重新獲得國際關注。 | [AP](https://apnews.com/article/3903824943aa2c57c0726fc2eaa0d0c2) |
+| 10 | 美國擬加速自歐洲撤軍，NATO 安全承諾再受測試 | 若成真，這不是一般駐軍調整，而是歐洲安全架構與美國對盟承諾的新壓力測試。 | [Reuters / Internazionale](https://www.internazionale.it/ultime-notizie-reuters/2026/05/30/us-planning-faster-troop-withdrawal-from-europe-newspaper-says) |
 
 ## Item Notes
 
 ### 1. 續報｜以軍奪取 Beaufort 山頂城堡
 
 - New since 2026-05-31:
-  - 昨天收錄的是 Beaufort 一帶持續空襲、直接接觸後仍未降溫。
+  - 昨天收錄的是 Beaufort 一帶持續空襲與地面接觸後仍未降溫。
   - 今天的新進展是 AP 明確報導以軍已奪取戰略高地與城堡，並稱為 26 年來最深地面推進。
 - Key facts:
   - 以軍表示已控制山頂高地；Hezbollah 仍持續發射飛彈與無人機。
@@ -91,16 +92,52 @@ date: 2026-06-01
 - Uncertainty:
   - Tigray 等區域缺席與各地安全情勢，讓選舉代表性存在持續爭議。
 
-### 4. 緬甸撣邦爆炸
+### 4. Trump 關稅退款上訴
+
+- Key facts:
+  - AP 指企業已開始收到被法院推翻關稅的退款，但 Trump 政府準備上訴讓流程可能停滯。
+- Why it matters:
+  - 這牽動企業現金流、價格轉嫁與對美國關稅政策可預測性的判斷。
+- Uncertainty:
+  - 上訴是否成功，以及已處理中的退款是否受影響，仍未定案。
+
+### 5. Shangri-La 對話的聯盟訊號
+
+- Key facts:
+  - AP 指美國盟友在新加坡強調團結；Reuters 分析則指出印太國家正加速彼此軍事合作來對沖不確定性。
+- Why it matters:
+  - 這代表聯盟治理不再只是等待華府，而是進入「自保 + 互保」的新階段。
+- Uncertainty:
+  - 目前仍偏向政策訊號與協商安排，真正的能力整合要看後續採購與演訓。
+
+### 6. 菲越升級夥伴關係
+
+- Key facts:
+  - Reuters 指 Marcos 與 To Lam 宣布升級為 enhanced strategic partnership，範圍涵蓋政治與防務合作。
+- Why it matters:
+  - 對南海安全而言，這是中等強度的區域合作正式制度化。
+- Uncertainty:
+  - 具體合作深度與執行速度，仍待後續協議與聯合機制驗證。
+
+### 7. 中國在台灣東側巡航
+
+- Key facts:
+  - Reuters 指中國海警稱此舉是回應日本與菲律賓將啟動的海事邊界談判。
+- Why it matters:
+  - 這顯示台灣周邊與東海、南海的爭議已更緊密地連在一起。
+- Uncertainty:
+  - 中方是否會把此類巡航常態化，還是一次性政治訊號，仍待觀察。
+
+### 8. 緬甸撣邦爆炸
 
 - Key facts:
   - AP 報導，位於撣邦的爆炸物儲存建築爆炸，造成至少 45 人死亡，地方媒體報更高。
 - Why it matters:
   - 這是戰亂區域中典型的治理與安全失控事件，傷亡規模也足以成為全球突發焦點。
 - Uncertainty:
-  - 死亡數仍有 46 至 55 的差距，成因與爆炸物用途的細節仍可能更新。
+  - 死亡數仍有 45 至 50 多人的差距，成因與爆炸物用途的細節仍可能更新。
 
-### 5. Brooklyn Rivera 拘押中死亡
+### 9. Brooklyn Rivera 拘押中死亡
 
 - Key facts:
   - AP 指這位長期為 Miskito 社群發聲的原住民領袖，自 2023 年遭拘押後已在拘押狀態下死亡。
@@ -109,7 +146,7 @@ date: 2026-06-01
 - Uncertainty:
   - 政府對醫療與拘押責任的完整說明仍有限，外部獨立調查未展開。
 
-### 6. 美國擬加速自歐洲撤軍
+### 10. 美國擬加速自歐洲撤軍
 
 - Key facts:
   - Reuters 指美方可能在下月向 NATO 盟友提出更快的歐洲撤軍方案。
@@ -117,42 +154,6 @@ date: 2026-06-01
   - 這將迫使歐洲更快面對自我防務與對俄嚇阻能力問題。
 - Uncertainty:
   - 目前仍是媒體引述 Pentagon 來源，正式計畫與時程未公布。
-
-### 7. 寮國洞穴搜救因豪雨變難
-
-- Key facts:
-  - AP 指 7 人中已有 5 人獲救，但仍有 2 人失聯，豪雨使搜救節奏放慢。
-- Why it matters:
-  - 今天的更新不只是持續救援，而是天候條件開始實質影響生還機率與作業判斷。
-- Uncertainty:
-  - 天候與洞穴積水變化極快，搜救時程仍不穩定。
-
-### 8. 伊朗 South Pars 有限復產
-
-- Key facts:
-  - Al Jazeera 引述 AP 與 Reuters 指伊朗已恢復 3 座海上平台產能。
-- Why it matters:
-  - South Pars 對伊朗發電與民生能源極重要，復產是戰後恢復能力的直接指標。
-- Uncertainty:
-  - 這只是部分恢復，陸上處理設施修復與整體供應穩定仍未完成。
-
-### 9. 伊朗部分恢復國際網路
-
-- Key facts:
-  - Al Jazeera 指並非所有資料中心與協定都恢復，許多服務仍只對特定白名單人群開放。
-- Why it matters:
-  - 數位經濟、外部資訊接觸與公民溝通能力，都還在戰時管制框架內。
-- Uncertainty:
-  - 當局沒有公布清楚解除限制時間表，企業與一般使用者仍高度不確定。
-
-### 10. 美以軍事整合法案推進
-
-- Key facts:
-  - Al Jazeera 指美國國會正在推動更深層的美以國防技術與供應鏈整合。
-- Why it matters:
-  - 這將讓未來任何美國政府要調整對以政策的成本更高，也會影響區域安全架構。
-- Uncertainty:
-  - 條文最後是否完整通過、通過後實際執行範圍多大，仍未定案。
 
 ## Technology / AI Product News
 
@@ -174,14 +175,17 @@ date: 2026-06-01
 - [[Abelardo de la Espriella]]
 - [[Ethiopia]]
 - [[Abiy Ahmed]]
+- [[Donald Trump]]
+- [[United States]]
+- [[Shangri-La Dialogue]]
+- [[Philippines]]
+- [[Vietnam]]
+- [[China]]
+- [[Taiwan]]
 - [[Myanmar]]
 - [[Nicaragua]]
 - [[Brooklyn Rivera]]
 - [[NATO]]
-- [[United States]]
-- [[Laos]]
-- [[Iran]]
-- [[South Pars]]
 - [[GitHub]]
 - [[OpenAI]]
 - [[Google]]
@@ -192,10 +196,10 @@ date: 2026-06-01
 - [[ground escalation]]
 - [[runoff polarization]]
 - [[election legitimacy stress test]]
+- [[tariff reversal uncertainty]]
+- [[alliance hedging]]
+- [[regional security networking]]
 - [[custodial death politics]]
-- [[alliance burden shifting]]
-- [[infrastructure recovery under war]]
-- [[tiered internet control]]
 - [[usage-based ai billing]]
 - [[managed agents]]
 - [[industrial ai deployment]]
@@ -203,17 +207,17 @@ date: 2026-06-01
 ## Contradictions / Uncertainty
 
 - **Lebanon ground control:** 以軍稱取得戰略高地，但後續是否長期駐留仍未明。
-- **Myanmar blast toll:** AP 與地方媒體對死亡數字仍有差距。
-- **US Europe drawdown:** 目前仍屬媒體引述 Pentagon 來源，正式方案未公開。
-- **Iran internet restoration:** 「恢復」並不等於一般民眾完整回到戰前網路條件。
 - **Ethiopia election credibility:** 有投票不代表爭議解除，代表性與區域排除問題會延續到結果之後。
+- **Trump tariff refunds:** 上訴一旦推進，已啟動的退款程序可能再度變慢。
+- **China patrols east of Taiwan:** 目前僅能確認這是明確政治訊號，是否形成新常態仍待觀察。
+- **US Europe drawdown:** 目前仍屬媒體引述 Pentagon 來源，正式方案未公開。
 
 ## Follow-Up Questions
 
 - 以軍對 Beaufort 的控制，是否意味著以黎衝突即將從空襲邏輯轉向更深地面存在？
 - 哥倫比亞決選會不會把和平進程議題完全讓位給治安與強硬路線？
 - 衣索比亞這次投票若在程序上完成，能否真正降低各區域的政治壓力？
-- 美國若更快自歐洲撤軍，歐洲會用國防預算、聯合作戰還是政治妥協回應？
+- 菲越升級與中國即時巡航，是否代表南海與台灣周邊安全問題正更緊密耦合？
 - GitHub、OpenAI、Google、Mistral 的今天訊號，是否共同指向 AI 平台競爭正從模型轉向「治理 + 成本 + 部署」？
 
 ## Links To Update
@@ -227,4 +231,4 @@ date: 2026-06-01
 
 - `slides-2026-06-01.html`
 - Stable local URL when served from workspace root:
-  `http://localhost:4174/wiki/daily/latest-slides.html`
+  `http://localhost:4173/wiki/daily/latest-slides.html`
