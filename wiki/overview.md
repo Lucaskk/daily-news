@@ -1,0 +1,54 @@
+---
+title: "Overview"
+type: overview
+created: 2026-05-24
+updated: 2026-06-02
+status: seed
+tags: [overview]
+sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
+---
+
+# Overview
+
+這個知識庫目前處於 seed 階段。它採用 [[llm-wiki-principles]] 的模式：`raw/` 保存原始來源，`wiki/` 保存 Codex 維護後的知識結構，`AGENTS.md` 定義工作流程與寫作規則。
+
+目前預設用途偏向「每日新聞與議題追蹤」：
+
+- 保存新聞原文、報告、訪談、社群貼文或資料集。
+- 把每個來源整理成 source summary。
+- 抽出持續出現的人物、組織、事件、政策、技術與市場概念。
+- 維護跨來源的矛盾、時間線、趨勢與待查問題。
+- 將重要查詢結果回寫成可累積的 wiki 頁面。
+
+## Current Focus
+
+待使用者確認：
+
+- 主要領域：每日新聞、投資、科技、AI、政治、健康、工作決策，或其他主題。
+- 更新頻率：手動攝取、每日自動摘要、每週 lint，或混合。
+- 輸出偏好：簡短摘要、深度脈絡、比較表、時間線、決策 memo。
+
+## Latest Daily News
+
+- [2026-06-02 Daily News](daily/2026/06/2026-06-02/daily-news-2026-06-02.md) - 今日主軸是美伊停火框架被軍事交換與 Lebanon / Gaza 條件測試，戰爭成本外溢到油價、旅遊與債市；歐亞制度壓力集中在 Denmark、Armenia、Hungary；AI 則轉向 AI PC、晶片管制、Anthropic IPO、MiniMax M3 與 agentic infrastructure。
+- [2026-06-02 Slides](daily/2026/06/2026-06-02/slides-2026-06-02.html) - 今日新聞網頁版投影片。
+- [2026-06-01 Daily News](daily/2026/06/2026-06-01/daily-news-2026-06-01.md) - 今日主軸是 Beaufort 地面推進、哥倫比亞決選、衣索比亞投票、印太安全鏈式升溫，以及 GitHub / OpenAI / Google / Mistral 把 AI 競爭推向計費、部署與托管代理。
+- [2026-06-01 Slides](daily/2026/06/2026-06-01/slides-2026-06-01.html) - 今日新聞網頁版投影片。
+- [2026-05-31 Daily News](daily/2026/05/2026-05-31/daily-news-2026-05-31.md) - 今日主軸是哥倫比亞大選、Scarborough Shoal 再巡航、土耳其反對派街頭動員，以及 OpenAI、Google、Mistral 把 AI 產品推向更完整的工作流系統。
+- [2026-05-31 Slides](daily/2026/05/2026-05-31/slides-2026-05-31.html) - 今日新聞網頁版投影片。
+- [2026-05-30 Daily News](daily/2026/05/2026-05-30/daily-news-2026-05-30.md) - 今日主軸是俄烏戰爭外溢到羅馬尼亞平民、法國 flotilla 爭議司法化、歐盟與匈牙利關係重設，以及 AI 的私密對話、agent 連接與選舉治理能力。
+- [2026-05-30 Slides](daily/2026/05/2026-05-30/slides-2026-05-30.html) - 今日新聞網頁版投影片。
+- [2026-05-29 Daily News](daily/2026/05/2026-05-29/daily-news-2026-05-29.md) - 今日主軸是 Kyiv 聯合國警告、Gaza 70% 控制升級、Latvia 政權更替，以及 AI 轉向資本、CPU 與可信部署競爭。
+- [2026-05-29 Slides](daily/2026/05/2026-05-29/slides-2026-05-29.html) - 今日新聞網頁版投影片。
+- [2026-05-28 Daily News](daily/2026/05/2026-05-28/daily-news-2026-05-28.md) - 今日主軸是烏克蘭防空求援、Gaza 戰爭罪疑慮、Ebola 跨境關邊，以及 AI 進入勞動、金融與科研制度層。
+- [2026-05-28 Slides](daily/2026/05/2026-05-28/slides-2026-05-28.html) - 今日新聞網頁版投影片。
+- [2026-05-26 Daily News](daily/2026/05/2026-05-26/daily-news-2026-05-26.md) - 今日主軸是以黎停火侵蝕、基輔威嚇、朝覲、教宗 AI 通諭與跨境 Ebola 續報。
+- [2026-05-26 Slides](daily/2026/05/2026-05-26/slides-2026-05-26.html) - 今日新聞網頁版投影片。
+- [2026-05-25 Daily News](daily/2026/05/2026-05-25/daily-news-2026-05-25.md) - 今日焦點轉向土耳其政治危機、剛果 Ebola、南亞/東亞災害與 AI 平台連接層。
+- [2026-05-25 Slides](daily/2026/05/2026-05-25/slides-2026-05-25.html) - 今日新聞網頁版投影片。
+
+## Related Pages
+
+- [[2026-04-04-llm-wiki]]
+- [[llm-wiki-principles]]
+- [[open-questions]]
