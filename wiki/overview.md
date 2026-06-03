@@ -2,7 +2,7 @@
 title: "Overview"
 type: overview
 created: 2026-05-24
-updated: 2026-06-02
+updated: 2026-06-03
 status: seed
 tags: [overview]
 sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
@@ -30,6 +30,8 @@ sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
 
 ## Latest Daily News
 
+- [2026-06-03 Daily News](daily/2026/06/2026-06-03/daily-news-2026-06-03.md) - 今日主軸是美伊停火框架再被 Hormuz、Lebanon、sanctions 與 uranium 條件綁住；Russia 對 Kyiv / Dnipro 發動大規模空襲；WMO 警告 El Nino；治理壓力延伸到 U.S. intelligence、Colombia election integrity、Gaza medical evacuation 與 donor-consent ethics；AI 則轉向 Microsoft agent stack、White House frontier model review、Anthropic Glasswing 與 NVIDIA physical AI。
+- [2026-06-03 Slides](daily/2026/06/2026-06-03/slides-2026-06-03.html) - 今日新聞網頁版投影片。
 - [2026-06-02 Daily News](daily/2026/06/2026-06-02/daily-news-2026-06-02.md) - 今日主軸是美伊停火框架被軍事交換與 Lebanon / Gaza 條件測試，戰爭成本外溢到油價、旅遊與債市；歐亞制度壓力集中在 Denmark、Armenia、Hungary；AI 則轉向 AI PC、晶片管制、Anthropic IPO、MiniMax M3 與 agentic infrastructure。
 - [2026-06-02 Slides](daily/2026/06/2026-06-02/slides-2026-06-02.html) - 今日新聞網頁版投影片。
 - [2026-06-01 Daily News](daily/2026/06/2026-06-01/daily-news-2026-06-01.md) - 今日主軸是 Beaufort 地面推進、哥倫比亞決選、衣索比亞投票、印太安全鏈式升溫，以及 GitHub / OpenAI / Google / Mistral 把 AI 競爭推向計費、部署與托管代理。
