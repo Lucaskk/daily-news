@@ -2,7 +2,7 @@
 title: "Overview"
 type: overview
 created: 2026-05-24
-updated: 2026-06-03
+updated: 2026-06-04
 status: seed
 tags: [overview]
 sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
@@ -30,6 +30,8 @@ sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
 
 ## Latest Daily News
 
+- [2026-06-04 Daily News](daily/2026/06/2026-06-04/daily-news-2026-06-04.md) - 今日主軸是 Iran ceasefire framework 被 Kuwait airport attack、U.S. House war powers vote 與 Israel-Lebanon talks 同時測試；Ukraine 遠程打擊 St. Petersburg oil terminal；治理風險分散到 Delhi fire、Brazil tariffs、Iraq militia handover、Philippines Senate paralysis、climate data continuity 與 mpox biosecurity；AI 則轉向 OpenAI GPT-Rosalind / Codex、ChatGPT account controls、GitHub Copilot toolchain、Cloudflare agent infrastructure、AI data-center footprint 與 humanoid robotics。
+- [2026-06-04 Slides](daily/2026/06/2026-06-04/slides-2026-06-04.html) - 今日新聞網頁版投影片。
 - [2026-06-03 Daily News](daily/2026/06/2026-06-03/daily-news-2026-06-03.md) - 今日主軸是美伊停火框架再被 Hormuz、Lebanon、sanctions 與 uranium 條件綁住；Russia 對 Kyiv / Dnipro 發動大規模空襲；WMO 警告 El Nino；治理壓力延伸到 U.S. intelligence、Colombia election integrity、Gaza medical evacuation 與 donor-consent ethics；AI 則轉向 Microsoft agent stack、White House frontier model review、Anthropic Glasswing 與 NVIDIA physical AI。
 - [2026-06-03 Slides](daily/2026/06/2026-06-03/slides-2026-06-03.html) - 今日新聞網頁版投影片。
 - [2026-06-02 Daily News](daily/2026/06/2026-06-02/daily-news-2026-06-02.md) - 今日主軸是美伊停火框架被軍事交換與 Lebanon / Gaza 條件測試，戰爭成本外溢到油價、旅遊與債市；歐亞制度壓力集中在 Denmark、Armenia、Hungary；AI 則轉向 AI PC、晶片管制、Anthropic IPO、MiniMax M3 與 agentic infrastructure。
