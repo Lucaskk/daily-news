@@ -2,7 +2,7 @@
 title: "Knowledge Base Index"
 type: overview
 created: 2026-05-24
-updated: 2026-06-03
+updated: 2026-06-04
 status: seed
 tags: [index]
 sources: []
@@ -24,6 +24,8 @@ sources: []
 
 每日新聞報告會放在 `wiki/daily/YYYY/MM/YYYY-MM-DD/`。
 
+- [2026-06-04 Daily News](daily/2026/06/2026-06-04/daily-news-2026-06-04.md) - 今日主軸是 Kuwait 機場遇襲、U.S. House war powers vote、以黎停火續談與 Trump-Netanyahu 分歧、Ukraine 遠程打擊 St. Petersburg oil terminal，以及 OpenAI / GitHub / Cloudflare 把 AI 產品推向工具鏈、帳號安全與 agent infrastructure。
+- [2026-06-04 Slides](daily/2026/06/2026-06-04/slides-2026-06-04.html) - 今日新聞網頁版投影片。
 - [2026-06-03 Daily News](daily/2026/06/2026-06-03/daily-news-2026-06-03.md) - 今日主軸是 Iran / Hormuz 談判狀態矛盾、Ukraine 大規模空襲、Lebanon 降溫失效、El Nino 風險，以及 AI agent 平台與 frontier model review 制度化。
 - [2026-06-03 Slides](daily/2026/06/2026-06-03/slides-2026-06-03.html) - 今日新聞網頁版投影片。
 - [2026-06-02 Daily News](daily/2026/06/2026-06-02/daily-news-2026-06-02.md) - 今日主軸是美伊停火遭軍事交換測試、Hormuz 經濟外溢、Denmark / Armenia / Hungary 制度壓力，以及 AI 從模型 API 轉向終端硬體、晶片管制與公開市場。
