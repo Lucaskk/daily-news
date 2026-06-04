@@ -1,0 +1,513 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Daily News 2026-06-04</title>
+  <!--
+    Background image attribution / source notes:
+    - World map / travel: Unsplash, https://images.unsplash.com/photo-1521295121783-8a321d551ad2
+    - Airport / flight: Unsplash, https://images.unsplash.com/photo-1436491865332-7a61a109cc05
+    - Industrial energy: Unsplash, https://images.unsplash.com/photo-1518709268805-4e9042af2176
+    - City architecture: Unsplash, https://images.unsplash.com/photo-1486406146926-c627a92ad1ab
+    - Ocean research: Unsplash, https://images.unsplash.com/photo-1507525428034-b723cf961d3e
+    - Circuit board: Unsplash, https://images.unsplash.com/photo-1518770660439-4636190af4756
+    - Robotics / machinery: Unsplash, https://images.unsplash.com/photo-1485827404703-89b55fcc595e
+  -->
+  <style>
+    :root {
+      color-scheme: dark;
+      --ink: #f7f7f2;
+      --muted: #d7ded8;
+      --line: rgba(255, 255, 255, 0.28);
+      --accent: #7dd3c7;
+      --accent-2: #f0b35b;
+      --panel: rgba(9, 14, 18, 0.56);
+      --panel-strong: rgba(9, 14, 18, 0.74);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      min-height: 100%;
+      background: #0b1115;
+      color: var(--ink);
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    body {
+      overflow: hidden;
+    }
+
+    .deck {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+      background: #0b1115;
+    }
+
+    .slide {
+      position: absolute;
+      inset: 0;
+      display: grid;
+      align-items: center;
+      padding: clamp(34px, 5vw, 72px);
+      background-image:
+        linear-gradient(90deg, rgba(7, 10, 13, 0.82), rgba(7, 10, 13, 0.48), rgba(7, 10, 13, 0.7)),
+        var(--bg);
+      background-size: cover;
+      background-position: center;
+      opacity: 0;
+      pointer-events: none;
+      transform: translateX(14px);
+      transition: opacity 220ms ease, transform 220ms ease;
+    }
+
+    .slide.is-active {
+      opacity: 1;
+      pointer-events: auto;
+      transform: translateX(0);
+    }
+
+    .content {
+      width: min(1120px, 100%);
+      margin: 0 auto;
+    }
+
+    .narrow {
+      width: min(900px, 100%);
+    }
+
+    .kicker {
+      margin: 0 0 14px;
+      color: var(--accent);
+      font-size: clamp(0.78rem, 1.4vw, 1rem);
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    h1,
+    h2 {
+      margin: 0;
+      line-height: 1.04;
+      letter-spacing: 0;
+      text-wrap: balance;
+    }
+
+    h1 {
+      max-width: 980px;
+      font-size: clamp(2.7rem, 8vw, 7.5rem);
+      font-weight: 900;
+    }
+
+    h2 {
+      max-width: 980px;
+      font-size: clamp(2rem, 5vw, 4.8rem);
+      font-weight: 880;
+    }
+
+    .lede {
+      max-width: 860px;
+      margin: 24px 0 0;
+      color: var(--muted);
+      font-size: clamp(1.05rem, 2vw, 1.55rem);
+      line-height: 1.55;
+      text-wrap: pretty;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 28px;
+    }
+
+    .grid.two {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .tile {
+      min-height: 150px;
+      padding: 18px;
+      border: 1px solid var(--line);
+      background: var(--panel);
+      backdrop-filter: blur(10px);
+    }
+
+    .tile strong {
+      display: block;
+      margin-bottom: 8px;
+      color: #fff8df;
+      font-size: clamp(1rem, 1.4vw, 1.2rem);
+      line-height: 1.25;
+    }
+
+    .tile span {
+      color: var(--muted);
+      font-size: clamp(0.95rem, 1.25vw, 1.08rem);
+      line-height: 1.45;
+    }
+
+    .rank-list {
+      display: grid;
+      gap: 10px;
+      margin-top: 24px;
+      width: min(940px, 100%);
+    }
+
+    .rank-item {
+      display: grid;
+      grid-template-columns: 54px 1fr;
+      gap: 14px;
+      align-items: start;
+      padding: 14px 16px;
+      background: var(--panel);
+      border-left: 4px solid var(--accent-2);
+      backdrop-filter: blur(10px);
+    }
+
+    .rank-item b {
+      color: var(--accent-2);
+      font-size: 1.1rem;
+    }
+
+    .rank-item span {
+      color: var(--muted);
+      line-height: 1.4;
+    }
+
+    .quote {
+      width: min(940px, 100%);
+      margin-top: 28px;
+      padding: 22px;
+      background: var(--panel-strong);
+      border: 1px solid var(--line);
+      color: var(--muted);
+      font-size: clamp(1.02rem, 1.55vw, 1.28rem);
+      line-height: 1.55;
+    }
+
+    .source-corner {
+      position: fixed;
+      left: 18px;
+      bottom: 16px;
+      z-index: 20;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      max-width: min(72vw, 980px);
+      font-size: 0.82rem;
+    }
+
+    .source-corner a {
+      color: #101418;
+      background: rgba(255, 248, 223, 0.9);
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      padding: 6px 9px;
+      text-decoration: none;
+      font-weight: 780;
+    }
+
+    .source-corner a:focus-visible,
+    .source-corner a:hover {
+      background: #7dd3c7;
+      outline: none;
+    }
+
+    .nav {
+      position: fixed;
+      right: 18px;
+      bottom: 16px;
+      z-index: 25;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      background: rgba(6, 10, 13, 0.72);
+      backdrop-filter: blur(10px);
+    }
+
+    .nav button {
+      width: 42px;
+      height: 38px;
+      border: 1px solid rgba(255, 255, 255, 0.28);
+      color: var(--ink);
+      background: rgba(255, 255, 255, 0.08);
+      font-size: 1.25rem;
+      cursor: pointer;
+    }
+
+    .nav button:hover,
+    .nav button:focus-visible {
+      background: rgba(125, 211, 199, 0.24);
+      outline: none;
+    }
+
+    .count {
+      min-width: 72px;
+      text-align: center;
+      color: var(--muted);
+      font-weight: 760;
+      font-variant-numeric: tabular-nums;
+    }
+
+    @media (max-width: 760px) {
+      body {
+        overflow: hidden;
+      }
+
+      .slide {
+        align-items: start;
+        overflow-y: auto;
+        padding: 34px 18px 96px;
+      }
+
+      h1 {
+        font-size: clamp(2.2rem, 15vw, 4.4rem);
+      }
+
+      h2 {
+        font-size: clamp(1.85rem, 10vw, 3.3rem);
+      }
+
+      .grid,
+      .grid.two {
+        grid-template-columns: 1fr;
+      }
+
+      .tile {
+        min-height: 0;
+      }
+
+      .rank-item {
+        grid-template-columns: 42px 1fr;
+        padding: 12px;
+      }
+
+      .source-corner {
+        left: 10px;
+        bottom: 72px;
+        max-width: calc(100vw - 20px);
+        font-size: 0.72rem;
+      }
+
+      .source-corner a {
+        padding: 5px 7px;
+      }
+
+      .nav {
+        left: 10px;
+        right: 10px;
+        justify-content: space-between;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="deck" aria-live="polite">
+    <section class="slide is-active" style="--bg: url('https://images.unsplash.com/photo-1521295121783-8a321d551ad2?auto=format&fit=crop&w=1800&q=80');">
+      <div class="content narrow">
+        <p class="kicker">2026-06-04 Daily Brief</p>
+        <h1>停火壓力測試，AI 進入基礎設施層</h1>
+        <p class="lede">今天的世界線索集中在 Kuwait 機場遇襲、U.S. House war powers vote、以黎停火續談與 Ukraine 遠程打擊；科技線索轉向 OpenAI、GitHub、Cloudflare 與 AI/data center environmental footprint。</p>
+      </div>
+      <div class="source-corner">
+        <a href="daily-news-2026-06-04.md">Daily report</a>
+        <a href="source-notes-2026-06-04.md">Source notes</a>
+      </div>
+    </section>
+
+    <section class="slide" style="--bg: url('https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=1800&q=80');">
+      <div class="content">
+        <p class="kicker">1-3｜Middle East</p>
+        <h2>Kuwait airport、House vote、以黎停火被綁在一起</h2>
+        <div class="grid">
+          <div class="tile"><strong>Kuwait 機場遇襲</strong><span>AP 報 Iranian drones hit Kuwait's main airport，造成 1 死數十傷；Iran attribution 仍被 Tehran contest。</span></div>
+          <div class="tile"><strong>War powers vote</strong><span>U.S. House 215-208 通過 resolution，要求 Trump 48 小時內停止對 Iran 軍事行動。</span></div>
+          <div class="tile"><strong>Trump-Netanyahu 分歧</strong><span>以黎 fragile ceasefire 延長 10 天，但 strikes 持續；Trump 被引述稱 Netanyahu "crazy"。</span></div>
+        </div>
+      </div>
+      <div class="source-corner">
+        <a href="https://apnews.com/article/iran-us-israel-lebanon-war-kuwait-ceasefire-3-june-2026-de2d1814c0f38252bf0383be859c870b">AP: Kuwait airport</a>
+        <a href="https://apnews.com/article/iran-war-congress-trump-bombing-war-powers-resolution-39d6d42bcd233f11a1345e7a7f9e5440">AP: War powers</a>
+        <a href="https://apnews.com/article/israel-lebanon-trump-netanyahu-ceasefire-6d1dce8998257c8850c605b4606efdf2">AP: Israel-Lebanon</a>
+      </div>
+    </section>
+
+    <section class="slide" style="--bg: url('https://images.unsplash.com/photo-1518709268805-4e9042af2176?auto=format&fit=crop&w=1800&q=80');">
+      <div class="content narrow">
+        <p class="kicker">4｜Russia-Ukraine</p>
+        <h2>Ukraine 把壓力打到 St. Petersburg energy asset</h2>
+        <p class="lede">昨天的焦點是 Russia 對 Kyiv / Dnipro 的 mass attack；今天的新點是 Ukraine drones struck an oil terminal near St. Petersburg，且時間點接近 Putin 年度投資論壇，能源、形象與長程無人機能力一起被測試。</p>
+        <div class="quote">續報重點：不是重複 casualty count，而是戰場從 Ukrainian cities 轉向 Russian oil infrastructure and prestige-event timing。</div>
+      </div>
+      <div class="source-corner">
+        <a href="https://apnews.com/article/russia-ukraine-petersburg-oil-terminal-putin-drone-887969921c595f3a81c3b6c0b120b5f3">AP: St. Petersburg oil terminal</a>
+      </div>
+    </section>
+
+    <section class="slide" style="--bg: url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1800&q=80');">
+      <div class="content">
+        <p class="kicker">5-8｜Governance Shock</p>
+        <h2>城市安全、貿易、民兵與國會僵局</h2>
+        <div class="grid two">
+          <div class="tile"><strong>New Delhi hotel fire</strong><span>21 死，多數是外國 medical tourists；medical tourism 與消防規範成為跨境風險。</span></div>
+          <div class="tile"><strong>Brazil tariffs</strong><span>Trump 對 Brazil 課 25% tariffs；Lula 指美方已有貿易順差仍加稅。</span></div>
+          <div class="tile"><strong>Iraq militias</strong><span>親 Iran 民兵稱開始交出武器，但派系拒絕顯示 state monopoly on force 仍不穩。</span></div>
+          <div class="tile"><strong>Philippines Senate</strong><span>Senate impasse 拖住能源緊急權、Sara Duterte impeachment 與 ICC 餘波。</span></div>
+        </div>
+      </div>
+      <div class="source-corner">
+        <a href="https://apnews.com/article/e0c2ddc38bc23d239809fba4b0762393">AP: Delhi fire</a>
+        <a href="https://apnews.com/article/3f389d69e8706d773ed19eb4de6a4726">AP: Brazil tariffs</a>
+        <a href="https://apnews.com/article/0f1747e05dc1384ab988da4d8eb74008">AP: Iraq militias</a>
+        <a href="https://apnews.com/article/e50ef44df44429484a1adb88cc67ab4c">AP: Philippines Senate</a>
+      </div>
+    </section>
+
+    <section class="slide" style="--bg: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1800&q=80');">
+      <div class="content narrow">
+        <p class="kicker">9-10｜Science Risk</p>
+        <h2>資料斷線與 biosecurity 是今日的慢性風險</h2>
+        <div class="grid two">
+          <div class="tile"><strong>Ocean record goes dark</strong><span>近 70 年 ocean-observatory climate record 因 U.S. funding cuts 中斷；長期資料缺口很難補回。</span></div>
+          <div class="tile"><strong>mpox virus case</strong><span>Scientists charged with smuggling deactivated mpox virus into Canada；案件把 research transfer 與 border biosecurity 放上檯面。</span></div>
+        </div>
+      </div>
+      <div class="source-corner">
+        <a href="https://apnews.com/article/climate-oceans-data-trump-science-a9539443dfaa32b3a67468a25f8b2674">AP: Ocean observatory</a>
+        <a href="https://apnews.com/article/14b7cf7635cad30254b0ae1cdb6c0515">AP: mpox virus case</a>
+      </div>
+    </section>
+
+    <section class="slide" style="--bg: url('https://images.unsplash.com/photo-1518770660439-4636190af4756?auto=format&fit=crop&w=1800&q=80');">
+      <div class="content narrow">
+        <p class="kicker">Technology / AI</p>
+        <h2>今天不是單一模型日，而是工具鏈與部署條件日</h2>
+        <p class="lede">OpenAI 把 GPT-Rosalind、Codex 與 ChatGPT account controls 推進；GitHub 和 Cloudflare 把 SDK、sandboxes、memory、OAuth、secrets、scheduled tasks、workflows 接進 agent tooling。</p>
+      </div>
+      <div class="source-corner">
+        <a href="https://openai.com/news/">OpenAI: News</a>
+        <a href="https://github.blog/changelog/">GitHub: Changelog</a>
+        <a href="https://blog.cloudflare.com/">Cloudflare: Blog</a>
+      </div>
+    </section>
+
+    <section class="slide" style="--bg: url('https://images.unsplash.com/photo-1518770660439-4636190af4756?auto=format&fit=crop&w=1800&q=80');">
+      <div class="content">
+        <p class="kicker">OpenAI Updates</p>
+        <h2>GPT-Rosalind、Codex、ChatGPT security / work features</h2>
+        <div class="grid">
+          <div class="tile"><strong>GPT-Rosalind</strong><span>OpenAI news page lists a 2026-06-03 capability update；biology / biodefense claims need official provenance。</span></div>
+          <div class="tile"><strong>Codex distribution</strong><span>Recent official entries include Codex for every role / workflow and OpenAI frontier models and Codex on AWS。</span></div>
+          <div class="tile"><strong>ChatGPT release notes</strong><span>Active sessions management、job search / resume improvements、Codex Windows 與 download support 是 practical product updates。</span></div>
+        </div>
+      </div>
+      <div class="source-corner">
+        <a href="https://openai.com/news/">OpenAI: Product updates</a>
+        <a href="https://help.openai.com/en/articles/6825453-chatgpt-release-notes">OpenAI: ChatGPT release notes</a>
+      </div>
+    </section>
+
+    <section class="slide" style="--bg: url('https://images.unsplash.com/photo-1518770660439-4636190af4756?auto=format&fit=crop&w=1800&q=80');">
+      <div class="content">
+        <p class="kicker">Developer AI Stack</p>
+        <h2>GitHub 與 Cloudflare 都在補 agent production primitives</h2>
+        <div class="grid two">
+          <div class="tile"><strong>GitHub Copilot</strong><span>SDK GA、cloud/local sandboxes preview、Copilot CLI scheduling / voice input、Gemini models、Memory。</span></div>
+          <div class="tile"><strong>Cloudflare Workers / Agents</strong><span>Self-managed OAuth clients、bulk secrets API、Agent Skills、messengers、scheduled tasks、Workflows、chat recovery。</span></div>
+        </div>
+        <div class="quote">訊號：enterprise agents 的瓶頸正在從 prompt 轉向 auth、state、sandbox、memory、workflow and recovery。</div>
+      </div>
+      <div class="source-corner">
+        <a href="https://github.blog/changelog/">GitHub: Copilot changelog</a>
+        <a href="https://blog.cloudflare.com/">Cloudflare: Workers / Agents</a>
+      </div>
+    </section>
+
+    <section class="slide" style="--bg: url('https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=1800&q=80');">
+      <div class="content">
+        <p class="kicker">AI Beyond Software</p>
+        <h2>Data centers 與 humanoids 把 AI 拉回物理世界</h2>
+        <div class="grid two">
+          <div class="tile"><strong>AI infrastructure footprint</strong><span>AP analysis: AI / data-center energy, water and pollution footprints can rival countries；deployment cost includes grid and permitting。</span></div>
+          <div class="tile"><strong>Tokyo Humanoids Summit</strong><span>Chinese and Japanese robots dance and thread needles；physical AI competition becomes visible in hardware demos。</span></div>
+        </div>
+      </div>
+      <div class="source-corner">
+        <a href="https://apnews.com/article/ai-data-centers-environmental-footprint-google-openai-a4b643725efbb2608e8644fbf7d792c8">AP: AI data centers</a>
+        <a href="https://apnews.com/article/robots-ai-humanoids-summit-tokyo-efc73f326c12c1d73cc56fbc61ee9d2b">AP: Humanoids Summit</a>
+      </div>
+    </section>
+
+    <section class="slide" style="--bg: url('https://images.unsplash.com/photo-1521295121783-8a321d551ad2?auto=format&fit=crop&w=1800&q=80');">
+      <div class="content">
+        <p class="kicker">Dedupe / Uncertainty</p>
+        <h2>今天真正的新點</h2>
+        <div class="rank-list">
+          <div class="rank-item"><b>01</b><span>不是重寫 Iran talks contradiction，而是 Kuwait airport attack + House war powers vote。</span></div>
+          <div class="rank-item"><b>02</b><span>不是重寫 Ukraine casualty count，而是 Ukraine strikes St. Petersburg oil terminal。</span></div>
+          <div class="rank-item"><b>03</b><span>不是重複 Microsoft Build / Anthropic / NVIDIA，而是 OpenAI、GitHub、Cloudflare 和 AI footprint。</span></div>
+          <div class="rank-item"><b>04</b><span>最大不確定性：Kuwait attribution、以黎 ceasefire enforcement、Iraq militia handover、OpenAI GPT-Rosalind capability details。</span></div>
+        </div>
+      </div>
+      <div class="source-corner">
+        <a href="source-notes-2026-06-04.md">Source notes: selection log</a>
+        <a href="daily-news-2026-06-04.md">Daily report: full details</a>
+      </div>
+    </section>
+  </main>
+
+  <nav class="nav" aria-label="Slide navigation">
+    <button type="button" id="prev" aria-label="上一張" title="上一張">‹</button>
+    <div class="count" id="count">1 / 10</div>
+    <button type="button" id="next" aria-label="下一張" title="下一張">›</button>
+  </nav>
+
+  <script>
+    const slides = Array.from(document.querySelectorAll(".slide"));
+    const count = document.getElementById("count");
+    const prev = document.getElementById("prev");
+    const next = document.getElementById("next");
+    let index = 0;
+
+    function clampSlide(value) {
+      return Math.max(0, Math.min(slides.length - 1, value));
+    }
+
+    function showSlide(value, updateHash = true) {
+      index = clampSlide(value);
+      slides.forEach((slide, i) => {
+        slide.classList.toggle("is-active", i === index);
+      });
+      count.textContent = `${index + 1} / ${slides.length}`;
+      if (updateHash) {
+        history.replaceState(null, "", `#${index + 1}`);
+      }
+    }
+
+    prev.addEventListener("click", () => showSlide(index - 1));
+    next.addEventListener("click", () => showSlide(index + 1));
+
+    window.addEventListener("keydown", (event) => {
+      if (event.key === "ArrowLeft" || event.key === "PageUp") showSlide(index - 1);
+      if (event.key === "ArrowRight" || event.key === " " || event.key === "PageDown") showSlide(index + 1);
+      if (event.key === "Home") showSlide(0);
+      if (event.key === "End") showSlide(slides.length - 1);
+    });
+
+    const initial = Number.parseInt(location.hash.replace("#", ""), 10);
+    if (Number.isFinite(initial)) {
+      showSlide(initial - 1, false);
+    } else {
+      showSlide(0, false);
+    }
+  </script>
+</body>
+</html>
