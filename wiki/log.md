@@ -142,3 +142,19 @@
 - Created `wiki/daily/2026/06/2026-06-04/slides-2026-06-04.html`.
 - Updated `wiki/daily/latest-slides.html`, `wiki/index.md`, and `wiki/overview.md`.
 - Excluded previous daily-news duplicates unless there was a material new development, and labeled continuations explicitly.
+
+## [2026-06-05] ingest | Daily global and tech AI news
+
+- Created `wiki/daily/2026/06/2026-06-05/daily-news-2026-06-05.md`.
+- Created `wiki/daily/2026/06/2026-06-05/source-notes-2026-06-05.md`.
+- Created `wiki/daily/2026/06/2026-06-05/slides-2026-06-05.html`.
+- Updated `wiki/daily/latest-slides.html`, `wiki/index.md`, and `wiki/overview.md`.
+- Excluded previous daily-news duplicates unless there was a material new development, and labeled continuations explicitly.
+
+## [2026-06-06] ingest | Daily global and tech AI news
+
+- Created `wiki/daily/2026/06/2026-06-06/daily-news-2026-06-06.md`.
+- Created `wiki/daily/2026/06/2026-06-06/source-notes-2026-06-06.md`.
+- Created `wiki/daily/2026/06/2026-06-06/slides-2026-06-06.html`.
+- Updated `wiki/daily/latest-slides.html`, `wiki/index.md`, and `wiki/overview.md`.
+- Excluded previous daily-news duplicates unless there was a material new development, and labeled continuations explicitly.
