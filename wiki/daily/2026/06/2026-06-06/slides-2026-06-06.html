@@ -1,0 +1,521 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Daily News 2026-06-06</title>
+  <!--
+    Background image attribution / source notes:
+    - News desk: Unsplash, https://images.unsplash.com/photo-1495020689067-958852a7765e
+    - Diplomatic hall: Unsplash, https://images.unsplash.com/photo-1529107386315-e1a2ed48a620
+    - Seoul city / Northeast Asia proxy: Unsplash, https://images.unsplash.com/photo-1538485399081-7191377e8241
+    - Gaza / urban damage proxy: Unsplash, https://images.unsplash.com/photo-1518005020951-eccb494ad742
+    - Court / law: Unsplash, https://images.unsplash.com/photo-1589578527966-fdac0f44566c
+    - Mogadishu / city proxy: Unsplash, https://images.unsplash.com/photo-1512453979798-5ea266f8880c
+    - Europe architecture: Unsplash, https://images.unsplash.com/photo-1467269204594-9661b134dd2b
+    - Circuit board: Unsplash, https://images.unsplash.com/photo-1518770660439-4636190af4756
+    - Data center: Unsplash, https://images.unsplash.com/photo-1558494949-ef010cbdcc31
+    - Voice / audio: Unsplash, https://images.unsplash.com/photo-1516280440614-37939bbacd81
+  -->
+  <style>
+    :root {
+      color-scheme: dark;
+      --ink: #fbfbf2;
+      --muted: #d8dfd2;
+      --line: rgba(255, 255, 255, 0.24);
+      --accent: #92e0cf;
+      --accent-2: #f6c76a;
+      --panel: rgba(7, 12, 15, 0.62);
+      --panel-strong: rgba(7, 12, 15, 0.82);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      min-height: 100%;
+      background: #091014;
+      color: var(--ink);
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    body {
+      overflow: hidden;
+    }
+
+    .deck {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+      background: #091014;
+    }
+
+    .slide {
+      position: absolute;
+      inset: 0;
+      display: grid;
+      align-items: center;
+      padding: clamp(34px, 5vw, 72px);
+      background-image:
+        linear-gradient(90deg, rgba(5, 9, 12, 0.86), rgba(5, 9, 12, 0.5), rgba(5, 9, 12, 0.76)),
+        var(--bg);
+      background-size: cover;
+      background-position: center;
+      opacity: 0;
+      pointer-events: none;
+      transform: translateX(14px);
+      transition: opacity 220ms ease, transform 220ms ease;
+    }
+
+    .slide.is-active {
+      opacity: 1;
+      pointer-events: auto;
+      transform: translateX(0);
+    }
+
+    .content {
+      width: min(1120px, 100%);
+      margin: 0 auto;
+      padding-bottom: 58px;
+    }
+
+    .narrow {
+      width: min(930px, 100%);
+    }
+
+    .kicker {
+      margin: 0 0 14px;
+      color: var(--accent);
+      font-size: clamp(0.78rem, 1.4vw, 1rem);
+      font-weight: 820;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    h1,
+    h2 {
+      margin: 0;
+      line-height: 1.04;
+      letter-spacing: 0;
+      text-wrap: balance;
+    }
+
+    h1 {
+      max-width: 990px;
+      font-size: clamp(2.55rem, 7.8vw, 6.9rem);
+      font-weight: 900;
+    }
+
+    h2 {
+      max-width: 980px;
+      font-size: clamp(1.95rem, 4.9vw, 4.55rem);
+      font-weight: 880;
+    }
+
+    .lede {
+      max-width: 900px;
+      margin: 24px 0 0;
+      color: var(--muted);
+      font-size: clamp(1.03rem, 2vw, 1.46rem);
+      line-height: 1.55;
+      text-wrap: pretty;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 28px;
+    }
+
+    .grid.two {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .tile {
+      min-height: 146px;
+      padding: 18px;
+      border: 1px solid var(--line);
+      background: var(--panel);
+      backdrop-filter: blur(10px);
+    }
+
+    .tile strong {
+      display: block;
+      margin-bottom: 8px;
+      color: #fff6d7;
+      font-size: clamp(1rem, 1.4vw, 1.18rem);
+      line-height: 1.25;
+    }
+
+    .tile span {
+      color: var(--muted);
+      font-size: clamp(0.94rem, 1.24vw, 1.06rem);
+      line-height: 1.45;
+    }
+
+    .rank-list {
+      display: grid;
+      gap: 10px;
+      margin-top: 24px;
+      width: min(980px, 100%);
+    }
+
+    .rank-item {
+      display: grid;
+      grid-template-columns: 54px 1fr;
+      gap: 14px;
+      align-items: start;
+      padding: 14px 16px;
+      background: var(--panel);
+      border-left: 4px solid var(--accent-2);
+      backdrop-filter: blur(10px);
+    }
+
+    .rank-item b {
+      color: var(--accent-2);
+      font-size: 1.1rem;
+    }
+
+    .rank-item span {
+      color: var(--muted);
+      line-height: 1.42;
+    }
+
+    .quote {
+      width: min(960px, 100%);
+      margin-top: 28px;
+      padding: 22px;
+      background: var(--panel-strong);
+      border: 1px solid var(--line);
+      color: var(--muted);
+      font-size: clamp(1.02rem, 1.55vw, 1.24rem);
+      line-height: 1.55;
+    }
+
+    .source-corner {
+      position: fixed;
+      left: 18px;
+      bottom: 16px;
+      z-index: 20;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      max-width: min(72vw, 980px);
+      font-size: 0.82rem;
+    }
+
+    .source-corner a {
+      color: #101418;
+      background: rgba(255, 248, 223, 0.91);
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      padding: 6px 9px;
+      text-decoration: none;
+      font-weight: 780;
+    }
+
+    .source-corner a:focus-visible,
+    .source-corner a:hover {
+      background: var(--accent);
+      outline: none;
+    }
+
+    .nav {
+      position: fixed;
+      right: 18px;
+      bottom: 16px;
+      z-index: 30;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px;
+      background: rgba(8, 14, 18, 0.74);
+      border: 1px solid var(--line);
+      backdrop-filter: blur(10px);
+    }
+
+    .nav button {
+      width: 42px;
+      height: 42px;
+      border: 1px solid var(--line);
+      color: var(--ink);
+      background: rgba(255, 255, 255, 0.08);
+      font-size: 1.7rem;
+      line-height: 1;
+      cursor: pointer;
+    }
+
+    .nav button:focus-visible,
+    .nav button:hover {
+      border-color: var(--accent);
+      outline: none;
+    }
+
+    .count {
+      min-width: 62px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.88rem;
+      font-weight: 760;
+    }
+
+    @media (max-width: 820px) {
+      .slide {
+        align-items: start;
+        overflow-y: auto;
+        padding: 28px 18px 114px;
+      }
+
+      .content {
+        padding-bottom: 0;
+      }
+
+      .grid,
+      .grid.two {
+        grid-template-columns: 1fr;
+      }
+
+      .tile {
+        min-height: auto;
+      }
+
+      .rank-item {
+        grid-template-columns: 42px 1fr;
+      }
+
+      .source-corner {
+        max-width: calc(100vw - 128px);
+        font-size: 0.74rem;
+      }
+
+      .nav {
+        right: 12px;
+        bottom: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="deck" aria-live="polite">
+    <section class="slide is-active" style="--bg: url('https://images.unsplash.com/photo-1495020689067-958852a7765e?auto=format&fit=crop&w=1800&q=80');">
+      <div class="content narrow">
+        <p class="kicker">2026-06-06｜全球與科技 AI 新聞</p>
+        <h1>談判門縫縮小，AI 治理進入軍事與資本市場</h1>
+        <p class="lede">今日焦點：Putin 拒絕 Zelenskyy 會面、Xi 將訪 North Korea、Gaza 停火仍在紙面上、Ireland 對以色列極右翼部長祭出 travel ban、美國 immigration / FISA / ICE funding 拉扯，以及 Anthropic pause proposal、national-security AI memo and Google AI financing。</p>
+      </div>
+      <div class="source-corner">
+        <a href="daily-news-2026-06-06.md">Daily report: 2026-06-06</a>
+        <a href="source-notes-2026-06-06.md">Source notes</a>
+      </div>
+    </section>
+
+    <section class="slide" style="--bg: url('https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?auto=format&fit=crop&w=1800&q=80');">
+      <div class="content">
+        <p class="kicker">Top 10｜世界新聞</p>
+        <h2>今天的排序是戰爭談判、東北亞核槓桿、制度投票</h2>
+        <div class="rank-list">
+          <div class="rank-item"><b>01</b><span>Putin 拒絕 Zelenskyy face-to-face talks，稱目前 "no point"。</span></div>
+          <div class="rank-item"><b>02</b><span>Xi Jinping 將於 6 月 8-9 日訪問 North Korea，是近七年首次。</span></div>
+          <div class="rank-item"><b>03</b><span>Gaza attacks persist despite ceasefire；Hamas officials head to Cairo talks。</span></div>
+          <div class="rank-item"><b>04</b><span>Ireland bars Ben-Gvir and Smotrich from entry。</span></div>
+          <div class="rank-item"><b>05</b><span>U.S. judge strikes immigration-processing restrictions on 39 countries。</span></div>
+        </div>
+      </div>
+      <div class="source-corner">
+        <a href="https://apnews.com/article/a57c76d347f580eaf8325062ed13a6ec">AP: Putin rejects talks</a>
+        <a href="https://www.marketscreener.com/news/china-s-xi-to-visit-north-korea-as-beijing-seeks-cosier-ties-with-pyongyang-ce7f5dddda8ef22d">Reuters: Xi to North Korea</a>
+        <a href="https://www.aljazeera.com/news/2026/6/5/pervasive-fear-grips-gaza-as-israeli-attacks-persist-despite-ceasefire">Al Jazeera: Gaza ceasefire</a>
+      </div>
+    </section>
+
+    <section class="slide" style="--bg: url('https://images.unsplash.com/photo-1538485399081-7191377e8241?auto=format&fit=crop&w=1800&q=80');">
+      <div class="content">
+        <p class="kicker">1-2｜Ukraine / Northeast Asia</p>
+        <h2>高層外交一冷一熱</h2>
+        <div class="grid two">
+          <div class="tile"><strong>Russia / Ukraine</strong><span>Putin 拒絕 Zelenskyy public letter 的會面提議，稱軍事行動只會在 Moscow 達成目標後停止。</span></div>
+          <div class="tile"><strong>China / North Korea</strong><span>Xi 將訪 Pyongyang；在 North Korea nuclear facility disclosure 後，北京重抓對 Pyongyang 的影響力。</span></div>
+          <div class="tile"><strong>判讀</strong><span>Ukraine peace window 變窄；東北亞則進入 China-Russia-North Korea alignment 是否加深的觀察點。</span></div>
+          <div class="tile"><strong>不確定性</strong><span>Putin 拒見不等於所有 channels 關閉；Xi 訪問 agenda 仍未公開。</span></div>
+        </div>
+      </div>
+      <div class="source-corner">
+        <a href="https://www.aljazeera.com/news/2026/6/5/russias-putin-says-no-point-meeting-ukraines-zelenskyy-for-now">Al Jazeera: Putin remarks</a>
+        <a href="https://www.marketscreener.com/news/china-s-xi-to-visit-north-korea-as-beijing-seeks-cosier-ties-with-pyongyang-ce7f5dddda8ef22d">Reuters: Xi visit</a>
+      </div>
+    </section>
+
+    <section class="slide" style="--bg: url('https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&w=1800&q=80');">
+      <div class="content narrow">
+        <p class="kicker">3-4｜Gaza / Israel diplomacy</p>
+        <h2>停火在紙面上，歐洲制裁變得更具體</h2>
+        <p class="lede">Gaza 仍有 drone strike casualties，Hamas officials 前往 Cairo 談第一階段落實與第二階段條件。Ireland 同日禁止 Itamar Ben-Gvir and Bezalel Smotrich 入境，把 Gaza displacement、West Bank annexation and flotilla treatment 轉成國家級 travel ban。</p>
+        <div class="quote">判讀：這不是單一戰場新聞，而是 ceasefire enforcement、postwar governance、European diplomatic pressure 同時進入可追蹤節點。</div>
+      </div>
+      <div class="source-corner">
+        <a href="https://www.aljazeera.com/news/2026/6/5/pervasive-fear-grips-gaza-as-israeli-attacks-persist-despite-ceasefire">Al Jazeera: Gaza attacks</a>
+        <a href="https://www.aljazeera.com/news/2026/6/5/ireland-imposes-travel-ban-on-israeli-ministers-ben-gvir-and-smotrich">Al Jazeera: Ireland travel ban</a>
+      </div>
+    </section>
+
+    <section class="slide" style="--bg: url('https://images.unsplash.com/photo-1589578527966-fdac0f44566c?auto=format&fit=crop&w=1800&q=80');">
+      <div class="content">
+        <p class="kicker">5-7｜U.S. institutions</p>
+        <h2>同一天，移民、監控與執法預算互相拉扯</h2>
+        <div class="grid">
+          <div class="tile"><strong>Immigration ruling</strong><span>Federal judge struck restrictions affecting asylum, work permits, green cards and citizenship decisions for people from 39 countries。</span></div>
+          <div class="tile"><strong>FISA 702</strong><span>Senate blocked extension amid backlash over Bill Pulte acting DNI；deadline remains June 12。</span></div>
+          <div class="tile"><strong>ICE funding</strong><span>Senate passed $70bn ICE / CBP funding bill, sending it toward House action next week。</span></div>
+        </div>
+      </div>
+      <div class="source-corner">
+        <a href="https://www.internazionale.it/ultime-notizie-reuters/2026/06/05/us-judge-strikes-down-trump-policies-targeting-immigrants-from-39-countries">Reuters: Immigration ruling</a>
+        <a href="https://apnews.com/article/e6525371304fad3cd664761b6108b2db">AP: FISA vote</a>
+        <a href="https://www.aljazeera.com/news/2026/6/5/us-senate-passes-70bn-ice-funding-bill-what-comes-next">Al Jazeera: ICE bill</a>
+      </div>
+    </section>
+
+    <section class="slide" style="--bg: url('https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1800&q=80');">
+      <div class="content">
+        <p class="kicker">8-10｜Governance / economy</p>
+        <h2>首都衝突、歐盟擴大、農村政治成本</h2>
+        <div class="grid">
+          <div class="tile"><strong>Somalia</strong><span>Mogadishu fighting eased after two days；UN figures cited 13 dead, 189 wounded and 12,500 households displaced。</span></div>
+          <div class="tile"><strong>EU enlargement</strong><span>France and Germany push gradual integration for Western Balkans after Ukraine / Moldova cluster breakthrough。</span></div>
+          <div class="tile"><strong>U.S. farmers</strong><span>Tariffs and Iran-war input costs moved directly into Wisconsin midterm campaigning。</span></div>
+        </div>
+      </div>
+      <div class="source-corner">
+        <a href="https://www.aljazeera.com/news/2026/6/5/somalia-declares-order-restored-after-two-days-of-fighting-in-mogadishu">Al Jazeera: Mogadishu</a>
+        <a href="https://www.aljazeera.com/news/2026/6/5/germanys-merz-says-eu-to-initiate-integration-of-western-balkans">Al Jazeera: Western Balkans</a>
+        <a href="https://www.aljazeera.com/news/2026/6/5/trump-makes-pitch-to-farmers-hard-hit-by-tariffs-high-prices-in-wisconsin">Al Jazeera: Farmers</a>
+      </div>
+    </section>
+
+    <section class="slide" style="--bg: url('https://images.unsplash.com/photo-1518770660439-4636190af4756?auto=format&fit=crop&w=1800&q=80');">
+      <div class="content narrow">
+        <p class="kicker">Technology / AI</p>
+        <h2>今天不是模型榜單，是 AI governance and capital structure</h2>
+        <p class="lede">White House 將 military / national-security AI deployment 正式化；Anthropic 把 recursive self-improvement and verifiable pause 放到公共議程；Google / Alphabet financing and Anthropic IPO 讓 AI 基礎設施進入 public-market discipline。</p>
+      </div>
+      <div class="source-corner">
+        <a href="https://apnews.com/article/1078e23edada2bc16db12dba109015c0">AP: Military AI memo</a>
+        <a href="https://www.anthropic.com/institute/recursive-self-improvement">Anthropic: Recursive self-improvement</a>
+        <a href="https://techcrunch.com/2026/06/03/alphabets-record-breaking-85b-raise-for-googles-ai-business-is-a-helluva-good-signal/">TechCrunch: Google AI financing</a>
+      </div>
+    </section>
+
+    <section class="slide" style="--bg: url('https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1800&q=80');">
+      <div class="content">
+        <p class="kicker">AI Policy / Frontier Labs</p>
+        <h2>軍事部署與「可暫停」能力成為同一天的焦點</h2>
+        <div class="grid">
+          <div class="tile"><strong>National-security AI</strong><span>Trump memo calls for faster AI use by military and national-security agencies, with civil liberties and autonomous-weapon oversight language。</span></div>
+          <div class="tile"><strong>Anthropic pause option</strong><span>Anthropic says labs may need a coordinated, verifiable slowdown if advanced systems start improving themselves too quickly。</span></div>
+          <div class="tile"><strong>Policy tension</strong><span>OpenAI favors democratic-government rulemaking; Anthropic is arguing for lab coordination tools before recursive self-improvement arrives。</span></div>
+        </div>
+      </div>
+      <div class="source-corner">
+        <a href="https://apnews.com/article/1078e23edada2bc16db12dba109015c0">AP: AI memo</a>
+        <a href="https://apnews.com/article/938c99158e5953601cf3322f1cec12af">AP: Anthropic pause</a>
+        <a href="https://www.anthropic.com/institute/recursive-self-improvement">Anthropic: Institute post</a>
+      </div>
+    </section>
+
+    <section class="slide" style="--bg: url('https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1800&q=80');">
+      <div class="content">
+        <p class="kicker">AI Capital</p>
+        <h2>Frontier AI 開始接受資本市場壓力測試</h2>
+        <div class="grid">
+          <div class="tile"><strong>Anthropic / White House</strong><span>Reuters says tensions are easing in parts of government while DoD still defends against Anthropic's lawsuit。</span></div>
+          <div class="tile"><strong>Alphabet financing</strong><span>TechCrunch reports Alphabet's AI-related offering is set to total $85bn across two tranches。</span></div>
+          <div class="tile"><strong>Anthropic IPO</strong><span>Confidential filing keeps the near-$1tn frontier-lab valuation story active and forces disclosure questions closer。</span></div>
+        </div>
+      </div>
+      <div class="source-corner">
+        <a href="https://m.investing.com/news/economy-news/blacklisted-ai-company-anthropic-white-house-ease-tensions-ahead-of-ipo-sources-say-4728165?ampMode=1">Reuters: Anthropic tensions</a>
+        <a href="https://techcrunch.com/2026/06/03/alphabets-record-breaking-85b-raise-for-googles-ai-business-is-a-helluva-good-signal/">TechCrunch: Alphabet raise</a>
+        <a href="https://techcrunch.com/2026/06/01/anthropic-files-to-go-public/">TechCrunch: Anthropic IPO</a>
+      </div>
+    </section>
+
+    <section class="slide" style="--bg: url('https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=1800&q=80');">
+      <div class="content narrow">
+        <p class="kicker">AI Productization</p>
+        <h2>Voice AI 的下一個產品邊界是地方語音、延遲與電信整合</h2>
+        <p class="lede">AethexAI raised $3m and launched enterprise APIs / platform for Africa and Middle East voice AI. Its bet is not bigger models, but small local models, dialect data, low-latency orchestration and on-the-ground channel partnerships.</p>
+        <div class="quote">判讀：這補上了美國/歐洲 agent 熱潮之外的產品事實：在 emerging markets，語音、telephony and price constraints often decide architecture。</div>
+      </div>
+      <div class="source-corner">
+        <a href="https://techcrunch.com/2026/06/03/these-two-founders-left-goldman-and-meta-to-build-voice-ai-for-markets-everyone-else-overlooked/">TechCrunch: AethexAI voice AI</a>
+      </div>
+    </section>
+
+    <section class="slide" style="--bg: url('https://images.unsplash.com/photo-1495020689067-958852a7765e?auto=format&fit=crop&w=1800&q=80');">
+      <div class="content">
+        <p class="kicker">Dedupe / Watch Next</p>
+        <h2>今天保留的新事實與下個檢查點</h2>
+        <div class="rank-list">
+          <div class="rank-item"><b>01</b><span>Ukraine：不是重複 strike / EU accession，而是 Putin rejects leader-level meeting。</span></div>
+          <div class="rank-item"><b>02</b><span>North Korea：不是重複 nuclear facility，而是 Xi confirmed visit on June 8-9。</span></div>
+          <div class="rank-item"><b>03</b><span>U.S. institutions：FISA deadline June 12 and House ICE vote are next hard checks。</span></div>
+          <div class="rank-item"><b>04</b><span>AI：watch whether Anthropic pause proposal becomes multi-lab coordination or remains IPO-era positioning。</span></div>
+        </div>
+      </div>
+      <div class="source-corner">
+        <a href="source-notes-2026-06-06.md">Source notes: dedupe log</a>
+        <a href="daily-news-2026-06-06.md">Daily report: full details</a>
+      </div>
+    </section>
+  </main>
+
+  <nav class="nav" aria-label="Slide navigation">
+    <button type="button" id="prev" aria-label="上一張" title="上一張">‹</button>
+    <div class="count" id="count">1 / 11</div>
+    <button type="button" id="next" aria-label="下一張" title="下一張">›</button>
+  </nav>
+
+  <script>
+    const slides = Array.from(document.querySelectorAll(".slide"));
+    const count = document.getElementById("count");
+    const prev = document.getElementById("prev");
+    const next = document.getElementById("next");
+    let index = 0;
+
+    function clampSlide(value) {
+      return Math.max(0, Math.min(slides.length - 1, value));
+    }
+
+    function showSlide(value, updateHash = true) {
+      index = clampSlide(value);
+      slides.forEach((slide, i) => {
+        slide.classList.toggle("is-active", i === index);
+      });
+      count.textContent = `${index + 1} / ${slides.length}`;
+      if (updateHash) {
+        history.replaceState(null, "", `#${index + 1}`);
+      }
+    }
+
+    prev.addEventListener("click", () => showSlide(index - 1));
+    next.addEventListener("click", () => showSlide(index + 1));
+
+    window.addEventListener("keydown", (event) => {
+      if (event.key === "ArrowLeft" || event.key === "PageUp") showSlide(index - 1);
+      if (event.key === "ArrowRight" || event.key === " " || event.key === "PageDown") showSlide(index + 1);
+      if (event.key === "Home") showSlide(0);
+      if (event.key === "End") showSlide(slides.length - 1);
+    });
+
+    const initial = Number.parseInt(location.hash.replace("#", ""), 10);
+    if (Number.isFinite(initial)) {
+      showSlide(initial - 1, false);
+    } else {
+      showSlide(0, false);
+    }
+  </script>
+</body>
+</html>
