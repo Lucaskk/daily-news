@@ -2,7 +2,7 @@
 title: "Knowledge Base Index"
 type: overview
 created: 2026-05-24
-updated: 2026-06-04
+updated: 2026-06-06
 status: seed
 tags: [index]
 sources: []
@@ -24,6 +24,10 @@ sources: []
 
 每日新聞報告會放在 `wiki/daily/YYYY/MM/YYYY-MM-DD/`。
 
+- [2026-06-06 Daily News](daily/2026/06/2026-06-06/daily-news-2026-06-06.md) - 今日主軸是 Putin 拒絕 Zelenskyy 會面、Xi 將訪 North Korea、Gaza 停火仍在紙面上、美國 immigration / FISA / ICE funding 制度拉扯，以及 AI 轉向 national-security deployment、Anthropic recursive self-improvement pause、Google AI financing and emerging-market voice AI。
+- [2026-06-06 Slides](daily/2026/06/2026-06-06/slides-2026-06-06.html) - 今日新聞網頁版投影片。
+- [2026-06-05 Daily News](daily/2026/06/2026-06-05/daily-news-2026-06-05.md) - 今日主軸是 Iran uranium impasse、Israel-Lebanon ceasefire announcement 後立即流血、Ukraine / Moldova EU accession breakthrough、North Korea nuclear facility、NATO eastern-flank nuclear deterrence talks，以及 AI 轉向 EU tech sovereignty、Gemini mobile agents、Anthropic Mythos cyber access、platform regulation 與 physical AI manufacturing。
+- [2026-06-05 Slides](daily/2026/06/2026-06-05/slides-2026-06-05.html) - 今日新聞網頁版投影片。
 - [2026-06-04 Daily News](daily/2026/06/2026-06-04/daily-news-2026-06-04.md) - 今日主軸是 Kuwait 機場遇襲、U.S. House war powers vote、以黎停火續談與 Trump-Netanyahu 分歧、Ukraine 遠程打擊 St. Petersburg oil terminal，以及 OpenAI / GitHub / Cloudflare 把 AI 產品推向工具鏈、帳號安全與 agent infrastructure。
 - [2026-06-04 Slides](daily/2026/06/2026-06-04/slides-2026-06-04.html) - 今日新聞網頁版投影片。
 - [2026-06-03 Daily News](daily/2026/06/2026-06-03/daily-news-2026-06-03.md) - 今日主軸是 Iran / Hormuz 談判狀態矛盾、Ukraine 大規模空襲、Lebanon 降溫失效、El Nino 風險，以及 AI agent 平台與 frontier model review 制度化。
