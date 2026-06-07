@@ -2,7 +2,7 @@
 title: "Knowledge Base Index"
 type: overview
 created: 2026-05-24
-updated: 2026-06-06
+updated: 2026-06-07
 status: seed
 tags: [index]
 sources: []
@@ -24,6 +24,8 @@ sources: []
 
 每日新聞報告會放在 `wiki/daily/YYYY/MM/YYYY-MM-DD/`。
 
+- [2026-06-07 Daily News](daily/2026/06/2026-06-07/daily-news-2026-06-07.md) - 今日主軸是 U.S.-Iran / Hormuz 交火讓停火名義再受測試、Gaza Cairo talks 邊談邊打、Peru runoff、Taiwan / New Zealand 印太防務升溫、Indonesia rupiah record lows and oil inventory price-spike risk，以及 AI 轉向 OpenAI Lockdown Mode、government equity stake discussion、Google-SpaceX compute lease、AirTrunk India data centers and agent observability。
+- [2026-06-07 Slides](daily/2026/06/2026-06-07/slides-2026-06-07.html) - 今日新聞網頁版投影片。
 - [2026-06-06 Daily News](daily/2026/06/2026-06-06/daily-news-2026-06-06.md) - 今日主軸是 Putin 拒絕 Zelenskyy 會面、Xi 將訪 North Korea、Gaza 停火仍在紙面上、美國 immigration / FISA / ICE funding 制度拉扯，以及 AI 轉向 national-security deployment、Anthropic recursive self-improvement pause、Google AI financing and emerging-market voice AI。
 - [2026-06-06 Slides](daily/2026/06/2026-06-06/slides-2026-06-06.html) - 今日新聞網頁版投影片。
 - [2026-06-05 Daily News](daily/2026/06/2026-06-05/daily-news-2026-06-05.md) - 今日主軸是 Iran uranium impasse、Israel-Lebanon ceasefire announcement 後立即流血、Ukraine / Moldova EU accession breakthrough、North Korea nuclear facility、NATO eastern-flank nuclear deterrence talks，以及 AI 轉向 EU tech sovereignty、Gemini mobile agents、Anthropic Mythos cyber access、platform regulation 與 physical AI manufacturing。
