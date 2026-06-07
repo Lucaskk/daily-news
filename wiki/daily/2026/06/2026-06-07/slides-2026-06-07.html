@@ -1,0 +1,472 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Daily News 2026-06-07</title>
+  <!--
+    Background image source notes:
+    - The slide backgrounds use stable Unsplash image URLs with query parameters for sizing.
+    - Title/news: https://images.unsplash.com/photo-1495020689067-958852a7765e
+    - Maritime / conflict: https://images.unsplash.com/photo-1524522173746-f628baad3644
+    - Election / civic: https://images.unsplash.com/photo-1540910419892-4a36d2c3266c
+    - Finance / market: https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3
+    - Technology / circuit: https://images.unsplash.com/photo-1518770660439-4636190af475
+    - Data center: https://images.unsplash.com/photo-1558494949-ef010cbdcc31
+  -->
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #111827;
+      --muted: #4b5563;
+      --panel: rgba(255, 255, 255, 0.84);
+      --line: rgba(17, 24, 39, 0.18);
+      --accent: #0f766e;
+      --accent-2: #b45309;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC", "PingFang TC", sans-serif;
+      color: var(--ink);
+      background: #eef2f7;
+      overflow: hidden;
+    }
+
+    .deck {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+    }
+
+    .slide {
+      position: absolute;
+      inset: 0;
+      display: none;
+      padding: clamp(28px, 5vw, 70px);
+      background: #f8fafc center / cover no-repeat;
+      isolation: isolate;
+    }
+
+    .slide.active {
+      display: grid;
+      grid-template-rows: 1fr auto;
+      gap: 18px;
+    }
+
+    .slide::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -2;
+      background: linear-gradient(90deg, rgba(255,255,255,0.9), rgba(255,255,255,0.72) 58%, rgba(255,255,255,0.54));
+    }
+
+    .slide::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background: radial-gradient(circle at 12% 10%, rgba(255,255,255,0.72), transparent 36%);
+    }
+
+    .title { background-image: url("https://images.unsplash.com/photo-1495020689067-958852a7765e?auto=format&fit=crop&w=1800&q=82"); }
+    .conflict { background-image: url("https://images.unsplash.com/photo-1524522173746-f628baad3644?auto=format&fit=crop&w=1800&q=82"); }
+    .civic { background-image: url("https://images.unsplash.com/photo-1540910419892-4a36d2c3266c?auto=format&fit=crop&w=1800&q=82"); }
+    .market { background-image: url("https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=1800&q=82"); }
+    .tech { background-image: url("https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1800&q=82"); }
+    .data { background-image: url("https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1800&q=82"); }
+
+    .content {
+      align-self: center;
+      max-width: min(1120px, 88vw);
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: clamp(22px, 3vw, 42px);
+      box-shadow: 0 18px 60px rgba(15, 23, 42, 0.18);
+      backdrop-filter: blur(10px);
+    }
+
+    .title .content {
+      max-width: min(1000px, 86vw);
+      background: rgba(255, 255, 255, 0.78);
+    }
+
+    .kicker {
+      margin: 0 0 12px;
+      color: var(--accent);
+      font-size: clamp(14px, 1.35vw, 18px);
+      font-weight: 700;
+      letter-spacing: 0;
+      text-transform: uppercase;
+    }
+
+    h1, h2 {
+      margin: 0;
+      letter-spacing: 0;
+      line-height: 1.08;
+    }
+
+    h1 {
+      font-size: clamp(44px, 7vw, 88px);
+      max-width: 980px;
+    }
+
+    h2 {
+      font-size: clamp(30px, 4.2vw, 58px);
+      max-width: 1040px;
+    }
+
+    .lede {
+      margin: 18px 0 0;
+      color: #1f2937;
+      font-size: clamp(19px, 2.2vw, 29px);
+      line-height: 1.45;
+      max-width: 980px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 22px;
+    }
+
+    .item {
+      min-height: 118px;
+      padding: 16px 17px;
+      border: 1px solid rgba(15, 118, 110, 0.22);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.7);
+    }
+
+    .item strong {
+      display: block;
+      font-size: clamp(18px, 1.8vw, 24px);
+      line-height: 1.25;
+      margin-bottom: 8px;
+    }
+
+    .item span, li {
+      color: var(--muted);
+      font-size: clamp(15px, 1.45vw, 20px);
+      line-height: 1.45;
+    }
+
+    ul {
+      margin: 22px 0 0;
+      padding-left: 1.2em;
+      max-width: 1000px;
+    }
+
+    li + li { margin-top: 10px; }
+
+    .rank {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 34px;
+      height: 34px;
+      margin-right: 10px;
+      border-radius: 50%;
+      background: #0f766e;
+      color: white;
+      font-weight: 800;
+      font-size: 16px;
+      vertical-align: middle;
+    }
+
+    .sources {
+      justify-self: start;
+      align-self: end;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      max-width: calc(100vw - 230px);
+      padding: 8px 10px;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.86);
+      border: 1px solid var(--line);
+      font-size: 13px;
+    }
+
+    .sources a {
+      color: #075985;
+      text-decoration: none;
+      font-weight: 650;
+    }
+
+    .sources a:hover { text-decoration: underline; }
+
+    .controls {
+      position: fixed;
+      right: 18px;
+      bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      z-index: 10;
+      padding: 8px;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.88);
+      border: 1px solid var(--line);
+      box-shadow: 0 10px 28px rgba(15, 23, 42, 0.16);
+    }
+
+    button {
+      width: 42px;
+      height: 38px;
+      border: 1px solid rgba(15, 118, 110, 0.35);
+      border-radius: 8px;
+      background: white;
+      color: #0f766e;
+      font-size: 20px;
+      font-weight: 800;
+      cursor: pointer;
+    }
+
+    button:hover { background: #ecfdf5; }
+
+    .counter {
+      min-width: 62px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    @media (max-width: 760px) {
+      .slide { padding: 22px 16px 74px; }
+      .slide.active { gap: 12px; }
+      .content { max-width: 100%; padding: 20px; }
+      .grid { grid-template-columns: 1fr; gap: 10px; }
+      .item { min-height: auto; padding: 13px 14px; }
+      .sources {
+        max-width: calc(100vw - 32px);
+        font-size: 12px;
+      }
+      .controls {
+        right: 12px;
+        left: auto;
+        bottom: 10px;
+      }
+      button {
+        width: 38px;
+        height: 34px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="deck" aria-live="polite">
+    <section class="slide title active">
+      <div class="content">
+        <p class="kicker">2026-06-07 每日全球與科技 AI 新聞</p>
+        <h1>停火語言失效，AI 進入安全與算力政治</h1>
+        <p class="lede">今日焦點：Hormuz 交火、Gaza Cairo talks、Peru runoff、Taiwan / New Zealand 防務、Indonesia 匯率壓力，以及 OpenAI Lockdown Mode、Google-SpaceX compute lease。</p>
+      </div>
+      <nav class="sources" aria-label="slide sources">
+        <a href="daily-news-2026-06-07.md">Daily report</a>
+        <a href="source-notes-2026-06-07.md">Source notes</a>
+      </nav>
+    </section>
+
+    <section class="slide conflict">
+      <div class="content">
+        <p class="kicker">Global 1-2｜停火名義下的軍事交換</p>
+        <h2>Iran / Gaza 都進入「邊談邊打」狀態</h2>
+        <div class="grid">
+          <div class="item"><strong><span class="rank">1</span>U.S.-Iran Gulf exchange</strong><span>美軍稱攔截 drones / missiles 後打擊 Qeshm and Goruk radar sites；Iran 稱攻擊 Kuwait and Bahrain 的 U.S. targets。</span></div>
+          <div class="item"><strong><span class="rank">2</span>Gaza Cairo talks</strong><span>Hamas 稱 Cairo talks 已開始，同時 Reuters 報導 Gaza City tent area strike 至少 7 死、15 傷。</span></div>
+        </div>
+      </div>
+      <nav class="sources" aria-label="slide sources">
+        <a href="https://www.wxxinews.org/npr-news/2026-06-06/u-s-military-says-it-shot-down-iranian-drones-launched-toward-gulf-allies">AP: Gulf exchange</a>
+        <a href="https://www.brecorder.com/live/iran-israel-war">Reuters: Iran radar sites</a>
+        <a href="https://ground.news/article/israel-kills-seven-people-in-gaza-a-baby-also-killed-in-the-west-bank/">Reuters: Gaza strike</a>
+        <a href="https://tribune.com.pk/story/2611774/hamas-says-cairo-talks-begin-on-gaza-ceasefire-implementation?amp=1">Anadolu: Cairo talks</a>
+      </nav>
+    </section>
+
+    <section class="slide civic">
+      <div class="content">
+        <p class="kicker">Global 3｜拉丁美洲選舉風險</p>
+        <h2>Peru 6 月 7 日決選：十年內第九位總統</h2>
+        <ul>
+          <li>Keiko Fujimori 對上 Roberto Sanchez，投票焦點是 crime, extortion, public distrust and political exhaustion。</li>
+          <li>這不是單純左右對決；它測試 Peru 能否擺脫總統頻繁倒台、國會不信任與治安焦慮的循環。</li>
+          <li>資源、礦業、治安與 Fujimori family legacy 會決定選後治理空間。</li>
+        </ul>
+      </div>
+      <nav class="sources" aria-label="slide sources">
+        <a href="https://apnews.com/article/824598cc0dca800f10b0c80e88b83317">AP: Peru runoff</a>
+        <a href="https://amp.dw.com/en/fujimori-or-sanchez-peru-vote-marks-10-years-of-turmoil/a-77420777">DW: Peru turmoil</a>
+      </nav>
+    </section>
+
+    <section class="slide conflict">
+      <div class="content">
+        <p class="kicker">Global 4-5｜印太防務重排</p>
+        <h2>Drone lessons and burden sharing</h2>
+        <div class="grid">
+          <div class="item"><strong><span class="rank">4</span>Taiwan spend smarter</strong><span>AIT 要 Taiwan 把 Ukraine / Middle East drone lessons 轉成 immediate deterrence，尤其在 $14bn U.S. arms package 尚不確定時。</span></div>
+          <div class="item"><strong><span class="rank">5</span>New Zealand Seahawk sale</strong><span>U.S. 批准 $1.5bn MH-60R sale，連到 New Zealand 近年提高 defense spending and East Asia deployments。</span></div>
+        </div>
+      </div>
+      <nav class="sources" aria-label="slide sources">
+        <a href="https://www.investing.com/news/world-news/taiwan-needs-to-spend-smarter-on-its-defence-senior-us-diplomat-says-4729543">Reuters: Taiwan drones</a>
+        <a href="https://www.investing.com/news/stock-market-news/us-approves-15-billion-sale-of-maritime-helicopters-to-new-zealand-4729539">Reuters: New Zealand sale</a>
+      </nav>
+    </section>
+
+    <section class="slide market">
+      <div class="content">
+        <p class="kicker">Global 6-7｜市場把戰爭成本算進去</p>
+        <h2>Indonesia 匯率壓力與 oil inventory risk 同步升高</h2>
+        <div class="grid">
+          <div class="item"><strong><span class="rank">6</span>Rupiah record lows</strong><span>Bank Indonesia and finance ministry 同意提高 domestic asset yields，試圖吸回 portfolio inflows and stabilize rupiah。</span></div>
+          <div class="item"><strong><span class="rank">7</span>Oil inventories depleted</strong><span>Reuters 報導 Hormuz deal elusive 下，低庫存可能把下一波 oil price shock 轉成通膨、債券殖利率與消費壓力。</span></div>
+        </div>
+      </div>
+      <nav class="sources" aria-label="slide sources">
+        <a href="https://www.investing.com/news/economy-news/indonesia-central-bank-finance-minister-agree-to-boost-asset-yields-to-aid-rupiah-4729551">Reuters: Rupiah yields</a>
+        <a href="https://en.antaranews.com/news/418204/bi-finance-ministry-sync-policies-to-stabilize-rupiah">ANTARA: BI coordination</a>
+        <a href="https://www.thedailystar.net/business/global-economy/news/depleted-oil-inventories-raise-spectre-fresh-price-spike-4192201">Reuters: Oil inventories</a>
+      </nav>
+    </section>
+
+    <section class="slide civic">
+      <div class="content">
+        <p class="kicker">Global 8-10｜制度與政治語言</p>
+        <h2>宗教、紀念儀式、赦免權都成為政治戰場</h2>
+        <div class="grid">
+          <div class="item"><strong><span class="rank">8</span>Pope Leo</strong><span>稱 Iran war 不是 just war，也對 Ukraine and Lebanon 發出談判與和平訊號。</span></div>
+          <div class="item"><strong><span class="rank">9</span>D-Day speech</strong><span>Hegseth 在 Normandy 把現代歐洲海岸、migration and dangerous ideologies 放進 D-Day 記憶框架。</span></div>
+          <div class="item"><strong><span class="rank">10</span>Stephen Buyer pardon</strong><span>Trump pardons ex-congressman after insider-trading conviction，延續 clemency and lawfare politics。</span></div>
+          <div class="item"><strong>核心觀察</strong><span>硬新聞之外，政治人物正在把戰爭、移民與司法轉譯成可動員的價值語言。</span></div>
+        </div>
+      </div>
+      <nav class="sources" aria-label="slide sources">
+        <a href="https://www.kpbs.org/news/politics/2026/06/06/pope-leo-says-war-with-iran-is-not-a-just-war">NPR: Pope Leo</a>
+        <a href="https://www.washingtonpost.com/world/2026/06/06/france-us-hegseth-dday-immigration/c6cf74a0-61b9-11f1-9c46-d6211372eede_story.html">AP: D-Day speech</a>
+        <a href="https://www.ksl.com/article/51507680/trump-pardons-former-us-congressman-convicted-of-insider-trading">Reuters: Buyer pardon</a>
+      </nav>
+    </section>
+
+    <section class="slide tech">
+      <div class="content">
+        <p class="kicker">Tech / AI 1｜安全模式成為產品功能</p>
+        <h2>OpenAI Lockdown Mode：能力越多，越需要可控的「少連線」模式</h2>
+        <ul>
+          <li>Lockdown Mode 限制 live web browsing、external services、deep research、agent mode、downloads and some connector actions。</li>
+          <li>目標不是消滅 prompt injection，而是降低 data exfiltration 最後一段外送風險。</li>
+          <li>對 sensitive data workflows 來說，安全設定正在變成 AI 產品的核心使用介面。</li>
+        </ul>
+      </div>
+      <nav class="sources" aria-label="slide sources">
+        <a href="https://help.openai.com/en/articles/20001061-lockdown-mode">OpenAI: Lockdown Mode</a>
+        <a href="https://techcrunch.com/2026/06/06/openai-unveils-lockdown-mode-to-protect-sensitive-data-from-prompt-injection-attacks/">TechCrunch: OpenAI security</a>
+      </nav>
+    </section>
+
+    <section class="slide tech">
+      <div class="content">
+        <p class="kicker">Tech / AI 2-3｜政府與 AI 產業邊界</p>
+        <h2>AI policy 正從監管走向所有權與人事重組</h2>
+        <div class="grid">
+          <div class="item"><strong>Government equity stake</strong><span>Trump administration 被報導討論讓 American public 透過 equity stake 分享 AI company upside，OpenAI 是可能候選。</span></div>
+          <div class="item"><strong>Sriram Krishnan exit</strong><span>White House AI advisor 將在 6 月底離任，AI Action Plan、data centers and state-preemption policy 進入下一階段。</span></div>
+        </div>
+      </div>
+      <nav class="sources" aria-label="slide sources">
+        <a href="https://techcrunch.com/2026/06/06/the-trump-administration-might-take-an-equity-stake-in-openai/">TechCrunch: OpenAI stake</a>
+        <a href="https://techcrunch.com/2026/06/06/sriram-krishnan-is-leaving-his-role-as-white-house-ai-advisor/">TechCrunch: AI advisor</a>
+      </nav>
+    </section>
+
+    <section class="slide data">
+      <div class="content">
+        <p class="kicker">Tech / AI 4-5｜算力地理</p>
+        <h2>AI 基礎設施進入月租十億美元與 5GW data center 時代</h2>
+        <div class="grid">
+          <div class="item"><strong>Google pays SpaceX</strong><span>$920m per month, October 2026 through June 2029, for around 110,000 NVIDIA GPUs and related compute。</span></div>
+          <div class="item"><strong>AirTrunk in India</strong><span>$30bn / 5GW commitment by 2030，India 被定位為 cloud and AI infrastructure hub。</span></div>
+        </div>
+      </div>
+      <nav class="sources" aria-label="slide sources">
+        <a href="https://techcrunch.com/2026/06/05/google-will-pay-spacex-920m-per-month-for-compute/">TechCrunch: Google-SpaceX</a>
+        <a href="https://techcrunch.com/2026/06/05/airtrunk-commits-30b-to-build-5gw-of-ai-data-centers-in-india/">TechCrunch: AirTrunk India</a>
+      </nav>
+    </section>
+
+    <section class="slide tech">
+      <div class="content">
+        <p class="kicker">Tech / AI 6-8｜Agent 進入國安、商務與可觀測性</p>
+        <h2>部署面比模型榜單更值得追蹤</h2>
+        <div class="grid">
+          <div class="item"><strong>Anthropic Mythos / NSA</strong><span>FT-sourced reporting says NSA is using Mythos for offensive cyber operations；官方透明度仍不足。</span></div>
+          <div class="item"><strong>Meta Business Agent</strong><span>WhatsApp Business and Instagram DMs global rollout，把 SMB messaging 轉成 AI workflow surface。</span></div>
+          <div class="item"><strong>Coralogix observability</strong><span>$200m raise supports monitoring and troubleshooting AI agents in production。</span></div>
+          <div class="item"><strong>共同訊號</strong><span>Agent adoption 的瓶頸正從「可不可以做」變成「怎麼管、怎麼看、怎麼付費」。</span></div>
+        </div>
+      </div>
+      <nav class="sources" aria-label="slide sources">
+        <a href="https://www.tomshardware.com/tech-industry/artificial-intelligence/nsa-using-clause-mythos-for-offensive-cyber-operations-report-claims-says-half-a-dozen-anthropic-engineers-embedded-inside-the-agency">Tom's Hardware: Mythos</a>
+        <a href="https://techcrunch.com/2026/06/03/metas-ai-agent-for-whatsapp-business-is-now-available-globally/">TechCrunch: WhatsApp agent</a>
+        <a href="https://techcrunch.com/2026/06/03/coralogix-raises-200m-in-race-to-build-the-monitoring-layer-for-ai-agents/">TechCrunch: Coralogix</a>
+      </nav>
+    </section>
+
+    <section class="slide market">
+      <div class="content">
+        <p class="kicker">Uncertainty｜今天應該保留的問號</p>
+        <h2>不要把聲明當成事實，也不要把討論當成交易</h2>
+        <ul>
+          <li>Iran / Gulf exchange 的 damage, target and warning-shot claims still conflict。</li>
+          <li>Gaza Cairo talks 是否能處理 Hamas weapons, border crossings and international force，仍未確定。</li>
+          <li>Peru runoff 若結果接近，fraud claims and legitimacy challenges 可能延長不確定性。</li>
+          <li>OpenAI equity stake and NSA / Mythos items 都是報導中的政策或安排，不是完整公開合約。</li>
+        </ul>
+      </div>
+      <nav class="sources" aria-label="slide sources">
+        <a href="source-notes-2026-06-07.md">Source notes: uncertainty</a>
+        <a href="daily-news-2026-06-07.md">Daily report: contradictions</a>
+      </nav>
+    </section>
+  </main>
+
+  <div class="controls" role="group" aria-label="slide controls">
+    <button type="button" id="prev" aria-label="Previous slide">‹</button>
+    <div class="counter" id="counter">1 / 11</div>
+    <button type="button" id="next" aria-label="Next slide">›</button>
+  </div>
+
+  <script>
+    const slides = Array.from(document.querySelectorAll(".slide"));
+    const counter = document.getElementById("counter");
+    let index = 0;
+
+    function show(nextIndex) {
+      index = Math.max(0, Math.min(slides.length - 1, nextIndex));
+      slides.forEach((slide, i) => slide.classList.toggle("active", i === index));
+      counter.textContent = `${index + 1} / ${slides.length}`;
+      document.title = `Daily News 2026-06-07 (${index + 1}/${slides.length})`;
+    }
+
+    document.getElementById("prev").addEventListener("click", () => show(index - 1));
+    document.getElementById("next").addEventListener("click", () => show(index + 1));
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "ArrowRight" || event.key === "PageDown" || event.key === " ") show(index + 1);
+      if (event.key === "ArrowLeft" || event.key === "PageUp") show(index - 1);
+      if (event.key === "Home") show(0);
+      if (event.key === "End") show(slides.length - 1);
+    });
+
+    show(0);
+  </script>
+</body>
+</html>
