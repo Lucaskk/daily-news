@@ -2,7 +2,7 @@
 title: "Overview"
 type: overview
 created: 2026-05-24
-updated: 2026-06-06
+updated: 2026-06-07
 status: seed
 tags: [overview]
 sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
@@ -30,6 +30,8 @@ sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
 
 ## Latest Daily News
 
+- [2026-06-07 Daily News](daily/2026/06/2026-06-07/daily-news-2026-06-07.md) - 今日主軸是停火名義與實際交火分離：U.S. struck Iranian radar sites after drones / missiles toward Hormuz, Kuwait and Bahrain；Gaza Cairo talks formally began while a Gaza City tent-area strike added fresh casualties；Peru 6 月 7 日 runoff 測試十年政治不穩；Taiwan 被要求把 defense spending 轉向 drones，U.S. 又批准 New Zealand Seahawk sale；Indonesia rupiah record lows and depleted oil inventories 顯示戰爭成本外溢到 emerging markets and inflation risk。AI / tech 則轉向 OpenAI Lockdown Mode、U.S. government equity stake discussion、Sriram Krishnan leaving White House AI role、Google-SpaceX $920m/month compute lease、AirTrunk India 5GW data centers、Anthropic Mythos / NSA reporting、Meta WhatsApp Business Agent and Coralogix agent observability。
+- [2026-06-07 Slides](daily/2026/06/2026-06-07/slides-2026-06-07.html) - 今日新聞網頁版投影片。
 - [2026-06-06 Daily News](daily/2026/06/2026-06-06/daily-news-2026-06-06.md) - 今日主軸是談判與制度壓力同時收緊：Putin 拒絕 Zelenskyy 面對面會談，Xi 將於 6 月 8-9 日訪問 North Korea，Gaza 停火仍遭攻擊與 Cairo talks 測試，Ireland 對 Ben-Gvir / Smotrich 下 travel ban；美國法院推翻 39 國 immigration-processing restrictions，Senate 因 Pulte acting DNI 擋下 FISA Section 702 extension，同時通過 $70bn ICE / CBP funding bill；Somalia、Western Balkans and U.S. farmers 補足治理、擴大與戰爭成本外溢。AI / tech 則轉向 White House national-security AI memo、Anthropic recursive self-improvement pause proposal、Anthropic / White House tension ahead of IPO、Alphabet / Google AI financing and emerging-market voice AI。
 - [2026-06-06 Slides](daily/2026/06/2026-06-06/slides-2026-06-06.html) - 今日新聞網頁版投影片。
 - [2026-06-05 Daily News](daily/2026/06/2026-06-05/daily-news-2026-06-05.md) - 今日主軸是 Iran nuclear negotiation 從國會制衡轉回 enriched uranium control；Israel-Lebanon ceasefire announcement 立即被 strikes and UN peacekeeper death 測試；Ukraine / Moldova 因 Hungary minority-rights breakthrough 啟動 EU accession first cluster；North Korea and NATO eastern flank 同時把 nuclear deterrence 推回議程；Cuba sanctions、China-New Zealand Taiwan dispute、Korea-China flight normalization、U.S.-Mexico sovereignty tension 與 World Environment Day 補足外交和 climate agenda。AI / tech 則轉向 EU digital sovereignty、Gemini Enterprise mobile agents、Anthropic Mythos national cyber access、frontier AI compute finance、Apple / Meta platform regulation and physical AI manufacturing。
