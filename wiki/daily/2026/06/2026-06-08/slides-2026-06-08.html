@@ -1,0 +1,492 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Daily News 2026-06-08</title>
+  <!--
+    Background image source notes:
+    - Images are loaded from Unsplash stable image URLs and sized through query parameters.
+    - Title/news: https://images.unsplash.com/photo-1495020689067-958852a7765e
+    - Maritime / conflict: https://images.unsplash.com/photo-1524522173746-f628baad3644
+    - Civic / election: https://images.unsplash.com/photo-1540910419892-4a36d2c3266c
+    - Public health / care: https://images.unsplash.com/photo-1584515933487-779824d29309
+    - Finance / markets: https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3
+    - Technology / circuits: https://images.unsplash.com/photo-1518770660439-4636190af475
+    - Data center: https://images.unsplash.com/photo-1558494949-ef010cbdcc31
+  -->
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #111827;
+      --muted: #4b5563;
+      --panel: rgba(255, 255, 255, 0.86);
+      --line: rgba(17, 24, 39, 0.18);
+      --accent: #0f766e;
+      --accent-2: #b45309;
+      --blue: #1d4ed8;
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body {
+      margin: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC", "PingFang TC", sans-serif;
+      color: var(--ink);
+      background: #eef2f7;
+      overflow: hidden;
+    }
+
+    .deck {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+    }
+
+    .slide {
+      position: absolute;
+      inset: 0;
+      display: none;
+      padding: clamp(26px, 5vw, 68px);
+      background: #f8fafc center / cover no-repeat;
+      isolation: isolate;
+    }
+
+    .slide.active {
+      display: grid;
+      grid-template-rows: 1fr auto;
+      gap: 16px;
+    }
+
+    .slide::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -2;
+      background: linear-gradient(90deg, rgba(255,255,255,0.94), rgba(255,255,255,0.76) 58%, rgba(255,255,255,0.52));
+    }
+
+    .slide::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background: linear-gradient(180deg, rgba(255,255,255,0.35), rgba(255,255,255,0.7));
+    }
+
+    .title { background-image: url("https://images.unsplash.com/photo-1495020689067-958852a7765e?auto=format&fit=crop&w=1800&q=82"); }
+    .conflict { background-image: url("https://images.unsplash.com/photo-1524522173746-f628baad3644?auto=format&fit=crop&w=1800&q=82"); }
+    .civic { background-image: url("https://images.unsplash.com/photo-1540910419892-4a36d2c3266c?auto=format&fit=crop&w=1800&q=82"); }
+    .health { background-image: url("https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=1800&q=82"); }
+    .market { background-image: url("https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=1800&q=82"); }
+    .tech { background-image: url("https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1800&q=82"); }
+    .data { background-image: url("https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1800&q=82"); }
+
+    .content {
+      align-self: center;
+      max-width: min(1120px, 88vw);
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: clamp(22px, 3vw, 42px);
+      box-shadow: 0 18px 60px rgba(15, 23, 42, 0.18);
+      backdrop-filter: blur(10px);
+    }
+
+    .title .content {
+      max-width: min(980px, 86vw);
+      background: rgba(255, 255, 255, 0.78);
+    }
+
+    .kicker {
+      margin: 0 0 12px;
+      color: var(--accent);
+      font-size: clamp(14px, 1.35vw, 18px);
+      font-weight: 750;
+      letter-spacing: 0;
+      text-transform: uppercase;
+    }
+
+    h1, h2 {
+      margin: 0;
+      letter-spacing: 0;
+      line-height: 1.08;
+    }
+
+    h1 {
+      font-size: clamp(42px, 7vw, 86px);
+      max-width: 980px;
+    }
+
+    h2 {
+      font-size: clamp(30px, 4vw, 56px);
+      max-width: 1040px;
+    }
+
+    .lede {
+      margin: 18px 0 0;
+      color: #1f2937;
+      font-size: clamp(19px, 2.1vw, 28px);
+      line-height: 1.45;
+      max-width: 980px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 22px;
+    }
+
+    .grid.three {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .item {
+      min-height: 112px;
+      padding: 15px 16px;
+      border: 1px solid rgba(15, 118, 110, 0.22);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.72);
+    }
+
+    .item strong {
+      display: block;
+      font-size: clamp(17px, 1.65vw, 23px);
+      line-height: 1.25;
+      margin-bottom: 7px;
+    }
+
+    .item span, li {
+      color: var(--muted);
+      font-size: clamp(15px, 1.35vw, 19px);
+      line-height: 1.42;
+    }
+
+    ul {
+      margin: 22px 0 0;
+      padding-left: 1.2em;
+      max-width: 1000px;
+    }
+
+    li + li { margin-top: 9px; }
+
+    .rank {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 32px;
+      height: 32px;
+      margin-right: 9px;
+      border-radius: 50%;
+      background: var(--accent);
+      color: #fff;
+      font-weight: 800;
+      font-size: 15px;
+      vertical-align: middle;
+    }
+
+    .sources {
+      justify-self: start;
+      align-self: end;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      max-width: calc(100vw - 230px);
+      padding: 8px 10px;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.9);
+      border: 1px solid var(--line);
+      font-size: 13px;
+    }
+
+    .sources a {
+      color: #075985;
+      text-decoration: none;
+      font-weight: 650;
+    }
+
+    .sources a:hover { text-decoration: underline; }
+
+    .controls {
+      position: fixed;
+      right: 18px;
+      bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      z-index: 10;
+      padding: 8px;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.9);
+      border: 1px solid var(--line);
+      box-shadow: 0 10px 28px rgba(15, 23, 42, 0.16);
+    }
+
+    button {
+      width: 42px;
+      height: 42px;
+      border: 1px solid rgba(17, 24, 39, 0.2);
+      border-radius: 8px;
+      background: #fff;
+      color: var(--ink);
+      font-size: 24px;
+      line-height: 1;
+      cursor: pointer;
+    }
+
+    button:hover { border-color: var(--accent); color: var(--accent); }
+
+    .counter {
+      min-width: 58px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 14px;
+      font-variant-numeric: tabular-nums;
+    }
+
+    @media (max-width: 780px) {
+      .slide {
+        padding: 22px 18px 86px;
+        overflow-y: auto;
+      }
+
+      .slide.active { display: block; }
+
+      .content {
+        max-width: 100%;
+        margin-top: 18px;
+        padding: 20px;
+      }
+
+      h1 { font-size: 44px; }
+      h2 { font-size: 31px; }
+      .lede { font-size: 19px; }
+      .grid, .grid.three { grid-template-columns: 1fr; }
+      .sources {
+        position: relative;
+        margin-top: 14px;
+        max-width: 100%;
+      }
+      .controls {
+        right: 12px;
+        left: 12px;
+        justify-content: flex-end;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="deck" aria-live="polite">
+    <section class="slide title active">
+      <div class="content">
+        <p class="kicker">每日全球與科技 AI 新聞</p>
+        <h1>2026-06-08</h1>
+        <p class="lede">停火、選舉與供應鏈都進入壓力測試：Iran missile barrage、Xi 訪朝、Ukraine backchannel、Armenia election、Taiwan coast guard、Ebola plan，以及 WWDC / ChatGPT memory / Claude workflows / Gemini Enterprise。</p>
+      </div>
+      <nav class="sources" aria-label="Sources">
+        <a href="daily-news-2026-06-08.md">本日報告</a>
+        <a href="source-notes-2026-06-08.md">Source notes</a>
+      </nav>
+    </section>
+
+    <section class="slide conflict">
+      <div class="content">
+        <p class="kicker">全球 Top 10</p>
+        <h2>今天最重的不是單一戰場，而是多條風險鏈同時拉緊</h2>
+        <div class="grid">
+          <div class="item"><strong><span class="rank">1</span>Iran 對 Israel 發射飛彈</strong><span>Trump 要 Netanyahu 不要反擊，避免談判破局。</span></div>
+          <div class="item"><strong><span class="rank">2</span>Iran assets sequencing</strong><span>Trump 說凍結資產與制裁鬆綁要等 deal 完成後。</span></div>
+          <div class="item"><strong><span class="rank">3</span>Xi / Kim summit week</strong><span>Beijing 以 anti-hegemony language 重塑對朝影響力。</span></div>
+          <div class="item"><strong><span class="rank">4</span>Ukraine backchannel</strong><span>Zelenskyy 確認 Abramovich 到 Kyiv 提供傳話。</span></div>
+          <div class="item"><strong><span class="rank">5</span>Armenia vote</strong><span>Pashinyan 陣營早期領先，peace deal 與 Russia pressure 入鏡。</span></div>
+          <div class="item"><strong><span class="rank">6</span>Taiwan coast guard</strong><span>China operation east of Taiwan 引發台方派船監控。</span></div>
+        </div>
+      </div>
+      <nav class="sources" aria-label="Sources">
+        <a href="https://www.brecorder.com/live/iran-israel-war">AFP: Iran-Israel</a>
+        <a href="https://www.investing.com/news/world-news/with-chinas-xi-in-north-korea-kim-to-project-confidence-defiance-4729648">Reuters: Xi-Kim</a>
+        <a href="https://apnews.com/article/a6f863feb9f76b7ac355931c2715161c">AP: Armenia vote</a>
+      </nav>
+    </section>
+
+    <section class="slide conflict">
+      <div class="content">
+        <p class="kicker">續報 | Middle East</p>
+        <h2>停火語言還在，但雙方都在測試紅線</h2>
+        <ul>
+          <li>Iran missile barrage 是 4 月 ceasefire 以來對 Israel 的第一波此類攻擊；Israel 稱 Tehran 犯下 grave mistake。</li>
+          <li>Trump 同時壓住 Netanyahu retaliation，並把 Iranian assets / sanctions relief 放到 deal completion 之後。</li>
+          <li>Israel strikes on Beirut area 讓 Brent / WTI 早盤各漲逾 US$2，市場把 Lebanon ceasefire and Iran talks 視為同一組風險。</li>
+        </ul>
+      </div>
+      <nav class="sources" aria-label="Sources">
+        <a href="https://www.brecorder.com/live/iran-israel-war">Business Recorder: live Iran war</a>
+        <a href="https://www.investing.com/news/world-news/trump-says-he-would-not-unfreeze-irans-assets-ahead-before-deal-is-done-4729676">Reuters: Iran assets</a>
+        <a href="https://www.investing.com/news/commodities-news/oil-prices-rise-more-than-2-on-israel-strikes-on-lebanon-4729704">Reuters: oil prices</a>
+      </nav>
+    </section>
+
+    <section class="slide civic">
+      <div class="content">
+        <p class="kicker">Eurasia / Indo-Pacific</p>
+        <h2>外交與灰色地帶壓力同步升高</h2>
+        <div class="grid">
+          <div class="item"><strong>Xi / North Korea</strong><span>Xi 在朝媒撰文反 hegemony and militarism，北京要把 Pyongyang 從 Russia orbit 拉回一些。</span></div>
+          <div class="item"><strong>Ukraine / Abramovich</strong><span>非正式傳話不等於 formal talks；Zelenskyy 仍明確拒絕放棄 Donbas。</span></div>
+          <div class="item"><strong>Armenia election</strong><span>Civil Contract 早期領先，South Caucasus peace and West alignment 受關注。</span></div>
+          <div class="item"><strong>Taiwan coast guard</strong><span>China maritime operation east of Taiwan 讓台灣派出多艘海巡船監控。</span></div>
+        </div>
+      </div>
+      <nav class="sources" aria-label="Sources">
+        <a href="https://www.investing.com/news/world-news/with-chinas-xi-in-north-korea-kim-to-project-confidence-defiance-4729648">Reuters: North Korea</a>
+        <a href="https://uk.marketscreener.com/news/ukraine-s-zelenskiy-says-russian-magnate-abramovich-came-to-kyiv-with-offer-of-help-ce7f5dd2dc8bf02d">Reuters: Ukraine</a>
+        <a href="https://amp.dw.com/en/taiwan-deploys-vessels-in-response-to-chinese-operation/a-77447525">DW: Taiwan vessels</a>
+      </nav>
+    </section>
+
+    <section class="slide health">
+      <div class="content">
+        <p class="kicker">Public Health / Society</p>
+        <h2>Ebola response and papal diplomacy push social risk back into the news cycle</h2>
+        <div class="grid">
+          <div class="item"><strong>WHO / Africa CDC</strong><span>US$518m 六個月 plan 覆蓋 DRC、Uganda and at-risk countries；Bundibugyo species 尚無專門核准疫苗或療法。</span></div>
+          <div class="item"><strong>Pope Leo in Madrid</strong><span>1.2m 人 outdoor Mass，把 first EU trip outside Italy 聚焦到 poor, forsaken, migrants and inclusion。</span></div>
+        </div>
+      </div>
+      <nav class="sources" aria-label="Sources">
+        <a href="https://www.who.int/news/item/05-06-2026-africa-cdc-and-who-launch-joint-continental-ebola-response-plan">WHO: Ebola plan</a>
+        <a href="https://www.streetinsider.com/Reuters/Pope%2BLeo%2Btells%2B1.2%2Bmillion%2Bcrowd%2Bin%2BMadrid%2Bthat%2BGod%2Bstands%2Bwith%2Bthe%2Bpoor/26612998.html">Reuters: Pope Madrid</a>
+      </nav>
+    </section>
+
+    <section class="slide market">
+      <div class="content">
+        <p class="kicker">Markets / Supply Chain</p>
+        <h2>戰爭成本正在透過油、航線與票價傳導</h2>
+        <ul>
+          <li>Reuters: Israel strikes on Beirut area 後，Brent and WTI early trading each rose more than US$2。</li>
+          <li>IATA 將 2026 airline net profit forecast 從約 US$41bn 下修到 US$23bn，主因是 jet fuel, Gulf rerouting and thin margins。</li>
+          <li>如果 Middle East air corridors and fuel risk 不解，航空公司可能 cut routes and keep fares elevated。</li>
+        </ul>
+      </div>
+      <nav class="sources" aria-label="Sources">
+        <a href="https://www.investing.com/news/commodities-news/oil-prices-rise-more-than-2-on-israel-strikes-on-lebanon-4729704">Reuters: oil jump</a>
+        <a href="https://www.gulf-times.com/article/727029/business/global-airlines-slash-2026-profit-forecast-on-fuel-shock-from-iran-war">Reuters: IATA forecast</a>
+      </nav>
+    </section>
+
+    <section class="slide tech">
+      <div class="content">
+        <p class="kicker">Technology / AI Product News</p>
+        <h2>WWDC 開場，AI 產品焦點轉向平台與記憶</h2>
+        <div class="grid">
+          <div class="item"><strong>Apple WWDC26</strong><span>June 8-12；keynote and Platforms State of the Union 是本週 developer agenda 的中心。</span></div>
+          <div class="item"><strong>ChatGPT memory</strong><span>OpenAI release notes: memory 更自動更新，先向 U.S. Plus / Pro rollout，舊 model sunset 時程仍在。</span></div>
+        </div>
+      </div>
+      <nav class="sources" aria-label="Sources">
+        <a href="https://developer.apple.com/wwdc/">Apple: WWDC26</a>
+        <a href="https://help.openai.com/en/articles/6825453-chatgpt-release-notes">OpenAI: release notes</a>
+      </nav>
+    </section>
+
+    <section class="slide data">
+      <div class="content">
+        <p class="kicker">Enterprise AI Controls</p>
+        <h2>Agent 預設啟用與模型預設，正在變成管理者問題</h2>
+        <div class="grid">
+          <div class="item"><strong>Claude Code workflows</strong><span>Anthropic says dynamic workflows turn on by default June 8 unless organizations disable them or govern custom roles.</span></div>
+          <div class="item"><strong>Gemini Enterprise</strong><span>Google Cloud notes Gemini 3.5 Flash becomes enabled by default after June 8; Agent Platform sandboxes enter preview.</span></div>
+        </div>
+      </div>
+      <nav class="sources" aria-label="Sources">
+        <a href="https://support.claude.com/en/articles/13930452-manage-custom-roles-on-enterprise-plans">Anthropic: custom roles</a>
+        <a href="https://docs.cloud.google.com/release-notes">Google Cloud: release notes</a>
+      </nav>
+    </section>
+
+    <section class="slide tech">
+      <div class="content">
+        <p class="kicker">AI Watchlist</p>
+        <h2>本週要分清楚「已發布」與「高可信傳聞」</h2>
+        <ul>
+          <li>Gemini 3.5 Pro is in a June release window, but no specific date is confirmed in today's selected sources。</li>
+          <li>Claude Sonnet 4.8 remains rumor / staging watch, not a production dependency。</li>
+          <li>Colorado AI Act June 30 deadline makes compliance work more urgent unless federal preemption changes the legal path。</li>
+          <li>SpaceX / xAI IPO pricing week will test whether AI compute assets can carry a public-market mega valuation。</li>
+        </ul>
+      </div>
+      <nav class="sources" aria-label="Sources">
+        <a href="https://www.buildfastwithai.com/blogs/ai-news-today-june-8-2026">AI News: June watchlist</a>
+        <a href="https://www.caixinglobal.com/2026-06-06/the-week-ahead-xi-visits-north-korea-spacex-sets-for-ipo-102451536.html">Caixin: SpaceX IPO week</a>
+      </nav>
+    </section>
+
+    <section class="slide title">
+      <div class="content">
+        <p class="kicker">What To Watch Next</p>
+        <h2>三個確認點決定明天是否續報</h2>
+        <ul>
+          <li>Israel 是否接受 Trump restraint，或把 Iranian missile barrage 轉為新一輪 retaliation。</li>
+          <li>Xi-Kim summit 是否產出具體 economic / military commitments，而不只是 anti-hegemony rhetoric。</li>
+          <li>WWDC keynote 是否真的交付 Siri / Apple Intelligence roadmap，而不是只重排開發者工具與系統整合。</li>
+        </ul>
+      </div>
+      <nav class="sources" aria-label="Sources">
+        <a href="daily-news-2026-06-08.md">本日報告</a>
+        <a href="source-notes-2026-06-08.md">Source notes</a>
+      </nav>
+    </section>
+  </main>
+
+  <div class="controls" aria-label="Slide controls">
+    <button type="button" id="prev" aria-label="Previous slide">‹</button>
+    <div class="counter" id="counter">1 / 10</div>
+    <button type="button" id="next" aria-label="Next slide">›</button>
+  </div>
+
+  <script>
+    const slides = Array.from(document.querySelectorAll(".slide"));
+    const counter = document.getElementById("counter");
+    let current = 0;
+
+    function show(index) {
+      current = (index + slides.length) % slides.length;
+      slides.forEach((slide, i) => {
+        slide.classList.toggle("active", i === current);
+      });
+      counter.textContent = `${current + 1} / ${slides.length}`;
+    }
+
+    document.getElementById("prev").addEventListener("click", () => show(current - 1));
+    document.getElementById("next").addEventListener("click", () => show(current + 1));
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "ArrowRight" || event.key === "PageDown" || event.key === " ") {
+        event.preventDefault();
+        show(current + 1);
+      }
+      if (event.key === "ArrowLeft" || event.key === "PageUp") {
+        event.preventDefault();
+        show(current - 1);
+      }
+      if (event.key === "Home") {
+        event.preventDefault();
+        show(0);
+      }
+      if (event.key === "End") {
+        event.preventDefault();
+        show(slides.length - 1);
+      }
+    });
+
+    show(0);
+  </script>
+</body>
+</html>
