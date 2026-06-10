@@ -54,7 +54,7 @@
 - Created `wiki/daily/2026/05/2026-05-25/source-notes-2026-05-25.md`.
 - Created `wiki/daily/2026/05/2026-05-25/slides-2026-05-25.html`.
 - Updated `wiki/daily/latest-slides.html`, `wiki/index.md`, and `wiki/overview.md`.
-- Excluded prior-day duplicates unless there was a material continuation, and labeled continuations explicitly.
+- Excluded previously captured stories unless there was a material new development, and labeled continuations explicitly.
 
 ## [2026-05-26] ingest | Daily global and tech AI news
 
@@ -190,3 +190,11 @@
 - Created `wiki/daily/2026/06/2026-06-10/slides-2026-06-10.html`.
 - Updated `wiki/daily/latest-slides.html`, `wiki/index.md`, and `wiki/overview.md`.
 - Excluded previous daily-news duplicates unless there was a material new development, and labeled continuations explicitly.
+
+## [2026-06-10] ingest | Daily global and tech AI news refresh
+
+- Refreshed `wiki/daily/2026/06/2026-06-10/daily-news-2026-06-10.md` and `source-notes-2026-06-10.md` after later web research.
+- Promoted Iran retaliatory attacks on U.S. bases / U.S.-linked regional facilities from unresolved risk to the top story.
+- Added Somali World Cup referee Omar Artan's U.S. entry denial as a fresh World Cup governance story.
+- Replaced weaker standalone Ukraine / fuel-price items with Xi-Kim nuclear-silence signaling and folded energy risk into the Iran escalation.
+- Updated `slides-2026-06-10.html`, `wiki/index.md`, and `wiki/overview.md` to match the refreshed synthesis.
