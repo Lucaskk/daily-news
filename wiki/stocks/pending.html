@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>股票分析準備中</title>
+  <style>
+    :root { color-scheme: light; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    * { box-sizing: border-box; }
+    body { margin: 0; min-height: 100vh; display: grid; place-items: center; background: #f4f7fb; color: #172033; }
+    main { width: min(560px, calc(100% - 32px)); padding: 28px; background: white; border: 1px solid #dce3ec; border-radius: 8px; box-shadow: 0 8px 28px rgba(22, 32, 51, .08); }
+    h1 { margin: 0 0 12px; font-size: 26px; }
+    p { line-height: 1.65; color: #536177; }
+    .code { font: 700 32px ui-monospace, SFMono-Regular, Menlo, monospace; color: #1d4ed8; margin: 18px 0 6px; }
+    .status { padding: 12px 14px; border-left: 4px solid #d97706; background: #fff8eb; color: #7c4a03; }
+    a { color: #1d4ed8; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>股票分析準備中</h1>
+    <div id="code" class="code">----</div>
+    <p id="name"></p>
+    <p id="status" class="status">正在確認最新分析頁，通常會在 15 分鐘內完成。</p>
+    <p>可保留此頁，完成後會自動前往分析結果。僅供研究參考，不構成投資建議。</p>
+  </main>
+  <script>
+    const params = new URLSearchParams(location.search);
+    const code = params.get("code") || "";
+    const name = params.get("name") || "";
+    const codeNode = document.getElementById("code");
+    const nameNode = document.getElementById("name");
+    const statusNode = document.getElementById("status");
+    codeNode.textContent = /^\d{4}$/.test(code) ? code : "代碼錯誤";
+    nameNode.textContent = name ? name : "";
+
+    async function check() {
+      if (!/^\d{4}$/.test(code)) {
+        statusNode.textContent = "請回到 LINE，重新輸入 4 位數台股代碼。";
+        return;
+      }
+      const target = `by-code/${code}/index.html`;
+      try {
+        const response = await fetch(`${target}?t=${Date.now()}`, { method: "HEAD", cache: "no-store" });
+        if (response.ok) {
+          location.replace(target);
+          return;
+        }
+      } catch (error) {
+        statusNode.textContent = "目前無法連線，稍後會自動重試。";
+      }
+      setTimeout(check, 15000);
+    }
+    check();
+  </script>
+</body>
+</html>
