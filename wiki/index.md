@@ -2,7 +2,7 @@
 title: "Knowledge Base Index"
 type: overview
 created: 2026-05-24
-updated: 2026-06-10
+updated: 2026-06-11
 status: seed
 tags: [index]
 sources: []
@@ -59,6 +59,14 @@ sources: []
 - [2026-05-24 Daily News](daily/2026/05/2026-05-24/daily-news-2026-05-24.md) - 全球熱門新聞 10 則與科技/AI 產品新聞手動補跑。
 - [2026-05-24 Slides](daily/2026/05/2026-05-24/slides-2026-05-24.html) - 今日新聞網頁版投影片。
 - [Latest Slides](daily/latest-slides.html) - 最新投影片固定入口。
+
+## Stocks
+
+股票分析頁會放在 `wiki/stocks/YYYY/MM/YYYY-MM-DD/<stock-code>/`，LINE webhook 只回短連結，完整分析放在 GitHub Pages HTML 頁。
+
+- [Stock Analysis Index](stocks/index.md) - 股票分析區入口與資料來源限制。
+- [Latest Stock Analysis](stocks/latest-analysis.html) - 最新股票分析固定入口。
+- [Stock Analysis Queue](stocks/pending.html) - LINE 股票查詢的 GitHub Pages 等候入口。
 
 ## Concepts
 

@@ -198,3 +198,18 @@
 - Added Somali World Cup referee Omar Artan's U.S. entry denial as a fresh World Cup governance story.
 - Replaced weaker standalone Ukraine / fuel-price items with Xi-Kim nuclear-silence signaling and folded energy risk into the Iran escalation.
 - Updated `slides-2026-06-10.html`, `wiki/index.md`, and `wiki/overview.md` to match the refreshed synthesis.
+
+## [2026-06-10] maintenance | Stock analysis workflow
+
+- Installed `chengwesley/taiwan-stock-analysis` as local Codex skill `taiwan-stock-analysis`.
+- Added `scripts/generate_stock_analysis.py` to create Taiwan stock analysis HTML, JSON, and Markdown artifacts from public quote and financial-statement sources.
+- Added `scripts/line_stock_webhook.py` so LINE stock requests can reply with one short analysis link instead of a long message body.
+- Added `wiki/stocks/` index and latest-analysis entry point.
+- Updated `README.md`, `DEPLOYMENT.md`, `.env.example`, `AGENTS.md`, and `wiki/index.md` for the stock analysis workflow.
+
+## [2026-06-11] maintenance | Stock analysis workflow
+
+- Moved Goodinfo financial-statement fetching out of Vercel and into the local Mac Python workflow.
+- Added a GitHub-backed stock request queue, a 15-minute Mac scheduler, daily de-duplication, and GitHub API publishing.
+- Added `wiki/stocks/pending.html` and per-stock stable redirects under `wiki/stocks/by-code/`.
+- Kept the existing Vercel LINE webhook as the only public webhook; the Mac remains private and does not expose a local server.
