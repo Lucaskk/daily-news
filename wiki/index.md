@@ -2,7 +2,7 @@
 title: "Knowledge Base Index"
 type: overview
 created: 2026-05-24
-updated: 2026-06-07
+updated: 2026-06-10
 status: seed
 tags: [index]
 sources: []
@@ -24,6 +24,12 @@ sources: []
 
 每日新聞報告會放在 `wiki/daily/YYYY/MM/YYYY-MM-DD/`。
 
+- [2026-06-10 Daily News](daily/2026/06/2026-06-10/daily-news-2026-06-10.md) - 今日主軸是 U.S.-Iran 因 Apache crash / Iranian drone collision 再度直接交火、Tyre Christian quarter and West Bank settler sanctions、Gaza UN report on Hamas-linked abuses、Ebola / World Cup travel politics、U.S. DHS / ICE and FISA governance pressure、Cuba intervention fears、Ukraine momentum debate and fuel-price politics；科技 / AI 轉向 Anthropic Claude Fable 5 / Mythos 5、ChatGPT app workflow updates、Apple Siri AI / EU DMA standoff and OpenAI IPO signal。
+- [2026-06-10 Slides](daily/2026/06/2026-06-10/slides-2026-06-10.html) - 今日新聞網頁版投影片。
+- [2026-06-09 Daily News](daily/2026/06/2026-06-09/daily-news-2026-06-09.md) - 今日主軸是 Israel-Iran 互擊後被 Trump 介入喊停、U.S.-Israel counterintelligence trust crisis、Xi-Kim summit outcome、Ukraine oil-site strikes and E3 peace conditions、Armenia victory claim、West Bank settlement-trade pressure、Gaza / Taiwan / markets 續報，以及 AI 產品轉向 WWDC26 actual Apple Intelligence / Xcode agents、OpenAI API moderation scores、Anthropic enterprise roles、NVIDIA-LG AI factory and Microsoft MAI distribution。
+- [2026-06-09 Slides](daily/2026/06/2026-06-09/slides-2026-06-09.html) - 今日新聞網頁版投影片。
+- [2026-06-08 Daily News](daily/2026/06/2026-06-08/daily-news-2026-06-08.md) - 今日主軸是 Iran missile barrage and Trump restraint 把停火談判推到新壓力點、Xi 訪朝進入 anti-hegemony framing、Ukraine 出現 Abramovich backchannel、Armenia vote early results、Taiwan coast guard response、WHO / Africa CDC Ebola plan，以及 AI 產品轉向 WWDC、ChatGPT memory、Claude workflow defaults、Gemini Enterprise defaults and June model / regulation watch。
+- [2026-06-08 Slides](daily/2026/06/2026-06-08/slides-2026-06-08.html) - 今日新聞網頁版投影片。
 - [2026-06-07 Daily News](daily/2026/06/2026-06-07/daily-news-2026-06-07.md) - 今日主軸是 U.S.-Iran / Hormuz 交火讓停火名義再受測試、Gaza Cairo talks 邊談邊打、Peru runoff、Taiwan / New Zealand 印太防務升溫、Indonesia rupiah record lows and oil inventory price-spike risk，以及 AI 轉向 OpenAI Lockdown Mode、government equity stake discussion、Google-SpaceX compute lease、AirTrunk India data centers and agent observability。
 - [2026-06-07 Slides](daily/2026/06/2026-06-07/slides-2026-06-07.html) - 今日新聞網頁版投影片。
 - [2026-06-06 Daily News](daily/2026/06/2026-06-06/daily-news-2026-06-06.md) - 今日主軸是 Putin 拒絕 Zelenskyy 會面、Xi 將訪 North Korea、Gaza 停火仍在紙面上、美國 immigration / FISA / ICE funding 制度拉扯，以及 AI 轉向 national-security deployment、Anthropic recursive self-improvement pause、Google AI financing and emerging-market voice AI。
