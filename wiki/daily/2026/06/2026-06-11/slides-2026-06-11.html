@@ -1,0 +1,383 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Daily News 2026-06-11</title>
+  <!--
+    Background image notes (Unsplash, theme images rather than documentary evidence):
+    - Title / closing: photo-1504711434969-e33886168f5c, newspaper / current affairs.
+    - Global overview / Europe: photo-1451187580459-43490279c0fa, earth / global systems.
+    - Middle East / energy: photo-1516937941344-00b4e0337589, industrial energy.
+    - Ukraine / security: photo-1529107386315-e1a2ed48a620, civic institutions / geopolitics.
+    - World Cup: photo-1518091043644-c1d4457512c6, stadium / global sport.
+    - Climate: photo-1517299321609-52687d1bc55a, ice / polar environment.
+    - Technology / AI: photo-1518770660439-4636190af475, circuitry / computing.
+    Daily provenance: daily-news-2026-06-11.md and source-notes-2026-06-11.md.
+  -->
+  <style>
+    :root {
+      color-scheme: dark;
+      --ink: #f7fbff;
+      --muted: #dbe8f2;
+      --panel: rgba(7, 17, 29, 0.75);
+      --panel-strong: rgba(7, 17, 29, 0.90);
+      --line: rgba(255, 255, 255, 0.23);
+      --accent: #65e0ce;
+      --gold: #ffd166;
+      --rose: #ff9f8c;
+      --shadow: 0 22px 68px rgba(0, 0, 0, 0.44);
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+    html, body { width: 100%; height: 100%; margin: 0; overflow: hidden; background: #06101a; }
+    body { color: var(--ink); }
+
+    .deck { position: relative; width: 100vw; height: 100vh; }
+    .slide {
+      position: absolute;
+      inset: 0;
+      display: grid;
+      grid-template-rows: 1fr auto;
+      opacity: 0;
+      pointer-events: none;
+      transform: translateX(28px);
+      transition: opacity 220ms ease, transform 220ms ease;
+      background-image:
+        linear-gradient(90deg, rgba(3, 9, 16, 0.93), rgba(6, 16, 27, 0.75) 52%, rgba(6, 16, 27, 0.34)),
+        var(--bg);
+      background-position: center;
+      background-size: cover;
+    }
+    .slide.active { opacity: 1; pointer-events: auto; transform: translateX(0); }
+    .slide::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background: radial-gradient(circle at 82% 17%, rgba(101, 224, 206, 0.17), transparent 30%), linear-gradient(180deg, transparent, rgba(0,0,0,.34));
+    }
+
+    .content {
+      position: relative;
+      z-index: 1;
+      align-self: center;
+      width: min(1120px, calc(100vw - 92px));
+      margin: 0 auto;
+      padding: 48px 0 84px;
+    }
+    .narrow { width: min(940px, calc(100vw - 92px)); }
+    .eyebrow { display: inline-flex; align-items: center; gap: 10px; margin-bottom: 16px; color: var(--accent); font-size: 16px; font-weight: 800; }
+    .eyebrow::before { content: ""; width: 30px; height: 2px; border-radius: 999px; background: var(--accent); }
+    h1, h2 { margin: 0; line-height: 1.05; letter-spacing: 0; text-wrap: balance; }
+    h1 { max-width: 980px; font-size: clamp(46px, 7.3vw, 90px); font-weight: 880; }
+    h2 { max-width: 1040px; font-size: clamp(34px, 5vw, 66px); font-weight: 850; }
+    .lead { max-width: 900px; margin: 21px 0 0; color: var(--muted); font-size: clamp(20px, 2vw, 28px); line-height: 1.42; font-weight: 560; }
+    .tags { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 24px; }
+    .tags span { padding: 8px 11px; border: 1px solid var(--line); border-radius: 999px; background: rgba(255,255,255,.10); font-size: 15px; font-weight: 720; }
+
+    .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 15px; margin-top: 28px; }
+    .grid.three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .card, .stat { min-height: 122px; padding: 18px 19px; border: 1px solid var(--line); border-radius: 10px; background: var(--panel); box-shadow: var(--shadow); backdrop-filter: blur(15px); }
+    .card strong, .stat strong { display: block; margin-bottom: 7px; color: var(--ink); font-size: clamp(17px, 1.65vw, 23px); line-height: 1.18; }
+    .card span, .stat span { color: var(--muted); font-size: clamp(15px, 1.25vw, 18px); line-height: 1.42; }
+    .stat strong { color: var(--gold); font-size: clamp(27px, 3vw, 43px); }
+
+    .rank-list { display: grid; gap: 8px; max-width: 1060px; margin-top: 25px; }
+    .rank-row { display: grid; grid-template-columns: 40px 1fr; gap: 12px; align-items: start; padding: 10px 14px; border: 1px solid rgba(255,255,255,.17); border-radius: 9px; background: rgba(7,17,29,.69); backdrop-filter: blur(12px); }
+    .rank-row b { display: grid; place-items: center; width: 30px; height: 30px; border-radius: 50%; color: #07101a; background: var(--gold); font-size: 14px; }
+    .rank-row span { color: var(--muted); font-size: clamp(14px, 1.18vw, 17px); line-height: 1.34; }
+
+    .callout { max-width: 940px; margin-top: 27px; padding: 21px 24px; border-left: 5px solid var(--gold); border-radius: 9px; background: var(--panel-strong); box-shadow: var(--shadow); }
+    .callout p { margin: 0; color: var(--muted); font-size: clamp(18px, 1.65vw, 23px); line-height: 1.45; }
+    .accent { color: var(--accent); }
+    .warning { color: var(--rose); }
+
+    .source-corner { position: absolute; z-index: 3; left: 24px; bottom: 21px; display: flex; flex-wrap: wrap; gap: 7px; max-width: calc(100vw - 220px); font-size: 12px; }
+    .source-corner a { color: #eff8ff; text-decoration: none; padding: 7px 10px; border: 1px solid rgba(255,255,255,.28); border-radius: 999px; background: rgba(4,11,19,.82); backdrop-filter: blur(12px); }
+    .source-corner a:hover, .source-corner a:focus-visible { color: var(--accent); border-color: var(--accent); outline: none; }
+
+    .controls { position: absolute; z-index: 5; right: 24px; bottom: 21px; display: flex; align-items: center; gap: 9px; padding: 7px; border: 1px solid rgba(255,255,255,.18); border-radius: 999px; background: rgba(4,11,19,.78); backdrop-filter: blur(14px); }
+    button { display: grid; place-items: center; width: 38px; height: 38px; border: 1px solid rgba(255,255,255,.26); border-radius: 50%; color: var(--ink); background: rgba(255,255,255,.09); font-size: 20px; cursor: pointer; }
+    button:hover, button:focus-visible { color: var(--accent); border-color: var(--accent); outline: none; }
+    .counter { min-width: 58px; text-align: center; color: var(--muted); font-size: 14px; font-variant-numeric: tabular-nums; }
+    .progress { position: absolute; z-index: 5; top: 0; left: 0; height: 4px; width: 0; background: linear-gradient(90deg, var(--accent), var(--gold)); transition: width 220ms ease; }
+
+    @media (max-width: 820px) {
+      .content, .narrow { width: min(100% - 34px, 720px); padding: 38px 0 96px; }
+      .grid, .grid.three { grid-template-columns: 1fr; gap: 10px; }
+      .card, .stat { min-height: 0; padding: 14px 15px; }
+      .rank-list { gap: 6px; }
+      .rank-row { padding: 8px 10px; }
+      .source-corner { left: 17px; bottom: 72px; max-width: calc(100vw - 34px); }
+      .source-corner a { padding: 6px 8px; }
+      .controls { right: 17px; bottom: 16px; }
+    }
+    @media (max-height: 720px) and (min-width: 821px) {
+      .content { padding-top: 28px; padding-bottom: 72px; }
+      .grid { margin-top: 18px; }
+      .card, .stat { min-height: 100px; padding: 14px 16px; }
+      .rank-list { margin-top: 17px; gap: 6px; }
+      .rank-row { padding: 7px 11px; }
+    }
+    @media (prefers-reduced-motion: reduce) { .slide, .progress { transition: none; } }
+  </style>
+</head>
+<body>
+  <main class="deck" aria-live="polite">
+    <div class="progress" aria-hidden="true"></div>
+
+    <section class="slide active" style="--bg: url('https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&amp;fit=crop&amp;w=1800&amp;q=80');">
+      <div class="content narrow">
+        <div class="eyebrow">2026-06-11 · Daily Global + Tech AI</div>
+        <h1>停火接近失效，全球治理同步受壓</h1>
+        <p class="lead">美伊連續第二日互擊、海員死亡與能源通膨；世界盃開幕、Belfast 暴力與 Antarctic 冬季高溫；AI 產品轉向可控 reasoning、agent continuity 與 terminal security。</p>
+        <div class="tags"><span>Top 10 World</span><span>5 Tech / AI Products</span><span>Traditional Chinese</span><span>Deduplicated</span></div>
+      </div>
+      <div class="source-corner">
+        <a href="https://apnews.com/article/3c2c6d356a1e25b4d7edf66b2edba57d">AP: U.S.-Iran escalation</a>
+        <a href="https://help.openai.com/en/articles/6825453-chatgpt-release-notes">OpenAI: ChatGPT release notes</a>
+      </div>
+    </section>
+
+    <section class="slide" style="--bg: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&amp;fit=crop&amp;w=1800&amp;q=80');">
+      <div class="content">
+        <div class="eyebrow">今日 Top 10</div>
+        <h2>戰爭外溢、公共信任與制度承載力</h2>
+        <div class="rank-list">
+          <div class="rank-row"><b>1</b><span>續報｜U.S.-Iran 第二日互擊，Kuwait 關空域、Bahrain 平民受傷</span></div>
+          <div class="rank-row"><b>2</b><span>U.S. tanker strike 確認造成 3 名 Indian mariners 死亡</span></div>
+          <div class="rank-row"><b>3</b><span>Ukraine 以 FP-5 Flamingo 深入打擊俄軍工與能源節點</span></div>
+          <div class="rank-row"><b>4</b><span>48 隊、104 場 World Cup 在 Mexico 正式開幕</span></div>
+          <div class="rank-row"><b>5</b><span>Belfast 刺傷案被轉化為兩夜反移民暴力</span></div>
+          <div class="rank-row"><b>6</b><span>Antarctica 測得 15.4°C 冬季高溫紀錄</span></div>
+          <div class="rank-row"><b>7</b><span>U.S. inflation 4.2%，能源推升至三年高點</span></div>
+          <div class="rank-row"><b>8</b><span>ECFR：僅 11% 歐洲受訪者仍視 U.S. 為盟友</span></div>
+          <div class="rank-row"><b>9</b><span>續報｜近 US$70bn immigration enforcement bill 簽署成法</span></div>
+          <div class="rank-row"><b>10</b><span>Bolivia 封路與短缺危機逼近緊急權力啟動</span></div>
+        </div>
+      </div>
+      <div class="source-corner">
+        <a href="https://apnews.com/article/3c2c6d356a1e25b4d7edf66b2edba57d">AP: Middle East lead</a>
+        <a href="https://apnews.com/article/4a158f6273807683d48692dedb4121b8">AP: Ukraine deep strikes</a>
+        <a href="https://ecfr.eu/publication/home-alone-europeans-are-ready-to-defend-themselves/">ECFR: Europe security poll</a>
+      </div>
+    </section>
+
+    <section class="slide" style="--bg: url('https://images.unsplash.com/photo-1516937941344-00b4e0337589?auto=format&amp;fit=crop&amp;w=1800&amp;q=80');">
+      <div class="content">
+        <div class="eyebrow">Middle East · Continuation</div>
+        <h2>「較小的火」正在接近全面失控</h2>
+        <div class="grid three">
+          <div class="stat"><strong>第 2 日</strong><span>U.S. strikes hit Iranian surveillance、communications、air defense sites。</span></div>
+          <div class="stat"><strong>20 枚</strong><span>Jordan 稱攔截飛向 U.S.-hosting airbase 區域的 Iranian missiles。</span></div>
+          <div class="stat"><strong>3 人</strong><span>India 確認 `Settebello` 上三名海員在 U.S. strike 後死亡。</span></div>
+        </div>
+        <div class="callout"><p><span class="warning">新進展：</span>Kuwait 空域關閉數小時、Bahrain 有兒童遭攔截碎片所傷；海上封鎖從能源風險變成第三國船員死亡與國際海事法問題。</p></div>
+      </div>
+      <div class="source-corner">
+        <a href="https://apnews.com/article/3c2c6d356a1e25b4d7edf66b2edba57d">AP: second-day strikes</a>
+        <a href="https://apnews.com/article/2656530d342f730821fc63e67a342891">AP: Settebello deaths</a>
+        <a href="https://www.theguardian.com/world/live/2026/jun/11/iran-war-news-us-strikes-donald-trump-stalled-peace-talks-middle-east-crisis">Guardian: crisis live</a>
+      </div>
+    </section>
+
+    <section class="slide" style="--bg: url('https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?auto=format&amp;fit=crop&amp;w=1800&amp;q=80');">
+      <div class="content">
+        <div class="eyebrow">Ukraine · Deep Strike</div>
+        <h2>國產 Flamingo 把打擊縱深推到 900 公里外</h2>
+        <div class="grid">
+          <div class="card"><strong>Military industry</strong><span>Cheboksary 的 VNIIR-Progress 被指供應 drone / missile antenna components。</span></div>
+          <div class="card"><strong>War economy</strong><span>Samara refinery、Vladimir oil infrastructure 與 Afipsky 周邊再受壓。</span></div>
+          <div class="card"><strong>Southern logistics</strong><span>Mariupol port 與 Chonhar bridge 打擊瞄準 Russia-Crimea 補給鏈。</span></div>
+          <div class="card"><strong>Maritime pressure</strong><span>Kyiv 稱擊中 Black Sea shadow-fleet tanker `West Horizon`。</span></div>
+        </div>
+        <p class="lead">這不是單一襲擊，而是國產飛彈、無人機、能源設施與海上物流的整合戰役。</p>
+      </div>
+      <div class="source-corner">
+        <a href="https://apnews.com/article/4a158f6273807683d48692dedb4121b8">AP: Ukraine long-range strikes</a>
+        <a href="https://www.theguardian.com/world/2026/jun/11/ukraine-war-briefing-flamingo-missiles-hit-more-far-flung-russian-targets">Guardian: Flamingo targets</a>
+      </div>
+    </section>
+
+    <section class="slide" style="--bg: url('https://images.unsplash.com/photo-1518091043644-c1d4457512c6?auto=format&amp;fit=crop&amp;w=1800&amp;q=80');">
+      <div class="content">
+        <div class="eyebrow">World Cup 2026</div>
+        <h2>史上最大世界盃，開幕即是治理壓力測試</h2>
+        <div class="grid three">
+          <div class="stat"><strong>48 隊</strong><span>首度從 32 隊擴編，全球參與與移民限制正面碰撞。</span></div>
+          <div class="stat"><strong>104 場</strong><span>39 天、16 城市，橫跨 Mexico、Canada、United States。</span></div>
+          <div class="stat"><strong>100,000+</strong><span>Mexico 動員軍警與 National Guard，Guadalajara 仍背負 cartel violence 記憶。</span></div>
+        </div>
+        <div class="grid">
+          <div class="card"><strong>場內</strong><span>Mexico vs South Africa 開幕；South Korea vs Czechia 隨後登場。</span></div>
+          <div class="card"><strong>場外</strong><span>高票價、裁判拒絕入境、失蹤者家屬與教師抗議持續搶占全球鏡頭。</span></div>
+        </div>
+      </div>
+      <div class="source-corner">
+        <a href="https://apnews.com/article/94a3ba298b30a7d6314b00b20cd455ae">AP: World Cup opening</a>
+        <a href="https://apnews.com/article/06fd8a8c293de1b4fb1e420a9bee02b2">AP: Mexico social tensions</a>
+        <a href="https://apnews.com/article/fae511366227396f3f639e46f80d1f8e">AP: Guadalajara security</a>
+      </div>
+    </section>
+
+    <section class="slide" style="--bg: url('https://images.unsplash.com/photo-1517299321609-52687d1bc55a?auto=format&amp;fit=crop&amp;w=1800&amp;q=80');">
+      <div class="content">
+        <div class="eyebrow">Society + Climate</div>
+        <h2>一邊是被放大的仇恨，一邊是被打破的季節</h2>
+        <div class="grid">
+          <div class="card"><strong>Belfast：兩夜暴力</strong><span>警方稱刺傷案非恐攻，但住宅、商店與巴士遭縱火；水砲與增援警力投入街頭。</span></div>
+          <div class="card"><strong>Online trigger event</strong><span>Graphic footage 與極右帳號把個人犯罪轉成對 migrant communities 的集體報復。</span></div>
+          <div class="stat"><strong>15.4°C</strong><span>Esperanza base 的 Antarctic winter record，比 1998 舊紀錄高 2°C。</span></div>
+          <div class="card"><strong>冬季融雪與降雨</strong><span>King George Island 研究者觀察到地景轉褐、glacier 上降雨與異常消融。</span></div>
+        </div>
+      </div>
+      <div class="source-corner">
+        <a href="https://apnews.com/article/859cf9c48afd4719d5e6e80e401aebad">AP: Belfast riot explainer</a>
+        <a href="https://apnews.com/article/1d8b2331cfa33a0b39492ca9098c206f">AP: Belfast water cannon</a>
+        <a href="https://www.theguardian.com/environment/2026/jun/10/record-winter-temperatures-in-antarctic-raise-fears-over-speed-of-climate-breakdown">Guardian: Antarctic heat</a>
+      </div>
+    </section>
+
+    <section class="slide" style="--bg: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&amp;fit=crop&amp;w=1800&amp;q=80');">
+      <div class="content">
+        <div class="eyebrow">Economy + Alliance Trust</div>
+        <h2>能源衝擊正在改寫價格與盟友認知</h2>
+        <div class="grid three">
+          <div class="stat"><strong>4.2%</strong><span>U.S. May CPI 年增率，三年高點。</span></div>
+          <div class="stat"><strong>&gt;60%</strong><span>能源占月增幅比重；Hormuz 風險直接進入家庭帳單。</span></div>
+          <div class="stat"><strong>11%</strong><span>ECFR 15 國調查中仍視 U.S. 為盟友的平均比例。</span></div>
+        </div>
+        <div class="grid">
+          <div class="card"><strong>Fed dilemma</strong><span>Core inflation 2.9%，市場從降息預期轉向年底可能升息。</span></div>
+          <div class="card"><strong>Europe's hedge</strong><span>47% 支持共同舉債強化防務，多數國家偏向降低對 U.S. military hardware 的依賴。</span></div>
+        </div>
+        <p class="lead">但只有 29% 支持以 Europe-only defense body 取代 NATO：自主不是立即脫鉤。</p>
+      </div>
+      <div class="source-corner">
+        <a href="https://apnews.com/article/878f6759c93fcb078aeefffe19d4dfa5">AP: inflation at 4.2%</a>
+        <a href="https://ecfr.eu/publication/home-alone-europeans-are-ready-to-defend-themselves/">ECFR: 15-country survey</a>
+        <a href="https://www.theguardian.com/world/2026/jun/10/only-one-in-10-europeans-now-see-us-as-an-ally-survey-suggests">Guardian: Europe trust</a>
+      </div>
+    </section>
+
+    <section class="slide" style="--bg: url('https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?auto=format&amp;fit=crop&amp;w=1800&amp;q=80');">
+      <div class="content">
+        <div class="eyebrow">State Capacity</div>
+        <h2>美國把移民執法預付三年，Bolivia 逼近軍方介入</h2>
+        <div class="grid">
+          <div class="card"><strong>續報｜US$70bn signed</strong><span>約 US$38bn 給 ICE、US$26bn 給 Border Patrol、US$5bn 應急；資金跨越 Trump 剩餘任期。</span></div>
+          <div class="card"><strong>Few guardrails</strong><span>民主黨要求的 identification、judicial warrants 與 operational reforms 未納入核心條件。</span></div>
+          <div class="stat"><strong>90</strong><span>Bolivia 主要道路約有 90 個封鎖點，食物、燃油與藥品供應受阻。</span></div>
+          <div class="card"><strong>Emergency law</strong><span>新法為緊急狀態與軍方清障提供框架，但仍需另一道 decree 才正式啟動。</span></div>
+        </div>
+      </div>
+      <div class="source-corner">
+        <a href="https://apnews.com/article/9eef2e24fede3e4d593be462cbcf31f2">AP: immigration law signed</a>
+        <a href="https://apnews.com/article/e2f71fb33b704a679cbebfd3d84311ab">AP: Bolivia clashes</a>
+        <a href="https://elpais.com/america/2026-06-07/bolivia-al-borde-del-estado-de-excepcion.html">El País: emergency rule risk</a>
+      </div>
+    </section>
+
+    <section class="slide" style="--bg: url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&amp;fit=crop&amp;w=1800&amp;q=80');">
+      <div class="content">
+        <div class="eyebrow">Tech / AI Product · 1</div>
+        <h2>ChatGPT 把模型選擇改寫成 reasoning effort</h2>
+        <div class="grid three">
+          <div class="stat"><strong>Instant</strong><span>速度優先，可由使用者決定是否自動切到 Medium。</span></div>
+          <div class="stat"><strong>Medium / High</strong><span>取代 Thinking Standard / Extended，更直接描述投入程度。</span></div>
+          <div class="stat"><strong>Extra High</strong><span>Pro plans 專屬；Thinking Light 被移除。</span></div>
+        </div>
+        <div class="callout"><p>產品介面正在把複雜 model routing 隱藏起來，讓使用者選擇「速度、成本、推理深度」而不是記住模型名稱。</p></div>
+      </div>
+      <div class="source-corner">
+        <a href="https://help.openai.com/en/articles/6825453-chatgpt-release-notes">OpenAI: simplified model picker</a>
+      </div>
+    </section>
+
+    <section class="slide" style="--bg: url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&amp;fit=crop&amp;w=1800&amp;q=80');">
+      <div class="content">
+        <div class="eyebrow">Tech / AI Product · 2</div>
+        <h2>Agent 產品開始補齊記憶、安全與營運控制</h2>
+        <div class="grid">
+          <div class="card"><strong>Copilot session continuity</strong><span>Chat 可看進度、讀 agent logs，並依 topic / title / recency 搜尋過去 sessions。</span></div>
+          <div class="card"><strong>Copilot CLI security review</strong><span>實驗性 `/security-review` 在 commit 前檢查 injection、XSS、path traversal、weak crypto。</span></div>
+          <div class="card"><strong>GitHub CLI v2.94.0</strong><span>Discussions、issue types、parents、sub-issues 與 dependencies 成為一級命令。</span></div>
+          <div class="card"><strong>續報｜Claude Managed Agents</strong><span>scheduled deployments 與 env-var credentials 把模型能力推進到可營運的 recurring workflows。</span></div>
+        </div>
+        <p class="lead">共同方向：agent 不只要會做事，還要能被追蹤、重啟、排程、授權與審查。</p>
+      </div>
+      <div class="source-corner">
+        <a href="https://github.blog/changelog/2026-06-10-copilot-chat-now-sees-your-agent-sessions/">GitHub: agent session logs</a>
+        <a href="https://github.blog/changelog/2026-06-10-dedicated-security-review-command-now-available-in-copilot-cli/">GitHub: CLI security review</a>
+        <a href="https://github.blog/changelog/2026-06-10-manage-sub-issues-types-and-dependencies-from-github-cli/">GitHub: issue dependencies</a>
+        <a href="https://platform.claude.com/docs/en/release-notes/overview">Anthropic: managed agents</a>
+      </div>
+    </section>
+
+    <section class="slide" style="--bg: url('https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&amp;fit=crop&amp;w=1800&amp;q=80');">
+      <div class="content narrow">
+        <div class="eyebrow">What To Watch</div>
+        <h2>下一個 24 小時的五個判斷點</h2>
+        <div class="grid">
+          <div class="card"><strong>1. Third-day escalation?</strong><span>U.S.-Iran 是否再互擊，或 Qatar / Pakistan mediation 重啟。</span></div>
+          <div class="card"><strong>2. Maritime investigation?</strong><span>India、IMO 或 flag state 是否要求調查 `Settebello` strike。</span></div>
+          <div class="card"><strong>3. World Cup disruption?</strong><span>抗議、票價、入境與交通問題是否影響開幕賽事。</span></div>
+          <div class="card"><strong>4. Policy follow-through?</strong><span>Fed 語氣是否轉鷹；Bolivia 是否簽署 military deployment decree。</span></div>
+          <div class="card"><strong>5. Agent rollout reality?</strong><span>preview 功能的 plan eligibility、誤報率與 production controls。</span></div>
+          <div class="card"><strong>完整資料</strong><span>報告與逐項 provenance 已寫入同日 knowledge-base directory。</span></div>
+        </div>
+      </div>
+      <div class="source-corner">
+        <a href="https://apnews.com/article/3c2c6d356a1e25b4d7edf66b2edba57d">AP: ceasefire outlook</a>
+        <a href="https://apnews.com/article/94a3ba298b30a7d6314b00b20cd455ae">AP: World Cup opening</a>
+        <a href="https://github.blog/changelog/">GitHub: product changelog</a>
+      </div>
+    </section>
+
+    <nav class="controls" aria-label="投影片導覽">
+      <button type="button" id="prev" aria-label="上一頁">‹</button>
+      <span class="counter" id="counter">1 / 11</span>
+      <button type="button" id="next" aria-label="下一頁">›</button>
+    </nav>
+  </main>
+
+  <script>
+    const slides = Array.from(document.querySelectorAll('.slide'));
+    const counter = document.getElementById('counter');
+    const progress = document.querySelector('.progress');
+    let current = 0;
+    let touchStartX = null;
+
+    function show(index) {
+      current = (index + slides.length) % slides.length;
+      slides.forEach((slide, i) => slide.classList.toggle('active', i === current));
+      counter.textContent = `${current + 1} / ${slides.length}`;
+      progress.style.width = `${((current + 1) / slides.length) * 100}%`;
+      history.replaceState(null, '', `#${current + 1}`);
+    }
+
+    document.getElementById('prev').addEventListener('click', () => show(current - 1));
+    document.getElementById('next').addEventListener('click', () => show(current + 1));
+
+    window.addEventListener('keydown', (event) => {
+      if (['ArrowRight', 'PageDown', ' ', 'Enter'].includes(event.key)) { event.preventDefault(); show(current + 1); }
+      if (['ArrowLeft', 'PageUp', 'Backspace'].includes(event.key)) { event.preventDefault(); show(current - 1); }
+      if (event.key === 'Home') { event.preventDefault(); show(0); }
+      if (event.key === 'End') { event.preventDefault(); show(slides.length - 1); }
+    });
+
+    window.addEventListener('touchstart', (event) => { touchStartX = event.changedTouches[0].clientX; }, { passive: true });
+    window.addEventListener('touchend', (event) => {
+      if (touchStartX === null) return;
+      const delta = event.changedTouches[0].clientX - touchStartX;
+      if (Math.abs(delta) > 55) show(current + (delta < 0 ? 1 : -1));
+      touchStartX = null;
+    }, { passive: true });
+
+    const initial = Number(location.hash.slice(1));
+    show(Number.isInteger(initial) && initial >= 1 && initial <= slides.length ? initial - 1 : 0);
+  </script>
+</body>
+</html>
