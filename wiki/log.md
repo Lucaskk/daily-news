@@ -221,4 +221,6 @@
 - Selected exactly 10 global items after searching prior daily reports and source notes for duplicates.
 - Labeled U.S.-Iran strikes and the U.S. immigration law as continuations with explicit material changes.
 - Added official OpenAI, GitHub and Anthropic product changelog updates without repeating yesterday's model / Siri stories.
-- Updated `wiki/index.md` and `wiki/overview.md`; slide and publishing status are recorded after verification.
+- Created `wiki/daily/2026/06/2026-06-11/slides-2026-06-11.html` and updated `wiki/daily/latest-slides.html`.
+- Updated `wiki/index.md` and `wiki/overview.md`, then published the complete daily package to GitHub Pages.
+- Served the deck locally on port 4175; LINE delivery was skipped because `.env` did not contain `LINE_TO_ID`.
