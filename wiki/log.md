@@ -213,3 +213,12 @@
 - Added a GitHub-backed stock request queue, a 15-minute Mac scheduler, daily de-duplication, and GitHub API publishing.
 - Added `wiki/stocks/pending.html` and per-stock stable redirects under `wiki/stocks/by-code/`.
 - Kept the existing Vercel LINE webhook as the only public webhook; the Mac remains private and does not expose a local server.
+
+## [2026-06-11] ingest | Daily global and tech AI news
+
+- Created `wiki/daily/2026/06/2026-06-11/daily-news-2026-06-11.md`.
+- Created `wiki/daily/2026/06/2026-06-11/source-notes-2026-06-11.md`.
+- Selected exactly 10 global items after searching prior daily reports and source notes for duplicates.
+- Labeled U.S.-Iran strikes and the U.S. immigration law as continuations with explicit material changes.
+- Added official OpenAI, GitHub and Anthropic product changelog updates without repeating yesterday's model / Siri stories.
+- Updated `wiki/index.md` and `wiki/overview.md`; slide and publishing status are recorded after verification.
