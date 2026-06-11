@@ -24,6 +24,8 @@ sources: []
 
 每日新聞報告會放在 `wiki/daily/YYYY/MM/YYYY-MM-DD/`。
 
+- [2026-06-11 Daily News](daily/2026/06/2026-06-11/daily-news-2026-06-11.md) - 今日主軸是 U.S.-Iran 連續第二日互擊與 Settebello 海員死亡、Ukraine 以 FP-5 Flamingo 深入打擊俄軍工與能源設施、48 隊 World Cup 正式開幕、Belfast 反移民暴力、Antarctic 15.4°C 冬季紀錄、U.S. 4.2% inflation、ECFR 歐洲安全觀轉變、Trump 簽署 ICE / Border Patrol 法案與 Bolivia 緊急權力風險；科技 / AI 轉向 ChatGPT reasoning controls、Copilot agent-session continuity、CLI security review、GitHub CLI project control 與 Claude Managed Agents operations。
+- [2026-06-11 Slides](daily/2026/06/2026-06-11/slides-2026-06-11.html) - 今日新聞網頁版投影片。
 - [2026-06-10 Daily News](daily/2026/06/2026-06-10/daily-news-2026-06-10.md) - 下午刷新後，今日主軸是 Iran retaliatory attacks on U.S. bases after U.S. strikes over an Apache crash near Hormuz、Tyre Christian quarter warning、six-country West Bank settler sanctions、Gaza UN report on Hamas-linked abuses、Ebola / World Cup travel controls and Somali referee entry denial、U.S. DHS / ICE and FISA governance pressure、Cuba intervention fears、Xi-Kim nuclear-silence signal；科技 / AI 轉向 Anthropic Claude Fable 5 / Mythos 5、ChatGPT app workflow updates、Apple Siri AI / EU DMA standoff and AI IPO wave。
 - [2026-06-10 Slides](daily/2026/06/2026-06-10/slides-2026-06-10.html) - 今日新聞網頁版投影片。
 - [2026-06-09 Daily News](daily/2026/06/2026-06-09/daily-news-2026-06-09.md) - 今日主軸是 Israel-Iran 互擊後被 Trump 介入喊停、U.S.-Israel counterintelligence trust crisis、Xi-Kim summit outcome、Ukraine oil-site strikes and E3 peace conditions、Armenia victory claim、West Bank settlement-trade pressure、Gaza / Taiwan / markets 續報，以及 AI 產品轉向 WWDC26 actual Apple Intelligence / Xcode agents、OpenAI API moderation scores、Anthropic enterprise roles、NVIDIA-LG AI factory and Microsoft MAI distribution。
