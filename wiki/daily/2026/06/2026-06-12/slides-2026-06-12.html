@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Daily News 2026-06-12</title>
+  <!--
+    Background image notes (Unsplash theme images; not documentary evidence):
+    - Title / closing: photo-1504711434969-e33886168f5c, newsroom / current affairs.
+    - Global systems / economy: photo-1451187580459-43490279c0fa, earth / interconnected systems.
+    - Energy / OPEC: photo-1516937941344-00b4e0337589, energy infrastructure.
+    - Climate: photo-1569511166187-97eb6e387e19, Pacific ocean / weather systems.
+    - Institutions / security: photo-1529107386315-e1a2ed48a620, government institutions.
+    - Humanitarian: photo-1489493585363-d69421e0edd3, movement / displacement.
+    - Amazon: photo-1516026672322-bc52d61a55d5, rainforest canopy.
+    - Technology / AI: photo-1518770660439-4636190af475, circuitry / computing.
+    Image provider: https://unsplash.com/ .
+    Daily provenance: daily-news-2026-06-12.md and source-notes-2026-06-12.md.
+  -->
+  <style>
+    :root {
+      color-scheme: dark;
+      --ink: #f8fbff;
+      --muted: #dce9f3;
+      --panel: rgba(6, 17, 29, .78);
+      --panel-strong: rgba(5, 15, 26, .91);
+      --line: rgba(255,255,255,.23);
+      --accent: #65e0ce;
+      --gold: #ffd166;
+      --rose: #ff9b88;
+      --shadow: 0 22px 68px rgba(0,0,0,.46);
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    * { box-sizing: border-box; }
+    html, body { width: 100%; height: 100%; margin: 0; overflow: hidden; background: #06101a; }
+    body { color: var(--ink); }
+    .deck { position: relative; width: 100vw; height: 100vh; }
+    .slide {
+      position: absolute; inset: 0; display: grid; grid-template-rows: 1fr auto;
+      opacity: 0; pointer-events: none; transform: translateX(28px);
+      transition: opacity 220ms ease, transform 220ms ease;
+      background-image: linear-gradient(90deg, rgba(3,9,16,.94), rgba(6,16,27,.79) 55%, rgba(6,16,27,.38)), var(--bg);
+      background-position: center; background-size: cover;
+    }
+    .slide.active { opacity: 1; pointer-events: auto; transform: translateX(0); }
+    .slide::after { content: ""; position: absolute; inset: 0; pointer-events: none; background: radial-gradient(circle at 83% 16%, rgba(101,224,206,.17), transparent 30%), linear-gradient(180deg, transparent, rgba(0,0,0,.36)); }
+    .content { position: relative; z-index: 1; align-self: center; width: min(1120px, calc(100vw - 92px)); margin: 0 auto; padding: 44px 0 86px; }
+    .narrow { width: min(960px, calc(100vw - 92px)); }
+    .eyebrow { display: inline-flex; align-items: center; gap: 10px; margin-bottom: 16px; color: var(--accent); font-size: 16px; font-weight: 800; }
+    .eyebrow::before { content: ""; width: 30px; height: 2px; border-radius: 999px; background: var(--accent); }
+    h1, h2 { margin: 0; line-height: 1.05; text-wrap: balance; }
+    h1 { max-width: 1000px; font-size: clamp(45px, 7.2vw, 88px); font-weight: 880; }
+    h2 { max-width: 1050px; font-size: clamp(34px, 4.9vw, 64px); font-weight: 850; }
+    .lead { max-width: 920px; margin: 21px 0 0; color: var(--muted); font-size: clamp(20px, 2vw, 28px); line-height: 1.42; font-weight: 560; }
+    .tags { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 24px; }
+    .tags span { padding: 8px 11px; border: 1px solid var(--line); border-radius: 999px; background: rgba(255,255,255,.10); font-size: 15px; font-weight: 720; }
+    .grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 15px; margin-top: 28px; }
+    .grid.three { grid-template-columns: repeat(3, minmax(0,1fr)); }
+    .card, .stat { min-height: 121px; padding: 18px 19px; border: 1px solid var(--line); border-radius: 10px; background: var(--panel); box-shadow: var(--shadow); backdrop-filter: blur(15px); }
+    .card strong, .stat strong { display: block; margin-bottom: 7px; color: var(--ink); font-size: clamp(17px,1.65vw,23px); line-height: 1.18; }
+    .card span, .stat span { color: var(--muted); font-size: clamp(15px,1.25vw,18px); line-height: 1.42; }
+    .stat strong { color: var(--gold); font-size: clamp(27px,3vw,43px); }
+    .rank-list { display: grid; gap: 8px; max-width: 1080px; margin-top: 24px; }
+    .rank-row { display: grid; grid-template-columns: 40px 1fr; gap: 12px; align-items: start; padding: 9px 14px; border: 1px solid rgba(255,255,255,.17); border-radius: 9px; background: rgba(7,17,29,.72); backdrop-filter: blur(12px); }
+    .rank-row b { display: grid; place-items: center; width: 30px; height: 30px; border-radius: 50%; color: #07101a; background: var(--gold); font-size: 14px; }
+    .rank-row span { color: var(--muted); font-size: clamp(14px,1.16vw,17px); line-height: 1.34; }
+    .callout { max-width: 960px; margin-top: 27px; padding: 21px 24px; border-left: 5px solid var(--gold); border-radius: 9px; background: var(--panel-strong); box-shadow: var(--shadow); }
+    .callout p { margin: 0; color: var(--muted); font-size: clamp(18px,1.65vw,23px); line-height: 1.45; }
+    .accent { color: var(--accent); }
+    .warning { color: var(--rose); }
+    .source-corner { position: absolute; z-index: 3; left: 24px; bottom: 21px; display: flex; flex-wrap: wrap; gap: 7px; max-width: calc(100vw - 220px); font-size: 12px; }
+    .source-corner a { color: #eff8ff; text-decoration: none; padding: 7px 10px; border: 1px solid rgba(255,255,255,.28); border-radius: 999px; background: rgba(4,11,19,.84); backdrop-filter: blur(12px); }
+    .source-corner a:hover, .source-corner a:focus-visible { color: var(--accent); border-color: var(--accent); outline: none; }
+    .controls { position: absolute; z-index: 5; right: 24px; bottom: 21px; display: flex; align-items: center; gap: 9px; padding: 7px; border: 1px solid rgba(255,255,255,.18); border-radius: 999px; background: rgba(4,11,19,.8); backdrop-filter: blur(14px); }
+    button { display: grid; place-items: center; width: 38px; height: 38px; border: 1px solid rgba(255,255,255,.26); border-radius: 50%; color: var(--ink); background: rgba(255,255,255,.09); font-size: 20px; cursor: pointer; }
+    button:hover, button:focus-visible { color: var(--accent); border-color: var(--accent); outline: none; }
+    .counter { min-width: 58px; text-align: center; color: var(--muted); font-size: 14px; font-variant-numeric: tabular-nums; }
+    .progress { position: absolute; z-index: 5; top: 0; left: 0; height: 4px; width: 0; background: linear-gradient(90deg,var(--accent),var(--gold)); transition: width 220ms ease; }
+    @media (max-width: 820px) {
+      .content, .narrow { width: min(100% - 34px,720px); padding: 34px 0 104px; }
+      .grid, .grid.three { grid-template-columns: 1fr; gap: 9px; margin-top: 18px; }
+      .card, .stat { min-height: 0; padding: 13px 15px; }
+      .rank-list { gap: 5px; margin-top: 16px; }
+      .rank-row { padding: 7px 10px; }
+      .source-corner { left: 17px; bottom: 72px; max-width: calc(100vw - 34px); }
+      .source-corner a { padding: 6px 8px; }
+      .controls { right: 17px; bottom: 16px; }
+    }
+    @media (max-height: 720px) and (min-width: 821px) {
+      .content { padding-top: 25px; padding-bottom: 72px; }
+      .grid { margin-top: 17px; gap: 10px; }
+      .card, .stat { min-height: 96px; padding: 13px 15px; }
+      .rank-list { margin-top: 15px; gap: 5px; }
+      .rank-row { padding: 6px 10px; }
+    }
+    @media (prefers-reduced-motion: reduce) { .slide, .progress { transition: none; } }
+  </style>
+</head>
+<body>
+  <main class="deck" aria-live="polite">
+    <div class="progress" aria-hidden="true"></div>
+
+    <section class="slide active" style="--bg:url('https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&amp;fit=crop&amp;w=1800&amp;q=80');">
+      <div class="content narrow">
+        <div class="eyebrow">2026-06-12 · Daily Global + Tech AI</div>
+        <h1>戰火暫停，但能源、利率與氣候衝擊已經落地</h1>
+        <p class="lead">美伊談判由互擊轉向未定案的 MOU；UAE 退出 OPEC、ECB 升息、World Bank 下修；AI agents 開始代購、跑工作流並進入 nonprofit 與企業營運。</p>
+        <div class="tags"><span>Top 10 World</span><span>5 Tech / AI Products</span><span>Traditional Chinese</span><span>Deduplicated</span></div>
+      </div>
+      <div class="source-corner">
+        <a href="https://apnews.com/article/iran-us-ceasefire-hezbollah-israel-11-june-2026-3c2c6d356a1e25b4d7edf66b2edba57d">AP: Iran talks turn</a>
+        <a href="https://github.blog/changelog/2026-06-11-github-agentic-workflows-is-now-in-public-preview/">GitHub: Agentic Workflows</a>
+      </div>
+    </section>
+
+    <section class="slide" style="--bg:url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&amp;fit=crop&amp;w=1800&amp;q=80');">
+      <div class="content">
+        <div class="eyebrow">今日 Top 10</div>
+        <h2>外交轉折與全球制度成本同時浮現</h2>
+        <div class="rank-list">
+          <div class="rank-row"><b>1</b><span>續報｜Trump 取消新 Iran strikes，宣稱數日內可簽 settlement MOU</span></div>
+          <div class="rank-row"><b>2</b><span>UAE 宣布退出 OPEC / OPEC+，削弱 spare-capacity coordination</span></div>
+          <div class="rank-row"><b>3</b><span>ECB 將基準利率升至 2.25%，回應 Iran-war inflation</span></div>
+          <div class="rank-row"><b>4</b><span>World Bank 下修 2026 全球成長至 2.5%</span></div>
+          <div class="rank-row"><b>5</b><span>NOAA 正式確認 El Nino，63% 機率達歷史極強等級</span></div>
+          <div class="rank-row"><b>6</b><span>UK defense secretary 因軍費不足辭職</span></div>
+          <div class="rank-row"><b>7</b><span>全球強迫流離失所人口仍達 1.178 億</span></div>
+          <div class="rank-row"><b>8</b><span>Brazil：May Amazon deforestation 年減 61.4%</span></div>
+          <div class="rank-row"><b>9</b><span>UN 確認 Pakistan airstrikes 殺害 13 名 Afghan civilians</span></div>
+          <div class="rank-row"><b>10</b><span>Milan 美領館工程爆出低於 US$2/hour 勞權調查</span></div>
+        </div>
+      </div>
+      <div class="source-corner">
+        <a href="https://apnews.com/world-news">AP: World top stories</a>
+        <a href="https://apnews.com/article/world-bank-global-economy-war-fcaed3c00d7262be3b13cbc5dbb1e5df">AP: World Bank forecast</a>
+        <a href="https://apnews.com/article/el-nino-climate-change-flood-drought-damage-7eafacd2bcf04ade9d7f555dfd488178">AP: El Nino</a>
+      </div>
+    </section>
+
+    <section class="slide" style="--bg:url('https://images.unsplash.com/photo-1516937941344-00b4e0337589?auto=format&amp;fit=crop&amp;w=1800&amp;q=80');">
+      <div class="content">
+        <div class="eyebrow">Middle East · Continuation</div>
+        <h2>從第二日互擊，急轉為未定案的「重大突破」</h2>
+        <div class="grid three">
+          <div class="stat"><strong>數日內</strong><span>Trump 稱可簽 MOU，並取消新一輪 military strikes。</span></div>
+          <div class="stat"><strong>無 final deal</strong><span>Iran 說 mediators 仍在活動，但協議尚未完成。</span></div>
+          <div class="stat"><strong>Israel 未加入</strong><span>Netanyahu government 不是 emerging U.S.-Iran arrangement 的一方。</span></div>
+        </div>
+        <div class="callout"><p><span class="warning">今日新進展：</span>昨日的問題是戰火會不會進入第三天；今日改成協議是否真的存在，以及 Hormuz、核計畫與 Israel-Lebanon 戰線能否被同一文本約束。</p></div>
+      </div>
+      <div class="source-corner">
+        <a href="https://apnews.com/article/iran-us-ceasefire-hezbollah-israel-11-june-2026-3c2c6d356a1e25b4d7edf66b2edba57d">AP: strikes called off</a>
+        <a href="https://www.theguardian.com/us-news/2026/jun/11/first-thing-us-iran-trade-strikes-trump-threatens-tehran-stalled-talks">Guardian: talks context</a>
+      </div>
+    </section>
+
+    <section class="slide" style="--bg:url('https://images.unsplash.com/photo-1516937941344-00b4e0337589?auto=format&amp;fit=crop&amp;w=1800&amp;q=80');">
+      <div class="content">
+        <div class="eyebrow">Oil + Monetary Policy</div>
+        <h2>UAE 離開 OPEC，ECB 先升息</h2>
+        <div class="grid">
+          <div class="stat"><strong>May 1</strong><span>UAE 預定退出 OPEC 與 OPEC+，結束超過半世紀的成員關係。</span></div>
+          <div class="stat"><strong>4.8m bpd</strong><span>UAE production capacity；退出會抽走 cartel 的重要 spare capacity。</span></div>
+          <div class="stat"><strong>2.25%</strong><span>ECB benchmark rate，由 2% 上調。</span></div>
+          <div class="stat"><strong>3.2%</strong><span>Eurozone May inflation；Brent 約 US$93，戰前約 US$73。</span></div>
+        </div>
+        <p class="lead">供給治理碎片化與貨幣緊縮正在同一天發生，Fed、BoE、BoJ 的下一步因此更難。</p>
+      </div>
+      <div class="source-corner">
+        <a href="https://apnews.com/live/iran-war-israel-trump-04-28-2026">AP: UAE exits OPEC</a>
+        <a href="https://apnews.com/article/ecb-european-central-bank-interest-rates-fed-eurozone-2a2c26c580961a979372393706a7f93c">AP: ECB raises rates</a>
+      </div>
+    </section>
+
+    <section class="slide" style="--bg:url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&amp;fit=crop&amp;w=1800&amp;q=80');">
+      <div class="content">
+        <div class="eyebrow">Global Economy</div>
+        <h2>World Bank：2026 成長降到疫情後最低</h2>
+        <div class="grid three">
+          <div class="stat"><strong>2.5%</strong><span>2026 global growth forecast。</span></div>
+          <div class="stat"><strong>2/3</strong><span>全球國家預測遭下修。</span></div>
+          <div class="stat"><strong>3.6%</strong><span>Developing / emerging economies，post-pandemic low。</span></div>
+        </div>
+        <div class="grid">
+          <div class="card"><strong>Energy importers</strong><span>Iran war 提高油氣價格與不確定性；euro area 僅估 0.8% growth。</span></div>
+          <div class="card"><strong>Food systems</strong><span>Persian Gulf fertilizer disruption 可能逼農民減量，轉成 food-price 與 food-security risk。</span></div>
+        </div>
+      </div>
+      <div class="source-corner">
+        <a href="https://apnews.com/article/world-bank-global-economy-war-fcaed3c00d7262be3b13cbc5dbb1e5df">AP: 2.5% global growth</a>
+        <a href="https://www.theguardian.com/business/2026/jun/11/global-growth-slow-lowest-level-pandemic-world-bank">Guardian: growth downgrade</a>
+      </div>
+    </section>
+
+    <section class="slide" style="--bg:url('https://images.unsplash.com/photo-1569511166187-97eb6e387e19?auto=format&amp;fit=crop&amp;w=1800&amp;q=80');">
+      <div class="content">
+        <div class="eyebrow">Climate · ENSO</div>
+        <h2>El Nino 已形成，下一波極端天氣有 63% 機率達歷史級</h2>
+        <div class="grid">
+          <div class="stat"><strong>63%</strong><span>NOAA：秋冬可能列入 1950 年以來最強事件之一。</span></div>
+          <div class="card"><strong>Pacific</strong><span>更高的 hurricane、island heat、algal bloom 與 marine disruption 風險。</span></div>
+          <div class="card"><strong>Asia + Australia</strong><span>India heat waves；Australia drought、wildfire 與 heat risk。</span></div>
+          <div class="card"><strong>Food prices</strong><span>Rice、maize、fertilizer 與 Iran-war supply shock 可能相互放大。</span></div>
+        </div>
+        <p class="lead">形成已是觀測事實；最終強度與各地災害分布仍是機率預測。</p>
+      </div>
+      <div class="source-corner">
+        <a href="https://apnews.com/article/el-nino-climate-change-flood-drought-damage-7eafacd2bcf04ade9d7f555dfd488178">AP: NOAA confirmation</a>
+        <a href="https://www.theguardian.com/us-news/2026/jun/11/el-nino-forms-historic-strength">Guardian: regional impacts</a>
+      </div>
+    </section>
+
+    <section class="slide" style="--bg:url('https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?auto=format&amp;fit=crop&amp;w=1800&amp;q=80');">
+      <div class="content">
+        <div class="eyebrow">Institutions + Accountability</div>
+        <h2>英國 cabinet instability，遇上外交工程供應鏈問責</h2>
+        <div class="grid">
+          <div class="card"><strong>John Healey resigns</strong><span>稱 Defense Investment Plan 遠低於危險時代所需；Al Carns 隨後離任。</span></div>
+          <div class="card"><strong>Starmer pressure</strong><span>2027 年 2.5%、2035 年 3% GDP defense pledge 被質疑太慢。</span></div>
+          <div class="stat"><strong>&lt; US$2/hour</strong><span>AP 文件與訪談顯示 Milan 新 U.S. Consulate 外籍工人疑遭極低薪。</span></div>
+          <div class="card"><strong>Prosecutor action</strong><span>兩名 Caddell managers 被捕；公司與 State Department 均稱合作調查。</span></div>
+        </div>
+      </div>
+      <div class="source-corner">
+        <a href="https://apnews.com/article/britain-defense-secretary-john-healey-quits-533cb2637192f045ca6247ab5a402bac">AP: UK defense resignation</a>
+        <a href="https://apnews.com/article/us-consulate-milan-caddell-labor-exploitation-9b77ab653aad4ffeab368de423920848">AP: Milan labor probe</a>
+      </div>
+    </section>
+
+    <section class="slide" style="--bg:url('https://images.unsplash.com/photo-1489493585363-d69421e0edd3?auto=format&amp;fit=crop&amp;w=1800&amp;q=80');">
+      <div class="content">
+        <div class="eyebrow">Human Security</div>
+        <h2>數字下降不代表安全改善</h2>
+        <div class="grid three">
+          <div class="stat"><strong>117.8m</strong><span>2025 年底 global forced displacement。</span></div>
+          <div class="stat"><strong>68.7m</strong><span>仍在本國境內流離失所。</span></div>
+          <div class="stat"><strong>82,000</strong><span>約略 resettlement 人數，較 2024 的 188,000 急降。</span></div>
+        </div>
+        <div class="callout"><p>Afghanistan 的另一個警訊：UNAMA 確認 Pakistan airstrikes 殺害 13 名 civilians，其中 11 名是兒童；邊境封閉已拖累 trade 與 humanitarian access。</p></div>
+      </div>
+      <div class="source-corner">
+        <a href="https://apnews.com/article/refugees-conflict-persecution-un-migration-displacement-4dbcddd571b1ad2de8fadff609fec393">AP: UNHCR displacement</a>
+        <a href="https://elpais.com/internacional/2026-06-11/el-numero-de-desplazados-cae-por-primera-vez-en-una-decada-pero-millones-vuelven-a-paises-aun-en-guerra.html">El Pais: unsafe returns</a>
+        <a href="https://apnews.com/article/afghanistan-pakistan-airstrikes-taliban-deaths-1ff4daba4326778e9983ae6dd27286c3">AP: Afghan civilian deaths</a>
+      </div>
+    </section>
+
+    <section class="slide" style="--bg:url('https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&amp;fit=crop&amp;w=1800&amp;q=80');">
+      <div class="content">
+        <div class="eyebrow">Amazon + Trade</div>
+        <h2>Brazil 用衛星數據反擊美國關稅理由</h2>
+        <div class="grid three">
+          <div class="stat"><strong>-61.4%</strong><span>May Amazon deforestation vs May 2025。</span></div>
+          <div class="stat"><strong>370 km²</strong><span>仍被清除的 rainforest 面積。</span></div>
+          <div class="stat"><strong>-37.5%</strong><span>Aug 2025 至 May 2026 累計年減。</span></div>
+        </div>
+        <div class="callout"><p>Brazil 稱數據推翻 U.S. 以 illegal deforestation 支持 25% tariffs 的論述；但全年 consolidated rate 尚未完成，單月改善仍需持續監測。</p></div>
+      </div>
+      <div class="source-corner">
+        <a href="https://apnews.com/article/brazil-amazon-rainforest-deforestation-us-tariffs-trump-9b6e95ab885a05a371f746ab7ae2c7b7">AP: Amazon deforestation data</a>
+      </div>
+    </section>
+
+    <section class="slide" style="--bg:url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&amp;fit=crop&amp;w=1800&amp;q=80');">
+      <div class="content">
+        <div class="eyebrow">Tech / AI Product · Commerce</div>
+        <h2>AI agent 從推薦商品，跨進支付執行</h2>
+        <div class="grid">
+          <div class="card"><strong>Visa inside ChatGPT</strong><span>使用者連結 Visa cards，agent 可搜尋並在接受 Visa 的 merchants 完成購買。</span></div>
+          <div class="card"><strong>Trust infrastructure</strong><span>Visa 提供 authorization 與 fraud monitoring；OpenAI 提供 agent decisions 與 purchase initiation。</span></div>
+          <div class="card"><strong>Guardrails</strong><span>Spending limits、required approvals 與 approved merchants 降低 unauthorized purchase risk。</span></div>
+          <div class="card"><strong>Open questions</strong><span>Fees、merchant rollout、錯買爭議與 chargeback responsibility 尚未公開。</span></div>
+        </div>
+      </div>
+      <div class="source-corner">
+        <a href="https://apnews.com/article/visa-chatgpt-openai-shopping-mastercard-d769dec86344cb4977c98789e8ec492f">AP: Visa x ChatGPT</a>
+      </div>
+    </section>
+
+    <section class="slide" style="--bg:url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&amp;fit=crop&amp;w=1800&amp;q=80');">
+      <div class="content">
+        <div class="eyebrow">Tech / AI Product · Operations</div>
+        <h2>Agents 補上工作流、安全、人才與企業資料層</h2>
+        <div class="grid">
+          <div class="card"><strong>GitHub Agentic Workflows</strong><span>Public preview 支援 issue triage、CI failure analysis、docs updates。</span></div>
+          <div class="card"><strong>No stored PAT</strong><span>改用 Actions `GITHUB_TOKEN`；Copilot CLI 以 `/settings` 集中配置。</span></div>
+          <div class="card"><strong>Claude Corps</strong><span>Anthropic 全額資助 fellows 一年，嵌入 U.S. nonprofits 建置 AI systems。</span></div>
+          <div class="card"><strong>IBM + ServiceNow</strong><span>Legacy modernization、watsonx.data governance、autonomous IT remediation，目標 H2 2026。</span></div>
+        </div>
+        <p class="lead">共同方向：agent 產品的競爭點從模型能力，移向可授權、可治理、可部署與可維運。</p>
+      </div>
+      <div class="source-corner">
+        <a href="https://github.blog/changelog/2026-06-11-github-agentic-workflows-is-now-in-public-preview/">GitHub: Agentic Workflows</a>
+        <a href="https://github.blog/changelog/2026-06-11-agentic-workflows-no-longer-need-a-personal-access-token/">GitHub: GITHUB_TOKEN</a>
+        <a href="https://www.anthropic.com/claude-corps">Anthropic: Claude Corps</a>
+        <a href="https://newsroom.ibm.com/2026-06-11-ibm-and-servicenow-expand-collaboration-to-unlock-enterprise-data-for-ai-at-scale">IBM: ServiceNow integration</a>
+      </div>
+    </section>
+
+    <section class="slide" style="--bg:url('https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&amp;fit=crop&amp;w=1800&amp;q=80');">
+      <div class="content narrow">
+        <div class="eyebrow">What To Watch</div>
+        <h2>下一個 24 小時的五個判斷點</h2>
+        <div class="grid">
+          <div class="card"><strong>1. Iran MOU text?</strong><span>是否公布簽署方、地點、Hormuz 與 nuclear terms。</span></div>
+          <div class="card"><strong>2. UAE production?</strong><span>退出 OPEC 後是否快速增產，Saudi Arabia 如何回應。</span></div>
+          <div class="card"><strong>3. Central-bank chain?</strong><span>Fed、BoE、BoJ 是否跟進 ECB 的 war-inflation stance。</span></div>
+          <div class="card"><strong>4. El Nino trajectory?</strong><span>Pacific warming 是否維持 extreme-event forecast。</span></div>
+          <div class="card"><strong>5. Agent consent rules?</strong><span>Visa / ChatGPT 的 fees、approvals、disputes 與 merchant adoption。</span></div>
+          <div class="card"><strong>完整資料</strong><span>日報與逐項 provenance 已寫入同日 knowledge-base directory。</span></div>
+        </div>
+      </div>
+      <div class="source-corner">
+        <a href="https://apnews.com/article/iran-us-ceasefire-hezbollah-israel-11-june-2026-3c2c6d356a1e25b4d7edf66b2edba57d">AP: Iran settlement outlook</a>
+        <a href="https://apnews.com/article/ecb-european-central-bank-interest-rates-fed-eurozone-2a2c26c580961a979372393706a7f93c">AP: central-bank outlook</a>
+        <a href="https://apnews.com/article/visa-chatgpt-openai-shopping-mastercard-d769dec86344cb4977c98789e8ec492f">AP: agentic commerce</a>
+      </div>
+    </section>
+
+    <nav class="controls" aria-label="投影片導覽">
+      <button type="button" id="prev" aria-label="上一頁">‹</button>
+      <span class="counter" id="counter">1 / 11</span>
+      <button type="button" id="next" aria-label="下一頁">›</button>
+    </nav>
+  </main>
+
+  <script>
+    const slides = Array.from(document.querySelectorAll('.slide'));
+    const counter = document.getElementById('counter');
+    const progress = document.querySelector('.progress');
+    let current = 0;
+    let touchStartX = null;
+
+    function show(index) {
+      current = (index + slides.length) % slides.length;
+      slides.forEach((slide, i) => slide.classList.toggle('active', i === current));
+      counter.textContent = `${current + 1} / ${slides.length}`;
+      progress.style.width = `${((current + 1) / slides.length) * 100}%`;
+      history.replaceState(null, '', `#${current + 1}`);
+    }
+
+    document.getElementById('prev').addEventListener('click', () => show(current - 1));
+    document.getElementById('next').addEventListener('click', () => show(current + 1));
+    window.addEventListener('keydown', (event) => {
+      if (['ArrowRight', 'PageDown', ' ', 'Enter'].includes(event.key)) { event.preventDefault(); show(current + 1); }
+      if (['ArrowLeft', 'PageUp', 'Backspace'].includes(event.key)) { event.preventDefault(); show(current - 1); }
+      if (event.key === 'Home') { event.preventDefault(); show(0); }
+      if (event.key === 'End') { event.preventDefault(); show(slides.length - 1); }
+    });
+    window.addEventListener('touchstart', (event) => { touchStartX = event.changedTouches[0].clientX; }, { passive: true });
+    window.addEventListener('touchend', (event) => {
+      if (touchStartX === null) return;
+      const delta = event.changedTouches[0].clientX - touchStartX;
+      if (Math.abs(delta) > 55) show(current + (delta < 0 ? 1 : -1));
+      touchStartX = null;
+    }, { passive: true });
+    const initial = Number(location.hash.slice(1));
+    show(Number.isInteger(initial) && initial >= 1 && initial <= slides.length ? initial - 1 : 0);
+  </script>
+</body>
+</html>
