@@ -232,3 +232,5 @@
 - Added distinct technology / AI product coverage for Visa agentic payments, GitHub Agentic Workflows, Copilot CLI configuration, Claude Corps and IBM-ServiceNow enterprise AI.
 - Created `wiki/daily/2026/06/2026-06-12/slides-2026-06-12.html` with 12 slides, readable source labels, keyboard controls and touch navigation.
 - Updated `wiki/daily/latest-slides.html`, `wiki/index.md`, `wiki/overview.md` and the root GitHub Pages redirect.
+- Published the daily package to GitHub Pages through the GitHub connector after local HTTPS push authentication failed.
+- Served the deck locally on port 4174; LINE delivery was skipped because `.env` did not contain `LINE_TO_ID`.
