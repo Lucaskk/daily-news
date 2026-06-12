@@ -2,7 +2,7 @@
 title: "Overview"
 type: overview
 created: 2026-05-24
-updated: 2026-06-11
+updated: 2026-06-12
 status: seed
 tags: [overview]
 sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
@@ -30,6 +30,8 @@ sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
 
 ## Latest Daily News
 
+- [2026-06-12 Daily News](daily/2026/06/2026-06-12/daily-news-2026-06-12.md) - 今日從戰場升級轉入協議可信度與制度成本：Trump 取消新 Iran strikes 並宣稱數日內可簽 MOU，但 Iran 表示尚無 final deal，Israel 也不是協議方。UAE 退出 OPEC / OPEC+，ECB 將利率升至 2.25%，World Bank 把 global growth 下修到 2.5%。NOAA 正式確認 El Nino 且有 63% 機率達歷史極強等級；UK defense secretary 辭職、全球強迫流離失所仍達 117.8m、Brazil Amazon deforestation 顯著下降、UN 確認 Pakistan airstrikes 的 Afghan civilian deaths，Milan U.S. Consulate 工程則出現 labor-exploitation probe。AI / tech 進入執行層：Visa 讓 ChatGPT agents 付款，GitHub Agentic Workflows 進入 preview 並改用 `GITHUB_TOKEN`，Anthropic 推出 Claude Corps，IBM-ServiceNow 整合 enterprise data、legacy modernization 與 autonomous operations。
+- [2026-06-12 Slides](daily/2026/06/2026-06-12/slides-2026-06-12.html) - 今日新聞網頁版投影片。
 - [2026-06-11 Daily News](daily/2026/06/2026-06-11/daily-news-2026-06-11.md) - 今日主軸是脆弱停火與全球治理同時失壓：U.S. and Iran traded strikes for a second day, Kuwait temporarily closed its airspace, Bahrain reported a child injured by interception debris, and a U.S. strike on tanker Settebello killed three Indian mariners. Ukraine used domestic FP-5 Flamingo missiles and drones against deep Russian military, refinery and logistics targets. The 48-team World Cup opened in Mexico under ticket, migration, security and protest pressure; Belfast faced two nights of anti-immigrant violence; Antarctica recorded 15.4°C winter heat. U.S. inflation reached 4.2%, ECFR found only 11% across 15 European countries still see the U.S. as an ally, Trump signed nearly US$70bn in immigration-enforcement funding, and Bolivia moved closer to emergency powers. AI / tech shifted to ChatGPT reasoning-effort controls, Copilot agent-session visibility, terminal security review, richer GitHub CLI project structures and Claude Managed Agents scheduling / credential injection.
 - [2026-06-11 Slides](daily/2026/06/2026-06-11/slides-2026-06-11.html) - 今日新聞網頁版投影片。
 - [2026-06-10 Daily News](daily/2026/06/2026-06-10/daily-news-2026-06-10.md) - 下午刷新後，今日主軸是停火壓力測試升級為直接 U.S.-Iran exchange：U.S. struck Iran after an Apache helicopter crash near the Strait of Hormuz, then Iran reportedly retaliated against U.S. bases or U.S.-linked facilities in Bahrain, Kuwait and Jordan while most projectiles were said to be intercepted and damage remained unsettled. Middle East spillover broadened through Israeli strikes and evacuation warnings in Tyre's historic Christian quarter, six Western nations sanctioning Israeli settler violence / settlement expansion actors, and a UN report alleging Hamas-linked executions and maiming in Gaza. Global governance stress shifted into Ebola / World Cup travel restrictions, Somali referee Omar Artan being denied U.S. entry despite a visa, U.S. DHS / ICE funding, FISA Section 702 / Bill Pulte legitimacy issues, Cuba intervention fears and Xi-Kim nuclear-silence signaling. AI / tech moved from yesterday's Apple / OpenAI / Anthropic / NVIDIA / Microsoft release waves to Claude Fable 5 / Mythos 5, ChatGPT interactive charts / writing / email workflow updates, Apple Siri AI's Google-powered and EU DMA-constrained rollout, and the OpenAI / Anthropic / SpaceX-xAI IPO wave.
