@@ -224,3 +224,11 @@
 - Created `wiki/daily/2026/06/2026-06-11/slides-2026-06-11.html` and updated `wiki/daily/latest-slides.html`.
 - Updated `wiki/index.md` and `wiki/overview.md`, then published the complete daily package to GitHub Pages.
 - Served the deck locally on port 4175; LINE delivery was skipped because `.env` did not contain `LINE_TO_ID`.
+
+## [2026-06-12] ingest | Daily global and tech AI news
+
+- Created `wiki/daily/2026/06/2026-06-12/daily-news-2026-06-12.md` and `source-notes-2026-06-12.md` after current web research and archive deduplication.
+- Selected exactly 10 global items; labeled the U.S.-Iran settlement claim as a continuation and documented the material change from active strikes to a declared pause.
+- Added distinct technology / AI product coverage for Visa agentic payments, GitHub Agentic Workflows, Copilot CLI configuration, Claude Corps and IBM-ServiceNow enterprise AI.
+- Created `wiki/daily/2026/06/2026-06-12/slides-2026-06-12.html` with 12 slides, readable source labels, keyboard controls and touch navigation.
+- Updated `wiki/daily/latest-slides.html`, `wiki/index.md`, `wiki/overview.md` and the root GitHub Pages redirect.
