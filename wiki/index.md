@@ -2,7 +2,7 @@
 title: "Knowledge Base Index"
 type: overview
 created: 2026-05-24
-updated: 2026-06-11
+updated: 2026-06-12
 status: seed
 tags: [index]
 sources: []
@@ -24,6 +24,8 @@ sources: []
 
 每日新聞報告會放在 `wiki/daily/YYYY/MM/YYYY-MM-DD/`。
 
+- [2026-06-12 Daily News](daily/2026/06/2026-06-12/daily-news-2026-06-12.md) - 今日主軸是 U.S.-Iran 由第二日互擊轉向未定案 settlement MOU、UAE 退出 OPEC、ECB 升息與 World Bank 下修全球成長；NOAA 正式確認 El Nino，UK defense resignation、UNHCR 1.178 億流離失所人口、Amazon deforestation 下降、Pakistan-Afghanistan civilian deaths 與 Milan 美領館勞權調查補足制度風險。科技 / AI 轉向 Visa x ChatGPT agentic commerce、GitHub Agentic Workflows、Copilot CLI settings、Claude Corps 與 IBM-ServiceNow enterprise agents。
+- [2026-06-12 Slides](daily/2026/06/2026-06-12/slides-2026-06-12.html) - 今日新聞網頁版投影片。
 - [2026-06-11 Daily News](daily/2026/06/2026-06-11/daily-news-2026-06-11.md) - 今日主軸是 U.S.-Iran 連續第二日互擊與 Settebello 海員死亡、Ukraine 以 FP-5 Flamingo 深入打擊俄軍工與能源設施、48 隊 World Cup 正式開幕、Belfast 反移民暴力、Antarctic 15.4°C 冬季紀錄、U.S. 4.2% inflation、ECFR 歐洲安全觀轉變、Trump 簽署 ICE / Border Patrol 法案與 Bolivia 緊急權力風險；科技 / AI 轉向 ChatGPT reasoning controls、Copilot agent-session continuity、CLI security review、GitHub CLI project control 與 Claude Managed Agents operations。
 - [2026-06-11 Slides](daily/2026/06/2026-06-11/slides-2026-06-11.html) - 今日新聞網頁版投影片。
 - [2026-06-10 Daily News](daily/2026/06/2026-06-10/daily-news-2026-06-10.md) - 下午刷新後，今日主軸是 Iran retaliatory attacks on U.S. bases after U.S. strikes over an Apache crash near Hormuz、Tyre Christian quarter warning、six-country West Bank settler sanctions、Gaza UN report on Hamas-linked abuses、Ebola / World Cup travel controls and Somali referee entry denial、U.S. DHS / ICE and FISA governance pressure、Cuba intervention fears、Xi-Kim nuclear-silence signal；科技 / AI 轉向 Anthropic Claude Fable 5 / Mythos 5、ChatGPT app workflow updates、Apple Siri AI / EU DMA standoff and AI IPO wave。
