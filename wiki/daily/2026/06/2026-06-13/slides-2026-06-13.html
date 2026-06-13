@@ -5,6 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="2026-06-13 全球與科技 AI 每日新聞投影片">
   <title>Daily Global + Tech AI News · 2026-06-13</title>
+  <script>
+    document.documentElement.classList.add(
+      window.matchMedia("(max-width: 820px), (pointer: coarse)").matches ? "layout-mobile" : "layout-desktop"
+    );
+  </script>
   <!--
     Background image attribution:
     Unsplash contributors via stable images.unsplash.com photo URLs.
@@ -34,7 +39,7 @@
       --shadow: 0 24px 80px rgba(0,0,0,.35);
     }
     * { box-sizing: border-box; }
-    html, body { width: 100%; height: 100%; }
+    html, body { width: 100%; height: 100%; min-height: 100%; }
     body {
       margin: 0;
       overflow: hidden;
@@ -42,11 +47,12 @@
       background: #07101a;
       font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     }
-    .deck { position: relative; width: 100vw; height: 100vh; }
+    .deck { position: relative; width: 100vw; height: 100vh; height: 100dvh; }
     .slide {
       position: absolute;
       inset: 0;
       display: grid;
+      overflow: hidden;
       opacity: 0;
       pointer-events: none;
       transform: translateX(28px);
@@ -70,8 +76,15 @@
       z-index: 1;
       align-self: center;
       width: min(1120px, calc(100vw - 92px));
+      max-height: 100vh;
+      max-height: 100dvh;
       margin: 0 auto;
       padding: 42px 0 88px;
+      overflow-x: hidden;
+      overflow-y: auto;
+      overscroll-behavior: contain;
+      scrollbar-color: rgba(101,224,206,.58) transparent;
+      scrollbar-width: thin;
     }
     .narrow { width: min(970px, calc(100vw - 92px)); }
     .eyebrow {
@@ -102,6 +115,7 @@
       line-height: 1.43;
       font-weight: 570;
     }
+    .interaction-hint { margin: 10px 0 0; color: #9fb1c2; font-size: 13px; font-weight: 650; }
     .tags { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 24px; }
     .tags span {
       padding: 8px 11px;
@@ -111,43 +125,110 @@
       font-size: 14px;
       font-weight: 730;
     }
-    .grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 14px; margin-top: 27px; }
+    .grid, .news-list { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 14px; margin-top: 27px; }
     .grid.three { grid-template-columns: repeat(3, minmax(0,1fr)); }
-    .card, .stat {
-      min-height: 118px;
-      padding: 18px 19px;
+    details.news-item {
+      min-width: 0;
       border: 1px solid var(--line);
       border-radius: 11px;
       background: var(--panel);
       box-shadow: var(--shadow);
       backdrop-filter: blur(15px);
+      overflow: hidden;
+      transition: border-color 160ms ease, background 160ms ease;
     }
-    .card strong, .stat strong {
+    details.news-item[open] { border-color: rgba(101,224,206,.58); background: var(--panel-strong); }
+    details.news-item > summary {
+      position: relative;
+      display: grid;
+      min-height: 116px;
+      padding: 18px 54px 18px 19px;
+      cursor: pointer;
+      list-style: none;
+      align-content: center;
+      -webkit-tap-highlight-color: transparent;
+    }
+    details.news-item > summary::-webkit-details-marker { display: none; }
+    details.news-item > summary::after {
+      content: "+";
+      position: absolute;
+      top: 50%;
+      right: 17px;
+      display: grid;
+      width: 28px;
+      height: 28px;
+      place-items: center;
+      border: 1px solid rgba(255,255,255,.28);
+      border-radius: 50%;
+      color: var(--accent);
+      font-size: 21px;
+      line-height: 1;
+      transform: translateY(-50%);
+    }
+    details.news-item[open] > summary::after { content: "−"; }
+    details.news-item > summary:hover,
+    details.news-item > summary:focus-visible { background: rgba(101,224,206,.08); outline: none; }
+    details.news-item > summary strong {
       display: block;
       margin-bottom: 7px;
       color: var(--ink);
       font-size: clamp(17px,1.62vw,23px);
       line-height: 1.18;
     }
-    .card span, .stat span {
+    details.news-item > summary span,
+    details.news-item > summary small {
+      display: block;
       color: var(--muted);
       font-size: clamp(15px,1.22vw,18px);
       line-height: 1.42;
     }
-    .stat strong { color: var(--gold); font-size: clamp(27px,3vw,42px); }
-    .rank-list { display: grid; gap: 7px; max-width: 1090px; margin-top: 22px; }
-    .rank-row {
+    details.news-item.stat > summary strong { color: var(--gold); font-size: clamp(27px,3vw,42px); }
+    .detail-body { padding: 0 19px 19px; border-top: 1px solid rgba(255,255,255,.13); }
+    .detail-body p { margin: 14px 0 0; color: #e3ebf4; font-size: clamp(15px,1.15vw,17px); line-height: 1.62; }
+    .detail-sources {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      margin-top: 15px;
+      padding-top: 13px;
+      border-top: 1px solid rgba(255,255,255,.12);
+    }
+    .detail-sources::before {
+      content: "資料來源";
+      width: 100%;
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .04em;
+    }
+    .detail-sources a {
       display: grid;
-      grid-template-columns: 38px 1fr;
+      gap: 3px;
+      color: #f1f7fb;
+      text-decoration: none;
+      padding: 7px 9px;
+      border: 1px solid rgba(255,255,255,.28);
+      border-radius: 8px;
+      background: rgba(255,255,255,.06);
+      font-size: 12px;
+      line-height: 1.35;
+      overflow-wrap: anywhere;
+    }
+    .detail-sources a strong { font-size: 12px; }
+    .detail-sources a small { color: #aebdcb; font-size: 10px; font-weight: 500; }
+    .detail-sources a:hover,
+    .detail-sources a:focus-visible { color: var(--accent); border-color: var(--accent); outline: none; }
+    .rank-list { display: grid; gap: 7px; max-width: 1090px; margin-top: 22px; }
+    details.rank-row > summary {
+      display: grid;
+      grid-template-columns: 38px minmax(0,1fr);
       gap: 12px;
       align-items: start;
-      padding: 8px 13px;
-      border: 1px solid rgba(255,255,255,.18);
-      border-radius: 9px;
-      background: rgba(7,17,29,.76);
-      backdrop-filter: blur(12px);
+      min-height: 0;
+      padding: 8px 48px 8px 13px;
+      align-content: start;
     }
-    .rank-row b {
+    details.rank-row > summary b {
       display: grid;
       place-items: center;
       width: 29px;
@@ -157,7 +238,8 @@
       background: var(--gold);
       font-size: 14px;
     }
-    .rank-row span { color: var(--muted); font-size: clamp(14px,1.12vw,17px); line-height: 1.32; }
+    details.rank-row > summary span { color: var(--muted); font-size: clamp(14px,1.12vw,17px); line-height: 1.32; }
+    details.rank-row .detail-body { padding-left: 63px; }
     .callout {
       max-width: 980px;
       margin-top: 25px;
@@ -170,27 +252,6 @@
     .callout p { margin: 0; color: var(--muted); font-size: clamp(18px,1.6vw,22px); line-height: 1.45; }
     .accent { color: var(--accent); }
     .warning { color: var(--rose); }
-    .source-corner {
-      position: absolute;
-      z-index: 3;
-      left: 24px;
-      bottom: 21px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 7px;
-      max-width: calc(100vw - 220px);
-      font-size: 12px;
-    }
-    .source-corner a {
-      color: #f1f7fb;
-      text-decoration: none;
-      padding: 7px 10px;
-      border: 1px solid rgba(255,255,255,.30);
-      border-radius: 999px;
-      background: rgba(4,11,19,.86);
-      backdrop-filter: blur(12px);
-    }
-    .source-corner a:hover, .source-corner a:focus-visible { color: var(--accent); border-color: var(--accent); outline: none; }
     .controls {
       position: absolute;
       z-index: 5;
@@ -229,24 +290,59 @@
       background: linear-gradient(90deg,var(--accent),var(--gold));
       transition: width 220ms ease;
     }
-    @media (max-width: 820px) {
-      .content, .narrow { width: min(100% - 34px,720px); padding: 32px 0 110px; }
-      .grid, .grid.three { grid-template-columns: 1fr; gap: 8px; margin-top: 17px; }
-      .card, .stat { min-height: 0; padding: 13px 15px; }
+    @media (max-width: 820px), (pointer: coarse) {
+      .slide {
+        background-image:
+          linear-gradient(180deg, rgba(3,9,16,.90), rgba(5,13,23,.94) 55%, rgba(3,9,16,.98)),
+          var(--bg);
+        background-position: center top;
+      }
+      .content, .narrow {
+        align-self: start;
+        width: min(calc(100% - 24px),720px);
+        max-height: 100vh;
+        max-height: 100dvh;
+        padding: calc(22px + env(safe-area-inset-top)) 0 calc(112px + env(safe-area-inset-bottom));
+      }
+      h1 { font-size: clamp(34px,10.5vw,48px); line-height: 1.1; }
+      h2 { font-size: clamp(29px,8.3vw,42px); line-height: 1.12; }
+      .eyebrow { margin-bottom: 12px; font-size: 15px; }
+      .lead { margin-top: 15px; font-size: clamp(17px,4.8vw,21px); line-height: 1.5; }
+      .interaction-hint { font-size: 14px; }
+      .tags { margin-top: 18px; }
+      .grid, .grid.three, .news-list { grid-template-columns: 1fr; gap: 9px; margin-top: 17px; }
+      details.news-item > summary { min-height: 0; padding: 14px 49px 14px 15px; }
+      details.news-item > summary strong { font-size: 19px; }
+      details.news-item > summary span,
+      details.news-item > summary small { font-size: 16px; line-height: 1.48; }
+      details.news-item.stat > summary strong { font-size: 31px; }
+      .detail-body { padding: 0 15px 17px; }
+      .detail-body p { font-size: 16px; line-height: 1.66; }
       .rank-list { gap: 5px; margin-top: 15px; }
-      .rank-row { padding: 6px 9px; }
-      .source-corner { left: 17px; bottom: 72px; max-width: calc(100vw - 34px); }
-      .source-corner a { padding: 6px 8px; }
-      .controls { right: 17px; bottom: 16px; }
+      details.rank-row > summary { padding: 10px 46px 10px 10px; }
+      details.rank-row .detail-body { padding-left: 15px; }
+      .callout { margin-top: 17px; padding: 16px 17px; }
+      .callout p { font-size: 17px; }
+      .controls {
+        position: fixed;
+        right: auto;
+        left: 50%;
+        bottom: calc(10px + env(safe-area-inset-bottom));
+        transform: translateX(-50%);
+        background: rgba(4,11,19,.94);
+        box-shadow: 0 10px 35px rgba(0,0,0,.5);
+      }
+      button { width: 44px; height: 44px; }
+      .counter { min-width: 70px; font-size: 15px; }
     }
     @media (max-height: 720px) and (min-width: 821px) {
       .content { padding-top: 24px; padding-bottom: 72px; }
       .grid { margin-top: 16px; gap: 9px; }
-      .card, .stat { min-height: 94px; padding: 12px 14px; }
+      details.news-item > summary { min-height: 92px; padding-top: 12px; padding-bottom: 12px; }
       .rank-list { margin-top: 14px; gap: 4px; }
-      .rank-row { padding: 5px 9px; }
+      details.rank-row > summary { padding-top: 5px; padding-bottom: 5px; }
     }
-    @media (prefers-reduced-motion: reduce) { .slide, .progress { transition: none; } }
+    @media (prefers-reduced-motion: reduce) { .slide, .progress, details.news-item { transition: none; } }
   </style>
 </head>
 <body>
@@ -259,10 +355,6 @@
         <h1>協議更近，但全球權力與資本正在重新分配</h1>
         <p class="lead">美伊 final text 出現第三方背書卻仍互相矛盾；U.S. 縮減 NATO 資產、Ukraine 切斷 Crimea 燃料；SpaceX 以紀錄 IPO 把 space、AI 與 trillionaire 時代推進公開市場。</p>
         <div class="tags"><span>Top 10 World</span><span>5 Tech / AI</span><span>Traditional Chinese</span><span>Archive-deduplicated</span></div>
-      </div>
-      <div class="source-corner">
-        <a href="https://apnews.com/article/b222d1ae6a3d206b67ca5abb145dc711">AP: Iran final-text claim</a>
-        <a href="https://apnews.com/article/7723f82b6063a9a17c194e25982cd66d">AP: SpaceX IPO</a>
       </div>
     </section>
 
@@ -283,10 +375,6 @@
           <div class="rank-row"><b>10</b><span>David Hockney 逝世，七十年創作生涯跨進 digital art</span></div>
         </div>
       </div>
-      <div class="source-corner">
-        <a href="https://apnews.com/world-news">AP: World top stories</a>
-        <a href="https://www.theguardian.com/world">Guardian: World prominence</a>
-      </div>
     </section>
 
     <section class="slide" style="--bg:url('https://images.unsplash.com/photo-1516937941344-00b4e0337589?auto=format&amp;fit=crop&amp;w=1800&amp;q=80');">
@@ -299,10 +387,6 @@
           <div class="stat"><strong>Iran disagrees</strong><span>Tehran 稱核議題留待後談，並把 Lebanon 納入協議。</span></div>
         </div>
         <div class="callout"><p><span class="warning">今日新進展：</span>昨日是 Trump 單方面宣稱接近 MOU；今日是調停方公開說 final text agreed。真正的門檻仍是文本公開、簽署與可驗證履約。</p></div>
-      </div>
-      <div class="source-corner">
-        <a href="https://apnews.com/article/b222d1ae6a3d206b67ca5abb145dc711">AP: final wording claim</a>
-        <a href="https://www.theguardian.com/world/live/2026/jun/12/middle-east-crisis-live-us-iran-israel-lebanon-trump-hormuz-oil-peace-deal-doubt-latest-news-updates">Guardian: conflicting terms</a>
       </div>
     </section>
 
@@ -320,10 +404,6 @@
           <div class="card"><strong>The risk</strong><span>15 個月虧損 US$8.7bn；dual-class control 與 unproven technologies 仍是核心折價因素。</span></div>
         </div>
       </div>
-      <div class="source-corner">
-        <a href="https://apnews.com/article/7723f82b6063a9a17c194e25982cd66d">AP: SpaceX market debut</a>
-        <a href="https://apnews.com/article/47f9fecd934706362104cd92514122fe">AP: first-day market reaction</a>
-      </div>
     </section>
 
     <section class="slide" style="--bg:url('https://images.unsplash.com/photo-1521295121783-8a321d551ad2?auto=format&amp;fit=crop&amp;w=1800&amp;q=80');">
@@ -337,10 +417,6 @@
           <div class="stat"><strong>約 80%</strong><span>Late-May / early-June hotel booking cancellations reported by Kommersant。</span></div>
         </div>
         <p class="lead">一邊是 alliance assets 不足，一邊是 Ukraine 把 production strikes 與 delivery-route disruption 結合。</p>
-      </div>
-      <div class="source-corner">
-        <a href="https://apnews.com/article/f02062dccd3828cdd5ef8c8a717522ac">AP: NATO asset cuts</a>
-        <a href="https://apnews.com/article/a744652874e95ce38ec7ecd8d512e821">AP: Crimea fuel crisis</a>
       </div>
     </section>
 
@@ -356,11 +432,6 @@
         </div>
         <div class="callout"><p>兩案都不是終局：一個仍有 international merger review，一個仍可能回到 Supreme Court。</p></div>
       </div>
-      <div class="source-corner">
-        <a href="https://apnews.com/article/994c277d12297b8a7507fcb78004f679">AP: DOJ clears merger</a>
-        <a href="https://www.theguardian.com/us-news/2026/jun/12/paramount-warner-bros-merger">Guardian: US$111bn context</a>
-        <a href="https://apnews.com/article/a95ef7309d89018477a3265ebf93d620">AP: tariffs continue</a>
-      </div>
     </section>
 
     <section class="slide" style="--bg:url('https://images.unsplash.com/photo-1538485399081-7c8976f0a9b5?auto=format&amp;fit=crop&amp;w=1800&amp;q=80');">
@@ -374,10 +445,6 @@
           <div class="card"><strong>No public evidence</strong><span>China 尚未公開具體行為；U.S. 已提供 consular assistance。</span></div>
         </div>
       </div>
-      <div class="source-corner">
-        <a href="https://apnews.com/article/a33f2207010d64b83a30e97e2f6a8a51">AP: Yoon drone verdict</a>
-        <a href="https://apnews.com/article/ec2559d40243f7bd4c4ab5eb11801f5b">AP: Min Zin detention</a>
-      </div>
     </section>
 
     <section class="slide" style="--bg:url('https://images.unsplash.com/photo-1528181304800-259b08848526?auto=format&amp;fit=crop&amp;w=1800&amp;q=80');">
@@ -390,11 +457,6 @@
           <div class="stat"><strong>88</strong><span>David Hockney，在 London 家中逝世。</span></div>
           <div class="card"><strong>Seven decades</strong><span>從 pool paintings、photocollage 到 iPad drawing，他把技術變化吸收到持續創作。</span></div>
         </div>
-      </div>
-      <div class="source-corner">
-        <a href="https://apnews.com/article/3e1ca1ccca326008860e34bb9fa82686">AP: Thai princess</a>
-        <a href="https://apnews.com/article/79ddb3813406f21a8859d3b22e653852">AP: David Hockney</a>
-        <a href="https://www.theguardian.com/artanddesign/2026/jun/12/artist-david-hockney-dies">Guardian: Hockney tributes</a>
       </div>
     </section>
 
@@ -411,11 +473,6 @@
         </div>
         <div class="callout"><p>本日未重複 Visa payments、GitHub Agentic Workflows、Copilot settings、Claude Corps 或 IBM-ServiceNow。</p></div>
       </div>
-      <div class="source-corner">
-        <a href="https://help.openai.com/en/articles/6825453-chatgpt-release-notes">OpenAI: release notes</a>
-        <a href="https://www.anthropic.com/news">Anthropic: June announcements</a>
-        <a href="https://www.theverge.com/streaming/948256/youtube-brings-back-private-messaging-feature-availability">The Verge: YouTube DMs</a>
-      </div>
     </section>
 
     <section class="slide" style="--bg:url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&amp;fit=crop&amp;w=1800&amp;q=80');">
@@ -429,10 +486,6 @@
           <div class="card"><strong>Project setup</strong><span>/init 建立 AGENTS.md scaffold；另有 banked resets、Unread chats 與 usage-limit guidance。</span></div>
         </div>
         <p class="lead">更強 personalization 與 browser agency，需要同樣明確的 deletion、inspection 與 project-policy surface。</p>
-      </div>
-      <div class="source-corner">
-        <a href="https://help.openai.com/en/articles/6825453-chatgpt-release-notes">OpenAI: memory + Codex updates</a>
-        <a href="https://developers.openai.com/codex/">OpenAI: Codex docs</a>
       </div>
     </section>
 
@@ -450,10 +503,6 @@
           <div class="card"><strong>Sector packaging</strong><span>Claims processing、lending advisory、Claude Code skills / plugins 與 auditability。</span></div>
         </div>
       </div>
-      <div class="source-corner">
-        <a href="https://www.anthropic.com/news/anthropic-public-record">Anthropic: Public Record</a>
-        <a href="https://www.anthropic.com/news/tcs-anthropic-partnership">Anthropic: TCS partnership</a>
-      </div>
     </section>
 
     <section class="slide" style="--bg:url('https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&amp;fit=crop&amp;w=1800&amp;q=80');">
@@ -467,11 +516,6 @@
           <div class="card"><strong>Platform moderation</strong><span>Shared content 與 messages 仍受 YouTube Community Guidelines 管理。</span></div>
         </div>
         <div class="callout"><p><span class="accent">本日結論：</span>AI products 正把能力擴張與使用者控制綁在一起；大型平台則從 public feed 轉向 private, trusted-circle interaction。</p></div>
-      </div>
-      <div class="source-corner">
-        <a href="https://www.theverge.com/streaming/948256/youtube-brings-back-private-messaging-feature-availability">The Verge: YouTube messaging</a>
-        <a href="daily-news-2026-06-13.md">Daily report: full citations</a>
-        <a href="source-notes-2026-06-13.md">Source notes: provenance</a>
       </div>
     </section>
 
@@ -488,12 +532,184 @@
       var progress = document.querySelector(".progress");
       var current = 0;
       var startX = null;
+      var startY = null;
+      var layoutQuery = window.matchMedia("(max-width: 820px), (pointer: coarse)");
+
+      var sources = {
+        iranAp: ["AP：美伊 final text", "https://apnews.com/article/b222d1ae6a3d206b67ca5abb145dc711"],
+        iranGuardian: ["Guardian：條款衝突", "https://www.theguardian.com/world/live/2026/jun/12/middle-east-crisis-live-us-iran-israel-lebanon-trump-hormuz-oil-peace-deal-doubt-latest-news-updates"],
+        spacexDebut: ["AP：SpaceX 上市", "https://apnews.com/article/7723f82b6063a9a17c194e25982cd66d"],
+        spacexReaction: ["AP：首日市場反應", "https://apnews.com/article/47f9fecd934706362104cd92514122fe"],
+        nato: ["AP：NATO 資產縮減", "https://apnews.com/article/f02062dccd3828cdd5ef8c8a717522ac"],
+        crimea: ["AP：Crimea 燃料危機", "https://apnews.com/article/a744652874e95ce38ec7ecd8d512e821"],
+        mergerAp: ["AP：DOJ 放行整併", "https://apnews.com/article/994c277d12297b8a7507fcb78004f679"],
+        mergerGuardian: ["Guardian：整併估值與控制權", "https://www.theguardian.com/us-news/2026/jun/12/paramount-warner-bros-merger"],
+        tariffs: ["AP：全球關稅暫時續收", "https://apnews.com/article/a95ef7309d89018477a3265ebf93d620"],
+        yoon: ["AP：Yoon 無人機案判決", "https://apnews.com/article/a33f2207010d64b83a30e97e2f6a8a51"],
+        minZin: ["AP：Min Zin 遭拘捕", "https://apnews.com/article/ec2559d40243f7bd4c4ab5eb11801f5b"],
+        princess: ["AP：泰國公主逝世", "https://apnews.com/article/3e1ca1ccca326008860e34bb9fa82686"],
+        hockneyAp: ["AP：David Hockney 逝世", "https://apnews.com/article/79ddb3813406f21a8859d3b22e653852"],
+        hockneyGuardian: ["Guardian：Hockney 生涯與致敬", "https://www.theguardian.com/artanddesign/2026/jun/12/artist-david-hockney-dies"],
+        openaiNotes: ["OpenAI：ChatGPT release notes", "https://help.openai.com/en/articles/6825453-chatgpt-release-notes"],
+        codexDocs: ["OpenAI：Codex 文件", "https://developers.openai.com/codex/"],
+        anthropicRecord: ["Anthropic：Public Record", "https://www.anthropic.com/news/anthropic-public-record"],
+        anthropicTcs: ["Anthropic：TCS partnership", "https://www.anthropic.com/news/tcs-anthropic-partnership"],
+        youtube: ["The Verge：YouTube 私訊功能", "https://www.theverge.com/streaming/948256/youtube-brings-back-private-messaging-feature-availability"]
+      };
+
+      var detailText = {
+        1: [
+          "Pakistan 總理 Shehbaz Sharif 表示美國與伊朗已同意 final wording，讓前一日僅由 Trump 宣稱接近協議的消息多了一個調停方背書。但核材料處置、制裁解除順序、Lebanon 與武裝團體等內容仍有互相衝突的公開版本，尚不能視為已簽署協議。",
+          "SpaceX IPO 募得約 US$75bn，首日股價漲逾 19%，收盤市值約 US$2.1tn；Forbes 估算 Elon Musk 淨資產因此達約 US$1.1tn。投資人同時承擔公司 15 個月虧損 US$8.7bn、雙重股權控制與多項尚未驗證技術的風險。",
+          "美國將從 NATO 危機計畫中縮減航艦群、潛艦、戰機、海上巡邏、空中加油與無人機等資產，太空偵察與目標定位支援仍保留。歐洲與加拿大必須在 7 月 7 至 8 日峰會前提出補足方案。",
+          "烏克蘭同時攻擊煉油設施、Crimea 聯外走廊與運輸節點，造成當地自 2014 年以來最嚴重燃料危機。車主每週汽油配給約 20 公升，媒體並引述旅遊業者稱 5 月底至 6 月初約有八成飯店訂房取消。",
+          "美國 DOJ 認為 Paramount 與 Warner Bros. Discovery 整併不太可能顯著傷害串流、電視或院線競爭，因此結束聯邦反壟斷審查。交易仍待英國、歐盟與部分州級審查；AP 與 Guardian 使用不同估值口徑，約為 US$81bn 收購價與 US$111bn 整體交易價值。",
+          "南韓法院認定 Yoon Suk Yeol 政府派無人機飛越 Pyongyang，是為刺激北韓反擊並替戒嚴製造緊急理由，因此就 aiding an adversary、濫權等罪判刑 30 年。判決已提出上訴，仍非最終定讞。",
+          "研究 Myanmar 與中國政策的美籍學者 Min Zin 在 Kunming 被中國以間諜嫌疑拘捕。中國尚未公開構成指控的具體行為或證據，美國方面表示已提供領事協助。",
+          "美國聯邦巡迴上訴法院暫時允許政府依 Section 122 繼續徵收 10% 全球關稅，推翻下級法院立即停止的效果。措施目前預定 7 月 24 日到期，案件仍可能進一步上訴至 Supreme Court。",
+          "Thai Princess Bajrakitiyabha 在長期昏迷後逝世，享年 47 歲。她曾任檢察官與外交官，並推動女性受刑人復歸及聯合國 Bangkok Rules，因此影響不只限於王室繼承議題。",
+          "David Hockney 於 London 家中逝世，享年 88 歲。他橫跨泳池畫作、攝影拼貼、舞台設計與 iPad 創作，七十年的實驗使他成為戰後英國藝術及數位藝術轉型的重要人物。"
+        ],
+        2: [
+          "Pakistan 是美伊談判的重要調停者。Sharif 公開使用 final wording agreed 的說法，代表談判層級比前一日的政治宣示更進一步，但目前仍沒有公開文本或正式簽署。",
+          "美方描述的條件包括核設施拆除、Hormuz 航行、停止資助部分武裝組織，以及在履約後提供制裁減免。這些條件的時間順序與驗證機制仍未公開。",
+          "Iran 表示核問題有些部分將留待後續協商，並稱 Lebanon 相關安排屬協議內容；這與美方及 Israel 對範圍的描述不一致。是否存在雙方都承認的共同文本，仍是最大不確定性。"
+        ],
+        3: [
+          "SpaceX 此次募資約 US$75bn，超過 Saudi Aramco 的既有 IPO 紀錄，顯示市場願意用極高估值押注太空基礎設施與 Starlink 現金流。",
+          "以首日收盤價估算，SpaceX 市值約 US$2.1tn，躍居美國第六大上市公司。這是公開市場對其太空、通訊及 AI 故事的即時定價，而非已實現的獲利成果。",
+          "Forbes 估算 Musk 淨資產約 US$1.1tn，使他成為估計首位 trillionaire。此數字高度依賴上市持股價格，因此會隨股價顯著波動。",
+          "公司將 Starlink、可重複使用火箭、orbital data centers、Mars 計畫與 xAI 串成長期成長敘事，投資人實際買進的是多個高資本需求計畫的組合。",
+          "風險包括 2025 年至 2026 年 3 月間約 US$8.7bn 虧損、dual-class voting control，以及 orbital computing、Mars 與部分 AI 協同仍未形成可驗證商業模式。"
+        ],
+        4: [
+          "美國縮減的是 NATO 危機情境中預先承諾的航艦群、潛艦、戰機、巡邏機、加油機與無人機，不等於全面退出 NATO；太空偵察及目標資訊支援仍在。",
+          "Europe 與 Canada 被要求在 7 月 7 至 8 日 NATO summit 前提出 backfill 計畫。真正壓力在於高端海空資產、補給能力與情報鏈能否由盟國快速接手。",
+          "Crimea 對車主實施每週約 20 公升汽油配給，顯示短缺已從軍事後勤擴散到一般生活。限制的持續時間與不同地區執行程度仍可能變動。",
+          "Kommersant 引述業界稱 5 月底至 6 月初約八成飯店訂房取消。這是業界估計而非完整官方統計，但反映燃料與交通中斷已直接打擊旅遊需求。"
+        ],
+        5: [
+          "DOJ 結束聯邦反壟斷審查，認為合併不太可能顯著降低 streaming、TV 或 theatrical competition。這只是美國聯邦層級過關，英國、歐盟與州級程序仍未結束。",
+          "CBS、CNN、HBO、Paramount 與 Warner Bros. 集中在同一控制體系後，新聞編輯獨立、節目採購、裁員及內容議價能力會成為後續治理焦點。不同媒體對交易價值的數字差異來自收購價與 enterprise value 口徑。",
+          "Federal Circuit 暫准政府繼續徵收 10% worldwide tariff，意味進口商短期仍須支付。法院的暫時處置不是對政策是否合法作最終判決。",
+          "Section 122 措施目前到期日為 7 月 24 日。政府是否延長、改用其他法律依據，或案件是否進入 Supreme Court，將決定關稅能否持續。"
+        ],
+        6: [
+          "Yoon Suk Yeol 因 Pyongyang drone flights、aiding an adversary 與 abuse of power 被判 30 年。案件涉及以軍事挑釁替國內戒嚴創造正當性的指控，辯方已上訴。",
+          "法院判斷任務目的不只是偵察，而是期待 North Korean retaliation，藉此製造可宣告緊急狀態的環境。這使國家安全決策本身成為刑事審判對象。",
+          "Min Zin 是研究 Myanmar 與 China policy 的美籍學者，在 Kunming 被以 espionage suspicion 拘捕。事件增加外籍研究者在中國從事政策與區域研究的風險。",
+          "中國目前未公開涉嫌間諜活動的具體行為、資料或證據；美國表示正在提供領事協助。缺乏公開案情，因此指控的法律基礎仍無法獨立核實。"
+        ],
+        7: [
+          "Princess Bajrakitiyabha 在 2022 年失去意識後長期住院，最終於 47 歲逝世。她的死亡也重新引發外界對泰國王室繼承安排的關注。",
+          "她曾任 prosecutor 與 ambassador，長期倡議女性受刑人的復歸與人權，並推動 UN Bangkok Rules。這些工作構成她在王室身分之外的重要公共政策遺產。",
+          "David Hockney 於 London 家中逝世，享年 88 歲。家屬與代表確認死訊，後續紀念活動及作品安排仍待公布。",
+          "Hockney 從 pool paintings、photocollage、舞台設計一路使用 fax、iPhone 與 iPad 創作，持續把新工具吸收到繪畫實踐中，影響跨越傳統與 digital art。"
+        ],
+        8: [
+          "ChatGPT 的 memory summary 現在可直接刪除、修正，或刪除後關閉 memory。關閉記憶不會自動刪除過去 chats，兩者仍需分開管理。",
+          "Codex Browser developer mode 可在受控環境讀取 console、network、DOM、styles 與 performance，讓代理操作後的狀態更容易被開發者檢查與除錯。",
+          "Anthropic 與 YouGov 對 51,993 名美國成年人進行調查，建立 AI 期待與擔憂的 baseline。這是公司贊助研究，解讀時仍應注意問卷方法與時間點。",
+          "TCS 計畫先讓 50,000 名員工在 56 國使用 Claude，再把 claims、lending advisory、Claude Code skills 與 auditability 包裝給金融、醫療及公共部門。",
+          "YouTube 重新測試私訊功能，讓 18 歲以上且完成年齡驗證的使用者以邀請連結建立聊天。Videos、Shorts 與對話可留在同一 app，但仍受 Community Guidelines 管理。"
+        ],
+        9: [
+          "Delete and turn off 會清除 memory summary 顯示的記憶並關閉後續記憶功能，但不會同步刪除既有聊天紀錄。使用者仍需分別處理 chat history。",
+          "使用者可以直接輸入修正要求，或 highlight memory summary 中特定文字進行局部更正，降低必須整份清除後重新建立的成本。",
+          "Codex Browser developer mode 透過 controlled CDP 取得 console、network、DOM、styles 與 performance 資訊，使 browser automation 的結果可被工程化檢查。",
+          "Codex 的 /init 可建立 AGENTS.md scaffold；同批更新另包含 banked resets、Unread chats 與 usage-limit guidance，集中改善專案初始化及使用額度透明度。"
+        ],
+        10: [
+          "Public Record 共納入 51,993 名美國成年人，調查於 2025 年 11 至 12 月執行。它提供大規模態度 baseline，但不是 2026 年即時民調。",
+          "48% 受訪者把 curing disease 列為 AI 的前三大希望之一，顯示醫療突破仍是公眾最具體的正面期待。",
+          "超過 70% 受訪者認為政府應在 AI development 或 regulation 扮演角色；同一研究也記錄 job loss、認知依賴與 misinformation 等擔憂。",
+          "TCS 表示將先在內部向 50,000 名員工導入 Claude，涵蓋 56 countries，藉此建立大型企業部署、訓練與治理經驗。",
+          "合作鎖定 claims processing、lending advisory、Claude Code skills / plugins 與 auditability，重點是把模型包裝成受監管產業可追蹤、可稽核的工作流程。"
+        ],
+        11: [
+          "YouTube 私訊 rollout 限定 18 歲以上並要求 age verification，初期只在美國及部分地區提供。這些限制是降低未成年人私訊風險的重要設計。",
+          "使用者需透過外部 invitation link 建立聊天，產品定位偏向已認識的人，而不是開放陌生人搜尋或隨機傳訊。",
+          "分享 Videos、Shorts 及後續 discussion 可留在 YouTube 內，不必切換 WhatsApp、Instagram 等 app，能降低分享流程流失。",
+          "Shared content 與 messages 仍受 YouTube Community Guidelines 約束。平台尚需證明私訊檢舉、封鎖、垃圾訊息與濫用處理能跟上功能擴張。"
+        ]
+      };
+
+      var itemSources = {
+        1: [[sources.iranAp, sources.iranGuardian], [sources.spacexDebut, sources.spacexReaction], [sources.nato], [sources.crimea], [sources.mergerAp, sources.mergerGuardian], [sources.yoon], [sources.minZin], [sources.tariffs], [sources.princess], [sources.hockneyAp, sources.hockneyGuardian]],
+        2: [[sources.iranAp, sources.iranGuardian], [sources.iranAp], [sources.iranAp, sources.iranGuardian]],
+        3: [[sources.spacexDebut], [sources.spacexDebut, sources.spacexReaction], [sources.spacexReaction], [sources.spacexDebut], [sources.spacexDebut, sources.spacexReaction]],
+        4: [[sources.nato], [sources.nato], [sources.crimea], [sources.crimea]],
+        5: [[sources.mergerAp, sources.mergerGuardian], [sources.mergerAp, sources.mergerGuardian], [sources.tariffs], [sources.tariffs]],
+        6: [[sources.yoon], [sources.yoon], [sources.minZin], [sources.minZin]],
+        7: [[sources.princess], [sources.princess], [sources.hockneyAp, sources.hockneyGuardian], [sources.hockneyAp, sources.hockneyGuardian]],
+        8: [[sources.openaiNotes], [sources.openaiNotes, sources.codexDocs], [sources.anthropicRecord], [sources.anthropicTcs], [sources.youtube]],
+        9: [[sources.openaiNotes], [sources.openaiNotes], [sources.openaiNotes, sources.codexDocs], [sources.codexDocs]],
+        10: [[sources.anthropicRecord], [sources.anthropicRecord], [sources.anthropicRecord], [sources.anthropicTcs], [sources.anthropicTcs]],
+        11: [[sources.youtube], [sources.youtube], [sources.youtube], [sources.youtube]]
+      };
+
+      function applyLayout() {
+        document.documentElement.classList.toggle("layout-mobile", layoutQuery.matches);
+        document.documentElement.classList.toggle("layout-desktop", !layoutQuery.matches);
+      }
+
+      function addSourceLinks(container, sourceList) {
+        var sourceBox = document.createElement("div");
+        sourceBox.className = "detail-sources";
+        sourceList.forEach(function (source) {
+          var link = document.createElement("a");
+          var label = document.createElement("strong");
+          var url = document.createElement("small");
+          link.href = source[1];
+          link.target = "_blank";
+          link.rel = "noopener noreferrer";
+          label.textContent = source[0];
+          url.textContent = source[1];
+          link.appendChild(label);
+          link.appendChild(url);
+          sourceBox.appendChild(link);
+        });
+        container.appendChild(sourceBox);
+      }
+
+      function enhanceItems() {
+        slides.forEach(function (slide, slideIndex) {
+          var items = Array.prototype.slice.call(slide.querySelectorAll(".card, .stat, .rank-row"));
+          if (items.length) {
+            var hint = document.createElement("p");
+            var heading = slide.querySelector("h2, h1");
+            hint.className = "interaction-hint";
+            hint.textContent = "點選任一項展開詳細內容與來源，再點一次即可收合。";
+            heading.insertAdjacentElement("afterend", hint);
+          }
+          items.forEach(function (item, itemIndex) {
+            var details = document.createElement("details");
+            var summary = document.createElement("summary");
+            var body = document.createElement("div");
+            var paragraph = document.createElement("p");
+            var kind = item.classList.contains("rank-row") ? " rank-row" : (item.classList.contains("stat") ? " stat" : "");
+            details.className = "news-item" + kind;
+            while (item.firstChild) summary.appendChild(item.firstChild);
+            paragraph.textContent = (detailText[slideIndex] && detailText[slideIndex][itemIndex]) || summary.textContent.trim();
+            body.className = "detail-body";
+            body.appendChild(paragraph);
+            addSourceLinks(body, (itemSources[slideIndex] && itemSources[slideIndex][itemIndex]) || []);
+            details.appendChild(summary);
+            details.appendChild(body);
+            item.replaceWith(details);
+          });
+        });
+      }
 
       function show(index) {
+        var previous = current;
         current = (index + slides.length) % slides.length;
         slides.forEach(function (slide, i) {
           slide.classList.toggle("active", i === current);
           slide.setAttribute("aria-hidden", i === current ? "false" : "true");
+          if (i === current && previous !== current) {
+            slide.querySelector(".content").scrollTop = 0;
+          }
         });
         counter.textContent = (current + 1) + " / " + slides.length;
         progress.style.width = (((current + 1) / slides.length) * 100) + "%";
@@ -503,6 +719,7 @@
       document.querySelector(".prev").addEventListener("click", function () { show(current - 1); });
       document.querySelector(".next").addEventListener("click", function () { show(current + 1); });
       document.addEventListener("keydown", function (event) {
+        if (event.target.closest("summary, a, button")) return;
         if (event.key === "ArrowRight" || event.key === "PageDown" || event.key === " ") {
           event.preventDefault();
           show(current + 1);
@@ -517,14 +734,23 @@
       });
       document.addEventListener("touchstart", function (event) {
         startX = event.changedTouches[0].clientX;
+        startY = event.changedTouches[0].clientY;
       }, { passive: true });
       document.addEventListener("touchend", function (event) {
         if (startX === null) return;
-        var delta = event.changedTouches[0].clientX - startX;
-        if (Math.abs(delta) > 50) show(current + (delta < 0 ? 1 : -1));
+        var deltaX = event.changedTouches[0].clientX - startX;
+        var deltaY = event.changedTouches[0].clientY - startY;
+        if (Math.abs(deltaX) > 70 && Math.abs(deltaX) > Math.abs(deltaY) * 1.5) {
+          show(current + (deltaX < 0 ? 1 : -1));
+        }
         startX = null;
+        startY = null;
       }, { passive: true });
 
+      applyLayout();
+      if (layoutQuery.addEventListener) layoutQuery.addEventListener("change", applyLayout);
+      else layoutQuery.addListener(applyLayout);
+      enhanceItems();
       var initial = parseInt(location.hash.slice(1), 10);
       show(Number.isFinite(initial) ? initial - 1 : 0);
     }());
