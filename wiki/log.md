@@ -244,3 +244,10 @@
 - Updated wiki/daily/latest-slides.html, wiki/index.md, wiki/overview.md and the root GitHub Pages redirect.
 - Published the daily package to GitHub Pages through the GitHub connector after local HTTPS push authentication failed.
 - Served the deck locally on port 4174; LINE delivery was skipped because `.env` did not contain `LINE_TO_ID`.
+
+## [2026-06-13] update | Mobile slide layout and expandable details
+
+- Reworked the 2026-06-13 deck to detect narrow/coarse-pointer devices and apply a mobile-first layout with `100dvh`, safe-area spacing, larger typography, vertical content scrolling and centered navigation controls.
+- Removed the floating source-link footer that covered mobile content.
+- Converted all 52 news cards and ranked items into tap-to-expand details with fuller Traditional Chinese context and the original source URLs inside each expanded item.
+- Updated keyboard and touch handling so interactive elements do not trigger slide navigation and vertical scrolling is not mistaken for a horizontal swipe.
