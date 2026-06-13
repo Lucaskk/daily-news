@@ -95,6 +95,23 @@ def now_taipei() -> dt.datetime:
     return dt.datetime.now(TAIPEI_TZ)
 
 
+def format_taipei_time(value: str | dt.datetime) -> str:
+    """Format an instant as Taiwan local time without a timezone suffix."""
+    if isinstance(value, dt.datetime):
+        parsed = value
+    else:
+        try:
+            parsed = dt.datetime.fromisoformat(value)
+        except ValueError:
+            return value
+
+    if parsed.tzinfo is None:
+        parsed = parsed.replace(tzinfo=TAIPEI_TZ)
+    else:
+        parsed = parsed.astimezone(TAIPEI_TZ)
+    return parsed.strftime("%Y-%m-%d %H:%M:%S")
+
+
 def read_url_bytes(url: str, headers: dict[str, str] | None = None, timeout: int = 20) -> bytes:
     request = urllib.request.Request(url, headers=headers or {})
     try:
@@ -650,6 +667,7 @@ def render_html(analysis: dict[str, Any]) -> str:
     json_payload = json.dumps(analysis, ensure_ascii=False)
     title = f"{stock['name']} ({stock['code']}) 股票分析"
     source_urls = metadata["source_urls"]
+    fetched_at_display = format_taipei_time(metadata["fetched_at"])
     sanity = analysis["verification"]["sanity"]
     warning_items = "".join(
         f"<li><strong>{html_lib.escape(item['field'])}</strong>：{html_lib.escape(item['message'])}</li>"
@@ -817,7 +835,7 @@ def render_html(analysis: dict[str, Any]) -> str:
     <div class="eyebrow">台灣股票財務分析 | 僅供研究參考</div>
     <h1>{html_lib.escape(stock['name'])} ({html_lib.escape(stock['code'])})</h1>
     <div class="subtitle">
-      資料更新：{html_lib.escape(metadata['fetched_at'])}；市場：{html_lib.escape(stock.get('market_label') or '未知')}；
+      資料更新：{html_lib.escape(fetched_at_display)}；市場：{html_lib.escape(stock.get('market_label') or '未知')}；
       財報期間：{html_lib.escape(' / '.join(years))}。本頁使用公開資料自動產生，請以公司公告與公開資訊觀測站核對。
     </div>
     <div class="source-row">
@@ -1052,6 +1070,7 @@ def render_markdown_summary(analysis: dict[str, Any], html_public_url: str | Non
     metadata = analysis["metadata"]
     today = now_taipei().date().isoformat()
     sources = metadata["source_urls"]
+    fetched_at_display = format_taipei_time(metadata["fetched_at"])
     link_line = f"- 分析頁：{html_public_url}\n" if html_public_url else ""
     insight_lines = "\n".join(f"- {item}" for item in analysis["insights"]["snapshot"])
     return f"""---
@@ -1069,7 +1088,7 @@ sources:
 
 # {stock['name']} ({stock['code']}) 股票分析
 
-{link_line}- 產生時間：{metadata['fetched_at']}
+{link_line}- 產生時間：{fetched_at_display}
 - 市場：{stock.get('market_label') or '未知'}
 - 最新行情日期：{stock.get('date') or 'n/a'}
 - 財報年度：{', '.join(analysis['years'])}
