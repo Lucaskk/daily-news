@@ -29,23 +29,46 @@
     const params = new URLSearchParams(location.search);
     const code = params.get("code") || "";
     const name = params.get("name") || "";
+    const requestedAt = Date.parse(params.get("requested_at") || "");
     const codeNode = document.getElementById("code");
     const nameNode = document.getElementById("name");
     const statusNode = document.getElementById("status");
     codeNode.textContent = /^\d{4}$/.test(code) ? code : "代碼錯誤";
     nameNode.textContent = name ? name : "";
 
+    function taipeiDatePath() {
+      const parts = new Intl.DateTimeFormat("en-US", {
+        timeZone: "Asia/Taipei",
+        year: "numeric",
+        month: "2-digit",
+        day: "2-digit",
+      }).formatToParts(new Date());
+      const values = Object.fromEntries(parts.map(({ type, value }) => [type, value]));
+      const date = `${values.year}-${values.month}-${values.day}`;
+      return {
+        date,
+        directory: `${values.year}/${values.month}/${date}/${code}`,
+      };
+    }
+
     async function check() {
       if (!/^\d{4}$/.test(code)) {
         statusNode.textContent = "請回到 LINE，重新輸入 4 位數台股代碼。";
         return;
       }
-      const target = `by-code/${code}/index.html`;
+      const { date, directory } = taipeiDatePath();
+      const jsonTarget = `${directory}/stock-analysis-${code}-${date}.json`;
+      const htmlTarget = `${directory}/stock-analysis-${code}-${date}.html`;
       try {
-        const response = await fetch(`${target}?t=${Date.now()}`, { method: "HEAD", cache: "no-store" });
+        const response = await fetch(`${jsonTarget}?t=${Date.now()}`, { cache: "no-store" });
         if (response.ok) {
-          location.replace(target);
-          return;
+          const analysis = await response.json();
+          const fetchedAt = Date.parse(analysis.metadata?.fetched_at || "");
+          if (!Number.isFinite(requestedAt) || (Number.isFinite(fetchedAt) && fetchedAt >= requestedAt)) {
+            location.replace(`${htmlTarget}?t=${Date.now()}`);
+            return;
+          }
+          statusNode.textContent = "已收到查詢，正在等待這次的最新分析完成。";
         }
       } catch (error) {
         statusNode.textContent = "目前無法連線，稍後會自動重試。";

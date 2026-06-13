@@ -124,9 +124,56 @@ def collect_codes(requests: list[dict[str, str]], watchlist: str) -> list[str]:
     return list(dict.fromkeys(codes))
 
 
-def generated_today(output_root: Path, code: str, date_value: dt.date) -> bool:
+def parse_request_time(value: str) -> dt.datetime | None:
+    text = value.strip()
+    if not text:
+        return None
+    if text.endswith("Z"):
+        text = f"{text[:-1]}+00:00"
+    try:
+        parsed = dt.datetime.fromisoformat(text)
+    except ValueError:
+        return None
+    if parsed.tzinfo is None:
+        parsed = parsed.replace(tzinfo=dt.timezone.utc)
+    return parsed.astimezone(dt.timezone.utc)
+
+
+def latest_requests_by_code(requests: list[dict[str, str]]) -> dict[str, dt.datetime]:
+    latest: dict[str, dt.datetime] = {}
+    for item in requests:
+        code = str(item.get("code", "")).strip()
+        requested_at = parse_request_time(str(item.get("requested_at", "")))
+        if not (code.isdigit() and len(code) == 4 and requested_at):
+            continue
+        if code not in latest or requested_at > latest[code]:
+            latest[code] = requested_at
+    return latest
+
+
+def generated_at(output_root: Path, code: str, date_value: dt.date) -> dt.datetime | None:
     target = output_root / f"{date_value:%Y/%m/%Y-%m-%d}" / code
-    return any(target.glob(f"stock-analysis-{code}-{date_value.isoformat()}.html"))
+    json_path = target / f"stock-analysis-{code}-{date_value.isoformat()}.json"
+    if not json_path.exists():
+        return None
+    try:
+        payload = json.loads(json_path.read_text(encoding="utf-8"))
+        fetched_at = parse_request_time(str(payload.get("metadata", {}).get("fetched_at", "")))
+    except (json.JSONDecodeError, OSError):
+        return None
+    return fetched_at
+
+
+def needs_generation(
+    output_root: Path,
+    code: str,
+    date_value: dt.date,
+    requested_at: dt.datetime | None,
+) -> bool:
+    existing_at = generated_at(output_root, code, date_value)
+    if existing_at is None:
+        return True
+    return requested_at is not None and requested_at > existing_at
 
 
 def repo_relative(path: str | Path) -> str:
@@ -215,6 +262,7 @@ def main(argv: list[str]) -> int:
         if not args.skip_remote:
             requests.extend(read_remote_requests(queue_path_text))
         codes = collect_codes(requests, env("STOCK_ANALYSIS_WATCHLIST", DEFAULT_WATCHLIST))[: max(args.max_stocks, 0)]
+        latest_requests = latest_requests_by_code(requests)
         today = now_taipei().date()
         successful: list[str] = []
         skipped: list[str] = []
@@ -222,7 +270,7 @@ def main(argv: list[str]) -> int:
         publish_paths: list[Path] = []
 
         for index, code in enumerate(codes):
-            if not args.force and generated_today(output_root, code, today):
+            if not args.force and not needs_generation(output_root, code, today, latest_requests.get(code)):
                 skipped.append(code)
                 continue
             try:
