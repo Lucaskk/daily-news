@@ -234,3 +234,11 @@
 - Updated `wiki/daily/latest-slides.html`, `wiki/index.md`, `wiki/overview.md` and the root GitHub Pages redirect.
 - Published the daily package to GitHub Pages through the GitHub connector after local HTTPS push authentication failed.
 - Served the deck locally on port 4174; LINE delivery was skipped because `.env` did not contain `LINE_TO_ID`.
+
+## [2026-06-13] ingest | Daily global and tech AI news
+
+- Created wiki/daily/2026/06/2026-06-13/daily-news-2026-06-13.md and source-notes-2026-06-13.md after current web research and archive deduplication.
+- Selected exactly 10 global items; labeled the U.S.-Iran final-text claim as a continuation and preserved the conflicting U.S., Iranian and Israeli descriptions.
+- Added distinct technology / AI coverage for ChatGPT memory controls, Codex Browser developer mode, Anthropic Public Record, TCS regulated-industry deployment and YouTube messaging.
+- Created wiki/daily/2026/06/2026-06-13/slides-2026-06-13.html with 12 slides, readable source labels, keyboard controls and touch navigation.
+- Updated wiki/daily/latest-slides.html, wiki/index.md, wiki/overview.md and the root GitHub Pages redirect.
