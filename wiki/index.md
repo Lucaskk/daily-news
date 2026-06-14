@@ -2,7 +2,7 @@
 title: "Knowledge Base Index"
 type: overview
 created: 2026-05-24
-updated: 2026-06-13
+updated: 2026-06-14
 status: seed
 tags: [index]
 sources: []
