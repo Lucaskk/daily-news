@@ -24,7 +24,7 @@ sources: []
 
 每日新聞報告會放在 `wiki/daily/YYYY/MM/YYYY-MM-DD/`。
 
-- [每日全球與科技 AI 新聞產製規則](daily/README.md) - 包含跨日去重、重大續報判定、來源紀錄、標題、展開內容與發布驗證規則。
+- [每日全球與科技 AI 新聞產製規則](daily/README.md) - 包含研究截點前 24 小時限制、跨日去重、重大續報判定、來源紀錄與發布驗證規則。
 
 - [2026-06-14 Daily News](daily/2026/06/2026-06-14/daily-news-2026-06-14.md) - 今日焦點是承諾能否落地：U.S. / Pakistan 預測美伊週日簽署，但 Iran 稱仍需更多時間；Lebanon 南部與 Black Sea 能源設施持續受攻擊。EU 啟動 Ukraine、Moldova 入盟談判，Canada 推動中間強權第三條道路。制度治理延伸到美委聯合作戰、Pentagon 中國企業名單、MSF Chad 性剝削報告、Swiss 人口公投與 Kennedy Center 改名爭議。科技 / AI 聚焦 Anthropic 全球停用 Fable 5 / Mythos 5、ChatGPT GPT-5.2 retirement、Copilot code review controls、Smartsheet MCP 與 New York AI 廣告標示。
 - [2026-06-14 Slides](daily/2026/06/2026-06-14/slides-2026-06-14.html) - 今日新聞網頁版投影片。
