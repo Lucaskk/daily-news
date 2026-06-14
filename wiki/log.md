@@ -235,6 +235,24 @@
 - Published the daily package to GitHub Pages through the GitHub connector after local HTTPS push authentication failed.
 - Served the deck locally on port 4174; LINE delivery was skipped because `.env` did not contain `LINE_TO_ID`.
 
+## [2026-06-14] update | Clear Chinese headline summaries
+
+- Rewrote the 2026-06-14 report and slide headlines as complete Traditional Chinese summary sentences rather than mixed-language keyword fragments.
+- Translated country names, policy terms and explanatory card text while retaining official product and company names where needed.
+- Moved slide content into a dedicated scroll area above the mobile source and navigation bars so fixed controls no longer cover news cards.
+
+## [2026-06-14] update | Sources inside every expandable item
+
+- Converted all remaining static news cards into expandable items, including overview, statistics, technology summary and follow-up cards.
+- Removed every slide-level source footer and placed readable source labels plus full original URLs inside each item's expanded content.
+- Added a single source mapping for all 49 expandable items and validated exact per-slide item/source alignment with no empty source groups.
+
+## [2026-06-14] update | Expanded slide summaries
+
+- Audited all 49 expandable items after a mobile screenshot showed that several summaries were too compressed.
+- Added source-supported background, impact, key figures or uncertainty to every item instead of repeating the original sentence.
+- Set a minimum of 80 non-whitespace characters for each news item's body before source links; the reported enriched-uranium item now explains the conflicting U.S. and Iranian proposals and sanction sequencing.
+
 ## [2026-06-13] ingest | Daily global and tech AI news
 
 - Created wiki/daily/2026/06/2026-06-13/daily-news-2026-06-13.md and source-notes-2026-06-13.md after current web research and archive deduplication.
@@ -251,10 +269,13 @@
 - Removed the floating source-link footer that covered mobile content.
 - Converted all 52 news cards and ranked items into tap-to-expand details with fuller Traditional Chinese context and the original source URLs inside each expanded item.
 - Updated keyboard and touch handling so interactive elements do not trigger slide navigation and vertical scrolling is not mistaken for a horizontal swipe.
-\n\n## [2026-06-14] ingest | Daily global and tech AI news\n\n- Created `wiki/daily/2026/06/2026-06-14/daily-news-2026-06-14.md` and `source-notes-2026-06-14.md` after current web research and archive deduplication.\n- Selected exactly 10 global items; labeled the U.S.-Iran signing timeline as a continuation and preserved the conflict between U.S. / Pakistan and Iranian statements.\n- Added technology / AI coverage for the Anthropic model shutdown, ChatGPT GPT-5.2 retirement, Copilot code review controls, Smartsheet MCP connectors and New York synthetic-performer disclosure law.\n- Created `wiki/daily/2026/06/2026-06-14/slides-2026-06-14.html` with 13 responsive slides, expandable details, keyboard / touch navigation and a visible bottom-left source bar on every slide.\n- Updated `wiki/daily/latest-slides.html`, `wiki/index.md`, `wiki/overview.md` and the root GitHub Pages redirect.\n\n- Published the complete daily package to GitHub Pages through the GitHub connector after local HTTPS push authentication failed.\n- Served the deck locally on port 4174; LINE delivery was skipped because `.env` did not contain `LINE_TO_ID`.\n\n\n## [2026-06-14] update | Clear Chinese headline summaries\n\n- Rewrote the 2026-06-14 report and slide headlines as complete Traditional Chinese summary sentences rather than mixed-language keyword fragments.\n- Translated country names, policy terms and explanatory card text while retaining official product and company names where needed.\n- Moved slide content into a dedicated scroll area above the mobile source and navigation bars so fixed controls no longer cover news cards.\n
 
-## [2026-06-14] update | Sources inside every expandable item
+## [2026-06-14] ingest | Daily global and tech AI news
 
-- Converted all remaining static news cards into expandable items, including overview, statistics, technology summary and follow-up cards.
-- Removed every slide-level source footer and placed readable source labels plus full original URLs inside each item's expanded content.
-- Added a single source mapping for all 49 expandable items and validated exact per-slide item/source alignment with no empty source groups.
+- Created `wiki/daily/2026/06/2026-06-14/daily-news-2026-06-14.md` and `source-notes-2026-06-14.md` after current web research and archive deduplication.
+- Selected exactly 10 global items; labeled the U.S.-Iran signing timeline as a continuation and preserved the conflict between U.S. / Pakistan and Iranian statements.
+- Added technology / AI coverage for the Anthropic model shutdown, ChatGPT GPT-5.2 retirement, Copilot code review controls, Smartsheet MCP connectors and New York synthetic-performer disclosure law.
+- Created `wiki/daily/2026/06/2026-06-14/slides-2026-06-14.html` with 13 responsive slides, expandable details, keyboard / touch navigation and a visible bottom-left source bar on every slide.
+- Updated `wiki/daily/latest-slides.html`, `wiki/index.md`, `wiki/overview.md` and the root GitHub Pages redirect.
+- Published the complete daily package to GitHub Pages through the GitHub connector after local HTTPS push authentication failed.
+- Served the deck locally on port 4174; LINE delivery was skipped because `.env` did not contain `LINE_TO_ID`.
