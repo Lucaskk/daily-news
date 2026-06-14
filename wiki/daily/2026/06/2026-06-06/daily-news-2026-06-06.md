@@ -2,7 +2,7 @@
 title: "Daily News 2026-06-06"
 type: daily
 created: 2026-06-06
-updated: 2026-06-06
+updated: 2026-06-14
 status: active
 tags: [daily-news, world-news, technology, ai]
 sources:
@@ -194,8 +194,8 @@ date: 2026-06-06
 | 3 | Anthropic / White House tensions ahead of IPO | Reuters reports parts of the U.S. government relationship with Anthropic are easing while DoD still defends itself in Anthropic's lawsuit. | The Anthropic-Pentagon dispute is no longer only policy rhetoric; it intersects IPO readiness, government procurement and national-security AI access. | [Reuters / Investing](https://m.investing.com/news/economy-news/blacklisted-ai-company-anthropic-white-house-ease-tensions-ahead-of-ipo-sources-say-4728165?ampMode=1) |
 | 4 | Alphabet / Google AI financing | TechCrunch reports Alphabet's AI-related offering expanded from $40bn to $45bn in the first tranche and plans another $40bn next quarter, for $85bn total. | AI infrastructure finance is reaching sovereign-scale capital markets; investor appetite now shapes compute and cloud strategy. | [TechCrunch](https://techcrunch.com/2026/06/03/alphabets-record-breaking-85b-raise-for-googles-ai-business-is-a-helluva-good-signal/) |
 | 5 | AethexAI voice AI for Africa / Middle East | AethexAI raised $3m pre-seed and launched enterprise platform / APIs built around small models and low-latency voice AI for local dialects. | It shows AI productization outside U.S./Europe defaults: dialects, telecom infrastructure, latency and price points define the product architecture. | [TechCrunch](https://techcrunch.com/2026/06/03/these-two-founders-left-goldman-and-meta-to-build-voice-ai-for-markets-everyone-else-overlooked/) |
-| 6 | Anthropic confidential IPO filing | Anthropic's confidential IPO filing remains a key capital-market story after its near-$1tn valuation and Mythos / enterprise momentum. | Public-market disclosure would test whether frontier AI revenue, compute burn and risk controls can survive investor scrutiny. | [TechCrunch](https://techcrunch.com/2026/06/01/anthropic-files-to-go-public/) |
-| 7 | OpenAI ChatGPT / Codex release notes | OpenAI's Traditional Chinese release notes show Codex Windows computer use and remote-control updates dated 2026-05-29, plus ongoing model retirement and GPT-5.5 Instant changes. | Not selected as a top new story because OpenAI release waves were recently captured, but kept as developer-product provenance for Codex availability. | [OpenAI Help](https://help.openai.com/zh-hant/articles/6825453-chatgpt-release-notes) |
+
+> 2026-06-14 去重稽核：原第 6 項 Anthropic IPO 申報已於 2026-06-02 收錄，原第 7 項 OpenAI 更新頁也沒有 6 月 6 日的新事件，因此兩項均移出新聞清單。來源與稽核理由保留於同日 source notes。
 
 ## Notable Entities
 
