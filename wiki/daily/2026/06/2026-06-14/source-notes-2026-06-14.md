@@ -15,7 +15,7 @@ tags: [sources, provenance, daily-news]
 - 新聞週期：主要為 2026-06-13 歐洲、美洲報導，並納入 2026-06-14 台北上午可取得的官方更新。
 - 排序信號：AP 首頁與各區域頁面、Guardian World / Technology 顯著項目、官方公司 changelog / announcement，以及跨媒體延續性。
 - 去重範圍：搜尋 `wiki/daily/` 既有 daily reports 與 source notes，特別檢查 2026-06-09 至 2026-06-13。
-- 工作區未找到可讀取的 `AGENTS.md`；本次依既有 wiki 格式保存來源、矛盾與續報標籤。
+- 每日新聞固定規則見 [`wiki/daily/README.md`](../../../README.md)；本次依該規則保存來源、矛盾、跨日去重與續報標籤。
 
 ## 去重決策
 
@@ -23,6 +23,11 @@ tags: [sources, provenance, daily-news]
 - **Anthropic Fable 5 / Mythos 5：收錄為續報。** 6 月 10 日已記錄模型發布。今日新發展是 U.S. export-control directive 導致全球停用，產品可用性與政策狀態完全改變。
 - **Ukraine 能源設施攻擊：收錄。** 過去曾報導 Crimea、refinery 與其他 Russian energy targets；本次是 Volna Black Sea terminal 與 Volgograd pumping station 的新事件，不重複舊攻擊。
 - 其餘 8 則全球新聞與 4 則科技 / AI 新聞未在既有日報中找到同一事件。
+
+## 跨日稽核補充
+
+- 2026-06-14 再檢查 2026-05-29 至 2026-06-14 共 16 份日報。近期 6 月 10 日至 14 日未發現未標示的同事件重複。
+- 發現 2026-06-06 科技清單有兩筆不符合嚴格規則的歷史補位項目：Anthropic IPO 申報已於 6 月 2 日收錄；OpenAI 更新頁沒有 6 月 6 日的新事件。兩筆已從新聞清單移至同日來源筆記的排除區。
 
 ## 全球新聞來源帳本
 
@@ -148,4 +153,3 @@ tags: [sources, provenance, daily-news]
 
 - [Daily report](daily-news-2026-06-14.md)
 - [Web slides](slides-2026-06-14.html)
-
