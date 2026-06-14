@@ -253,6 +253,12 @@
 - Added source-supported background, impact, key figures or uncertainty to every item instead of repeating the original sentence.
 - Set a minimum of 80 non-whitespace characters for each news item's body before source links; the reported enriched-uranium item now explains the conflicting U.S. and Iranian proposals and sanction sequencing.
 
+## [2026-06-14] maintenance | Daily-news deduplication rules
+
+- Added `wiki/daily/README.md` as the central production rule file, including full-archive event-level deduplication and material-continuation criteria.
+- Audited 16 daily reports from 2026-05-29 through 2026-06-14; recent reports had no unlabeled same-event repeats.
+- Removed two legacy 2026-06-06 technology-list entries that had no new event, while preserving their sources and exclusion reasons in source notes.
+
 ## [2026-06-13] ingest | Daily global and tech AI news
 
 - Created wiki/daily/2026/06/2026-06-13/daily-news-2026-06-13.md and source-notes-2026-06-13.md after current web research and archive deduplication.
