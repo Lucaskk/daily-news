@@ -259,6 +259,12 @@
 - Audited 16 daily reports from 2026-05-29 through 2026-06-14; recent reports had no unlabeled same-event repeats.
 - Removed two legacy 2026-06-06 technology-list entries that had no new event, while preserving their sources and exclusion reasons in source notes.
 
+## [2026-06-14] maintenance | 24-hour news window
+
+- Required every selected event, official product release or material continuation update to fall within the 24 hours before the Asia/Taipei research cutoff.
+- Required source notes to record the exact window and each item's event or publication-time basis.
+- Prohibited using republished, retitled or still-trending older stories to fill the daily list.
+
 ## [2026-06-13] ingest | Daily global and tech AI news
 
 - Created wiki/daily/2026/06/2026-06-13/daily-news-2026-06-13.md and source-notes-2026-06-13.md after current web research and archive deduplication.
