@@ -24,6 +24,10 @@ sources: []
 
 每日新聞報告會放在 `wiki/daily/YYYY/MM/YYYY-MM-DD/`。
 
+- [每日全球與科技 AI 新聞產製規則](daily/README.md) - 包含跨日去重、重大續報判定、來源紀錄、標題、展開內容與發布驗證規則。
+
+- [2026-06-14 Daily News](daily/2026/06/2026-06-14/daily-news-2026-06-14.md) - 今日焦點是承諾能否落地：U.S. / Pakistan 預測美伊週日簽署，但 Iran 稱仍需更多時間；Lebanon 南部與 Black Sea 能源設施持續受攻擊。EU 啟動 Ukraine、Moldova 入盟談判，Canada 推動中間強權第三條道路。制度治理延伸到美委聯合作戰、Pentagon 中國企業名單、MSF Chad 性剝削報告、Swiss 人口公投與 Kennedy Center 改名爭議。科技 / AI 聚焦 Anthropic 全球停用 Fable 5 / Mythos 5、ChatGPT GPT-5.2 retirement、Copilot code review controls、Smartsheet MCP 與 New York AI 廣告標示。
+- [2026-06-14 Slides](daily/2026/06/2026-06-14/slides-2026-06-14.html) - 今日新聞網頁版投影片。
 - [2026-06-13 Daily News](daily/2026/06/2026-06-13/daily-news-2026-06-13.md) - 今日主軸是 U.S.-Iran final text 取得 Pakistan 第三方背書但核材料、Lebanon 與 sanctions sequencing 仍衝突；SpaceX 以 US$75bn 紀錄 IPO 上市，U.S. 縮減 NATO crisis assets，Ukraine 造成 Crimea 最嚴重 fuel crisis，Paramount-WBD merger 與全球 tariffs 分別跨過暫時法律門檻。亞洲焦點是 Yoon 30 年刑期、Min Zin 被中國拘捕、Thai Princess Bajrakitiyabha 與 David Hockney 逝世。科技 / AI 聚焦 ChatGPT memory controls、Codex Browser developer mode、Anthropic Public Record、TCS regulated-industry deployment 與 YouTube messaging。
 - [2026-06-13 Slides](daily/2026/06/2026-06-13/slides-2026-06-13.html) - 今日新聞網頁版投影片。
 - [2026-06-12 Daily News](daily/2026/06/2026-06-12/daily-news-2026-06-12.md) - 今日主軸是 U.S.-Iran 由第二日互擊轉向未定案 settlement MOU、UAE 退出 OPEC、ECB 升息與 World Bank 下修全球成長；NOAA 正式確認 El Nino，UK defense resignation、UNHCR 1.178 億流離失所人口、Amazon deforestation 下降、Pakistan-Afghanistan civilian deaths 與 Milan 美領館勞權調查補足制度風險。科技 / AI 轉向 Visa x ChatGPT agentic commerce、GitHub Agentic Workflows、Copilot CLI settings、Claude Corps 與 IBM-ServiceNow enterprise agents。
