@@ -2,7 +2,7 @@
 title: "Source Notes 2026-06-06"
 type: source
 created: 2026-06-06
-updated: 2026-06-06
+updated: 2026-06-14
 status: active
 tags: [daily-news, source-notes, world-news, technology, ai]
 sources:
@@ -82,8 +82,6 @@ Possible contradictions / uncertainty:
 | Anthropic / White House tension easing | [Reuters / Investing](https://m.investing.com/news/economy-news/blacklisted-ai-company-anthropic-white-house-ease-tensions-ahead-of-ipo-sources-say-4728165?ampMode=1) | Material update to Anthropic-Pentagon / White House conflict ahead of IPO. |
 | Alphabet / Google AI financing | [TechCrunch](https://techcrunch.com/2026/06/03/alphabets-record-breaking-85b-raise-for-googles-ai-business-is-a-helluva-good-signal/) | Strong capital-market signal for Google AI infrastructure financing. |
 | AethexAI voice AI | [TechCrunch](https://techcrunch.com/2026/06/03/these-two-founders-left-goldman-and-meta-to-build-voice-ai-for-markets-everyone-else-overlooked/) | Productization signal in emerging markets, especially dialect / latency / local telephony constraints. |
-| Anthropic confidential IPO filing | [TechCrunch](https://techcrunch.com/2026/06/01/anthropic-files-to-go-public/) | Included as continuing capital-market context, not a new standalone item since 2026-06-02/05 already tracked Anthropic capital. |
-| OpenAI ChatGPT / Codex release notes | [OpenAI Help](https://help.openai.com/zh-hant/articles/6825453-chatgpt-release-notes) | Kept as provenance but not promoted because OpenAI release waves were already captured. |
 
 ## Excluded But Tracked
 
@@ -98,6 +96,8 @@ Possible contradictions / uncertainty:
 | Microsoft Build 2026 | 2026-06-03 daily report | Already captured in detail. |
 | OpenAI / GitHub / Cloudflare release waves | 2026-06-04 daily report | Already captured; OpenAI release notes kept only as provenance. |
 | EU tech sovereignty / Google Mobile Squad / KISA Mythos | 2026-06-05 daily report | Already captured yesterday. |
+| Anthropic confidential IPO filing | [TechCrunch](https://techcrunch.com/2026/06/01/anthropic-files-to-go-public/) | 2026-06-02 已收錄同一申報事件；6 月 6 日沒有新的申報、定價或上市節點。2026-06-14 稽核後由新聞清單移至此處。 |
+| OpenAI ChatGPT / Codex release notes | [OpenAI Help](https://help.openai.com/zh-hant/articles/6825453-chatgpt-release-notes) | 當時文字已承認不是當日新故事；只能作為 provenance，不能列為新聞補位。2026-06-14 稽核後由新聞清單移至此處。 |
 
 ## Provenance Notes
 
