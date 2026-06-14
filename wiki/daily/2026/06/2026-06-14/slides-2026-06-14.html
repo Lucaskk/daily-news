@@ -49,8 +49,8 @@
     }
     .slide.active { display: block; }
     .content {
-      height: calc(100vh - 5.6rem);
-      height: calc(100dvh - 5.6rem);
+      height: calc(100vh - 5.2rem);
+      height: calc(100dvh - 5.2rem);
       overflow-y: auto;
       overscroll-behavior: contain;
       padding: clamp(2rem, 5vw, 5rem) clamp(1.25rem, 6vw, 7rem) 2rem;
@@ -95,10 +95,39 @@
     }
     summary::-webkit-details-marker { display: none; }
     summary::after { content: "+"; position: absolute; right: 1.2rem; top: 1rem; color: var(--accent); font-size: 1.5rem; }
+    .news-item summary .rank { display: block; margin-bottom: .3rem; }
     details[open] summary::after { content: "−"; }
     details[open] summary { border-bottom: 1px solid var(--line); }
     .detail { padding: 1rem 1.2rem 1.2rem; }
     .detail p:last-child { margin-bottom: 0; }
+    .interaction-hint { margin: -.25rem 0 1rem; color: #94a3b8; font-size: .88rem; }
+    .source-only { max-width: 900px; margin-top: 1.35rem; }
+    .detail-sources {
+      display: grid;
+      gap: .55rem;
+      margin-top: 1rem;
+      padding-top: .9rem;
+      border-top: 1px solid var(--line);
+    }
+    .detail-sources::before {
+      content: "來源";
+      color: var(--accent-2);
+      font-size: .75rem;
+      font-weight: 900;
+      letter-spacing: .1em;
+    }
+    .detail-sources a {
+      display: block;
+      padding: .72rem .8rem;
+      border: 1px solid rgba(94, 234, 212, .34);
+      border-radius: 12px;
+      color: #d5fffa;
+      background: rgba(3, 15, 25, .72);
+      text-decoration: none;
+    }
+    .detail-sources strong { display: block; margin-bottom: .3rem; font-size: .86rem; }
+    .detail-sources small { display: block; color: #94a3b8; font-size: .7rem; line-height: 1.45; overflow-wrap: anywhere; }
+    .detail-sources a:hover, .detail-sources a:focus-visible { border-color: var(--accent); background: rgba(13, 148, 136, .18); outline: none; }
     .tag {
       display: inline-flex;
       margin-right: .45rem;
@@ -121,32 +150,6 @@
       color: #fef3c7;
       line-height: 1.65;
     }
-    .slide-sources {
-      position: fixed;
-      z-index: 30;
-      left: max(1rem, env(safe-area-inset-left));
-      bottom: max(1rem, env(safe-area-inset-bottom));
-      display: flex;
-      flex-wrap: wrap;
-      gap: .45rem;
-      max-width: min(68vw, 880px);
-    }
-    .slide-sources a {
-      display: inline-flex;
-      align-items: center;
-      min-height: 36px;
-      padding: .45rem .68rem;
-      border: 1px solid rgba(94, 234, 212, .38);
-      border-radius: 999px;
-      color: #d5fffa;
-      background: rgba(3, 15, 25, .92);
-      font-size: .74rem;
-      font-weight: 800;
-      line-height: 1.1;
-      text-decoration: none;
-      box-shadow: 0 7px 22px rgba(0, 0, 0, .32);
-    }
-    .slide-sources a:hover, .slide-sources a:focus-visible { color: #041318; background: var(--accent); outline: none; }
     .controls {
       position: fixed;
       z-index: 40;
@@ -172,12 +175,10 @@
     .progress { position: fixed; z-index: 45; left: 0; top: 0; width: 0; height: 4px; background: linear-gradient(90deg, var(--accent), var(--accent-2)); transition: width .22s ease; }
     .keyboard { margin-top: 1rem; color: #94a3b8; font-size: .84rem; }
     @media (max-width: 820px) {
-      .content { height: calc(100dvh - 9rem); padding: 1.35rem 1rem 1.5rem; }
+      .content { height: calc(100dvh - 5.5rem); padding: 1.35rem 1rem 1.5rem; }
       .grid, .grid.three { grid-template-columns: 1fr; }
       h1 { font-size: clamp(2.05rem, 9.6vw, 3.25rem); }
       h2 { font-size: clamp(1.7rem, 7.3vw, 2.45rem); }
-      .slide-sources { right: 1rem; bottom: calc(max(1rem, env(safe-area-inset-bottom)) + 3.7rem); max-width: none; flex-wrap: nowrap; overflow-x: auto; padding-bottom: .15rem; }
-      .slide-sources a { flex: 0 0 auto; }
       .controls { left: 50%; right: auto; transform: translateX(-50%); }
     }
     @media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; transition: none !important; } }
@@ -194,8 +195,8 @@
         <p class="lede">美國與巴基斯坦稱協議最快週日簽署，但伊朗仍未同意時程；黎巴嫩與黑海戰事持續，兩款先進 AI 模型也因美國管制被迫全球下線。</p>
         <p class="date">2026 年 6 月 14 日 · 台北</p>
         <p class="keyboard">鍵盤 ← → / PageUp PageDown，手機可左右滑動；點選卡片展開。</p>
+        <details class="source-only"><summary>本日主要新聞來源</summary><div class="detail"><p>展開查看本日選題使用的主要新聞入口。</p></div></details>
       </div></div>
-      <nav class="slide-sources" aria-label="本頁來源"><a href="https://apnews.com/" target="_blank" rel="noopener">AP：全球新聞</a><a href="https://www.theguardian.com/world" target="_blank" rel="noopener">Guardian：全球新聞</a></nav>
     </section>
 
     <section class="slide" style="--bg:url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&amp;fit=crop&amp;w=1920&amp;q=80')">
@@ -210,7 +211,6 @@
           <div class="card"><span class="rank">06–10</span><h3>企業制裁、人道醜聞與公投牽動制度治理</h3><p>焦點包括中國科技企業、查德援助醜聞、加拿大外交、瑞士公投與甘迺迪中心。</p></div>
         </div>
       </div></div>
-      <nav class="slide-sources" aria-label="本頁來源"><a href="daily-news-2026-06-14.md" target="_blank">今日報告：全球十則</a><a href="source-notes-2026-06-14.md" target="_blank">來源筆記：去重紀錄</a></nav>
     </section>
 
     <section class="slide" style="--bg:url('https://images.unsplash.com/photo-1516937941344-00b4e0337589?auto=format&amp;fit=crop&amp;w=1920&amp;q=80')">
@@ -224,7 +224,6 @@
         </div>
         <div class="callout">判讀：談判已從「是否有最終文本」進入「哪一天簽署、具體簽什麼」的階段，但和平協議尚未完成。</div>
       </div></div>
-      <nav class="slide-sources" aria-label="本頁來源"><a href="https://apnews.com/article/iran-us-leader-funeral-khamenei-war-deal-1f4bfb01f91029f92787cbc2ec7ad81e" target="_blank" rel="noopener">AP：美伊簽署時程</a><a href="https://www.theguardian.com/world/live/2026/jun/12/middle-east-crisis-live-us-iran-israel-lebanon-trump-hormuz-oil-peace-deal-doubt-latest-news-updates" target="_blank" rel="noopener">Guardian：中東即時</a></nav>
     </section>
 
     <section class="slide" style="--bg:url('https://images.unsplash.com/photo-1521295121783-8a321d551ad2?auto=format&amp;fit=crop&amp;w=1920&amp;q=80')">
@@ -237,7 +236,6 @@
           <details><summary>俄羅斯回擊烏克蘭第聶伯羅地區</summary><div class="detail"><p>超過二十次攻擊造成九人受傷。沃爾納終端的損害主要依據俄方官員說法，烏克蘭尚未評論。</p></div></details>
         </div>
       </div></div>
-      <nav class="slide-sources" aria-label="本頁來源"><a href="https://apnews.com/article/lebanon-israel-iran-hezbollah-7423a633aad2c74378e3024110af0a09" target="_blank" rel="noopener">AP：黎巴嫩南部推進</a><a href="https://apnews.com/article/russia-ukraine-war-drone-attack-a2189d216731d92cbe74c873e1e6c04e" target="_blank" rel="noopener">AP：黑海能源終端</a></nav>
     </section>
 
     <section class="slide" style="--bg:url('https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&amp;fit=crop&amp;w=1920&amp;q=80')">
@@ -249,7 +247,6 @@
         </div>
         <div class="callout">共同訊號：中間強權不只談戰略自主，而是透過入盟章節、防務工具與貿易安排建立可執行的結構。</div>
       </div></div>
-      <nav class="slide-sources" aria-label="本頁來源"><a href="https://apnews.com/article/europe-ukraine-eu-membership-moldova-negotiations-russia-6cd2ec3d41bd45c8115c6ee41eb1a114" target="_blank" rel="noopener">AP：歐盟入盟談判</a><a href="https://apnews.com/article/carney-canada-europe-ireland-04ce045524fd060d5439ed61acc2cd93" target="_blank" rel="noopener">AP：加拿大第三條道路</a></nav>
     </section>
 
     <section class="slide" style="--bg:url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&amp;fit=crop&amp;w=1920&amp;q=80')">
@@ -262,7 +259,6 @@
           <details><summary>不是全面制裁，但提高風險溢價</summary><div class="detail"><p>實際衝擊取決於採購規則、企業申訴及是否延伸到金融或出口限制。</p></div></details>
         </div>
       </div></div>
-      <nav class="slide-sources" aria-label="本頁來源"><a href="https://apnews.com/article/trump-tren-de-aragua-gang-venezuela-344db66dfac87df7ca93d57ea77cd520" target="_blank" rel="noopener">AP：阿拉瓜列車幫行動</a><a href="https://apnews.com/article/china-companies-military-pentagon-us-5adea55a203024477e7c5204f1f650aa" target="_blank" rel="noopener">AP：美國國防部企業名單</a></nav>
     </section>
 
     <section class="slide" style="--bg:url('https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?auto=format&amp;fit=crop&amp;w=1920&amp;q=80')">
@@ -278,7 +274,6 @@
           <details><summary>核心不是單一壞人，而是治理失效</summary><div class="detail"><p>受援者對生存資源高度依賴，機構若缺乏獨立通報、背景查核與問責，權力不對稱就會持續。</p></div></details>
         </div>
       </div></div>
-      <nav class="slide-sources" aria-label="本頁來源"><a href="https://apnews.com/article/chad-sudan-civil-war-sexual-abuse-refugees-036f69088cd3a96cb3c970ddbfd00696" target="_blank" rel="noopener">AP：無國界醫生查德報告</a></nav>
     </section>
 
     <section class="slide" style="--bg:url('https://images.unsplash.com/photo-1589994965851-a8f479c573a9?auto=format&amp;fit=crop&amp;w=1920&amp;q=80')">
@@ -290,7 +285,6 @@
         </div>
         <div class="callout">兩則事件共同追問：誰有權重新定義一個國家的邊界、人口與公共文化象徵？</div>
       </div></div>
-      <nav class="slide-sources" aria-label="本頁來源"><a href="https://www.theguardian.com/world/2026/jun/13/swiss-wait-to-hear-result-of-ballot-on-capping-population-at-10-million" target="_blank" rel="noopener">Guardian：瑞士人口公投</a><a href="https://apnews.com/article/trump-name-removal-kennedy-center-5a32c569d72c333e9d65c76b4224b617" target="_blank" rel="noopener">AP：甘迺迪中心</a></nav>
     </section>
 
     <section class="slide" style="--bg:url('https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&amp;fit=crop&amp;w=1920&amp;q=80')">
@@ -304,7 +298,6 @@
           <div class="card"><span class="rank">05</span><h3>紐約州要求 AI 廣告人物清楚標示</h3><p>使用虛擬演員的廣告若未揭露，可能面臨處罰。</p></div>
         </div>
       </div></div>
-      <nav class="slide-sources" aria-label="本頁來源"><a href="https://www.anthropic.com/news/fable-mythos-access" target="_blank" rel="noopener">Anthropic：模型存取公告</a><a href="https://help.openai.com/en/articles/6825453-chatgpt-release-notes" target="_blank" rel="noopener">OpenAI：ChatGPT 更新</a><a href="https://github.blog/changelog/2026-06-12-copilot-code-review-new-configurations-and-controls" target="_blank" rel="noopener">GitHub：Copilot 管控</a></nav>
     </section>
 
     <section class="slide" style="--bg:url('https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&amp;fit=crop&amp;w=1920&amp;q=80')">
@@ -318,7 +311,6 @@
         </div>
         <div class="callout">產品含義：除了模型能力與帳號資格，使用者國籍和出口管制也開始直接決定模型能否使用。</div>
       </div></div>
-      <nav class="slide-sources" aria-label="本頁來源"><a href="https://www.anthropic.com/news/fable-mythos-access" target="_blank" rel="noopener">Anthropic：兩款模型存取公告</a><a href="https://www.theguardian.com/technology/2026/jun/13/anthropic-disable-advanced-ai-models-us-government-order" target="_blank" rel="noopener">Guardian：美國停用命令</a></nav>
     </section>
 
     <section class="slide" style="--bg:url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&amp;fit=crop&amp;w=1920&amp;q=80')">
@@ -331,7 +323,6 @@
           <details><summary>內容排除規則與指示檔可涵蓋更多情境</summary><div class="detail"><p>程式碼審查會遵守程式庫、組織與企業層級的內容排除規則；指示檔也移除四千字元上限，但企業仍需處理規則衝突。</p></div></details>
         </div>
       </div></div>
-      <nav class="slide-sources" aria-label="本頁來源"><a href="https://help.openai.com/en/articles/6825453-chatgpt-release-notes" target="_blank" rel="noopener">OpenAI：GPT-5.2 停用</a><a href="https://github.blog/changelog/2026-06-12-copilot-code-review-new-configurations-and-controls" target="_blank" rel="noopener">GitHub：程式審查管控</a></nav>
     </section>
 
     <section class="slide" style="--bg:url('https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&amp;fit=crop&amp;w=1920&amp;q=80')">
@@ -344,7 +335,6 @@
           <details><summary>企業資料存取與消費者知情都需要透明規則</summary><div class="detail"><p>MCP 規範 AI 系統如何取得企業資料；紐約法律則確保消費者知道廣告人物由 AI 生成。兩者都把透明度直接做到產品介面。</p></div></details>
         </div>
       </div></div>
-      <nav class="slide-sources" aria-label="本頁來源"><a href="https://www.smartsheet.com/content-center/smartsheet-mcp-enabled-connector-chatgpt-now-available" target="_blank" rel="noopener">Smartsheet：ChatGPT MCP</a><a href="https://www.smartsheet.com/content-center/smartsheet-mcp-enabled-connector-microsoft-copilot-now-available" target="_blank" rel="noopener">Smartsheet：Copilot MCP</a><a href="https://www.smartsheet.com/content-center/smartsheet-mcp-enabled-connector-google-gemini-now-available" target="_blank" rel="noopener">Smartsheet：Gemini MCP</a><a href="https://apnews.com/article/new-york-ai-law-hochul-synthetic-performers-e433625bfb61c8abeab0d619869192ed" target="_blank" rel="noopener">AP：AI 廣告標示法</a></nav>
     </section>
 
     <section class="slide" style="--bg:url('https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&amp;fit=crop&amp;w=1920&amp;q=80')">
@@ -358,7 +348,6 @@
         </div>
         <div class="callout">完整新聞、相互矛盾的說法與原始來源，均保存在同一目錄的每日報告與來源筆記。</div>
       </div></div>
-      <nav class="slide-sources" aria-label="本頁來源"><a href="daily-news-2026-06-14.md" target="_blank">完整報告：2026-06-14</a><a href="source-notes-2026-06-14.md" target="_blank">完整來源：2026-06-14</a></nav>
     </section>
 
     <div class="controls" aria-label="投影片導覽">
@@ -375,6 +364,100 @@
       var current = 0;
       var startX = null;
       var startY = null;
+      var sources = {
+        apHome: ['AP：全球新聞', 'https://apnews.com/'],
+        guardianWorld: ['Guardian：全球新聞', 'https://www.theguardian.com/world'],
+        iranAp: ['AP：美伊簽署時程', 'https://apnews.com/article/iran-us-leader-funeral-khamenei-war-deal-1f4bfb01f91029f92787cbc2ec7ad81e'],
+        iranGuardian: ['Guardian：中東即時報導', 'https://www.theguardian.com/world/live/2026/jun/12/middle-east-crisis-live-us-iran-israel-lebanon-trump-hormuz-oil-peace-deal-doubt-latest-news-updates'],
+        lebanon: ['AP：以軍推進黎巴嫩南部', 'https://apnews.com/article/lebanon-israel-iran-hezbollah-7423a633aad2c74378e3024110af0a09'],
+        eu: ['AP：烏克蘭與摩爾多瓦入盟談判', 'https://apnews.com/article/europe-ukraine-eu-membership-moldova-negotiations-russia-6cd2ec3d41bd45c8115c6ee41eb1a114'],
+        ukraine: ['AP：烏克蘭攻擊黑海能源終端', 'https://apnews.com/article/russia-ukraine-war-drone-attack-a2189d216731d92cbe74c873e1e6c04e'],
+        gang: ['AP：美委聯手打擊阿拉瓜列車幫', 'https://apnews.com/article/trump-tren-de-aragua-gang-venezuela-344db66dfac87df7ca93d57ea77cd520'],
+        china: ['AP：美國國防部中國企業名單', 'https://apnews.com/article/china-companies-military-pentagon-us-5adea55a203024477e7c5204f1f650aa'],
+        msf: ['AP：無國界醫生查德內部報告', 'https://apnews.com/article/chad-sudan-civil-war-sexual-abuse-refugees-036f69088cd3a96cb3c970ddbfd00696'],
+        carney: ['AP：加拿大提出第三條道路', 'https://apnews.com/article/carney-canada-europe-ireland-04ce045524fd060d5439ed61acc2cd93'],
+        swiss: ['Guardian：瑞士人口上限公投', 'https://www.theguardian.com/world/2026/jun/13/swiss-wait-to-hear-result-of-ballot-on-capping-population-at-10-million'],
+        kennedy: ['AP：甘迺迪中心撤下川普名稱', 'https://apnews.com/article/trump-name-removal-kennedy-center-5a32c569d72c333e9d65c76b4224b617'],
+        anthropic: ['Anthropic：Fable 5 與 Mythos 5 存取公告', 'https://www.anthropic.com/news/fable-mythos-access'],
+        anthropicGuardian: ['Guardian：美國命令停用 Anthropic 模型', 'https://www.theguardian.com/technology/2026/jun/13/anthropic-disable-advanced-ai-models-us-government-order'],
+        openai: ['OpenAI：ChatGPT 模型更新', 'https://help.openai.com/en/articles/6825453-chatgpt-release-notes'],
+        github: ['GitHub：Copilot 程式碼審查管控', 'https://github.blog/changelog/2026-06-12-copilot-code-review-new-configurations-and-controls'],
+        smartChat: ['Smartsheet：ChatGPT MCP 連接器', 'https://www.smartsheet.com/content-center/smartsheet-mcp-enabled-connector-chatgpt-now-available'],
+        smartCopilot: ['Smartsheet：Microsoft Copilot MCP 連接器', 'https://www.smartsheet.com/content-center/smartsheet-mcp-enabled-connector-microsoft-copilot-now-available'],
+        smartGemini: ['Smartsheet：Google Gemini MCP 連接器', 'https://www.smartsheet.com/content-center/smartsheet-mcp-enabled-connector-google-gemini-now-available'],
+        newYork: ['AP：紐約州 AI 廣告標示法', 'https://apnews.com/article/new-york-ai-law-hochul-synthetic-performers-e433625bfb61c8abeab0d619869192ed']
+      };
+      var itemSources = {
+        0: [[sources.apHome, sources.guardianWorld]],
+        1: [[sources.iranAp, sources.iranGuardian], [sources.lebanon], [sources.eu], [sources.ukraine], [sources.gang], [sources.china, sources.msf, sources.carney, sources.swiss, sources.kennedy]],
+        2: [[sources.iranAp, sources.iranGuardian], [sources.iranAp, sources.iranGuardian], [sources.iranAp, sources.iranGuardian], [sources.iranAp, sources.iranGuardian]],
+        3: [[sources.lebanon], [sources.lebanon], [sources.ukraine], [sources.ukraine]],
+        4: [[sources.eu], [sources.carney]],
+        5: [[sources.gang], [sources.gang], [sources.china], [sources.china]],
+        6: [[sources.msf], [sources.msf], [sources.msf], [sources.msf], [sources.msf]],
+        7: [[sources.swiss], [sources.kennedy]],
+        8: [[sources.anthropic, sources.anthropicGuardian], [sources.openai], [sources.github], [sources.smartChat, sources.smartCopilot, sources.smartGemini], [sources.newYork]],
+        9: [[sources.anthropic, sources.anthropicGuardian], [sources.anthropic, sources.anthropicGuardian], [sources.anthropic, sources.anthropicGuardian], [sources.anthropic, sources.anthropicGuardian]],
+        10: [[sources.openai], [sources.openai], [sources.github], [sources.github]],
+        11: [[sources.smartChat, sources.smartCopilot, sources.smartGemini], [sources.smartChat, sources.smartCopilot, sources.smartGemini], [sources.newYork], [sources.smartChat, sources.smartCopilot, sources.smartGemini, sources.newYork]],
+        12: [[sources.iranAp, sources.iranGuardian], [sources.swiss], [sources.anthropic, sources.anthropicGuardian], [sources.eu]]
+      };
+
+      function addSourceLinks(container, sourceList) {
+        var sourceBox = document.createElement('div');
+        sourceBox.className = 'detail-sources';
+        sourceList.forEach(function (source) {
+          var link = document.createElement('a');
+          var label = document.createElement('strong');
+          var url = document.createElement('small');
+          link.href = source[1];
+          link.target = '_blank';
+          link.rel = 'noopener noreferrer';
+          label.textContent = source[0];
+          url.textContent = source[1];
+          link.appendChild(label);
+          link.appendChild(url);
+          sourceBox.appendChild(link);
+        });
+        container.appendChild(sourceBox);
+      }
+
+      function convertCard(card) {
+        var details = document.createElement('details');
+        var summary = document.createElement('summary');
+        var body = document.createElement('div');
+        var rank = card.querySelector('.rank');
+        var heading = card.querySelector('h3');
+        details.className = 'news-item';
+        body.className = 'detail';
+        if (rank) summary.appendChild(rank.cloneNode(true));
+        summary.appendChild(document.createTextNode(heading ? heading.textContent : '查看內容'));
+        Array.prototype.slice.call(card.querySelectorAll('p')).forEach(function (paragraph) {
+          body.appendChild(paragraph.cloneNode(true));
+        });
+        details.appendChild(summary);
+        details.appendChild(body);
+        card.replaceWith(details);
+      }
+
+      function enhanceItems() {
+        slides.forEach(function (slide, slideIndex) {
+          Array.prototype.slice.call(slide.querySelectorAll('.card')).forEach(convertCard);
+          var items = Array.prototype.slice.call(slide.querySelectorAll('details'));
+          var heading = slide.querySelector('h2');
+          if (heading && items.length) {
+            var hint = document.createElement('p');
+            hint.className = 'interaction-hint';
+            hint.textContent = '點選任一項目，即可展開完整內容與原始來源網址。';
+            heading.insertAdjacentElement('afterend', hint);
+          }
+          items.forEach(function (item, itemIndex) {
+            var body = item.querySelector('.detail');
+            item.removeAttribute('open');
+            addSourceLinks(body, (itemSources[slideIndex] && itemSources[slideIndex][itemIndex]) || []);
+          });
+        });
+      }
 
       function show(index) {
         current = (index + slides.length) % slides.length;
@@ -411,6 +494,7 @@
         startX = null; startY = null;
       }, { passive: true });
 
+      enhanceItems();
       var initial = parseInt(location.hash.slice(1), 10);
       show(Number.isFinite(initial) ? initial - 1 : 0);
     }());
