@@ -2,7 +2,7 @@
 title: "Knowledge Base Index"
 type: overview
 created: 2026-05-24
-updated: 2026-06-14
+updated: 2026-06-15
 status: seed
 tags: [index]
 sources: []
@@ -26,6 +26,8 @@ sources: []
 
 - [每日全球與科技 AI 新聞產製規則](daily/README.md) - 包含研究截點前 24 小時限制、跨日去重、重大續報判定、來源紀錄與發布驗證規則。
 
+- [2026-06-15 Daily News](daily/2026/06/2026-06-15/daily-news-2026-06-15.md) - 今日主軸從協議宣告進入履約驗證：U.S.-Iran 確認終戰安排與解除海上封鎖，但仍待 Swiss signing、公開文本及 Hormuz 實際重開；UK 首次出動 armed forces 扣押 Russian shadow-fleet tanker，Swiss voters 則正式否決 10m population cap。Gaza death toll 跨過 73,000，Congo Bundibugyo Ebola 升至 782 cases / 181 deaths 並擴至 Uganda。科技 / AI 沒有符合 24 小時窗的大型新產品發布，重要增量轉向 Canada 對 Anthropic export-control shutdown 的 AI sovereignty 回應，以及 U.S. states targeted AI laws。
+- [2026-06-15 Slides](daily/2026/06/2026-06-15/slides-2026-06-15.html) - 今日新聞網頁版投影片。
 - [2026-06-14 Daily News](daily/2026/06/2026-06-14/daily-news-2026-06-14.md) - 今日焦點是承諾能否落地：U.S. / Pakistan 預測美伊週日簽署，但 Iran 稱仍需更多時間；Lebanon 南部與 Black Sea 能源設施持續受攻擊。EU 啟動 Ukraine、Moldova 入盟談判，Canada 推動中間強權第三條道路。制度治理延伸到美委聯合作戰、Pentagon 中國企業名單、MSF Chad 性剝削報告、Swiss 人口公投與 Kennedy Center 改名爭議。科技 / AI 聚焦 Anthropic 全球停用 Fable 5 / Mythos 5、ChatGPT GPT-5.2 retirement、Copilot code review controls、Smartsheet MCP 與 New York AI 廣告標示。
 - [2026-06-14 Slides](daily/2026/06/2026-06-14/slides-2026-06-14.html) - 今日新聞網頁版投影片。
 - [2026-06-13 Daily News](daily/2026/06/2026-06-13/daily-news-2026-06-13.md) - 今日主軸是 U.S.-Iran final text 取得 Pakistan 第三方背書但核材料、Lebanon 與 sanctions sequencing 仍衝突；SpaceX 以 US$75bn 紀錄 IPO 上市，U.S. 縮減 NATO crisis assets，Ukraine 造成 Crimea 最嚴重 fuel crisis，Paramount-WBD merger 與全球 tariffs 分別跨過暫時法律門檻。亞洲焦點是 Yoon 30 年刑期、Min Zin 被中國拘捕、Thai Princess Bajrakitiyabha 與 David Hockney 逝世。科技 / AI 聚焦 ChatGPT memory controls、Codex Browser developer mode、Anthropic Public Record、TCS regulated-industry deployment 與 YouTube messaging。
