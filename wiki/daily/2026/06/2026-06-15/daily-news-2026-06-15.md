@@ -16,6 +16,8 @@ sources: ["AP News", "OpenAI", "GitHub", "Anthropic", "Google"]
 
 ### 1. 續報｜美伊宣布達成終戰協議，美國授權解除海上封鎖
 
+**發佈時間：** 2026-06-14 17:48:23（Asia/Taipei）
+
 **為何重要：** 這是前一日「可能簽署」之後的實質進展，若瑞士簽署與荷莫茲海峽重開落地，將直接影響能源航運、區域軍事風險與後續核談判。
 
 **關鍵事實：** AP 於 6 月 14 日 17:48（台北時間）首次發布，美國與伊朗表示已達成終戰安排；美方授權終止海上封鎖，預計週五在瑞士簽署，並規劃未來 60 天進行更廣泛核談判。伊朗強調在正式簽署前不會執行，完整文本亦尚未公開。
@@ -27,6 +29,8 @@ sources: ["AP News", "OpenAI", "GitHub", "Anthropic", "Google"]
 **來源：** [AP News](https://apnews.com/article/iran-us-war-ceasefire-deal-e0a9e4e1152ea8da10ea066ad174a23a)
 
 ### 2. 續報｜剛果 Bundibugyo Ebola 升至 782 例、181 死並跨境擴散
+
+**發佈時間：** 2026-06-15 05:00:33（Asia/Taipei）
 
 **為何重要：** 疫情已不只是單點公共衛生事件，而是結合跨境傳播、醫療人員遇襲與缺乏核准疫苗／治療的區域治理危機。
 
@@ -40,6 +44,8 @@ sources: ["AP News", "OpenAI", "GitHub", "Anthropic", "Google"]
 
 ### 3. 續報｜Gaza 衛生部稱死亡總數突破 73,000
 
+**發佈時間：** 2026-06-14 21:23:40（Asia/Taipei）
+
 **為何重要：** 新門檻凸顯即使脆弱停火名義仍在，人道與平民傷亡並未停止，也會持續影響停火合法性、援助進入與國際問責。
 
 **關鍵事實：** Gaza 衛生部將戰爭死亡總數更新為 73,001，稱婦女與兒童約占一半；近期空襲仍造成新增死亡。AP 指出該部門不區分戰鬥員與平民，但其過往數據被聯合國及多個專業機構廣泛引用。
@@ -51,6 +57,8 @@ sources: ["AP News", "OpenAI", "GitHub", "Anthropic", "Google"]
 **來源：** [AP News](https://apnews.com/article/mideast-wars-gaza-death-toll-b9a278a4cf523c412e54f29764ea9060)
 
 ### 4. 續報｜Putin、Zelenskyy 在 G7 前分別與 Trump 通話
+
+**發佈時間：** 2026-06-14 17:45:38（Asia/Taipei）
 
 **為何重要：** 平行通話顯示華府正在 G7 前同時管理俄烏雙方；美國特使預計赴俄，使外交訊號與持續無人機攻擊並存。
 
@@ -64,6 +72,8 @@ sources: ["AP News", "OpenAI", "GitHub", "Anthropic", "Google"]
 
 ### 5. 英國首次出動武裝部隊扣押俄羅斯「影子船隊」油輪
 
+**發佈時間：** 2026-06-14 15:58:20（Asia/Taipei）
+
 **為何重要：** 對規避制裁船隊的處置從名單與港口限制升級為海上實體執法，可能改變歐洲制裁執行尺度並提高與俄羅斯摩擦風險。
 
 **關鍵事實：** 英國與法國合作，在英吉利海峽扣押遭制裁油輪 Smyrtos；英方稱這是首次由武裝部隊執行此類攔截，懷疑該船屬運送俄羅斯石油的影子船隊。
@@ -75,6 +85,8 @@ sources: ["AP News", "OpenAI", "GitHub", "Anthropic", "Google"]
 **來源：** [AP News](https://apnews.com/article/shadow-fleet-russia-uk-starmer-moscow-110f493f617176d64d84e588754db091)
 
 ### 6. 續報｜瑞士選民否決把人口上限設為 1,000 萬
+
+**發佈時間：** 2026-06-14 14:09:27（Asia/Taipei）
 
 **為何重要：** 公投結果避免政府因人口上限而被迫終止移民協議，暫時降低瑞士與歐盟關係受衝擊的風險。
 
@@ -88,6 +100,8 @@ sources: ["AP News", "OpenAI", "GitHub", "Anthropic", "Google"]
 
 ### 7. G7 峰會前日內瓦示威，警方動用催淚瓦斯與水砲
 
+**發佈時間：** 2026-06-14 14:00:09（Asia/Taipei）
+
 **為何重要：** 峰會的戰爭、貿易、氣候與移民議程同時面臨街頭合法性壓力，也測試瑞法跨境維安協調。
 
 **關鍵事實：** 約 20,000 人參與日內瓦示威，其中警方估計約 600 人屬 black bloc；在破壞與衝突後，警方使用催淚瓦斯與水砲。G7 峰會於 6 月 15 至 17 日在鄰近法國舉行。
@@ -99,6 +113,8 @@ sources: ["AP News", "OpenAI", "GitHub", "Anthropic", "Google"]
 **來源：** [AP News](https://apnews.com/article/switzerland-france-g7-protests-trump-17a5c9c179914e58acecfdb791b824c4)
 
 ### 8. 台灣國安局設安全檢舉網頁，向中國公民徵集情報線索
+
+**發佈時間：** 2026-06-14 14:56:36（Asia/Taipei）
 
 **為何重要：** 台海情報競爭從傳統招募延伸到公開數位入口，反映雙方社會接觸增加，也可能引發反情報、資安與人身安全風險。
 
@@ -112,6 +128,8 @@ sources: ["AP News", "OpenAI", "GitHub", "Anthropic", "Google"]
 
 ### 9. 里約兩架直升機空中相撞，6 人死亡
 
+**發佈時間：** 2026-06-14 23:22:38（Asia/Taipei）
+
 **為何重要：** 事故發生在都會區並引發地面火災，將檢驗巴西民航監管、觀光飛行安全與事故識別程序。
 
 **關鍵事實：** 兩架直升機在 Rio de Janeiro 上空相撞，其中一架墜入汽車經銷商並引燃電動車；共 6 人死亡。乘客名單包含音樂人 Oliver Tree，但截點前遺體身分尚未完成確認。
@@ -123,6 +141,8 @@ sources: ["AP News", "OpenAI", "GitHub", "Anthropic", "Google"]
 **來源：** [AP News](https://apnews.com/article/brazil-rio-helicopter-collision-dc3e059c8dcc4fbd84f714dd3c5ab2c8)
 
 ### 10. 密蘇里州跳傘飛機墜毀，機上 12 人全數死亡
+
+**發佈時間：** 2026-06-15 01:59:41（Asia/Taipei）
 
 **為何重要：** 這是高傷亡的美國通用航空事故，將聚焦跳傘營運、飛機維護與飛行安全監管。
 
@@ -138,6 +158,8 @@ sources: ["AP News", "OpenAI", "GitHub", "Anthropic", "Google"]
 
 ### 1. 續報｜加拿大以 Anthropic 模型下架事件主張 AI 供應多元化
 
+**發佈時間：** 2026-06-15 02:15:59（Asia/Taipei）
+
 **為何重要：** 產品存取權已成為國家主權議題。加拿大總理把單一美國供應商依出口管制關閉模型，解讀為政府與企業必須建立替代供應與自主能力的案例。
 
 **關鍵事實：** Mark Carney 在 G7 前表示，Anthropic 依美國指令讓 Fable 5 與 Mythos 5 在海外離線，證明加拿大需要多元化 AI 供應。這是 6 月 14 日已收錄模型停用事件的政策層新發展，而非重複產品公告。
@@ -149,6 +171,8 @@ sources: ["AP News", "OpenAI", "GitHub", "Anthropic", "Google"]
 **來源：** [AP News](https://apnews.com/article/carney-artificial-intelligence-g7-summit-anthropic-mythos-cb081633bb4fca6ac97dcdaea0354de7)
 
 ### 2. 美國各州持續推進針對性 AI 法律，挑戰聯邦優先框架
+
+**發佈時間：** 2026-06-14 17:07:26（Asia/Taipei）
 
 **為何重要：** AI 監管正在由廣泛模型法轉向兒少聊天機器人、雇主使用與災難風險等具體用途，產品團隊可能面臨州別合規矩陣。
 
