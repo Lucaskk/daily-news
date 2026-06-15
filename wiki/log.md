@@ -1,5 +1,11 @@
 # Knowledge Base Log
 
+## [2026-06-15] update | Show per-item publication times
+
+- Added the exact Asia/Taipei publication timestamp directly below every global and technology / AI headline in the 2026-06-15 report and slide deck.
+- Preserved each original UTC timestamp in the slide deck's semantic `<time datetime>` markup.
+- Updated `wiki/daily/README.md` so future daily reports and decks use the same publication-time format.
+
 ## [2026-06-15] ingest | Daily global and tech AI news
 
 - Created `wiki/daily/2026/06/2026-06-15/daily-news-2026-06-15.md` with exactly 10 global items and a separate technology / AI policy section.
