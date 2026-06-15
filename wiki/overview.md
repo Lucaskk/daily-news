@@ -2,7 +2,7 @@
 title: "Overview"
 type: overview
 created: 2026-05-24
-updated: 2026-06-14
+updated: 2026-06-15
 status: seed
 tags: [overview]
 sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
@@ -30,6 +30,10 @@ sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
 
 ## Latest Daily News
 
+- [2026-06-15 Daily News](daily/2026/06/2026-06-15/daily-news-2026-06-15.md) - 今日從「是否有共同協議」進入「能否簽署與執行」：U.S. and Iran confirmed an agreement to end the war and reopen Hormuz, but Iran says implementation waits for Swiss signing and the text remains unavailable. Europe also moved from sanctions lists to physical enforcement as UK armed forces detained tanker Smyrtos, while Switzerland's 10m population-cap referendum ended with nearly 55% opposed. Parallel G7 diplomacy did not reduce ground risks: Gaza's reported death toll reached 73,001 and Congo's Bundibugyo Ebola outbreak reached 782 cases / 181 deaths with spread into Uganda. AI / tech had no qualifying major product launch in the strict window; the meaningful shift was Canada treating Anthropic's export-control shutdown as an AI-sovereignty warning and U.S. states pursuing targeted use-specific laws.
+- [2026-06-15 Slides](daily/2026/06/2026-06-15/slides-2026-06-15.html) - 今日新聞網頁版投影片。
+- [2026-06-14 Daily News](daily/2026/06/2026-06-14/daily-news-2026-06-14.md) - 今日主軸從「是否有協議」轉為「承諾是否落地」：U.S. / Pakistan 宣稱美伊可能在週日電子簽署，但 Iran 表示仍需更多時間，且 Hormuz drones、uranium、sanctions 與 Lebanon 條款仍未形成公開共同文本。Lebanon 軍方撤出 Kfar Tebnit、Ukraine 攻擊 Black Sea Volna terminal，顯示戰場尚未配合外交降溫。EU 啟動 Ukraine / Moldova 入盟談判，Canada 則主張與 Europe 組成中間強權第三條道路。科技 / AI 的共同焦點是 access governance：Anthropic 因 U.S. directive 全球停用 Fable 5 / Mythos 5，ChatGPT 退休 GPT-5.2，GitHub 強化 Copilot review controls，Smartsheet 以 MCP 同接三大助理，New York 要求 AI 廣告人物揭露。
+- [2026-06-14 Slides](daily/2026/06/2026-06-14/slides-2026-06-14.html) - 今日新聞網頁版投影片。
 - [2026-06-13 Daily News](daily/2026/06/2026-06-13/daily-news-2026-06-13.md) - 今日從「協議是否接近」進入「是否存在共同 final text」的驗證階段：Pakistan 稱 U.S.-Iran wording 已同意，Iran 也說協議從未如此接近，但 nuclear material、Lebanon、armed groups 與 sanctions sequencing 仍有相斥版本。安全結構同時改變：U.S. 將從 NATO crisis plan 縮減 carrier、submarine、fighter、refueling 與 drone assets；Ukraine 則透過 refinery 與 Crimea land-corridor attacks 製造 2014 年以來最嚴重 fuel crisis。SpaceX 首日市值約 US$2.1tn 並讓 Elon Musk 成為估計首位 trillionaire；Paramount-WBD merger 取得 DOJ clearance，10% worldwide tariffs 也暫獲法院放行。Yoon drone verdict、Min Zin detention、Thai Princess Bajrakitiyabha 與 David Hockney 逝世補足亞洲法治與公共文化。AI / tech 轉向 memory deletion / correction、Codex Browser developer inspection、AI public-opinion baselines、regulated-industry Claude deployment 與 private video sharing。
 - [2026-06-13 Slides](daily/2026/06/2026-06-13/slides-2026-06-13.html) - 今日新聞網頁版投影片。
 - [2026-06-12 Daily News](daily/2026/06/2026-06-12/daily-news-2026-06-12.md) - 今日從戰場升級轉入協議可信度與制度成本：Trump 取消新 Iran strikes 並宣稱數日內可簽 MOU，但 Iran 表示尚無 final deal，Israel 也不是協議方。UAE 退出 OPEC / OPEC+，ECB 將利率升至 2.25%，World Bank 把 global growth 下修到 2.5%。NOAA 正式確認 El Nino 且有 63% 機率達歷史極強等級；UK defense secretary 辭職、全球強迫流離失所仍達 117.8m、Brazil Amazon deforestation 顯著下降、UN 確認 Pakistan airstrikes 的 Afghan civilian deaths，Milan U.S. Consulate 工程則出現 labor-exploitation probe。AI / tech 進入執行層：Visa 讓 ChatGPT agents 付款，GitHub Agentic Workflows 進入 preview 並改用 `GITHUB_TOKEN`，Anthropic 推出 Claude Corps，IBM-ServiceNow 整合 enterprise data、legacy modernization 與 autonomous operations。
