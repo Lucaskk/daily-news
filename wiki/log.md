@@ -1,5 +1,12 @@
 # Knowledge Base Log
 
+## [2026-06-15] ingest | Daily global and tech AI news
+
+- Created `wiki/daily/2026/06/2026-06-15/daily-news-2026-06-15.md` with exactly 10 global items and a separate technology / AI policy section.
+- Created `source-notes-2026-06-15.md` with the exact 24-hour window, per-item publication basis, prior-capture dates, continuations, and rejected duplicates.
+- Created `slides-2026-06-15.html` with expandable per-item cards, complete source URLs, image attribution, and keyboard navigation.
+- Updated `wiki/daily/latest-slides.html`, `wiki/index.md`, `wiki/overview.md`, and the root Pages redirect.
+
 ## [2026-05-24] init | Knowledge base scaffold
 
 - Created the initial raw/wiki/schema structure.
