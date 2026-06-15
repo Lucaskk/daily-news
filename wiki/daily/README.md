@@ -1,7 +1,7 @@
 ---
 title: "每日全球與科技 AI 新聞產製規則"
 type: guidelines
-updated: 2026-06-14
+updated: 2026-06-15
 status: active
 tags: [daily-news, rules, deduplication, provenance]
 ---
@@ -71,6 +71,7 @@ tags: [daily-news, rules, deduplication, provenance]
 
 - 標題使用繁體中文完整句，清楚交代主體、動作與結果；公司、產品與模型正式名稱可保留英文。
 - 不使用只有關鍵字的片語、抽象口號或中英混雜且無法獨立理解的標題。
+- 每則全球新聞與科技／AI 新聞都必須在標題摘要正下方顯示首次可靠發佈時間，統一換算為 `Asia/Taipei`，格式為 `發佈時間｜YYYY-MM-DD HH:mm:ss（Asia/Taipei）`。簡報 HTML 應同時保留原始 UTC ISO 8601 值於 `<time datetime="...">`。
 - 每個展開項目必須包含核心事件，並至少補充背景、影響、關鍵數字或不確定性中的一項。
 - 除首頁來源索引外，每個新聞展開內容在來源區塊前，目標至少 80 個非空白字元；不得以重複句或無資訊文字湊字數。
 
@@ -84,6 +85,7 @@ tags: [daily-news, rules, deduplication, provenance]
 ## 八、發布前驗證
 
 - 全球新聞恰好 10 則，科技／AI 另列。
+- 日報與簡報中的每則全球新聞、科技／AI 新聞均顯示 Asia/Taipei 發佈時間，且與來源筆記記錄一致。
 - 每則新聞的事件或重大新進展均落在研究截點前 24 小時內；來源筆記已記錄視窗與時間依據。
 - 不得以文章更新時間、重新刊登或仍在熱門榜單，掩蓋事件已超過 24 小時。
 - 搜尋跨日相同來源網址、相似標題、相同實體與事件描述；所有命中都需人工判讀。
