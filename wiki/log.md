@@ -1,5 +1,19 @@
 # Knowledge Base Log
 
+## [2026-06-17] ingest | Daily global and tech AI news
+
+- Created `wiki/daily/2026/06/2026-06-17/daily-news-2026-06-17.md` with exactly 10 global items and a separate technology / AI product section.
+- Created `source-notes-2026-06-17.md` with the exact 24-hour window, per-item publication basis, continuation labels, prior-capture dates, and excluded duplicates.
+- Created `slides-2026-06-17.html` with expandable global news, technology, follow-up, and source cards; each expanded card ends with complete original source URLs.
+- Updated `wiki/daily/latest-slides.html`, `wiki/index.md`, `wiki/overview.md`, and the root Pages redirect.
+
+## [2026-06-16] ingest | Daily global and tech AI news
+
+- Created `wiki/daily/2026/06/2026-06-16/daily-news-2026-06-16.md` with exactly 10 global items and a separate technology / AI product section.
+- Created `source-notes-2026-06-16.md` with the exact 24-hour window, per-item publication basis, continuation labels, prior-capture dates, and rejected duplicates.
+- Created `slides-2026-06-16.html` with expandable news, statistic, technology, follow-up, and source cards; each expanded card ends with complete original source URLs.
+- Updated `wiki/daily/latest-slides.html`, `wiki/index.md`, `wiki/overview.md`, and the root Pages redirect.
+
 ## [2026-06-15] update | Show per-item publication times
 
 - Added the exact Asia/Taipei publication timestamp directly below every global and technology / AI headline in the 2026-06-15 report and slide deck.

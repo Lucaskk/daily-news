@@ -1,0 +1,403 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>2026-06-17 每日全球與科技 AI 新聞</title>
+  <!-- Background images:
+    Title/news: Unsplash photo 1495020689067-958852a7765e, https://unsplash.com/photos/1495020689067-958852a7765e
+    World/diplomacy: Unsplash photo 1451187580459-43490279c0fa, https://unsplash.com/photos/1451187580459-43490279c0fa
+    Technology: Unsplash photo 1518779578993-ec3579fee39f, https://unsplash.com/photos/1518779578993-ec3579fee39f
+    Follow-up/control room: Unsplash photo 1516321318423-f06f85e504b3, https://unsplash.com/photos/1516321318423-f06f85e504b3
+  -->
+  <style>
+    :root {
+      --ink: #17202a;
+      --muted: #52616f;
+      --paper: rgba(255,255,255,.91);
+      --line: rgba(23,32,42,.16);
+      --accent: #0f766e;
+      --accent2: #7c3aed;
+      --warn: #b45309;
+      --steel: #334155;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; min-height: 100%; }
+    body {
+      overflow: hidden;
+      color: var(--ink);
+      background: #e7ecea;
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    a { color: #0f766e; word-break: break-all; }
+    .deck { position: relative; width: 100vw; height: 100vh; overflow: hidden; }
+    .slide {
+      position: absolute;
+      inset: 0;
+      display: none;
+      overflow-y: auto;
+      padding: clamp(18px, 3.8vw, 50px);
+      isolation: isolate;
+    }
+    .slide.active { display: block; }
+    .slide::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: -2;
+      background-image: var(--bg);
+      background-size: cover;
+      background-position: center;
+      opacity: .28;
+      transform: scale(1.02);
+    }
+    .slide::after {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      background: linear-gradient(90deg, rgba(248,250,249,.97), rgba(248,250,249,.82));
+    }
+    .wrap { max-width: 1180px; margin: 0 auto; padding-bottom: 86px; }
+    h1, h2 { margin: 0; line-height: 1.06; letter-spacing: 0; }
+    h1 { max-width: 960px; font-size: clamp(2.2rem, 7vw, 5.5rem); }
+    h2 { font-size: clamp(1.85rem, 4.6vw, 3.55rem); }
+    .eyebrow {
+      margin: 0 0 12px;
+      color: var(--accent);
+      font-weight: 850;
+      font-size: .78rem;
+      text-transform: uppercase;
+      letter-spacing: 0;
+    }
+    .lead {
+      max-width: 960px;
+      margin: 18px 0 0;
+      color: #273746;
+      font-size: clamp(1rem, 1.9vw, 1.24rem);
+      line-height: 1.66;
+    }
+    .pills { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 24px; }
+    .pill {
+      min-height: 34px;
+      padding: 7px 11px;
+      border: 1px solid rgba(15,118,110,.28);
+      border-radius: 8px;
+      background: rgba(255,255,255,.78);
+      color: #134e4a;
+      font-size: .9rem;
+      font-weight: 760;
+    }
+    .top {
+      display: grid;
+      grid-template-columns: minmax(0, .9fr) minmax(290px, .52fr);
+      gap: 24px;
+      align-items: start;
+      margin-bottom: 18px;
+    }
+    .note {
+      padding: 16px 18px;
+      border-left: 5px solid var(--accent);
+      border-radius: 8px;
+      background: rgba(255,255,255,.82);
+      line-height: 1.58;
+      box-shadow: 0 10px 24px rgba(23,32,42,.1);
+    }
+    .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 13px; }
+    .grid.three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    details {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--paper);
+      box-shadow: 0 10px 24px rgba(23,32,42,.11);
+      overflow: hidden;
+    }
+    summary {
+      display: grid;
+      grid-template-columns: 42px 1fr;
+      gap: 10px;
+      min-height: 98px;
+      padding: 14px;
+      cursor: pointer;
+      list-style: none;
+    }
+    summary::-webkit-details-marker { display: none; }
+    .rank {
+      width: 34px;
+      height: 34px;
+      display: grid;
+      place-items: center;
+      border-radius: 8px;
+      color: white;
+      background: var(--accent);
+      font-weight: 900;
+      font-size: .9rem;
+    }
+    .tech .rank { background: var(--accent2); }
+    .follow .rank { background: var(--steel); }
+    .title { display: block; font-weight: 850; line-height: 1.35; }
+    time { display: block; margin-top: 7px; color: var(--muted); font-size: .82rem; line-height: 1.36; }
+    .body { padding: 0 15px 16px 66px; font-size: .94rem; line-height: 1.62; color: #27343f; }
+    .body p { margin: 0 0 9px; }
+    .label { color: #0f4c45; font-weight: 850; }
+    .src {
+      margin-top: 10px;
+      padding-top: 10px;
+      border-top: 1px solid var(--line);
+      color: #3d4b55;
+      font-size: .86rem;
+    }
+    .controls {
+      position: fixed;
+      left: 50%;
+      bottom: 15px;
+      z-index: 10;
+      transform: translateX(-50%);
+      display: grid;
+      grid-template-columns: 42px 108px 42px;
+      gap: 9px;
+      align-items: center;
+      padding: 8px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: rgba(255,255,255,.92);
+      box-shadow: 0 16px 38px rgba(23,32,42,.2);
+    }
+    button {
+      width: 42px;
+      height: 38px;
+      border: 0;
+      border-radius: 8px;
+      background: var(--accent);
+      color: white;
+      font-size: 1.15rem;
+      font-weight: 900;
+      cursor: pointer;
+    }
+    button:disabled { opacity: .4; cursor: not-allowed; }
+    #count { text-align: center; font-weight: 850; color: #24313c; }
+    @media (max-width: 860px) {
+      body { overflow: auto; }
+      .deck { height: 100dvh; }
+      .slide { padding: 20px; }
+      .top, .grid, .grid.three { grid-template-columns: 1fr; }
+      .body { padding-left: 15px; }
+      summary { min-height: 86px; }
+    }
+  </style>
+</head>
+<body>
+<main class="deck">
+  <section class="slide active" style="--bg:url('https://images.unsplash.com/photo-1495020689067-958852a7765e?auto=format&fit=crop&w=1800&q=80')">
+    <div class="wrap">
+      <p class="eyebrow">Daily global and technology AI briefing</p>
+      <h1>2026-06-17 每日全球與科技 AI 新聞</h1>
+      <p class="lead">美伊停戰框架進入條款驗證，G7 轉回 Ukraine 與 Russian oil sanctions，歐洲同步處理 tariff、UK-Russia 海上事件與 post-Brexit reset。科技焦點轉向 SpaceX-Cursor、Android 17、GitHub platform changes 與 Mobileye robotaxi。</p>
+      <div class="pills">
+        <span class="pill">研究截點｜2026-06-17 08:00:52（Asia/Taipei）</span>
+        <span class="pill">時間窗｜2026-06-16 08:00:52 至 2026-06-17 08:00:52</span>
+        <span class="pill">全球新聞｜10 則</span>
+        <span class="pill">科技／AI｜5 則</span>
+      </div>
+      <p class="lead">鍵盤可用 ← →、PageUp / PageDown、Home / End 切換；每張卡片可展開查看細節與完整來源 URL。</p>
+    </div>
+  </section>
+
+  <section class="slide" style="--bg:url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1800&q=80')">
+    <div class="wrap">
+      <div class="top">
+        <div>
+          <p class="eyebrow">World 1-5</p>
+          <h2>條款、峰會與安全事故</h2>
+          <p class="lead">續報只收錄本 24 小時窗內有新條件、新決策或新事故的主線。</p>
+        </div>
+        <div class="note">美伊協議從「是否簽」轉為「條款是否能被 Israel、G7 與國會接受」。同時，海峽、空軍基地與跨大西洋貿易都出現新的制度壓力點。</div>
+      </div>
+      <div class="grid">
+        <details>
+          <summary><span class="rank">1</span><span><span class="title">續報｜伊朗稱美伊和平協議須以以色列撤出 Lebanon 為條件</span><time datetime="2026-06-16T07:43:20Z">發佈時間｜2026-06-16 15:43:20（Asia/Taipei）</time></span></summary>
+          <div class="body"><p><span class="label">核心事件：</span>Iran 外長 Abbas Araghchi 說，若 Israel 不撤出本輪戰爭占領的 Lebanon 領土，戰爭不能算完全結束。</p><p><span class="label">影響：</span>2026-06-15 與 2026-06-16 已收錄的美伊協議主線，今日新增一個可能讓協議卡住的公開條件。</p><p><span class="label">不確定性：</span>Israel 先前已排除此條件，White House MOU 仍未公開。</p><p class="src">來源｜AP News｜<a href="https://apnews.com/article/iran-us-war-israel-lebanon-oil-june-16-2026-d79458506c46e3f4a78aef0f9d8b9250">https://apnews.com/article/iran-us-war-israel-lebanon-oil-june-16-2026-d79458506c46e3f4a78aef0f9d8b9250</a></p><p class="src">來源｜The Guardian｜<a href="https://www.theguardian.com/world/2026/jun/16/irans-top-envoy-says-peace-deal-with-the-us-dependent-on-israels-withdrawal-from-lebanon">https://www.theguardian.com/world/2026/jun/16/irans-top-envoy-says-peace-deal-with-the-us-dependent-on-israels-withdrawal-from-lebanon</a></p></div>
+        </details>
+        <details>
+          <summary><span class="rank">2</span><span><span class="title">續報｜G7 轉回 Ukraine，Trump 暗示可迅速恢復俄油制裁</span><time datetime="2026-06-16T04:05:32Z">發佈時間｜2026-06-16 12:05:32（Asia/Taipei）</time></span></summary>
+          <div class="body"><p><span class="label">核心事件：</span>G7 與夥伴國討論 Russia-Ukraine war，Trump 稱可能恢復對 Russian oil shipments 的制裁。</p><p><span class="label">影響：</span>這是 2026-06-16 G7 開幕續報，新增 Ukraine 防空、Patriot 生產與 sanctions execution 層面。</p><p><span class="label">不確定性：</span>峰會談話不等於正式制裁令，仍待 summit statement 與行政命令。</p><p class="src">來源｜AP News｜<a href="https://apnews.com/article/g7-iran-ukraine-trump-macron-zelenskyy-e7fad4eabaae8181f70fa5a0b9e499b2">https://apnews.com/article/g7-iran-ukraine-trump-macron-zelenskyy-e7fad4eabaae8181f70fa5a0b9e499b2</a></p><p class="src">來源｜The Guardian live｜<a href="https://www.theguardian.com/world/live/2026/jun/16/g7-world-leaders-ukraine-russia-war-iran-trump-zelenskyy-putin-eu-france-eu-europe-latest-news-updates">https://www.theguardian.com/world/live/2026/jun/16/g7-world-leaders-ukraine-russia-war-iran-trump-zelenskyy-putin-eu-france-eu-europe-latest-news-updates</a></p></div>
+        </details>
+        <details>
+          <summary><span class="rank">3</span><span><span class="title">European Parliament 批准 Trump 關稅協議</span><time datetime="2026-06-16T16:00:27Z">發佈時間｜2026-06-17 00:00:27（Asia/Taipei）</time></span></summary>
+          <div class="body"><p><span class="label">核心事件：</span>European Parliament 批准 EU-US tariff deal，避免 EU exports 因 July 4 deadline 面臨更高稅率。</p><p><span class="label">關鍵數字：</span>美方對多數 EU exports 維持 15% tariff；EU 對部分美國商品降至 0%。</p><p><span class="label">不確定性：</span>若美方鋼鋁措施持續，EU 可能於 2026 年底前重新啟動反制。</p><p class="src">來源｜The Guardian｜<a href="https://www.theguardian.com/world/2026/jun/16/european-parliament-finally-approves-trump-tariff-deal">https://www.theguardian.com/world/2026/jun/16/european-parliament-finally-approves-trump-tariff-deal</a></p></div>
+        </details>
+        <details>
+          <summary><span class="rank">4</span><span><span class="title">續報｜Russian frigate 在英吉利海峽向 British yacht 開警告火</span><time datetime="2026-06-16T15:34:00Z">發佈時間｜2026-06-16 23:34:00（Asia/Taipei）</time></span></summary>
+          <div class="body"><p><span class="label">核心事件：</span>Russian frigate Admiral Grigorovich 向 British yacht Bright Future 開警告火。</p><p><span class="label">續報依據：</span>2026-06-15 已收錄 UK / France 扣押 Russian shadow-fleet tanker Smyrtos；今日是不同的海上安全事件。</p><p><span class="label">不確定性：</span>Russian account 稱 yacht 航向危險，船上 British couple 否認收到警告或構成碰撞路徑。</p><p class="src">來源｜The Guardian｜<a href="https://www.theguardian.com/uk-news/2026/jun/16/russian-frigate-fires-warning-shots-at-british-yacht-in-channel-reports">https://www.theguardian.com/uk-news/2026/jun/16/russian-frigate-fires-warning-shots-at-british-yacht-in-channel-reports</a></p></div>
+        </details>
+        <details>
+          <summary><span class="rank">5</span><span><span class="title">美國 B-52 在 Edwards Air Force Base 附近墜毀，8 人死亡</span><time datetime="2026-06-16T08:32:45Z">發佈時間｜2026-06-16 16:32:45（Asia/Taipei）</time></span></summary>
+          <div class="body"><p><span class="label">核心事件：</span>B-52 test mission 於 Southern California Mojave Desert 墜毀，Al Jazeera 與 AP 均報導 8 人死亡。</p><p><span class="label">影響：</span>B-52 是美軍長程戰略轟炸能力核心，事故會牽動老舊機隊維護與測試程序。</p><p><span class="label">不確定性：</span>事故原因未確認，後續需看 Air Force 調查。</p><p class="src">來源｜Al Jazeera｜<a href="https://www.aljazeera.com/news/2026/6/16/us-b-52-bomber-crashes-in-california-what-we-know">https://www.aljazeera.com/news/2026/6/16/us-b-52-bomber-crashes-in-california-what-we-know</a></p><p class="src">來源｜AP News｜<a href="https://apnews.com/article/b52-stratofortress-crash-california-2cf849e75640a2e0b98ab94cc4a14430">https://apnews.com/article/b52-stratofortress-crash-california-2cf849e75640a2e0b98ab94cc4a14430</a></p></div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide" style="--bg:url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1800&q=80')">
+    <div class="wrap">
+      <div class="top">
+        <div>
+          <p class="eyebrow">World 6-10</p>
+          <h2>司法、移民與制度重啟</h2>
+          <p class="lead">第二組全球新聞聚焦公共安全、民主問責、移民治理、跨境犯罪與 EU-UK 制度重建。</p>
+        </div>
+        <div class="note">這些事件不像美伊協議一樣集中在單一戰場，但共同指向國家能力：安全防護、法院權威、邊境制度、網路犯罪治理與跨境規則協調。</div>
+      </div>
+      <div class="grid">
+        <details>
+          <summary><span class="rank">6</span><span><span class="title">FBI 稱已阻止針對 White House UFC 活動的攻擊計畫</span><time datetime="2026-06-16T12:00:47Z">發佈時間｜2026-06-16 20:00:47（Asia/Taipei）</time></span></summary>
+          <div class="body"><p><span class="label">核心事件：</span>FBI Director Kash Patel 表示 authorities disrupted planned drone and gun attacks targeting a White House UFC event。</p><p><span class="label">影響：</span>政治化大型活動的安全風險擴張到 drones、firearms 與空域管制。</p><p><span class="label">不確定性：</span>動機、攻擊能力、被捕人數與起訴內容仍待 court filings。</p><p class="src">來源｜AP News｜<a href="https://apnews.com/article/fbi-trump-ufc-white-house-b6a41e2e8fc7feb84440581c2535b000">https://apnews.com/article/fbi-trump-ufc-white-house-b6a41e2e8fc7feb84440581c2535b000</a></p></div>
+        </details>
+        <details>
+          <summary><span class="rank">7</span><span><span class="title">Brazil Supreme Court 判 Eduardo Bolsonaro 入獄 4 年多</span><time datetime="2026-06-16T21:44:54Z">發佈時間｜2026-06-17 05:44:54（Asia/Taipei）</time></span></summary>
+          <div class="body"><p><span class="label">核心事件：</span>Eduardo Bolsonaro 被判 4 年 2 個月，罪名涉及尋求美方干預其父 Jair Bolsonaro 的 coup trial。</p><p><span class="label">影響：</span>Brazil 的 2022 coup plot 問責延伸到跨國 lobbying 與 sanctions pressure。</p><p><span class="label">不確定性：</span>Eduardo Bolsonaro 居住在美國，服刑、上訴與引渡路徑未明。</p><p class="src">來源｜The Guardian｜<a href="https://www.theguardian.com/world/2026/jun/16/brazilian-court-convicts-eduardo-bolsonaro-us-help-father-jair">https://www.theguardian.com/world/2026/jun/16/brazilian-court-convicts-eduardo-bolsonaro-us-help-father-jair</a></p></div>
+        </details>
+        <details>
+          <summary><span class="rank">8</span><span><span class="title">Sweden 通過移民收緊法，居留可因「良好行為」條件被撤銷</span><time datetime="2026-06-16T04:00:44Z">發佈時間｜2026-06-16 12:00:44（Asia/Taipei）</time></span></summary>
+          <div class="body"><p><span class="label">核心事件：</span>Swedish parliament 通過 good-behaviour law 與部分 public sector reporting obligation。</p><p><span class="label">影響：</span>移民治理從入境與庇護審查擴張到居留期間行為判斷。</p><p><span class="label">不確定性：</span>rights groups 擔心 racial profiling 與公共服務迴避，政府則稱可上訴且有豁免。</p><p class="src">來源｜The Guardian｜<a href="https://www.theguardian.com/world/2026/jun/16/sweden-votes-to-back-laws-reinforcing-its-immigration-crackdown">https://www.theguardian.com/world/2026/jun/16/sweden-votes-to-back-laws-reinforcing-its-immigration-crackdown</a></p></div>
+        </details>
+        <details>
+          <summary><span class="rank">9</span><span><span class="title">Sri Lanka 成為東南亞詐騙網絡外移的新據點</span><time datetime="2026-06-16T00:27:46Z">發佈時間｜2026-06-16 08:27:46（Asia/Taipei）</time></span></summary>
+          <div class="body"><p><span class="label">核心事件：</span>Guardian 報導 scam networks 因簽證、SIM、internet connection 與辦公空間條件，轉向 Sri Lanka。</p><p><span class="label">影響：</span>跨境詐騙、人口販運與金融平台風險正在從 Cambodia / Myanmar 壓力區外移。</p><p><span class="label">不確定性：</span>犯罪網絡隱蔽，實際規模與官方執法能力難以精確衡量。</p><p class="src">來源｜The Guardian｜<a href="https://www.theguardian.com/world/2026/jun/16/sri-lanka-alarming-rise-cybercrime-scam-networks-south-east-asia-cambodia-myanmar-china">https://www.theguardian.com/world/2026/jun/16/sri-lanka-alarming-rise-cybercrime-scam-networks-south-east-asia-cambodia-myanmar-china</a></p></div>
+        </details>
+        <details>
+          <summary><span class="rank">10</span><span><span class="title">EU 與 UK 宣布 7 月 Brussels 峰會，重啟 post-Brexit reset</span><time datetime="2026-06-16T17:02:33Z">發佈時間｜2026-06-17 01:02:33（Asia/Taipei）</time></span></summary>
+          <div class="body"><p><span class="label">核心事件：</span>European Council President António Costa 確認 EU-UK summit 於 7 月 22 日在 Brussels 舉行。</p><p><span class="label">影響：</span>food / farm goods standards、youth mobility、emissions trading alignment 可能重新調整 Brexit 後摩擦。</p><p><span class="label">不確定性：</span>summit 日期不是協議本身，youth mobility 與 tuition reciprocity 仍是談判阻力。</p><p class="src">來源｜The Guardian｜<a href="https://www.theguardian.com/world/2026/jun/16/eu-uk-announce-summit-reset-post-brexit-relations">https://www.theguardian.com/world/2026/jun/16/eu-uk-announce-summit-reset-post-brexit-relations</a></p></div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide" style="--bg:url('https://images.unsplash.com/photo-1518779578993-ec3579fee39f?auto=format&fit=crop&w=1800&q=80')">
+    <div class="wrap">
+      <div class="top">
+        <div>
+          <p class="eyebrow">Technology / AI</p>
+          <h2>平台、產品與 AI 併購</h2>
+          <p class="lead">本日科技主線不是單一模型發布，而是平台入口、收費方式、OS 級 AI 與 autonomous operations 的結構變化。</p>
+        </div>
+        <div class="note">OpenAI Ona 與 ChatGPT Go 都被排除，因為首發落在本窗外；GitHub 官方只公開日期的項目已在卡片內標明時間限制。</div>
+      </div>
+      <div class="grid">
+        <details class="tech">
+          <summary><span class="rank">T1</span><span><span class="title">SpaceX 同意以 600 億美元股票交易收購 Cursor</span><time datetime="2026-06-16T11:21:41Z">發佈時間｜2026-06-16 19:21:41（Asia/Taipei）</time></span></summary>
+          <div class="body"><p><span class="label">核心事件：</span>TechCrunch 報導 SpaceX 同意以 stock deal acquire AI coding startup Cursor，預計 Q3 2026 close。</p><p><span class="label">影響：</span>AI coding tools 從 developer productivity layer 進入 SpaceX / xAI 的 enterprise AI strategy。</p><p><span class="label">不確定性：</span>監管、股權交換、Cursor 客戶信任與 xAI 爭議都可能影響成交後整合。</p><p class="src">來源｜TechCrunch｜<a href="https://techcrunch.com/2026/06/16/spacex-to-acquire-cursor-for-60b-in-stock-days-after-blockbuster-ipo/">https://techcrunch.com/2026/06/16/spacex-to-acquire-cursor-for-60b-in-stock-days-after-blockbuster-ipo/</a></p></div>
+        </details>
+        <details class="tech">
+          <summary><span class="rank">T2</span><span><span class="title">Google 推出 Android 17，加入 Gemini 與多工更新</span><time datetime="2026-06-16T18:00:00Z">發佈時間｜2026-06-17 02:00:00（Asia/Taipei）</time></span></summary>
+          <div class="body"><p><span class="label">核心事件：</span>Android 17 rollout to Pixel devices，新增 Bubbles、screen reaction recording、foldable gaming mode 與更強 privacy / security controls。</p><p><span class="label">影響：</span>Gemini 與 OS 功能整合更深，會影響 mobile AI assistant 的工作流入口。</p><p><span class="label">不確定性：</span>非 Pixel 裝置 rollout 時程仍取決於 OEM 與電信商。</p><p class="src">來源｜Google Blog｜<a href="https://blog.google/products-and-platforms/platforms/android/android-17-features/">https://blog.google/products-and-platforms/platforms/android/android-17-features/</a></p><p class="src">來源｜TechCrunch｜<a href="https://techcrunch.com/2026/06/16/android-17-launches-with-new-multitasking-tools-as-google-expands-gemini-features/">https://techcrunch.com/2026/06/16/android-17-launches-with-new-multitasking-tools-as-google-expands-gemini-features/</a></p></div>
+        </details>
+        <details class="tech">
+          <summary><span class="rank">T3</span><span><span class="title">GitHub Code Quality 7 月 20 日 GA 並開始商業化</span><time datetime="2026-06-16T04:00:00Z">發佈時間｜2026-06-16 12:00:00（Asia/Taipei；官方僅公開日期）</time></span></summary>
+          <div class="body"><p><span class="label">核心事件：</span>GitHub Code Quality 從 public preview 轉為 purchasable product，價格為每 active committer 每月 10 美元，加 AI usage billing。</p><p><span class="label">影響：</span>Copilot code review、AI-assisted detection、Copilot Autofix 的企業成本需要重新估算。</p><p><span class="label">不確定性：</span>官方未公開精確首發時間；帳單影響取決於 repository enablement 與 AI capability usage。</p><p class="src">來源｜GitHub Changelog｜<a href="https://github.blog/changelog/2026-06-16-github-code-quality-generally-available-july-20-2026">https://github.blog/changelog/2026-06-16-github-code-quality-generally-available-july-20-2026</a></p></div>
+        </details>
+        <details class="tech">
+          <summary><span class="rank">T4</span><span><span class="title">GitHub Models 停止向新客戶開放</span><time datetime="2026-06-16T04:00:00Z">發佈時間｜2026-06-16 12:00:00（Asia/Taipei；官方僅公開日期）</time></span></summary>
+          <div class="body"><p><span class="label">核心事件：</span>New organizations and enterprises without existing GitHub Models usage no longer have access。</p><p><span class="label">影響：</span>developer model access path 可能收斂到 Azure AI Foundry。</p><p><span class="label">不確定性：</span>既有 customers full retirement timeline 尚未公布。</p><p class="src">來源｜GitHub Changelog｜<a href="https://github.blog/changelog/2026-06-16-github-models-is-no-longer-available-to-new-customers/">https://github.blog/changelog/2026-06-16-github-models-is-no-longer-available-to-new-customers/</a></p></div>
+        </details>
+        <details class="tech">
+          <summary><span class="rank">T5</span><span><span class="title">Mobileye 宣布 2027 年在美國啟動自營 robotaxi service</span><time datetime="2026-06-16T17:50:23Z">發佈時間｜2026-06-17 01:50:23（Asia/Taipei）</time></span></summary>
+          <div class="body"><p><span class="label">核心事件：</span>Mobileye plans to launch a robotaxi service in a U.S. city in 2027，initial fleet 100 vehicles。</p><p><span class="label">影響：</span>Mobileye 從 AV supplier 轉為 operator，將直接承擔營運、保險、安全與 consumer experience 風險。</p><p><span class="label">不確定性：</span>城市、車型、監管許可與既有客戶競合關係尚未公開。</p><p class="src">來源｜TechCrunch｜<a href="https://techcrunch.com/2026/06/16/mobileye-us-robotaxi-launch-will-put-it-on-both-sides-of-the-av-business/">https://techcrunch.com/2026/06/16/mobileye-us-robotaxi-launch-will-put-it-on-both-sides-of-the-av-business/</a></p></div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide" style="--bg:url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1800&q=80')">
+    <div class="wrap">
+      <div class="top">
+        <div>
+          <p class="eyebrow">Follow-up</p>
+          <h2>下一輪追蹤</h2>
+          <p class="lead">只有出現正式文件、執法命令、事故調查或產品可用性變化，才應作為續報重列。</p>
+        </div>
+        <div class="note">本頁追蹤卡也可展開；每張卡片底部保留自己的來源 URL。</div>
+      </div>
+      <div class="grid">
+        <details class="follow">
+          <summary><span class="rank">F1</span><span><span class="title">美伊 MOU 是否包含 Israel / Lebanon 條款</span><time datetime="2026-06-16T07:43:20Z">發佈時間｜2026-06-16 15:43:20（Asia/Taipei）</time></span></summary>
+          <div class="body"><p>若 Switzerland signing 公布文本，需比對 Iran 條件、White House talking points 與 Israel rejection 是否相容。</p><p class="src">來源｜AP News｜<a href="https://apnews.com/article/iran-us-war-israel-lebanon-oil-june-16-2026-d79458506c46e3f4a78aef0f9d8b9250">https://apnews.com/article/iran-us-war-israel-lebanon-oil-june-16-2026-d79458506c46e3f4a78aef0f9d8b9250</a></p></div>
+        </details>
+        <details class="follow">
+          <summary><span class="rank">F2</span><span><span class="title">G7 對 Ukraine 的防空與俄油制裁是否落地</span><time datetime="2026-06-16T04:05:32Z">發佈時間｜2026-06-16 12:05:32（Asia/Taipei）</time></span></summary>
+          <div class="body"><p>追 summit statement、new sanctions orders、Patriot local production 與 EU / US defense funding。</p><p class="src">來源｜AP News｜<a href="https://apnews.com/article/g7-iran-ukraine-trump-macron-zelenskyy-e7fad4eabaae8181f70fa5a0b9e499b2">https://apnews.com/article/g7-iran-ukraine-trump-macron-zelenskyy-e7fad4eabaae8181f70fa5a0b9e499b2</a></p></div>
+        </details>
+        <details class="follow">
+          <summary><span class="rank">F3</span><span><span class="title">B-52 crash 調查是否指向飛控、維修或測試程序</span><time datetime="2026-06-16T18:56:48Z">發佈時間｜2026-06-17 02:56:48（Asia/Taipei）</time></span></summary>
+          <div class="body"><p>後續只在 Air Force 或調查機關公布原因、停飛、檢修命令或 casualty correction 時重列。</p><p class="src">來源｜AP News｜<a href="https://apnews.com/article/b52-stratofortress-crash-california-2cf849e75640a2e0b98ab94cc4a14430">https://apnews.com/article/b52-stratofortress-crash-california-2cf849e75640a2e0b98ab94cc4a14430</a></p></div>
+        </details>
+        <details class="follow">
+          <summary><span class="rank">F4</span><span><span class="title">GitHub Code Quality GA 前企業是否關閉 preview repositories</span><time datetime="2026-06-16T04:00:00Z">發佈時間｜2026-06-16 12:00:00（Asia/Taipei；官方僅公開日期）</time></span></summary>
+          <div class="body"><p>追 7 月 20 日前的 pricing clarifications、enterprise admin controls、usage-metering 文件與 customer backlash。</p><p class="src">來源｜GitHub Changelog｜<a href="https://github.blog/changelog/2026-06-16-github-code-quality-generally-available-july-20-2026">https://github.blog/changelog/2026-06-16-github-code-quality-generally-available-july-20-2026</a></p></div>
+        </details>
+        <details class="follow">
+          <summary><span class="rank">F5</span><span><span class="title">SpaceX-Cursor 交易是否通過監管與開發者信任測試</span><time datetime="2026-06-16T11:21:41Z">發佈時間｜2026-06-16 19:21:41（Asia/Taipei）</time></span></summary>
+          <div class="body"><p>追 closing terms、enterprise customer reaction、Cursor roadmap、xAI / SpaceX compute integration 與 antitrust review。</p><p class="src">來源｜TechCrunch｜<a href="https://techcrunch.com/2026/06/16/spacex-to-acquire-cursor-for-60b-in-stock-days-after-blockbuster-ipo/">https://techcrunch.com/2026/06/16/spacex-to-acquire-cursor-for-60b-in-stock-days-after-blockbuster-ipo/</a></p></div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide" style="--bg:url('https://images.unsplash.com/photo-1495020689067-958852a7765e?auto=format&fit=crop&w=1800&q=80')">
+    <div class="wrap">
+      <div class="top">
+        <div>
+          <p class="eyebrow">Sources</p>
+          <h2>來源與圖片註記</h2>
+          <p class="lead">新聞來源已放在每張展開卡片尾端；本頁只列背景圖片與主要首頁訊號。</p>
+        </div>
+        <div class="note">背景圖僅用於視覺主題，不作為新聞證據。所有新聞證據請以每張卡片的來源 URL 為準。</div>
+      </div>
+      <div class="grid">
+        <details>
+          <summary><span class="rank">I1</span><span><span class="title">背景圖片來源</span><time datetime="2026-06-17T00:00:52+08:00">資料註記｜2026-06-17 08:00:52（Asia/Taipei）</time></span></summary>
+          <div class="body"><p>使用 Unsplash 穩定圖片 URL：news desk、Earth from space、circuit board、control room。</p><p class="src">來源｜Unsplash news desk｜<a href="https://unsplash.com/photos/1495020689067-958852a7765e">https://unsplash.com/photos/1495020689067-958852a7765e</a></p><p class="src">來源｜Unsplash Earth｜<a href="https://unsplash.com/photos/1451187580459-43490279c0fa">https://unsplash.com/photos/1451187580459-43490279c0fa</a></p><p class="src">來源｜Unsplash circuit｜<a href="https://unsplash.com/photos/1518779578993-ec3579fee39f">https://unsplash.com/photos/1518779578993-ec3579fee39f</a></p><p class="src">來源｜Unsplash control room｜<a href="https://unsplash.com/photos/1516321318423-f06f85e504b3">https://unsplash.com/photos/1516321318423-f06f85e504b3</a></p></div>
+        </details>
+        <details>
+          <summary><span class="rank">I2</span><span><span class="title">主要顯著度訊號</span><time datetime="2026-06-17T00:00:52+08:00">資料註記｜研究時段首頁與分類頁</time></span></summary>
+          <div class="body"><p>AP World top stories、AP homepage most-read、The Guardian World page 與 TechCrunch 同日科技版位用於交叉判斷顯著度；個別事實仍以卡片來源為準。</p><p class="src">來源｜AP World｜<a href="https://apnews.com/world-news">https://apnews.com/world-news</a></p><p class="src">來源｜The Guardian World｜<a href="https://www.theguardian.com/world">https://www.theguardian.com/world</a></p><p class="src">來源｜TechCrunch｜<a href="https://techcrunch.com/">https://techcrunch.com/</a></p></div>
+        </details>
+      </div>
+    </div>
+  </section>
+</main>
+<nav class="controls" aria-label="投影片導覽">
+  <button id="prev" type="button" aria-label="上一頁">‹</button>
+  <span id="count">1 / 6</span>
+  <button id="next" type="button" aria-label="下一頁">›</button>
+</nav>
+<script>
+  const slides = [...document.querySelectorAll('.slide')];
+  const prev = document.getElementById('prev');
+  const next = document.getElementById('next');
+  const count = document.getElementById('count');
+  let i = 0;
+  function show(n) {
+    i = Math.max(0, Math.min(n, slides.length - 1));
+    slides.forEach((s, k) => {
+      s.classList.toggle('active', k === i);
+      if (k === i) s.scrollTop = 0;
+    });
+    prev.disabled = i === 0;
+    next.disabled = i === slides.length - 1;
+    count.textContent = `${i + 1} / ${slides.length}`;
+    history.replaceState(null, '', `#${i + 1}`);
+  }
+  prev.onclick = () => show(i - 1);
+  next.onclick = () => show(i + 1);
+  addEventListener('keydown', (event) => {
+    if (['ArrowRight', 'PageDown', ' '].includes(event.key)) show(i + 1);
+    if (['ArrowLeft', 'PageUp'].includes(event.key)) show(i - 1);
+    if (event.key === 'Home') show(0);
+    if (event.key === 'End') show(slides.length - 1);
+  });
+  const h = parseInt(location.hash.replace('#', ''), 10);
+  show(Number.isFinite(h) ? h - 1 : 0);
+</script>
+</body>
+</html>

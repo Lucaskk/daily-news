@@ -2,7 +2,7 @@
 title: "Knowledge Base Index"
 type: overview
 created: 2026-05-24
-updated: 2026-06-15
+updated: 2026-06-17
 status: seed
 tags: [index]
 sources: []
@@ -26,6 +26,10 @@ sources: []
 
 - [每日全球與科技 AI 新聞產製規則](daily/README.md) - 包含研究截點前 24 小時限制、跨日去重、重大續報判定、來源紀錄與發布驗證規則。
 
+- [2026-06-17 Daily News](daily/2026/06/2026-06-17/daily-news-2026-06-17.md) - 今日主軸是美伊停戰框架的條款驗證與外溢風險：Iran 公開要求 Israel 撤出 Lebanon，G7 轉向 Ukraine 與 Russian oil sanctions，European Parliament 批准 Trump tariff deal，Russian frigate 在英吉利海峽對 British yacht 開警告火。B-52 crash、White House UFC attack plot、Eduardo Bolsonaro 判刑、Sweden immigration crackdown、Sri Lanka scam-network relocation 與 EU-UK post-Brexit summit 補足全球制度風險。科技 / AI 聚焦 SpaceX 以 US$60bn stock deal 收購 Cursor、Android 17 / Gemini rollout、GitHub Code Quality GA 商業化、GitHub Models 停止新客戶與 Mobileye 2027 US robotaxi service。
+- [2026-06-17 Slides](daily/2026/06/2026-06-17/slides-2026-06-17.html) - 今日新聞網頁版投影片。
+- [2026-06-16 Daily News](daily/2026/06/2026-06-16/daily-news-2026-06-16.md) - 今日主軸是美伊協議的第二層效應：G7 開幕、油價與股市重定價、以色列國內對 Netanyahu 反彈，以及印度就油輪海員死亡在 G7 期間向美方施壓。俄羅斯對烏克蘭大規模空襲造成 11 死並損及 Kyiv-Pechersk Lavra；英國宣布禁止 16 歲以下使用主要社群平台；GCPEA / HRW 報告教育攻擊兩年增逾 40%；加拿大裁撤 CORE 轉向供應鏈舉證法。科技 / AI 聚焦 Fox 以 US$22bn 收購 Roku、Facebook AI Mode、Sarvam Series B、NewCore AI agent 身分治理與 GitHub Copilot usage metrics。
+- [2026-06-16 Slides](daily/2026/06/2026-06-16/slides-2026-06-16.html) - 今日新聞網頁版投影片。
 - [2026-06-15 Daily News](daily/2026/06/2026-06-15/daily-news-2026-06-15.md) - 今日主軸從協議宣告進入履約驗證：U.S.-Iran 確認終戰安排與解除海上封鎖，但仍待 Swiss signing、公開文本及 Hormuz 實際重開；UK 首次出動 armed forces 扣押 Russian shadow-fleet tanker，Swiss voters 則正式否決 10m population cap。Gaza death toll 跨過 73,000，Congo Bundibugyo Ebola 升至 782 cases / 181 deaths 並擴至 Uganda。科技 / AI 沒有符合 24 小時窗的大型新產品發布，重要增量轉向 Canada 對 Anthropic export-control shutdown 的 AI sovereignty 回應，以及 U.S. states targeted AI laws。
 - [2026-06-15 Slides](daily/2026/06/2026-06-15/slides-2026-06-15.html) - 今日新聞網頁版投影片。
 - [2026-06-14 Daily News](daily/2026/06/2026-06-14/daily-news-2026-06-14.md) - 今日焦點是承諾能否落地：U.S. / Pakistan 預測美伊週日簽署，但 Iran 稱仍需更多時間；Lebanon 南部與 Black Sea 能源設施持續受攻擊。EU 啟動 Ukraine、Moldova 入盟談判，Canada 推動中間強權第三條道路。制度治理延伸到美委聯合作戰、Pentagon 中國企業名單、MSF Chad 性剝削報告、Swiss 人口公投與 Kennedy Center 改名爭議。科技 / AI 聚焦 Anthropic 全球停用 Fable 5 / Mythos 5、ChatGPT GPT-5.2 retirement、Copilot code review controls、Smartsheet MCP 與 New York AI 廣告標示。

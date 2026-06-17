@@ -2,7 +2,7 @@
 title: "Overview"
 type: overview
 created: 2026-05-24
-updated: 2026-06-15
+updated: 2026-06-17
 status: seed
 tags: [overview]
 sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
@@ -30,6 +30,10 @@ sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
 
 ## Latest Daily News
 
+- [2026-06-17 Daily News](daily/2026/06/2026-06-17/daily-news-2026-06-17.md) - 今日從美伊停戰框架進入條款驗證：Iran 公開把 Israel withdrawal from Lebanon 作為和平條件，G7 則把焦點拉回 Ukraine、Russian oil sanctions 與防空支援。歐洲同時處理 tariff deal、UK-Russia 海上 warning shots、Sweden immigration crackdown 與 EU-UK post-Brexit reset。B-52 crash、White House UFC attack plot、Eduardo Bolsonaro 判刑與 Sri Lanka scam-network relocation 顯示公共安全、司法與跨境犯罪風險分散。科技 / AI 今日聚焦 SpaceX-Cursor US$60bn deal、Android 17 / Gemini rollout、GitHub Code Quality pricing、GitHub Models retirement path 與 Mobileye robotaxi operator shift。
+- [2026-06-17 Slides](daily/2026/06/2026-06-17/slides-2026-06-17.html) - 今日新聞網頁版投影片。
+- [2026-06-16 Daily News](daily/2026/06/2026-06-16/daily-news-2026-06-16.md) - 今日從美伊協議本身轉向外溢效應：G7 開幕把協議推入盟友、能源航運與核談判議程；市場以股市新高、Brent 回落與天然氣下跌重新定價；以色列國內則出現對 Netanyahu 的安全與外交反彈。俄羅斯同日以大規模無人機與飛彈攻擊烏克蘭，損及 Kyiv-Pechersk Lavra；英國宣布 16 歲以下社群平台禁令；全球教育攻擊報告顯示 2024-2025 年至少 8,556 起事件、逾 10,600 名學生與教職員受害。科技 / AI 今日有更明確產品與平台增量：Fox-Roku US$22bn 交易、Facebook AI Mode、Sarvam US$234m Series B first close、NewCore AI-agent identity governance 與 GitHub Copilot metrics server-side telemetry。
+- [2026-06-16 Slides](daily/2026/06/2026-06-16/slides-2026-06-16.html) - 今日新聞網頁版投影片。
 - [2026-06-15 Daily News](daily/2026/06/2026-06-15/daily-news-2026-06-15.md) - 今日從「是否有共同協議」進入「能否簽署與執行」：U.S. and Iran confirmed an agreement to end the war and reopen Hormuz, but Iran says implementation waits for Swiss signing and the text remains unavailable. Europe also moved from sanctions lists to physical enforcement as UK armed forces detained tanker Smyrtos, while Switzerland's 10m population-cap referendum ended with nearly 55% opposed. Parallel G7 diplomacy did not reduce ground risks: Gaza's reported death toll reached 73,001 and Congo's Bundibugyo Ebola outbreak reached 782 cases / 181 deaths with spread into Uganda. AI / tech had no qualifying major product launch in the strict window; the meaningful shift was Canada treating Anthropic's export-control shutdown as an AI-sovereignty warning and U.S. states pursuing targeted use-specific laws.
 - [2026-06-15 Slides](daily/2026/06/2026-06-15/slides-2026-06-15.html) - 今日新聞網頁版投影片。
 - [2026-06-14 Daily News](daily/2026/06/2026-06-14/daily-news-2026-06-14.md) - 今日主軸從「是否有協議」轉為「承諾是否落地」：U.S. / Pakistan 宣稱美伊可能在週日電子簽署，但 Iran 表示仍需更多時間，且 Hormuz drones、uranium、sanctions 與 Lebanon 條款仍未形成公開共同文本。Lebanon 軍方撤出 Kfar Tebnit、Ukraine 攻擊 Black Sea Volna terminal，顯示戰場尚未配合外交降溫。EU 啟動 Ukraine / Moldova 入盟談判，Canada 則主張與 Europe 組成中間強權第三條道路。科技 / AI 的共同焦點是 access governance：Anthropic 因 U.S. directive 全球停用 Fable 5 / Mythos 5，ChatGPT 退休 GPT-5.2，GitHub 強化 Copilot review controls，Smartsheet 以 MCP 同接三大助理，New York 要求 AI 廣告人物揭露。
