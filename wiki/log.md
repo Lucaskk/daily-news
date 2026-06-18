@@ -318,3 +318,11 @@
 - Updated `wiki/daily/latest-slides.html`, `wiki/index.md`, `wiki/overview.md` and the root GitHub Pages redirect.
 - Published the complete daily package to GitHub Pages through the GitHub connector after local HTTPS push authentication failed.
 - Served the deck locally on port 4174; LINE delivery was skipped because `.env` did not contain `LINE_TO_ID`.
+
+## [2026-06-18] ingest | Daily global and tech AI news
+
+- Created `wiki/daily/2026/06/2026-06-18/daily-news-2026-06-18.md` and `source-notes-2026-06-18.md` after current web research and full-archive deduplication.
+- Selected exactly 10 global items; labeled the U.S.-Iran signing and G7 final communiqué as continuations with explicit prior dates and material changes.
+- Added six distinct technology / AI items for Copilot app GA, Google Home Speaker orders, OpenAI AI chemist and LifeSciBench, Uber Houston robotaxi and Ask Pinterest.
+- Created an eight-slide responsive HTML deck with expandable news, statistics, technology and follow-up cards; every expanded item carries its own source label and complete URL.
+- Updated the stable latest-slides redirect, knowledge-base index, overview and root Pages entry timestamp.
