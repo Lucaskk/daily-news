@@ -2,7 +2,7 @@
 title: "Knowledge Base Index"
 type: overview
 created: 2026-05-24
-updated: 2026-06-17
+updated: 2026-06-18
 status: seed
 tags: [index]
 sources: []
@@ -26,6 +26,8 @@ sources: []
 
 - [每日全球與科技 AI 新聞產製規則](daily/README.md) - 包含研究截點前 24 小時限制、跨日去重、重大續報判定、來源紀錄與發布驗證規則。
 
+- [2026-06-18 Daily News](daily/2026/06/2026-06-18/daily-news-2026-06-18.md) - 今日主軸是美伊備忘錄進入雙方簽署與立即生效宣稱，G7 閉幕則承諾擴大對俄制裁並推進在烏生產長程武器。德波防務、Russia-ASEAN 峰會、China Shock 2.0、Titan 最終報告、Arthur、Oyu Tolgoi、Messi 與古代 plague 研究補足全球議程。科技 / AI 聚焦 Copilot app GA、Google Home Speaker、AI chemist、LifeSciBench、Uber robotaxi 與 Ask Pinterest。
+- [2026-06-18 Slides](daily/2026/06/2026-06-18/slides-2026-06-18.html) - 今日新聞網頁版投影片。
 - [2026-06-17 Daily News](daily/2026/06/2026-06-17/daily-news-2026-06-17.md) - 今日主軸是美伊停戰框架的條款驗證與外溢風險：Iran 公開要求 Israel 撤出 Lebanon，G7 轉向 Ukraine 與 Russian oil sanctions，European Parliament 批准 Trump tariff deal，Russian frigate 在英吉利海峽對 British yacht 開警告火。B-52 crash、White House UFC attack plot、Eduardo Bolsonaro 判刑、Sweden immigration crackdown、Sri Lanka scam-network relocation 與 EU-UK post-Brexit summit 補足全球制度風險。科技 / AI 聚焦 SpaceX 以 US$60bn stock deal 收購 Cursor、Android 17 / Gemini rollout、GitHub Code Quality GA 商業化、GitHub Models 停止新客戶與 Mobileye 2027 US robotaxi service。
 - [2026-06-17 Slides](daily/2026/06/2026-06-17/slides-2026-06-17.html) - 今日新聞網頁版投影片。
 - [2026-06-16 Daily News](daily/2026/06/2026-06-16/daily-news-2026-06-16.md) - 今日主軸是美伊協議的第二層效應：G7 開幕、油價與股市重定價、以色列國內對 Netanyahu 反彈，以及印度就油輪海員死亡在 G7 期間向美方施壓。俄羅斯對烏克蘭大規模空襲造成 11 死並損及 Kyiv-Pechersk Lavra；英國宣布禁止 16 歲以下使用主要社群平台；GCPEA / HRW 報告教育攻擊兩年增逾 40%；加拿大裁撤 CORE 轉向供應鏈舉證法。科技 / AI 聚焦 Fox 以 US$22bn 收購 Roku、Facebook AI Mode、Sarvam Series B、NewCore AI agent 身分治理與 GitHub Copilot usage metrics。
