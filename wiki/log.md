@@ -326,3 +326,6 @@
 - Added six distinct technology / AI items for Copilot app GA, Google Home Speaker orders, OpenAI AI chemist and LifeSciBench, Uber Houston robotaxi and Ask Pinterest.
 - Created an eight-slide responsive HTML deck with expandable news, statistics, technology and follow-up cards; every expanded item carries its own source label and complete URL.
 - Updated the stable latest-slides redirect, knowledge-base index, overview and root Pages entry timestamp.
+- Served and browser-tested the deck locally on port 4175 because the process occupying 4173 returned empty responses.
+- Published the complete package to GitHub Pages through the GitHub connector after the local push was rejected as non-fast-forward.
+- LINE delivery was skipped because `.env` did not contain all three required variables.
