@@ -2,7 +2,7 @@
 title: "Overview"
 type: overview
 created: 2026-05-24
-updated: 2026-06-17
+updated: 2026-06-18
 status: seed
 tags: [overview]
 sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
@@ -30,6 +30,8 @@ sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
 
 ## Latest Daily News
 
+- [2026-06-18 Daily News](daily/2026/06/2026-06-18/daily-news-2026-06-18.md) - 今日從「是否會簽」進入「簽署後能否執行」：Pakistan 稱 U.S. 與 Iran 領導人已簽署且協議立即生效，但 Iran 的公開確認、Swiss 正式儀式、Hormuz 實際通行量與 60 天核談判起算仍待驗證。G7 則把 Russian energy sanctions 與 Ukraine 境內長程武器／防空生產寫入閉幕方向。全球風險同時分散到 NATO 東翼、China industrial imbalance、Titan engineering governance、Arthur flooding 與 Oyu Tolgoi copper supply。科技 / AI 由 Copilot desktop GA、Gemini 原生家居硬體、AI chemist、LifeSciBench、Uber robotaxi 與 Ask Pinterest 代表從模型回答轉向可操作工作流與實體系統。
+- [2026-06-18 Slides](daily/2026/06/2026-06-18/slides-2026-06-18.html) - 今日新聞網頁版投影片。
 - [2026-06-17 Daily News](daily/2026/06/2026-06-17/daily-news-2026-06-17.md) - 今日從美伊停戰框架進入條款驗證：Iran 公開把 Israel withdrawal from Lebanon 作為和平條件，G7 則把焦點拉回 Ukraine、Russian oil sanctions 與防空支援。歐洲同時處理 tariff deal、UK-Russia 海上 warning shots、Sweden immigration crackdown 與 EU-UK post-Brexit reset。B-52 crash、White House UFC attack plot、Eduardo Bolsonaro 判刑與 Sri Lanka scam-network relocation 顯示公共安全、司法與跨境犯罪風險分散。科技 / AI 今日聚焦 SpaceX-Cursor US$60bn deal、Android 17 / Gemini rollout、GitHub Code Quality pricing、GitHub Models retirement path 與 Mobileye robotaxi operator shift。
 - [2026-06-17 Slides](daily/2026/06/2026-06-17/slides-2026-06-17.html) - 今日新聞網頁版投影片。
 - [2026-06-16 Daily News](daily/2026/06/2026-06-16/daily-news-2026-06-16.md) - 今日從美伊協議本身轉向外溢效應：G7 開幕把協議推入盟友、能源航運與核談判議程；市場以股市新高、Brent 回落與天然氣下跌重新定價；以色列國內則出現對 Netanyahu 的安全與外交反彈。俄羅斯同日以大規模無人機與飛彈攻擊烏克蘭，損及 Kyiv-Pechersk Lavra；英國宣布 16 歲以下社群平台禁令；全球教育攻擊報告顯示 2024-2025 年至少 8,556 起事件、逾 10,600 名學生與教職員受害。科技 / AI 今日有更明確產品與平台增量：Fox-Roku US$22bn 交易、Facebook AI Mode、Sarvam US$234m Series B first close、NewCore AI-agent identity governance 與 GitHub Copilot metrics server-side telemetry。
