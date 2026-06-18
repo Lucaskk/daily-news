@@ -14,22 +14,27 @@ sources:
 # 立敦 (6175) 股票分析
 
 - 分析頁：https://lucaskk.github.io/daily-news/wiki/stocks/2026/06/2026-06-19/6175/stock-analysis-6175-2026-06-19.html
-- 產生時間：2026-06-19T00:25:01+08:00
+- 產生時間：2026-06-19 01:19:31
 - 市場：上櫃
 - 最新行情日期：2026-06-18
+- 最新季報：2026 Q1
+- 同期比較：2025 Q1
 - 財報年度：2025, 2024, 2023
 
 ## 摘要
 
 - 最新公開報價日期為 2026-06-18，收盤價 114.00 元，單日變動 +6.50 元。
 - 最近財報年度 2025 年營收 42 億元，較 2024 年 -1.4%。
-- 2025 年 EPS 為 2.68 元，ROE 為 8.0%。
+- 2025 年EPS 為 2.68 元，ROE 為 8.0%。
 
 ## 來源
 
 - [Goodinfo 損益表](https://goodinfo.tw/tw/StockFinDetail.asp?RPT_CAT=IS_YEAR&STOCK_ID=6175)
 - [Goodinfo 資產負債表](https://goodinfo.tw/tw/StockFinDetail.asp?RPT_CAT=BS_YEAR&STOCK_ID=6175)
 - [Goodinfo 現金流量表](https://goodinfo.tw/tw/StockFinDetail.asp?RPT_CAT=CF_YEAR&STOCK_ID=6175)
+- [Goodinfo 季損益表](https://goodinfo.tw/tw/StockFinDetail.asp?RPT_CAT=IS_QUAR&STOCK_ID=6175)
+- [Goodinfo 季資產負債表](https://goodinfo.tw/tw/StockFinDetail.asp?RPT_CAT=BS_QUAR&STOCK_ID=6175)
+- [Goodinfo 季現金流量表](https://goodinfo.tw/tw/StockFinDetail.asp?RPT_CAT=CF_QUAR&STOCK_ID=6175)
 - [公開資訊觀測站 上市](https://mops.twse.com.tw/mops/web/t05st01?step=1&co_id=6175&TYPEK=sii)
 - [公開資訊觀測站 上櫃](https://mops.twse.com.tw/mops/web/t05st01?step=1&co_id=6175&TYPEK=otc)
 

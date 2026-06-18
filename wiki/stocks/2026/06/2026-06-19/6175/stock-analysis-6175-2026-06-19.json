@@ -129,13 +129,113 @@
       "cash_to_assets": 15.385931884306009
     }
   },
+  "quarterly": {
+    "periods": [
+      "2026Q1",
+      "2025Q1"
+    ],
+    "latest_period": "2026Q1",
+    "comparison_period": "2025Q1",
+    "available_periods": [
+      "2026Q1",
+      "2025Q4",
+      "2025Q3",
+      "2025Q2",
+      "2025Q1",
+      "2024Q4"
+    ],
+    "metrics": {
+      "2026Q1": {
+        "revenue": 11.18,
+        "gross_profit": 2.47,
+        "selling_expense": 0.19,
+        "admin_expense": 0.44,
+        "rd_expense": 0.3,
+        "operating_expenses": 0.9299999999999999,
+        "operating_income": 1.51,
+        "net_income": 1.11,
+        "eps": 0.74,
+        "current_assets": 34.08,
+        "current_liabilities": 10.34,
+        "liabilities": 12.85,
+        "assets": 65.77,
+        "equity": 52.92,
+        "cash": 9.28,
+        "inventory": 8.83,
+        "operating_cf": 0.001,
+        "investing_cf": -1.37,
+        "financing_cf": -0.87,
+        "capex": -0.094,
+        "dividends": null,
+        "free_cash_flow": -0.093,
+        "gross_margin": 22.093023255813957,
+        "op_margin": 13.506261180679784,
+        "net_margin": 9.928443649373882,
+        "selling_ratio": 1.6994633273703041,
+        "admin_ratio": 3.9355992844364938,
+        "rd_ratio": 2.6833631484794274,
+        "opex_ratio": 8.318425760286225,
+        "current_ratio": 329.59381044487424,
+        "debt_ratio": 19.537783183822413,
+        "roe": 2.0975056689342404,
+        "roa": 1.687699559069485,
+        "cash_to_assets": 14.109776493842178
+      },
+      "2025Q1": {
+        "revenue": 10.72,
+        "gross_profit": 2.52,
+        "selling_expense": 0.16,
+        "admin_expense": 0.44,
+        "rd_expense": 0.29,
+        "operating_expenses": 0.8899999999999999,
+        "operating_income": 1.57,
+        "net_income": 1.09,
+        "eps": 0.73,
+        "current_assets": 33.03,
+        "current_liabilities": 11.37,
+        "liabilities": 14.42,
+        "assets": 63.26,
+        "equity": 48.84,
+        "cash": 10.21,
+        "inventory": 8.67,
+        "operating_cf": 1.1,
+        "investing_cf": -0.31,
+        "financing_cf": -1.93,
+        "capex": -0.2,
+        "dividends": null,
+        "free_cash_flow": 0.9000000000000001,
+        "gross_margin": 23.507462686567163,
+        "op_margin": 14.645522388059701,
+        "net_margin": 10.167910447761194,
+        "selling_ratio": 1.4925373134328357,
+        "admin_ratio": 4.104477611940299,
+        "rd_ratio": 2.7052238805970146,
+        "opex_ratio": 8.302238805970148,
+        "current_ratio": 290.5013192612138,
+        "debt_ratio": 22.79481504900411,
+        "roe": 2.2317772317772318,
+        "roa": 1.723047739487828,
+        "cash_to_assets": 16.13974075245021
+      }
+    },
+    "insights": [
+      "系統已確認三張財報的最新共同季度為 2026 Q1，比較基準為 2025 Q1。",
+      "單季營收 11 → 11 億元，同比 +4.3%。",
+      "單季稅後淨利 1 → 1 億元，同比 +1.8%。",
+      "EPS 0.73 → 0.74 元；毛利率 23.5% → 22.1%。",
+      "單季營業現金流 1 → 0 億元，同比 -99.9%。"
+    ]
+  },
   "metadata": {
-    "fetched_at": "2026-06-19T00:25:01+08:00",
+    "fetched_at": "2026-06-19T01:19:31+08:00",
     "source": "Goodinfo.tw, TWSE OpenAPI, TPEx OpenAPI",
     "source_urls": {
       "income_statement": "https://goodinfo.tw/tw/StockFinDetail.asp?RPT_CAT=IS_YEAR&STOCK_ID=6175",
       "balance_sheet": "https://goodinfo.tw/tw/StockFinDetail.asp?RPT_CAT=BS_YEAR&STOCK_ID=6175",
       "cash_flow": "https://goodinfo.tw/tw/StockFinDetail.asp?RPT_CAT=CF_YEAR&STOCK_ID=6175",
+      "quarterly_income_statement": "https://goodinfo.tw/tw/StockFinDetail.asp?RPT_CAT=IS_QUAR&STOCK_ID=6175",
+      "quarterly_balance_sheet": "https://goodinfo.tw/tw/StockFinDetail.asp?RPT_CAT=BS_QUAR&STOCK_ID=6175",
+      "quarterly_cash_flow": "https://goodinfo.tw/tw/StockFinDetail.asp?RPT_CAT=CF_QUAR&STOCK_ID=6175",
       "quote": "https://www.tpex.org.tw/openapi/v1/tpex_mainboard_quotes",
       "mops_listed": "https://mops.twse.com.tw/mops/web/t05st01?step=1&co_id=6175&TYPEK=sii",
       "mops_otc": "https://mops.twse.com.tw/mops/web/t05st01?step=1&co_id=6175&TYPEK=otc"
@@ -144,6 +244,10 @@
       "2025",
       "2024",
       "2023"
+    ],
+    "quarters_covered": [
+      "2026Q1",
+      "2025Q1"
     ],
     "currency": "TWD 億元；股價為 TWD",
     "disclaimer": "僅供財務研究與學習參考，不構成投資建議。"
@@ -156,7 +260,7 @@
     "snapshot": [
       "最新公開報價日期為 2026-06-18，收盤價 114.00 元，單日變動 +6.50 元。",
       "最近財報年度 2025 年營收 42 億元，較 2024 年 -1.4%。",
-      "2025 年 EPS 為 2.68 元，ROE 為 8.0%。"
+      "2025 年EPS 為 2.68 元，ROE 為 8.0%。"
     ],
     "operations": [
       "2025 年毛利率 23.4%，較 2024 年 -0.6 個百分點。",
