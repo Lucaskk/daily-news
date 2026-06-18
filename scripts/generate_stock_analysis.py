@@ -32,6 +32,8 @@ TPEX_QUOTES_URL = "https://www.tpex.org.tw/openapi/v1/tpex_mainboard_quotes"
 GOODINFO_URL = "https://goodinfo.tw/tw/StockFinDetail.asp"
 TAIPEI_TZ = dt.timezone(dt.timedelta(hours=8))
 DEFAULT_OUTPUT_ROOT = Path("wiki/stocks")
+YEAR_PERIOD_PATTERN = re.compile(r"\d{4}")
+QUARTER_PERIOD_PATTERN = re.compile(r"\d{4}Q[1-4]", re.IGNORECASE)
 
 
 class StockAnalysisError(RuntimeError):
@@ -338,30 +340,63 @@ def extract_goodinfo_name(html_text: str, stock_id: str) -> str:
     return ""
 
 
-def parse_goodinfo_table(html_text: str) -> tuple[dict[str, dict[str, float | None]], list[str]]:
+def normalize_financial_period(value: str) -> str:
+    return re.sub(r"\s+", "", value).upper()
+
+
+def financial_period_sort_key(period: str) -> tuple[int, int]:
+    normalized = normalize_financial_period(period)
+    match = QUARTER_PERIOD_PATTERN.fullmatch(normalized)
+    if match:
+        return int(normalized[:4]), int(normalized[-1])
+    if YEAR_PERIOD_PATTERN.fullmatch(normalized):
+        return int(normalized), 0
+    return 0, 0
+
+
+def display_financial_period(period: str) -> str:
+    normalized = normalize_financial_period(period)
+    if QUARTER_PERIOD_PATTERN.fullmatch(normalized):
+        return f"{normalized[:4]} Q{normalized[-1]}"
+    if YEAR_PERIOD_PATTERN.fullmatch(normalized):
+        return f"{normalized} 年"
+    return period
+
+
+def parse_goodinfo_table(
+    html_text: str,
+    period_kind: str = "year",
+) -> tuple[dict[str, dict[str, float | None]], list[str]]:
     parser = FinancialTableParser()
     parser.feed(html_text)
     if len(parser.tables) < 7:
         raise StockAnalysisError("Goodinfo 回傳內容沒有找到預期的財報表格，可能是暫時被擋或該標的沒有財報資料。")
     rows = parser.tables[6]
+    period_pattern = QUARTER_PERIOD_PATTERN if period_kind == "quarter" else YEAR_PERIOD_PATTERN
     header_index = next(
         (
             idx
             for idx, row in enumerate(rows)
-            if sum(1 for cell in row if re.fullmatch(r"\d{4}", cell.strip())) >= 2
+            if sum(1 for cell in row if period_pattern.fullmatch(normalize_financial_period(cell))) >= 2
         ),
         None,
     )
     if header_index is None:
-        raise StockAnalysisError("無法解析 Goodinfo 財報年度欄位。")
+        label = "季度" if period_kind == "quarter" else "年度"
+        raise StockAnalysisError(f"無法解析 Goodinfo 財報{label}欄位。")
 
     header = rows[header_index]
-    years = [cell.strip() for cell in header if re.fullmatch(r"\d{4}", cell.strip())]
-    if not years:
-        raise StockAnalysisError("Goodinfo 財報表格沒有年度資料。")
+    periods = [
+        normalize_financial_period(cell)
+        for cell in header
+        if period_pattern.fullmatch(normalize_financial_period(cell))
+    ]
+    if not periods:
+        label = "季度" if period_kind == "quarter" else "年度"
+        raise StockAnalysisError(f"Goodinfo 財報表格沒有{label}資料。")
 
     marker_row = rows[header_index + 1] if header_index + 1 < len(rows) else []
-    paired_amount_percent = len(marker_row) >= len(years) * 2 and any(
+    paired_amount_percent = len(marker_row) >= len(periods) * 2 and any(
         marker in cell for cell in marker_row for marker in ("％", "%")
     )
 
@@ -373,12 +408,33 @@ def parse_goodinfo_table(html_text: str) -> tuple[dict[str, dict[str, float | No
         if not field or field in {"金額", "％", "%"}:
             continue
         values: dict[str, float | None] = {}
-        for index, year in enumerate(years):
+        for index, period in enumerate(periods):
             value_index = 1 + index * 2 if paired_amount_percent else 1 + index
-            values[year] = parse_number(row[value_index]) if value_index < len(row) else None
+            values[period] = parse_number(row[value_index]) if value_index < len(row) else None
         if any(value is not None for value in values.values()):
             data[field] = values
-    return data, years
+    return data, periods
+
+
+def select_latest_quarter(periods_by_report: list[list[str]]) -> tuple[str, str | None, list[str]]:
+    if not periods_by_report:
+        raise StockAnalysisError("沒有可判斷的季度財報期間。")
+    common_periods = set(normalize_financial_period(item) for item in periods_by_report[0])
+    for periods in periods_by_report[1:]:
+        common_periods &= {normalize_financial_period(item) for item in periods}
+    valid_periods = sorted(
+        (period for period in common_periods if QUARTER_PERIOD_PATTERN.fullmatch(period)),
+        key=financial_period_sort_key,
+        reverse=True,
+    )
+    if not valid_periods:
+        raise StockAnalysisError("三張季報沒有共同的財報季度，暫時無法進行同期比較。")
+
+    latest = valid_periods[0]
+    comparison = f"{int(latest[:4]) - 1}Q{latest[-1]}"
+    if comparison not in common_periods:
+        comparison = None
+    return latest, comparison, valid_periods
 
 
 def fetch_financials(stock_id: str) -> dict[str, Any]:
@@ -396,6 +452,29 @@ def fetch_financials(stock_id: str) -> dict[str, Any]:
         reports[key] = table
         reports.setdefault("years", years)
         time.sleep(0.4)
+
+    quarterly: dict[str, Any] = {}
+    quarterly_periods: list[list[str]] = []
+    for key, category in (
+        ("income_statement", "IS_QUAR"),
+        ("balance_sheet", "BS_QUAR"),
+        ("cash_flow", "CF_QUAR"),
+    ):
+        html_text = fetch_goodinfo_html(stock_id, category)
+        table, periods = parse_goodinfo_table(html_text, period_kind="quarter")
+        quarterly[key] = table
+        quarterly_periods.append(periods)
+        time.sleep(0.4)
+
+    latest_quarter, comparison_quarter, available_quarters = select_latest_quarter(quarterly_periods)
+    selected_quarters = [latest_quarter]
+    if comparison_quarter:
+        selected_quarters.append(comparison_quarter)
+    quarterly["periods"] = selected_quarters
+    quarterly["available_periods"] = available_quarters
+    quarterly["latest_period"] = latest_quarter
+    quarterly["comparison_period"] = comparison_quarter
+    reports["quarterly"] = quarterly
     reports["company_name"] = company_name
     return reports
 
@@ -425,36 +504,39 @@ def table_value(
     return table.get(field, {}).get(year)
 
 
-def compute_metrics(financials: dict[str, Any]) -> dict[str, dict[str, float | None]]:
+def compute_metrics(
+    financials: dict[str, Any],
+    periods: list[str] | None = None,
+) -> dict[str, dict[str, float | None]]:
     income = financials["income_statement"]
     balance = financials["balance_sheet"]
     cash_flow = financials["cash_flow"]
-    years = financials["years"][:3]
+    periods = periods if periods is not None else financials["years"][:3]
     metrics: dict[str, dict[str, float | None]] = {}
 
-    for year in years:
-        revenue = table_value(income, year, ["營業收入合計", "營業收入"], ["率"])
-        gross_profit = table_value(income, year, ["營業毛利", "毛利"], ["率"])
-        selling = table_value(income, year, ["推銷費用", "銷售費用"])
-        admin = table_value(income, year, ["管理費用"])
-        research = table_value(income, year, ["研究發展費用", "研發費用"])
-        operating_income = table_value(income, year, ["營業利益", "營業利益(損失)", "營業利益（損失）"], ["率"])
-        net_income = table_value(income, year, ["歸屬於母公司業主之本期淨利", "稅後淨利", "本期淨利"], ["率"])
-        eps = table_value(income, year, ["每股稅後盈餘", "每股盈餘", "EPS"])
+    for period in periods:
+        revenue = table_value(income, period, ["營業收入合計", "營業收入"], ["率"])
+        gross_profit = table_value(income, period, ["營業毛利", "毛利"], ["率"])
+        selling = table_value(income, period, ["推銷費用", "銷售費用"])
+        admin = table_value(income, period, ["管理費用"])
+        research = table_value(income, period, ["研究發展費用", "研發費用"])
+        operating_income = table_value(income, period, ["營業利益", "營業利益(損失)", "營業利益（損失）"], ["率"])
+        net_income = table_value(income, period, ["歸屬於母公司業主之本期淨利", "稅後淨利", "本期淨利"], ["率"])
+        eps = table_value(income, period, ["每股稅後盈餘", "每股盈餘", "EPS"])
 
-        current_assets = table_value(balance, year, ["流動資產合計", "流動資產總額"])
-        current_liabilities = table_value(balance, year, ["流動負債合計", "流動負債總額"])
-        liabilities = table_value(balance, year, ["負債總額", "負債總計"])
-        assets = table_value(balance, year, ["資產總額", "資產總計"])
-        equity = table_value(balance, year, ["股東權益總額", "權益總額"])
-        cash = table_value(balance, year, ["現金及約當現金", "現金"])
-        inventory = table_value(balance, year, ["存貨"])
+        current_assets = table_value(balance, period, ["流動資產合計", "流動資產總額"])
+        current_liabilities = table_value(balance, period, ["流動負債合計", "流動負債總額"])
+        liabilities = table_value(balance, period, ["負債總額", "負債總計"])
+        assets = table_value(balance, period, ["資產總額", "資產總計"])
+        equity = table_value(balance, period, ["股東權益總額", "權益總額"])
+        cash = table_value(balance, period, ["現金及約當現金", "現金"])
+        inventory = table_value(balance, period, ["存貨"])
 
-        operating_cf = table_value(cash_flow, year, ["營業活動之淨現金流入(出)", "營業活動之淨現金流入"])
-        investing_cf = table_value(cash_flow, year, ["投資活動之淨現金流入(出)", "投資活動之淨現金流入"])
-        financing_cf = table_value(cash_flow, year, ["融資活動之淨現金流入(出)", "融資活動之淨現金流入"])
-        capex = table_value(cash_flow, year, ["固定資產(增加)減少", "固定資產（增加）減少", "不動產、廠房及設備"])
-        dividends = table_value(cash_flow, year, ["發放現金股利", "現金股利"])
+        operating_cf = table_value(cash_flow, period, ["營業活動之淨現金流入(出)", "營業活動之淨現金流入"])
+        investing_cf = table_value(cash_flow, period, ["投資活動之淨現金流入(出)", "投資活動之淨現金流入"])
+        financing_cf = table_value(cash_flow, period, ["融資活動之淨現金流入(出)", "融資活動之淨現金流入"])
+        capex = table_value(cash_flow, period, ["固定資產(增加)減少", "固定資產（增加）減少", "不動產、廠房及設備"])
+        dividends = table_value(cash_flow, period, ["發放現金股利", "現金股利"])
         expense_values = [selling, admin, research]
         operating_expenses = (
             sum(value for value in expense_values if value is not None)
@@ -462,7 +544,7 @@ def compute_metrics(financials: dict[str, Any]) -> dict[str, dict[str, float | N
             else None
         )
 
-        metrics[year] = {
+        metrics[period] = {
             "revenue": revenue,
             "gross_profit": gross_profit,
             "selling_expense": selling,
@@ -538,7 +620,12 @@ def sanity_check(metrics: dict[str, dict[str, float | None]], years: list[str]) 
     return warnings
 
 
-def build_metadata(stock: dict[str, Any], years: list[str], fetched_at: str) -> dict[str, Any]:
+def build_metadata(
+    stock: dict[str, Any],
+    years: list[str],
+    quarterly_periods: list[str],
+    fetched_at: str,
+) -> dict[str, Any]:
     stock_id = stock["code"]
     return {
         "fetched_at": fetched_at,
@@ -547,11 +634,15 @@ def build_metadata(stock: dict[str, Any], years: list[str], fetched_at: str) -> 
             "income_statement": f"{GOODINFO_URL}?RPT_CAT=IS_YEAR&STOCK_ID={stock_id}",
             "balance_sheet": f"{GOODINFO_URL}?RPT_CAT=BS_YEAR&STOCK_ID={stock_id}",
             "cash_flow": f"{GOODINFO_URL}?RPT_CAT=CF_YEAR&STOCK_ID={stock_id}",
+            "quarterly_income_statement": f"{GOODINFO_URL}?RPT_CAT=IS_QUAR&STOCK_ID={stock_id}",
+            "quarterly_balance_sheet": f"{GOODINFO_URL}?RPT_CAT=BS_QUAR&STOCK_ID={stock_id}",
+            "quarterly_cash_flow": f"{GOODINFO_URL}?RPT_CAT=CF_QUAR&STOCK_ID={stock_id}",
             "quote": stock.get("source_url") or "",
             "mops_listed": f"https://mops.twse.com.tw/mops/web/t05st01?step=1&co_id={stock_id}&TYPEK=sii",
             "mops_otc": f"https://mops.twse.com.tw/mops/web/t05st01?step=1&co_id={stock_id}&TYPEK=otc",
         },
         "years_covered": years,
+        "quarters_covered": quarterly_periods,
         "currency": "TWD 億元；股價為 TWD",
         "disclaimer": "僅供財務研究與學習參考，不構成投資建議。",
     }
@@ -566,7 +657,7 @@ def compare_text(metrics: dict[str, dict[str, float | None]], years: list[str], 
         return "缺少前期比較"
     latest, previous = years[0], years[1]
     change = year_over_year(metric(metrics, latest, key), metric(metrics, previous, key))
-    return f"較 {previous} 年 {fmt_delta(change, suffix=suffix)}"
+    return f"較 {display_financial_period(previous)} {fmt_delta(change, suffix=suffix)}"
 
 
 def point_delta_text(metrics: dict[str, dict[str, float | None]], years: list[str], key: str) -> str:
@@ -578,7 +669,7 @@ def point_delta_text(metrics: dict[str, dict[str, float | None]], years: list[st
     if latest_value is None or previous_value is None:
         return "缺少前期比較"
     delta = latest_value - previous_value
-    return f"較 {previous} 年 {delta:+.1f} 個百分點"
+    return f"較 {display_financial_period(previous)} {delta:+.1f} 個百分點"
 
 
 def build_insights(stock: dict[str, Any], metrics: dict[str, dict[str, float | None]], years: list[str]) -> dict[str, list[str]]:
@@ -600,16 +691,16 @@ def build_insights(stock: dict[str, Any], metrics: dict[str, dict[str, float | N
     return {
         "snapshot": [
             quote_line,
-            f"最近財報年度 {latest} 年營收 {fmt_number(latest_metrics.get('revenue'), 0)} 億元，{compare_text(metrics, years, 'revenue')}。",
-            f"{latest} 年 EPS 為 {fmt_number(latest_metrics.get('eps'), 2)} 元，ROE 為 {fmt_number(latest_metrics.get('roe'), 1, '%')}。",
+            f"最近財報年度 {display_financial_period(latest)}營收 {fmt_number(latest_metrics.get('revenue'), 0)} 億元，{compare_text(metrics, years, 'revenue')}。",
+            f"{display_financial_period(latest)}EPS 為 {fmt_number(latest_metrics.get('eps'), 2)} 元，ROE 為 {fmt_number(latest_metrics.get('roe'), 1, '%')}。",
         ],
         "operations": [
-            f"{latest} 年毛利率 {fmt_number(latest_metrics.get('gross_margin'), 1, '%')}，{point_delta_text(metrics, years, 'gross_margin')}。",
+            f"{display_financial_period(latest)}毛利率 {fmt_number(latest_metrics.get('gross_margin'), 1, '%')}，{point_delta_text(metrics, years, 'gross_margin')}。",
             f"營業利益率 {fmt_number(latest_metrics.get('op_margin'), 1, '%')}，三費率合計 {fmt_number(latest_metrics.get('opex_ratio'), 1, '%')}。",
             f"營收年增率 {fmt_delta(revenue_growth)}，請搭配產業循環與價格假設解讀。",
         ],
         "profit": [
-            f"{latest} 年稅後淨利 {fmt_number(latest_metrics.get('net_income'), 0)} 億元，年增率 {fmt_delta(net_growth)}。",
+            f"{display_financial_period(latest)}稅後淨利 {fmt_number(latest_metrics.get('net_income'), 0)} 億元，年增率 {fmt_delta(net_growth)}。",
             f"淨利率 {fmt_number(latest_metrics.get('net_margin'), 1, '%')}，{point_delta_text(metrics, years, 'net_margin')}。",
             f"ROA 為 {fmt_number(latest_metrics.get('roa'), 1, '%')}，用來觀察資產投入是否有效轉成獲利。",
         ],
@@ -619,6 +710,34 @@ def build_insights(stock: dict[str, Any], metrics: dict[str, dict[str, float | N
             f"自由現金流估算 {fmt_number(latest_metrics.get('free_cash_flow'), 0)} 億元；資本支出使用 Goodinfo 固定資產增加減少欄位作代理。",
         ],
     }
+
+
+def build_quarterly_insights(
+    metrics: dict[str, dict[str, float | None]],
+    periods: list[str],
+) -> list[str]:
+    latest = periods[0]
+    latest_metrics = metrics[latest]
+    latest_label = display_financial_period(latest)
+    if len(periods) < 2:
+        return [
+            f"最新共同季報為 {latest_label}，但該公司沒有可用的去年同季資料。",
+            f"單季營收 {fmt_number(latest_metrics.get('revenue'), 0)} 億元，EPS {fmt_number(latest_metrics.get('eps'), 2)} 元。",
+        ]
+
+    previous = periods[1]
+    previous_metrics = metrics[previous]
+    previous_label = display_financial_period(previous)
+    revenue_growth = year_over_year(latest_metrics.get("revenue"), previous_metrics.get("revenue"))
+    net_growth = year_over_year(latest_metrics.get("net_income"), previous_metrics.get("net_income"))
+    operating_cf_growth = year_over_year(latest_metrics.get("operating_cf"), previous_metrics.get("operating_cf"))
+    return [
+        f"系統已確認三張財報的最新共同季度為 {latest_label}，比較基準為 {previous_label}。",
+        f"單季營收 {fmt_number(previous_metrics.get('revenue'), 0)} → {fmt_number(latest_metrics.get('revenue'), 0)} 億元，同比 {fmt_delta(revenue_growth)}。",
+        f"單季稅後淨利 {fmt_number(previous_metrics.get('net_income'), 0)} → {fmt_number(latest_metrics.get('net_income'), 0)} 億元，同比 {fmt_delta(net_growth)}。",
+        f"EPS {fmt_number(previous_metrics.get('eps'), 2)} → {fmt_number(latest_metrics.get('eps'), 2)} 元；毛利率 {fmt_number(previous_metrics.get('gross_margin'), 1, '%')} → {fmt_number(latest_metrics.get('gross_margin'), 1, '%')}。",
+        f"單季營業現金流 {fmt_number(previous_metrics.get('operating_cf'), 0)} → {fmt_number(latest_metrics.get('operating_cf'), 0)} 億元，同比 {fmt_delta(operating_cf_growth)}。",
+    ]
 
 
 def kpi_card(label: str, value: str, change: str, accent: str = "blue") -> str:
@@ -661,9 +780,17 @@ def render_html(analysis: dict[str, Any]) -> str:
     stock = analysis["stock"]
     years = analysis["years"]
     metrics = analysis["metrics"]
+    quarterly = analysis["quarterly"]
+    quarterly_periods = quarterly["periods"]
+    quarterly_metrics = quarterly["metrics"]
     metadata = analysis["metadata"]
     insights = analysis["insights"]
     latest = years[0]
+    latest_quarter = quarterly_periods[0]
+    latest_quarter_label = display_financial_period(latest_quarter)
+    comparison_quarter_label = (
+        display_financial_period(quarterly_periods[1]) if len(quarterly_periods) > 1 else "無去年同期資料"
+    )
     json_payload = json.dumps(analysis, ensure_ascii=False)
     title = f"{stock['name']} ({stock['code']}) 股票分析"
     source_urls = metadata["source_urls"]
@@ -701,6 +828,34 @@ def render_html(analysis: dict[str, Any]) -> str:
             kpi_card("負債比率", fmt_number(metric(metrics, latest, "debt_ratio"), 1, "%"), "總負債 / 總資產", "orange"),
             kpi_card("營業現金流", f"{fmt_number(metric(metrics, latest, 'operating_cf'), 0)} 億", compare_text(metrics, years, "operating_cf"), "green"),
             kpi_card("自由現金流", f"{fmt_number(metric(metrics, latest, 'free_cash_flow'), 0)} 億", "營業 CF + 固定資產增減", "purple"),
+        ]
+    )
+    quarterly_cards = "".join(
+        [
+            kpi_card(
+                f"{latest_quarter_label} 營收",
+                f"{fmt_number(metric(quarterly_metrics, latest_quarter, 'revenue'), 0)} 億",
+                compare_text(quarterly_metrics, quarterly_periods, "revenue"),
+                "blue",
+            ),
+            kpi_card(
+                "單季稅後淨利",
+                f"{fmt_number(metric(quarterly_metrics, latest_quarter, 'net_income'), 0)} 億",
+                compare_text(quarterly_metrics, quarterly_periods, "net_income"),
+                "green",
+            ),
+            kpi_card(
+                "單季 EPS",
+                f"{fmt_number(metric(quarterly_metrics, latest_quarter, 'eps'), 2)} 元",
+                compare_text(quarterly_metrics, quarterly_periods, "eps"),
+                "purple",
+            ),
+            kpi_card(
+                "單季毛利率",
+                fmt_number(metric(quarterly_metrics, latest_quarter, "gross_margin"), 1, "%"),
+                point_delta_text(quarterly_metrics, quarterly_periods, "gross_margin"),
+                "orange",
+            ),
         ]
     )
 
@@ -836,9 +991,13 @@ def render_html(analysis: dict[str, Any]) -> str:
     <h1>{html_lib.escape(stock['name'])} ({html_lib.escape(stock['code'])})</h1>
     <div class="subtitle">
       資料更新：{html_lib.escape(fetched_at_display)}；市場：{html_lib.escape(stock.get('market_label') or '未知')}；
-      財報期間：{html_lib.escape(' / '.join(years))}。本頁使用公開資料自動產生，請以公司公告與公開資訊觀測站核對。
+      最新季報：{html_lib.escape(latest_quarter_label)}，同比 {html_lib.escape(comparison_quarter_label)}；
+      年度財報：{html_lib.escape(' / '.join(years))}。本頁使用公開資料自動產生，請以公司公告與公開資訊觀測站核對。
     </div>
     <div class="source-row">
+      <a href="{html_lib.escape(source_urls['quarterly_income_statement'])}">Goodinfo 季損益表</a>
+      <a href="{html_lib.escape(source_urls['quarterly_balance_sheet'])}">Goodinfo 季資產負債表</a>
+      <a href="{html_lib.escape(source_urls['quarterly_cash_flow'])}">Goodinfo 季現金流量表</a>
       <a href="{html_lib.escape(source_urls['income_statement'])}">Goodinfo 損益表</a>
       <a href="{html_lib.escape(source_urls['balance_sheet'])}">Goodinfo 資產負債表</a>
       <a href="{html_lib.escape(source_urls['cash_flow'])}">Goodinfo 現金流量表</a>
@@ -849,6 +1008,7 @@ def render_html(analysis: dict[str, Any]) -> str:
 
   <nav class="tabs" aria-label="股票分析分頁">
     <button class="tab active" type="button" data-tab="snapshot">總覽</button>
+    <button class="tab" type="button" data-tab="quarterly">最新季報</button>
     <button class="tab" type="button" data-tab="operations">經營分析</button>
     <button class="tab" type="button" data-tab="profit">獲利分析</button>
     <button class="tab" type="button" data-tab="financial">財務健全度</button>
@@ -859,12 +1019,40 @@ def render_html(analysis: dict[str, Any]) -> str:
       <h2 class="section-title">總覽</h2>
       <div class="snapshot-grid">
         {kpi_card("最新收盤價", f"{fmt_number(stock.get('close'), 2)} 元", f"日期 {stock.get('date') or 'n/a'}；變動 {fmt_delta(stock.get('change'), 2, ' 元')}", "blue")}
-        {kpi_card("成交量", f"{fmt_number(stock.get('volume'), 0)} 股", "TWSE / TPEx 公開行情", "green")}
+        {kpi_card(f"{latest_quarter_label} 營收", f"{fmt_number(metric(quarterly_metrics, latest_quarter, 'revenue'), 0)} 億", compare_text(quarterly_metrics, quarterly_periods, "revenue"), "green")}
         {kpi_card("最近營收年度", f"{fmt_number(metric(metrics, latest, 'revenue'), 0)} 億", compare_text(metrics, years, "revenue"), "orange")}
         {kpi_card("合理性檢查", "通過" if not sanity else f"{len(sanity)} 項提醒", "有提醒不代表資料錯誤，需人工核對", "purple")}
       </div>
       {insight_box("今日摘要", insights["snapshot"])}
       {warning_block}
+    </section>
+
+    <section id="quarterly" class="tab-content">
+      <h2 class="section-title">最新季報同期比較</h2>
+      <div class="kpi-row">{quarterly_cards}</div>
+      {insight_box("最新季報重點", quarterly["insights"])}
+      <div class="charts-grid">
+        <article class="chart-card"><div class="chart-title">單季營收與毛利率</div><div class="chart-container"><canvas id="quarterRevenueChart"></canvas></div></article>
+        <article class="chart-card"><div class="chart-title">單季淨利與淨利率</div><div class="chart-container"><canvas id="quarterProfitChart"></canvas></div></article>
+      </div>
+      {metric_table(quarterly_metrics, quarterly_periods, [
+        ("單季營收（億元）", "revenue", "", 0),
+        ("單季營業利益（億元）", "operating_income", "", 0),
+        ("單季稅後淨利（億元）", "net_income", "", 0),
+        ("單季 EPS（元）", "eps", "", 2),
+        ("毛利率", "gross_margin", "%", 1),
+        ("營業利益率", "op_margin", "%", 1),
+        ("淨利率", "net_margin", "%", 1),
+      ])}
+      {metric_table(quarterly_metrics, quarterly_periods, [
+        ("現金及約當現金（億元）", "cash", "", 0),
+        ("存貨（億元）", "inventory", "", 0),
+        ("資產總額（億元）", "assets", "", 0),
+        ("負債比率", "debt_ratio", "%", 1),
+        ("流動比率", "current_ratio", "%", 1),
+        ("單季營業現金流（億元）", "operating_cf", "", 0),
+        ("單季自由現金流（億元）", "free_cash_flow", "", 0),
+      ])}
     </section>
 
     <section id="operations" class="tab-content">
@@ -942,6 +1130,8 @@ def render_html(analysis: dict[str, Any]) -> str:
     const analysis = {json_payload};
     const years = [...analysis.years].reverse();
     const metrics = analysis.metrics;
+    const quarterPeriods = [...analysis.quarterly.periods].reverse();
+    const quarterMetrics = analysis.quarterly.metrics;
     const colors = {{
       blue: "#2463eb",
       green: "#15803d",
@@ -951,6 +1141,7 @@ def render_html(analysis: dict[str, Any]) -> str:
       gray: "#64748b"
     }};
     const value = key => years.map(year => metrics[year]?.[key] ?? null);
+    const quarterValue = key => quarterPeriods.map(period => quarterMetrics[period]?.[key] ?? null);
     const moneyAxis = {{ ticks: {{ callback: v => v.toLocaleString() }} }};
     const percentAxis = {{ position: "right", grid: {{ display: false }}, ticks: {{ callback: v => v + "%" }} }};
 
@@ -983,6 +1174,23 @@ def render_html(analysis: dict[str, Any]) -> str:
     function barDataset(label, key, color, axis = "y") {{
       return {{ label, data: value(key), backgroundColor: color + "33", borderColor: color, borderWidth: 2, yAxisID: axis }};
     }}
+
+    chart("quarterRevenueChart", {{
+      type: "bar",
+      data: {{ labels: quarterPeriods, datasets: [
+        {{ label: "單季營收", data: quarterValue("revenue"), backgroundColor: colors.blue + "33", borderColor: colors.blue, borderWidth: 2, yAxisID: "y" }},
+        {{ label: "毛利率", data: quarterValue("gross_margin"), type: "line", borderColor: colors.green, backgroundColor: colors.green, yAxisID: "y2", tension: .25, pointRadius: 4 }}
+      ] }},
+      options: mixedOptions()
+    }});
+    chart("quarterProfitChart", {{
+      type: "bar",
+      data: {{ labels: quarterPeriods, datasets: [
+        {{ label: "單季稅後淨利", data: quarterValue("net_income"), backgroundColor: colors.green + "33", borderColor: colors.green, borderWidth: 2, yAxisID: "y" }},
+        {{ label: "淨利率", data: quarterValue("net_margin"), type: "line", borderColor: colors.orange, backgroundColor: colors.orange, yAxisID: "y2", tension: .25, pointRadius: 4 }}
+      ] }},
+      options: mixedOptions()
+    }});
 
     chart("revenueChart", {{
       type: "bar",
@@ -1091,6 +1299,8 @@ sources:
 {link_line}- 產生時間：{fetched_at_display}
 - 市場：{stock.get('market_label') or '未知'}
 - 最新行情日期：{stock.get('date') or 'n/a'}
+- 最新季報：{display_financial_period(analysis['quarterly']['periods'][0])}
+- 同期比較：{display_financial_period(analysis['quarterly']['periods'][1]) if len(analysis['quarterly']['periods']) > 1 else '無去年同期資料'}
 - 財報年度：{', '.join(analysis['years'])}
 
 ## 摘要
@@ -1102,6 +1312,9 @@ sources:
 - [Goodinfo 損益表]({sources['income_statement']})
 - [Goodinfo 資產負債表]({sources['balance_sheet']})
 - [Goodinfo 現金流量表]({sources['cash_flow']})
+- [Goodinfo 季損益表]({sources['quarterly_income_statement']})
+- [Goodinfo 季資產負債表]({sources['quarterly_balance_sheet']})
+- [Goodinfo 季現金流量表]({sources['quarterly_cash_flow']})
 - [公開資訊觀測站 上市]({sources['mops_listed']})
 - [公開資訊觀測站 上櫃]({sources['mops_otc']})
 
@@ -1197,10 +1410,14 @@ def generate_analysis(query: str, output_root: Path = DEFAULT_OUTPUT_ROOT, publi
         raise StockAnalysisError("沒有可分析的年度財報資料。")
 
     metrics = compute_metrics(financials)
+    quarterly_financials = financials["quarterly"]
+    quarterly_periods = quarterly_financials["periods"]
+    quarterly_metrics = compute_metrics(quarterly_financials, quarterly_periods)
     fetched_at = now_taipei().replace(microsecond=0).isoformat()
-    metadata = build_metadata(stock, years, fetched_at)
+    metadata = build_metadata(stock, years, quarterly_periods, fetched_at)
+    sanity = sanity_check(quarterly_metrics, quarterly_periods) + sanity_check(metrics, years)
     verification = {
-        "sanity": sanity_check(metrics, years),
+        "sanity": sanity,
         "sanity_pass": True,
     }
     verification["sanity_pass"] = all(item["level"] != "error" for item in verification["sanity"])
@@ -1209,6 +1426,14 @@ def generate_analysis(query: str, output_root: Path = DEFAULT_OUTPUT_ROOT, publi
         "stock": stock,
         "years": years,
         "metrics": metrics,
+        "quarterly": {
+            "periods": quarterly_periods,
+            "latest_period": quarterly_financials["latest_period"],
+            "comparison_period": quarterly_financials["comparison_period"],
+            "available_periods": quarterly_financials["available_periods"],
+            "metrics": quarterly_metrics,
+            "insights": build_quarterly_insights(quarterly_metrics, quarterly_periods),
+        },
         "metadata": metadata,
         "verification": verification,
         "insights": build_insights(stock, metrics, years),
