@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>2026-06-19 每日全球與科技 AI 新聞</title>
+  <!-- Background image sources / attribution:
+    Title / Earth: NASA image on Unsplash, https://images.unsplash.com/photo-1451187580459-43490279c0fa
+    World / map: Unsplash, https://images.unsplash.com/photo-1521295121783-8a321d551ad2
+    Humanitarian / landscape: Unsplash, https://images.unsplash.com/photo-1500530855697-b586d89ba3ee
+    Technology / circuit board: Unsplash, https://images.unsplash.com/photo-1518770660439-4636190af475
+    Follow-up / telescope: Unsplash, https://images.unsplash.com/photo-1444703686981-a3abbc4d4fe3
+  -->
+  <style>
+    :root{--ink:#172033;--muted:#526174;--paper:rgba(255,255,255,.94);--line:rgba(23,32,51,.15);--world:#0f766e;--tech:#6d28d9;--risk:#b45309;--shadow:0 18px 48px rgba(15,23,42,.17)}
+    *{box-sizing:border-box}html,body{margin:0;width:100%;height:100%}body{overflow:hidden;background:#0b1220;color:var(--ink);font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC",sans-serif}
+    button,a,summary{touch-action:manipulation}.deck{display:flex;width:100%;height:100dvh;transition:transform .38s cubic-bezier(.2,.8,.2,1)}
+    .slide{position:relative;flex:0 0 100vw;width:100vw;height:100dvh;overflow:hidden;background:#eaf0f4;background-size:cover;background-position:center}
+    .slide::before{content:"";position:absolute;inset:0;background:linear-gradient(110deg,rgba(245,248,250,.97),rgba(245,248,250,.84) 56%,rgba(245,248,250,.70))}
+    .slide.title::before{background:linear-gradient(100deg,rgba(248,250,252,.98) 0%,rgba(248,250,252,.9) 48%,rgba(248,250,252,.52) 100%)}
+    .title{background-image:url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1800&q=85')}
+    .world{background-image:url('https://images.unsplash.com/photo-1521295121783-8a321d551ad2?auto=format&fit=crop&w=1800&q=82')}
+    .human{background-image:url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1800&q=82')}
+    .tech{background-image:url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1800&q=82')}
+    .follow{background-image:url('https://images.unsplash.com/photo-1444703686981-a3abbc4d4fe3?auto=format&fit=crop&w=1800&q=82')}
+    .content{position:relative;z-index:1;height:calc(100dvh - 72px);overflow-y:auto;padding:clamp(28px,4vw,62px) clamp(22px,6vw,92px) 38px;scrollbar-width:thin;overscroll-behavior:contain}
+    .hero{display:flex;flex-direction:column;justify-content:center;max-width:870px;height:90%;padding-bottom:5vh}.eyebrow{margin:0 0 14px;color:var(--world);font-weight:800;letter-spacing:.16em;text-transform:uppercase;font-size:clamp(.75rem,1.2vw,.95rem)}
+    h1{margin:0;max-width:840px;font-size:clamp(2.3rem,6.2vw,5.4rem);line-height:1.03;letter-spacing:-.045em}h2{margin:0;font-size:clamp(1.7rem,3.4vw,3.2rem);line-height:1.08;letter-spacing:-.035em}h2 span{color:var(--world)}.tech h2 span{color:var(--tech)}
+    .dek{max-width:760px;margin:20px 0 0;font-size:clamp(1rem,1.8vw,1.35rem);line-height:1.65;color:#334155}.window{display:inline-flex;align-items:center;gap:10px;margin-top:28px;padding:12px 16px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.82);font-size:.92rem;color:#334155;box-shadow:0 8px 24px rgba(15,23,42,.08)}
+    .section-head{display:flex;align-items:end;justify-content:space-between;gap:24px;margin-bottom:22px}.section-head p{margin:0;max-width:560px;color:#475569;line-height:1.55;text-align:right}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.grid.three{grid-template-columns:repeat(3,minmax(0,1fr))}.grid.four{grid-template-columns:repeat(4,minmax(0,1fr))}
+    details.card{min-width:0;border:1px solid var(--line);border-radius:18px;background:var(--paper);box-shadow:var(--shadow);overflow:hidden}details.card[open]{grid-column:span 2}details.card summary{position:relative;list-style:none;cursor:pointer;padding:18px 46px 17px 19px;min-height:118px}details.card summary::-webkit-details-marker{display:none}details.card summary::after{content:"＋";position:absolute;top:16px;right:17px;font-size:1.25rem;font-weight:500;color:var(--world)}details.card[open] summary::after{content:"－"}.tech details.card summary::after{color:var(--tech)}
+    .card-tag{display:inline-block;margin-bottom:8px;color:var(--world);font-weight:850;font-size:.72rem;letter-spacing:.08em}.tech .card-tag{color:var(--tech)}.risk .card-tag{color:var(--risk)}.card-title{display:block;font-size:clamp(1rem,1.45vw,1.24rem);font-weight:800;line-height:1.38}.published{display:block;margin-top:8px;color:#64748b;font-size:.78rem;line-height:1.35}.body{padding:0 19px 18px;border-top:1px solid var(--line);font-size:.95rem;line-height:1.66;color:#334155}.body p{margin:14px 0}.body strong{color:#111827}.source{margin-top:16px;padding-top:13px;border-top:1px dashed rgba(15,23,42,.22);font-size:.8rem;line-height:1.55;color:#475569}.source a{display:block;color:#075985;overflow-wrap:anywhere;text-decoration-thickness:1px;text-underline-offset:2px}
+    .metric summary{min-height:140px}.metric .card-title{font-size:clamp(1.7rem,3vw,2.55rem);line-height:1.05}.metric .published{font-size:.78rem}.metric-label{display:block;margin-top:10px;font-size:.92rem;font-weight:720;color:#475569}
+    .note{margin-top:18px;padding:14px 16px;border-left:4px solid var(--world);background:rgba(255,255,255,.83);border-radius:0 12px 12px 0;color:#334155;line-height:1.6}.tech .note{border-color:var(--tech)}
+    .controls{position:fixed;z-index:10;left:0;right:0;bottom:0;height:72px;display:flex;align-items:center;justify-content:center;gap:12px;padding:10px max(14px,env(safe-area-inset-right)) calc(10px + env(safe-area-inset-bottom)) max(14px,env(safe-area-inset-left));background:rgba(8,15,28,.92);backdrop-filter:blur(14px);color:#fff}.controls button{display:grid;place-items:center;min-width:44px;height:44px;border:1px solid rgba(255,255,255,.2);border-radius:12px;background:rgba(255,255,255,.1);color:#fff;font-size:1.05rem;cursor:pointer}.controls button:hover,.controls button:focus-visible{background:rgba(255,255,255,.2);outline:2px solid #5eead4;outline-offset:2px}.counter{min-width:72px;text-align:center;font-variant-numeric:tabular-nums;font-size:.9rem}.dots{display:flex;gap:6px;max-width:min(44vw,440px);overflow:auto}.dot{width:8px;height:8px;min-width:8px;border:0!important;border-radius:999px!important;padding:0!important;background:rgba(255,255,255,.28)!important}.dot.active{width:26px;min-width:26px;background:#5eead4!important}
+    .method{font-size:.95rem;line-height:1.65}.method ul{padding-left:1.2rem}.method li{margin:.55rem 0}.attrib{margin-top:22px;padding:16px;border:1px solid var(--line);background:rgba(255,255,255,.88);border-radius:16px;font-size:.8rem;line-height:1.6;color:#475569}.attrib a{color:#075985;overflow-wrap:anywhere}
+    @media(max-width:900px){.grid.three,.grid.four{grid-template-columns:repeat(2,minmax(0,1fr))}.section-head{align-items:start;flex-direction:column}.section-head p{text-align:left}.content{height:calc(100dvh - 68px);padding:26px 18px 30px}.controls{height:68px}details.card[open]{grid-column:1/-1}}
+    @media(max-width:620px),(pointer:coarse) and (max-width:900px){.grid,.grid.three,.grid.four{grid-template-columns:1fr;gap:11px}details.card[open]{grid-column:auto}details.card summary{min-height:102px;padding:16px 44px 15px 16px}.metric summary{min-height:118px}.body{padding:0 16px 16px}.hero{justify-content:flex-start;padding-top:14vh}.window{border-radius:18px;align-items:flex-start}.dots{display:none}.content{padding-bottom:36px}.section-head{margin-bottom:16px}}
+    @media(prefers-reduced-motion:reduce){.deck{transition:none}}
+  </style>
+</head>
+<body>
+  <main class="deck" id="deck" aria-live="polite">
+    <section class="slide title" aria-label="封面">
+      <div class="content"><div class="hero">
+        <p class="eyebrow">Daily World + Tech / AI Brief</p>
+        <h1>履約開始，<br>風險沒有同步降溫</h1>
+        <p class="dek">美伊協議從簽署走向封鎖解除與通航驗證；Moscow 空襲、歐洲駐軍審查、兒童衝突傷害與 Ebola 惡化則提醒，全球安全和治理壓力仍在擴散。</p>
+        <div class="window">研究視窗｜2026-06-18 08:01:21 → 2026-06-19 08:01:21（Asia/Taipei）</div>
+      </div></div>
+    </section>
+    <section class="slide human" aria-label="今日數字">
+      <div class="content">
+        <div class="section-head"><div><p class="eyebrow">Signal dashboard</p><h2>四個數字看今日<span>風險</span></h2></div><p>點開每張卡片可查看脈絡、不確定性與完整來源網址。</p></div>
+        <div class="grid four" id="metrics"></div>
+        <div class="note">數字均取自本次 24 小時窗內的首次可靠發布；戰時與疫情資料可能後續修正。</div>
+      </div>
+    </section>
+    <section class="slide world" aria-label="全球新聞一至三">
+      <div class="content"><div class="section-head"><div><p class="eyebrow">World · 01—03</p><h2>協議履約、首都空襲與<span>同盟重估</span></h2></div><p>從可觀察的船運行動，到俄烏遠程打擊及 NATO 部署條件。</p></div><div class="grid three" id="world-a"></div></div>
+    </section>
+    <section class="slide human" aria-label="全球新聞四至六">
+      <div class="content"><div class="section-head"><div><p class="eyebrow">World · 04—06</p><h2>人道、改革與<span>安全核心</span></h2></div><p>政府軍對兒童傷害占比、古巴經濟轉向，以及薩赫勒武裝威脅。</p></div><div class="grid three" id="world-b"></div></div>
+    </section>
+    <section class="slide world" aria-label="全球新聞七至十">
+      <div class="content"><div class="section-head"><div><p class="eyebrow">World · 07—10</p><h2>疫情、跨境監控、洪水與<span>表達自由</span></h2></div><p>兩則續報以新增數據與實際落地為準，不重複舊事件。</p></div><div class="grid" id="world-c"></div></div>
+    </section>
+    <section class="slide tech" aria-label="科技新聞一至三">
+      <div class="content"><div class="section-head"><div><p class="eyebrow">Technology / AI · 01—03</p><h2>AI 進入創作、分發與<span>票務交易</span></h2></div><p>產品價值從生成內容，向既有工作流和高價值交易入口延伸。</p></div><div class="grid three" id="tech-a"></div></div>
+    </section>
+    <section class="slide tech" aria-label="科技新聞四至六">
+      <div class="content"><div class="section-head"><div><p class="eyebrow">Technology / AI · 04—06</p><h2>模型介面、安全召回與<span>AR 訊息</span></h2></div><p>發布不等於全面可用；逐步 rollout、修正時程與隱私仍須驗證。</p></div><div class="grid three" id="tech-b"></div></div>
+    </section>
+    <section class="slide follow" aria-label="後續追蹤">
+      <div class="content"><div class="section-head"><div><p class="eyebrow">Follow next</p><h2>接下來要看<span>什麼</span></h2></div><p>每個追蹤卡都對應可驗證指標，不把宣告直接視為完成。</p></div><div class="grid" id="followups"></div></div>
+    </section>
+    <section class="slide human" aria-label="方法與來源">
+      <div class="content"><div class="section-head"><div><p class="eyebrow">Method & provenance</p><h2>嚴格 24 小時窗與<span>事件級去重</span></h2></div></div>
+        <details class="card method">
+          <summary><span class="card-tag">方法</span><span class="card-title">如何選出今天的 10 + 6 則</span><span class="published">截點：2026-06-19 08:01:21（Asia/Taipei）</span></summary>
+          <div class="body"><p>先搜尋全部既有日報與來源筆記，再綜合主要國際媒體、科技媒體、官方產品公告與可見聚合訊號。只有事件、產品發布、正式可用性或首次可靠發布落在前 24 小時才合格；改標題、頁面更新與持續熱門不會重設事件時間。三則續報均列出前次日期與新增事實。</p><p><strong>限制：</strong>「最受討論」是跨來源顯著度的編輯綜合，不是單一社群平台的精確排行；戰時、疫情與司法資料均保留來源歸屬和不確定性。</p><div class="source">來源｜<a href="https://apnews.com/" target="_blank" rel="noopener">https://apnews.com/</a><a href="https://www.theguardian.com/international" target="_blank" rel="noopener">https://www.theguardian.com/international</a><a href="https://techcrunch.com/" target="_blank" rel="noopener">https://techcrunch.com/</a><a href="https://github.blog/changelog/" target="_blank" rel="noopener">https://github.blog/changelog/</a></div></div>
+        </details>
+        <div class="attrib"><strong>背景圖片來源：</strong> NASA Earth / map / landscape / circuit board / telescope photos via Unsplash。完整原始圖片網址已保存在本頁 HTML 註解。新聞內容的逐項來源均位於各展開卡片最末，不使用浮動頁尾來源。</div>
+      </div>
+    </section>
+  </main>
+  <nav class="controls" aria-label="投影片導覽">
+    <button id="prev" type="button" aria-label="上一張">←</button><span class="counter" id="counter">1 / 9</span><div class="dots" id="dots" aria-label="投影片位置"></div><button id="next" type="button" aria-label="下一張">→</button>
+  </nav>
+  <script>
+    const S={
+      apIran:['AP News','https://apnews.com/article/iran-us-agreement-blockade-oil-vance-trump-888fd5ad6543ed9ec4189e609d7c53b1'],
+      apMoscow:['AP News','https://apnews.com/article/russia-ukraine-war-moscow-refinery-attack-oil-0ee97c720e770c392067418f9cabcbba'],
+      guardianMoscow:['The Guardian','https://www.theguardian.com/world/2026/jun/18/moscow-oil-refinery-on-fire-ukraine-drone-stikes'],
+      apNato:['AP News','https://apnews.com/article/nato-trump-hegseth-forces-europe-security-3a550c72f0470de26b619d22b17935b6'],
+      apChildren:['AP News','https://apnews.com/article/un-children-conflict-israel-gaza-c7a930749ceb5c072ba76f458a00f03a'],
+      apCuba:['AP News','https://apnews.com/article/cuba-diaz-canel-economic-reforms-us-blockade-e4292a132526b4fa58e8edeaa0f1c623'],
+      apNiger:['AP News','https://apnews.com/article/niger-airport-attack-militants-003a2a17abee25dfa748cb339554d40a'],
+      apEbola:['AP News','https://apnews.com/article/congo-uganda-ebola-bundibugyo-cdc-cases-18d3129c8d5e3a0641ba330549a48a8a'],
+      apSpy:['AP News','https://apnews.com/article/uk-china-spying-trial-sentences-b55b9392fae3651f75acfd574f246310'],
+      guardianArthur:['The Guardian','https://www.theguardian.com/us-news/2026/jun/18/tropical-storm-arthur-downgraded'],
+      elPaisIran:['El País','https://elpais.com/internacional/2026-06-18/iran-condena-a-74-latigazos-a-la-artista-parastoo-ahmadi-por-cantar-sin-velo-en-youtube.html'],
+      guardianIran:['The Guardian','https://www.theguardian.com/world/2026/jun/18/iran-parastoo-ahmadi-74-lashes-singing-without-hijab'],
+      adobe:['TechCrunch','https://techcrunch.com/2026/06/18/adobe-adds-its-ai-assistant-to-premiere-illustrator-and-indesign/'],
+      apple:['TechCrunch','https://techcrunch.com/2026/06/18/apple-opens-up-app-store-to-new-competition-in-brazil/'],
+      cade:['巴西 CADE','https://www.gov.br/cade/en/matters/news/cade-signs-a-cease-and-desist-agreement-with-apple'],
+      spotify:['TechCrunch','https://techcrunch.com/2026/06/18/spotifys-reserved-ticket-sales-to-musics-superfans-are-now-going-live/'],
+      spotifyOfficial:['Spotify Newsroom','https://newsroom.spotify.com/2026-05-21/investor-day-reserved-launch/'],
+      github:['GitHub Changelog','https://github.blog/changelog/2026-06-18-mai-code-1-flash-available-on-more-copilot-surfaces/'],
+      waymo:['TechCrunch','https://techcrunch.com/2026/06/18/waymo-recalls-nearly-4000-robotaxis-to-stop-them-driving-into-highway-construction-zones/'],
+      pixi:['TechCrunch','https://techcrunch.com/2026/06/18/pixis-new-ios-app-turns-text-messages-into-interactive-ar-experiences/']
+    };
+    const world=[
+      {tag:'01 · 續報',title:'美國解除對伊朗海上封鎖，Hormuz 船運恢復',time:'2026-06-18 23:34:44',dt:'2026-06-18T15:34:44Z',why:'前次 2026-06-18 收錄簽署與立即生效宣稱；今天首次出現封鎖解除、油輪移動及 Khamenei 支持直接談判，協議開始接受實際履約驗證。',facts:'前一晚約 1,250 萬桶原油移動，含至少兩艘伊朗油輪的 380 萬桶；大型商船中斷 110 天後重新通過。Witkoff 稱伊朗將邀請 IAEA 盤點濃縮材料。',uncertain:'白宮未完整證實 IAEA 說法；主航道仍受封閉和約 80 枚待清水雷影響，正式儀式也可能延後。',sources:[S.apIran]},
+      {tag:'02',title:'烏克蘭發動最大規模 Moscow 空襲，煉油廠起火',time:'2026-06-18 15:24:36',dt:'2026-06-18T07:24:36Z',why:'遠程打擊命中俄羅斯首都能源與交通系統，提高報復升級、民航中斷與城市燃料供應受損的風險。',facts:'煉油廠一週內再度起火，數百航班取消或延誤；該廠據報供應 Moscow 最多約 40% 汽油與 50% 柴油。地方政府稱 17 人受傷。',uncertain:'俄方宣稱攔截 555 架無人機，完整數字與損害無法獨立核實；雙方對攻擊正當性的敘事互相衝突。',sources:[S.apMoscow,S.guardianMoscow]},
+      {tag:'03',title:'美國啟動六個月歐洲駐軍審查',time:'2026-06-18 14:55:23',dt:'2026-06-18T06:55:23Z',why:'審查可能重分配美軍部隊、基地與支援資產，直接影響 NATO 東翼嚇阻和美國中東行動所需的基地與飛越權。',facts:'Hegseth 表示結果取決於歐洲是否承擔更多安全責任，並將評估盟國提供基地、飛越與作戰支援的程度。',uncertain:'尚未公布兵力數字或撤調目標；國會、雙邊基地協議和盟國磋商仍可能改變最終結果。',sources:[S.apNato]},
+      {tag:'04',title:'聯合國：衝突中兒童受害創新高',time:'2026-06-19 05:24:06',dt:'2026-06-18T21:24:06Z',why:'政府及其武裝力量首次占經核實嚴重侵害多數，顯示國家軍事行動對兒童的傷害已成為全球人道與問責核心。',facts:'報告核實 38,558 起侵害、影響 24,174 名兒童；兒童死亡 6,266 人、年增 34%。Gaza 有 2,668 名巴勒斯坦兒童死亡獲核實，另 4,588 件待查。',uncertain:'資料只計完成聯合國核實者，戰區准入受限使實際規模可能更高；待查通報不能直接計入正式總數。',sources:[S.apChildren]},
+      {tag:'05',title:'古巴共產黨批准緊急市場化方案',time:'2026-06-19 00:43:09',dt:'2026-06-18T16:43:09Z',why:'在停電、短缺與移民壓力下，執政黨更明確擴大私營、地方自主與僑民投資，可能成為數十年來重要制度調整。',facts:'方案擬擴大民營企業、地方與國企自主權、外資及海外古巴人資本，部分構想參考中國與越南，下一步交 National Assembly。',uncertain:'完整文本、立法時程和產權保障尚未公開；制裁與外匯短缺也可能削弱改革效果。',sources:[S.apCuba]},
+      {tag:'06',title:'Niger 首都機場遭攻擊，13 名軍民死亡',time:'2026-06-18 18:27:51',dt:'2026-06-18T10:27:51Z',why:'襲擊命中 Niamey 戰略機場、空軍基地與區域安全聯盟節點，顯示薩赫勒武裝勢力仍能接近政權核心。',facts:'當局稱 11 名士兵和 2 名平民死亡，安全部隊擊斃 22 名攻擊者、逮捕 20 名嫌疑人；機場數小時後恢復。',uncertain:'尚無組織可靠宣稱責任，傷亡和逮捕數字待獨立核實；不能直接沿用一月攻擊的 Islamic State 歸因。',sources:[S.apNiger]},
+      {tag:'07 · 續報',title:'Ebola 病例一週增 38%，死亡突破 200',time:'2026-06-18 23:35:42',dt:'2026-06-18T15:35:42Z',why:'前次 2026-06-15 收錄 782 例、181 死；今天病例升至 894、接觸者追蹤嚴重不足，代表控制能力出現重大惡化。',facts:'約 35,000 名潛在接觸者只有約 4,000 人獲追蹤；需求 540 名人員，現有 84 名。逾 9 億美元承諾款中僅約 9,000 萬到位。',uncertain:'疫情發現晚且追蹤率低，官方數字可能低估傳播；Bundibugyo 型尚無核准專用疫苗或治療。',sources:[S.apEbola]},
+      {tag:'08',title:'英國中國監控案判刑 10 年與 8 年',time:'2026-06-18 22:17:46',dt:'2026-06-18T14:17:46Z',why:'英國以國家安全法處理跨境監控與境外壓迫，將影響英中外交、港人安全與公務員安全審查。',facts:'邊境官員 Peter Wai 判 10 年、前香港警官 Bill Yuen 判 8 年；檢方指兩人蒐集 Nathan Law 等異議者與英國政治人物資訊。',uncertain:'中港政府否認關聯並稱案件政治化；法院確認被告刑責，但政府指揮鏈和資金來源仍未全部公開。',sources:[S.apSpy]},
+      {tag:'09 · 續報',title:'Arthur 登陸 Texas 後降級，洪水風險東移',time:'2026-06-18 21:52:00',dt:'2026-06-18T13:52:00Z',why:'前次 2026-06-18 僅收錄風暴形成與預警；今天新增登陸、降級及跨州實際降雨路徑，應變重點轉為洪水、龍捲風與停電。',facts:'Louisiana、Mississippi、Alabama、Georgia 與 Florida Panhandle 可能累積 4 至 8 英吋以上雨量，局部每小時可達 3 英吋。',uncertain:'風速下降不代表水災解除；局部雨量仍隨路徑改變，其他中西部風暴損失也不能全部歸因 Arthur。',sources:[S.guardianArthur]},
+      {tag:'10',title:'伊朗歌手被報判 74 下鞭刑與兩年禁演',time:'2026-06-18 22:03:09',dt:'2026-06-18T14:03:09Z',why:'案件把女性服儀管制、藝術自由與戰後政治氛圍重新推上國際議程，測試政府對網路抗議文化的打壓尺度。',facts:'人權組織及法律文件稱 Parastoo Ahmadi 與 8 名團隊成員各判 74 下鞭刑，Ahmadi 另被禁演、禁出境兩年；案件源自 2024 年無頭巾演唱會。',uncertain:'司法機構尚未官方公布；目前來自人權團體和看過文件的律師，是否執行及上訴狀態仍待核實。',sources:[S.elPaisIran,S.guardianIran]}
+    ];
+    const tech=[
+      {tag:'T1',title:'Adobe 擴大 Firefly AI 助理至主要創作工具',time:'2026-06-18 21:00:00',dt:'2026-06-18T13:00:00Z',why:'Adobe 把生成式 AI 從內容生成推進到剪輯、設計、排版與審片工作流，競爭焦點轉向代理能否理解專案結構並批次操作。',facts:'助理可整理 Premiere 素材、批次改名和做訪談標記，也能重整 Illustrator 圖層、處理字體，並依品牌資料建立影片與 storyboard。',uncertain:'部分能力仍為 private beta 或分階段開放；大型專案可靠度、成本和著作權追蹤仍待實測。',sources:[S.adobe]},
+      {tag:'T2',title:'Apple 在巴西開放替代商店與外部支付',time:'2026-06-18 23:48:08',dt:'2026-06-18T15:48:08Z',why:'巴西成為 iOS 平台開放的重要市場，可能影響其他國家競爭法執行與開發者費率談判。',facts:'替代 marketplace 須授權，app 仍經 notarization；符合條件交易收 5% Core Technology Commission，開發者須於 7 月 6 日前接受新條款。',uncertain:'Apple 強調安全，批評者可能認為授權與費率仍限制競爭；採用率及第三方商店責任尚待觀察。',sources:[S.apple,S.cade]},
+      {tag:'T3',title:'Spotify Reserved 正式上線，超級粉絲優先購票',time:'2026-06-18 22:00:00',dt:'2026-06-18T14:00:00Z',why:'Spotify 把長期聆聽與粉絲訊號直接連到演唱會票務，從推薦平台進入高價值交易入口。',facts:'首波向美國 18 歲以上 Premium 使用者開放，Role Model 為首位合作藝人；合格者可在一般售票前買最多兩張票，Spotify 不另收費。',uncertain:'超級粉絲不保證獲票；資格演算法、票量、轉售防護與更多市場支援仍不透明。',sources:[S.spotify,S.spotifyOfficial]},
+      {tag:'T4',title:'GitHub 擴大 MAI-Code-1-Flash 的 Copilot 介面',time:'2026-06-19 04:11:24',dt:'2026-06-18T20:11:24Z',why:'小型 coding model 跨 CLI、桌面、網站、IDE 和 mobile 進入 Copilot，反映 coding agent 同時追求速度、成本與多介面一致性。',facts:'現支援 Copilot CLI、Copilot app、GitHub.com Chat、Visual Studio、Mobile、JetBrains、Eclipse 和 Xcode；個人方案先逐步 rollout。',uncertain:'品質描述屬官方主張；並非所有使用者當日可見，Business 與 Enterprise 也尚未上線。',sources:[S.github]},
+      {tag:'T5',title:'Waymo 召回近四千輛 robotaxi 軟體',time:'2026-06-18 19:59:11',dt:'2026-06-18T11:59:11Z',why:'施工區決策缺陷涉及接近整個商用車隊，凸顯自駕擴張後的更新、安全驗證與監管責任。',facts:'召回源於 Phoenix 和 San Francisco 合計 13 起施工區事件；公司自 5 月 19 日停跑高速公路，城市街道服務持續，修正方案仍在開發。',uncertain:'事故、內部判定和公開申報時間不同；本次採監管文件首度可靠公開報導，修正與重返高速標準未明。',sources:[S.waymo]},
+      {tag:'T6',title:'Pixi 推出 iOS 生成式 AR 訊息',time:'2026-06-18 20:00:00',dt:'2026-06-18T12:00:00Z',why:'Pixi 把生成式角色、裝置端感知和 iMessage 分享結合，提供不要求收件者安裝 app 的 AR 社交路徑。',facts:'文字可變成回應空間、臉部與聲音的 AR 角色或遊戲，支援 iPhone 11 以上，目前免費；規劃 marketplace、Android 與其他訊息平台。',uncertain:'產品前一日上架但在視窗內首次可靠報導；跨平台和 marketplace 仍只是規劃，留存與隱私沒有獨立數據。',sources:[S.pixi]}
+    ];
+    const metrics=[
+      {tag:'履約',title:'1,250 萬桶',label:'封鎖解除前一晚移動的原油',time:'2026-06-18 23:34:44',dt:'2026-06-18T15:34:44Z',why:'油輪實際移動是比簽署宣告更可驗證的履約指標；其中至少兩艘伊朗油輪載運約 380 萬桶。',facts:'大型商船在中斷約 110 天後恢復通行，但主航道和水雷清除仍限制完全恢復。',uncertain:'單晚移動量不能代表後續日常運能，也不能證明所有制裁與核查條件已落實。',sources:[S.apIran]},
+      {tag:'人道',title:'38,558 起',label:'聯合國核實的兒童嚴重侵害',time:'2026-06-19 05:24:06',dt:'2026-06-18T21:24:06Z',why:'影響 24,174 名兒童，為連續第四年上升，且政府軍首次占多數。',facts:'兒童死亡 6,266 人、年增 34%；Gaza 另有數千件通報仍待核實。',uncertain:'核實門檻與戰區准入使數字更接近下限，而非全部實際傷害。',sources:[S.apChildren]},
+      {tag:'疫情',title:'+38%',label:'Ebola 確診一週增幅',time:'2026-06-18 23:35:42',dt:'2026-06-18T15:35:42Z',why:'病例升至 894、死亡突破 200，且接觸者追蹤率低於 15%，是明顯的控制惡化訊號。',facts:'35,000 名潛在接觸者只約 4,000 人被追蹤，人力需求 540、現有 84。',uncertain:'遲發現與低追蹤率意味實際傳播可能高於官方統計。',sources:[S.apEbola]},
+      {tag:'產品安全',title:'約 3,900 輛',label:'Waymo 軟體召回規模',time:'2026-06-18 19:59:11',dt:'2026-06-18T11:59:11Z',why:'召回接近整個商用 robotaxi 車隊，顯示施工區行為問題不是單車例外。',facts:'13 起事件分布在 Phoenix 和 San Francisco；高速公路營運已停，城市街道仍服務。',uncertain:'修正方案、完成日期和重新上高速的驗證標準尚未公布。',sources:[S.waymo]}
+    ];
+    const followups=[
+      {tag:'48 小時',title:'Hormuz 是否從初步通航轉為穩定運能',time:'追蹤項目',dt:'2026-06-19',why:'觀察主航道是否開放、水雷清除進度、保險與航商是否恢復，以及 IAEA 邀請是否出現正式文件。',facts:'若只有少量船隻通過而沒有可持續航線與核查安排，協議仍停留在局部履約。',uncertain:'各方可能用單一航次或政治聲明放大進展，需持續比對實際船運和官方文件。',sources:[S.apIran]},
+      {tag:'軍事',title:'Moscow 煉油廠停產與俄方報復規模',time:'追蹤項目',dt:'2026-06-19',why:'煉油廠對首都燃料供應占比高，實際停產時間比火災影像更能衡量戰略效果。',facts:'同時追蹤航班恢復、傷亡修正與俄方後續打擊，避免只根據單方攔截數判斷。',uncertain:'戰時資訊快速變動，供應占比和損害評估可能由企業或衛星資料修正。',sources:[S.apMoscow,S.guardianMoscow]},
+      {tag:'公衛',title:'Ebola 接觸者追蹤率與實際撥款',time:'追蹤項目',dt:'2026-06-19',why:'病例曲線取決於是否能把 35,000 名潛在接觸者納入追蹤，承諾資金若不到位，人力缺口無法補齊。',facts:'需持續比對 Congo 與 Uganda 新病例、跨境 health zones、工作人員配置和到帳資金。',uncertain:'在低追蹤率下，確診增速可能同時反映傳播和檢測能力變化，不能只看單日新增。',sources:[S.apEbola]},
+      {tag:'產品',title:'發布是否真正可用，而不只是公告',time:'追蹤項目',dt:'2026-06-19',why:'Adobe 部分功能仍 beta、GitHub 採逐步 rollout、Spotify 和 Apple 又受地區與資格限制，實際覆蓋面可能小於標題。',facts:'應查驗可用方案、地區、費率、企業管理、事故修正與人工覆核成本，再評估產品影響。',uncertain:'官方 launch language 常把 preview、limited access 與 GA 混在同一敘事，需逐項核對。',sources:[S.adobe,S.apple,S.spotify,S.github]}
+    ];
+    function esc(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+    function card(x,metric=false){const links=x.sources.map(([name,url])=>`<a href="${esc(url)}" target="_blank" rel="noopener">${esc(name)}｜${esc(url)}</a>`).join('');return `<details class="card ${metric?'metric risk':''}"><summary><span class="card-tag">${esc(x.tag)}</span><span class="card-title">${esc(x.title)}</span>${metric?`<span class="metric-label">${esc(x.label)}</span>`:''}<time class="published" datetime="${esc(x.dt)}">${esc(x.time)}${x.time==='追蹤項目'?'':'（Asia/Taipei）'}</time></summary><div class="body"><p><strong>為何重要：</strong>${esc(x.why)}</p><p><strong>關鍵事實：</strong>${esc(x.facts)}</p><p><strong>不確定性：</strong>${esc(x.uncertain)}</p><div class="source">來源｜${links}</div></div></details>`}
+    const render=(id,items,metric=false)=>{document.getElementById(id).innerHTML=items.map(x=>card(x,metric)).join('')};
+    render('metrics',metrics,true);render('world-a',world.slice(0,3));render('world-b',world.slice(3,6));render('world-c',world.slice(6));render('tech-a',tech.slice(0,3));render('tech-b',tech.slice(3));render('followups',followups);
+    const deck=document.getElementById('deck'),slides=[...document.querySelectorAll('.slide')],counter=document.getElementById('counter'),dots=document.getElementById('dots');let index=0,startX=0,startY=0;
+    slides.forEach((_,i)=>{const b=document.createElement('button');b.className='dot';b.type='button';b.setAttribute('aria-label',`前往第 ${i+1} 張`);b.addEventListener('click',()=>go(i));dots.appendChild(b)});
+    function go(n){index=Math.max(0,Math.min(slides.length-1,n));deck.style.transform=`translateX(${-index*100}vw)`;counter.textContent=`${index+1} / ${slides.length}`;[...dots.children].forEach((d,i)=>d.classList.toggle('active',i===index));document.title=`${index+1}/${slides.length} · 2026-06-19 每日新聞`;}
+    document.getElementById('prev').addEventListener('click',()=>go(index-1));document.getElementById('next').addEventListener('click',()=>go(index+1));
+    document.addEventListener('keydown',e=>{if(e.target.closest('details,a,button'))return;if(['ArrowRight','PageDown',' '].includes(e.key)){e.preventDefault();go(index+1)}if(['ArrowLeft','PageUp'].includes(e.key)){e.preventDefault();go(index-1)}if(e.key==='Home')go(0);if(e.key==='End')go(slides.length-1)});
+    document.addEventListener('touchstart',e=>{if(e.target.closest('details,a,button'))return;startX=e.changedTouches[0].clientX;startY=e.changedTouches[0].clientY},{passive:true});document.addEventListener('touchend',e=>{if(e.target.closest('details,a,button'))return;const dx=e.changedTouches[0].clientX-startX,dy=e.changedTouches[0].clientY-startY;if(Math.abs(dx)>70&&Math.abs(dx)>Math.abs(dy)*1.4)go(index+(dx<0?1:-1))},{passive:true});go(0);
+  </script>
+</body>
+</html>
