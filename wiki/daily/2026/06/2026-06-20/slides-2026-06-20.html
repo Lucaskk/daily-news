@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="2026-06-20 每日全球與科技 AI 新聞：10 則全球新聞、3 則科技產品新聞與來源。">
   <title>2026-06-20 全球與科技 AI 新聞</title>
-  <!-- Background images: Unsplash / NASA. Full attribution is visible on the final slide. -->
+  <!-- Background images: Unsplash. Full attribution is visible on the final slide. News slides are grouped dynamically by theme. -->
   <style>
     :root { --ink:#152036; --muted:#56627a; --paper:rgba(250,252,255,.94); --line:rgba(30,64,91,.16); --blue:#0d5a79; --teal:#087f70; --gold:#c56b28; }
     * { box-sizing:border-box; }
@@ -20,10 +20,19 @@
     .slide > * { position:relative; z-index:1; }
     .hero { background-image:url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=2000&q=82'); background-size:cover; background-position:center; }
     .hero::before { background:linear-gradient(100deg,rgba(248,251,253,.98) 0%,rgba(248,251,253,.89) 56%,rgba(248,251,253,.58) 100%); }
-    .world { background-image:url('https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?auto=format&fit=crop&w=2000&q=80'); background-size:cover; background-position:center; }
-    .world::before { background:linear-gradient(110deg,rgba(247,250,252,.97),rgba(247,250,252,.84)); }
-    .tech { background-image:url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=2000&q=80'); background-size:cover; background-position:center; }
-    .tech::before { background:linear-gradient(110deg,rgba(248,251,253,.97),rgba(240,250,248,.85)); }
+    .source-pool { display:none!important; }
+    .topic { background-size:cover; background-position:center; background-attachment:fixed; }
+    .topic::before { background:linear-gradient(105deg,rgba(5,13,23,.90) 0%,rgba(9,20,31,.72) 48%,rgba(9,20,31,.48) 100%); }
+    .topic h2 { color:#fff; text-shadow:0 2px 16px rgba(0,0,0,.42); }
+    .topic .kicker { color:#60f0d2; }
+    .topic .topic-note { max-width:850px; margin:8px 0 18px; color:#edf7fb; font-size:.95rem; line-height:1.65; text-shadow:0 1px 8px rgba(0,0,0,.45); }
+    .topic details.card { background:rgba(252,254,255,.95); border-color:rgba(255,255,255,.38); box-shadow:0 15px 38px rgba(0,0,0,.30); backdrop-filter:blur(10px); }
+    .security { background-image:url('https://images.unsplash.com/photo-1658682353221-d2d6c74c861c?auto=format&fit=crop&w=2000&q=82'); background-position:center 58%; }
+    .institutions { background-image:url('https://images.unsplash.com/photo-1768853324750-d4d8b01c2039?auto=format&fit=crop&w=2000&q=82'); background-position:center 45%; }
+    .rights { background-image:url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=2000&q=82'); background-position:center 46%; }
+    .climate { background-image:url('https://images.unsplash.com/photo-1562422308-a320d8c080e2?auto=format&fit=crop&w=2000&q=82'); background-position:center 55%; }
+    .ai-tools { background-image:url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=2000&q=82'); background-position:center; }
+    .devices { background-image:url('https://images.unsplash.com/photo-1484704849700-f032a568e944?auto=format&fit=crop&w=2000&q=82'); background-position:center; }
     .kicker { margin:0 0 10px; color:var(--teal); font-size:.78rem; font-weight:800; letter-spacing:.16em; text-transform:uppercase; }
     h1 { max-width:980px; margin:0; font-size:clamp(2.35rem,6.4vw,6.3rem); line-height:.98; letter-spacing:-.055em; }
     h2 { margin:0 0 8px; font-size:clamp(1.65rem,3.2vw,3.25rem); line-height:1.04; letter-spacing:-.035em; }
@@ -55,7 +64,7 @@
     .hint { position:fixed; right:18px; bottom:24px; z-index:20; color:#516076; font-size:.72rem; }
     .source-list { columns:2; column-gap:28px; font-size:.78rem; line-height:1.7; }
     .source-list p { break-inside:avoid; }
-    @media (max-width:900px) { body{overflow:auto}.deck{height:auto;min-height:100vh}.slide{position:relative;min-height:100vh}.slide:not(.active){display:none}.grid,.grid.three{grid-template-columns:1fr}.source-list{columns:1}.hint{display:none} }
+    @media (max-width:900px) { body{overflow:auto}.deck{height:auto;min-height:100vh}.slide{position:relative;min-height:100vh}.slide:not(.active){display:none}.grid,.grid.three{grid-template-columns:1fr}.source-list{columns:1}.hint{display:none}.topic{background-attachment:scroll}.topic::before{background:linear-gradient(180deg,rgba(4,12,21,.74) 0%,rgba(5,14,24,.88) 48%,rgba(5,14,24,.95) 100%)} }
     @media (max-width:560px) { .slide{padding:24px 14px 88px}.grid{gap:10px}summary{padding:15px 44px 15px 15px}.body{padding:0 15px 16px}.nav{bottom:12px} }
     @media print { body{overflow:visible}.deck{height:auto}.slide{display:block!important;position:relative;min-height:100vh;page-break-after:always}.nav,.progress,.hint{display:none}details.card .body{display:block}details.card{break-inside:avoid} }
   </style>
@@ -81,7 +90,7 @@
     </div>
   </section>
 
-  <section class="slide world" data-title="全球 1–5">
+  <section class="slide source-pool world" data-title="全球 1–5">
     <p class="kicker">World / Top 10 — 01–05</p>
     <h2>停火、航運與政治壓力</h2>
     <div class="grid">
@@ -93,7 +102,7 @@
     </div>
   </section>
 
-  <section class="slide world" data-title="全球 6–10">
+  <section class="slide source-pool world" data-title="全球 6–10">
     <p class="kicker">World / Top 10 — 06–10</p>
     <h2>正義框架、監管與跨境風險</h2>
     <div class="grid">
@@ -105,7 +114,7 @@
     </div>
   </section>
 
-  <section class="slide tech" data-title="科技 / AI">
+  <section class="slide source-pool tech" data-title="科技 / AI">
     <p class="kicker">Technology / AI Products</p>
     <h2>分發、檢索與專用硬體</h2>
     <div class="grid three">
@@ -141,6 +150,12 @@
       <p><strong>標題背景｜Unsplash / NASA</strong><br><a href="https://unsplash.com/photos/Q1p7bh3SHj8">https://unsplash.com/photos/Q1p7bh3SHj8</a></p>
       <p><strong>全球段落背景｜Unsplash / Charles Forerunner</strong><br><a href="https://unsplash.com/photos/3fPXt37X6UQ">https://unsplash.com/photos/3fPXt37X6UQ</a></p>
       <p><strong>科技段落背景｜Unsplash / Umberto</strong><br><a href="https://unsplash.com/photos/FewHpO4VC9Y">https://unsplash.com/photos/FewHpO4VC9Y</a></p>
+      <p><strong>戰爭、航運與地緣安全背景｜Unsplash / Hossein Nasr</strong><br><a href="https://unsplash.com/photos/a-large-ship-in-the-water-bOvTbQgHPR8">https://unsplash.com/photos/a-large-ship-in-the-water-bOvTbQgHPR8</a></p>
+      <p><strong>政治權力、外交與情報背景｜Unsplash / Job Vermeulen</strong><br><a href="https://unsplash.com/photos/palace-of-westminster-and-big-ben-across-the-thames-qeYuv5tJRDg">https://unsplash.com/photos/palace-of-westminster-and-big-ben-across-the-thames-qeYuv5tJRDg</a></p>
+      <p><strong>權利、問責與數位治理背景｜Unsplash</strong><br><a href="https://images.unsplash.com/photo-1589829545856-d10d557cf95f">https://images.unsplash.com/photo-1589829545856-d10d557cf95f</a></p>
+      <p><strong>氣候與公共基礎設施背景｜Unsplash</strong><br><a href="https://images.unsplash.com/photo-1562422308-a320d8c080e2">https://images.unsplash.com/photo-1562422308-a320d8c080e2</a></p>
+      <p><strong>AI 與研究基礎設施背景｜Unsplash / Umberto</strong><br><a href="https://unsplash.com/photos/FewHpO4VC9Y">https://unsplash.com/photos/FewHpO4VC9Y</a></p>
+      <p><strong>3C 與音訊新產品背景｜Unsplash</strong><br><a href="https://images.unsplash.com/photo-1484704849700-f032a568e944">https://images.unsplash.com/photo-1484704849700-f032a568e944</a></p>
       <p><strong>完整日報</strong><br><a href="daily-news-2026-06-20.md">daily-news-2026-06-20.md</a></p>
       <p><strong>完整來源筆記</strong><br><a href="source-notes-2026-06-20.md">source-notes-2026-06-20.md</a></p>
     </div>
@@ -149,13 +164,72 @@
 
 <nav class="nav" aria-label="投影片導覽">
   <button id="prev" type="button" aria-label="上一頁">←</button>
-  <span id="counter" class="counter" aria-live="polite">1 / 7</span>
+  <span id="counter" class="counter" aria-live="polite">1 / 10</span>
   <button id="next" type="button" aria-label="下一頁">→</button>
 </nav>
 <div class="hint">← → / PageUp PageDown / Home End</div>
 <div id="progress" class="progress" aria-hidden="true"></div>
 <script>
   (() => {
+    const deckRoot = document.querySelector('.deck');
+    const worldCards = [...document.querySelectorAll('.source-pool.world details.card')];
+    const techCards = [...document.querySelectorAll('.source-pool.tech details.card')];
+    const synthesisSlide = document.querySelector('[data-title="綜合判讀"]');
+    const topicDefs = [
+      {
+        title: '戰爭、航運與地緣安全',
+        kicker: 'Security / Shipping / Geopolitics',
+        note: '停火執行、能源航道與跨境政治暴力放在同一風險鏈中閱讀。',
+        className: 'security',
+        cards: [worldCards[0], worldCards[1], worldCards[9]]
+      },
+      {
+        title: '政治權力、外交與情報',
+        kicker: 'Politics / Diplomacy / Intelligence',
+        note: '領導權更替、盟國摩擦與情報體系任命，共同指向國家決策能力。',
+        className: 'institutions',
+        cards: [worldCards[3], worldCards[4], worldCards[7]]
+      },
+      {
+        title: '權利、問責與數位治理',
+        kicker: 'Rights / Accountability / Digital Governance',
+        note: '賠償正義、專業監管與平台封鎖，都是制度如何界定權利邊界的問題。',
+        className: 'rights',
+        cards: [worldCards[5], worldCards[6], worldCards[8]]
+      },
+      {
+        title: '氣候與公共基礎設施',
+        kicker: 'Climate / Public Systems',
+        note: '西歐第二波熱浪同時測試鐵路、核電冷卻與公共衛生韌性。',
+        className: 'climate',
+        cards: [worldCards[2]]
+      },
+      {
+        title: 'AI 與研究基礎設施',
+        kicker: 'AI / Research Infrastructure',
+        note: 'Jio 解決大規模分發，Firecrawl 解決研究資料檢索，產品重點都在模型之外。',
+        className: 'ai-tools',
+        cards: [techCards[0], techCards[1]]
+      },
+      {
+        title: '3C 與音訊新產品',
+        kicker: 'Devices / Audio Products',
+        note: '專用硬體、實體控制與高解析串流，讓網路電台重新回到家居裝置。',
+        className: 'devices',
+        cards: [techCards[2]]
+      }
+    ];
+    topicDefs.forEach(topic => {
+      const section = document.createElement('section');
+      section.className = `slide topic ${topic.className}`;
+      section.dataset.title = topic.title;
+      section.innerHTML = `<p class="kicker">${topic.kicker}</p><h2>${topic.title}</h2><p class="topic-note">${topic.note}</p><div class="grid"></div>`;
+      const grid = section.querySelector('.grid');
+      if (topic.cards.length === 1) grid.classList.add('single');
+      topic.cards.filter(Boolean).forEach(card => grid.append(card));
+      deckRoot.insertBefore(section, synthesisSlide);
+    });
+    document.querySelectorAll('.source-pool').forEach(pool => pool.remove());
     const slides = [...document.querySelectorAll('.slide')];
     const prev = document.getElementById('prev');
     const next = document.getElementById('next');

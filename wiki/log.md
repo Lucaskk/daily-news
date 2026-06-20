@@ -1,5 +1,11 @@
 # Knowledge Base Log
 
+## [2026-06-20] update | Thematic slide grouping and backgrounds
+
+- Reorganized only the 2026-06-20 deck into six dynamic topic pages: geopolitical security, politics / intelligence, rights / digital governance, climate systems, AI / research infrastructure, and 3C audio products.
+- Added a topic-matched background to each news page with dark directional overlays, high-opacity expandable cards, mobile-safe cropping, and visible image attribution.
+- Updated `wiki/daily/README.md` so future decks use evidence-based thematic grouping; historical decks remain unchanged unless explicitly requested.
+
 ## [2026-06-20] ingest | Daily global and tech AI news
 
 - Created `wiki/daily/2026/06/2026-06-20/daily-news-2026-06-20.md` with exactly 10 global items and three technology / AI product items.
