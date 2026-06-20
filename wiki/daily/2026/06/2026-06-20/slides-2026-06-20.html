@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="2026-06-20 每日全球與科技 AI 新聞：10 則全球新聞、3 則科技產品新聞與來源。">
+  <title>2026-06-20 全球與科技 AI 新聞</title>
+  <!-- Background images: Unsplash / NASA. Full attribution is visible on the final slide. -->
+  <style>
+    :root { --ink:#152036; --muted:#56627a; --paper:rgba(250,252,255,.94); --line:rgba(30,64,91,.16); --blue:#0d5a79; --teal:#087f70; --gold:#c56b28; }
+    * { box-sizing:border-box; }
+    html, body { margin:0; min-height:100%; background:#e9f0f4; color:var(--ink); font-family:Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC", sans-serif; }
+    body { overflow:hidden; }
+    a { color:#075d88; overflow-wrap:anywhere; }
+    button { font:inherit; }
+    .deck { width:100vw; height:100vh; position:relative; }
+    .slide { display:none; position:absolute; inset:0; overflow:auto; padding:clamp(22px,4vw,64px) clamp(18px,5vw,76px) 94px; background:#edf3f6; }
+    .slide.active { display:block; }
+    .slide::before { content:""; position:fixed; inset:0; pointer-events:none; background:linear-gradient(115deg,rgba(247,250,252,.97),rgba(247,250,252,.86)); z-index:0; }
+    .slide > * { position:relative; z-index:1; }
+    .hero { background-image:url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=2000&q=82'); background-size:cover; background-position:center; }
+    .hero::before { background:linear-gradient(100deg,rgba(248,251,253,.98) 0%,rgba(248,251,253,.89) 56%,rgba(248,251,253,.58) 100%); }
+    .world { background-image:url('https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?auto=format&fit=crop&w=2000&q=80'); background-size:cover; background-position:center; }
+    .world::before { background:linear-gradient(110deg,rgba(247,250,252,.97),rgba(247,250,252,.84)); }
+    .tech { background-image:url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=2000&q=80'); background-size:cover; background-position:center; }
+    .tech::before { background:linear-gradient(110deg,rgba(248,251,253,.97),rgba(240,250,248,.85)); }
+    .kicker { margin:0 0 10px; color:var(--teal); font-size:.78rem; font-weight:800; letter-spacing:.16em; text-transform:uppercase; }
+    h1 { max-width:980px; margin:0; font-size:clamp(2.35rem,6.4vw,6.3rem); line-height:.98; letter-spacing:-.055em; }
+    h2 { margin:0 0 8px; font-size:clamp(1.65rem,3.2vw,3.25rem); line-height:1.04; letter-spacing:-.035em; }
+    .lede { max-width:900px; margin:20px 0 24px; color:#334158; font-size:clamp(1rem,1.55vw,1.35rem); line-height:1.7; }
+    .chips { display:flex; flex-wrap:wrap; gap:9px; }
+    .chip { padding:8px 12px; border:1px solid var(--line); border-radius:999px; background:rgba(255,255,255,.84); color:#334158; font-size:.86rem; font-weight:700; }
+    .grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:13px; margin-top:20px; }
+    .grid.three { grid-template-columns:repeat(3,minmax(0,1fr)); }
+    details.card { border:1px solid var(--line); border-radius:17px; background:var(--paper); box-shadow:0 12px 30px rgba(24,49,65,.08); overflow:hidden; }
+    details.card[open] { grid-column:1 / -1; }
+    summary { list-style:none; cursor:pointer; padding:17px 46px 17px 18px; position:relative; font-weight:800; line-height:1.38; }
+    summary::-webkit-details-marker { display:none; }
+    summary::after { content:"＋"; position:absolute; right:16px; top:14px; width:26px; height:26px; display:grid; place-items:center; border-radius:50%; color:white; background:var(--blue); }
+    details[open] summary::after { content:"−"; }
+    .time { display:block; margin-top:7px; color:var(--muted); font-size:.74rem; font-weight:650; }
+    .body { padding:0 18px 18px; color:#2e3b52; font-size:.91rem; line-height:1.68; }
+    .body p { margin:8px 0; }
+    .label { color:var(--teal); font-weight:800; }
+    .uncertain { border-left:3px solid var(--gold); padding-left:10px; }
+    .source { margin-top:14px; padding-top:12px; border-top:1px solid var(--line); color:#46566c; font-size:.78rem; }
+    .source strong { color:#25334a; }
+    .stat { font-size:2.2rem; line-height:1; color:var(--blue); font-weight:900; letter-spacing:-.04em; }
+    .hero-note { max-width:720px; padding:18px 20px; border-left:5px solid var(--teal); background:rgba(255,255,255,.82); border-radius:0 14px 14px 0; line-height:1.65; }
+    .nav { position:fixed; z-index:30; left:50%; bottom:18px; transform:translateX(-50%); display:flex; align-items:center; gap:10px; padding:8px 10px; border:1px solid rgba(12,42,61,.18); border-radius:999px; background:rgba(255,255,255,.94); box-shadow:0 8px 24px rgba(25,49,65,.14); }
+    .nav button { width:40px; height:36px; border:0; border-radius:999px; cursor:pointer; color:white; background:var(--blue); }
+    .nav button:disabled { opacity:.35; cursor:default; }
+    .counter { min-width:72px; text-align:center; color:#3e4a5d; font-size:.82rem; font-weight:800; }
+    .progress { position:fixed; z-index:31; left:0; bottom:0; height:4px; width:0; background:linear-gradient(90deg,var(--teal),var(--blue)); transition:width .18s ease; }
+    .hint { position:fixed; right:18px; bottom:24px; z-index:20; color:#516076; font-size:.72rem; }
+    .source-list { columns:2; column-gap:28px; font-size:.78rem; line-height:1.7; }
+    .source-list p { break-inside:avoid; }
+    @media (max-width:900px) { body{overflow:auto}.deck{height:auto;min-height:100vh}.slide{position:relative;min-height:100vh}.slide:not(.active){display:none}.grid,.grid.three{grid-template-columns:1fr}.source-list{columns:1}.hint{display:none} }
+    @media (max-width:560px) { .slide{padding:24px 14px 88px}.grid{gap:10px}summary{padding:15px 44px 15px 15px}.body{padding:0 15px 16px}.nav{bottom:12px} }
+    @media print { body{overflow:visible}.deck{height:auto}.slide{display:block!important;position:relative;min-height:100vh;page-break-after:always}.nav,.progress,.hint{display:none}details.card .body{display:block}details.card{break-inside:avoid} }
+  </style>
+</head>
+<body>
+<main class="deck" aria-label="2026-06-20 每日新聞投影片">
+  <section class="slide hero active" data-title="封面">
+    <p class="kicker">Daily Global + Tech / AI Brief</p>
+    <h1>協議之後，<br>執行落差浮現</h1>
+    <p class="lede">Israel–Hezbollah 停火重啟，美伊執行會談卻取消；Hormuz 約 80 枚水雷仍阻礙主航道。科技產品則把 AI 推入通話、研究檢索與專用硬體。</p>
+    <div class="chips"><span class="chip">2026-06-20</span><span class="chip">Asia/Taipei</span><span class="chip">全球新聞 10 則</span><span class="chip">科技產品 3 則</span></div>
+    <p class="hero-note"><strong>精確研究視窗</strong><br>2026-06-19 08:01:29 → 2026-06-20 08:01:29（Asia/Taipei）。所有卡片皆可展開，展開後附獨立來源標籤與完整原始 URL。</p>
+  </section>
+
+  <section class="slide" data-title="研究口徑">
+    <p class="kicker">Method / 24-hour gate</p>
+    <h2>只保留視窗內的新增量</h2>
+    <p class="lede">熱門度綜合國際媒體版位、科技媒體、官方／產品公告和可信趨勢訊號；先掃描全部既有日報與來源筆記，再進行跨日去重。</p>
+    <div class="grid three">
+      <details class="card"><summary><span class="stat">24h</span><br>事件與首次可靠發佈硬門檻</summary><div class="body"><p>截點固定為 2026-06-20 08:01:29 Asia/Taipei；窗口起點為前一日同秒。舊事件因改標題、更新頁面或重新上榜都不自動取得資格，必須有視窗內的實質新進展。</p><div class="source"><strong>來源標籤｜產製規則</strong><br><a href="../../../README.md">wiki/daily/README.md</a></div></div></details>
+      <details class="card"><summary><span class="stat">10</span><br>全球／國際新聞固定數量</summary><div class="body"><p>今日全球清單固定十則；兩則屬重大續報，均指明前次收錄日與新事實。其餘故事為首次入庫，並優先選擇能補足地域、制度與風險面的重要新事件，供後續查詢使用。</p><div class="source"><strong>來源標籤｜本日來源筆記</strong><br><a href="source-notes-2026-06-20.md">source-notes-2026-06-20.md</a></div></div></details>
+      <details class="card"><summary><span class="stat">3</span><br>科技／AI 新產品或發布</summary><div class="body"><p>科技區只收 Jio 當日發表、Firecrawl 當日 launch listing 與 NTS／Atonemo 新硬體；Claude Code Artifacts、UE 5.8、Framer 3.0 與 Philips Hue 因官方日期早於視窗而排除。</p><div class="source"><strong>來源標籤｜去重與排除</strong><br><a href="source-notes-2026-06-20.md#去重與排除紀錄">source-notes-2026-06-20.md#去重與排除紀錄</a></div></div></details>
+    </div>
+  </section>
+
+  <section class="slide world" data-title="全球 1–5">
+    <p class="kicker">World / Top 10 — 01–05</p>
+    <h2>停火、航運與政治壓力</h2>
+    <div class="grid">
+      <details class="card"><summary>1｜續報：Israel–Hezbollah 重啟停火，美伊會談取消<time class="time" datetime="2026-06-19T17:54:51Z">2026-06-20 01:54:51（Asia/Taipei）</time></summary><div class="body"><p><span class="label">為何重要｜</span>6 月 19 日已收錄美國解除海上封鎖；今日 Lebanon 戰線造成重大傷亡，原定落實美伊協議的 Switzerland 會談又取消，顯示紙面降溫仍受軍事行動制約。</p><p><span class="label">關鍵事實｜</span>一天衝突造成 Lebanon 47 人與 4 名 Israeli 士兵死亡；Guardian 報導雙方同意恢復停火。Iran 據報要求 Israel 停止攻擊，原定週五執行會談因此取消。</p><p><span class="label">實體／概念｜</span>Israel、Hezbollah、Lebanon、Iran、United States、JD Vance、ceasefire implementation。</p><p class="uncertain"><span class="label">不確定性｜</span>雙方尚未公開完整共同條款；會談是否只是延期仍未確定。</p><div class="source"><strong>來源標籤｜The Guardian</strong><br><a href="https://www.theguardian.com/world/2026/jun/19/israel-hezbollah-renew-ceasefire-lebanon-us-iran-agreement">https://www.theguardian.com/world/2026/jun/19/israel-hezbollah-renew-ceasefire-lebanon-us-iran-agreement</a><br><strong>交叉來源｜AP News</strong><br><a href="https://apnews.com/article/vance-trump-iran-switzerland-aee3839175b47b0b469879cfb835dce7">https://apnews.com/article/vance-trump-iran-switzerland-aee3839175b47b0b469879cfb835dce7</a></div></div></details>
+      <details class="card"><summary>2｜續報：Hormuz 約 80 枚水雷阻擋中央航道<time class="time" datetime="2026-06-19T13:12:09Z">2026-06-19 21:12:09（Asia/Taipei）</time></summary><div class="body"><p><span class="label">為何重要｜</span>前一日僅確認部分油輪恢復移動；中央標準航道仍封閉，說明能源運輸與保險市場距離正常化尚遠。</p><p><span class="label">關鍵事實｜</span>約 80 枚水雷待處理、約 600 艘船排隊，商船只能使用較窄替代路線。戰前約 20% 全球原油經此水道，清雷與風險評估會持續影響供應鏈。</p><p><span class="label">實體／概念｜</span>Strait of Hormuz、Intertanko、naval mines、marine insurance、oil supply。</p><p class="uncertain"><span class="label">不確定性｜</span>80 枚為估計；清雷進度與中央航道重開日期未公布。</p><div class="source"><strong>來源標籤｜The Guardian</strong><br><a href="https://www.theguardian.com/world/2026/jun/19/normal-shipping-will-not-resume-in-strait-of-hormuz-until-mines-cleared">https://www.theguardian.com/world/2026/jun/19/normal-shipping-will-not-resume-in-strait-of-hormuz-until-mines-cleared</a></div></div></details>
+      <details class="card"><summary>3｜西歐第二波熱浪，法國逾半國土警戒<time class="time" datetime="2026-06-19T11:39:00Z">2026-06-19 19:39:00（Asia/Taipei）</time></summary><div class="body"><p><span class="label">為何重要｜</span>40°C 以上高溫同時衝擊公共衛生、鐵路與核電冷卻，使極端熱事件成為跨系統基礎設施壓力測試。</p><p><span class="label">關鍵事實｜</span>France 96 個本土行政區中 60 個警戒，涵蓋約 4,100 萬人；SNCF 取消 71 班城際列車，EDF 警告河水升溫可能要求核電降載。</p><p><span class="label">實體／概念｜</span>France、SNCF、EDF、heatwave、rail resilience、nuclear cooling。</p><p class="uncertain"><span class="label">不確定性｜</span>文章「First published」與 metadata 不同，本報採較早的頁面明示時間；預報與降載仍會更新。</p><div class="source"><strong>來源標籤｜The Guardian</strong><br><a href="https://www.theguardian.com/world/2026/jun/19/macron-calls-for-vigilance-as-western-europe-faces-second-heatwave-of-year">https://www.theguardian.com/world/2026/jun/19/macron-calls-for-vigilance-as-western-europe-faces-second-heatwave-of-year</a></div></div></details>
+      <details class="card"><summary>4｜Labour 高層要求 Starmer 設定退場時程<time class="time" datetime="2026-06-19T15:04:00Z">2026-06-19 23:04:00（Asia/Taipei）</time></summary><div class="body"><p><span class="label">為何重要｜</span>英國執政黨內部從政策爭議進入領導權交接討論，可能重新定向財政、外交與 Europe 關係。</p><p><span class="label">關鍵事實｜</span>Andy Burnham 在 Makerfield 補選以約 9,000 票多數勝出後，部分 cabinet 忠誠派要求 Keir Starmer 設定離任時間表；黨內流傳約 200 MPs 可能支持挑戰。</p><p><span class="label">實體／概念｜</span>Labour、Keir Starmer、Andy Burnham、Wes Streeting、leadership challenge。</p><p class="uncertain"><span class="label">不確定性｜</span>200 人為匿名估計，並非公開連署；Starmer 尚未宣布退場。</p><div class="source"><strong>來源標籤｜The Guardian</strong><br><a href="https://www.theguardian.com/politics/2026/jun/19/keir-starmer-pressure-andy-burnham-wes-streeting-allies-not-fight-leadership-challenge">https://www.theguardian.com/politics/2026/jun/19/keir-starmer-pressure-andy-burnham-wes-streeting-allies-not-fight-leadership-challenge</a></div></div></details>
+      <details class="card"><summary>5｜Italy 外長因 Trump 對 Meloni 說法取消訪美<time class="time" datetime="2026-06-19T12:07:11Z">2026-06-19 20:07:11（Asia/Taipei）</time></summary><div class="body"><p><span class="label">為何重要｜</span>一段公開談話升級為盟國外交行程取消，測試 Italy–U.S. 在 NATO、貿易與 Iran 議題上的合作韌性。</p><p><span class="label">關鍵事實｜</span>Antonio Tajani 取消赴美參與商業與科學論壇。Donald Trump 聲稱 Giorgia Meloni 曾乞求合照；Meloni 辦公室稱故事完全虛構。</p><p><span class="label">實體／概念｜</span>Italy、United States、Antonio Tajani、Giorgia Meloni、Donald Trump、diplomatic protocol。</p><p class="uncertain"><span class="label">不確定性｜</span>可取得的 La7 片段為義大利語配音，缺少完整英文原音，精確措辭與上下文無法獨立核對。</p><div class="source"><strong>來源標籤｜AP News</strong><br><a href="https://apnews.com/article/trump-meloni-italy-us-36d6452879d0d61983802c036cdb7835">https://apnews.com/article/trump-meloni-italy-us-36d6452879d0d61983802c036cdb7835</a></div></div></details>
+    </div>
+  </section>
+
+  <section class="slide world" data-title="全球 6–10">
+    <p class="kicker">World / Top 10 — 06–10</p>
+    <h2>正義框架、監管與跨境風險</h2>
+    <div class="grid">
+      <details class="card"><summary>6｜Ghana 會議通過全球賠償正義框架<time class="time" datetime="2026-06-19T17:26:45Z">2026-06-20 01:26:45（Asia/Taipei）</time></summary><div class="body"><p><span class="label">為何重要｜</span>Africa、Caribbean 與 diaspora 將 slavery／colonialism 賠償主張轉為跨國政策框架，可能影響文物返還、主權債務與國際法。</p><p><span class="label">關鍵事實｜</span>Accra 框架涵蓋公平補償、文化財與人類遺骸歸還、債務減免、教育改革和制度保證，目標是形成政府與國際組織可採用的共同基準。</p><p><span class="label">實體／概念｜</span>Ghana、African Union、diaspora、reparatory justice、cultural restitution、debt relief。</p><p class="uncertain"><span class="label">不確定性｜</span>Guardian 導言稱 18 點、內文稱 19 點；框架也不是強制性條約。</p><div class="source"><strong>來源標籤｜The Guardian</strong><br><a href="https://www.theguardian.com/news/2026/jun/19/global-framework-reparations-justice-adopted-at-landmark-conference-in-accra-ghana">https://www.theguardian.com/news/2026/jun/19/global-framework-reparations-justice-adopted-at-landmark-conference-in-accra-ghana</a></div></div></details>
+      <details class="card"><summary>7｜英國 BSB 暫停 ICC 首席檢察官執業<time class="time" datetime="2026-06-19T15:04:48Z">2026-06-19 23:04:48（Asia/Taipei）</time></summary><div class="body"><p><span class="label">為何重要｜</span>國際刑事司法最高層的性行為不當指控進入 England and Wales 專業監管程序，影響 ICC 治理與機構公信力。</p><p><span class="label">關鍵事實｜</span>Bar Standards Board 立即暫停 Karim Khan 執業並在四週內檢討；Khan 先前已暫離 ICC 職務，且否認對同事性行為不當的指控。</p><p><span class="label">實體／概念｜</span>Karim Khan、ICC、Bar Standards Board、professional discipline、institutional accountability。</p><p class="uncertain"><span class="label">不確定性｜</span>暫停屬風險管理措施，不代表監管或刑事程序已認定指控成立。</p><div class="source"><strong>來源標籤｜The Guardian</strong><br><a href="https://www.theguardian.com/law/2026/jun/19/international-criminal-court-prosecutor-suspended-bar-standards-board">https://www.theguardian.com/law/2026/jun/19/international-criminal-court-prosecutor-suspended-bar-standards-board</a></div></div></details>
+      <details class="card"><summary>8｜Bill Pulte 兼任美國代理國家情報總監<time class="time" datetime="2026-06-19T13:13:01Z">2026-06-19 21:13:01（Asia/Taipei）</time></summary><div class="body"><p><span class="label">為何重要｜</span>DNI 統籌 18 個情報機構；由仍掌管 FHFA 且缺乏情報背景的官員兼任，引出監督能力、利益衝突與權力集中問題。</p><p><span class="label">關鍵事實｜</span>Donald Trump 指派 Bill Pulte 為 acting DNI，同時保留其 FHFA director 職位；原擬提名的 Jay Clayton 聽證程序停止。</p><p><span class="label">實體／概念｜</span>Bill Pulte、ODNI、FHFA、acting appointment、intelligence oversight。</p><p class="uncertain"><span class="label">不確定性｜</span>代理任期、Senate 確認與 FHFA 職責隔離安排尚未說明。</p><div class="source"><strong>來源標籤｜The Guardian</strong><br><a href="https://www.theguardian.com/us-news/2026/jun/19/bill-pulte-acting-director-national-intelligence">https://www.theguardian.com/us-news/2026/jun/19/bill-pulte-acting-director-national-intelligence</a></div></div></details>
+      <details class="card"><summary>9｜India 封鎖 Telegram 後，VPN 與替代 app 使用升高<time class="time" datetime="2026-06-19T01:01:00Z">2026-06-19 09:01:00（Asia/Taipei）</time></summary><div class="body"><p><span class="label">為何重要｜</span>全平台封鎖把考試作弊治理擴大成網路存取、比例原則與平台責任問題，也即時改變 VPN 和競爭 app 的需求。</p><p><span class="label">關鍵事實｜</span>India 暫時封鎖 Telegram 一週後，TechCrunch 的新增觀察顯示使用者轉向 VPN 與其他訊息服務。Telegram 表示願意處理非法頻道，但反對全平台封鎖。</p><p><span class="label">實體／概念｜</span>India、Telegram、VPN、exam fraud、platform blocking、internet freedom。</p><p class="uncertain"><span class="label">不確定性｜</span>原封鎖命令是 6 月 16 日；今日入選基礎僅是 6 月 19 日首次可靠發佈的遷移效應，長期持續性未知。</p><div class="source"><strong>來源標籤｜TechCrunch</strong><br><a href="https://techcrunch.com/2026/06/18/telegram-ban-in-india-sparks-a-rush-to-vpns-rival-apps/">https://techcrunch.com/2026/06/18/telegram-ban-in-india-sparks-a-rush-to-vpns-rival-apps/</a></div></div></details>
+      <details class="card"><summary>10｜Poland 逮捕反 Putin 藝術家命案嫌犯<time class="time" datetime="2026-06-19T00:49:45Z">2026-06-19 08:49:45（Asia/Taipei）</time></summary><div class="body"><p><span class="label">為何重要｜</span>若政治暗殺和外國情報機構關聯獲證實，案件將成為 Europe 境內跨境鎮壓與俄羅斯異議人士安全的重大測試。</p><p><span class="label">關鍵事實｜</span>Polish police 逮捕一名持 Georgian passport 的 36 歲男子，涉嫌殺害反 Putin 藝術家 Robert Kuzovkov；官員正調查外國情報介入可能性。</p><p><span class="label">實體／概念｜</span>Poland、Russia、Robert Kuzovkov、foreign intelligence、transnational repression。</p><p class="uncertain"><span class="label">不確定性｜</span>嫌犯未定罪，情報關聯只是調查方向；同篇 Moscow 空襲背景已於前一日入庫，未重複收錄。</p><div class="source"><strong>來源標籤｜The Guardian</strong><br><a href="https://www.theguardian.com/world/2026/jun/19/ukraine-war-briefing-suspect-arrested-putin-critic-killing-robert-kuzokov-">https://www.theguardian.com/world/2026/jun/19/ukraine-war-briefing-suspect-arrested-putin-critic-killing-robert-kuzokov-</a></div></div></details>
+    </div>
+  </section>
+
+  <section class="slide tech" data-title="科技 / AI">
+    <p class="kicker">Technology / AI Products</p>
+    <h2>分發、檢索與專用硬體</h2>
+    <div class="grid three">
+      <details class="card"><summary>1｜Reliance Jio 發表通話、app、家庭 AI 組合<time class="time" datetime="2026-06-19T15:23:28Z">2026-06-19 23:23:28（Asia/Taipei）</time></summary><div class="body"><p><span class="label">為何重要｜</span>Jio 擁有超過 5 億用戶，AI 若經電信分發，可直接進入 India 大規模消費服務與家庭工作流。</p><p><span class="label">關鍵事實｜</span>Jio Call Agent 可加入通話、轉錄摘要與代辦預約；AI MyJio 管理 eSIM／roaming；TeleFrame 是家庭環境顯示器。產品規劃支援 22 種 Indian languages，主要能力預計 2026 年稍後推出。</p><p><span class="label">實體／概念｜</span>Reliance、Jio、Mukesh Ambani、Call Agent、TeleFrame、multilingual AI。</p><p class="uncertain"><span class="label">不確定性｜</span>多項功能尚未 GA；通話資料訓練、第三方分享、同意與保留政策未完整公開。</p><div class="source"><strong>來源標籤｜TechCrunch</strong><br><a href="https://techcrunch.com/2026/06/19/billionaire-ambani-wants-ai-in-every-call-app-and-home/">https://techcrunch.com/2026/06/19/billionaire-ambani-wants-ai-in-every-call-app-and-home/</a></div></div></details>
+      <details class="card"><summary>2｜Firecrawl 發布 Research Index<time class="time" datetime="2026-06-19T07:00:00Z">2026-06-19 15:00:00（Asia/Taipei；平台日界線）</time></summary><div class="body"><p><span class="label">為何重要｜</span>AI agent 的瓶頸逐步轉向可追溯、可更新的檢索資料；論文與程式碼工件進入同一索引，可降低研究 agent 搜尋與引用成本。</p><p><span class="label">關鍵事實｜</span>產品宣稱索引超過 300 萬篇 arXiv papers，並收錄熱門 GitHub repositories 相關工件、每日刷新，供 agents 透過 API 取得。</p><p><span class="label">實體／概念｜</span>Firecrawl、arXiv、GitHub、retrieval、research agents、daily refresh。</p><p class="uncertain"><span class="label">不確定性｜</span>Product Hunt 未顯示精確發帖分鐘，時間採榜單日界線；容量、更新率與效果屬廠商主張，缺乏獨立 benchmark。</p><div class="source"><strong>來源標籤｜Product Hunt</strong><br><a href="https://www.producthunt.com/products/extract-by-firecrawl">https://www.producthunt.com/products/extract-by-firecrawl</a></div></div></details>
+      <details class="card"><summary>3｜NTS／Atonemo 推出 US$179 串流收音機<time class="time" datetime="2026-06-19T14:53:53Z">2026-06-19 22:53:53（Asia/Taipei）</time></summary><div class="body"><p><span class="label">為何重要｜</span>這款單一用途硬體以實體控制重構線上電台，反映串流服務重新進入專用家居裝置。</p><p><span class="label">關鍵事實｜</span>NTS Radio Player 可快速切換頻道，支援最高 24-bit／192kHz、3.5mm／RCA，並相容 AirPlay 2、Google Cast、Spotify Connect 與 Tidal Connect。</p><p><span class="label">實體／概念｜</span>NTS Radio、Atonemo、internet radio、high-resolution audio、dedicated hardware。</p><p class="uncertain"><span class="label">不確定性｜</span>音質取決於來源與輸出設備；初期庫存、跨國供貨及第三方整合的長期支援仍待驗證。</p><div class="source"><strong>來源標籤｜The Verge</strong><br><a href="https://www.theverge.com/entertainment/952910/nts-radio-player-atonemo-music-streaming">https://www.theverge.com/entertainment/952910/nts-radio-player-atonemo-music-streaming</a><br><strong>官方商店｜NTS</strong><br><a href="https://shop.nts.live/products/atonemo-nts-radio-player">https://shop.nts.live/products/atonemo-nts-radio-player</a></div></div></details>
+    </div>
+  </section>
+
+  <section class="slide" data-title="綜合判讀">
+    <p class="kicker">Synthesis / What to watch</p>
+    <h2>從宣布走向可驗證執行</h2>
+    <div class="grid three">
+      <details class="card"><summary><span class="stat">3 條</span><br>不同速度的停火時間線</summary><div class="body"><p>外交文本、戰場行動與商業復航並不同步：Lebanon 停火重啟，美伊會談取消，Hormuz 中央航道仍未開。後續判斷應分別追蹤條款、違約事件和每日通行量。</p><div class="source"><strong>來源標籤｜本日日報綜合判讀</strong><br><a href="daily-news-2026-06-20.md#今日綜合判讀">daily-news-2026-06-20.md#今日綜合判讀</a></div></div></details>
+      <details class="card"><summary><span class="stat">4 層</span><br>政治、法律、外交、基礎設施壓力</summary><div class="body"><p>Starmer 領導權、Karim Khan 專業監管、Italy–U.S. 外交摩擦與歐洲熱浪分別測試不同制度。共通點不是單一危機，而是組織是否能把風險轉成可執行決策。</p><div class="source"><strong>來源標籤｜本日日報全球新聞</strong><br><a href="daily-news-2026-06-20.md#全球國際新聞-top-10">daily-news-2026-06-20.md#全球國際新聞-top-10</a></div></div></details>
+      <details class="card"><summary><span class="stat">3 層</span><br>AI 的分發、資料與介面</summary><div class="body"><p>Jio 代表既有電信用戶分發，Firecrawl 代表研究資料索引，NTS／Atonemo 代表專用實體介面。模型本身退居背景，產品競爭轉向觸達、資料品質與操作摩擦。</p><div class="source"><strong>來源標籤｜本日日報科技區</strong><br><a href="daily-news-2026-06-20.md#科技ai-產品新聞">daily-news-2026-06-20.md#科技ai-產品新聞</a></div></div></details>
+    </div>
+    <h2 style="margin-top:28px;font-size:clamp(1.35rem,2vw,2rem)">後續追蹤</h2>
+    <div class="grid">
+      <details class="card"><summary>停火與會談：共同條款、重排日期、違約紀錄</summary><div class="body"><p>確認 Israel／Hezbollah 是否公布共同條款，Switzerland 美伊執行會談是否只是延期，以及下一次軍事接觸由何方、用何種證據記錄。避免用單方聲明替代可驗證履約。</p><div class="source"><strong>來源標籤｜本日來源筆記 1</strong><br><a href="source-notes-2026-06-20.md#1-續報israelhezbollah-重啟停火美伊執行會談取消">source-notes-2026-06-20.md#1-續報israelhezbollah-重啟停火美伊執行會談取消</a></div></div></details>
+      <details class="card"><summary>Hormuz：清雷數、每日通行量與保費</summary><div class="body"><p>追蹤中央航道實際清除水雷數、600 艘排隊船舶的消化速度、船東與保險商的風險定價。只看少數油輪移動，會高估供應鏈恢復程度與安全性。</p><div class="source"><strong>來源標籤｜本日來源筆記 2</strong><br><a href="source-notes-2026-06-20.md#2-續報hormuz-約-80-枚水雷與中央航道未開">source-notes-2026-06-20.md#2-續報hormuz-約-80-枚水雷與中央航道未開</a></div></div></details>
+      <details class="card"><summary>France：最高溫、鐵路恢復與核電降載</summary><div class="body"><p>以週末觀測值確認氣象預報是否成真，檢查 SNCF 恢復班次與 EDF 是否實際下調輸出。高溫的制度意義在於交通、醫療與能源能否同步承壓。</p><div class="source"><strong>來源標籤｜本日來源筆記 3</strong><br><a href="source-notes-2026-06-20.md#3-西歐第二波熱浪">source-notes-2026-06-20.md#3-西歐第二波熱浪</a></div></div></details>
+      <details class="card"><summary>Jio：上市範圍、同意流程與通話資料政策</summary><div class="body"><p>確認 Call Agent 的實際推出市場、是否預設啟用、通話雙方如何同意、資料保留多久，以及摘要或錄音是否進入模型訓練。發布會功能不能替代真實隱私控制。</p><div class="source"><strong>來源標籤｜本日來源筆記／科技 1</strong><br><a href="source-notes-2026-06-20.md#1-reliance-jio-ai-產品組合">source-notes-2026-06-20.md#1-reliance-jio-ai-產品組合</a></div></div></details>
+      <details class="card"><summary>Firecrawl：價格、benchmark、授權與引用追溯</summary><div class="body"><p>需要獨立測試檢索召回率、更新延遲與錯誤引用，並確認 arXiv／GitHub 內容的授權與刪除流程。產品榜單熱度只是發現訊號，不是品質證明。</p><div class="source"><strong>來源標籤｜本日來源筆記／科技 2</strong><br><a href="source-notes-2026-06-20.md#2-firecrawl-research-index">source-notes-2026-06-20.md#2-firecrawl-research-index</a></div></div></details>
+    </div>
+  </section>
+
+  <section class="slide" data-title="來源">
+    <p class="kicker">Sources / Provenance</p>
+    <h2>每則卡片均保留完整原始 URL</h2>
+    <p class="lede">時間與事件基礎、跨日去重、排除清單及矛盾紀錄位於來源筆記。以下列出投影片背景影像來源；新聞原始連結均置於各自展開卡片末端，未使用浮動頁尾。</p>
+    <div class="source-list">
+      <p><strong>標題背景｜Unsplash / NASA</strong><br><a href="https://unsplash.com/photos/Q1p7bh3SHj8">https://unsplash.com/photos/Q1p7bh3SHj8</a></p>
+      <p><strong>全球段落背景｜Unsplash / Charles Forerunner</strong><br><a href="https://unsplash.com/photos/3fPXt37X6UQ">https://unsplash.com/photos/3fPXt37X6UQ</a></p>
+      <p><strong>科技段落背景｜Unsplash / Umberto</strong><br><a href="https://unsplash.com/photos/FewHpO4VC9Y">https://unsplash.com/photos/FewHpO4VC9Y</a></p>
+      <p><strong>完整日報</strong><br><a href="daily-news-2026-06-20.md">daily-news-2026-06-20.md</a></p>
+      <p><strong>完整來源筆記</strong><br><a href="source-notes-2026-06-20.md">source-notes-2026-06-20.md</a></p>
+    </div>
+  </section>
+</main>
+
+<nav class="nav" aria-label="投影片導覽">
+  <button id="prev" type="button" aria-label="上一頁">←</button>
+  <span id="counter" class="counter" aria-live="polite">1 / 7</span>
+  <button id="next" type="button" aria-label="下一頁">→</button>
+</nav>
+<div class="hint">← → / PageUp PageDown / Home End</div>
+<div id="progress" class="progress" aria-hidden="true"></div>
+<script>
+  (() => {
+    const slides = [...document.querySelectorAll('.slide')];
+    const prev = document.getElementById('prev');
+    const next = document.getElementById('next');
+    const counter = document.getElementById('counter');
+    const progress = document.getElementById('progress');
+    let index = Math.max(0, Math.min(slides.length - 1, Number(location.hash.slice(1)) - 1 || 0));
+    function show(target, updateHash = true) {
+      index = Math.max(0, Math.min(slides.length - 1, target));
+      slides.forEach((slide, i) => slide.classList.toggle('active', i === index));
+      prev.disabled = index === 0;
+      next.disabled = index === slides.length - 1;
+      counter.textContent = `${index + 1} / ${slides.length}`;
+      progress.style.width = `${((index + 1) / slides.length) * 100}%`;
+      document.title = `${index + 1}/${slides.length}｜${slides[index].dataset.title}｜2026-06-20`;
+      if (updateHash) history.replaceState(null, '', `#${index + 1}`);
+      slides[index].scrollTop = 0;
+    }
+    prev.addEventListener('click', () => show(index - 1));
+    next.addEventListener('click', () => show(index + 1));
+    addEventListener('keydown', event => {
+      if (event.target.closest('a, button, summary')) return;
+      if (['ArrowRight','PageDown',' '].includes(event.key)) { event.preventDefault(); show(index + 1); }
+      if (['ArrowLeft','PageUp'].includes(event.key)) { event.preventDefault(); show(index - 1); }
+      if (event.key === 'Home') { event.preventDefault(); show(0); }
+      if (event.key === 'End') { event.preventDefault(); show(slides.length - 1); }
+    });
+    addEventListener('hashchange', () => show(Number(location.hash.slice(1)) - 1 || 0, false));
+    show(index, false);
+  })();
+</script>
+</body>
+</html>

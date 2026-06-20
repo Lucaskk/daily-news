@@ -2,7 +2,7 @@
 title: "Knowledge Base Index"
 type: overview
 created: 2026-05-24
-updated: 2026-06-19
+updated: 2026-06-20
 status: seed
 tags: [index]
 sources: []
@@ -26,6 +26,8 @@ sources: []
 
 - [每日全球與科技 AI 新聞產製規則](daily/README.md) - 包含研究截點前 24 小時限制、跨日去重、重大續報判定、來源紀錄與發布驗證規則。
 
+- [2026-06-20 Daily News](daily/2026/06/2026-06-20/daily-news-2026-06-20.md) - 今日聚焦協議執行落差：Israel–Hezbollah 致命升級後重啟停火，美伊 Switzerland 執行會談取消，Hormuz 中央航道仍受約 80 枚水雷阻礙。西歐熱浪、UK Labour 領導權、Italy–U.S. 摩擦、賠償正義、ICC 監管與跨境壓迫構成制度面；科技／AI 聚焦 Jio 通話與家庭 AI、Firecrawl Research Index 及 NTS 專用串流收音機。
+- [2026-06-20 Slides](daily/2026/06/2026-06-20/slides-2026-06-20.html) - 今日新聞網頁版投影片。
 - [2026-06-19 Daily News](daily/2026/06/2026-06-19/daily-news-2026-06-19.md) - 今日從美伊協議簽署進入實際封鎖解除與 Hormuz 通航驗證，同時 Moscow 遭大規模空襲、美國啟動歐洲駐軍審查、聯合國兒童衝突報告創新高。Cuba 市場化、Niger 機場攻擊、Ebola 惡化、英國跨境監控案、Arthur 與伊朗歌手判刑補足全球議程。科技 / AI 聚焦 Adobe Firefly 助理、Apple Brazil 開放、Spotify Reserved、MAI-Code-1-Flash、Waymo 召回與 Pixi AR 訊息。
 - [2026-06-19 Slides](daily/2026/06/2026-06-19/slides-2026-06-19.html) - 今日新聞網頁版投影片。
 - [2026-06-18 Daily News](daily/2026/06/2026-06-18/daily-news-2026-06-18.md) - 今日主軸是美伊備忘錄進入雙方簽署與立即生效宣稱，G7 閉幕則承諾擴大對俄制裁並推進在烏生產長程武器。德波防務、Russia-ASEAN 峰會、China Shock 2.0、Titan 最終報告、Arthur、Oyu Tolgoi、Messi 與古代 plague 研究補足全球議程。科技 / AI 聚焦 Copilot app GA、Google Home Speaker、AI chemist、LifeSciBench、Uber robotaxi 與 Ask Pinterest。

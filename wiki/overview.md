@@ -2,7 +2,7 @@
 title: "Overview"
 type: overview
 created: 2026-05-24
-updated: 2026-06-19
+updated: 2026-06-20
 status: seed
 tags: [overview]
 sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
@@ -30,6 +30,8 @@ sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
 
 ## Latest Daily News
 
+- [2026-06-20 Daily News](daily/2026/06/2026-06-20/daily-news-2026-06-20.md) - 今日的核心不是新協議，而是三條執行時間線失同步：Israel–Hezbollah 在 51 人死亡後重啟停火，美伊 Switzerland 會談卻取消，Hormuz 中央航道仍有約 80 枚水雷與 600 艘船排隊。西歐熱浪把氣候壓力傳導到鐵路與核電；UK Labour、Italy–U.S.、ICC 與 U.S. intelligence 任命則測試制度治理。科技／AI 顯示競爭已從單一模型轉向既有分發、可更新檢索資料與專用硬體介面。
+- [2026-06-20 Slides](daily/2026/06/2026-06-20/slides-2026-06-20.html) - 今日新聞網頁版投影片。
 - [2026-06-19 Daily News](daily/2026/06/2026-06-19/daily-news-2026-06-19.md) - 今日從「簽署」進入「能否持續履約」：美國解除海上封鎖、油輪恢復移動，Khamenei 支持直接談判，但主航道、水雷與 IAEA 查核仍待落實。安全風險沒有同步下降：Ukraine 對 Moscow 發動大規模空襲，美國重審歐洲駐軍，Niger 機場遇襲；聯合國兒童報告與 Ebola 追蹤缺口則顯示已核實數字只是下限。科技 / AI 的共同方向是把模型與行為資料嵌入創作、app 分發、票務與 coding 工作流，同時 Waymo 召回凸顯部署後安全治理。
 - [2026-06-19 Slides](daily/2026/06/2026-06-19/slides-2026-06-19.html) - 今日新聞網頁版投影片。
 - [2026-06-18 Daily News](daily/2026/06/2026-06-18/daily-news-2026-06-18.md) - 今日從「是否會簽」進入「簽署後能否執行」：Pakistan 稱 U.S. 與 Iran 領導人已簽署且協議立即生效，但 Iran 的公開確認、Swiss 正式儀式、Hormuz 實際通行量與 60 天核談判起算仍待驗證。G7 則把 Russian energy sanctions 與 Ukraine 境內長程武器／防空生產寫入閉幕方向。全球風險同時分散到 NATO 東翼、China industrial imbalance、Titan engineering governance、Arthur flooding 與 Oyu Tolgoi copper supply。科技 / AI 由 Copilot desktop GA、Gemini 原生家居硬體、AI chemist、LifeSciBench、Uber robotaxi 與 Ask Pinterest 代表從模型回答轉向可操作工作流與實體系統。

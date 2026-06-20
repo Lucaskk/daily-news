@@ -1,5 +1,12 @@
 # Knowledge Base Log
 
+## [2026-06-20] ingest | Daily global and tech AI news
+
+- Created `wiki/daily/2026/06/2026-06-20/daily-news-2026-06-20.md` with exactly 10 global items and three technology / AI product items.
+- Created `source-notes-2026-06-20.md` with the exact 24-hour window, per-item publication basis, two material continuations, archive-wide deduplication and explicit exclusions.
+- Created `slides-2026-06-20.html` with expandable news, statistics, technology and follow-up cards; each expanded item ends with a readable source label and complete original URL.
+- Updated `wiki/daily/latest-slides.html`, `wiki/index.md`, `wiki/overview.md`, and the root Pages redirect timestamp.
+
 ## [2026-06-19] ingest | Daily global and tech AI news
 
 - Created `wiki/daily/2026/06/2026-06-19/daily-news-2026-06-19.md` with exactly 10 global items and six technology / AI product items.
