@@ -1,5 +1,11 @@
 # Knowledge Base Log
 
+## [2026-06-20] fix | Bust cached themed deck in LINE browser
+
+- Verified the public 2026-06-20 GitHub Pages deck renders all topic backgrounds and that the Unsplash image assets return HTTP 200.
+- Added a version query and no-cache hints to `wiki/daily/latest-slides.html` so same-day visual revisions do not reuse the previous deck response.
+- Updated the LINE sender to resolve the latest redirect and send the versioned dated deck URL instead of the cache-prone stable entry point.
+
 ## [2026-06-20] update | Thematic slide grouping and backgrounds
 
 - Reorganized only the 2026-06-20 deck into six dynamic topic pages: geopolitical security, politics / intelligence, rights / digital governance, climate systems, AI / research infrastructure, and 3C audio products.

@@ -77,6 +77,37 @@ def infer_report_path(slides_path: str) -> Path | None:
     return Path(slides_path.lstrip("/")).parent / f"daily-news-{date}.md"
 
 
+def resolve_public_slides_path(slides_path: str) -> str:
+    """Resolve the stable latest entry to its versioned daily deck path.
+
+    LINE's in-app browser can retain an older response for a stable URL. Sending
+    the dated redirect target, including its cache-busting query, avoids serving
+    a prior same-day deck after a visual update.
+    """
+    if "latest-slides.html" not in slides_path:
+        return slides_path
+
+    latest = Path("wiki/daily/latest-slides.html")
+    if not latest.exists():
+        return slides_path
+
+    latest_html = read_text(latest)
+    match = re.search(
+        r"url=([^\"'>]+slides-\d{4}-\d{2}-\d{2}\.html(?:\?[^\"'>]*)?)",
+        latest_html,
+    )
+    if not match:
+        return slides_path
+
+    target = match.group(1)
+    if target.startswith(("https://", "http://")):
+        return target
+
+    target_path, separator, query = target.partition("?")
+    resolved = "/" + (latest.parent / target_path).as_posix().lstrip("/")
+    return resolved + (separator + query if separator else "")
+
+
 def extract_subject(report_path: Path | None) -> tuple[str, str]:
     if not report_path or not report_path.exists():
         return "今日 Daily News", "每日全球與科技 AI 新聞投影片"
@@ -109,7 +140,12 @@ def main() -> int:
     slides_path = os.environ.get("DAILY_SLIDES_PATH", "/wiki/daily/latest-slides.html")
     retries = int_env("LINE_PUSH_RETRIES", DEFAULT_RETRIES)
     retry_delay = int_env("LINE_PUSH_RETRY_DELAY_SECONDS", DEFAULT_RETRY_DELAY_SECONDS)
-    slides_url = join_url(base_url, slides_path)
+    public_slides_path = resolve_public_slides_path(slides_path)
+    slides_url = (
+        public_slides_path
+        if public_slides_path.startswith(("https://", "http://"))
+        else join_url(base_url, public_slides_path)
+    )
     report_path = infer_report_path(slides_path)
     date, subject = extract_subject(report_path)
 
