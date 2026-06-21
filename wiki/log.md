@@ -1,5 +1,11 @@
 # Knowledge Base Log
 
+## [2026-06-21] fix | Add missing slide backgrounds
+
+- 修正 2026-06-21 簡報「今日輪廓」與「綜合判讀」未綁定背景圖片的問題。
+- 補上兩頁的主題背景與圖片來源，並更新 latest redirect 的快取版本參數。
+- 強化每日簡報規則：所有頁面都必須明確綁定背景資產。
+
 ## [2026-06-21] ingest | Daily global and tech AI news
 
 - Created `wiki/daily/2026/06/2026-06-21/daily-news-2026-06-21.md` with exactly 10 global items and two technology / AI product items.
