@@ -2,7 +2,7 @@
 title: "Overview"
 type: overview
 created: 2026-05-24
-updated: 2026-06-20
+updated: 2026-06-21
 status: seed
 tags: [overview]
 sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
@@ -30,6 +30,8 @@ sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
 
 ## Latest Daily News
 
+- [2026-06-21 Daily News](daily/2026/06/2026-06-21/daily-news-2026-06-21.md) - 今日從「協議存在」轉向「執行能否驗證」：Iran 稱 Hormuz 再關閉，但美方稱 55 艘商船與逾 1,700 萬桶油仍通過，延後會談則改赴 Switzerland。Spain、Bolivia、Poland–Ukraine 的爭議分別進入受審、90 天緊急狀態與正式撤勳；Ukraine 城市轟炸、旅遊設施火災、記者與健行者死亡補足安全面。科技／AI 產品顯示競爭從模型能力移到模型可見度、團隊權限與技能復用。
+- [2026-06-21 Slides](daily/2026/06/2026-06-21/slides-2026-06-21.html) - 今日新聞網頁版投影片。
 - [2026-06-20 Daily News](daily/2026/06/2026-06-20/daily-news-2026-06-20.md) - 今日的核心不是新協議，而是三條執行時間線失同步：Israel–Hezbollah 在 51 人死亡後重啟停火，美伊 Switzerland 會談卻取消，Hormuz 中央航道仍有約 80 枚水雷與 600 艘船排隊。西歐熱浪把氣候壓力傳導到鐵路與核電；UK Labour、Italy–U.S.、ICC 與 U.S. intelligence 任命則測試制度治理。科技／AI 顯示競爭已從單一模型轉向既有分發、可更新檢索資料與專用硬體介面。
 - [2026-06-20 Slides](daily/2026/06/2026-06-20/slides-2026-06-20.html) - 今日新聞網頁版投影片。
 - [2026-06-19 Daily News](daily/2026/06/2026-06-19/daily-news-2026-06-19.md) - 今日從「簽署」進入「能否持續履約」：美國解除海上封鎖、油輪恢復移動，Khamenei 支持直接談判，但主航道、水雷與 IAEA 查核仍待落實。安全風險沒有同步下降：Ukraine 對 Moscow 發動大規模空襲，美國重審歐洲駐軍，Niger 機場遇襲；聯合國兒童報告與 Ebola 追蹤缺口則顯示已核實數字只是下限。科技 / AI 的共同方向是把模型與行為資料嵌入創作、app 分發、票務與 coding 工作流，同時 Waymo 召回凸顯部署後安全治理。

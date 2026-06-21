@@ -1,5 +1,12 @@
 # Knowledge Base Log
 
+## [2026-06-21] ingest | Daily global and tech AI news
+
+- Created `wiki/daily/2026/06/2026-06-21/daily-news-2026-06-21.md` with exactly 10 global items and two technology / AI product items.
+- Recorded the exact 24-hour window, per-item event or publication-time basis, three material continuations and archive-wide exclusions in `source-notes-2026-06-21.md`.
+- Created a nine-slide standalone HTML deck with thematic backgrounds, expandable news, statistics, technology and follow-up cards; every expanded item ends with its own source label and complete URL.
+- Updated `wiki/daily/latest-slides.html`, `wiki/index.md`, `wiki/overview.md`, and the root Pages entry timestamp.
+
 ## [2026-06-20] fix | Bust cached themed deck in LINE browser
 
 - Verified the public 2026-06-20 GitHub Pages deck renders all topic backgrounds and that the Unsplash image assets return HTTP 200.

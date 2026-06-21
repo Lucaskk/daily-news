@@ -2,7 +2,7 @@
 title: "Knowledge Base Index"
 type: overview
 created: 2026-05-24
-updated: 2026-06-20
+updated: 2026-06-21
 status: seed
 tags: [index]
 sources: []
@@ -26,6 +26,8 @@ sources: []
 
 - [每日全球與科技 AI 新聞產製規則](daily/README.md) - 包含研究截點前 24 小時限制、跨日去重、重大續報判定、來源紀錄與發布驗證規則。
 
+- [2026-06-21 Daily News](daily/2026/06/2026-06-21/daily-news-2026-06-21.md) - 今日聚焦執行壓力：Iran 再稱關閉 Hormuz、CENTCOM 稱 55 艘船仍通行，美伊代表轉赴 Switzerland；Spain 首相妻子受審、Bolivia 正式啟動緊急狀態、Poland–Ukraine 正式撤勳。災害與安全涵蓋 Kharkiv 多城轟炸、Dominican Republic 度假村大火、Gaza 記者死亡、Grand Canyon 熱死與 Ubisoft 創辦人墜機。科技／AI 聚焦 In the Weights 與 WorkClaw。
+- [2026-06-21 Slides](daily/2026/06/2026-06-21/slides-2026-06-21.html) - 今日新聞網頁版投影片。
 - [2026-06-20 Daily News](daily/2026/06/2026-06-20/daily-news-2026-06-20.md) - 今日聚焦協議執行落差：Israel–Hezbollah 致命升級後重啟停火，美伊 Switzerland 執行會談取消，Hormuz 中央航道仍受約 80 枚水雷阻礙。西歐熱浪、UK Labour 領導權、Italy–U.S. 摩擦、賠償正義、ICC 監管與跨境壓迫構成制度面；科技／AI 聚焦 Jio 通話與家庭 AI、Firecrawl Research Index 及 NTS 專用串流收音機。
 - [2026-06-20 Slides](daily/2026/06/2026-06-20/slides-2026-06-20.html) - 今日新聞網頁版投影片。
 - [2026-06-19 Daily News](daily/2026/06/2026-06-19/daily-news-2026-06-19.md) - 今日從美伊協議簽署進入實際封鎖解除與 Hormuz 通航驗證，同時 Moscow 遭大規模空襲、美國啟動歐洲駐軍審查、聯合國兒童衝突報告創新高。Cuba 市場化、Niger 機場攻擊、Ebola 惡化、英國跨境監控案、Arthur 與伊朗歌手判刑補足全球議程。科技 / AI 聚焦 Adobe Firefly 助理、Apple Brazil 開放、Spotify Reserved、MAI-Code-1-Flash、Waymo 召回與 Pixi AR 訊息。
