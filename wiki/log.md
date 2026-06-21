@@ -6,6 +6,8 @@
 - Recorded the exact 24-hour window, per-item event or publication-time basis, three material continuations and archive-wide exclusions in `source-notes-2026-06-21.md`.
 - Created a nine-slide standalone HTML deck with thematic backgrounds, expandable news, statistics, technology and follow-up cards; every expanded item ends with its own source label and complete URL.
 - Updated `wiki/daily/latest-slides.html`, `wiki/index.md`, `wiki/overview.md`, and the root Pages entry timestamp.
+- Published the scoped daily-news commit to `main` and verified the dated deck plus cache-busted latest redirect on GitHub Pages.
+- LINE delivery was skipped because `.env` did not contain `LINE_TO_ID`.
 
 ## [2026-06-20] fix | Bust cached themed deck in LINE browser
 
