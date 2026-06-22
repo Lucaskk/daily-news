@@ -2,7 +2,7 @@
 title: "Overview"
 type: overview
 created: 2026-05-24
-updated: 2026-06-21
+updated: 2026-06-22
 status: seed
 tags: [overview]
 sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
@@ -30,6 +30,8 @@ sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
 
 ## Latest Daily News
 
+- [2026-06-22 Daily News](daily/2026/06/2026-06-22/daily-news-2026-06-22.md) - 今日的共同問題是「聲明何時變成可驗證結果」：Iran 在 Switzerland 會談離席，Colombia 與 Ethiopia 的選票轉成勝負與席次，Crimea fuel crisis 從限購升級為民用禁售，Bolivia emergency decree 進入清障卻發生巡邏機墜毀。France heatwave、India exam resit、Czech public-media funding 與 Dutch Moluccan apology 顯示公共制度同時承受安全、公平、獨立與歷史責任壓力。科技面只保留窗口內具新事實的 Polymarket fake-bet video investigation，避免以舊產品再刊填數。
+- [2026-06-22 Slides](daily/2026/06/2026-06-22/slides-2026-06-22.html) - 今日新聞網頁版投影片。
 - [2026-06-21 Daily News](daily/2026/06/2026-06-21/daily-news-2026-06-21.md) - 今日從「協議存在」轉向「執行能否驗證」：Iran 稱 Hormuz 再關閉，但美方稱 55 艘商船與逾 1,700 萬桶油仍通過，延後會談則改赴 Switzerland。Spain、Bolivia、Poland–Ukraine 的爭議分別進入受審、90 天緊急狀態與正式撤勳；Ukraine 城市轟炸、旅遊設施火災、記者與健行者死亡補足安全面。科技／AI 產品顯示競爭從模型能力移到模型可見度、團隊權限與技能復用。
 - [2026-06-21 Slides](daily/2026/06/2026-06-21/slides-2026-06-21.html) - 今日新聞網頁版投影片。
 - [2026-06-20 Daily News](daily/2026/06/2026-06-20/daily-news-2026-06-20.md) - 今日的核心不是新協議，而是三條執行時間線失同步：Israel–Hezbollah 在 51 人死亡後重啟停火，美伊 Switzerland 會談卻取消，Hormuz 中央航道仍有約 80 枚水雷與 600 艘船排隊。西歐熱浪把氣候壓力傳導到鐵路與核電；UK Labour、Italy–U.S.、ICC 與 U.S. intelligence 任命則測試制度治理。科技／AI 顯示競爭已從單一模型轉向既有分發、可更新檢索資料與專用硬體介面。
