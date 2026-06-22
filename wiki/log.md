@@ -376,3 +376,9 @@
 - Served and browser-tested the deck locally on port 4175 because the process occupying 4173 returned empty responses.
 - Published the complete package to GitHub Pages through the GitHub connector after the local push was rejected as non-fast-forward.
 - LINE delivery was skipped because `.env` did not contain all three required variables.
+## [2026-06-22] ingest | Daily global and tech AI news
+
+- Created `wiki/daily/2026/06/2026-06-22/` with exactly 10 global items and one qualifying technology / platform item under the strict 24-hour window.
+- Recorded the exact Asia/Taipei cutoff, UTC publication bases, five material continuations, full-archive deduplication and old-product exclusions in the source notes.
+- Built a nine-slide standalone HTML deck with responsive backgrounds, keyboard / touch controls, expandable cards and per-card complete source URLs.
+- Updated the latest-slides redirect, knowledge-base index, overview and root GitHub Pages entry.
