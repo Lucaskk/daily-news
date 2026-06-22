@@ -2,7 +2,7 @@
 title: "Knowledge Base Index"
 type: overview
 created: 2026-05-24
-updated: 2026-06-21
+updated: 2026-06-22
 status: seed
 tags: [index]
 sources: []
@@ -26,6 +26,8 @@ sources: []
 
 - [每日全球與科技 AI 新聞產製規則](daily/README.md) - 包含研究截點前 24 小時限制、跨日去重、重大續報判定、來源紀錄與發布驗證規則。
 
+- [2026-06-22 Daily News](daily/2026/06/2026-06-22/daily-news-2026-06-22.md) - 今日聚焦可驗證結果：美伊 Switzerland 會談因 Trump 威脅而出現 Iran 離席，Colombia 與 Ethiopia 公布選舉結果；Crimea 民用汽油禁售、Bolivia 清障軍機墜毀與 Qatar 工業事故補足執行風險。France 熱浪、India 重考、Czech 公媒財源與 Netherlands 道歉構成公共制度面；科技焦點是 Polymarket 假下注影片調查。
+- [2026-06-22 Slides](daily/2026/06/2026-06-22/slides-2026-06-22.html) - 今日新聞網頁版投影片。
 - [2026-06-21 Daily News](daily/2026/06/2026-06-21/daily-news-2026-06-21.md) - 今日聚焦執行壓力：Iran 再稱關閉 Hormuz、CENTCOM 稱 55 艘船仍通行，美伊代表轉赴 Switzerland；Spain 首相妻子受審、Bolivia 正式啟動緊急狀態、Poland–Ukraine 正式撤勳。災害與安全涵蓋 Kharkiv 多城轟炸、Dominican Republic 度假村大火、Gaza 記者死亡、Grand Canyon 熱死與 Ubisoft 創辦人墜機。科技／AI 聚焦 In the Weights 與 WorkClaw。
 - [2026-06-21 Slides](daily/2026/06/2026-06-21/slides-2026-06-21.html) - 今日新聞網頁版投影片。
 - [2026-06-20 Daily News](daily/2026/06/2026-06-20/daily-news-2026-06-20.md) - 今日聚焦協議執行落差：Israel–Hezbollah 致命升級後重啟停火，美伊 Switzerland 執行會談取消，Hormuz 中央航道仍受約 80 枚水雷阻礙。西歐熱浪、UK Labour 領導權、Italy–U.S. 摩擦、賠償正義、ICC 監管與跨境壓迫構成制度面；科技／AI 聚焦 Jio 通話與家庭 AI、Firecrawl Research Index 及 NTS 專用串流收音機。
