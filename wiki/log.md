@@ -1,5 +1,11 @@
 # Knowledge Base Log
 
+## [2026-06-22] fix | Keep global news ranking sequential
+
+- Reordered the 2026-06-22 deck so global news cards now read continuously as 1–3, 4–6, 7–9 and 10 by importance.
+- Renamed the affected slide headings to reflect ranking ranges while preserving all original stories, timestamps, details and sources.
+- Added a production rule requiring Top 10 card numbers to remain sequential across slide boundaries, then refreshed the latest-slides cache version.
+
 ## [2026-06-21] fix | Keep slide backgrounds clear
 
 - 將 2026-06-21 簡報原本高不透明度全頁遮罩改為輕量局部漸層，使背景主體與細節保持清晰。
