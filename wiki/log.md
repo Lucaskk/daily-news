@@ -1,5 +1,12 @@
 # Knowledge Base Log
 
+## [2026-06-23] ingest | Daily global and tech AI news
+
+- Created `wiki/daily/2026/06/2026-06-23/daily-news-2026-06-23.md` with exactly 10 global items and nine technology / AI product items.
+- Recorded the exact Asia/Taipei 24-hour window, per-item event or publication-time basis, five global continuations, one technology continuation and excluded duplicates in `source-notes-2026-06-23.md`.
+- Created `slides-2026-06-23.html` as a standalone HTML deck with thematic backgrounds, keyboard/browser navigation and expandable news, statistics, technology and follow-up cards ending with complete source URLs.
+- Updated `wiki/daily/latest-slides.html`, `wiki/index.md`, `wiki/overview.md`, and the root Pages entry timestamp.
+
 ## [2026-06-22] fix | Keep global news ranking sequential
 
 - Reordered the 2026-06-22 deck so global news cards now read continuously as 1–3, 4–6, 7–9 and 10 by importance.

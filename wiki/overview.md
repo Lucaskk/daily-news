@@ -2,7 +2,7 @@
 title: "Overview"
 type: overview
 created: 2026-05-24
-updated: 2026-06-22
+updated: 2026-06-23
 status: seed
 tags: [overview]
 sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
@@ -30,6 +30,8 @@ sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
 
 ## Latest Daily News
 
+- [2026-06-23 Daily News](daily/2026/06/2026-06-23/daily-news-2026-06-23.md) - 今日主軸是「可執行節點」：Starmer 正式辭職讓英國政權交接開始計時，美伊談判從昨日破局風險轉為 IAEA 返場、60 天 oil waiver 與 Qatar frozen assets 的履約測試，Ukraine 則把 drone pressure 推向 Moscow。公共制度壓力分布在西歐熱浪、Australia H5N1、Czech public media strike、Spain Covid procurement sentencing、easyJet bid、U.S. housing bill 與 Greenspan monetary-policy legacy。科技／AI 則從模型宣傳轉向產品權限、AI compute、市場監管與供應鏈安全。
+- [2026-06-23 Slides](daily/2026/06/2026-06-23/slides-2026-06-23.html) - 今日新聞網頁版投影片。
 - [2026-06-22 Daily News](daily/2026/06/2026-06-22/daily-news-2026-06-22.md) - 今日的共同問題是「聲明何時變成可驗證結果」：Iran 在 Switzerland 會談離席，Colombia 與 Ethiopia 的選票轉成勝負與席次，Crimea fuel crisis 從限購升級為民用禁售，Bolivia emergency decree 進入清障卻發生巡邏機墜毀。France heatwave、India exam resit、Czech public-media funding 與 Dutch Moluccan apology 顯示公共制度同時承受安全、公平、獨立與歷史責任壓力。科技面只保留窗口內具新事實的 Polymarket fake-bet video investigation，避免以舊產品再刊填數。
 - [2026-06-22 Slides](daily/2026/06/2026-06-22/slides-2026-06-22.html) - 今日新聞網頁版投影片。
 - [2026-06-21 Daily News](daily/2026/06/2026-06-21/daily-news-2026-06-21.md) - 今日從「協議存在」轉向「執行能否驗證」：Iran 稱 Hormuz 再關閉，但美方稱 55 艘商船與逾 1,700 萬桶油仍通過，延後會談則改赴 Switzerland。Spain、Bolivia、Poland–Ukraine 的爭議分別進入受審、90 天緊急狀態與正式撤勳；Ukraine 城市轟炸、旅遊設施火災、記者與健行者死亡補足安全面。科技／AI 產品顯示競爭從模型能力移到模型可見度、團隊權限與技能復用。

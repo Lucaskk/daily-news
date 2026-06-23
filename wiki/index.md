@@ -2,7 +2,7 @@
 title: "Knowledge Base Index"
 type: overview
 created: 2026-05-24
-updated: 2026-06-22
+updated: 2026-06-23
 status: seed
 tags: [index]
 sources: []
@@ -26,6 +26,8 @@ sources: []
 
 - [每日全球與科技 AI 新聞產製規則](daily/README.md) - 包含研究截點前 24 小時限制、跨日去重、重大續報判定、來源紀錄與發布驗證規則。
 
+- [2026-06-23 Daily News](daily/2026/06/2026-06-23/daily-news-2026-06-23.md) - 今日主軸是英國首相 Keir Starmer 正式辭職、美伊瑞士談判轉為 IAEA 返場與油品豁免履約框架、Ukraine 無人機壓向 Moscow；西歐熱浪、Australia H5N1、Czech 公媒罷工、Spain Ábalos 判刑、easyJet bid、U.S. housing bill 與 Greenspan 逝世補足制度、市場與公共風險。科技／AI 聚焦 Copilot JetBrains / Claude provider、Alexa+ Hindi beta、Instagram TV、Reflection AI–SpaceX compute、Garfield AI、London LFR、AI gas-pricing lawsuit、Klue breach 與 WhatsApp/CRED。
+- [2026-06-23 Slides](daily/2026/06/2026-06-23/slides-2026-06-23.html) - 今日新聞網頁版投影片。
 - [2026-06-22 Daily News](daily/2026/06/2026-06-22/daily-news-2026-06-22.md) - 今日聚焦可驗證結果：美伊 Switzerland 會談因 Trump 威脅而出現 Iran 離席，Colombia 與 Ethiopia 公布選舉結果；Crimea 民用汽油禁售、Bolivia 清障軍機墜毀與 Qatar 工業事故補足執行風險。France 熱浪、India 重考、Czech 公媒財源與 Netherlands 道歉構成公共制度面；科技焦點是 Polymarket 假下注影片調查。
 - [2026-06-22 Slides](daily/2026/06/2026-06-22/slides-2026-06-22.html) - 今日新聞網頁版投影片。
 - [2026-06-21 Daily News](daily/2026/06/2026-06-21/daily-news-2026-06-21.md) - 今日聚焦執行壓力：Iran 再稱關閉 Hormuz、CENTCOM 稱 55 艘船仍通行，美伊代表轉赴 Switzerland；Spain 首相妻子受審、Bolivia 正式啟動緊急狀態、Poland–Ukraine 正式撤勳。災害與安全涵蓋 Kharkiv 多城轟炸、Dominican Republic 度假村大火、Gaza 記者死亡、Grand Canyon 熱死與 Ubisoft 創辦人墜機。科技／AI 聚焦 In the Weights 與 WorkClaw。
