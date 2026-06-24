@@ -1,0 +1,439 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>2026-06-24 每日全球與科技 AI 新聞</title>
+  <!-- Background image sources are listed visibly on the final slide. Remote images use Unsplash photo CDN URLs with creator/source attribution. -->
+  <style>
+    :root {
+      color-scheme: dark;
+      --ink: #f8fafc;
+      --muted: #d6d3d1;
+      --card: rgba(18, 18, 20, .9);
+      --card-light: rgba(255, 252, 247, .94);
+      --line: rgba(255, 255, 255, .22);
+      --accent: #14b8a6;
+      --accent-2: #f59e0b;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; min-height: 100%; }
+    body {
+      background: #101014;
+      color: var(--ink);
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC", sans-serif;
+      overflow: hidden;
+    }
+    a { color: #67e8f9; overflow-wrap: anywhere; }
+    .deck { width: 100vw; height: 100vh; position: relative; }
+    .slide {
+      position: absolute;
+      inset: 0;
+      display: none;
+      overflow-y: auto;
+      padding: clamp(22px, 4vw, 54px);
+      padding-bottom: 92px;
+      background-image:
+        linear-gradient(90deg, rgba(10, 10, 12, .84) 0%, rgba(10, 10, 12, .62) 48%, rgba(10, 10, 12, .22) 100%),
+        var(--bg);
+      background-size: cover;
+      background-position: center;
+    }
+    .slide.active { display: block; }
+    .slide.light {
+      color: #171717;
+      background-image:
+        linear-gradient(90deg, rgba(255, 252, 247, .9) 0%, rgba(255, 252, 247, .74) 52%, rgba(255, 252, 247, .18) 100%),
+        var(--bg);
+    }
+    .hero {
+      min-height: 68vh;
+      max-width: 980px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 20px;
+    }
+    .kicker {
+      color: #99f6e4;
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+    h1, h2, h3 { margin: 0; letter-spacing: 0; }
+    h1 {
+      font-size: clamp(40px, 7vw, 82px);
+      line-height: 1;
+      text-shadow: 0 3px 18px rgba(0,0,0,.34);
+    }
+    h2 {
+      max-width: 1080px;
+      margin-bottom: 16px;
+      font-size: clamp(30px, 4.6vw, 54px);
+      line-height: 1.06;
+      text-shadow: 0 3px 18px rgba(0,0,0,.28);
+    }
+    h3 { font-size: 19px; line-height: 1.35; }
+    p { line-height: 1.72; }
+    .meta {
+      max-width: 980px;
+      color: var(--muted);
+      font-size: 18px;
+      line-height: 1.65;
+    }
+    .light .meta, .light .time { color: #44403c; }
+    .pillrow { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 8px; }
+    .pill {
+      border: 1px solid rgba(20, 184, 166, .55);
+      border-radius: 999px;
+      padding: 8px 12px;
+      background: rgba(20, 184, 166, .16);
+      color: #ccfbf1;
+      font-size: 14px;
+      font-weight: 700;
+    }
+    .light .pill { color: #134e4a; background: rgba(20, 184, 166, .18); }
+    .grid {
+      max-width: 1220px;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+    .grid.three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    details, .card {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--card);
+      box-shadow: 0 16px 42px rgba(0,0,0,.24);
+    }
+    .light details, .light .card {
+      background: var(--card-light);
+      border-color: rgba(23, 23, 23, .16);
+      color: #171717;
+      box-shadow: 0 16px 36px rgba(87, 83, 78, .18);
+    }
+    details { overflow: hidden; }
+    summary { cursor: pointer; list-style: none; padding: 16px; }
+    summary::-webkit-details-marker { display: none; }
+    .row { display: flex; align-items: flex-start; gap: 12px; }
+    .badge {
+      flex: 0 0 auto;
+      min-width: 34px;
+      height: 34px;
+      padding: 0 8px;
+      display: grid;
+      place-items: center;
+      border-radius: 999px;
+      border: 1px solid rgba(245, 158, 11, .55);
+      background: rgba(245, 158, 11, .18);
+      color: #fde68a;
+      font-weight: 900;
+    }
+    .light .badge { color: #78350f; }
+    .time {
+      display: block;
+      margin-top: 8px;
+      color: #d6d3d1;
+      font-size: 13px;
+      line-height: 1.45;
+    }
+    .body {
+      padding: 0 16px 16px;
+      border-top: 1px solid var(--line);
+    }
+    .label { color: #5eead4; font-weight: 800; }
+    .light .label { color: #0f766e; }
+    .source-box {
+      margin-top: 14px;
+      padding-top: 12px;
+      border-top: 1px solid var(--line);
+      font-size: 14px;
+      line-height: 1.55;
+    }
+    .controls {
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 20;
+      height: 66px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      background: rgba(12, 12, 14, .88);
+      border-top: 1px solid rgba(255,255,255,.16);
+    }
+    button {
+      border: 1px solid rgba(20,184,166,.5);
+      border-radius: 8px;
+      padding: 10px 16px;
+      color: #ecfeff;
+      background: rgba(20,184,166,.18);
+      font-size: 15px;
+      cursor: pointer;
+    }
+    .counter {
+      min-width: 74px;
+      text-align: center;
+      color: #d6d3d1;
+      font-variant-numeric: tabular-nums;
+    }
+    .hint { color: #a8a29e; font-size: 13px; }
+    .source-list {
+      max-width: 1180px;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+    .card { padding: 14px; font-size: 14px; line-height: 1.55; }
+    @media (max-width: 900px) {
+      body { overflow: auto; }
+      .deck { height: auto; min-height: 100dvh; }
+      .slide {
+        position: relative;
+        min-height: 100dvh;
+        padding: 20px 15px 86px;
+        background-image:
+          linear-gradient(180deg, rgba(10,10,12,.84) 0%, rgba(10,10,12,.62) 44%, rgba(10,10,12,.82) 100%),
+          var(--bg);
+      }
+      .slide.light {
+        background-image:
+          linear-gradient(180deg, rgba(255,252,247,.92) 0%, rgba(255,252,247,.76) 46%, rgba(255,252,247,.9) 100%),
+          var(--bg);
+      }
+      .slide:not(.active) { display: none; }
+      .grid, .grid.three, .source-list { grid-template-columns: 1fr; }
+      h1 { font-size: 42px; }
+      h2 { font-size: 31px; }
+      .controls { height: 62px; gap: 8px; }
+      button { padding: 9px 12px; }
+      .hint { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <main class="deck">
+    <section class="slide active" style="--bg:url('https://images.unsplash.com/photo-1495020689067-958852a7765e?auto=format&fit=crop&w=1800&q=80')">
+      <div class="hero">
+        <div class="kicker">Daily Global and Tech AI News</div>
+        <h1>2026-06-24<br>全球與科技 AI 新聞</h1>
+        <p class="meta">研究截點：2026-06-24 08:02:32（Asia/Taipei）<br>合格窗口：2026-06-23 08:02:32 至 2026-06-24 08:02:32（Asia/Taipei）</p>
+        <div class="pillrow">
+          <span class="pill">全球 Top 10</span>
+          <span class="pill">科技／AI 9 則</span>
+          <span class="pill">全卡片可展開</span>
+          <span class="pill">逐項完整來源 URL</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide light" style="--bg:url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1800&q=80')">
+      <h2>研究範圍與今日輪廓</h2>
+      <p class="meta">本次只收錄研究截點前 24 小時內的新事件、官方發布或重大續報。舊事件若只是重寫、更新或仍熱門，已排除。</p>
+      <div class="grid three">
+        <details>
+          <summary><div class="row"><span class="badge">1</span><div><h3>全球新聞恰好 10 則</h3></div></div></summary>
+          <div class="body"><p>全球 Top 10 依重要性與跨來源顯著性排序，DOM 與頁面閱讀順序維持 1 到 10，並把同一主線的重複消息合併或排除。</p><div class="source-box"><span class="label">來源｜</span><strong>source notes</strong><br><a href="source-notes-2026-06-24.md">source-notes-2026-06-24.md</a></div></div>
+        </details>
+        <details>
+          <summary><div class="row"><span class="badge">2</span><div><h3>科技／AI 9 則</h3></div></div></summary>
+          <div class="body"><p>科技區以官方產品、平台發布與 AI 技術落地為主；Claude Tag、Copilot BYOK / CLI GA、Meta Glasses、Azure Observability 與 Google 系列更新構成今日重心。</p><div class="source-box"><span class="label">來源｜</span><strong>Anthropic</strong><br><a href="https://www.anthropic.com/news/introducing-claude-tag">https://www.anthropic.com/news/introducing-claude-tag</a></div></div>
+        </details>
+        <details>
+          <summary><div class="row"><span class="badge">3</span><div><h3>合格時間窗</h3></div></div></summary>
+          <div class="body"><p>Asia/Taipei 截點為 2026-06-24 08:02:32；窗口為 2026-06-23 08:02:32 至 2026-06-24 08:02:32，所有入選項都以首發或官方發布時間判定。</p><div class="source-box"><span class="label">來源｜</span><strong>production rules</strong><br><a href="../../../README.md">../../../README.md</a></div></div>
+        </details>
+      </div>
+    </section>
+
+    <section class="slide" style="--bg:url('https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?auto=format&fit=crop&w=1800&q=80')">
+      <h2>Top 1–2｜美伊驗證與國會制衡</h2>
+      <div class="grid">
+        <details>
+          <summary><div class="row"><span class="badge">1</span><div><h3>續報｜美伊對伊朗是否同意 UN 核查公開衝突</h3><time class="time" datetime="2026-06-23T07:50:21Z">發佈時間｜2026-06-23 15:50:21（Asia/Taipei）</time></div></div></summary>
+          <div class="body"><p><span class="label">核心事件｜</span>AP 報導 U.S. and Iran disputed whether Tehran had agreed to allow U.N. inspections of nuclear sites。這是 2026-06-23 美伊瑞士履約框架後的第一個可信度測試。</p><p><span class="label">影響｜</span>若核查承諾沒有共同文本，60 天 oil waiver、Hormuz 通行與後續核談判都會變得難以驗證。</p><p><span class="label">不確定性｜</span>仍需公開文本、IAEA 入境紀錄與美國豁免文件；伊朗否認範圍需後續拆解。</p><div class="source-box"><span class="label">來源｜</span><strong>AP News</strong><br><a href="https://apnews.com/article/iran-us-israel-lebanon-june-20-2026-e9271996cf8e1e774cbc4ddd7bd4e6b3">https://apnews.com/article/iran-us-israel-lebanon-june-20-2026-e9271996cf8e1e774cbc4ddd7bd4e6b3</a></div></div>
+        </details>
+        <details>
+          <summary><div class="row"><span class="badge">2</span><div><h3>續報｜美國參議院首次通過阻止 Iran conflict 的 war powers resolution</h3><time class="time" datetime="2026-06-23T17:37:03Z">發佈時間｜2026-06-24 01:37:03（Asia/Taipei）</time></div></div></summary>
+          <div class="body"><p><span class="label">核心事件｜</span>AP 報導 Senate for the first time approved a resolution to block U.S. military action against Iran。2026-06-04 已有 House vote，今日新節點是參議院正式表態。</p><p><span class="label">影響｜</span>外交履約不明時，國會把軍事授權邊界拉回檯面，可能影響白宮對 Tehran 的威懾與談判策略。</p><p><span class="label">不確定性｜</span>resolution 的法律效果、眾議院後續與總統否決風險仍未定。</p><div class="source-box"><span class="label">來源｜</span><strong>AP News</strong><br><a href="https://apnews.com/article/senate-iran-war-powers-resolution-trump-7462a9a561103f531d995aac91f9fc96">https://apnews.com/article/senate-iran-war-powers-resolution-trump-7462a9a561103f531d995aac91f9fc96</a></div></div>
+        </details>
+      </div>
+    </section>
+
+    <section class="slide" style="--bg:url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1800&q=80')">
+      <h2>Top 3–4｜氣候壓力與 Crimea 補給線</h2>
+      <div class="grid">
+        <details>
+          <summary><div class="row"><span class="badge">3</span><div><h3>續報｜歐洲熱浪再升級，法國創 44.3°C 紀錄、40 人溺斃</h3><time class="time" datetime="2026-06-23T18:06:36Z">發佈時間｜2026-06-24 02:06:36（Asia/Taipei）</time></div></div></summary>
+          <div class="body"><p><span class="label">核心事件｜</span>Guardian live 指 France recorded its hottest day since records began，Pissos 達 44.3°C，Bordeaux 42.1°C，Eiffel Tower 提前關閉；UK Met Office 預警 London / South East 可能達 39°C。</p><p><span class="label">影響｜</span>熱浪已從氣象事件變成學校、地標、醫療、用水與公共安全壓力，並與歐洲氣候調適能力直接相連。</p><p><span class="label">不確定性｜</span>France drowning toll 是否全部直接歸因於熱浪需官方統計確認；UK 39°C 仍是 forecast。</p><div class="source-box"><span class="label">來源｜</span><strong>The Guardian live</strong><br><a href="https://www.theguardian.com/world/live/2026/jun/23/europe-heatwave-live-news-updates-uk-red-temperature-warnings-40-degrees-france-heat-deaths-crisis-meeting">https://www.theguardian.com/world/live/2026/jun/23/europe-heatwave-live-news-updates-uk-red-temperature-warnings-40-degrees-france-heat-deaths-crisis-meeting</a></div></div>
+        </details>
+        <details>
+          <summary><div class="row"><span class="badge">4</span><div><h3>續報｜烏克蘭稱擊中通往 Crimea 的鐵路橋與電廠</h3><time class="time" datetime="2026-06-23T13:43:20Z">發佈時間｜2026-06-23 21:43:20（Asia/Taipei）</time></div></div></summary>
+          <div class="body"><p><span class="label">核心事件｜</span>AP 報導 Ukraine said its forces struck a railway bridge, a power plant and other key infrastructure targets in Crimea，目標是 isolate the Russian-held peninsula。</p><p><span class="label">影響｜</span>這把前幾日 Crimea fuel pressure 與 Moscow drone pressure 轉成交通與能源基礎設施戰，可能影響俄軍補給與佔領治理。</p><p><span class="label">不確定性｜</span>橋梁命中程度、修復時間與實際補給影響仍需獨立確認。</p><div class="source-box"><span class="label">來源｜</span><strong>AP News</strong><br><a href="https://apnews.com/article/russia-ukraine-war-crimea-drone-peninsula-d44f4639e670ed6e4f97c1e0ad6dce6e">https://apnews.com/article/russia-ukraine-war-crimea-drone-peninsula-d44f4639e670ed6e4f97c1e0ad6dce6e</a></div></div>
+        </details>
+      </div>
+    </section>
+
+    <section class="slide light" style="--bg:url('https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?auto=format&fit=crop&w=1800&q=80')">
+      <h2>Top 5–6｜Gaza 法律指控與市場回檔</h2>
+      <div class="grid">
+        <details>
+          <summary><div class="row"><span class="badge">5</span><div><h3>續報｜UN inquiry 指 Israel targeting Gaza children，認定仍在犯下 genocide</h3><time class="time" datetime="2026-06-23T18:56:11Z">發佈時間｜2026-06-24 02:56:11（Asia/Taipei）</time></div></div></summary>
+          <div class="body"><p><span class="label">核心事件｜</span>Guardian 報導 independent UN inquiry 指 Israel continues to commit genocide by targeting children in Gaza，並稱 targeting children undermines the capacity of Palestinian people to exist。</p><p><span class="label">影響｜</span>這不只是 casualty update，而是法律意圖與國際責任層面的指控，可能影響法院、武器出口與各國政策。</p><p><span class="label">不確定性｜</span>Israel 回應、完整報告、法院採信與 genocide 法律門檻仍待後續程序。</p><div class="source-box"><span class="label">來源｜</span><strong>The Guardian</strong><br><a href="https://www.theguardian.com/world/2026/jun/23/israel-deliberately-targeting-gaza-children-to-commit-genocide-un-inquiry-finds">https://www.theguardian.com/world/2026/jun/23/israel-deliberately-targeting-gaza-children-to-commit-genocide-un-inquiry-finds</a></div></div>
+        </details>
+        <details>
+          <summary><div class="row"><span class="badge">6</span><div><h3>全球股市因美國科技股拋售與 AI 基建債務疑慮下跌</h3><time class="time" datetime="2026-06-23T14:07:45Z">發佈時間｜2026-06-23 22:07:45（Asia/Taipei）</time></div></div></summary>
+          <div class="body"><p><span class="label">核心事件｜</span>Guardian business live 指 global shares sold off because of fears over U.S. interest-rate hikes and debt-fuelled spending on AI infrastructure。Brent crude 也因 Iran sanctions waiver 回落。</p><p><span class="label">關鍵數字｜</span>Brent crude dropped just over 1% to US$77.11；gold dropped 2%；traders saw an 86% chance of a December rate hike。</p><p><span class="label">不確定性｜</span>live market attribution 是當日交易敘事，需與收盤、企業財報與隔日亞洲市場交叉確認。</p><div class="source-box"><span class="label">來源｜</span><strong>The Guardian business live</strong><br><a href="https://www.theguardian.com/business/live/2026/jun/23/crude-oil-falls-us-waiver-iran-sanctions-peace-talks-progress-live-updates">https://www.theguardian.com/business/live/2026/jun/23/crude-oil-falls-us-waiver-iran-sanctions-peace-talks-progress-live-updates</a></div></div>
+        </details>
+      </div>
+    </section>
+
+    <section class="slide" style="--bg:url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1800&q=80')">
+      <h2>Top 7–8｜外交接觸與科技安全清單</h2>
+      <div class="grid">
+        <details>
+          <summary><div class="row"><span class="badge">7</span><div><h3>EU 首次在 Brussels 接待 Taliban 官員，討論遣返議題</h3><time class="time" datetime="2026-06-23T17:26:47Z">發佈時間｜2026-06-24 01:26:47（Asia/Taipei）</time></div></div></summary>
+          <div class="body"><p><span class="label">核心事件｜</span>Al Jazeera 報導 EU hosted Taliban officials for the first time in talks on deportations；Taliban government is not recognised by any European country despite the meeting。</p><p><span class="label">影響｜</span>歐洲移民執行、Afghanistan 人權條件與外交承認紅線被拉到同一桌上，成員國立場可能更難維持一致。</p><p><span class="label">不確定性｜</span>會面不等於承認；實際遣返安排、女性權利條件與 asylum safeguards 仍未確認。</p><div class="source-box"><span class="label">來源｜</span><strong>Al Jazeera</strong><br><a href="https://www.aljazeera.com/news/2026/6/23/eu-hosts-taliban-officials-for-the-first-time-in-talks-on-deportations">https://www.aljazeera.com/news/2026/6/23/eu-hosts-taliban-officials-for-the-first-time-in-talks-on-deportations</a></div></div>
+        </details>
+        <details>
+          <summary><div class="row"><span class="badge">8</span><div><h3>續報｜Alibaba 起訴美國軍方，挑戰「Chinese military company」標籤</h3><time class="time" datetime="2026-06-23T20:12:48Z">發佈時間｜2026-06-24 04:12:48（Asia/Taipei）</time></div></div></summary>
+          <div class="body"><p><span class="label">核心事件｜</span>Al Jazeera 報導 Alibaba sued the U.S. military over labelling it a Chinese military company，並稱軍方關聯說法 have no basis in fact or law。</p><p><span class="label">影響｜</span>這是 2026-06-14 Pentagon list 的法律新階段，會測試法院是否審查 U.S. national-security company designation。</p><p><span class="label">不確定性｜</span>Alibaba 的說法尚未等於法院認定；DoD 證據基礎、臨時救濟與其他企業是否跟進仍需追蹤。</p><div class="source-box"><span class="label">來源｜</span><strong>Al Jazeera</strong><br><a href="https://www.aljazeera.com/news/2026/6/23/alibaba-sues-us-military-over-labelling-it-a-chinese-military">https://www.aljazeera.com/news/2026/6/23/alibaba-sues-us-military-over-labelling-it-a-chinese-military</a></div></div>
+        </details>
+      </div>
+    </section>
+
+    <section class="slide light" style="--bg:url('https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1800&q=80')">
+      <h2>Top 9–10｜選舉承認危機與反移民暴力</h2>
+      <div class="grid">
+        <details>
+          <summary><div class="row"><span class="badge">9</span><div><h3>續報｜Peru 大選危機升級，Sanchez 稱不承認 Fujimori 勝選</h3><time class="time" datetime="2026-06-23T20:03:56Z">發佈時間｜2026-06-24 04:03:56（Asia/Taipei）</time></div></div></summary>
+          <div class="body"><p><span class="label">核心事件｜</span>Al Jazeera 報導 Sanchez warned he will not recognise Fujimori victory，並要求撤銷 119 個 consular offices 的結果，理由是程序變更。</p><p><span class="label">影響｜</span>Peru 已長期總統更迭頻繁，若海外票與程序爭議擴大，將直接衝擊選舉正當性與政權交接。</p><p><span class="label">不確定性｜</span>選務機關、法院與觀察團是否接受 Sanchez 異議仍未定；街頭動員風險需追蹤。</p><div class="source-box"><span class="label">來源｜</span><strong>Al Jazeera</strong><br><a href="https://www.aljazeera.com/news/2026/6/23/sanchez-warns-he-will-not-recognise-fujimori-victory-in-peru-election">https://www.aljazeera.com/news/2026/6/23/sanchez-warns-he-will-not-recognise-fujimori-victory-in-peru-election</a></div></div>
+        </details>
+        <details>
+          <summary><div class="row"><span class="badge">10</span><div><h3>South Africa 反移民攻擊升高，警方調查謀殺案且數百人試圖離開</h3><time class="time" datetime="2026-06-23T15:27:21Z">發佈時間｜2026-06-23 23:27:21（Asia/Taipei）</time></div></div></summary>
+          <div class="body"><p><span class="label">核心事件｜</span>Al Jazeera 報導 South African police investigate murder amid rise in anti-migrant attacks；several people dead, hundreds trying to leave。</p><p><span class="label">影響｜</span>anti-migrant groups demand undocumented foreigners leave by June 30，使期限前後的人身安全與警方部署成為高風險節點。</p><p><span class="label">不確定性｜</span>死亡人數、攻擊者組織化程度與警方保護能力仍會更新；公共服務壓力與移民權利敘事相互衝突。</p><div class="source-box"><span class="label">來源｜</span><strong>Al Jazeera</strong><br><a href="https://www.aljazeera.com/news/2026/6/23/south-african-police-investigate-murder-amid-rise-in-anti-migrant-attacks">https://www.aljazeera.com/news/2026/6/23/south-african-police-investigate-murder-amid-rise-in-anti-migrant-attacks</a></div></div>
+        </details>
+      </div>
+    </section>
+
+    <section class="slide" style="--bg:url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1800&q=80')">
+      <h2>科技／AI T1–T5｜團隊 agent、開發者工具與雲端營運</h2>
+      <div class="grid three">
+        <details>
+          <summary><div class="row"><span class="badge">T1</span><div><h3>Anthropic 推出 Claude Tag，先從 Slack 讓團隊 @Claude 分派任務</h3><time class="time" datetime="2026-06-23T14:00:00Z">發佈時間｜2026-06-23 22:00:00（Asia/Taipei）</time></div></div></summary>
+          <div class="body"><p>Claude Tag 可加入 selected Slack channels，連接 tools、data and codebases，團隊成員可 @Claude 委派任務。Claude 會記住 channel 相關資訊並規劃未來任務，Anthropic 將其視為 Claude Code 的演進。</p><div class="source-box"><span class="label">來源｜</span><strong>Anthropic</strong><br><a href="https://www.anthropic.com/news/introducing-claude-tag">https://www.anthropic.com/news/introducing-claude-tag</a></div></div>
+        </details>
+        <details>
+          <summary><div class="row"><span class="badge">T2</span><div><h3>GitHub Copilot app 支援 BYOK，可自接模型供應商</h3><time class="time" datetime="2026-06-23T08:00:02Z">發佈時間｜2026-06-23 16:00:02（Asia/Taipei）</time></div></div></summary>
+          <div class="body"><p>GitHub Copilot app now supports bring your own key，可連 OpenAI、Azure OpenAI、Microsoft Foundry、Anthropic、LM Studio、Ollama 或 OpenAI-compatible endpoint；keys 存在 local OS keychain。</p><div class="source-box"><span class="label">來源｜</span><strong>GitHub Changelog</strong><br><a href="https://github.blog/changelog/2026-06-23-github-copilot-app-support-for-byok/">https://github.blog/changelog/2026-06-23-github-copilot-app-support-for-byok/</a></div></div>
+        </details>
+        <details>
+          <summary><div class="row"><span class="badge">T3</span><div><h3>Copilot CLI 新終端介面 GA，支援 issues / PRs / gists 分頁</h3><time class="time" datetime="2026-06-23T16:35:45Z">發佈時間｜2026-06-24 00:35:45（Asia/Taipei）</time></div></div></summary>
+          <div class="body"><p>GitHub 表示 redesigned terminal interface for GitHub Copilot CLI is generally available；重點包括 tabs browsing、terminal 內工具設定與 accessibility 改進，使 agent 工作流更貼近開發者命令列。</p><div class="source-box"><span class="label">來源｜</span><strong>GitHub Changelog</strong><br><a href="https://github.blog/changelog/2026-06-23-copilot-cli-new-terminal-interface-is-generally-available/">https://github.blog/changelog/2026-06-23-copilot-cli-new-terminal-interface-is-generally-available/</a></div></div>
+        </details>
+        <details>
+          <summary><div class="row"><span class="badge">T4</span><div><h3>Meta 與 EssilorLuxottica 發表 Meta Glasses，提供 26 種款式</h3><time class="time" datetime="2026-06-23T13:00:32Z">發佈時間｜2026-06-23 21:00:32（Asia/Taipei）</time></div></div></summary>
+          <div class="body"><p>Meta 官方宣布與 EssilorLuxottica launch Meta Glasses，description 稱有 26 styles across colors, lenses and frames。這是 AI wearables 從單一聯名走向更廣 consumer hardware portfolio 的一步。</p><div class="source-box"><span class="label">來源｜</span><strong>Meta</strong><br><a href="https://about.fb.com/news/2026/06/meta-essilorluxottica-partner-launch-meta-glasses/">https://about.fb.com/news/2026/06/meta-essilorluxottica-partner-launch-meta-glasses/</a></div></div>
+        </details>
+        <details>
+          <summary><div class="row"><span class="badge">T5</span><div><h3>Microsoft 宣布 Azure Copilot Observability Agent GA</h3><time class="time" datetime="2026-06-23T15:45:05Z">發佈時間｜2026-06-23 23:45:05（Asia/Taipei）</time></div></div></summary>
+          <div class="body"><p>Microsoft metadata 與可抓片段顯示 Azure Copilot Observability Agent general availability；built on Azure Monitor，可 correlate signals across agents, applications, infrastructure and cloud services。</p><div class="source-box"><span class="label">來源｜</span><strong>Microsoft</strong><br><a href="https://blogs.microsoft.com/blog/2026/06/23/rethinking-cloud-operations-with-agentic-observability/">https://blogs.microsoft.com/blog/2026/06/23/rethinking-cloud-operations-with-agentic-observability/</a></div></div>
+        </details>
+      </div>
+    </section>
+
+    <section class="slide light" style="--bg:url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1800&q=80')">
+      <h2>科技／AI T6–T9｜行動身分、廣告治理與災害 AI</h2>
+      <div class="grid">
+        <details>
+          <summary><div class="row"><span class="badge">T6</span><div><h3>Chrome 與 Google Wallet 將進階 autofill 擴展到 iOS / Android</h3><time class="time" datetime="2026-06-23T17:00:00Z">發佈時間｜2026-06-24 01:00:00（Asia/Taipei）</time></div></div></summary>
+          <div class="body"><p>Google 表示 Chrome is bringing advanced autofill capabilities to your phone with Google Wallet，iOS and Android users 可取得 passport details、payment info and more。便利性提高，也增加 mobile identity 安全責任。</p><div class="source-box"><span class="label">來源｜</span><strong>Google Keyword</strong><br><a href="https://blog.google/products-and-platforms/products/chrome/autofill-ios-android-wallet/">https://blog.google/products-and-platforms/products/chrome/autofill-ios-android-wallet/</a></div></div>
+        </details>
+        <details>
+          <summary><div class="row"><span class="badge">T7</span><div><h3>Google 在 Cannes Lions 公布 YouTube Gemini insights tools</h3><time class="time" datetime="2026-06-23T12:30:00Z">發佈時間｜2026-06-23 20:30:00（Asia/Taipei）</time></div></div></summary>
+          <div class="body"><p>Google Ads & Commerce Blog 表示 YouTube announced new insights tools built with Gemini，包括 Google Ads Insights Finder trending insights、brand pulse metrics、Content & Creator Insights API 與 Demand Gen tips。</p><div class="source-box"><span class="label">來源｜</span><strong>Google Ads & Commerce Blog</strong><br><a href="https://blog.google/products/ads-commerce/youtube-insights-tools-cannes-lions-2026/">https://blog.google/products/ads-commerce/youtube-insights-tools-cannes-lions-2026/</a></div></div>
+        </details>
+        <details>
+          <summary><div class="row"><span class="badge">T8</span><div><h3>Google 將金融廣告主驗證擴至 EU / EEA 全境</h3><time class="time" datetime="2026-06-23T05:00:00Z">發佈時間｜2026-06-23 13:00:00（Asia/Taipei）</time></div></div></summary>
+          <div class="body"><p>Google 表示 financial services verification program 擴到 EU / EEA 全境，並稱 paired with defenses built with Gemini；去年 EU blocked or removed more than 1.6 billion ads，全球 unauthorized financial services ads blocked or removed 327.8 million。</p><div class="source-box"><span class="label">來源｜</span><strong>Google Ads & Commerce Blog</strong><br><a href="https://blog.google/products/ads-commerce/eu-financial-advertiser-verification/">https://blog.google/products/ads-commerce/eu-financial-advertiser-verification/</a></div></div>
+        </details>
+        <details>
+          <summary><div class="row"><span class="badge">T9</span><div><h3>Google 在 AI for the Planet 說明災害韌性 AI</h3><time class="time" datetime="2026-06-23T19:40:00Z">發佈時間｜2026-06-24 03:40:00（Asia/Taipei）</time></div></div></summary>
+          <div class="body"><p>Google Keyword 以 Towards a world where no one is surprised by a natural disaster 為題，整理 ongoing crisis resilience efforts and mission shared at AI for the Planet。這是災害預警與 crisis response 的 AI 技術更新。</p><div class="source-box"><span class="label">來源｜</span><strong>Google Keyword</strong><br><a href="https://blog.google/innovation-and-ai/technology/research/helping-communities-prepare-for-natural-disasters/">https://blog.google/innovation-and-ai/technology/research/helping-communities-prepare-for-natural-disasters/</a></div></div>
+        </details>
+      </div>
+    </section>
+
+    <section class="slide" style="--bg:url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1800&q=80')">
+      <h2>綜合判讀與後續追蹤</h2>
+      <div class="grid">
+        <details>
+          <summary><div class="row"><span class="badge">1</span><div><h3>協議弱點出現在第一個驗證點</h3></div></div></summary>
+          <div class="body"><p>美伊對 UN / IAEA 核查是否已承諾出現說法衝突，代表協議風險已從政治宣示轉向驗證機制。參議院 war powers vote 同日發生，讓外交與軍事授權同時受制衡。</p><div class="source-box"><span class="label">來源｜</span><strong>AP Iran inspections</strong><br><a href="https://apnews.com/article/iran-us-israel-lebanon-june-20-2026-e9271996cf8e1e774cbc4ddd7bd4e6b3">https://apnews.com/article/iran-us-israel-lebanon-june-20-2026-e9271996cf8e1e774cbc4ddd7bd4e6b3</a></div></div>
+        </details>
+        <details>
+          <summary><div class="row"><span class="badge">2</span><div><h3>基礎設施成為多條主線的共同壓力點</h3></div></div></summary>
+          <div class="body"><p>Europe heatwave 測試學校、地標與公共安全；Ukraine strikes Crimea bridge 測試俄軍補給；global market sell-off 則開始質疑 AI infrastructure spending 的槓桿與利率成本。</p><div class="source-box"><span class="label">來源｜</span><strong>The Guardian heatwave live</strong><br><a href="https://www.theguardian.com/world/live/2026/jun/23/europe-heatwave-live-news-updates-uk-red-temperature-warnings-40-degrees-france-heat-deaths-crisis-meeting">https://www.theguardian.com/world/live/2026/jun/23/europe-heatwave-live-news-updates-uk-red-temperature-warnings-40-degrees-france-heat-deaths-crisis-meeting</a></div></div>
+        </details>
+        <details>
+          <summary><div class="row"><span class="badge">3</span><div><h3>AI 產品轉向常駐團隊與可替換模型</h3></div></div></summary>
+          <div class="body"><p>Claude Tag 常駐 Slack，Copilot app BYOK 讓使用者自接 provider，Copilot CLI 新介面 GA 則把 agent 留在 terminal。今日 AI 產品焦點不在模型名，而在權限、上下文、工作流和治理。</p><div class="source-box"><span class="label">來源｜</span><strong>GitHub BYOK</strong><br><a href="https://github.blog/changelog/2026-06-23-github-copilot-app-support-for-byok/">https://github.blog/changelog/2026-06-23-github-copilot-app-support-for-byok/</a></div></div>
+        </details>
+        <details>
+          <summary><div class="row"><span class="badge">4</span><div><h3>後續追蹤：核查、熱浪、Crimea、Gaza 與 AI 權限</h3></div></div></summary>
+          <div class="body"><p>接下來要追蹤 IAEA 是否進入 Iran、war powers resolution 是否受阻、France / UK 熱浪死亡與學校停課是否擴大、Crimea bridge repair timeline、UN Gaza inquiry 是否被法院或出口管制採用，以及 Claude / Copilot / Azure AI 的企業權限模型。</p><div class="source-box"><span class="label">來源｜</span><strong>source notes</strong><br><a href="source-notes-2026-06-24.md">source-notes-2026-06-24.md</a></div></div>
+        </details>
+      </div>
+    </section>
+
+    <section class="slide" style="--bg:url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1800&q=80')">
+      <h2>來源與圖片授權</h2>
+      <p class="meta">每張新聞、統計、科技摘要與後續追蹤卡片的展開區塊底部均有自己的來源標籤與完整 URL；此頁另列背景圖來源。</p>
+      <div class="source-list">
+        <div class="card"><strong>封面／新聞</strong><br>Unsplash / AbsolutVision<br><a href="https://images.unsplash.com/photo-1495020689067-958852a7765e?auto=format&fit=crop&w=1800&q=80">https://images.unsplash.com/photo-1495020689067-958852a7765e?auto=format&fit=crop&w=1800&q=80</a></div>
+        <div class="card"><strong>研究範圍／地球</strong><br>Unsplash / NASA<br><a href="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1800&q=80">https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1800&q=80</a></div>
+        <div class="card"><strong>政治／外交</strong><br>Unsplash / Marco Oriolesi<br><a href="https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?auto=format&fit=crop&w=1800&q=80">https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?auto=format&fit=crop&w=1800&q=80</a></div>
+        <div class="card"><strong>氣候／地景</strong><br>Unsplash / Joseph Barrientos<br><a href="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1800&q=80">https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1800&q=80</a></div>
+        <div class="card"><strong>市場</strong><br>Unsplash / Chris Liverani<br><a href="https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?auto=format&fit=crop&w=1800&q=80">https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?auto=format&fit=crop&w=1800&q=80</a></div>
+        <div class="card"><strong>制度／工作</strong><br>Unsplash / Crew<br><a href="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1800&q=80">https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1800&q=80</a></div>
+        <div class="card"><strong>全球路徑</strong><br>Unsplash photo CDN<br><a href="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1800&q=80">https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1800&q=80</a></div>
+        <div class="card"><strong>科技／硬體</strong><br>Unsplash / Alexandre Debieve<br><a href="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1800&q=80">https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1800&q=80</a></div>
+        <div class="card"><strong>開發者工具</strong><br>Unsplash / Christopher Gower<br><a href="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1800&q=80">https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1800&q=80</a></div>
+        <div class="card"><strong>來源頁</strong><br>Unsplash / Kelly Sikkema<br><a href="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1800&q=80">https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1800&q=80</a></div>
+      </div>
+    </section>
+  </main>
+
+  <nav class="controls" aria-label="投影片導覽">
+    <button type="button" id="prev">← 上一頁</button>
+    <span class="counter" id="counter">1 / 11</span>
+    <button type="button" id="next">下一頁 →</button>
+    <span class="hint">鍵盤：← → Space Home End</span>
+  </nav>
+
+  <script>
+    const slides = Array.from(document.querySelectorAll(".slide"));
+    const counter = document.getElementById("counter");
+    let current = 0;
+    function show(index) {
+      current = Math.max(0, Math.min(slides.length - 1, index));
+      slides.forEach((slide, i) => slide.classList.toggle("active", i === current));
+      counter.textContent = `${current + 1} / ${slides.length}`;
+    }
+    document.getElementById("prev").addEventListener("click", () => show(current - 1));
+    document.getElementById("next").addEventListener("click", () => show(current + 1));
+    window.addEventListener("keydown", (event) => {
+      const tag = event.target && event.target.tagName;
+      if (["INPUT", "TEXTAREA", "SELECT"].includes(tag)) return;
+      if (event.key === "ArrowRight" || event.key === " ") { event.preventDefault(); show(current + 1); }
+      if (event.key === "ArrowLeft") { event.preventDefault(); show(current - 1); }
+      if (event.key === "Home") show(0);
+      if (event.key === "End") show(slides.length - 1);
+    });
+    show(0);
+  </script>
+</body>
+</html>

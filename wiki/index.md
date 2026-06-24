@@ -2,7 +2,7 @@
 title: "Knowledge Base Index"
 type: overview
 created: 2026-05-24
-updated: 2026-06-23
+updated: 2026-06-24
 status: seed
 tags: [index]
 sources: []
@@ -26,6 +26,8 @@ sources: []
 
 - [每日全球與科技 AI 新聞產製規則](daily/README.md) - 包含研究截點前 24 小時限制、跨日去重、重大續報判定、來源紀錄與發布驗證規則。
 
+- [2026-06-24 Daily News](daily/2026/06/2026-06-24/daily-news-2026-06-24.md) - 今日主軸是協議履約進入驗證：美伊對 UN / IAEA 核查說法公開衝突，美國參議院首次通過 Iran war powers resolution；歐洲熱浪創 44.3°C 並造成公共安全壓力，Ukraine 打擊 Crimea railway bridge，UN inquiry 將 Gaza children targeting 連到 genocide 指控。市場因 AI infrastructure debt 與利率憂慮回檔，EU/Taliban、Alibaba lawsuit、Peru recognition crisis 與 South Africa anti-migrant violence 補足制度與地緣風險。科技／AI 聚焦 Claude Tag、Copilot BYOK / CLI GA、Meta Glasses、Azure Observability、Chrome / Wallet autofill、YouTube Gemini tools、Google financial verification 與 disaster AI。
+- [2026-06-24 Slides](daily/2026/06/2026-06-24/slides-2026-06-24.html) - 今日新聞網頁版投影片。
 - [2026-06-23 Daily News](daily/2026/06/2026-06-23/daily-news-2026-06-23.md) - 今日主軸是英國首相 Keir Starmer 正式辭職、美伊瑞士談判轉為 IAEA 返場與油品豁免履約框架、Ukraine 無人機壓向 Moscow；西歐熱浪、Australia H5N1、Czech 公媒罷工、Spain Ábalos 判刑、easyJet bid、U.S. housing bill 與 Greenspan 逝世補足制度、市場與公共風險。科技／AI 聚焦 Copilot JetBrains / Claude provider、Alexa+ Hindi beta、Instagram TV、Reflection AI–SpaceX compute、Garfield AI、London LFR、AI gas-pricing lawsuit、Klue breach 與 WhatsApp/CRED。
 - [2026-06-23 Slides](daily/2026/06/2026-06-23/slides-2026-06-23.html) - 今日新聞網頁版投影片。
 - [2026-06-22 Daily News](daily/2026/06/2026-06-22/daily-news-2026-06-22.md) - 今日聚焦可驗證結果：美伊 Switzerland 會談因 Trump 威脅而出現 Iran 離席，Colombia 與 Ethiopia 公布選舉結果；Crimea 民用汽油禁售、Bolivia 清障軍機墜毀與 Qatar 工業事故補足執行風險。France 熱浪、India 重考、Czech 公媒財源與 Netherlands 道歉構成公共制度面；科技焦點是 Polymarket 假下注影片調查。
