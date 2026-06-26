@@ -1,15 +1,16 @@
 {
-  "run_at": "2026-06-27T00:08:09+08:00",
+  "run_at": "2026-06-27T00:23:45+08:00",
   "successful": [
+    "8299"
+  ],
+  "failed": {
+    "6175": "HTTP 500 while fetching https://goodinfo.tw/tw/StockFinDetail.asp?RPT_CAT=IS_YEAR&STOCK_ID=6175&REINIT=20631.0163985119: \r\n<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01//EN\" \"http://www.w3.org/TR/html4/strict.dtd\">\r\n<HTML><HEAD><TITLE>無法顯示網頁</TITLE>\r\n<META HTTP-EQUIV=\"Content-Type\" Content=\"text/html; charset=UTF-8\">\r\n<STYLE type=\"text/css\">\r\n  BODY { font: 8pt/12pt verdana }\r\n  H1 { font: 13pt/15pt verdana }\r\n  H2 { f"
+  },
+  "skipped_fresh_today": [
     "2330",
     "2317",
     "2327",
     "2344",
     "2603"
-  ],
-  "failed": {
-    "6175": "Goodinfo 回傳內容沒有找到預期的財報表格，可能是暫時被擋或該標的沒有財報資料。",
-    "8299": "Goodinfo 回傳內容沒有找到預期的財報表格，可能是暫時被擋或該標的沒有財報資料。"
-  },
-  "skipped_fresh_today": []
+  ]
 }
