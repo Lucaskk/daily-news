@@ -2,7 +2,7 @@
 title: "Knowledge Base Index"
 type: overview
 created: 2026-05-24
-updated: 2026-06-24
+updated: 2026-06-29
 status: seed
 tags: [index]
 sources: []
@@ -26,6 +26,8 @@ sources: []
 
 - [每日全球與科技 AI 新聞產製規則](daily/README.md) - 包含研究截點前 24 小時限制、跨日去重、重大續報判定、來源紀錄與發布驗證規則。
 
+- [2026-06-29 Daily News](daily/2026/06/2026-06-29/daily-news-2026-06-29.md) - 今日主軸是協議壓力與基礎設施瓶頸：Iran 攻擊 Bahrain/Kuwait，美伊臨時協議再次受測；Ukraine 再擊俄羅斯煉油廠且 Putin 承認燃料短缺；France 熱浪額外死亡約 1,000 人；Pakistan 沿 Afghan 邊境行動擊斃 29 人；Venezuela 地震四日後仍救出倖存者。Saudi Aramco 直升機事故、Israel/Lebanon/Syria/Hezbollah 壓力、Argentina 貪腐辭職、Israel Armenian genocide recognition、Uganda 媒體關閉補足全球議程。科技／AI 聚焦 Firmus/NVIDIA Batam AI Factory、Google 對 Meta 的 Gemini 容量限制、Ford AI 品質回補、Micron 記憶體荒、Kunlunxin IPO 與 NPCI UPI AI roadmap。
+- [2026-06-29 Slides](daily/2026/06/2026-06-29/slides-2026-06-29.html) - 今日新聞網頁版投影片。
 - [2026-06-24 Daily News](daily/2026/06/2026-06-24/daily-news-2026-06-24.md) - 今日主軸是協議履約進入驗證：美伊對 UN / IAEA 核查說法公開衝突，美國參議院首次通過 Iran war powers resolution；歐洲熱浪創 44.3°C 並造成公共安全壓力，Ukraine 打擊 Crimea railway bridge，UN inquiry 將 Gaza children targeting 連到 genocide 指控。市場因 AI infrastructure debt 與利率憂慮回檔，EU/Taliban、Alibaba lawsuit、Peru recognition crisis 與 South Africa anti-migrant violence 補足制度與地緣風險。科技／AI 聚焦 Claude Tag、Copilot BYOK / CLI GA、Meta Glasses、Azure Observability、Chrome / Wallet autofill、YouTube Gemini tools、Google financial verification 與 disaster AI。
 - [2026-06-24 Slides](daily/2026/06/2026-06-24/slides-2026-06-24.html) - 今日新聞網頁版投影片。
 - [2026-06-23 Daily News](daily/2026/06/2026-06-23/daily-news-2026-06-23.md) - 今日主軸是英國首相 Keir Starmer 正式辭職、美伊瑞士談判轉為 IAEA 返場與油品豁免履約框架、Ukraine 無人機壓向 Moscow；西歐熱浪、Australia H5N1、Czech 公媒罷工、Spain Ábalos 判刑、easyJet bid、U.S. housing bill 與 Greenspan 逝世補足制度、市場與公共風險。科技／AI 聚焦 Copilot JetBrains / Claude provider、Alexa+ Hindi beta、Instagram TV、Reflection AI–SpaceX compute、Garfield AI、London LFR、AI gas-pricing lawsuit、Klue breach 與 WhatsApp/CRED。

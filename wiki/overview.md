@@ -2,7 +2,7 @@
 title: "Overview"
 type: overview
 created: 2026-05-24
-updated: 2026-06-24
+updated: 2026-06-29
 status: seed
 tags: [overview]
 sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
@@ -30,6 +30,8 @@ sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
 
 ## Latest Daily News
 
+- [2026-06-29 Daily News](daily/2026/06/2026-06-29/daily-news-2026-06-29.md) - 今日主軸是「協議壓力與基礎設施瓶頸」：Iran 攻擊 Bahrain/Kuwait 讓美伊臨時協議再次受測，Ukraine 再擊俄羅斯煉油廠且 Putin 承認燃料短缺，France 熱浪額外死亡約 1,000 人，Pakistan 沿 Afghan 邊境行動稱擊斃 29 人，Venezuela 地震四日後仍救出父子。Saudi Aramco 直升機事故、Israel/Lebanon/Syria/Hezbollah 壓力、Argentina 貪腐辭職、Israel Armenian genocide recognition 與 Uganda 媒體關閉補足治理與外交風險。科技／AI 則顯示產品交付的硬限制：Firmus/NVIDIA Batam AI Factory、Google 對 Meta 的 Gemini 容量限制、Ford AI 品質回補、Micron 記憶體荒、Kunlunxin IPO 與 NPCI UPI AI roadmap。
+- [2026-06-29 Slides](daily/2026/06/2026-06-29/slides-2026-06-29.html) - 今日新聞網頁版投影片。
 - [2026-06-24 Daily News](daily/2026/06/2026-06-24/daily-news-2026-06-24.md) - 今日主軸是「驗證壓力」：美伊核查承諾說法衝突與 Senate war powers vote 讓協議、軍事授權和國會制衡同時進入可追蹤節點。歐洲熱浪、Crimea bridge strike、Gaza UN inquiry 和 global tech sell-off 則把公共基礎設施、戰爭物流、法律責任與 AI infrastructure financing 放到同一張風險圖上。科技／AI 焦點從模型能力轉向工作流與治理：Claude Tag 常駐 Slack、Copilot app BYOK、Copilot CLI terminal GA、Azure Observability Agent 與 Google / Meta consumer and ads updates。
 - [2026-06-24 Slides](daily/2026/06/2026-06-24/slides-2026-06-24.html) - 今日新聞網頁版投影片。
 - [2026-06-23 Daily News](daily/2026/06/2026-06-23/daily-news-2026-06-23.md) - 今日主軸是「可執行節點」：Starmer 正式辭職讓英國政權交接開始計時，美伊談判從昨日破局風險轉為 IAEA 返場、60 天 oil waiver 與 Qatar frozen assets 的履約測試，Ukraine 則把 drone pressure 推向 Moscow。公共制度壓力分布在西歐熱浪、Australia H5N1、Czech public media strike、Spain Covid procurement sentencing、easyJet bid、U.S. housing bill 與 Greenspan monetary-policy legacy。科技／AI 則從模型宣傳轉向產品權限、AI compute、市場監管與供應鏈安全。
