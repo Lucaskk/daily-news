@@ -1,0 +1,800 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>2026-06-30 每日全球與科技 AI 新聞</title>
+  <!--
+    Image sources:
+    - Title / news desk: Unsplash, https://images.unsplash.com/photo-1504711434969-e33886168f5c
+    - Satellite / geopolitics: NASA public domain via Wikimedia Commons, https://upload.wikimedia.org/wikipedia/commons/9/97/The_Earth_seen_from_Apollo_17.jpg
+    - Diplomacy / city: Unsplash, https://images.unsplash.com/photo-1521737711867-e3b97375f902
+    - Security / emergency: Unsplash, https://images.unsplash.com/photo-1581092160607-ee22621dd758
+    - Climate / heat: Unsplash, https://images.unsplash.com/photo-1500530855697-b586d89ba3ee
+    - Court / institutions: Unsplash, https://images.unsplash.com/photo-1589829545856-d10d557cf95f
+    - Technology / chips: Unsplash, https://images.unsplash.com/photo-1518770660439-4636190af475
+    - Mobility / interface: Unsplash, https://images.unsplash.com/photo-1516321318423-f06f85e504b3
+    - Sources / archive: Unsplash, https://images.unsplash.com/photo-1497366754035-f200968a6e72
+  -->
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #152033;
+      --muted: #536172;
+      --panel: rgba(255, 255, 255, 0.91);
+      --panel-strong: rgba(255, 255, 255, 0.96);
+      --line: rgba(21, 32, 51, 0.16);
+      --accent: #0f766e;
+      --accent-2: #b45309;
+      --danger: #b91c1c;
+      --shadow: 0 20px 70px rgba(7, 12, 20, 0.22);
+    }
+
+    * { box-sizing: border-box; }
+    html, body { margin: 0; min-height: 100%; }
+    body {
+      background: #0d1420;
+      color: var(--ink);
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC", sans-serif;
+      overflow: hidden;
+    }
+    a { color: #0f766e; overflow-wrap: anywhere; }
+
+    .deck {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+    }
+    .slide {
+      position: absolute;
+      inset: 0;
+      display: none;
+      padding: clamp(18px, 3vw, 44px);
+      overflow-y: auto;
+      background-image: var(--bg);
+      background-size: cover;
+      background-position: center;
+    }
+    .slide.active { display: block; }
+    .slide::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background:
+        linear-gradient(90deg, rgba(255,255,255,0.96), rgba(255,255,255,0.74) 46%, rgba(255,255,255,0.26)),
+        linear-gradient(180deg, rgba(255,255,255,0.42), rgba(255,255,255,0.08));
+    }
+    .slide > * { position: relative; z-index: 1; }
+    .slide-inner {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding-bottom: 84px;
+    }
+    .kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin: 0 0 12px;
+      color: var(--accent);
+      font-weight: 800;
+      letter-spacing: 0;
+      font-size: clamp(13px, 1.4vw, 16px);
+    }
+    .kicker::before {
+      content: "";
+      width: 28px;
+      height: 3px;
+      background: currentColor;
+      border-radius: 999px;
+    }
+    h1, h2 {
+      margin: 0;
+      max-width: 980px;
+      line-height: 1.04;
+      letter-spacing: 0;
+      color: #0f172a;
+      text-wrap: balance;
+    }
+    h1 { font-size: clamp(40px, 7vw, 88px); }
+    h2 { font-size: clamp(30px, 5vw, 58px); }
+    .subtitle {
+      max-width: 900px;
+      margin: 18px 0 0;
+      color: #27364a;
+      font-size: clamp(17px, 2.1vw, 25px);
+      line-height: 1.55;
+      text-shadow: 0 1px 20px rgba(255,255,255,0.8);
+    }
+    .meta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 24px;
+    }
+    .pill {
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.85);
+      border-radius: 999px;
+      padding: 8px 12px;
+      color: #243244;
+      font-weight: 700;
+      font-size: 13px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 24px;
+    }
+    .grid.three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    details.card {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--panel);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+    details.card summary {
+      cursor: pointer;
+      list-style: none;
+      padding: 16px 18px;
+      min-height: 78px;
+      display: grid;
+      gap: 8px;
+    }
+    details.card summary::-webkit-details-marker { display: none; }
+    details.card summary::after {
+      content: "+";
+      position: absolute;
+      right: 18px;
+      top: 14px;
+      width: 28px;
+      height: 28px;
+      display: grid;
+      place-items: center;
+      border-radius: 999px;
+      background: #0f766e;
+      color: #fff;
+      font-size: 20px;
+      line-height: 1;
+    }
+    details.card[open] summary::after { content: "-"; }
+    .card-title {
+      padding-right: 38px;
+      font-weight: 850;
+      font-size: clamp(17px, 1.9vw, 22px);
+      line-height: 1.25;
+      color: #101828;
+    }
+    .card-title .rank {
+      color: var(--accent-2);
+      margin-right: 6px;
+      font-variant-numeric: tabular-nums;
+    }
+    .time {
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 700;
+    }
+    .body {
+      padding: 0 18px 18px;
+      color: #27364a;
+      line-height: 1.7;
+      font-size: 15px;
+    }
+    .body p { margin: 10px 0; }
+    .body ul { margin: 10px 0 0 18px; padding: 0; }
+    .body li { margin: 6px 0; }
+    .label {
+      display: inline-flex;
+      align-items: center;
+      width: fit-content;
+      padding: 3px 8px;
+      border-radius: 999px;
+      background: rgba(15, 118, 110, 0.12);
+      color: var(--accent);
+      font-weight: 800;
+      font-size: 12px;
+    }
+    .source {
+      margin-top: 14px;
+      padding-top: 10px;
+      border-top: 1px solid var(--line);
+      color: #3b485b;
+      font-size: 13px;
+    }
+    .source span {
+      display: block;
+      margin-top: 4px;
+      overflow-wrap: anywhere;
+      color: #526172;
+    }
+    .stat-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 24px;
+    }
+    .stat summary {
+      min-height: 116px;
+      align-content: start;
+    }
+    .stat-number {
+      font-size: clamp(28px, 4vw, 48px);
+      line-height: 1;
+      color: #0f766e;
+      font-weight: 900;
+      font-variant-numeric: tabular-nums;
+    }
+    .stat-caption {
+      color: #334155;
+      font-weight: 800;
+      line-height: 1.35;
+    }
+    .controls {
+      position: fixed;
+      left: 50%;
+      bottom: 18px;
+      transform: translateX(-50%);
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.92);
+      border: 1px solid rgba(15,23,42,0.16);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.18);
+    }
+    .controls button {
+      border: 0;
+      border-radius: 999px;
+      min-width: 42px;
+      height: 38px;
+      padding: 0 14px;
+      background: #0f172a;
+      color: #fff;
+      font-weight: 850;
+      cursor: pointer;
+    }
+    .controls button:disabled { opacity: 0.35; cursor: default; }
+    .counter {
+      color: #0f172a;
+      font-weight: 900;
+      font-variant-numeric: tabular-nums;
+      min-width: 74px;
+      text-align: center;
+    }
+    .progress {
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      height: 4px;
+      background: #0f766e;
+      z-index: 11;
+      width: 0%;
+      transition: width .2s ease;
+    }
+    .note {
+      margin-top: 18px;
+      max-width: 760px;
+      color: #3b485b;
+      font-size: 14px;
+      line-height: 1.6;
+      background: rgba(255,255,255,0.84);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 14px 16px;
+    }
+    .small { font-size: 13px; color: #536172; }
+
+    @media (max-width: 820px) {
+      body { overflow: auto; }
+      .deck { height: 100dvh; }
+      .slide { padding: 18px 14px 86px; }
+      .slide::before {
+        background:
+          linear-gradient(180deg, rgba(255,255,255,0.98), rgba(255,255,255,0.82) 52%, rgba(255,255,255,0.62)),
+          linear-gradient(90deg, rgba(255,255,255,0.45), rgba(255,255,255,0.2));
+      }
+      .grid, .grid.three, .stat-grid { grid-template-columns: 1fr; }
+      details.card summary { min-height: 68px; padding: 14px 15px; }
+      .body { padding: 0 15px 15px; }
+      .controls { bottom: 12px; width: calc(100vw - 28px); justify-content: space-between; }
+    }
+  </style>
+</head>
+<body>
+  <main class="deck" aria-live="polite">
+    <section class="slide active" style="--bg:url('https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&w=1800&q=80')">
+      <div class="slide-inner">
+        <p class="kicker">每日全球與科技 AI 新聞</p>
+        <h1>2026-06-30</h1>
+        <p class="subtitle">美伊 Doha 談判說法衝突、Russia 對 Ukraine 城市攻擊、EU-China 貿易磋商、Pakistan-Afghanistan 平民死傷、Venezuela 遣返者失蹤、Europe 熱浪治理壓力，以及 AI 供應鏈與產品入口重排。</p>
+        <div class="meta-row">
+          <span class="pill">研究截點：2026-06-30 08:02:46 Asia/Taipei</span>
+          <span class="pill">24 小時窗：2026-06-29 08:02:46 至 2026-06-30 08:02:46</span>
+          <span class="pill">全球 Top 10 + 科技／AI 7 則</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" style="--bg:url('https://upload.wikimedia.org/wikipedia/commons/9/97/The_Earth_seen_from_Apollo_17.jpg')">
+      <div class="slide-inner">
+        <p class="kicker">研究範圍</p>
+        <h2>本次只收錄截點前 24 小時內的新事件與重大續報</h2>
+        <div class="stat-grid">
+          <details class="card stat">
+            <summary><div class="stat-number">10</div><div class="stat-caption">全球新聞 Top 10</div></summary>
+            <div class="body">
+              <p>全球新聞恰好 10 則，依重要性排序；同一延續主線必須有本視窗內的新談判、攻擊、裁決、救援或傷亡節點。</p>
+              <p class="source source-block"><strong>來源標籤：</strong>製作規則<br><span>wiki/daily/README.md</span></p>
+            </div>
+          </details>
+          <details class="card stat">
+            <summary><div class="stat-number">7</div><div class="stat-caption">科技／AI 產品與平台</div></summary>
+            <div class="body">
+              <p>科技段落另列 7 則，涵蓋晶片、AI 公部門採購、隱私身分、開發者硬體、robotaxi 通路與 AI 評測商業化。</p>
+              <p class="source source-block"><strong>來源標籤：</strong>今日來源筆記<br><span>wiki/daily/2026/06/2026-06-30/source-notes-2026-06-30.md</span></p>
+            </div>
+          </details>
+          <details class="card stat">
+            <summary><div class="stat-number">6</div><div class="stat-caption">全球續報主線</div></summary>
+            <div class="body">
+              <p>續報集中在 Iran/Hormuz、Ukraine、Pakistan-Afghanistan、Venezuela、Europe heatwave 與 Gaza；每則均標出前次捕獲日期與今日新增事實。</p>
+              <p class="source source-block"><strong>來源標籤：</strong>今日來源筆記<br><span>wiki/daily/2026/06/2026-06-30/source-notes-2026-06-30.md</span></p>
+            </div>
+          </details>
+          <details class="card stat">
+            <summary><div class="stat-number">24h</div><div class="stat-caption">Asia/Taipei 固定視窗</div></summary>
+            <div class="body">
+              <p>本次窗口為 2026-06-29 08:02:46 至 2026-06-30 08:02:46（Asia/Taipei）；舊事件只因更新、改標或仍熱門不列入。</p>
+              <p class="source source-block"><strong>來源標籤：</strong>今日來源筆記<br><span>wiki/daily/2026/06/2026-06-30/source-notes-2026-06-30.md</span></p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" style="--bg:url('https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1800&q=80')">
+      <div class="slide-inner">
+        <p class="kicker">1-2｜外交與戰爭壓力</p>
+        <h2>談判不清楚，城市與能源系統繼續承壓</h2>
+        <div class="grid">
+          <details class="card news-card" data-rank="1">
+            <summary>
+              <div class="card-title"><span class="rank">1.</span>續報｜美伊均派團前往 Qatar，但 Tehran 否認與美方直接談判</div>
+              <time class="time" datetime="2026-06-29T08:21:11Z">發佈時間｜2026-06-29 16:21:11（Asia/Taipei）</time>
+            </summary>
+            <div class="body">
+              <span class="label">今日新增</span>
+              <p>在 Bahrain/Kuwait 攻擊與 Gulf 互擊後，美伊都說會派團到 Qatar，但 Trump/White House 與 Pakistan 的 direct talks 說法，遭 Iran senior negotiator 與 Foreign Ministry spokesman 公開否認。雙方代表同赴 Qatar 只能證明臨時協議仍需斡旋，不代表直接談判已經成立。</p>
+              <p><strong>為何重要：</strong>Strait of Hormuz、能源通航、sanctions waiver 與 60 天核談判時鐘都取決於這個 interim deal 能否履約。</p>
+              <p><strong>不確定性：</strong>需等共同聲明、會面紀錄或正式議程確認；目前各方說法互相衝突。</p>
+              <p class="source source-block"><strong>來源標籤：</strong>AP News；The Guardian；Al Jazeera<br><span>https://apnews.com/article/iran-us-war-strait-of-hormuz-june-29-2026-d1c0ec8aa84c0e5693b94f0cf0862bab</span><span>https://www.theguardian.com/world/2026/jun/29/trump-iran-peace-talks-doha</span><span>https://www.aljazeera.com/news/2026/6/29/trump-announces-meeting-with-iran-in-qatar-despite-military-skirmishes</span></p>
+            </div>
+          </details>
+          <details class="card news-card" data-rank="2">
+            <summary>
+              <div class="card-title"><span class="rank">2.</span>續報｜Russia 對 Ukraine 發動飛彈與無人機攻擊，造成至少 12 死、8 區停電</div>
+              <time class="time" datetime="2026-06-29T12:29:33Z">發佈時間｜2026-06-29 20:29:33（Asia/Taipei）</time>
+            </summary>
+            <div class="body">
+              <span class="label">今日新增</span>
+              <p>Russia 週一對 Ukraine 城市與基礎設施發動攻擊，AP 報導至少 12 名平民死亡、40 人受傷。Dnipro、Zaporizhzhia、Sumy、Kharkiv 都出現死傷，Ukrenergo 稱 8 個區域部分用戶停電，而熱天推升冷氣用電需求。</p>
+              <p><strong>為何重要：</strong>前一日焦點是 Ukraine 打擊俄煉油廠與俄國燃料短缺；今日轉回 Ukraine 城市防空、電網韌性與 European anti-ballistic defense 需求。</p>
+              <p><strong>不確定性：</strong>戰時死傷、攔截與基礎設施損害仍可能修正。</p>
+              <p class="source source-block"><strong>來源標籤：</strong>AP News<br><span>https://apnews.com/article/russia-ukraine-war-drone-missile-attacks-putin-70ba832d0e760e08e5d50c5f467d953f</span></p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" style="--bg:url('https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1800&q=80')">
+      <div class="slide-inner">
+        <p class="kicker">3-4｜貿易與邊境安全</p>
+        <h2>大國貿易降溫，南亞邊境升溫</h2>
+        <div class="grid">
+          <details class="card news-card" data-rank="3">
+            <summary>
+              <div class="card-title"><span class="rank">3.</span>EU 與 China 展開三個月貿易談判，試圖避免 3600 億歐元逆差升級</div>
+              <time class="time" datetime="2026-06-29T18:33:00Z">發佈時間｜2026-06-30 02:33:00（Asia/Taipei）</time>
+            </summary>
+            <div class="body">
+              <p>EU 與 China 在 Brussels 同意啟動三個月 trade and investment consultations，這也是雙方七年來首份 joint statement。EU 希望在 10 月 Beijing 會議前拿到具體成果，核心壓力是中國對 EU 出口每天約比 EU 對中國出口多 10 億歐元。</p>
+              <p><strong>為何重要：</strong>這讓先前關稅與配額威脅進入正式磋商，牽動 electric vehicles、green tech、industrial components 與歐洲工業政策。</p>
+              <p><strong>不確定性：</strong>談判啟動不代表 trade war 已解除；補貼、產能與市場准入問題仍可能卡住。</p>
+              <p class="source source-block"><strong>來源標籤：</strong>The Guardian<br><span>https://www.theguardian.com/world/2026/jun/29/eu-sets-up-three-months-of-talks-with-china-over-360bn-trade-deficit</span></p>
+            </div>
+          </details>
+          <details class="card news-card" data-rank="4">
+            <summary>
+              <div class="card-title"><span class="rank">4.</span>續報｜Pakistan 空襲 eastern Afghanistan，Afghan officials 稱 36 名平民死亡</div>
+              <time class="time" datetime="2026-06-29T03:10:00Z">發佈時間｜2026-06-29 11:10:00（Asia/Taipei）</time>
+            </summary>
+            <div class="body">
+              <span class="label">今日新增</span>
+              <p>Afghan officials 稱 Pakistan 在 Paktia、Paktika、Kunar 等東部省份空襲，造成 36 名平民死亡、163 人受傷。Pakistan 說行動鎖定與 Karachi 襲擊有關的 terrorist hideouts；Taliban government 則譴責為侵略。</p>
+              <p><strong>為何重要：</strong>前次只是 Pakistan 宣稱反恐行動擊斃 militants；今日轉成民用住宅與救援人群死傷爭議，升高主權與人道責任風險。</p>
+              <p><strong>不確定性：</strong>目標身分與死傷數字需 UNAMA、地方醫療與第三方查核。</p>
+              <p class="source source-block"><strong>來源標籤：</strong>The Guardian<br><span>https://www.theguardian.com/world/2026/jun/29/pakistan-deadly-airstrikes-afghanistan-border</span></p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" style="--bg:url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1800&q=80')">
+      <div class="slide-inner">
+        <p class="kicker">5-6｜公共安全與災後責任</p>
+        <h2>一邊是福利設施槍擊，一邊是災害中的遣返者失蹤</h2>
+        <div class="grid">
+          <details class="card news-card" data-rank="5">
+            <summary>
+              <div class="card-title"><span class="rank">5.</span>Germany Stade 青年福利設施發生槍擊，6 名成人死亡、2 人被捕</div>
+              <time class="time" datetime="2026-06-29T14:43:00Z">發佈時間｜2026-06-29 22:43:00（Asia/Taipei）</time>
+            </summary>
+            <div class="body">
+              <p>Stade 一處 youth welfare facility 週一下午發生槍擊，4 名女性與 2 名男性死亡，警方逮捕 2 人。警方初步表示沒有公共危險，並傾向排除政治或恐怖主義背景；Reuters 引述德國警方說法，疑似與監護權糾紛有關。</p>
+              <p><strong>為何重要：</strong>地點涉及青年福利與母嬰照護，同時考驗德國槍擊案後的福利機構安全、家庭暴力風險辨識與謠言控管。</p>
+              <p><strong>不確定性：</strong>動機與完整過程仍在調查；早期地方報導曾有不同嫌犯說法。</p>
+              <p class="source source-block"><strong>來源標籤：</strong>The Guardian<br><span>https://www.theguardian.com/world/2026/jun/29/shooter-kills-adults-stade-youth-welfare-facility-germany</span></p>
+            </div>
+          </details>
+          <details class="card news-card" data-rank="6">
+            <summary>
+              <div class="card-title"><span class="rank">6.</span>續報｜100 多名剛遭美國遣返的 Venezuelans 在 La Guaira 飯店倒塌後失蹤</div>
+              <time class="time" datetime="2026-06-29T21:12:19Z">發佈時間｜2026-06-30 05:12:19（Asia/Taipei）</time>
+            </summary>
+            <div class="body">
+              <span class="label">今日新增</span>
+              <p>一班從 Miami 抵達 Venezuela 的 deportation flight 載有 146 名 Venezuelans，抵達後被帶往 La Guaira hotel；地震來襲後，倖存者稱約 20 人逃出，仍有 100 多人下落不明。這把 U.S. immigration enforcement、災害安置與 Venezuela rescue capacity 接在一起。</p>
+              <p><strong>為何重要：</strong>前幾日已收錄地震與救援，本次新事實是遣返者群體被安置在倒塌飯店並失蹤，牽動領事、人道與移民責任。</p>
+              <p><strong>不確定性：</strong>失蹤人數仍需 ICE、Venezuelan authorities、救援隊與家屬名單確認。</p>
+              <p class="source source-block"><strong>來源標籤：</strong>AP News；The Guardian<br><span>https://apnews.com/article/earthquake-venezuela-us-deportees-immigration-hotel-survived-783140c04b418de2308f548402ace9af</span><span>https://www.theguardian.com/world/2026/jun/29/venezuela-hotel-collapse-earthquake</span></p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" style="--bg:url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1800&q=80')">
+      <div class="slide-inner">
+        <p class="kicker">7-8｜氣候治理與制度邊界</p>
+        <h2>死亡登記與央行獨立都在測試制度容量</h2>
+        <div class="grid">
+          <details class="card news-card" data-rank="7">
+            <summary>
+              <div class="card-title"><span class="rank">7.</span>續報｜Europe 熱浪使 Paris mortuaries 超載，France 額外死亡數仍可能上修</div>
+              <time class="time" datetime="2026-06-29T05:06:59Z">發佈時間｜2026-06-29 13:06:59（Asia/Taipei）</time>
+            </summary>
+            <div class="body">
+              <span class="label">今日新增</span>
+              <p>Public Health France 初估熱浪高峰三天至少 1,000 名額外死亡，且隨死亡證明補登可能上修。Paris mortuaries 迅速滿載，市府增設臨時冷藏空間；已登記死亡中 85% 為 65 歲以上，Paris region 居家死亡增加約 40%。</p>
+              <p><strong>為何重要：</strong>熱浪從破紀錄高溫轉成遺體處理、長照與城市冷卻能力問題，是 climate adaptation 的具體治理成本。</p>
+              <p><strong>不確定性：</strong>完整 heat-related mortality 統計可能需數週或數月。</p>
+              <p class="source source-block"><strong>來源標籤：</strong>AP News；The Guardian Europe live<br><span>https://apnews.com/article/france-europe-heat-wave-weather-climate-change-a9095af72d14cfdd9ca43637490083e9</span><span>https://www.theguardian.com/world/live/2026/jun/29/extreme-heat-europe-germany-poland-czechia-hungary-serbia-heatwave-nato-rutte-starmer-eu-latest-news-updates</span></p>
+            </div>
+          </details>
+          <details class="card news-card" data-rank="8">
+            <summary>
+              <div class="card-title"><span class="rank">8.</span>U.S. Supreme Court 擋下 Trump 立即開除 Fed governor Lisa Cook，但支持其他獨立機關解職</div>
+              <time class="time" datetime="2026-06-29T14:24:27Z">發佈時間｜2026-06-29 22:24:27（Asia/Taipei）</time>
+            </summary>
+            <div class="body">
+              <p>Supreme Court 以 5-4 拒絕 Trump administration 立即讓 Fed governor Lisa Cook 離職，暫時保住 Federal Reserve 的 for-cause protection；但同案也支持 Trump 對其他 independent agency officials 的解職權。</p>
+              <p><strong>為何重要：</strong>Fed independence 影響全球美元利率與金融市場，法院同時替央行與其他獨立機關畫出不同界線，會牽動行政權擴張。</p>
+              <p><strong>不確定性：</strong>Cook 主案仍未終局，後續 lower-court litigation 會決定實際範圍。</p>
+              <p class="source source-block"><strong>來源標籤：</strong>AP News<br><span>https://apnews.com/article/supreme-court-executive-power-trump-firing-cook-7b7676e5a066f8df41077a0920b9f334</span></p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" style="--bg:url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=1800&q=80')">
+      <div class="slide-inner">
+        <p class="kicker">9-10｜停火現場與城市攻擊</p>
+        <h2>Gaza 的日常 strike 與 Monaco 的少見爆炸都提醒安全風險分散</h2>
+        <div class="grid">
+          <details class="card news-card" data-rank="9">
+            <summary>
+              <div class="card-title"><span class="rank">9.</span>續報｜Israeli strikes 在 Gaza 造成至少 8 死，包括 2 名兒童</div>
+              <time class="time" datetime="2026-06-29T09:20:43Z">發佈時間｜2026-06-29 17:20:43（Asia/Taipei）</time>
+            </summary>
+            <div class="body">
+              <span class="label">今日新增</span>
+              <p>AP 報導 Israeli strikes 週一在 southern and central Gaza 造成至少 8 人死亡、20 多人受傷。Khan Younis 一起 tent strike 造成 23 歲母親與一歲女兒死亡；Deir al-Balah 的 drone strike 造成至少 3 人死亡，包括 8 歲男孩與其祖父。</p>
+              <p><strong>為何重要：</strong>Gaza ceasefire 多次被記錄為紙面停火，本次新增 strikes 直接擊中 displaced people tents 與兒童安全。</p>
+              <p><strong>不確定性：</strong>Israel military 說部分目標為 militants，但特定事件目標、姓名與是否擊中仍未完整公布。</p>
+              <p class="source source-block"><strong>來源標籤：</strong>AP News；Al Jazeera<br><span>https://apnews.com/article/israel-gaza-airstrike-hamas-civilians-156a754e51d1647add376554bd518f2f</span><span>https://www.aljazeera.com/news/2026/6/29/israeli-attacks-kill-four-men-and-a-boy-in-gaza-and-a-teenager-in-west-bank</span></p>
+            </div>
+          </details>
+          <details class="card news-card" data-rank="10">
+            <summary>
+              <div class="card-title"><span class="rank">10.</span>Monaco 住宅大樓爆炸造成 3 人受傷，當局稱很可能是攻擊並追緝嫌犯</div>
+              <time class="time" datetime="2026-06-29T22:51:00Z">發佈時間｜2026-06-30 06:51:00（Asia/Taipei）</time>
+            </summary>
+            <div class="body">
+              <p>Monaco 週一晚間住宅大樓爆炸，3 人受傷，其中一對夫婦生命垂危。監視器顯示男子在 lobby 放下 backpack 或 package 後往 France 邊境方向逃離。Monaco minister of state 稱事件很可能是攻擊；裝置疑似含 bolts and buckshot。</p>
+              <p><strong>為何重要：</strong>這類攻擊在 Monaco 極少見，若確認，將牽動 Riviera 安全、跨境警務與高資產社群安全風險。</p>
+              <p><strong>不確定性：</strong>動機、嫌犯身分與受害者國籍仍待確認。</p>
+              <p class="source source-block"><strong>來源標籤：</strong>The Guardian<br><span>https://www.theguardian.com/world/2026/jun/29/monaco-explosion-injuries-triggers-police-hunt</span></p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" style="--bg:url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1800&q=80')">
+      <div class="slide-inner">
+        <p class="kicker">科技／AI｜晶片與算力</p>
+        <h2>AI 供應鏈一邊擴產，一邊被出口管制重塑</h2>
+        <div class="grid">
+          <details class="card tech-card">
+            <summary>
+              <div class="card-title">T1. Samsung 與 SK Hynix 宣布 5180 億美元 South Korea 晶片樞紐</div>
+              <time class="time" datetime="2026-06-29T08:27:36Z">發佈時間｜2026-06-29 16:27:36（Asia/Taipei）</time>
+            </summary>
+            <div class="body">
+              <p>Samsung Electronics 與 SK Hynix 將合計投資 800 兆韓元，約 5180 億美元，在 South Korea 西南部建立新的 computer chipmaking hub。兩家公司掌握全球約三分之二 memory chips，此案直接連到 HBM、DRAM、AI server 與半導體區域政策。</p>
+              <p><strong>不確定性：</strong>完工時間、電力／水資源、人才與實際投資節奏未公布。</p>
+              <p class="source source-block"><strong>來源標籤：</strong>AP News<br><span>https://apnews.com/article/korea-samsung-ai-hynix-chips-22352d95c7a821c5f4548b2d1a4ebde8</span></p>
+            </div>
+          </details>
+          <details class="card tech-card">
+            <summary>
+              <div class="card-title">T2. Nvidia 在 China AI chips 銷售受阻，Huawei 等本土晶片商取得主場優勢</div>
+              <time class="time" datetime="2026-06-29T04:39:01Z">發佈時間｜2026-06-29 12:39:01（Asia/Taipei）</time>
+            </summary>
+            <div class="body">
+              <p>AP 報導 Nvidia CEO Jensen Huang 承認 Nvidia 在 China advanced AI chips market 的領先地位受損。U.S. export controls 先阻擋 H200 銷售，等政策稍鬆時，Beijing 已轉向鼓勵 Huawei 等 domestic-designed chips。</p>
+              <p><strong>不確定性：</strong>China market share、替代晶片效能與實際部署規模仍需更多公開數據。</p>
+              <p class="source source-block"><strong>來源標籤：</strong>AP News<br><span>https://apnews.com/article/ai-chips-nvidia-huawei-china-1ae6228c4928ddbb43f984e9b38f49dd</span></p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" style="--bg:url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1800&q=80')">
+      <div class="slide-inner">
+        <p class="kicker">科技／AI｜產品入口</p>
+        <h2>AI 進政府、messaging 重做身分、Codex 試探實體介面</h2>
+        <div class="grid three">
+          <details class="card tech-card">
+            <summary>
+              <div class="card-title">T3. California 與 Anthropic 達成 Claude 採購合作</div>
+              <time class="time" datetime="2026-06-29T18:10:00Z">發佈時間｜2026-06-30 02:10:00（Asia/Taipei）</time>
+            </summary>
+            <div class="body">
+              <p>California 宣布所有 state agencies、cities and counties 可透過 SITeS portal 以 50% 折扣取得 Claude，並含 workforce training、technical assistance 與 workflow input。Claude 也被用於 cyber defense、code scanning、triage and patching 等場景。</p>
+              <p><strong>不確定性：</strong>各機關實際導入、資料保護與稽核方式仍待落地。</p>
+              <p class="source source-block"><strong>來源標籤：</strong>Governor of California；TechCrunch<br><span>https://www.gov.ca.gov/2026/06/29/governor-newsom-announces-a-first-of-its-kind-partnership-providing-anthropic-tools-to-state-agencies-and-improving-services-for-californians/</span><span>https://techcrunch.com/2026/06/29/anthropic-and-gov-newsom-forge-deal-allowing-california-government-to-use-claude-at-half-price/</span></p>
+            </div>
+          </details>
+          <details class="card tech-card">
+            <summary>
+              <div class="card-title">T4. WhatsApp 開放保留 usernames</div>
+              <time class="time" datetime="2026-06-29T16:00:06Z">發佈時間｜2026-06-30 00:00:06（Asia/Taipei）</time>
+            </summary>
+            <div class="body">
+              <p>WhatsApp 官方宣布使用者可在最新版 app 保留 optional username；未來可不用電話號碼被聯絡。AP 指 usernames 不會公開搜尋，對方需知道精確 username；Meta 也會保護高知名度名稱，避免冒名。</p>
+              <p><strong>不確定性：</strong>Reservation 開始，但實際 username messaging 會在 later this year rollout。</p>
+              <p class="source source-block"><strong>來源標籤：</strong>WhatsApp Blog；AP News；TechCrunch<br><span>https://blog.whatsapp.com/its-time-to-reserve-your-whatsapp-username</span><span>https://apnews.com/article/d3f0721b14b40261c1754b1664848417</span><span>https://techcrunch.com/2026/06/29/whatsapp-now-lets-you-reserve-usernames/</span></p>
+            </div>
+          </details>
+          <details class="card tech-card">
+            <summary>
+              <div class="card-title">T5. OpenAI 預告 Codex 專用硬體 shortcut device</div>
+              <time class="time" datetime="2026-06-29T18:52:00Z">發佈時間｜2026-06-30 02:52:00（Asia/Taipei）</time>
+            </summary>
+            <div class="body">
+              <p>OpenAI 在 X 發布 teaser，稱 Codex shortcuts 將升級，7 月 15 日揭曉。The Verge 報導裝置與 Work Louder 合作，可能類似 Creator Micro 2 macro pad，支援 mappable keys、joystick、touch sensor 和 app-specific actions。</p>
+              <p><strong>不確定性：</strong>價格、SDK、shortcut mapping、平台支援與是否量產仍未公布。</p>
+              <p class="source source-block"><strong>來源標籤：</strong>The Verge；9to5Mac<br><span>https://www.theverge.com/ai-artificial-intelligence/959174/openai-codex-hardware-work-louder</span><span>https://9to5mac.com/2026/06/29/openai-teases-codex-branded-hardware-collaboration-coming-heres-what-to-expect/</span></p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" style="--bg:url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1800&q=80')">
+      <div class="slide-inner">
+        <p class="kicker">科技／AI｜平台與評測</p>
+        <h2>Robotaxi 通路分手，AI 評測變成高速營收市場</h2>
+        <div class="grid">
+          <details class="card tech-card">
+            <summary>
+              <div class="card-title">T6. Waymo 與 Uber 結束 Phoenix robotaxi 合作</div>
+              <time class="time" datetime="2026-06-29T18:45:00Z">發佈時間｜2026-06-30 02:45:00（Asia/Taipei）</time>
+            </summary>
+            <div class="body">
+              <p>Waymo robotaxis 已不再出現在 Uber Phoenix ride-hail app；兩家公司確認近三年 Phoenix 合作結束。Uber 稱這是合約終點並準備另一個 AV partnership；Waymo 稱相關車輛已回到 Phoenix 自家 fleet。</p>
+              <p><strong>不確定性：</strong>實際結束可能在 May；Uber 新 partner 未公布，Waymo/Uber 在 Austin、Atlanta 仍合作。</p>
+              <p class="source source-block"><strong>來源標籤：</strong>TechCrunch；Reuters / WTVB<br><span>https://techcrunch.com/2026/06/29/waymo-and-uber-quietly-part-ways-in-phoenix/</span><span>https://wtvbam.com/2026/06/29/uber-waymo-end-robotaxi-partnership-in-phoenix/</span></p>
+            </div>
+          </details>
+          <details class="card tech-card">
+            <summary>
+              <div class="card-title">T7. Arena 宣布 AI evaluation 商業服務 8 個月達 1 億美元 annualized run-rate</div>
+              <time class="time" datetime="2026-06-29T17:39:00Z">發佈時間｜2026-06-30 01:39:00（Asia/Taipei）</time>
+            </summary>
+            <div class="body">
+              <p>Arena 官方宣布 enterprise offering 上線 8 個月後 annualized revenue run rate 跨過 1 億美元；平台有 700M+ conversations、82M+ votes、10M+ monthly visitors。Agent Mode 每月已超過 5M turns，週增 10%。</p>
+              <p><strong>不確定性：</strong>Arena 稱 ARR，但 CEO 向 TechCrunch 說明客戶按 consumption 收費，不完全等同傳統 SaaS recurring revenue。</p>
+              <p class="source source-block"><strong>來源標籤：</strong>Arena；TechCrunch<br><span>https://arena.ai/blog/arena-100m-revenue/</span><span>https://techcrunch.com/2026/06/29/arena-the-ai-leaderboard-everyone-uses-is-now-a-100m-business/</span></p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" style="--bg:url('https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&w=1800&q=80')">
+      <div class="slide-inner">
+        <p class="kicker">綜合判讀</p>
+        <h2>今日不是單一危機，而是履約、救援與產品入口的壓力測試</h2>
+        <div class="grid three">
+          <details class="card">
+            <summary><div class="card-title">協議不等於執行</div></summary>
+            <div class="body">
+              <p>美伊 Doha/Qatar、EU-China trade talks、Pakistan-Afghanistan strike claims 與 Gaza ceasefire 都顯示，沒有共同文本、第三方驗證或可執行機制時，政治宣布會很快被現場事件反噬。</p>
+              <p class="source source-block"><strong>來源標籤：</strong>今日日報綜合判讀<br><span>wiki/daily/2026/06/2026-06-30/daily-news-2026-06-30.md</span></p>
+            </div>
+          </details>
+          <details class="card">
+            <summary><div class="card-title">災害成本轉為治理容量</div></summary>
+            <div class="body">
+              <p>Venezuela 地震牽出 deportees missing；Europe heatwave 牽出 mortuary overflow、elderly care、home deaths 與城市冷卻能力。災害已不只是自然事件，而是政府與基礎設施能否承接後果。</p>
+              <p class="source source-block"><strong>來源標籤：</strong>今日日報綜合判讀<br><span>wiki/daily/2026/06/2026-06-30/daily-news-2026-06-30.md</span></p>
+            </div>
+          </details>
+          <details class="card">
+            <summary><div class="card-title">AI 產品化進入供應鏈、採購與介面層</div></summary>
+            <div class="body">
+              <p>South Korea chip hub、Nvidia/Huawei、Claude in California、WhatsApp usernames、Codex hardware、Waymo/Uber 與 Arena 都顯示，模型之外的晶片、政府入口、身分設計、硬體控制器、通路與評測才是今日 AI 落地的核心。</p>
+              <p class="source source-block"><strong>來源標籤：</strong>今日日報綜合判讀<br><span>wiki/daily/2026/06/2026-06-30/daily-news-2026-06-30.md</span></p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" style="--bg:url('https://upload.wikimedia.org/wikipedia/commons/9/97/The_Earth_seen_from_Apollo_17.jpg')">
+      <div class="slide-inner">
+        <p class="kicker">後續追蹤</p>
+        <h2>接下來 24-72 小時最值得查證的節點</h2>
+        <div class="grid three">
+          <details class="card">
+            <summary><div class="card-title">Doha 是否出現美伊直接會面</div></summary>
+            <div class="body">
+              <p>觀察共同聲明、會面照片、議程、凍結資產安排、Hormuz 通航與 interim deal 履約清單，而不是只看單方社群貼文。</p>
+              <p class="source source-block"><strong>來源標籤：</strong>今日後續追蹤<br><span>wiki/daily/2026/06/2026-06-30/daily-news-2026-06-30.md</span></p>
+            </div>
+          </details>
+          <details class="card">
+            <summary><div class="card-title">Ukraine 電網與 Europe 防空支援</div></summary>
+            <div class="body">
+              <p>Russia strikes 在熱浪期間造成停電，下一步要看 Ukraine 是否獲得更多 anti-ballistic defense、grid repair support 與 European missile production commitments。</p>
+              <p class="source source-block"><strong>來源標籤：</strong>今日後續追蹤<br><span>wiki/daily/2026/06/2026-06-30/daily-news-2026-06-30.md</span></p>
+            </div>
+          </details>
+          <details class="card">
+            <summary><div class="card-title">Pakistan-Afghanistan 是否進入第三方調查</div></summary>
+            <div class="body">
+              <p>36 名平民死亡說法若進入 UNAMA 或其他第三方調查，會改變 Islamabad 反恐論述與 Taliban government 對邊境安全的外交回應。</p>
+              <p class="source source-block"><strong>來源標籤：</strong>今日後續追蹤<br><span>wiki/daily/2026/06/2026-06-30/daily-news-2026-06-30.md</span></p>
+            </div>
+          </details>
+          <details class="card">
+            <summary><div class="card-title">Venezuela deportees 名單確認</div></summary>
+            <div class="body">
+              <p>需要 U.S. ICE、Venezuelan authorities、Human Rights First、救援隊與家屬名單交叉確認，判斷 146 名遣返者中失蹤與生還者的真實人數。</p>
+              <p class="source source-block"><strong>來源標籤：</strong>今日後續追蹤<br><span>wiki/daily/2026/06/2026-06-30/daily-news-2026-06-30.md</span></p>
+            </div>
+          </details>
+          <details class="card">
+            <summary><div class="card-title">France heatwave 死亡是否上修</div></summary>
+            <div class="body">
+              <p>Public Health France 已警告初估會上修；需要追蹤居家死亡、長照設施、mortuary capacity 與其他 European countries 的死亡統計。</p>
+              <p class="source source-block"><strong>來源標籤：</strong>今日後續追蹤<br><span>wiki/daily/2026/06/2026-06-30/daily-news-2026-06-30.md</span></p>
+            </div>
+          </details>
+          <details class="card">
+            <summary><div class="card-title">AI 採購、身分與硬體入口能否普及</div></summary>
+            <div class="body">
+              <p>California Claude、WhatsApp usernames 與 Codex hardware 都是入口變更；接下來要看 procurement controls、privacy defaults、developer SDK 與實際 rollout 地區。</p>
+              <p class="source source-block"><strong>來源標籤：</strong>今日後續追蹤<br><span>wiki/daily/2026/06/2026-06-30/daily-news-2026-06-30.md</span></p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" style="--bg:url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1800&q=80')">
+      <div class="slide-inner">
+        <p class="kicker">來源與影像</p>
+        <h2>來源索引與背景圖授權註記</h2>
+        <div class="grid">
+          <details class="card">
+            <summary><div class="card-title">主要新聞來源</div></summary>
+            <div class="body">
+              <p>本日新聞來源包含 AP News、The Guardian、Al Jazeera、TechCrunch、The Verge、WhatsApp Blog、Governor of California、Arena、Reuters/WTVB。每張新聞卡已在展開內容底部保留完整原始 URL。</p>
+              <p class="source source-block"><strong>來源標籤：</strong>今日來源筆記<br><span>wiki/daily/2026/06/2026-06-30/source-notes-2026-06-30.md</span></p>
+            </div>
+          </details>
+          <details class="card">
+            <summary><div class="card-title">背景圖片來源</div></summary>
+            <div class="body">
+              <p>封面與多數章節使用 Unsplash 遠端圖片；研究範圍與後續追蹤使用 NASA public domain Earth image via Wikimedia Commons。圖片作為主題背景，新聞事實仍以各卡來源為準。</p>
+              <p class="source source-block"><strong>來源標籤：</strong>背景圖 URL<br><span>https://images.unsplash.com/photo-1504711434969-e33886168f5c</span><span>https://upload.wikimedia.org/wikipedia/commons/9/97/The_Earth_seen_from_Apollo_17.jpg</span><span>https://images.unsplash.com/photo-1521737711867-e3b97375f902</span><span>https://images.unsplash.com/photo-1581092160607-ee22621dd758</span><span>https://images.unsplash.com/photo-1500530855697-b586d89ba3ee</span><span>https://images.unsplash.com/photo-1589829545856-d10d557cf95f</span><span>https://images.unsplash.com/photo-1518770660439-4636190af475</span><span>https://images.unsplash.com/photo-1516321318423-f06f85e504b3</span><span>https://images.unsplash.com/photo-1497366754035-f200968a6e72</span></p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <nav class="controls" aria-label="投影片導覽">
+    <button id="prev" type="button" aria-label="上一張">←</button>
+    <span class="counter" id="counter">1 / 13</span>
+    <button id="next" type="button" aria-label="下一張">→</button>
+  </nav>
+  <div class="progress" id="progress"></div>
+
+  <script>
+    const slides = Array.from(document.querySelectorAll('.slide'));
+    const prevBtn = document.getElementById('prev');
+    const nextBtn = document.getElementById('next');
+    const counter = document.getElementById('counter');
+    const progress = document.getElementById('progress');
+    let current = 0;
+
+    function showSlide(index) {
+      current = Math.max(0, Math.min(index, slides.length - 1));
+      slides.forEach((slide, i) => {
+        slide.classList.toggle('active', i === current);
+        if (i !== current) slide.scrollTop = 0;
+      });
+      prevBtn.disabled = current === 0;
+      nextBtn.disabled = current === slides.length - 1;
+      counter.textContent = `${current + 1} / ${slides.length}`;
+      progress.style.width = `${((current + 1) / slides.length) * 100}%`;
+      history.replaceState(null, '', `#slide-${current + 1}`);
+    }
+
+    prevBtn.addEventListener('click', () => showSlide(current - 1));
+    nextBtn.addEventListener('click', () => showSlide(current + 1));
+
+    document.addEventListener('keydown', (event) => {
+      if (event.target && ['INPUT', 'TEXTAREA', 'SELECT'].includes(event.target.tagName)) return;
+      if (event.key === 'ArrowRight' || event.key === 'PageDown' || event.key === ' ') {
+        event.preventDefault();
+        showSlide(current + 1);
+      }
+      if (event.key === 'ArrowLeft' || event.key === 'PageUp') {
+        event.preventDefault();
+        showSlide(current - 1);
+      }
+      if (event.key === 'Home') {
+        event.preventDefault();
+        showSlide(0);
+      }
+      if (event.key === 'End') {
+        event.preventDefault();
+        showSlide(slides.length - 1);
+      }
+    });
+
+    const hashMatch = location.hash.match(/slide-(\d+)/);
+    if (hashMatch) {
+      showSlide(Number(hashMatch[1]) - 1);
+    } else {
+      showSlide(0);
+    }
+  </script>
+</body>
+</html>

@@ -2,7 +2,7 @@
 title: "Knowledge Base Index"
 type: overview
 created: 2026-05-24
-updated: 2026-06-29
+updated: 2026-06-30
 status: seed
 tags: [index]
 sources: []
@@ -26,6 +26,8 @@ sources: []
 
 - [每日全球與科技 AI 新聞產製規則](daily/README.md) - 包含研究截點前 24 小時限制、跨日去重、重大續報判定、來源紀錄與發布驗證規則。
 
+- [2026-06-30 Daily News](daily/2026/06/2026-06-30/daily-news-2026-06-30.md) - 今日主軸是談判與供應鏈控制：美伊代表同赴 Qatar 但是否直接會談出現公開矛盾；Russia 對 Ukraine 城市與電力系統反擊造成至少 12 死；EU 與 China 啟動三個月貿易談判；Pakistan 空襲 Afghanistan 的平民傷亡指控、Germany Stade 槍擊、Venezuela 遣返者失蹤、France 熱浪、U.S. Supreme Court executive-power ruling、Gaza strikes 與 Monaco explosion 補足全球風險。科技／AI 聚焦 Samsung / SK Hynix South Korea AI chip hub、Nvidia 在中國面對 Huawei 替代、California 採購 Anthropic Claude、WhatsApp usernames、OpenAI Codex hardware teaser、Waymo / Uber Phoenix 分手與 Arena revenue run-rate。
+- [2026-06-30 Slides](daily/2026/06/2026-06-30/slides-2026-06-30.html) - 今日新聞網頁版投影片。
 - [2026-06-29 Daily News](daily/2026/06/2026-06-29/daily-news-2026-06-29.md) - 今日主軸是協議壓力與基礎設施瓶頸：Iran 攻擊 Bahrain/Kuwait，美伊臨時協議再次受測；Ukraine 再擊俄羅斯煉油廠且 Putin 承認燃料短缺；France 熱浪額外死亡約 1,000 人；Pakistan 沿 Afghan 邊境行動擊斃 29 人；Venezuela 地震四日後仍救出倖存者。Saudi Aramco 直升機事故、Israel/Lebanon/Syria/Hezbollah 壓力、Argentina 貪腐辭職、Israel Armenian genocide recognition、Uganda 媒體關閉補足全球議程。科技／AI 聚焦 Firmus/NVIDIA Batam AI Factory、Google 對 Meta 的 Gemini 容量限制、Ford AI 品質回補、Micron 記憶體荒、Kunlunxin IPO 與 NPCI UPI AI roadmap。
 - [2026-06-29 Slides](daily/2026/06/2026-06-29/slides-2026-06-29.html) - 今日新聞網頁版投影片。
 - [2026-06-24 Daily News](daily/2026/06/2026-06-24/daily-news-2026-06-24.md) - 今日主軸是協議履約進入驗證：美伊對 UN / IAEA 核查說法公開衝突，美國參議院首次通過 Iran war powers resolution；歐洲熱浪創 44.3°C 並造成公共安全壓力，Ukraine 打擊 Crimea railway bridge，UN inquiry 將 Gaza children targeting 連到 genocide 指控。市場因 AI infrastructure debt 與利率憂慮回檔，EU/Taliban、Alibaba lawsuit、Peru recognition crisis 與 South Africa anti-migrant violence 補足制度與地緣風險。科技／AI 聚焦 Claude Tag、Copilot BYOK / CLI GA、Meta Glasses、Azure Observability、Chrome / Wallet autofill、YouTube Gemini tools、Google financial verification 與 disaster AI。
