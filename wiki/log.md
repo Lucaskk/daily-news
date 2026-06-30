@@ -6,6 +6,8 @@
 - Recorded the exact Asia/Taipei 24-hour window, per-item event or publication-time basis, six global continuations and duplicate / out-of-window exclusions in `source-notes-2026-06-30.md`.
 - Created `slides-2026-06-30.html` as a standalone HTML deck with thematic backgrounds, keyboard/browser navigation and expandable cards ending with complete source URLs.
 - Updated `wiki/daily/latest-slides.html`, `wiki/index.md`, `wiki/overview.md`, and the root Pages entry timestamp.
+- Published the scoped daily-news commit to `main` and verified the dated deck plus cache-busted latest redirect on GitHub Pages.
+- LINE delivery was skipped because `.env` did not contain `LINE_TO_ID`.
 
 ## [2026-06-29] ingest | Daily global and tech AI news
 
