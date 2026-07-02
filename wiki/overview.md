@@ -2,7 +2,7 @@
 title: "Overview"
 type: overview
 created: 2026-05-24
-updated: 2026-06-30
+updated: 2026-07-02
 status: seed
 tags: [overview]
 sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
@@ -30,6 +30,10 @@ sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
 
 ## Latest Daily News
 
+- [2026-07-02 Daily News](daily/2026/07/2026-07-02/daily-news-2026-07-02.md) - 今日主軸是「執行節點與平台控制權」：U.S.-Iran Qatar talks 從條件交換走到 positive progress and agreement to continue；Ukraine drone pressure 對 Russia fuel system 的效果被 AP 量化為二十多年來最低 crude processing 和顯著 gasoline output drop。AP 對 Minab 小學空襲的重建、USMCA 不續約、Trump crypto income disclosure、Afghanistan / Pakistan cross-border drones and airstrikes、SSPX 祝聖主教、global hottest June oceans、Romania storm 和 Qatar gifted Air Force One first flight，顯示責任、制度與基礎設施都在進入可驗證階段。科技／AI 則把控制權放在網路與工具鏈層：Cloudflare AI crawler compensation、Anthropic Fable 5 / Mythos 5 redeployment、Gemini Spark macOS、本機檔案與 MCP、GitHub Copilot vision / Kimi / Models retirement / governance controls，以及 Together AI、Venice AI、NVIDIA Build in America 的資本和供應鏈訊號。
+- [2026-07-02 Slides](daily/2026/07/2026-07-02/slides-2026-07-02.html) - 今日新聞網頁版投影片。
+- [2026-07-01 Daily News](daily/2026/07/2026-07-01/daily-news-2026-07-01.md) - 今日主軸是「制度邊界與 AI 交付面」：U.S. Supreme Court 駁回 Trump 出生公民權限制，同日也推翻政黨協調支出限制並支持州級跨性別運動員禁令；U.S.-Iran Qatar talks 從是否會面推進到 60 億美元凍結資產、sanctions sequencing 與 Hormuz 通航條件。Monaco 爆炸續報、UK 200 億美元防務投資、Spain 約 100 萬移民合法化申請、Pakistan 補習中心倒塌、South Africa 排外暴力、Nigeria 學校擄人與 Ghana / Ivory Coast 洪水，顯示法院、行政、警力、建築監管與災害救援都進入執行壓力測試。科技／AI 從模型本身延伸到交付層：Claude Sonnet 5、Claude Science、Google Nano Banana 2 Lite / Gemini Omni Flash、Amazon FDE、X MCP、Proton Lumo、Etched、OpenClaw 與 Acti 都在爭奪成本、工作流、連接協定、隱私與手機入口。
+- [2026-07-01 Slides](daily/2026/07/2026-07-01/slides-2026-07-01.html) - 今日新聞網頁版投影片。
 - [2026-06-30 Daily News](daily/2026/06/2026-06-30/daily-news-2026-06-30.md) - 今日主軸是「談判訊號與供應鏈控制」：美伊雙方都派代表到 Qatar，但 Trump 的 direct meeting 說法與 Tehran 否認直接談判相衝突；Russia 對 Ukraine 城市與電力系統反擊造成至少 12 死，將前一日煉油廠壓力轉回民生韌性。EU-China 以三個月 talks 處理 3600 億歐元貿易赤字，Pakistan-Afghanistan、Germany Stade shooting、Venezuela deportees missing、France heatwave、Fed independence ruling、Gaza strikes 與 Monaco explosion 補足安全、司法與公共基礎設施壓力。科技／AI 顯示 AI 競爭從模型能力轉向算力、通路與政府採購：Samsung / SK Hynix 5180 億美元晶片樞紐、Nvidia-Huawei China shift、California-Anthropic Claude deal、WhatsApp usernames、OpenAI Codex hardware teaser、Waymo/Uber Phoenix split 與 Arena revenue run-rate。
 - [2026-06-30 Slides](daily/2026/06/2026-06-30/slides-2026-06-30.html) - 今日新聞網頁版投影片。
 - [2026-06-29 Daily News](daily/2026/06/2026-06-29/daily-news-2026-06-29.md) - 今日主軸是「協議壓力與基礎設施瓶頸」：Iran 攻擊 Bahrain/Kuwait 讓美伊臨時協議再次受測，Ukraine 再擊俄羅斯煉油廠且 Putin 承認燃料短缺，France 熱浪額外死亡約 1,000 人，Pakistan 沿 Afghan 邊境行動稱擊斃 29 人，Venezuela 地震四日後仍救出父子。Saudi Aramco 直升機事故、Israel/Lebanon/Syria/Hezbollah 壓力、Argentina 貪腐辭職、Israel Armenian genocide recognition 與 Uganda 媒體關閉補足治理與外交風險。科技／AI 則顯示產品交付的硬限制：Firmus/NVIDIA Batam AI Factory、Google 對 Meta 的 Gemini 容量限制、Ford AI 品質回補、Micron 記憶體荒、Kunlunxin IPO 與 NPCI UPI AI roadmap。

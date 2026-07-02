@@ -1,5 +1,22 @@
 # Knowledge Base Log
 
+## [2026-07-02] ingest | Daily global and tech AI news
+
+- Created `wiki/daily/2026/07/2026-07-02/daily-news-2026-07-02.md` with exactly 10 global items and 10 technology / AI product and platform items.
+- Recorded the exact Asia/Taipei 24-hour window, per-item event or publication-time basis, six continuations and excluded duplicate or lower-priority candidates in `source-notes-2026-07-02.md`.
+- Created `slides-2026-07-02.html` as a standalone HTML deck with topical backgrounds, keyboard/browser navigation and expandable cards ending with complete source URLs.
+- Updated `wiki/daily/latest-slides.html`, `wiki/index.md`, `wiki/overview.md`, and the root Pages entry timestamp.
+- Published from a clean latest-main worktree after the first unauthenticated HTTPS push failed.
+
+## [2026-07-01] ingest | Daily global and tech AI news
+
+- Created `wiki/daily/2026/07/2026-07-01/daily-news-2026-07-01.md` with exactly 10 global items and nine technology / AI product and platform items.
+- Recorded the exact Asia/Taipei 24-hour window, per-item event or publication-time basis, three material continuations and excluded duplicate or lower-priority candidates in `source-notes-2026-07-01.md`.
+- Created `slides-2026-07-01.html` as a standalone HTML deck with topical backgrounds, keyboard/browser navigation and expandable cards ending with complete source URLs.
+- Updated `wiki/daily/latest-slides.html`, `wiki/index.md`, `wiki/overview.md`, and the root Pages entry timestamp.
+- Published the required daily-news files to `main` through the GitHub connector after local HTTPS push authentication failed.
+- LINE delivery was skipped because `.env` did not contain `LINE_TO_ID`.
+
 ## [2026-06-30] ingest | Daily global and tech AI news
 
 - Created `wiki/daily/2026/06/2026-06-30/daily-news-2026-06-30.md` with exactly 10 global items and seven technology / AI product and platform items.

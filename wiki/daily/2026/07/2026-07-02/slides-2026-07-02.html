@@ -1,0 +1,476 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>2026-07-02 每日全球與科技 AI 新聞</title>
+  <!--
+    Image sources:
+    - Title / newsroom: Unsplash, https://images.unsplash.com/photo-1495020689067-958852a7765e
+    - Research / archive: Unsplash, https://images.unsplash.com/photo-1497366754035-f200968a6e72
+    - Diplomacy: Unsplash, https://images.unsplash.com/photo-1521737711867-e3b97375f902
+    - Energy / industry: Unsplash, https://images.unsplash.com/photo-1516937941344-00b4e0337589
+    - Trade / cargo: Unsplash, https://images.unsplash.com/photo-1494412651409-8963ce7935a7
+    - Security / border: Unsplash, https://images.unsplash.com/photo-1500530855697-b586d89ba3ee
+    - Ocean / climate: Unsplash, https://images.unsplash.com/photo-1507525428034-b723cf961d3e
+    - Technology / circuit: Unsplash, https://images.unsplash.com/photo-1518770660439-4636190af475
+    - Code / desktop: Unsplash, https://images.unsplash.com/photo-1516321318423-f06f85e504b3
+    - Data center: Unsplash, https://images.unsplash.com/photo-1558494949-ef010cbdcc31
+    - Sources / library: Unsplash, https://images.unsplash.com/photo-1481627834876-b7833e8f5570
+  -->
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #142033;
+      --muted: #536273;
+      --panel: rgba(255, 255, 255, 0.93);
+      --panel-strong: rgba(255, 255, 255, 0.98);
+      --line: rgba(20, 32, 51, 0.16);
+      --accent: #0f766e;
+      --accent-2: #a15c20;
+      --danger: #b42318;
+      --shadow: 0 20px 70px rgba(7, 12, 20, 0.22);
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; min-height: 100%; }
+    body {
+      background: #111827;
+      color: var(--ink);
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC", sans-serif;
+      overflow: hidden;
+    }
+    a { color: #0f766e; overflow-wrap: anywhere; }
+    .deck { position: relative; width: 100vw; height: 100vh; overflow: hidden; }
+    .slide {
+      position: absolute;
+      inset: 0;
+      display: none;
+      padding: clamp(18px, 3vw, 44px);
+      overflow-y: auto;
+      background-image: var(--bg);
+      background-size: cover;
+      background-position: center;
+    }
+    .slide.active { display: block; }
+    .slide::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background:
+        linear-gradient(90deg, rgba(255,255,255,0.97), rgba(255,255,255,0.78) 54%, rgba(255,255,255,0.36)),
+        linear-gradient(180deg, rgba(255,255,255,0.25), rgba(255,255,255,0.08));
+    }
+    .slide > * { position: relative; z-index: 1; }
+    .slide-inner { max-width: 1180px; margin: 0 auto; padding-bottom: 88px; }
+    .kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin: 0 0 12px;
+      color: var(--accent);
+      font-weight: 850;
+      letter-spacing: 0;
+      font-size: clamp(13px, 1.4vw, 16px);
+    }
+    .kicker::before {
+      content: "";
+      width: 28px;
+      height: 3px;
+      background: currentColor;
+      border-radius: 999px;
+    }
+    h1, h2 {
+      margin: 0;
+      max-width: 1000px;
+      line-height: 1.05;
+      letter-spacing: 0;
+      color: #111827;
+      text-wrap: balance;
+    }
+    h1 { font-size: clamp(40px, 7vw, 86px); }
+    h2 { font-size: clamp(30px, 5vw, 58px); }
+    .subtitle {
+      max-width: 940px;
+      margin: 18px 0 0;
+      color: #27364a;
+      font-size: clamp(17px, 2.1vw, 25px);
+      line-height: 1.55;
+      text-shadow: 0 1px 18px rgba(255,255,255,0.8);
+    }
+    .meta-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
+    .pill {
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.88);
+      border-radius: 999px;
+      padding: 8px 12px;
+      color: #243244;
+      font-weight: 750;
+      font-size: 13px;
+    }
+    .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; margin-top: 24px; }
+    .grid.three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    details.card {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--panel);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+    details.card summary {
+      cursor: pointer;
+      list-style: none;
+      padding: 16px 18px;
+      min-height: 82px;
+      display: grid;
+      gap: 8px;
+      position: relative;
+    }
+    details.card summary::-webkit-details-marker { display: none; }
+    details.card summary::after {
+      content: "+";
+      position: absolute;
+      right: 18px;
+      top: 14px;
+      width: 28px;
+      height: 28px;
+      display: grid;
+      place-items: center;
+      border-radius: 999px;
+      background: #0f766e;
+      color: #fff;
+      font-size: 20px;
+      line-height: 1;
+    }
+    details.card[open] summary::after { content: "-"; }
+    .card-title {
+      padding-right: 38px;
+      font-weight: 850;
+      font-size: clamp(17px, 1.9vw, 22px);
+      line-height: 1.25;
+      color: #101828;
+    }
+    .card-title .rank { color: var(--accent-2); margin-right: 6px; font-variant-numeric: tabular-nums; }
+    .time { color: var(--muted); font-size: 13px; font-weight: 750; }
+    .body { padding: 0 18px 18px; color: #27364a; line-height: 1.7; font-size: 15px; }
+    .body p { margin: 10px 0; }
+    .body ul { margin: 10px 0 0 18px; padding: 0; }
+    .body li { margin: 6px 0; }
+    .label {
+      display: inline-flex;
+      width: fit-content;
+      padding: 3px 8px;
+      border-radius: 999px;
+      background: rgba(15, 118, 110, 0.12);
+      color: var(--accent);
+      font-weight: 850;
+      font-size: 12px;
+    }
+    .source {
+      margin-top: 14px;
+      padding-top: 10px;
+      border-top: 1px solid var(--line);
+      color: #3b485b;
+      font-size: 13px;
+    }
+    .source span { display: block; margin-top: 4px; overflow-wrap: anywhere; color: #526172; }
+    .stat-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin-top: 24px; }
+    .stat summary { min-height: 118px; }
+    .stat-number { font-size: clamp(30px, 4vw, 48px); line-height: 1; color: var(--accent-2); font-weight: 900; }
+    .stat-label { color: #27364a; font-weight: 750; line-height: 1.35; }
+    .nav {
+      position: fixed;
+      z-index: 3;
+      left: 50%;
+      bottom: 18px;
+      transform: translateX(-50%);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 10px;
+      border: 1px solid rgba(255,255,255,0.5);
+      border-radius: 999px;
+      background: rgba(14, 23, 35, 0.88);
+      color: #fff;
+      box-shadow: 0 16px 48px rgba(0,0,0,0.28);
+    }
+    .nav button {
+      border: 0;
+      border-radius: 999px;
+      width: 38px;
+      height: 34px;
+      background: rgba(255,255,255,0.14);
+      color: #fff;
+      font-size: 18px;
+      cursor: pointer;
+    }
+    .nav button:hover { background: rgba(255,255,255,0.24); }
+    .counter { min-width: 72px; text-align: center; font-size: 13px; font-weight: 750; }
+    @media (max-width: 820px) {
+      body { overflow: auto; }
+      .deck { height: 100svh; }
+      .slide { padding: 18px 14px 78px; }
+      .slide::before {
+        background:
+          linear-gradient(180deg, rgba(255,255,255,0.96), rgba(255,255,255,0.82) 58%, rgba(255,255,255,0.48)),
+          linear-gradient(90deg, rgba(255,255,255,0.74), rgba(255,255,255,0.34));
+      }
+      .grid, .grid.three, .stat-grid { grid-template-columns: 1fr; }
+      details.card summary { min-height: 74px; }
+      .nav { bottom: 10px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="deck" aria-live="polite">
+    <section class="slide active" style="--bg:url('https://images.unsplash.com/photo-1495020689067-958852a7765e?auto=format&fit=crop&w=1800&q=80')">
+      <div class="slide-inner">
+        <p class="kicker">每日全球與科技 AI 新聞</p>
+        <h1>執行節點與平台控制權</h1>
+        <p class="subtitle">2026-07-02 研究截點：08:01:50（Asia/Taipei）。本 deck 收錄過去 24 小時內首次可靠發布或發生的 10 則全球新聞與 10 則科技／AI 產品新聞。</p>
+        <div class="meta-row">
+          <span class="pill">窗口：2026-07-01 08:01:50 - 2026-07-02 08:01:50</span>
+          <span class="pill">全球 Top 10 恰好 10 則</span>
+          <span class="pill">科技／AI 另列 10 則</span>
+          <span class="pill">每張卡片可展開並附完整來源 URL</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" style="--bg:url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1800&q=80')">
+      <div class="slide-inner">
+        <p class="kicker">研究範圍</p>
+        <h2>只收 24 小時內的新事件或重大續報</h2>
+        <p class="subtitle">所有 prior daily reports 與 source notes 已搜尋；不把舊事件的更新、重發或改標題當成新新聞。</p>
+        <div class="stat-grid">
+          <details class="card stat" data-kind="stat">
+            <summary><span class="stat-number">24h</span><span class="stat-label">研究窗口，Asia/Taipei 換算</span></summary>
+            <div class="body"><p>截點為 2026-07-02 08:01:50（Asia/Taipei），合格窗口是 2026-07-01 08:01:50 至 2026-07-02 08:01:50；UTC 為 2026-07-01T00:01:50Z 至 2026-07-02T00:01:50Z。</p><div class="source"><strong>來源｜每日產製規則與本日來源筆記</strong><span>https://lucaskk.github.io/daily-news/wiki/daily/README.md</span><span>https://lucaskk.github.io/daily-news/wiki/daily/2026/07/2026-07-02/source-notes-2026-07-02.md</span></div></div>
+          </details>
+          <details class="card stat" data-kind="stat">
+            <summary><span class="stat-number">10</span><span class="stat-label">全球／國際新聞項目</span></summary>
+            <div class="body"><p>全球段落固定 10 則，依顯著度、跨媒體討論度、制度影響與事件新鮮度排序。續報只有在有新談判程序、可驗證數字或跨境攻擊節點時才保留。</p><div class="source"><strong>來源｜本日來源筆記</strong><span>https://lucaskk.github.io/daily-news/wiki/daily/2026/07/2026-07-02/source-notes-2026-07-02.md</span></div></div>
+          </details>
+          <details class="card stat" data-kind="stat">
+            <summary><span class="stat-number">10</span><span class="stat-label">科技／AI 產品與平台新聞</span></summary>
+            <div class="body"><p>科技段落優先官方發布與具時間戳的 tech outlet 報導，聚焦 AI crawler 付費、模型恢復、桌面 agent、Copilot 多模態與治理、AI infrastructure 融資和供應鏈。</p><div class="source"><strong>來源｜本日來源筆記</strong><span>https://lucaskk.github.io/daily-news/wiki/daily/2026/07/2026-07-02/source-notes-2026-07-02.md</span></div></div>
+          </details>
+          <details class="card stat" data-kind="stat">
+            <summary><span class="stat-number">6</span><span class="stat-label">重大續報或材料延伸</span></summary>
+            <div class="body"><p>本日續報集中在 U.S.-Iran、Russia fuel crisis、Afghanistan / Pakistan、Anthropic、Gemini Spark 與 GitHub Models；每則都註明前次收錄日期與今日新增事實。</p><div class="source"><strong>來源｜去重與續報紀錄</strong><span>https://lucaskk.github.io/daily-news/wiki/daily/2026/07/2026-07-02/source-notes-2026-07-02.md</span></div></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" style="--bg:url('https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1800&q=80')">
+      <div class="slide-inner">
+        <p class="kicker">全球 1-2｜外交與能源戰</p>
+        <h2>談判往前走，燃料壓力被量化</h2>
+        <div class="grid">
+          <details class="card" data-kind="global">
+            <summary><span class="card-title"><span class="rank">1.</span>續報｜U.S.-Iran Qatar 會談取得正面進展，雙方同意續談但仍不直接接觸</span><span class="time">發佈時間｜<time datetime="2026-07-01T08:19:31Z">2026-07-01 16:19:31（Asia/Taipei）</time></span></summary>
+            <div class="body"><span class="label">重大續報</span><p>2026-07-01 已收錄 U.S.-Iran Qatar 管道推進到凍結資產與 Hormuz 條件。今日 AP 報導雙方實際在 Qatar 透過調停者分別會談，Qatar 稱取得 positive progress 並同意續談。新事實是危機處理從條件交換進入下一輪外交程序，但雙方仍沒有直接接觸。</p><p>影響焦點在 Strait of Hormuz、Lebanon armed groups、sanctions 和被凍結資產是否能形成可執行機制。</p><div class="source"><strong>來源｜AP News</strong><span>https://apnews.com/article/iran-us-war-strait-of-hormuz-july-1-2026-de0729197bc7b9d3ee9e543d94c18fbe</span></div></div>
+          </details>
+          <details class="card" data-kind="global">
+            <summary><span class="card-title"><span class="rank">2.</span>續報｜Ukraine 無人機造成 Russia 夏季燃料危機，AP 新統計顯示煉油量創 20 多年低點</span><span class="time">發佈時間｜<time datetime="2026-07-01T04:01:51Z">2026-07-01 12:01:51（Asia/Taipei）</time></span></summary>
+            <div class="body"><span class="label">重大續報</span><p>2026-06-29 已收錄 Ukraine 打擊俄羅斯煉油廠與 Putin 承認燃料短缺。今日 AP 以統計量化戰略效果：Russia 6 月 crude processing 年減 25% 至每日 395 萬桶，為二十多年來最低；gasoline production 年減 17%，約三分之一 refining capacity 離線。</p><p>官方把短缺稱為暫時現象，但 AP 指超過半數地區出現配給或短缺，修復速度與後續攻擊會決定夏季壓力。</p><div class="source"><strong>來源｜AP News</strong><span>https://apnews.com/article/russia-ukraine-war-fuel-crisis-gas-ec7e67f94ead8bf3ba064c785c2a8871</span><span>https://apnews.com/article/russia-ukraine-war-ufa-refinery-oil-8f85eea709f58365c42ec3b29e5d1d6d</span></div></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" style="--bg:url('https://images.unsplash.com/photo-1516937941344-00b4e0337589?auto=format&fit=crop&w=1800&q=80')">
+      <div class="slide-inner">
+        <p class="kicker">全球 3-4｜戰爭責任與貿易制度</p>
+        <h2>舊事件被新調查重開，協定期限變成壓力工具</h2>
+        <div class="grid">
+          <details class="card" data-kind="global">
+            <summary><span class="card-title"><span class="rank">3.</span>AP 重建 Iran Minab 小學空襲：美軍疑似飛彈造成逾百名兒童死亡</span><span class="time">發佈時間｜<time datetime="2026-07-01T04:01:22Z">2026-07-01 12:01:22（Asia/Taipei）</time></span></summary>
+            <div class="body"><p>這不是新發生的空襲，而是 AP 在本視窗內首次發布的重建調查。AP 指 2 月 28 日 Minab 一所 primary school 遭擊，Airwars 估計死亡 157 至 168 人、95 至 111 人受傷，多數死者為兒童。Pentagon / CENTCOM 調查仍在審查，Defense Secretary Pete Hegseth 稱會在適當時公布。</p><p>不確定性在於 Pentagon 尚未發布完整調查，美方是否承認責任、武器類型與目標鏈條仍未定。</p><div class="source"><strong>來源｜AP News</strong><span>https://apnews.com/article/iran-school-strike-baluch-trump-2a134a5c74d80db763db4c3eb6d0d847</span></div></div>
+          </details>
+          <details class="card" data-kind="global">
+            <summary><span class="card-title"><span class="rank">4.</span>Trump 拒絕在 July 1 deadline 續簽 USMCA，北美貿易協定改進入年度審查</span><span class="time">發佈時間｜<time datetime="2026-07-01T20:09:01Z">2026-07-02 04:09:01（Asia/Taipei）</time></span></summary>
+            <div class="body"><p>The Guardian 報導 USTR 確認 U.S. 未同意以現有條款續約 USMCA。協定仍有效，但改進入年度 review，讓原本支撐北美汽車、農業與服務貿易的制度不再自動鎖定六年。</p><p>報導稱 USMCA 涵蓋約 2 兆美元商品與服務貿易；Mexico economy minister Marcelo Ebrard 表示分歧可解，但企業投資會先面對更高不確定性。</p><div class="source"><strong>來源｜The Guardian</strong><span>https://www.theguardian.com/us-news/2026/jul/01/trump-usmca-trade-treaty</span></div></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" style="--bg:url('https://images.unsplash.com/photo-1494412651409-8963ce7935a7?auto=format&fit=crop&w=1800&q=80')">
+      <div class="slide-inner">
+        <p class="kicker">全球 5-6｜金流與邊境衝突</p>
+        <h2>私人收益揭露與跨境互控同日升溫</h2>
+        <div class="grid">
+          <details class="card" data-kind="global">
+            <summary><span class="card-title"><span class="rank">5.</span>Trump financial disclosure 顯示去年從 crypto 相關事業取得約 12 億美元收入</span><span class="time">發佈時間｜<time datetime="2026-07-01T20:01:49Z">2026-07-02 04:01:49（Asia/Taipei）</time></span></summary>
+            <div class="body"><p>AP 報導 Trump financial disclosure 顯示去年約有 12 億美元收入與 crypto 相關，包括超過 5 億美元來自 World Liberty Financial、超過 6 億美元來自 CIC Digital meme coin 相關收入。報導也提到 Justin Sun、UAE-linked entity investment 與 White House 對利益衝突疑慮的否認。</p><p>核心風險是金融監管、外國資金與總統私人收益之間是否存在可證明關聯。</p><div class="source"><strong>來源｜AP News</strong><span>https://apnews.com/article/trump-finances-real-estate-crypto-bibles-golf-8b8b54fae333d1200f4c1b509991b544</span></div></div>
+          </details>
+          <details class="card" data-kind="global">
+            <summary><span class="card-title"><span class="rank">6.</span>續報｜Afghanistan 稱空襲 Pakistan 境內 ISIL 目標，Pakistan 稱攔截四架 Afghan drones</span><span class="time">發佈時間｜<time datetime="2026-07-01T07:55:16Z">2026-07-01 15:55:16（Asia/Taipei）</time></span></summary>
+            <div class="body"><span class="label">重大續報</span><p>2026-06-30 已收錄 Pakistan-Afghanistan 平民傷亡互控；今日 Al Jazeera 報導 Pakistan military 稱攔截四架從 Afghanistan 飛入 Balochistan 的簡易 drones。Afghanistan defense ministry 則稱在 Pakistan 的 Balochistan 與 Khyber Pakhtunkhwa 對 ISIL / ISIS centres 發動空襲。</p><p>雙方說法互相指責，獨立媒體難以即時核實 drones 來源、空襲目標與傷亡。</p><div class="source"><strong>來源｜Al Jazeera / Xinhua</strong><span>https://www.aljazeera.com/news/2026/7/1/pakistan-says-it-intercepted-four-drones-fired-from-afghanistan?traffic_source=rss</span><span>https://english.news.cn/20260701/a36531a65e0c4a14a84ca973ad78f961/c.html</span></div></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" style="--bg:url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1800&q=80')">
+      <div class="slide-inner">
+        <p class="kicker">全球 7-8｜信仰治理與氣候指標</p>
+        <h2>制度權威與海洋熱量同時給出警訊</h2>
+        <div class="grid">
+          <details class="card" data-kind="global">
+            <summary><span class="card-title"><span class="rank">7.</span>SSPX 無視 Pope Leo XIV 祝聖四名主教，天主教會再現分裂風險</span><span class="time">發佈時間｜<time datetime="2026-07-01T04:02:03Z">2026-07-01 12:02:03（Asia/Taipei）</time></span></summary>
+            <div class="body"><p>AP 報導 Society of St. Pius X 在 Switzerland Econe seminary 未經 Pope Leo XIV approval 祝聖四名 bishops，現場約 16,500 人並 livestream。Vatican 先前警告該行動會導致 automatic excommunication；SSPX 長期反對 Vatican II 改革。</p><p>後續要看 Vatican 是否正式宣布 excommunication，以及 Pope Leo XIV 如何在紀律與合一之間處理。</p><div class="source"><strong>來源｜AP News / The Guardian</strong><span>https://apnews.com/article/975a7dd408e151310f5e515030cd6c97</span><span>https://www.theguardian.com/world/2026/jul/01/fears-catholic-schism-sect-ordains-ultra-conservative-bishops-pope-leo</span></div></div>
+          </details>
+          <details class="card" data-kind="global">
+            <summary><span class="card-title"><span class="rank">8.</span>Copernicus / EU monitors 指全球海洋創下有紀錄以來最熱 June，預告更多海洋熱</span><span class="time">發佈時間｜<time datetime="2026-07-01T04:38:43Z">2026-07-01 12:38:43（Asia/Taipei）</time></span></summary>
+            <div class="body"><p>Al Jazeera 引述 EU climate monitors 報導，全球海洋經歷有紀錄以來最熱 June，2026 年上半年呈現 sustained exceptional ocean warmth，科學家警告更多 heat ahead。海洋熱量會影響珊瑚白化、漁業、颶風強度、海平面與極端天氣。</p><p>單一月份紀錄不代表所有地區同時創高，但它是全球氣候系統偏熱的重要底層訊號。</p><div class="source"><strong>來源｜Al Jazeera</strong><span>https://www.aljazeera.com/news/2026/7/1/worlds-oceans-experience-hottest-june-ever-scientists-say-more-heat-ahead</span></div></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" style="--bg:url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1800&q=80')">
+      <div class="slide-inner">
+        <p class="kicker">全球 9-10｜極端天氣與總統專機</p>
+        <h2>城市韌性與外國贈禮進入實際測試</h2>
+        <div class="grid">
+          <details class="card" data-kind="global">
+            <summary><span class="card-title"><span class="rank">9.</span>Romania 熱浪後遭強風暴襲擊，一人死亡且 20 counties 淹水</span><span class="time">發佈時間｜<time datetime="2026-07-01T11:43:55Z">2026-07-01 19:43:55（Asia/Taipei）</time></span></summary>
+            <div class="body"><p>AP 報導 Romania 在逾 40°C heatwave 後遭 powerful storms 襲擊，Bucharest 與 Ilfov 最嚴重，一人因樹倒壓車死亡。Emergency services 接獲逾 2,200 件求助，從 350 多戶房屋與 100 條街道抽水，988 棵樹倒塌、495 輛車受損。</p><p>損失數字來自初期救災統計，後續可能上修；單一事件的氣候歸因仍需專門分析。</p><div class="source"><strong>來源｜AP News</strong><span>https://apnews.com/article/storm-weather-europe-heatwave-romania-5081a17e7ba75c5c84bd183c800956c3</span></div></div>
+          </details>
+          <details class="card" data-kind="global">
+            <summary><span class="card-title"><span class="rank">10.</span>Trump 首次搭乘 Qatar 贈送改裝 Air Force One，4 億美元 jet 引發安全與倫理爭議</span><span class="time">發佈時間｜<time datetime="2026-07-01T13:25:17Z">2026-07-01 21:25:17（Asia/Taipei）</time></span></summary>
+            <div class="body"><p>AP 報導 Trump 週三首次搭乘 Qatar 贈送、約 4 億美元的 Boeing 747 改裝 Air Force One 前往 North Dakota。Air Force 表示安全改裝成本低於機體價值；Trump 辯稱這是 friendly country 的 gift，批評者則質疑外國利益、總統安全與政府採購規範。</p><p>不確定點包括實際改裝成本、安檢範圍、法律審查與最終所有權安排。</p><div class="source"><strong>來源｜AP News</strong><span>https://apnews.com/article/trump-air-force-one-plane-qatar-8eb5da68e95d583b14811f85e62cbcd1</span></div></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" style="--bg:url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1800&q=80')">
+      <div class="slide-inner">
+        <p class="kicker">科技／AI 1-2｜內容與模型可用性</p>
+        <h2>網路內容權與模型供應同時重置</h2>
+        <div class="grid">
+          <details class="card" data-kind="tech">
+            <summary><span class="card-title">T1. Cloudflare Content Independence Day 推出 AI crawler controls、BotBase 與 x402 付費入口</span><span class="time">發佈時間｜<time datetime="2026-07-01T17:48:37Z">2026-07-02 01:48:37（Asia/Taipei）</time></span></summary>
+            <div class="body"><p>Cloudflare 把網站是否允許 AI 使用內容，以及是否要求付費，推到基礎設施層。新 AI traffic options 讓網站按 Search、Agent、Training 類別管理 crawler；新 domains 將自 9 月 15 日起預設阻擋部分 Training / Agent crawlers。BotBase visibility、robots.txt `use` signal 與 x402 Monetization Gateway 也被納入同一波發布。</p><p>核心不確定性是 AI 公司是否接受付費標準，以及 crawler 身分與用途分類能否被穩定執行。</p><div class="source"><strong>來源｜TechCrunch / Cloudflare</strong><span>https://techcrunch.com/2026/07/01/cloudflares-new-policy-pushes-ai-companies-to-pay-for-publishers-content/</span><span>https://blog.cloudflare.com/content-independence-day-ai-options/</span><span>https://blog.cloudflare.com/content-independence-day-no-ai-crawl-without-compensation/</span></div></div>
+          </details>
+          <details class="card" data-kind="tech">
+            <summary><span class="card-title">T2. 續報｜Anthropic 恢復 Claude Fable 5 / Mythos 5，出口管制解除後全球重新開放</span><span class="time">發佈時間｜<time datetime="2026-07-01T04:00:00Z">2026-07-01 12:00:00（Asia/Taipei）</time></span></summary>
+            <div class="body"><span class="label">重大續報</span><p>2026-06-14 已收錄 Anthropic 因 U.S. directive 暫停 Fable 5 / Mythos 5。Anthropic 今日更新稱 Fable 5 access now restored，7 月 1 日起在 Claude Platform、Claude.ai、Claude Code 與 Claude Cowork 全球可用；Mythos 5 也在 6 月 26 日獲政府批准後恢復給一組 U.S. organizations。</p><p>官方只公開 Jul 1 日期，cloud partner 實際重新上架時間可能不同。</p><div class="source"><strong>來源｜Anthropic</strong><span>https://www.anthropic.com/news/redeploying-fable-5</span><span>https://www.anthropic.com/news/claude-fable-5-mythos-5</span></div></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" style="--bg:url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1800&q=80')">
+      <div class="slide-inner">
+        <p class="kicker">科技／AI 3-5｜桌面 agent 與 Copilot 多模態</p>
+        <h2>AI 助理從聊天框進入檔案、圖像與模型選擇</h2>
+        <div class="grid three">
+          <details class="card" data-kind="tech">
+            <summary><span class="card-title">T3. 續報｜Google Gemini Spark 登上 macOS，支援本機檔案、自訂 MCP 與第三方 app</span><span class="time">發佈時間｜<time datetime="2026-07-01T14:20:19Z">2026-07-01 22:20:19（Asia/Taipei）</time></span></summary>
+            <div class="body"><span class="label">重大續報</span><p>2026-05-31 已收錄 Gemini Spark 初始 agentic direction。TechCrunch 今日報導 Gemini Spark now available on Mac；Google 更新稱 Spark 可處理 desktop files and apps，例如整理 PDFs、從 invoices 產生 spreadsheet，並連接 Tasks、Keep、Canva、Dropbox、Instacart、OpenTable、Zillow，另支援 custom MCP 與 real-time topic tracking。</p><div class="source"><strong>來源｜TechCrunch / Google</strong><span>https://techcrunch.com/2026/07/01/gemini-spark-googles-agentic-assistant-is-now-available-on-mac/</span><span>https://blog.google/innovation-and-ai/products/gemini-app/gemini-spark-updates-june-2026/</span></div></div>
+          </details>
+          <details class="card" data-kind="tech">
+            <summary><span class="card-title">T4. GitHub Copilot vision GA，Copilot Chat 可讀 images 與 PDFs</span><span class="time">發佈時間｜<time datetime="2026-07-01T04:00:00Z">2026-07-01 12:00:00（Asia/Taipei）</time></span></summary>
+            <div class="body"><p>GitHub changelog 宣布 Copilot vision generally available，支援 images and PDFs，適用於 VS Code ask / plan / agent modes、github.com 與 Copilot CLI，且所有 plans 可用。這讓設計稿、錯誤截圖、架構圖、規格書與報表都能直接進入 coding workflow。</p><p>官方未公開精確時間；實際 rollout、檔案大小限制與企業資料政策需看後續文件。</p><div class="source"><strong>來源｜GitHub Changelog</strong><span>https://github.blog/changelog/2026-07-01-copilot-vision-is-generally-available/</span></div></div>
+          </details>
+          <details class="card" data-kind="tech">
+            <summary><span class="card-title">T5. GitHub Copilot 新增 Kimi K2.7 Code，成為 model picker 第一個 open-weight model</span><span class="time">發佈時間｜<time datetime="2026-07-01T04:00:00Z">2026-07-01 12:00:00（Asia/Taipei）</time></span></summary>
+            <div class="body"><p>GitHub 宣布 Kimi K2.7 Code generally available in GitHub Copilot，並稱其為 model picker 內第一個 open-weight model。模型 hosted on Microsoft Azure，按 provider list pricing 計費；Pro、Pro+、Max 逐步推出，Business / Enterprise 預設關閉並需管理員政策啟用。</p><p>open-weight 不等於 self-hosted；企業仍需確認 Azure hosted inference 的資料處理與授權邊界。</p><div class="source"><strong>來源｜GitHub Changelog</strong><span>https://github.blog/changelog/2026-07-01-kimi-k2-7-is-now-available-in-github-copilot/</span></div></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" style="--bg:url('https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1800&q=80')">
+      <div class="slide-inner">
+        <p class="kicker">科技／AI 6-8｜退場、治理與基礎設施資本</p>
+        <h2>AI 工具鏈開始有明確成本與退場時程</h2>
+        <div class="grid three">
+          <details class="card" data-kind="tech">
+            <summary><span class="card-title">T6. 續報｜GitHub Models 公布完整退場：July 30 關閉、July 16 / 23 brownouts</span><span class="time">發佈時間｜<time datetime="2026-07-01T04:00:00Z">2026-07-01 12:00:00（Asia/Taipei）</time></span></summary>
+            <div class="body"><span class="label">重大續報</span><p>2026-06-17 已收錄 GitHub Models 停止新客戶。GitHub 今日宣布 GitHub Models will be fully retired on July 30, 2026，playground、model catalog、inference API 與 BYOK 都會移除，影響所有 active customers。July 16 與 July 23 將有 brownouts，官方建議遷移到 Azure AI Foundry 或 GitHub Copilot。</p><div class="source"><strong>來源｜GitHub Changelog</strong><span>https://github.blog/changelog/2026-07-01-github-models-is-being-fully-retired-on-july-30-2026/</span></div></div>
+          </details>
+          <details class="card" data-kind="tech">
+            <summary><span class="card-title">T7. GitHub Copilot governance wave：AI credit session limits、managed settings 與 auto model default</span><span class="time">發佈時間｜<time datetime="2026-07-01T04:00:00Z">2026-07-01 12:00:00（Asia/Taipei）</time></span></summary>
+            <div class="body"><p>GitHub 同日發布 Copilot CLI / SDK 的 AI credit session limits，支援 `/limits` 與 `--max-ai-credits`；Enterprise managed `settings.json` GA，讓 enterprise 透過 `.github-private` 集中管理 VS Code / Copilot CLI 設定；另可把 auto model selection 設為預設。</p><p>這代表 Copilot 正從能力擴張進入成本、模型與政策治理。</p><div class="source"><strong>來源｜GitHub Changelog</strong><span>https://github.blog/changelog/2026-07-01-set-ai-credit-session-limits-in-copilot-cli-and-sdk/</span><span>https://github.blog/changelog/2026-07-01-enterprise-managed-settings-json-is-generally-available/</span><span>https://github.blog/changelog/2026-07-01-enterprises-can-default-to-auto-model-selection</span></div></div>
+          </details>
+          <details class="card" data-kind="tech">
+            <summary><span class="card-title">T8. Together AI raises 8 億美元 Series C，估值升至 83 億美元</span><span class="time">發佈時間｜<time datetime="2026-07-01T18:29:14Z">2026-07-02 02:29:14（Asia/Taipei）</time></span></summary>
+            <div class="body"><p>TechCrunch 報導 Together AI raised $800M Series C at $8.3B valuation。HPCwire / AIwire 引述公告指出 round led by Aramco Ventures，參與者包含 Vista、General Catalyst、Emergence、NVIDIA、March、Pegatron 與 S Ventures。公司定位是讓 frontier AI accessible to all。</p><p>融資不等於盈利能力；GPU utilization、供應成本與雲端巨頭競爭仍是關鍵風險。</p><div class="source"><strong>來源｜TechCrunch / HPCwire AIwire</strong><span>https://techcrunch.com/2026/07/01/neocloud-together-ai-raises-800m-leaps-to-8-3b-valuation/</span><span>https://www.hpcwire.com/aiwire/2026/07/01/together-ai-raises-800m-at-8-3b-valuation-to-make-frontier-ai-accessible-to-all/</span></div></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" style="--bg:url('https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1800&q=80')">
+      <div class="slide-inner">
+        <p class="kicker">科技／AI 9-10｜私密 AI 與供應鏈在地化</p>
+        <h2>平台信任與製造地理成為 AI 競爭面</h2>
+        <div class="grid">
+          <details class="card" data-kind="tech">
+            <summary><span class="card-title">T9. Venice AI raises 6,500 萬美元 Series A，以 10 億美元估值推 privacy-first AI platform</span><span class="time">發佈時間｜<time datetime="2026-07-01T14:25:23Z">2026-07-01 22:25:23（Asia/Taipei）</time></span></summary>
+            <div class="body"><p>TechCrunch 報導 Venice AI becomes a unicorn with $65M Series A，平台提供 200 多個 AI models，強調 users retain privacy。報導稱 Venice AI 有超過 850,000 unique visitors、300 多萬 active users 與每日 170 萬 API calls；本輪由 Dragonfly 領投，Coinbase Ventures 等參與。</p><p>隱私主張需看 logging、模型路由與法遵文件；使用者與 API call 數字仍需長期留存和付費轉換驗證。</p><div class="source"><strong>來源｜TechCrunch</strong><span>https://techcrunch.com/2026/07/01/venice-ai-becomes-a-unicorn-with-65m-series-a-as-its-privacy-first-ai-platform-takes-off/</span></div></div>
+          </details>
+          <details class="card" data-kind="tech">
+            <summary><span class="card-title">T10. NVIDIA and partners Build in America：Blackwell、AI supercomputers 與 5,000 億美元 U.S. AI infrastructure 供應鏈</span><span class="time">發佈時間｜<time datetime="2026-07-01T04:00:00Z">2026-07-01 12:00:00（Asia/Taipei）</time></span></summary>
+            <div class="body"><p>NVIDIA 官方 blog 表示 partners 遍及 43 states，Blackwell wafers 正在 TSMC Phoenix 量產，Foxconn 與 Wistron 參與 Houston / Fort Worth AI supercomputer manufacturing。NVIDIA 稱計畫最多支持 5,000 億美元 U.S. AI infrastructure，並引述 Public First 估計 2026 年 NVIDIA-driven AI demand 對 U.S. GDP 貢獻 4,850 億美元、支持逾 100,000 jobs。</p><p>GDP 與 jobs 是公司引用估算，仍需與實際投資、出口管制和資料中心需求對照。</p><div class="source"><strong>來源｜NVIDIA Blog</strong><span>https://blogs.nvidia.com/blog/nvidia-and-partners-build-in-america-for-america/</span></div></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" style="--bg:url('https://images.unsplash.com/photo-1481627834876-b7833e8f5570?auto=format&fit=crop&w=1800&q=80')">
+      <div class="slide-inner">
+        <p class="kicker">綜合判讀</p>
+        <h2>今天的共同訊號：控制權從宣示移到執行層</h2>
+        <div class="grid">
+          <details class="card" data-kind="stat">
+            <summary><span class="card-title">全球面：談判、能源、貿易與氣候都在看「能否執行」</span></summary>
+            <div class="body"><p>美伊 Qatar talks 的重點不再是是否會面，而是 indirect process 能否轉成具體機制；Russia fuel crisis 的重點也不再是單一煉油廠，而是全國供應鏈能否承受持續 drone pressure。USMCA、Minab investigation、SSPX、Romania storms 與 ocean heat 則把法律、宗教、災害和氣候治理拉回可驗證責任。</p><div class="source"><strong>來源｜本日完整報告</strong><span>https://lucaskk.github.io/daily-news/wiki/daily/2026/07/2026-07-02/daily-news-2026-07-02.md</span></div></div>
+          </details>
+          <details class="card" data-kind="stat">
+            <summary><span class="card-title">科技面：平台正在決定 AI 的入口、成本、權限與退場</span></summary>
+            <div class="body"><p>Cloudflare 將 AI crawler access 變成站點與網路基礎設施政策；GitHub 用 Copilot vision、open-weight model、credit limits 與 Models retirement 同時處理能力、選擇、成本和退場。Anthropic / Google 的更新則顯示模型與 agent 可用性會直接受政府政策、桌面權限與工具連接協定影響。</p><div class="source"><strong>來源｜本日來源筆記</strong><span>https://lucaskk.github.io/daily-news/wiki/daily/2026/07/2026-07-02/source-notes-2026-07-02.md</span></div></div>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <nav class="nav" aria-label="投影片導覽">
+    <button type="button" id="prev" aria-label="上一頁">‹</button>
+    <div class="counter"><span id="current">1</span> / <span id="total">12</span></div>
+    <button type="button" id="next" aria-label="下一頁">›</button>
+  </nav>
+
+  <script>
+    const slides = Array.from(document.querySelectorAll(".slide"));
+    const current = document.getElementById("current");
+    const total = document.getElementById("total");
+    let index = 0;
+    total.textContent = String(slides.length);
+
+    function show(nextIndex) {
+      slides[index].classList.remove("active");
+      index = (nextIndex + slides.length) % slides.length;
+      slides[index].classList.add("active");
+      current.textContent = String(index + 1);
+      slides[index].focus?.();
+    }
+
+    document.getElementById("prev").addEventListener("click", () => show(index - 1));
+    document.getElementById("next").addEventListener("click", () => show(index + 1));
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "ArrowRight" || event.key === "PageDown" || event.key === " ") show(index + 1);
+      if (event.key === "ArrowLeft" || event.key === "PageUp") show(index - 1);
+      if (event.key === "Home") show(0);
+      if (event.key === "End") show(slides.length - 1);
+    });
+  </script>
+</body>
+</html>
