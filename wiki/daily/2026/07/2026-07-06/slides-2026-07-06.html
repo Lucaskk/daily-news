@@ -1,0 +1,689 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>2026-07-06 每日全球與科技 AI 新聞</title>
+  <!--
+    Background image credits:
+    - Newspaper title image: Unsplash, https://images.unsplash.com/photo-1495020689067-958852a7765e
+    - Research workspace image: Unsplash, https://images.unsplash.com/photo-1497366754035-f200968a6e72
+    - Diplomacy / institutions image: Unsplash, https://images.unsplash.com/photo-1521737604893-d14cc237f11d
+    - Security / war image: Unsplash, https://images.unsplash.com/photo-1500530855697-b586d89ba3ee
+    - Energy / climate image: Unsplash, https://images.unsplash.com/photo-1469474968028-56623f02e42e
+    - Civic protest image: Unsplash, https://images.unsplash.com/photo-1500534623283-312aade485b7
+    - Technology image: Unsplash, https://images.unsplash.com/photo-1516321318423-f06f85e504b3
+    - Analysis image: Unsplash, https://images.unsplash.com/photo-1497366811353-6870744d04b2
+    - Source desk image: Unsplash, https://images.unsplash.com/photo-1484807352052-23338990c6c6
+  -->
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #111827;
+      --muted: #475569;
+      --line: rgba(15, 23, 42, 0.15);
+      --card: rgba(255, 255, 255, 0.93);
+      --card-soft: rgba(248, 250, 252, 0.9);
+      --accent: #0f766e;
+      --accent-2: #1d4ed8;
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body {
+      margin: 0;
+      min-height: 100%;
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--ink);
+      background: #0b1020;
+    }
+
+    body { overflow: hidden; }
+
+    a { color: #0f5fb7; overflow-wrap: anywhere; }
+
+    .deck {
+      position: relative;
+      width: 100vw;
+      min-height: 100vh;
+    }
+
+    .slide {
+      position: absolute;
+      inset: 0;
+      display: none;
+      min-height: 100vh;
+      padding: clamp(24px, 3.5vw, 52px);
+      overflow-y: auto;
+      isolation: isolate;
+    }
+
+    .slide.active {
+      display: flex;
+      align-items: stretch;
+    }
+
+    .slide::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: -2;
+      background-image:
+        linear-gradient(112deg, rgba(8, 13, 22, 0.58) 0%, rgba(8, 13, 22, 0.25) 56%, rgba(8, 13, 22, 0.12) 100%),
+        var(--bg);
+      background-size: cover;
+      background-position: center;
+    }
+
+    .slide-inner {
+      width: min(1180px, 100%);
+      margin: auto;
+      display: grid;
+      gap: 18px;
+    }
+
+    .hero {
+      width: min(980px, 100%);
+      padding: clamp(20px, 4vw, 40px);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.9);
+      border: 1px solid rgba(255, 255, 255, 0.55);
+      box-shadow: 0 20px 60px rgba(2, 6, 23, 0.24);
+    }
+
+    .eyebrow {
+      margin: 0 0 10px;
+      color: var(--accent);
+      font-size: 0.82rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    h1, h2, h3, p { margin-top: 0; }
+
+    h1 {
+      margin-bottom: 16px;
+      font-size: clamp(2.2rem, 4.8vw, 5rem);
+      line-height: 1.02;
+      letter-spacing: 0;
+    }
+
+    h2 {
+      margin-bottom: 8px;
+      color: #f8fafc;
+      font-size: clamp(1.8rem, 3vw, 3.2rem);
+      line-height: 1.08;
+      text-shadow: 0 2px 16px rgba(2, 6, 23, 0.5);
+    }
+
+    .section-lead {
+      max-width: 900px;
+      color: #f8fafc;
+      font-size: 1.05rem;
+      line-height: 1.7;
+      text-shadow: 0 2px 14px rgba(2, 6, 23, 0.5);
+    }
+
+    .hero .section-lead {
+      color: #334155;
+      text-shadow: none;
+    }
+
+    .meta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      min-height: 34px;
+      padding: 7px 12px;
+      border-radius: 999px;
+      color: #0f172a;
+      background: #e0f2fe;
+      border: 1px solid rgba(14, 116, 144, 0.25);
+      font-size: 0.88rem;
+      font-weight: 750;
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      align-items: start;
+    }
+
+    .card-grid.three {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    details.card {
+      border-radius: 8px;
+      border: 1px solid var(--line);
+      background: var(--card);
+      box-shadow: 0 10px 30px rgba(2, 6, 23, 0.14);
+      overflow: hidden;
+    }
+
+    details.card summary {
+      cursor: pointer;
+      list-style: none;
+      padding: 16px 18px;
+    }
+
+    details.card summary::-webkit-details-marker { display: none; }
+
+    .summary-top {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 8px;
+    }
+
+    .rank, .tech-id, .tag {
+      flex: 0 0 auto;
+      display: inline-grid;
+      place-items: center;
+      min-width: 32px;
+      min-height: 32px;
+      padding: 0 8px;
+      border-radius: 8px;
+      color: #fff;
+      background: var(--accent);
+      font-weight: 850;
+      font-size: 0.9rem;
+    }
+
+    .tech-id { background: var(--accent-2); }
+    .tag { background: #7c3aed; }
+
+    .card-title {
+      margin: 0;
+      font-size: 1rem;
+      line-height: 1.35;
+      font-weight: 850;
+    }
+
+    .time {
+      color: var(--muted);
+      font-size: 0.86rem;
+      font-weight: 650;
+    }
+
+    .card-body {
+      padding: 0 18px 18px;
+      color: #1f2937;
+      line-height: 1.64;
+      font-size: 0.94rem;
+    }
+
+    .card-body p { margin-bottom: 10px; }
+
+    .source-block {
+      margin: 14px 0 0;
+      padding: 12px;
+      border-radius: 8px;
+      background: var(--card-soft);
+      border: 1px solid rgba(15, 23, 42, 0.1);
+      color: #334155;
+      font-size: 0.84rem;
+      line-height: 1.5;
+    }
+
+    .controls {
+      position: fixed;
+      right: 16px;
+      bottom: 16px;
+      display: flex;
+      gap: 8px;
+      z-index: 5;
+    }
+
+    .controls button {
+      width: 42px;
+      height: 42px;
+      border: 1px solid rgba(255, 255, 255, 0.55);
+      border-radius: 8px;
+      color: #f8fafc;
+      background: rgba(15, 23, 42, 0.78);
+      font-size: 1.2rem;
+      font-weight: 800;
+      cursor: pointer;
+    }
+
+    .counter {
+      position: fixed;
+      left: 16px;
+      bottom: 16px;
+      z-index: 5;
+      padding: 10px 12px;
+      border-radius: 8px;
+      color: #f8fafc;
+      background: rgba(15, 23, 42, 0.78);
+      border: 1px solid rgba(255, 255, 255, 0.45);
+      font-size: 0.86rem;
+    }
+
+    @media (max-width: 860px) {
+      body { overflow: auto; }
+      .slide { position: relative; min-height: 100vh; padding: 22px 14px 76px; }
+      .slide.active { display: flex; }
+      .slide:not(.active) { display: none; }
+      .card-grid, .card-grid.three { grid-template-columns: 1fr; }
+      h1 { font-size: 2.4rem; }
+      h2 { font-size: 2rem; }
+      .hero { padding: 22px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="deck" aria-live="polite">
+    <section class="slide active" style="--bg: url('https://images.unsplash.com/photo-1495020689067-958852a7765e?auto=format&fit=crop&w=1800&q=80');">
+      <div class="slide-inner">
+        <div class="hero">
+          <p class="eyebrow">Daily global and tech AI news</p>
+          <h1>2026-07-06 每日全球與科技 AI 新聞</h1>
+          <p class="section-lead">今日主軸：峰會前的忠誠測試、戰爭續報、能源與災害治理，科技端則轉向 AI agent 管制、robotaxi 擴張與雲端安全欄位變更。</p>
+          <div class="meta-row">
+            <span class="pill">研究截點：2026-07-06 08:00:57 Asia/Taipei</span>
+            <span class="pill">24 小時窗：2026-07-05 08:00:57 至 2026-07-06 08:00:57</span>
+            <span class="pill">全球 Top 10 + 科技 / AI 4 則</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" style="--bg: url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1800&q=80');">
+      <div class="slide-inner">
+        <h2>研究邊界與查重</h2>
+        <p class="section-lead">本日只收錄窗口內首次可靠發布、官方生效或具重大新進展的內容；舊事件更新、改標題與仍熱門但無新事實者排除。</p>
+        <div class="card-grid three">
+          <details class="card" open>
+            <summary>
+              <div class="summary-top"><span class="tag">窗</span><h3 class="card-title">時間窗</h3></div>
+              <div class="time"><time datetime="2026-07-05T00:00:57Z">2026-07-05T00:00:57Z</time> 至 <time datetime="2026-07-06T00:00:57Z">2026-07-06T00:00:57Z</time></div>
+            </summary>
+            <div class="card-body">
+              <p>Asia/Taipei 對應為 2026-07-05 08:00:57 至 2026-07-06 08:00:57。所有入選項均在來源筆記記錄時間依據。</p>
+              <div class="source-block">來源標籤：本機產製規則與本日 source notes - https://lucaskk.github.io/daily-news/wiki/daily/README.md</div>
+            </div>
+          </details>
+          <details class="card" open>
+            <summary>
+              <div class="summary-top"><span class="tag">數</span><h3 class="card-title">今日數量</h3></div>
+              <div class="time">10 則全球新聞，4 則科技 / AI 產品與平台新聞</div>
+            </summary>
+            <div class="card-body">
+              <p>全球部分嚴格維持 Top 10；科技部分不補舊聞填數，以今日具新產品、平台或治理事實者為準。</p>
+              <div class="source-block">來源標籤：本日日報 - https://lucaskk.github.io/daily-news/wiki/daily/2026/07/2026-07-06/daily-news-2026-07-06.md</div>
+            </div>
+          </details>
+          <details class="card" open>
+            <summary>
+              <div class="summary-top"><span class="tag">去</span><h3 class="card-title">去重原則</h3></div>
+              <div class="time">只納入重大續報</div>
+            </summary>
+            <div class="card-body">
+              <p>Venezuela、Iran funeral、Europe wildfires 等續報均標示前次 capture 與本次新增事實；Claude Sonnet 5、Anthropic Fable / Mythos、UBTech U1 等舊發布已排除。</p>
+              <div class="source-block">來源標籤：本日 source notes - https://lucaskk.github.io/daily-news/wiki/daily/2026/07/2026-07-06/source-notes-2026-07-06.md</div>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" style="--bg: url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1800&q=80');">
+      <div class="slide-inner">
+        <h2>全球新聞 1-2：政權訊號與同盟忠誠</h2>
+        <p class="section-lead">Iran 葬禮與 NATO Ankara 峰會把「承諾」推向可見的政治表態。</p>
+        <div class="card-grid">
+          <details class="card global-card" open>
+            <summary>
+              <div class="summary-top"><span class="rank">1</span><h3 class="card-title">續報｜Khamenei 其他兒子現身，Mojtaba 仍未露面</h3></div>
+              <div class="time"><time datetime="2026-07-05T03:47:41Z">2026-07-05 11:47:41 Asia/Taipei</time></div>
+            </summary>
+            <div class="card-body">
+              <p>前次 capture：2026-07-05。新事實是家族與高層公開出席葬禮祈禱，但新任最高領袖 Mojtaba Khamenei 仍缺席。</p>
+              <p>重要性：葬禮成為 Iran 繼任合法性、安全威脅、報復情緒與 U.S.-Iran talks 是否恢復的同場測試。</p>
+              <p>不確定性：Mojtaba 傷勢、藏身與公開露面時間沒有完整官方說明。</p>
+              <div class="source-block">來源標籤：AP - https://apnews.com/article/khamenei-funeral-supreme-leader-iran-us-war-july-5-2026-9c2641e5bc540e5943dd39b95d4f02f8</div>
+            </div>
+          </details>
+          <details class="card global-card" open>
+            <summary>
+              <div class="summary-top"><span class="rank">2</span><h3 class="card-title">NATO Ankara 峰會前，Rutte 面臨 Trump 忠誠測試</h3></div>
+              <div class="time"><time datetime="2026-07-05T05:07:53Z">2026-07-05 13:07:53 Asia/Taipei</time></div>
+            </summary>
+            <div class="card-body">
+              <p>NATO 增加防務支出後，Trump 把問題轉成是否對其 Iran war 和安全路線展現 loyalty。</p>
+              <p>重要性：這會影響 Ukraine 支援、European defense burden sharing 與美國安全承諾在 Ankara 峰會的可信度。</p>
+              <p>不確定性：loyalty 沒有明確制度定義，峰會文件能否落地仍待確認。</p>
+              <div class="source-block">來源標籤：AP - https://apnews.com/article/nato-summit-rutte-stoltenberg-trump-flattery-pitch-f8379b038dfbbf7afde80bb50a0bd96e</div>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" style="--bg: url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1800&q=80');">
+      <div class="slide-inner">
+        <h2>全球新聞 3-4：戰爭外交與 Crimea 壓力</h2>
+        <p class="section-lead">Trump 的會談安排與 Ukraine 的 Crimea 打擊，使 Ankara 峰會前的戰場與外交線重疊。</p>
+        <div class="card-grid">
+          <details class="card global-card" open>
+            <summary>
+              <div class="summary-top"><span class="rank">3</span><h3 class="card-title">續報｜Trump 將在 NATO 峰會會晤 Zelenskyy 與 al-Sharaa</h3></div>
+              <div class="time"><time datetime="2026-07-05T18:40:06Z">2026-07-06 02:40:06 Asia/Taipei</time></div>
+            </summary>
+            <div class="card-body">
+              <p>前次 capture：Ukraine 戰爭外交與 Syria / Hezbollah 壓力多次收錄。新事實是 White House 確認 NATO 峰會期間的 Zelenskyy 與 Syrian President Ahmad al-Sharaa 會面。</p>
+              <p>重要性：Ukraine 停戰、Syria 角色與 Hezbollah 施壓可能在同一峰會形成交易或壓力路徑。</p>
+              <p>不確定性：al-Sharaa 先前不願按 Trump 說法對抗 Hezbollah，會談結果未知。</p>
+              <div class="source-block">來源標籤：AP - https://apnews.com/article/trump-zelenskyy-ukraine-syria-nato-1796d878f93e2fd9bcd1f63e1c619ebf</div>
+            </div>
+          </details>
+          <details class="card global-card" open>
+            <summary>
+              <div class="summary-top"><span class="rank">4</span><h3 class="card-title">續報｜Crimea 攻擊造成 1 死，Putin 與 Zelenskyy 分別和 Trump 通話</h3></div>
+              <div class="time"><time datetime="2026-07-05T07:59:46Z">2026-07-05 15:59:46 Asia/Taipei</time></div>
+            </summary>
+            <div class="card-body">
+              <p>前次 capture：2026-06-24 Crimea bridge，2026-07-05 Russia oil terminal pressure。新事實是 Crimea 死亡報告與 Trump 分別通話同時出現。</p>
+              <p>重要性：Kyiv 以打擊俄占區展示能力，同時在峰會前把美方注意力拉回戰場現實。</p>
+              <p>不確定性：Russia 稱占領 Kostyantynivka，Ukraine 否認，戰場控制權仍有衝突說法。</p>
+              <div class="source-block">來源標籤：AP - https://apnews.com/article/russia-ukraine-crimea-trump-zelenskyy-putin-7d85005373e69a417a9a74899c053d5c</div>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" style="--bg: url('https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1800&q=80');">
+      <div class="slide-inner">
+        <h2>全球新聞 5-7：能源、野火、地震治理</h2>
+        <p class="section-lead">市場和災害都進入續航階段：增產、跨國消防與死亡數上修同時考驗執行力。</p>
+        <div class="card-grid three">
+          <details class="card global-card" open>
+            <summary>
+              <div class="summary-top"><span class="rank">5</span><h3 class="card-title">OPEC+ 七國同意 8 月每日增產 18.8 萬桶</h3></div>
+              <div class="time"><time datetime="2026-07-05T18:47:52Z">2026-07-06 02:47:52 Asia/Taipei</time></div>
+            </summary>
+            <div class="card-body">
+              <p>Saudi Arabia、Russia、Iraq、Kuwait、Kazakhstan、Algeria、Oman 同意 8 月增產，Brent 回落到每桶 72 美元以下。</p>
+              <p>重要性：市場重新定價 U.S.-Iran interim deal 與 Hormuz 供應風險，但船流和 Gulf repair 仍是限制。</p>
+              <div class="source-block">來源標籤：AP - https://apnews.com/article/opec-increase-oil-production-iran-hormuz-bae40a1146cea569ddfdfc39d4867441</div>
+            </div>
+          </details>
+          <details class="card global-card" open>
+            <summary>
+              <div class="summary-top"><span class="rank">6</span><h3 class="card-title">續報｜Portugal、Greece、Spain 野火同步升高</h3></div>
+              <div class="time"><time datetime="2026-07-05T12:27:42Z">2026-07-05 20:27:42 Asia/Taipei</time></div>
+            </summary>
+            <div class="card-body">
+              <p>前次 capture：2026-07-05 Thessaloniki wildfire。新事實是 Portugal 需 Spain 與 Italy 支援，Greece 新增 Oraiokastro evacuations。</p>
+              <p>重要性：南歐熱浪季已是多國消防與都市邊界風險測試。</p>
+              <div class="source-block">來源標籤：AP - https://apnews.com/article/greece-portugal-wildfire-vouzela-thessaloniki-f2ad8db8f37063ba0f06adb25fbd7a78</div>
+            </div>
+          </details>
+          <details class="card global-card" open>
+            <summary>
+              <div class="summary-top"><span class="rank">7</span><h3 class="card-title">續報｜Venezuela 地震死亡數突破 3,000</h3></div>
+              <div class="time"><time datetime="2026-07-05T21:50:42Z">2026-07-06 05:50:42 Asia/Taipei</time></div>
+            </summary>
+            <div class="card-body">
+              <p>前次 capture：2026-06-26、06-27、06-29、07-03。新事實是死亡數破 3,000，Interim President Delcy Rodriguez 為官方救災辯護。</p>
+              <p>不確定性：官方與災民對救援速度、建築品質和物資分配的說法仍衝突。</p>
+              <div class="source-block">來源標籤：The Guardian - https://www.theguardian.com/world/2026/jul/05/rodriguez-defends-venezuelas-emergency-earthquake-response-as-bodies-expected-to-soar</div>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" style="--bg: url('https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1800&q=80');">
+      <div class="slide-inner">
+        <h2>全球新聞 8-10：制度延宕、街頭政治、公共安全</h2>
+        <p class="section-lead">Syria 過渡機構、Albania 抗議與 Chicago 航空安全事件分別呈現制度和公共風險的細部壓力。</p>
+        <div class="card-grid three">
+          <details class="card global-card" open>
+            <summary>
+              <div class="summary-top"><span class="rank">8</span><h3 class="card-title">Syria 延後 transitional parliament 首次會議</h3></div>
+              <div class="time"><time datetime="2026-07-05T16:19:03Z">2026-07-06 00:19:03 Asia/Taipei</time></div>
+            </summary>
+            <div class="card-body">
+              <p>原訂週一召開的 people&apos;s assembly 首次會議延期，日期另定，官方未說明原因。</p>
+              <p>重要性：Assad 下台後五年 transitional period 的制度可預測性被削弱，Suwayda 與 Kurdish areas 整合疑慮升高。</p>
+              <div class="source-block">來源標籤：Al Jazeera - https://www.aljazeera.com/news/2026/7/5/syria-delays-first-session-of-transitional-parliament-without-explanation</div>
+            </div>
+          </details>
+          <details class="card global-card" open>
+            <summary>
+              <div class="summary-top"><span class="rank">9</span><h3 class="card-title">Albania 第 35 夜抗議，Kushner-linked resort 爭議擴大</h3></div>
+              <div class="time"><time datetime="2026-07-05T01:14:52Z">2026-07-05 09:14:52 Asia/Taipei</time></div>
+            </summary>
+            <div class="card-body">
+              <p>Tirana 抗議者要求 Edi Rama 下台、成立臨時政府並處理修憲與反貪腐；粉紅 flamingo 成為保護區開發爭議象徵。</p>
+              <p>不確定性：人數、土地權屬、環境影響和貪腐指控仍有不同敘事。</p>
+              <div class="source-block">來源標籤：AP - https://apnews.com/article/resort-prime-minister-rama-kushner-flamingos-resort-9e2cbb682d9445f2e2d946c44ea2fecd</div>
+            </div>
+          </details>
+          <details class="card global-card" open>
+            <summary>
+              <div class="summary-top"><span class="rank">10</span><h3 class="card-title">Delta 航班降落 Chicago 前疑似遭煙火擊中</h3></div>
+              <div class="time"><time datetime="2026-07-05T20:24:09Z">2026-07-06 04:24:09 Asia/Taipei</time></div>
+            </summary>
+            <div class="card-body">
+              <p>Delta flight 1076 在接近 Chicago Midway 約 200 至 250 英尺高度時，機師回報疑似 firework hit；52 名乘客與 6 名機組員安全降落。</p>
+              <p>不確定性：是否確為煙火、損傷與責任來源仍由 FAA / Delta 調查。</p>
+              <div class="source-block">來源標籤：AP - https://apnews.com/article/delta-airplane-firework-strike-july-fourth-c78aaa6e99bc9a8171c621b6420e5db2</div>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" style="--bg: url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1800&q=80');">
+      <div class="slide-inner">
+        <h2>科技 / AI：管制、部署與安全欄位</h2>
+        <p class="section-lead">今日沒有大型 frontier model 發布，重點是產品被關停、robotaxi 擴張、AI roll-up 商業模式與雲端安全相容性。</p>
+        <div class="card-grid">
+          <details class="card tech-card" open>
+            <summary>
+              <div class="summary-top"><span class="tech-id">T1</span><h3 class="card-title">Doubao / Qwen 關停 humanlike 與 user-created AI agents</h3></div>
+              <div class="time"><time datetime="2026-07-05T14:19:23Z">2026-07-05 22:19:23 Asia/Taipei</time></div>
+            </summary>
+            <div class="card-body">
+              <p>ByteDance Doubao 與 Alibaba Qwen 在中國 7 月 15 日 anthropomorphic AI interaction rules 前停用客製 agent / humanlike agent 功能。</p>
+              <p>重要性：AI companion 從功能競賽轉入人格化互動管制，資料保留與替代功能將成焦點。</p>
+              <div class="source-block">來源標籤：The Next Web - https://thenextweb.com/news/china-humanlike-ai-agent-rules<br>來源標籤：SCMP - https://www.scmp.com/tech/big-tech/article/3359482/bytedance-and-alibaba-disable-humanlike-ai-custom-agents-new-rules-loom</div>
+            </div>
+          </details>
+          <details class="card tech-card" open>
+            <summary>
+              <div class="summary-top"><span class="tech-id">T2</span><h3 class="card-title">Tesla Robotaxi 據報在 Miami 推出無安全員服務</h3></div>
+              <div class="time"><time datetime="2026-07-05T20:04:55Z">2026-07-06 04:04:55 Asia/Taipei</time></div>
+            </summary>
+            <div class="card-body">
+              <p>The Information / Techmeme 彙整指向 Tesla 在 Miami 推出 without safety monitor 的 Robotaxi service，並成為第五座城市。</p>
+              <p>不確定性：車隊規模、operating design domain、遠端監控與保險安排尚未完整公開。</p>
+              <div class="source-block">來源標籤：The Information - https://www.theinformation.com/briefings/tesla-expands-robotaxi-service-miami<br>來源標籤：Techmeme - https://www.techmeme.com/260705/p10</div>
+            </div>
+          </details>
+          <details class="card tech-card" open>
+            <summary>
+              <div class="summary-top"><span class="tech-id">T3</span><h3 class="card-title">Bending Spoons 上市後 AI roll-up 模式受檢驗</h3></div>
+              <div class="time"><time datetime="2026-07-05T13:33:32Z">2026-07-05 21:33:32 Asia/Taipei</time></div>
+            </summary>
+            <div class="card-body">
+              <p>TechCrunch 聚焦 AOL / Vimeo owner Bending Spoons 的上市後策略：收購成熟軟體與媒體品牌，再用 tech、AI、pricing 與 layoffs 改善財務。</p>
+              <p>不確定性：這是 public-company explainer，不是單一產品發布；AI 對營收與品質的貢獻需等財報驗證。</p>
+              <div class="source-block">來源標籤：TechCrunch - https://techcrunch.com/2026/07/05/what-is-bending-spoons-everything-to-know-about-aols-acquirer/</div>
+            </div>
+          </details>
+          <details class="card tech-card" open>
+            <summary>
+              <div class="summary-top"><span class="tech-id">T4</span><h3 class="card-title">Google Cloud SecOps 保留 `siemAlertId` 欄位</h3></div>
+              <div class="time"><time datetime="2026-07-05T00:00:00Z">2026-07-05 08:00:00 Asia/Taipei，日期型官方生效時間</time></div>
+            </summary>
+            <div class="card-body">
+              <p>Google Cloud release notes 說明，自 2026-07-05 起 `siemAlertId` 嚴格保留給 Chronicle SIEM internal alert IDs，系統會覆寫傳入的 custom 或 user-supplied data。</p>
+              <p>重要性：可能影響 ingestion pipeline、事件關聯、playbook 與客戶端資料模型。</p>
+              <div class="source-block">來源標籤：Google Cloud release notes - https://docs.cloud.google.com/release-notes</div>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" style="--bg: url('https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1800&q=80');">
+      <div class="slide-inner">
+        <h2>綜合判讀與後續追蹤</h2>
+        <p class="section-lead">今日共同線索是「公開承諾是否能轉成可驗證行動」，從峰會、戰場、能源到 AI app 管制都相同。</p>
+        <div class="card-grid">
+          <details class="card" open>
+            <summary>
+              <div class="summary-top"><span class="tag">判</span><h3 class="card-title">外交重點從承諾轉向忠誠與執行</h3></div>
+              <div class="time">NATO、Ukraine、Syria、Iran</div>
+            </summary>
+            <div class="card-body">
+              <p>Rutte 需要把歐洲防務支出轉成 Trump 可接受的政治承諾；Zelenskyy 與 al-Sharaa 會談則把 Ukraine 與中東交易放到同一峰會節奏。</p>
+              <div class="source-block">來源標籤：AP NATO / Trump-Zelenskyy reporting - https://apnews.com/article/nato-summit-rutte-stoltenberg-trump-flattery-pitch-f8379b038dfbbf7afde80bb50a0bd96e</div>
+            </div>
+          </details>
+          <details class="card" open>
+            <summary>
+              <div class="summary-top"><span class="tag">災</span><h3 class="card-title">災害續報必須看新增事實</h3></div>
+              <div class="time">Venezuela 與 Europe wildfires</div>
+            </summary>
+            <div class="card-body">
+              <p>Venezuela 因死亡數破 3,000 與官方政治辯護入選；Europe wildfires 因多國消防支援與新撤離節點入選。</p>
+              <div class="source-block">來源標籤：本日 source notes - https://lucaskk.github.io/daily-news/wiki/daily/2026/07/2026-07-06/source-notes-2026-07-06.md</div>
+            </div>
+          </details>
+          <details class="card" open>
+            <summary>
+              <div class="summary-top"><span class="tag">AI</span><h3 class="card-title">AI 今日主變化是被關掉或被管起來</h3></div>
+              <div class="time">Agent regulation、AV safety、SecOps data model</div>
+            </summary>
+            <div class="card-body">
+              <p>Doubao / Qwen 關停人格化 agents、Tesla 無安全員 robotaxi 與 Google Cloud reserved field，都比模型能力更靠近真實部署風險。</p>
+              <div class="source-block">來源標籤：The Next Web AI agent reporting - https://thenextweb.com/news/china-humanlike-ai-agent-rules</div>
+            </div>
+          </details>
+          <details class="card" open>
+            <summary>
+              <div class="summary-top"><span class="tag">追</span><h3 class="card-title">後續追蹤清單</h3></div>
+              <div class="time">5 個觀察點</div>
+            </summary>
+            <div class="card-body">
+              <p>追蹤 Mojtaba 是否公開露面、NATO 是否形成具體文件、OPEC+ 增產是否被 Hormuz 限制抵消、Doubao / Qwen 合規替代功能、Tesla Miami Robotaxi 的監管與安全資料。</p>
+              <div class="source-block">來源標籤：本日日報後續追蹤 - https://lucaskk.github.io/daily-news/wiki/daily/2026/07/2026-07-06/daily-news-2026-07-06.md</div>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" style="--bg: url('https://images.unsplash.com/photo-1484807352052-23338990c6c6?auto=format&fit=crop&w=1800&q=80');">
+      <div class="slide-inner">
+        <h2>來源索引</h2>
+        <p class="section-lead">每張新聞卡片已在展開內容尾端放入完整 URL；本頁保留主要來源與圖片來源，方便手機端檢查。</p>
+        <div class="card-grid">
+          <details class="card" open>
+            <summary>
+              <div class="summary-top"><span class="tag">新</span><h3 class="card-title">主要新聞來源</h3></div>
+              <div class="time">AP、The Guardian、Al Jazeera</div>
+            </summary>
+            <div class="card-body">
+              <p>AP 用於 Iran、NATO、Ukraine / Syria、Crimea、OPEC+、wildfires、Albania 與 Delta；The Guardian 用於 Venezuela 地震續報；Al Jazeera 用於 Syria parliament delay。</p>
+              <div class="source-block">來源標籤：AP / Guardian / Al Jazeera 原始 URL 請見各展開新聞卡與 source notes - https://lucaskk.github.io/daily-news/wiki/daily/2026/07/2026-07-06/source-notes-2026-07-06.md</div>
+            </div>
+          </details>
+          <details class="card" open>
+            <summary>
+              <div class="summary-top"><span class="tag">科</span><h3 class="card-title">主要科技來源</h3></div>
+              <div class="time">TNW、SCMP、The Information、Techmeme、TechCrunch、Google Cloud</div>
+            </summary>
+            <div class="card-body">
+              <p>科技段重點是 AI agent 關停、Robotaxi 擴張、AI roll-up 策略與 Google Cloud SecOps breaking change。</p>
+              <div class="source-block">來源標籤：本日科技來源索引 - https://lucaskk.github.io/daily-news/wiki/daily/2026/07/2026-07-06/source-notes-2026-07-06.md</div>
+            </div>
+          </details>
+          <details class="card" open>
+            <summary>
+              <div class="summary-top"><span class="tag">圖</span><h3 class="card-title">背景圖片來源</h3></div>
+              <div class="time">Unsplash remote images</div>
+            </summary>
+            <div class="card-body">
+              <p>所有背景圖使用 Unsplash `images.unsplash.com` 穩定遠端圖片 URL，並在 HTML 註解中列出每張原始圖片位址。</p>
+              <div class="source-block">來源標籤：Unsplash image host - https://images.unsplash.com/</div>
+            </div>
+          </details>
+          <details class="card" open>
+            <summary>
+              <div class="summary-top"><span class="tag">檔</span><h3 class="card-title">本日知識庫檔案</h3></div>
+              <div class="time">Daily report + source notes</div>
+            </summary>
+            <div class="card-body">
+              <p>日報保留 Traditional Chinese synthesis；source notes 保留精確 24 小時窗、UTC 依據、去重與排除項。</p>
+              <div class="source-block">來源標籤：本日日報 - https://lucaskk.github.io/daily-news/wiki/daily/2026/07/2026-07-06/daily-news-2026-07-06.md</div>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="counter" id="counter">1 / 9</div>
+  <nav class="controls" aria-label="投影片導覽">
+    <button type="button" id="prev" aria-label="上一頁">‹</button>
+    <button type="button" id="next" aria-label="下一頁">›</button>
+  </nav>
+
+  <script>
+    const slides = Array.from(document.querySelectorAll('.slide'));
+    const counter = document.getElementById('counter');
+    let index = 0;
+
+    function showSlide(nextIndex) {
+      index = Math.max(0, Math.min(slides.length - 1, nextIndex));
+      slides.forEach((slide, slideIndex) => {
+        slide.classList.toggle('active', slideIndex === index);
+      });
+      counter.textContent = `${index + 1} / ${slides.length}`;
+      history.replaceState(null, '', `#${index + 1}`);
+    }
+
+    document.getElementById('prev').addEventListener('click', () => showSlide(index - 1));
+    document.getElementById('next').addEventListener('click', () => showSlide(index + 1));
+
+    window.addEventListener('keydown', (event) => {
+      if (event.target && ['INPUT', 'TEXTAREA', 'SELECT'].includes(event.target.tagName)) return;
+      if (['ArrowRight', 'PageDown', ' '].includes(event.key)) {
+        event.preventDefault();
+        showSlide(index + 1);
+      } else if (['ArrowLeft', 'PageUp'].includes(event.key)) {
+        event.preventDefault();
+        showSlide(index - 1);
+      } else if (event.key === 'Home') {
+        event.preventDefault();
+        showSlide(0);
+      } else if (event.key === 'End') {
+        event.preventDefault();
+        showSlide(slides.length - 1);
+      }
+    });
+
+    const hashIndex = Number.parseInt(location.hash.replace('#', ''), 10);
+    if (Number.isFinite(hashIndex) && hashIndex >= 1) {
+      showSlide(hashIndex - 1);
+    } else {
+      showSlide(0);
+    }
+  </script>
+</body>
+</html>

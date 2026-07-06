@@ -2,7 +2,7 @@
 title: "Knowledge Base Index"
 type: overview
 created: 2026-05-24
-updated: 2026-07-02
+updated: 2026-07-06
 status: seed
 tags: [index]
 sources: []
@@ -26,6 +26,12 @@ sources: []
 
 - [每日全球與科技 AI 新聞產製規則](daily/README.md) - 包含研究截點前 24 小時限制、跨日去重、重大續報判定、來源紀錄與發布驗證規則。
 
+- [2026-07-06 Daily News](daily/2026/07/2026-07-06/daily-news-2026-07-06.md) - 今日主軸是峰會前的忠誠測試、戰爭續報與平台治理：Iran 葬禮新增家族與高層露面但 Mojtaba 仍未現身，NATO Ankara 峰會前 Trump 要求 loyalty，Trump 將會晤 Zelenskyy 與 Syria 的 al-Sharaa，Ukraine Crimea attack、OPEC+ 增產、南歐野火、Venezuela 死亡數破 3,000、Syria parliament delay、Albania protest 與 Delta fireworks incident 補足全球議程。科技／AI 聚焦 Doubao / Qwen 關停人格化 agents、Tesla Miami Robotaxi、Bending Spoons AI roll-up 與 Google Cloud SecOps `siemAlertId` breaking change。
+- [2026-07-06 Slides](daily/2026/07/2026-07-06/slides-2026-07-06.html) - 今日新聞網頁版投影片。
+- [2026-07-05 Daily News](daily/2026/07/2026-07-05/daily-news-2026-07-05.md) - 今日主軸是戰爭壓力、政治動員與 AI 工具治理：Ukraine 再擊 St. Petersburg oil terminal，Iran 啟動 Khamenei 葬禮並延後談判節奏，China 軍方晉升新上將，AfD 連任雙主席並引發大規模抗議。Mali rebel attacks、Pope Leo XIV Lampedusa 移民行程、Thessaloniki wildfire、Gaza 48 小時傷亡與 U.S. July Fourth storms 補足全球安全和公共風險。科技／AI 聚焦 Google AI civic advertising、Midjourney discovery fight、Alibaba reportedly banning Claude Code 與 Claude Code session/cache leakage issue。
+- [2026-07-05 Slides](daily/2026/07/2026-07-05/slides-2026-07-05.html) - 今日新聞網頁版投影片。
+- [2026-07-03 Daily News](daily/2026/07/2026-07-03/daily-news-2026-07-03.md) - 今日主軸是衝突責任、制度執行與 AI 企業化：Russia 對 Kyiv 11 小時無人機與飛彈攻擊造成至少 21 死；Vatican 正式宣告 SSPX 分裂並開除主教、神父教籍；Germany 起訴 Nord Stream 爆炸案 Ukrainian suspect；Gaza 戰爭滿 1000 天並彙整停火後死亡、控制區與重建停滯。Japan-India 防務與 AI 合作、Germany reform package、Canada-Philippines FTA / maritime cooperation、Côte d'Ivoire floods、WHO hantavirus outbreak over 與 Venezuela 地震八天後救援補足全球議程。科技／AI 聚焦 Microsoft Frontier Company、OpenAI 5% sovereign wealth fund proposal、Anthropic-Samsung custom chip talks、Meta Pocket、GitHub Copilot CLI / session streaming / AI credit pools / Issue fields MCP、Neo AI-first office platform 與 Google / Amazon AI infrastructure emissions。
+- [2026-07-03 Slides](daily/2026/07/2026-07-03/slides-2026-07-03.html) - 今日新聞網頁版投影片。
 - [2026-07-02 Daily News](daily/2026/07/2026-07-02/daily-news-2026-07-02.md) - 今日主軸是執行節點與平台控制權：U.S.-Iran Qatar 會談取得正面進展但仍不直接接觸；Ukraine drone pressure 對 Russia fuel system 的影響被 AP 量化為二十多年來最低煉油量；AP 重建 Iran Minab 小學空襲，USMCA 不續約、Trump crypto disclosure、Afghanistan / Pakistan drone and airstrike claims、SSPX 主教祝聖、全球海洋 hottest June、Romania storms 與 Qatar 贈送 Air Force One 首航補足全球議程。科技／AI 聚焦 Cloudflare AI crawler controls / x402、Anthropic Fable 5 / Mythos 5 redeployment、Gemini Spark for Mac、GitHub Copilot vision / Kimi / Models retirement / governance controls、Together AI、Venice AI 與 NVIDIA Build in America。
 - [2026-07-02 Slides](daily/2026/07/2026-07-02/slides-2026-07-02.html) - 今日新聞網頁版投影片。
 - [2026-07-01 Daily News](daily/2026/07/2026-07-01/daily-news-2026-07-01.md) - 今日主軸是制度界線與 AI 交付面重畫：U.S. Supreme Court 同日處理出生公民權、競選支出與跨性別運動員規則；U.S.-Iran Qatar 管道推進到 60 億美元資產與 Hormuz 執行談判；Monaco 爆炸調查、UK defense investment、Spain 移民合法化、Pakistan 補習中心倒塌、South Africa 排外暴力、Nigeria 學校擄人與 Ghana / Ivory Coast 洪水補足安全與治理壓力。科技／AI 聚焦 Claude Sonnet 5、Claude Science、Google Nano Banana 2 Lite / Gemini Omni Flash、Amazon FDE、X MCP server、Proton Lumo 2.0、Etched、OpenClaw mobile 與 Acti AI keyboard。
@@ -34,6 +40,10 @@ sources: []
 - [2026-06-30 Slides](daily/2026/06/2026-06-30/slides-2026-06-30.html) - 今日新聞網頁版投影片。
 - [2026-06-29 Daily News](daily/2026/06/2026-06-29/daily-news-2026-06-29.md) - 今日主軸是協議壓力與基礎設施瓶頸：Iran 攻擊 Bahrain/Kuwait，美伊臨時協議再次受測；Ukraine 再擊俄羅斯煉油廠且 Putin 承認燃料短缺；France 熱浪額外死亡約 1,000 人；Pakistan 沿 Afghan 邊境行動擊斃 29 人；Venezuela 地震四日後仍救出倖存者。Saudi Aramco 直升機事故、Israel/Lebanon/Syria/Hezbollah 壓力、Argentina 貪腐辭職、Israel Armenian genocide recognition、Uganda 媒體關閉補足全球議程。科技／AI 聚焦 Firmus/NVIDIA Batam AI Factory、Google 對 Meta 的 Gemini 容量限制、Ford AI 品質回補、Micron 記憶體荒、Kunlunxin IPO 與 NPCI UPI AI roadmap。
 - [2026-06-29 Slides](daily/2026/06/2026-06-29/slides-2026-06-29.html) - 今日新聞網頁版投影片。
+- [2026-06-27 Daily News](daily/2026/06/2026-06-27/daily-news-2026-06-27.md) - 今日主軸是停火、災害與 AI 發布同時進入管制式執行：U.S. strikes Iran after the Ever Lovely attack 讓 Hormuz 停火遭遇最大壓力；Israel 與 Lebanon 簽署美國斡旋和平框架但 Hezbollah 執行風險仍高；Venezuela 地震死亡數上修到 920；Europe heatwave 再破 UK 六月紀錄；Ukraine 發動 660-drone 級別大規模襲俄，South Korea 則宣布訓練 50 萬 drone warriors。產業與制度面包含 Trump digital services tax 100% tariff threat、Volkswagen 10 萬裁員報導、Beijing CITIC Tower 小型飛機事故與 John Bolton guilty plea。科技／AI 聚焦 OpenAI GPT-5.6 restricted preview、GitHub Desktop 3.6、MAI-Code-1-Flash enterprise GA、Copilot adoption metrics、TikTok super app、Aseon robotaxi pitstops 與 Corgi / Papermark open-source dispute。
+- [2026-06-27 Slides](daily/2026/06/2026-06-27/slides-2026-06-27.html) - 今日新聞網頁版投影片。
+- [2026-06-26 Daily News](daily/2026/06/2026-06-26/daily-news-2026-06-26.md) - 今日主軸是災害、極端高溫與制度回擊同步進入可驗證節點：Venezuela 雙強震造成至少 188 人死亡；Europe heatwave 刷新 UK / Switzerland 六月紀錄並壓迫醫療、核電與學校系統；Hormuz 船員撤離因貨船 Ever Lovely 遭擊暫停；U.S. Supreme Court 和 Senate 分別在 immigration 與 Iran war powers 上給 Trump 政府重大結果。科技／AI 聚焦 Apple / Xbox 漲價、Google Finance / Gemini Study notebooks、GitHub Copilot governance、General Intuition / Patronus agent simulation、Notion Mail shutdown 與 NHTSA 自駕規則。
+- [2026-06-26 Slides](daily/2026/06/2026-06-26/slides-2026-06-26.html) - 今日新聞網頁版投影片。
 - [2026-06-24 Daily News](daily/2026/06/2026-06-24/daily-news-2026-06-24.md) - 今日主軸是協議履約進入驗證：美伊對 UN / IAEA 核查說法公開衝突，美國參議院首次通過 Iran war powers resolution；歐洲熱浪創 44.3°C 並造成公共安全壓力，Ukraine 打擊 Crimea railway bridge，UN inquiry 將 Gaza children targeting 連到 genocide 指控。市場因 AI infrastructure debt 與利率憂慮回檔，EU/Taliban、Alibaba lawsuit、Peru recognition crisis 與 South Africa anti-migrant violence 補足制度與地緣風險。科技／AI 聚焦 Claude Tag、Copilot BYOK / CLI GA、Meta Glasses、Azure Observability、Chrome / Wallet autofill、YouTube Gemini tools、Google financial verification 與 disaster AI。
 - [2026-06-24 Slides](daily/2026/06/2026-06-24/slides-2026-06-24.html) - 今日新聞網頁版投影片。
 - [2026-06-23 Daily News](daily/2026/06/2026-06-23/daily-news-2026-06-23.md) - 今日主軸是英國首相 Keir Starmer 正式辭職、美伊瑞士談判轉為 IAEA 返場與油品豁免履約框架、Ukraine 無人機壓向 Moscow；西歐熱浪、Australia H5N1、Czech 公媒罷工、Spain Ábalos 判刑、easyJet bid、U.S. housing bill 與 Greenspan 逝世補足制度、市場與公共風險。科技／AI 聚焦 Copilot JetBrains / Claude provider、Alexa+ Hindi beta、Instagram TV、Reflection AI–SpaceX compute、Garfield AI、London LFR、AI gas-pricing lawsuit、Klue breach 與 WhatsApp/CRED。

@@ -1,12 +1,25 @@
 # Knowledge Base Log
 
+## [2026-07-06] ingest | Daily global and tech AI news
+
+- Created `wiki/daily/2026/07/2026-07-06/daily-news-2026-07-06.md` with exactly 10 global items and four technology / AI product and platform items.
+- Recorded the exact Asia/Taipei 24-hour window, per-item event or publication-time basis, five material continuations and duplicate / out-of-window exclusions in `source-notes-2026-07-06.md`.
+- Created `slides-2026-07-06.html` as a standalone HTML deck with topical backgrounds, keyboard/browser navigation and expandable cards ending with complete source URLs.
+- Updated `wiki/daily/latest-slides.html`, `wiki/index.md`, `wiki/overview.md`, and the root Pages entry timestamp.
+
+## [2026-07-03] ingest | Daily global and tech AI news
+
+- Created `wiki/daily/2026/07/2026-07-03/daily-news-2026-07-03.md` with exactly 10 global items and 10 technology / AI product and platform items.
+- Recorded the exact Asia/Taipei 24-hour window, per-item event or publication-time basis, five material continuations and excluded duplicate or lower-priority candidates in `source-notes-2026-07-03.md`.
+- Created `slides-2026-07-03.html` as a standalone HTML deck with topical backgrounds, keyboard/browser navigation and expandable cards ending with complete source URLs.
+- Updated `wiki/daily/latest-slides.html`, `wiki/index.md`, `wiki/overview.md`, and the root Pages entry timestamp.
+
 ## [2026-07-02] ingest | Daily global and tech AI news
 
 - Created `wiki/daily/2026/07/2026-07-02/daily-news-2026-07-02.md` with exactly 10 global items and 10 technology / AI product and platform items.
 - Recorded the exact Asia/Taipei 24-hour window, per-item event or publication-time basis, six continuations and excluded duplicate or lower-priority candidates in `source-notes-2026-07-02.md`.
 - Created `slides-2026-07-02.html` as a standalone HTML deck with topical backgrounds, keyboard/browser navigation and expandable cards ending with complete source URLs.
 - Updated `wiki/daily/latest-slides.html`, `wiki/index.md`, `wiki/overview.md`, and the root Pages entry timestamp.
-- Published from a clean latest-main worktree after the first unauthenticated HTTPS push failed.
 
 ## [2026-07-01] ingest | Daily global and tech AI news
 
@@ -31,6 +44,13 @@
 - Created `wiki/daily/2026/06/2026-06-29/daily-news-2026-06-29.md` with exactly 10 global items and six technology / AI product and platform items.
 - Recorded the exact Asia/Taipei 24-hour window, per-item event or publication-time basis, five global continuations and excluded duplicate or out-of-window candidates in `source-notes-2026-06-29.md`.
 - Created `slides-2026-06-29.html` as a standalone HTML deck with sequential Top 10 grouping, thematic backgrounds, keyboard/browser navigation and expandable cards ending with complete source URLs.
+- Updated `wiki/daily/latest-slides.html`, `wiki/index.md`, `wiki/overview.md`, and the root Pages entry timestamp.
+
+## [2026-06-27] ingest | Daily global and tech AI news
+
+- Created `wiki/daily/2026/06/2026-06-27/daily-news-2026-06-27.md` with exactly 10 global items and seven technology / AI product items.
+- Recorded the exact Asia/Taipei 24-hour window, per-item event or publication-time basis, five global continuations, one technology continuation and excluded duplicates in `source-notes-2026-06-27.md`.
+- Created `slides-2026-06-27.html` as a standalone HTML deck with sequential Top 10 grouping, thematic backgrounds, keyboard/browser navigation and expandable cards ending with complete source URLs.
 - Updated `wiki/daily/latest-slides.html`, `wiki/index.md`, `wiki/overview.md`, and the root Pages entry timestamp.
 
 ## [2026-06-24] ingest | Daily global and tech AI news
@@ -435,3 +455,19 @@
 - Recorded the exact Asia/Taipei cutoff, UTC publication bases, five material continuations, full-archive deduplication and old-product exclusions in the source notes.
 - Built a nine-slide standalone HTML deck with responsive backgrounds, keyboard / touch controls, expandable cards and per-card complete source URLs.
 - Updated the latest-slides redirect, knowledge-base index, overview and root GitHub Pages entry.
+
+## [2026-06-26] ingest | Daily global and tech AI news
+
+- Created `wiki/daily/2026/06/2026-06-26/daily-news-2026-06-26.md` and `source-notes-2026-06-26.md` after current web research and full-archive deduplication.
+- Selected exactly 10 global items under the 24-hour Asia/Taipei window; marked Hormuz, Europe heatwave, Iran war powers and Ukraine drones as material continuations with prior capture dates.
+- Added nine technology / AI product and platform items covering Apple / Xbox price increases, Google Finance, Gemini Study notebooks, GitHub Copilot updates, agent simulation platforms, Notion Mail shutdown and NHTSA AV rules.
+- Built `slides-2026-06-26.html` as an 11-slide standalone deck with keyboard / touch navigation, per-card expandable sources and visible image source notes.
+- Updated `wiki/daily/latest-slides.html`, `wiki/index.md`, `wiki/overview.md` and the root GitHub Pages entry timestamp.
+
+## [2026-07-05] ingest | Daily global and tech AI news
+
+- Created `wiki/daily/2026/07/2026-07-05/daily-news-2026-07-05.md` and `source-notes-2026-07-05.md` after current web research and full-archive deduplication.
+- Selected exactly 10 global items under the 2026-07-04 08:08:12 to 2026-07-05 08:08:12 Asia/Taipei window; marked Ukraine St. Petersburg strikes, Khamenei funeral and Gaza casualties as material continuations with prior capture dates.
+- Added four technology / AI items covering Google AI civic advertising, Midjourney discovery strategy, Alibaba reportedly banning Claude Code and a Claude Code session/cache leakage issue.
+- Built `slides-2026-07-05.html` as a standalone HTML deck with image-backed slides, keyboard / touch navigation, expandable cards and per-card complete source URLs.
+- Updated `wiki/daily/latest-slides.html`, `wiki/index.md`, `wiki/overview.md`, `wiki/log.md` and the root GitHub Pages entry timestamp.
