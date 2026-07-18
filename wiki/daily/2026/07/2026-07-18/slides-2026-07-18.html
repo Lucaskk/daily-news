@@ -1,0 +1,534 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>2026-07-18 Daily Global and Tech AI News</title>
+  <!--
+    Image sources are listed on the final slide with full URLs.
+    News sources are embedded at the end of each expandable card.
+  -->
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #172033;
+      --muted: #5f6b7a;
+      --panel: rgba(255, 255, 255, 0.92);
+      --panel-strong: rgba(255, 255, 255, 0.97);
+      --accent: #0f766e;
+      --accent-2: #b45309;
+      --line: rgba(15, 23, 42, 0.14);
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC", sans-serif;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; min-height: 100%; background: #0f172a; color: var(--ink); letter-spacing: 0; }
+    body { overflow: hidden; }
+    .deck {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+      background: #0f172a;
+    }
+    .slide {
+      position: absolute;
+      inset: 0;
+      display: none;
+      overflow-y: auto;
+      padding: clamp(20px, 4vw, 56px) clamp(16px, 5vw, 72px) 96px;
+      background-image:
+        linear-gradient(90deg, rgba(248, 250, 252, 0.95) 0%, rgba(248, 250, 252, 0.86) 42%, rgba(248, 250, 252, 0.32) 100%),
+        var(--bg);
+      background-size: cover;
+      background-position: center;
+    }
+    .slide.active { display: block; }
+    .slide::after {
+      content: "";
+      position: fixed;
+      inset: auto 0 0;
+      height: 96px;
+      pointer-events: none;
+      background: linear-gradient(0deg, rgba(15, 23, 42, 0.52), rgba(15, 23, 42, 0));
+    }
+    .content {
+      width: min(1180px, 100%);
+      margin: 0 auto;
+    }
+    .kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 10px;
+      border-radius: 6px;
+      background: rgba(15, 118, 110, 0.12);
+      color: #0f766e;
+      font-weight: 800;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+    }
+    h1, h2 {
+      max-width: 900px;
+      margin: 18px 0 14px;
+      line-height: 1.08;
+      letter-spacing: 0;
+      text-shadow: 0 1px 0 rgba(255,255,255,0.35);
+    }
+    h1 { font-size: clamp(2.5rem, 6vw, 5.8rem); }
+    h2 { font-size: clamp(2rem, 4vw, 4.2rem); }
+    .lead {
+      max-width: 940px;
+      font-size: clamp(1.05rem, 1.7vw, 1.4rem);
+      line-height: 1.65;
+      color: #273449;
+      background: rgba(255, 255, 255, 0.72);
+      padding: 14px 18px;
+      border-left: 5px solid var(--accent);
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 24px;
+    }
+    .grid.three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    details.card {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--panel);
+      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.15);
+      overflow: hidden;
+    }
+    details.card[open] { background: var(--panel-strong); }
+    summary {
+      cursor: pointer;
+      list-style: none;
+      padding: 16px 18px;
+      display: grid;
+      gap: 8px;
+      min-height: 116px;
+    }
+    summary::-webkit-details-marker { display: none; }
+    .summary-top {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--muted);
+      font-size: 0.86rem;
+      font-weight: 700;
+    }
+    .rank, .tag {
+      display: inline-grid;
+      place-items: center;
+      min-width: 30px;
+      height: 30px;
+      padding: 0 8px;
+      border-radius: 6px;
+      background: #0f766e;
+      color: white;
+      font-weight: 900;
+    }
+    .tag { background: #b45309; }
+    .card h3 {
+      margin: 0;
+      font-size: clamp(1rem, 1.35vw, 1.22rem);
+      line-height: 1.35;
+      letter-spacing: 0;
+    }
+    time {
+      color: #334155;
+      font-size: 0.92rem;
+      font-weight: 700;
+    }
+    .body {
+      padding: 0 18px 18px;
+      color: #1f2937;
+      line-height: 1.62;
+    }
+    .body p { margin: 10px 0; }
+    .body ul { margin: 10px 0 0; padding-left: 20px; }
+    .body li { margin: 6px 0; }
+    .sources {
+      margin-top: 14px;
+      padding: 12px;
+      border-radius: 7px;
+      background: rgba(15, 118, 110, 0.09);
+      border: 1px solid rgba(15, 118, 110, 0.2);
+      word-break: break-word;
+      font-size: 0.9rem;
+    }
+    .sources strong { color: #0f766e; }
+    .controls {
+      position: fixed;
+      z-index: 20;
+      left: 50%;
+      bottom: 18px;
+      transform: translateX(-50%);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px;
+      border-radius: 8px;
+      background: rgba(15, 23, 42, 0.88);
+      color: #f8fafc;
+      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.35);
+    }
+    button {
+      appearance: none;
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      border-radius: 6px;
+      background: rgba(255, 255, 255, 0.11);
+      color: #f8fafc;
+      padding: 10px 12px;
+      font-weight: 800;
+      cursor: pointer;
+    }
+    button:disabled { opacity: 0.42; cursor: default; }
+    .counter { min-width: 74px; text-align: center; font-weight: 800; }
+    .progress {
+      position: fixed;
+      z-index: 21;
+      left: 0;
+      bottom: 0;
+      height: 4px;
+      width: var(--progress, 8.33%);
+      background: #14b8a6;
+    }
+    @media (max-width: 860px) {
+      body { overflow: hidden; }
+      .slide {
+        padding: 20px 14px 96px;
+        background-image:
+          linear-gradient(180deg, rgba(248, 250, 252, 0.97) 0%, rgba(248, 250, 252, 0.9) 62%, rgba(248, 250, 252, 0.42) 100%),
+          var(--bg);
+      }
+      .grid, .grid.three { grid-template-columns: 1fr; }
+      summary { min-height: auto; }
+      .controls { width: calc(100vw - 24px); justify-content: space-between; }
+    }
+  </style>
+</head>
+<body>
+  <main class="deck" aria-live="polite">
+    <section class="slide active" style="--bg:url('https://images.unsplash.com/photo-1495020689067-958852a7765e?auto=format&fit=crop&w=1800&q=80')">
+      <div class="content">
+        <span class="kicker">Daily News｜2026-07-18</span>
+        <h1>全球與科技 AI 新聞</h1>
+        <p class="lead">研究截點：2026-07-18 08:02:22（Asia/Taipei）。本簡報只收錄前 24 小時內發生、首次可靠發布或有重大新進展的事件，並排除已被歷史日報捕捉的重複主線。</p>
+      </div>
+    </section>
+
+    <section class="slide" style="--bg:url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1800&q=80')">
+      <div class="content">
+        <span class="kicker">Research Window</span>
+        <h2>今日選題邊界</h2>
+        <div class="grid three">
+          <details class="card" open>
+            <summary><span class="summary-top"><span class="tag">窗</span>24 小時窗口</span><h3>2026-07-17 08:02:22 至 2026-07-18 08:02:22（Asia/Taipei）</h3></summary>
+            <div class="body">
+              <p>所有全球新聞與科技／AI 項目都以事件時間、首次可靠發布時間或官方 changelog 時間落在此窗口內為準；不以舊文更新時間補位。</p>
+              <div class="sources"><strong>來源｜本地 production rules</strong><br>file: wiki/daily/README.md</div>
+            </div>
+          </details>
+          <details class="card">
+            <summary><span class="summary-top"><span class="tag">10</span>全球新聞</span><h3>全球 Top 10 依影響範圍、跨媒體 prominence 與新事實排序。</h3></summary>
+            <div class="body">
+              <p>今日全球主軸集中在 U.S.-Iran / Hormuz 基礎設施風險、AI governance diplomacy、U.S. election administration pressure、Ukraine / Crimea logistics、Gaza civilian protection、wildfire smoke 與能源替代路線。</p>
+              <div class="sources"><strong>來源｜source notes</strong><br>file: wiki/daily/2026/07/2026-07-18/source-notes-2026-07-18.md</div>
+            </div>
+          </details>
+          <details class="card">
+            <summary><span class="summary-top"><span class="tag">AI</span>科技產品</span><h3>8 則科技／AI 產品與平台節點另列，不佔全球 Top 10。</h3></summary>
+            <div class="body">
+              <p>科技段落保留 Kimi K3、GitHub Copilot、Patreon / Cloudflare、Zoox recall、General Compute、AI memory crunch 與 Agility Robotics，避免重複 2026-07-17 的 Google / Grok / OnePlus 項目。</p>
+              <div class="sources"><strong>來源｜source notes</strong><br>file: wiki/daily/2026/07/2026-07-18/source-notes-2026-07-18.md</div>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" style="--bg:url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1800&q=80')">
+      <div class="content">
+        <span class="kicker">Top 10｜1-2</span>
+        <h2>戰爭基礎設施與 AI 治理</h2>
+        <div class="grid">
+          <details class="card" data-rank="1">
+            <summary><span class="summary-top"><span class="rank">1</span><time datetime="2026-07-17T04:11:26Z">發佈時間｜2026-07-17 12:11:26（Asia/Taipei）</time></span><h3>續報｜美國第七夜打擊伊朗，橋梁、港口塔台與科威特海水淡化廠受波及</h3></summary>
+            <div class="body">
+              <p>今日新進展是空襲從封鎖與港口壓力擴到橋梁、能源設施、港口塔台與 Kuwait desalination plant。這使 Hormuz 戰爭從海上通行問題，擴展為城市水電、港口監控與能源基礎設施韌性的壓力測試。</p>
+              <ul><li>AP 報導 U.S. 連續第七夜對 Iran 空襲。</li><li>Iran 對 Qatar 與 Kuwait 等 U.S. allies 發動新一波攻擊。</li><li>Kuwait 至少一座海水淡化廠受損。</li></ul>
+              <div class="sources"><strong>來源｜AP News</strong><br>https://apnews.com/article/iran-us-hormuz-strait-war-july-17-2026-2ad0cfe592eb258cb15a9eb04411d58a</div>
+            </div>
+          </details>
+          <details class="card" data-rank="2">
+            <summary><span class="summary-top"><span class="rank">2</span><time datetime="2026-07-17T05:38:33Z">發佈時間｜2026-07-17 13:38:33（Asia/Taipei）</time></span><h3>中國在上海 WAIC 倡議全球 AI 治理合作，對抗美國科技限制敘事</h3></summary>
+            <div class="body">
+              <p>Xi Jinping 在上海把 AI governance、發展中國家訓練、合作中心與美國 national security restrictions 放進同一個框架。這是模型能力之外的 AI 秩序競爭：誰能設定規則、提供基礎設施與吸引 Global South。</p>
+              <ul><li>中國承諾五年提供 5,000 個 AI training opportunities。</li><li>WAIC 演說批評過度延伸國安限制。</li><li>AI cooperation centers 會成為後續觀察點。</li></ul>
+              <div class="sources"><strong>來源｜AP News</strong><br>https://apnews.com/article/china-ai-tech-chips-xi-us-df4cfc7e1b260e765b5449b6d71a48e5</div>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" style="--bg:url('https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&w=1800&q=80')">
+      <div class="content">
+        <span class="kicker">Top 10｜3-4</span>
+        <h2>制度壓力與戰爭補給</h2>
+        <div class="grid">
+          <details class="card" data-rank="3">
+            <summary><span class="summary-top"><span class="rank">3</span><time datetime="2026-07-17T19:01:09Z">發佈時間｜2026-07-18 03:01:09（Asia/Taipei）</time></span><h3>Trump 選舉聲明後，DHS 以資金與調查威脅各州配合選民資料要求</h3></summary>
+            <div class="body">
+              <p>DHS secretary Markwayne Mullin 在 Trump 選舉演說隔日警告 states，不配合 election security demands 可能失去 funding 或面臨 investigations。此舉直接測試 U.S. federalism、州選務權限與 2026 midterms 前的選舉信任。</p>
+              <ul><li>DHS 表示將監控 public voter lists。</li><li>AP 引述專家稱相關威脅可能無法執行，且要求可能違法。</li><li>州政府與法院反應是下一步。</li></ul>
+              <div class="sources"><strong>來源｜AP News</strong><br>https://apnews.com/article/trump-elections-mullin-dhs-voter-fraud-save-6871e13d3f0e2caadaf56f9b2bc1580d</div>
+            </div>
+          </details>
+          <details class="card" data-rank="4">
+            <summary><span class="summary-top"><span class="rank">4</span><time datetime="2026-07-17T13:10:00Z">發佈時間｜2026-07-17 21:10:00（Asia/Taipei）</time></span><h3>續報｜烏克蘭稱切斷克里米亞燃料與電力生命線，俄占當局承認沒有恢復時程</h3></summary>
+            <div class="body">
+              <p>這是 Crimea fuel / power 主線的新節點。Ukraine commander 宣稱截至 7 月 16 日前十天打擊 147 艘 tankers，Kerch movement 停止或大幅下降；Russia-appointed Crimea governor 無法給出 gasoline / electricity restoration schedule。</p>
+              <ul><li>前次主線曾在 2026-06-13、06-22、07-02、07-06 收錄。</li><li>今日新增是 147 tanker claim 與無恢復時程。</li><li>戰略重點從打擊設施轉為維持能源斷點。</li></ul>
+              <div class="sources"><strong>來源｜Al Jazeera</strong><br>https://www.aljazeera.com/news/2026/7/17/ukraine-cuts-off-crimea-from-russia-plunging-it-into-an-energy-crisis</div>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" style="--bg:url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1800&q=80')">
+      <div class="content">
+        <span class="kicker">Top 10｜5-6</span>
+        <h2>平民安全與空氣風險</h2>
+        <div class="grid">
+          <details class="card" data-rank="5">
+            <summary><span class="summary-top"><span class="rank">5</span><time datetime="2026-07-17T15:25:28Z">發佈時間｜2026-07-17 23:25:28（Asia/Taipei）</time></span><h3>續報｜以色列空襲加薩葬禮造成至少 7 死 22 傷，停火後暴力再添新傷亡</h3></summary>
+            <div class="body">
+              <p>Gaza 本身已有多次 capture，但 funeral strike 是新事件：Awda Hospital 稱葬禮現場至少 7 死 22 傷，Israel military 則說目標是 terrorist cell。衝突點在 civilian gathering、targeting rules 與比例原則。</p>
+              <ul><li>襲擊發生在 central Gaza / Nuseirat 相關區域。</li><li>葬禮對象是週五稍早另一場攻擊死者。</li><li>以軍承認 civilians may have been harmed。</li></ul>
+              <div class="sources"><strong>來源｜AP News</strong><br>https://apnews.com/article/israel-palestinians-hamas-gaza-strike-9b0b91dca3ee1950bc0c5ff96d4a5259</div>
+            </div>
+          </details>
+          <details class="card" data-rank="6">
+            <summary><span class="summary-top"><span class="rank">6</span><time datetime="2026-07-17T20:29:46Z">發佈時間｜2026-07-18 04:29:46（Asia/Taipei）</time></span><h3>續報｜加拿大與明尼蘇達野火煙霾推進到華府，戶外賽事與城市空氣品質受衝擊</h3></summary>
+            <div class="body">
+              <p>前次 2026-07-16 已收錄 North America wildfire smoke。今日新增是 smoke 進一步籠罩 Washington, D.C.，並迫使 Cleveland Guardians / Pittsburgh Pirates MLB game 延後，顯示煙霾變成城市營運與公共健康問題。</p>
+              <ul><li>Great Lakes、Northeast、Mid-Atlantic 都受不健康空氣影響。</li><li>Air quality warnings 至少延續到 Saturday。</li><li>週末風暴可能短暫緩解，但火場仍未受控。</li></ul>
+              <div class="sources"><strong>來源｜AP News</strong><br>https://apnews.com/article/canada-minnesota-wildfires-smoke-251365af55a5111d8178b24a4d15e0af</div>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" style="--bg:url('https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1800&q=80')">
+      <div class="content">
+        <span class="kicker">Top 10｜7-8</span>
+        <h2>能源替代與海上安全</h2>
+        <div class="grid">
+          <details class="card" data-rank="7">
+            <summary><span class="summary-top"><span class="rank">7</span><time datetime="2026-07-17T19:36:24Z">發佈時間｜2026-07-18 03:36:24（Asia/Taipei）</time></span><h3>伊拉克與美國企業簽約約 600 億美元，推動繞開霍爾木茲的石油出口路線</h3></summary>
+            <div class="body">
+              <p>這是 Hormuz risk 的市場與基建回應：U.S. companies 與 Iraqi government 簽約約 600 億美元，包含替代 Persian Gulf oil shipping routes。不過 AP 也提醒，管線要形成可用替代路線至少需要多年。</p>
+              <ul><li>交易與 Strait of Hormuz 約五分之一全球石油流量風險相連。</li><li>可能涉及跨 Iraq、Syria 或其他路線。</li><li>短期仍無法解除航運壓力。</li></ul>
+              <div class="sources"><strong>來源｜AP News</strong><br>https://apnews.com/article/oil-iraq-pipeline-deal-582b42f21cb62cfe8dc6c8e73d1dcafa</div>
+            </div>
+          </details>
+          <details class="card" data-rank="8">
+            <summary><span class="summary-top"><span class="rank">8</span><time datetime="2026-07-17T11:18:53Z">發佈時間｜2026-07-17 19:18:53（Asia/Taipei）</time></span><h3>葉門外海化學油輪遭武裝人員登船，索馬利亞海盜疑慮回到亞丁灣航線</h3></summary>
+            <div class="body">
+              <p>一艘 chemical tanker 在 Gulf of Aden 遭 armed group boarding。UKMTO 指 unauthorized personnel boarded south of al-Mukalla，Ambrey 懷疑 Somali pirates；Korean naval vessel 正前往協助。這在 Red Sea / Yemen tension 之外加上海盜風險。</p>
+              <ul><li>登船者身分、船員狀態與動機仍未確認。</li><li>若 piracy risk 回升，保險與護航成本會增加。</li><li>事件位於已高度緊張的 Yemen / Gulf of Aden 航線。</li></ul>
+              <div class="sources"><strong>來源｜AP News</strong><br>https://apnews.com/article/yemen-gulf-of-aden-vessel-war-houthis-2d055cb4b17184e4d3637d96a2ce7256</div>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" style="--bg:url('https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?auto=format&fit=crop&w=1800&q=80')">
+      <div class="content">
+        <span class="kicker">Top 10｜9-10</span>
+        <h2>公共安全與歐洲威懾</h2>
+        <div class="grid">
+          <details class="card" data-rank="9">
+            <summary><span class="summary-top"><span class="rank">9</span><time datetime="2026-07-17T08:05:35Z">發佈時間｜2026-07-17 16:05:35（Asia/Taipei）</time></span><h3>烏干達校車從瀑布校外教學返程翻覆，至少 20 名兒童與 1 名成人死亡</h3></summary>
+            <div class="body">
+              <p>Uganda school bus crash 造成至少 20 名 children 與 1 名 adult 死亡，9 名 children critical。政府隨即 suspend all school trips，代表事故已從單點悲劇轉成校外教學與道路安全政策問題。</p>
+              <ul><li>事故地點在 Kapchorwa District。</li><li>校車從 Sipi Falls elementary school trip 返程。</li><li>初步資訊指車輛 veered off road and overturned。</li></ul>
+              <div class="sources"><strong>來源｜AP News</strong><br>https://apnews.com/article/uganda-school-bus-crash-children-538e92b5d1109a8cbcb8df8cfe41c697</div>
+            </div>
+          </details>
+          <details class="card" data-rank="10">
+            <summary><span class="summary-top"><span class="rank">10</span><time datetime="2026-07-17T15:07:51Z">發佈時間｜2026-07-17 23:07:51（Asia/Taipei）</time></span><h3>德國將加入法國核威懾演習，法德以歐洲安全自主名義深化核合作</h3></summary>
+            <div class="body">
+              <p>Merz 與 Macron 宣布 Germany conventional forces 參與 French-led nuclear exercise。這不代表 Germany 控制核武，也不取代 NATO umbrella，但在 U.S. security reliability 被質疑時，European security autonomy 更制度化。</p>
+              <ul><li>AP 指 France 是 Brexit 後 EU 唯一核武國。</li><li>會談在 Germany Norvenich air base 後宣布。</li><li>Macron 3 月已邀請歐洲夥伴深化 nuclear deterrence cooperation。</li></ul>
+              <div class="sources"><strong>來源｜AP News</strong><br>https://apnews.com/article/germany-france-nato-nuclear-exercise-macron-merz-2d03bccc2cc3519902597fa3691dc475</div>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" style="--bg:url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1800&q=80')">
+      <div class="content">
+        <span class="kicker">Tech / AI｜1-3</span>
+        <h2>模型與開發工作流</h2>
+        <div class="grid three">
+          <details class="card">
+            <summary><span class="summary-top"><span class="tag">T1</span><time datetime="2026-07-17T18:28:36Z">發佈時間｜2026-07-18 02:28:36（Asia/Taipei）</time></span><h3>Moonshot Kimi K3 發布，開放權重模型競爭推向 coding 與多模態能力</h3></summary>
+            <div class="body"><p>AP 報導 Moonshot unveiled Kimi K3，並稱其在 Arena front-end coding capability 排名突出。這把中國 open-weight 模型與 U.S. frontier labs 的競爭再次放上同一張表。</p><div class="sources"><strong>來源｜AP News</strong><br>https://apnews.com/article/kimi-k3-china-ai-0d8a5e268deb11a673f4d444fc597cc5</div></div>
+          </details>
+          <details class="card">
+            <summary><span class="summary-top"><span class="tag">T2</span><time datetime="2026-07-17T21:08:30Z">發佈時間｜2026-07-18 05:08:30（Asia/Taipei）</time></span><h3>GitHub Copilot code review 加入 head-branch instructions、setup steps 與預設防火牆</h3></summary>
+            <div class="body"><p>GitHub 官方 changelog 表示 Copilot code review 現在讀取 head branch instructions，支援 `copilot-code-review.yml` setup steps 與 independent runner configuration，且 firewall now enabled by default。</p><div class="sources"><strong>來源｜GitHub Changelog</strong><br>https://github.blog/changelog/2026-07-17-copilot-code-review-customization-and-configurability-improvements/</div></div>
+          </details>
+          <details class="card">
+            <summary><span class="summary-top"><span class="tag">T3</span><time datetime="2026-07-17T19:47:45Z">發佈時間｜2026-07-18 03:47:45（Asia/Taipei）</time></span><h3>GitHub Mobile 可從 PR review comments 一鍵啟動 Copilot cloud agent 修正</h3></summary>
+            <div class="body"><p>最新 production GitHub Mobile iOS / Android 可在 PR main view 與 individual review comments 使用 Fix with Copilot，免手動 prompt 啟動 cloud agent 修正 review feedback。</p><div class="sources"><strong>來源｜GitHub Changelog</strong><br>https://github.blog/changelog/2026-07-17-github-mobile-fix-pull-request-comments-with-copilot-cloud-agent/</div></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" style="--bg:url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1800&q=80')">
+      <div class="content">
+        <span class="kicker">Tech / AI｜4-6</span>
+        <h2>授權、防護與基礎設施融資</h2>
+        <div class="grid three">
+          <details class="card">
+            <summary><span class="summary-top"><span class="tag">T4</span><time datetime="2026-07-17T15:21:17Z">發佈時間｜2026-07-17 23:21:17（Asia/Taipei）</time></span><h3>Patreon 改用 Cloudflare 直接封鎖 AI training crawlers</h3></summary>
+            <div class="body"><p>Patreon 從 robots.txt 請求自律，轉向 Cloudflare 網路層 blocking unauthorized AI training bots。這讓 creator consent、training data licensing 與 crawler detection 成為平台治理核心。</p><div class="sources"><strong>來源｜TechCrunch</strong><br>https://techcrunch.com/2026/07/17/patreon-stops-asking-ai-bots-not-to-scrape-and-starts-blocking-them/</div></div>
+          </details>
+          <details class="card">
+            <summary><span class="summary-top"><span class="tag">T5</span><time datetime="2026-07-17T14:12:02Z">發佈時間｜2026-07-17 22:12:02（Asia/Taipei）</time></span><h3>Zoox 因 robotaxi 在濃煙消防現場判讀失誤發布軟體召回</h3></summary>
+            <div class="body"><p>Zoox software recall 顯示自駕車不能只處理正常道路物件，還必須安全理解 emergency scene、濃煙與 first responders。召回細節仍需 regulator filings 追蹤。</p><div class="sources"><strong>來源｜TechCrunch</strong><br>https://techcrunch.com/2026/07/17/zoox-issues-software-recall-after-a-robotaxi-got-confused-by-heavy-smoke/</div></div>
+          </details>
+          <details class="card">
+            <summary><span class="summary-top"><span class="tag">T6</span><time datetime="2026-07-17T12:00:00Z">發佈時間｜2026-07-17 20:00:00（Asia/Taipei）</time></span><h3>General Compute 取得 4 億美元 inference-chip 抵押貸款</h3></summary>
+            <div class="body"><p>TechCrunch 報導 General Compute 的 $400m chip-backed loan 指向 AI infrastructure finance 新階段：inference-specific chips 也開始成為可抵押資產，而非只有 training GPU 容量能支撐融資。</p><div class="sources"><strong>來源｜TechCrunch</strong><br>https://techcrunch.com/2026/07/17/why-the-first-gpu-financiers-are-turning-to-inference-chips-in-a-400-million-deal/</div></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" style="--bg:url('https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=1800&q=80')">
+      <div class="content">
+        <span class="kicker">Tech / AI｜7-8</span>
+        <h2>硬體成本與人形機器人</h2>
+        <div class="grid">
+          <details class="card">
+            <summary><span class="summary-top"><span class="tag">T7</span><time datetime="2026-07-17T20:09:27Z">發佈時間｜2026-07-18 04:09:27（Asia/Taipei）</time></span><h3>AI 記憶體需求衝擊印度智慧手機市場，消費硬體開始吸收資料中心競爭成本</h3></summary>
+            <div class="body"><p>India smartphone slowdown 顯示 AI boom 對 memory chips 的需求，正在傳導到手機 pricing、demand 與 corporate strategy。AI 資料中心不只是雲端成本，也會改變消費硬體成本結構。</p><div class="sources"><strong>來源｜TechCrunch</strong><br>https://techcrunch.com/2026/07/17/ai-driven-memory-crunch-jolts-indias-smartphone-market/</div></div>
+          </details>
+          <details class="card">
+            <summary><span class="summary-top"><span class="tag">T8</span><time datetime="2026-07-17T20:19:49Z">發佈時間｜2026-07-18 04:19:49（Asia/Taipei）</time></span><h3>Agility Robotics 在 Tesla 版圖旁擴建 Digit 訓練中心，人形機器人競爭轉向資料與場地規模</h3></summary>
+            <div class="body"><p>Agility Robotics 新訓練中心聚焦 Digit robots。這代表 humanoid robotics 的競爭不只在 demo，而在真實任務資料、訓練流程、測試場地與商業部署前的可靠度驗證。</p><div class="sources"><strong>來源｜TechCrunch</strong><br>https://techcrunch.com/2026/07/17/agility-robotics-plants-its-flag-in-teslas-backyard/</div></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" style="--bg:url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1800&q=80')">
+      <div class="content">
+        <span class="kicker">Synthesis</span>
+        <h2>今日綜合判讀</h2>
+        <div class="grid">
+          <details class="card" open>
+            <summary><span class="summary-top"><span class="tag">判</span>戰爭與基礎設施</span><h3>戰爭正在從軍事目標轉向民生、港口與能源替代路線。</h3></summary>
+            <div class="body"><p>Hormuz 主線同時出現第七夜空襲、Kuwait water plant damage、Iraq alternative oil routes 與 Gulf of Aden boarding。今日的共同訊號是，戰爭成本正在被水、電、港口、油管與保險系統吸收。</p><div class="sources"><strong>來源｜本日 G1, G7, G8 source notes</strong><br>file: wiki/daily/2026/07/2026-07-18/source-notes-2026-07-18.md</div></div>
+          </details>
+          <details class="card">
+            <summary><span class="summary-top"><span class="tag">AI</span>AI 的下一層競爭</span><h3>模型能力之外，資料授權、治理話語與融資結構變成主戰場。</h3></summary>
+            <div class="body"><p>WAIC / Kimi K3 是地緣科技敘事，Patreon / Cloudflare 是資料授權執行，General Compute 是推論晶片融資，GitHub 是 agent workflow governance。AI 產品新聞正在變成制度與資本新聞。</p><div class="sources"><strong>來源｜本日 G2, T1, T2, T4, T6 source notes</strong><br>file: wiki/daily/2026/07/2026-07-18/source-notes-2026-07-18.md</div></div>
+          </details>
+          <details class="card">
+            <summary><span class="summary-top"><span class="tag">追</span>後續追蹤</span><h3>六個監測點：Hormuz、水廠、AI 合作文本、選務訴訟、Kimi K3 benchmark、AI crawler 授權。</h3></summary>
+            <div class="body"><p>明日需要看 U.S.-Iran 是否再打能源或民生設施、China WAIC 是否提出正式合作機制、DHS demands 是否被州政府告上法院、Crimea energy crisis 是否擴大、Kimi K3 是否有獨立測試，以及 Patreon 類 blocking 是否擴散。</p><div class="sources"><strong>來源｜daily report follow-up section</strong><br>file: wiki/daily/2026/07/2026-07-18/daily-news-2026-07-18.md</div></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" style="--bg:url('https://images.unsplash.com/photo-1495020689067-958852a7765e?auto=format&fit=crop&w=1800&q=80')">
+      <div class="content">
+        <span class="kicker">Sources</span>
+        <h2>圖片與製作來源</h2>
+        <div class="grid">
+          <details class="card" open>
+            <summary><span class="summary-top"><span class="tag">圖</span>Background image URLs</span><h3>本簡報背景圖使用 Unsplash 固定圖片 URL；新聞來源不放在浮動頁尾，而在各卡片底部。</h3></summary>
+            <div class="body">
+              <p>背景圖用於主題氛圍與可讀性，不作為新聞事實來源。新聞、數字與產品摘要以各 expandable card 內的來源區塊為準。</p>
+              <ul>
+                <li>https://images.unsplash.com/photo-1495020689067-958852a7765e?auto=format&fit=crop&w=1800&q=80</li>
+                <li>https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1800&q=80</li>
+                <li>https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1800&q=80</li>
+                <li>https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&w=1800&q=80</li>
+                <li>https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1800&q=80</li>
+                <li>https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1800&q=80</li>
+                <li>https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?auto=format&fit=crop&w=1800&q=80</li>
+                <li>https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1800&q=80</li>
+                <li>https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1800&q=80</li>
+                <li>https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=1800&q=80</li>
+                <li>https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1800&q=80</li>
+              </ul>
+              <div class="sources"><strong>來源｜Unsplash image CDN</strong><br>https://unsplash.com/</div>
+            </div>
+          </details>
+          <details class="card">
+            <summary><span class="summary-top"><span class="tag">檔</span>Local knowledge base</span><h3>完整日報與來源筆記位於同一日期資料夾。</h3></summary>
+            <div class="body">
+              <p>Markdown 日報保留每則新聞的「為何重要、關鍵事實、相關概念與不確定性」；source notes 保留 UTC / Asia Taipei 時間基礎、去重範圍、續報理由與排除候選。</p>
+              <div class="sources"><strong>來源｜local files</strong><br>file: wiki/daily/2026/07/2026-07-18/daily-news-2026-07-18.md<br>file: wiki/daily/2026/07/2026-07-18/source-notes-2026-07-18.md</div>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <nav class="controls" aria-label="投影片導覽">
+    <button id="prev" type="button" aria-label="上一頁">‹</button>
+    <span class="counter" id="counter">1 / 12</span>
+    <button id="next" type="button" aria-label="下一頁">›</button>
+  </nav>
+  <div class="progress" id="progress"></div>
+
+  <script>
+    const slides = Array.from(document.querySelectorAll('.slide'));
+    const prev = document.getElementById('prev');
+    const next = document.getElementById('next');
+    const counter = document.getElementById('counter');
+    const progress = document.getElementById('progress');
+    let index = 0;
+
+    function showSlide(target) {
+      index = Math.max(0, Math.min(slides.length - 1, target));
+      slides.forEach((slide, i) => {
+        slide.classList.toggle('active', i === index);
+        if (i === index) slide.scrollTop = 0;
+      });
+      counter.textContent = `${index + 1} / ${slides.length}`;
+      prev.disabled = index === 0;
+      next.disabled = index === slides.length - 1;
+      progress.style.setProperty('--progress', `${((index + 1) / slides.length) * 100}%`);
+      location.hash = `slide-${index + 1}`;
+    }
+
+    prev.addEventListener('click', () => showSlide(index - 1));
+    next.addEventListener('click', () => showSlide(index + 1));
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'ArrowRight' || event.key === 'PageDown' || event.key === ' ') showSlide(index + 1);
+      if (event.key === 'ArrowLeft' || event.key === 'PageUp') showSlide(index - 1);
+      if (event.key === 'Home') showSlide(0);
+      if (event.key === 'End') showSlide(slides.length - 1);
+    });
+
+    const match = location.hash.match(/slide-(\d+)/);
+    showSlide(match ? Number(match[1]) - 1 : 0);
+  </script>
+</body>
+</html>

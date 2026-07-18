@@ -2,7 +2,7 @@
 title: "Knowledge Base Index"
 type: overview
 created: 2026-05-24
-updated: 2026-07-06
+updated: 2026-07-18
 status: seed
 tags: [index]
 sources: []
@@ -25,6 +25,21 @@ sources: []
 每日新聞報告會放在 `wiki/daily/YYYY/MM/YYYY-MM-DD/`。
 
 - [每日全球與科技 AI 新聞產製規則](daily/README.md) - 包含研究截點前 24 小時限制、跨日去重、重大續報判定、來源紀錄與發布驗證規則。
+
+- [2026-07-18 Daily News](daily/2026/07/2026-07-18/daily-news-2026-07-18.md) - 今日主軸是戰爭基礎設施化、AI 治理競爭與供應鏈壓力同時升級：U.S.-Iran / Hormuz 第七夜空襲波及橋梁、港口塔台與 Kuwait 水廠，China WAIC 把 AI governance 與美國 tech restrictions 放上外交舞台，並搭配 DHS election threats、Crimea energy crisis、Gaza funeral strike、North America wildfire smoke、Iraq alternative oil routes、Yemen tanker boarding、Uganda school-bus crash 與 France-Germany nuclear deterrence cooperation。科技／AI 聚焦 Kimi K3、GitHub Copilot code review / Mobile cloud agent、Patreon-Cloudflare crawler blocking、Zoox recall、General Compute inference-chip financing、India smartphone memory crunch 與 Agility Robotics training center。
+- [2026-07-18 Slides](daily/2026/07/2026-07-18/slides-2026-07-18.html) - 今日新聞網頁版投影片。
+
+- [2026-07-17 Daily News](daily/2026/07/2026-07-17/daily-news-2026-07-17.md) - 今日主軸是美伊 Hormuz 衝突擴大、Ukraine 撤換 Fedorov 引發戰時政治震盪、Rohingya 海難、Texas 洪災、Italy Morandi Bridge 判決、World Cup Falklands 標語爭議、U.S. Iran war package、Brazil tariffs、Chile Kast tax reform 與 FEMA disaster-aid investigation。科技／AI 聚焦 Google AI Mode connected apps、Google Vids Gemini Omni / personal avatars、Gemini Notebook、EU Google Android / search data rules、Roblox Build、Fujitsu-Nvidia physical AI、X Grok content-theft enforcement、OnePlus 美歐退場與 Beehiiv AI Copilot。
+- [2026-07-17 Slides](daily/2026/07/2026-07-17/slides-2026-07-17.html) - 今日新聞網頁版投影片。
+
+- [2026-07-16 Daily News](daily/2026/07/2026-07-16/daily-news-2026-07-16.md) - 今日主軸是 Hormuz 封鎖實施、EU-Ukraine 防衛工業夥伴、Gaza 最新空襲、Baltics / Poland 關鍵基礎設施警告、North America 野火煙霾、World Cup Argentina 逆轉、ICE traffic stops 政策衝突、Pentagon testosterone screening、UK political threat arrest 與 Alzheimer's p-tau217 blood test。科技／AI 聚焦 Thinking Machines Inkling、OpenAI Codex Micro、Suno training-data controversy、Google Steel River clean power、Microsoft AI-assisted patches、Vint Cerf agent identity、Reelful 與 Whatnot-Shaped。
+- [2026-07-16 Slides](daily/2026/07/2026-07-16/slides-2026-07-16.html) - 今日新聞網頁版投影片。
+
+- [2026-07-14 Daily News](daily/2026/07/2026-07-14/daily-news-2026-07-14.md) - 今日主軸是 Hormuz 軍事與能源槓桿、Ukraine / Europe 共同反彈道防禦、Hungary 憲政重置、Europe heatwave wildfire、Yemen-Saudi-Houthi 升級、ICC 與 migration enforcement 問責。科技／AI 聚焦 OpenAI WhatsApp EEA return、Waze Gemini navigation、Apple iOS 27 public beta / Siri AI、Apple-OpenAI confidential files allegation、LAPD-Flock privacy contract、Windows Search local-first test 與 GitHub SSO settings。
+- [2026-07-14 Slides](daily/2026/07/2026-07-14/slides-2026-07-14.html) - 今日新聞網頁版投影片。
+
+- [2026-07-07 Daily News](daily/2026/07/2026-07-07/daily-news-2026-07-07.md) - 今日主軸是安全秩序重組與 AI 交付治理：Russia 對 Ukraine 的新一波攻擊、Khamenei 葬禮、NATO 5% 防務計畫、Hamas 解散 Gaza government、Macron 訪 Damascus、China South Pacific missile test / Australia-Fiji defense pact、Philippines impeachment trial、Cuba blackout、Congo Ebola deaths over 500 與 Sudan child casualties 補足全球議程。科技／AI 聚焦 OpenAI GPT-5.5 Instant Mini、Anthropic J-space、Microsoft restructuring、Illinois AI Safety Measures Act、Nvidia Kyber uncertainty、Even Realities funding、Samsung AI memory guidance 與 Syntiant IPO。
+- [2026-07-07 Slides](daily/2026/07/2026-07-07/slides-2026-07-07.html) - 今日新聞網頁版投影片。
 
 - [2026-07-06 Daily News](daily/2026/07/2026-07-06/daily-news-2026-07-06.md) - 今日主軸是峰會前的忠誠測試、戰爭續報與平台治理：Iran 葬禮新增家族與高層露面但 Mojtaba 仍未現身，NATO Ankara 峰會前 Trump 要求 loyalty，Trump 將會晤 Zelenskyy 與 Syria 的 al-Sharaa，Ukraine Crimea attack、OPEC+ 增產、南歐野火、Venezuela 死亡數破 3,000、Syria parliament delay、Albania protest 與 Delta fireworks incident 補足全球議程。科技／AI 聚焦 Doubao / Qwen 關停人格化 agents、Tesla Miami Robotaxi、Bending Spoons AI roll-up 與 Google Cloud SecOps `siemAlertId` breaking change。
 - [2026-07-06 Slides](daily/2026/07/2026-07-06/slides-2026-07-06.html) - 今日新聞網頁版投影片。

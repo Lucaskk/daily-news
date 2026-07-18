@@ -2,7 +2,7 @@
 title: "Overview"
 type: overview
 created: 2026-05-24
-updated: 2026-07-06
+updated: 2026-07-18
 status: seed
 tags: [overview]
 sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
@@ -30,6 +30,20 @@ sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
 
 ## Latest Daily News
 
+- [2026-07-18 Daily News](daily/2026/07/2026-07-18/daily-news-2026-07-18.md) - 今日主軸是「戰爭基礎設施化、AI 治理競爭與供應鏈壓力同時升級」：U.S.-Iran / Hormuz 第七夜空襲把橋梁、港口塔台與 Kuwait 水廠納入風險，Iraq 同日簽下 alternative oil routes 相關協議；China WAIC 與 Kimi K3 把 AI governance、open-weight model competition 與 U.S. tech restrictions 放在同一脈絡。DHS election threats、Crimea energy crisis、Gaza funeral strike、wildfire smoke reaching Washington D.C.、Yemen tanker boarding、Uganda school-bus crash 與 France-Germany nuclear deterrence cooperation 補足制度、公共安全與歐洲安全自主壓力。科技／AI 由 GitHub Copilot review / Mobile agent、Patreon-Cloudflare crawler blocking、Zoox recall、General Compute inference-chip financing、India memory crunch 與 Agility Robotics training center 展示資料、agent、資本與 physical AI 的執行面。
+- [2026-07-18 Slides](daily/2026/07/2026-07-18/slides-2026-07-18.html) - 今日新聞網頁版投影片。
+
+- [2026-07-17 Daily News](daily/2026/07/2026-07-17/daily-news-2026-07-17.md) - 今日主軸是「戰爭升級、制度壓力與 AI 入口平台同時重排」：U.S.-Iran / Hormuz 從封鎖進入北部打擊、船隻開火與多國報復，Ukraine 因撤換 Fedorov 爆發戰時政治危機；Rohingya 船難、Texas flood、Morandi Bridge verdict、Falklands banner dispute、Iran war package、Brazil tariffs、Chile tax reform 與 FEMA disaster-aid investigation 補足全球安全、災害與制度議程。科技／AI 由 Google AI Mode、Vids、Gemini Notebook 領跑，並延伸到 EU Google rules、Roblox Build、Fujitsu-Nvidia physical AI、X Grok enforcement、OnePlus 退場與 Beehiiv Copilot。
+- [2026-07-17 Slides](daily/2026/07/2026-07-17/slides-2026-07-17.html) - 今日新聞網頁版投影片。
+
+- [2026-07-16 Daily News](daily/2026/07/2026-07-16/daily-news-2026-07-16.md) - 今日主軸是「戰爭與執法從宣示進入執行，AI 產品從模型能力轉向控制面」：U.S. 對 Iran 港口封鎖進入實施，EU 與 Ukraine 把反彈道與無人機合作推進到共同量產路線；Gaza strikes、Baltics / Poland critical-infrastructure warning、North America wildfire smoke、World Cup Argentina comeback、ICE traffic-stop conflict、Hegseth testosterone screening、Farage threat arrest 與 p-tau217 Alzheimer's blood test 補足全球公共風險。科技／AI 聚焦 Thinking Machines Inkling open-weight model、OpenAI Codex Micro hardware、Suno training-data leak allegations、Google clean-power procurement、Microsoft AI-assisted security patches、Vint Cerf agent identity、Reelful creator video workflow 與 Whatnot-Shaped real-time recommendations。
+- [2026-07-16 Slides](daily/2026/07/2026-07-16/slides-2026-07-16.html) - 今日新聞網頁版投影片。
+
+- [2026-07-14 Daily News](daily/2026/07/2026-07-14/daily-news-2026-07-14.md) - 今日主軸是 Hormuz 軍事與能源槓桿、Ukraine / Europe 共同反彈道防禦、Hungary 憲政重置、Europe heatwave wildfire、Yemen-Saudi-Houthi 升級、ICC 與 migration enforcement 問責。科技／AI 聚焦 OpenAI WhatsApp EEA return、Waze Gemini navigation、Apple iOS 27 public beta / Siri AI、Apple-OpenAI confidential files allegation、LAPD-Flock privacy contract、Windows Search local-first test 與 GitHub SSO settings。
+- [2026-07-14 Slides](daily/2026/07/2026-07-14/slides-2026-07-14.html) - 今日新聞網頁版投影片。
+
+- [2026-07-07 Daily News](daily/2026/07/2026-07-07/daily-news-2026-07-07.md) - 今日主軸是「安全秩序重組與 AI 交付治理」：Russia 對 Ukraine 的 July 6 mass strike、Khamenei Tehran funeral procession、NATO 5% defense plans、Hamas dissolving Gaza government 與 Macron Damascus visit 讓戰爭、繼任、同盟財政、戰後治理與 Syria normalization 同時進入可驗證節點。Pacific missile test / Australia-Fiji defense pact、Philippines impeachment trial、Cuba blackout、Congo Ebola deaths above 500 與 Sudan child casualties 補足地緣、憲政、能源、公衛與人道壓力。科技／AI 從模型能力轉向交付治理與硬體供應：OpenAI GPT-5.5 Instant Mini fallback、Anthropic J-space、Microsoft layoffs / Xbox restructuring、Illinois AI Safety Measures Act、Nvidia Kyber disputed delay、Even Realities funding、Samsung AI memory guidance 與 Syntiant IPO。
+- [2026-07-07 Slides](daily/2026/07/2026-07-07/slides-2026-07-07.html) - 今日新聞網頁版投影片。
 - [2026-07-06 Daily News](daily/2026/07/2026-07-06/daily-news-2026-07-06.md) - 今日主軸是「峰會前的忠誠測試、戰爭續報與平台治理」：Iran 葬禮新增其他兒子與高層公開露面但 Mojtaba 仍隱身，NATO Ankara summit 前 Trump 把 burden sharing 轉成 loyalty test，並將在峰會會晤 Zelenskyy 與 Syria 的 al-Sharaa。Ukraine Crimea attack、OPEC+ 8 月增產、Portugal / Greece / Spain wildfires、Venezuela earthquake toll passes 3,000、Syria transitional parliament delay、Albania 35th-night protest 與 Delta firework incident 顯示戰爭、能源、災害與制度合法性同時受壓。科技／AI 沒有大型 frontier model 新發布，轉向 Doubao / Qwen 關停 humanlike agents、Tesla Miami Robotaxi without safety monitor、Bending Spoons AI roll-up strategy 與 Google Cloud SecOps `siemAlertId` reserved field。
 - [2026-07-06 Slides](daily/2026/07/2026-07-06/slides-2026-07-06.html) - 今日新聞網頁版投影片。
 - [2026-07-05 Daily News](daily/2026/07/2026-07-05/daily-news-2026-07-05.md) - 今日主軸是「戰爭壓力、政治動員與 AI 工具治理」：Ukraine 再次以 drones 打擊 St. Petersburg oil terminal 並延伸到 Vysotsk / Kronstadt 說法；Iran 啟動 Khamenei 數日葬禮，讓 U.S.-Iran talks、繼任秩序與街頭動員進入同一時間表。China military promotions、AfD Erfurt convention、National Mall evacuation、Mali rebel attacks、Pope Leo XIV at Lampedusa、Thessaloniki wildfire、Gaza post-ceasefire casualties 與 U.S. heat/storm deaths 顯示軍權、群眾政治、公共安全與人道壓力同步升高。科技／AI 則從模型發布轉向治理：Google 把 AI 放入 Declaration of Independence 廣告敘事，Midjourney 將 Hollywood AI 使用拉進 discovery，Alibaba 據報禁用 Claude Code，Claude Code issue #74066 把 session/cache isolation 風險推到社群焦點。
