@@ -2,7 +2,7 @@
 title: "Knowledge Base Index"
 type: overview
 created: 2026-05-24
-updated: 2026-07-18
+updated: 2026-07-19
 status: seed
 tags: [index]
 sources: []
@@ -25,6 +25,9 @@ sources: []
 每日新聞報告會放在 `wiki/daily/YYYY/MM/YYYY-MM-DD/`。
 
 - [每日全球與科技 AI 新聞產製規則](daily/README.md) - 包含研究截點前 24 小時限制、跨日去重、重大續報判定、來源紀錄與發布驗證規則。
+
+- [2026-07-19 Daily News](daily/2026/07/2026-07-19/daily-news-2026-07-19.md) - 今日主軸是「戰事續報與 AI 基礎設施接受度同時受壓」：U.S.-Iran/Hormuz 因約旦基地美軍死亡再升級，Gaza residential strikes、Venezuela quake death toll、Ukraine long-range drones、Mali ambush、Belgium settlement import ban、Norway fire、Iran execution、Brazil court limits Bolsonaro visit 與 Josh Kerr world mile record 補足安全、災害、制度與文化焦點。科技／AI 聚焦 AI data center protests、Claude Fable 5 pricing / limits、Waymo outage response、Product Hunt AI agent launches、EV charging reliability 與 U.S. EV product retreat。
+- [2026-07-19 Slides](daily/2026/07/2026-07-19/slides-2026-07-19.html) - 今日新聞網頁版投影片。
 
 - [2026-07-18 Daily News](daily/2026/07/2026-07-18/daily-news-2026-07-18.md) - 今日主軸是戰爭基礎設施化、AI 治理競爭與供應鏈壓力同時升級：U.S.-Iran / Hormuz 第七夜空襲波及橋梁、港口塔台與 Kuwait 水廠，China WAIC 把 AI governance 與美國 tech restrictions 放上外交舞台，並搭配 DHS election threats、Crimea energy crisis、Gaza funeral strike、North America wildfire smoke、Iraq alternative oil routes、Yemen tanker boarding、Uganda school-bus crash 與 France-Germany nuclear deterrence cooperation。科技／AI 聚焦 Kimi K3、GitHub Copilot code review / Mobile cloud agent、Patreon-Cloudflare crawler blocking、Zoox recall、General Compute inference-chip financing、India smartphone memory crunch 與 Agility Robotics training center。
 - [2026-07-18 Slides](daily/2026/07/2026-07-18/slides-2026-07-18.html) - 今日新聞網頁版投影片。

@@ -2,7 +2,7 @@
 title: "Overview"
 type: overview
 created: 2026-05-24
-updated: 2026-07-18
+updated: 2026-07-19
 status: seed
 tags: [overview]
 sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
@@ -29,6 +29,9 @@ sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
 - 輸出偏好：簡短摘要、深度脈絡、比較表、時間線、決策 memo。
 
 ## Latest Daily News
+
+- [2026-07-19 Daily News](daily/2026/07/2026-07-19/daily-news-2026-07-19.md) - 今日主軸是「戰事續報與 AI 基礎設施接受度同時受壓」：U.S.-Iran/Hormuz 因約旦基地美軍死亡再升級，Gaza residential strikes、Venezuela quake death toll、Ukraine long-range drones、Mali ambush、Belgium settlement import ban、Norway fire、Iran execution、Brazil court limits Bolsonaro visit 與 Josh Kerr world mile record 補足安全、災害、制度與文化焦點。科技／AI 聚焦 AI data center protests、Claude Fable 5 pricing / limits、Waymo outage response、Product Hunt AI agent launches、EV charging reliability 與 U.S. EV product retreat。
+- [2026-07-19 Slides](daily/2026/07/2026-07-19/slides-2026-07-19.html) - 今日新聞網頁版投影片。
 
 - [2026-07-18 Daily News](daily/2026/07/2026-07-18/daily-news-2026-07-18.md) - 今日主軸是「戰爭基礎設施化、AI 治理競爭與供應鏈壓力同時升級」：U.S.-Iran / Hormuz 第七夜空襲把橋梁、港口塔台與 Kuwait 水廠納入風險，Iraq 同日簽下 alternative oil routes 相關協議；China WAIC 與 Kimi K3 把 AI governance、open-weight model competition 與 U.S. tech restrictions 放在同一脈絡。DHS election threats、Crimea energy crisis、Gaza funeral strike、wildfire smoke reaching Washington D.C.、Yemen tanker boarding、Uganda school-bus crash 與 France-Germany nuclear deterrence cooperation 補足制度、公共安全與歐洲安全自主壓力。科技／AI 由 GitHub Copilot review / Mobile agent、Patreon-Cloudflare crawler blocking、Zoox recall、General Compute inference-chip financing、India memory crunch 與 Agility Robotics training center 展示資料、agent、資本與 physical AI 的執行面。
 - [2026-07-18 Slides](daily/2026/07/2026-07-18/slides-2026-07-18.html) - 今日新聞網頁版投影片。
