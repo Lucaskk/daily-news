@@ -1,5 +1,26 @@
 # Knowledge Base Log
 
+## [2026-07-22] ingest | Daily global and tech AI news
+
+- Created `wiki/daily/2026/07/2026-07-22/daily-news-2026-07-22.md` with exactly 10 global items and eight technology / AI product and platform items.
+- Recorded the exact Asia/Taipei 24-hour window, per-item event or publication-time basis, material continuations, date-level official publication limitations and duplicate / lower-priority exclusions in `source-notes-2026-07-22.md`.
+- Created `slides-2026-07-22.html` as a standalone HTML deck with themed backgrounds, browser / keyboard navigation, expandable cards and per-card complete source URLs.
+- Updated `wiki/daily/latest-slides.html`, `wiki/index.md`, `wiki/overview.md`, `.nojekyll`, and the root Pages entry timestamp.
+
+## [2026-07-21] ingest | Daily global and tech AI news
+
+- Created `wiki/daily/2026/07/2026-07-21/daily-news-2026-07-21.md` with exactly 10 global items and eight technology / AI product and platform items.
+- Recorded the exact Asia/Taipei 24-hour window, per-item event or publication-time basis, material continuations and duplicate / out-of-window exclusions in `source-notes-2026-07-21.md`.
+- Created `slides-2026-07-21.html` as a standalone HTML deck with themed backgrounds, browser / keyboard navigation, expandable cards and per-card complete source URLs.
+- Updated `wiki/daily/latest-slides.html`, `wiki/index.md`, `wiki/overview.md`, `.nojekyll`, and the root Pages entry timestamp.
+
+## [2026-07-20] ingest | Daily global and tech AI news
+
+- Created `wiki/daily/2026/07/2026-07-20/daily-news-2026-07-20.md` with exactly 10 global items and eight technology / AI product and platform items.
+- Recorded the exact Asia/Taipei 24-hour window, per-item event or publication-time basis, material continuations and duplicate / out-of-window exclusions in `source-notes-2026-07-20.md`.
+- Created `slides-2026-07-20.html` as a standalone HTML deck with themed backgrounds, browser / keyboard navigation, expandable cards and per-card complete source URLs.
+- Updated `wiki/daily/latest-slides.html`, `wiki/index.md`, `wiki/overview.md`, `.nojekyll`, and the root Pages entry timestamp.
+
 ## [2026-07-19] ingest | Daily global and tech AI news
 
 - Created `wiki/daily/2026/07/2026-07-19/daily-news-2026-07-19.md` with exactly 10 global items and six technology / AI product and platform items.

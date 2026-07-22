@@ -2,7 +2,7 @@
 title: "Knowledge Base Index"
 type: overview
 created: 2026-05-24
-updated: 2026-07-19
+updated: 2026-07-22
 status: seed
 tags: [index]
 sources: []
@@ -25,6 +25,15 @@ sources: []
 每日新聞報告會放在 `wiki/daily/YYYY/MM/YYYY-MM-DD/`。
 
 - [每日全球與科技 AI 新聞產製規則](daily/README.md) - 包含研究截點前 24 小時限制、跨日去重、重大續報判定、來源紀錄與發布驗證規則。
+
+- [2026-07-22 Daily News](daily/2026/07/2026-07-22/daily-news-2026-07-22.md) - 今日主軸是「戰爭成本公開化、邊界制度化與 AI 安全事件進入產品治理」：U.S.-Iran 第 11 夜空襲、Hegseth US$37.5bn 戰費、Houthi Red Sea / Bab el-Mandeb 封鎖風險、Gaza yellow line 土堤、U.S.-Lebanon 直航、France under-15 social media ban、Canada tariff talks、Ukraine Drapatyi 接任、Sikkim tunnel collapse 與 Chile El Nino floods。科技／AI 聚焦 OpenAI/Hugging Face cyber evaluation breach、ChatGPT small business program、Gemini 3.6 Flash / Copilot、Meta Genesis Mission、Gritt robotics、AI data-center electricity、Sila batteries 與 Bluecore floating SMRs。
+- [2026-07-22 Slides](daily/2026/07/2026-07-22/slides-2026-07-22.html) - 今日新聞網頁版投影片。
+
+- [2026-07-21 Daily News](daily/2026/07/2026-07-21/daily-news-2026-07-21.md) - 今日主軸是「戰爭外溢、國內政治再定義與 AI 產品治理同時進入執行層」：U.S.-Iran / Hormuz 第十夜空襲、Ukraine 400+ drones toward Moscow、Trump Canada 50% tariffs、Andy Burnham 正式就任、Houthis Saudi shipping embargo、Afghanistan Nuristan 山洪、Zambada life sentence、Nicaragua no elections、Netanyahu ICC / Mamdani dispute 與 Paramount-Warner TRO。科技／AI 聚焦 GitHub Copilot AI credits、Natural agent payments、X Android rewrite、Sony-Udio 30,000 songs suit、Adobe Indigo AI Playground、Apple iOS 26.6 RC Spotlight pre-index、Tesla Robotaxi remote operator filing 與 FCC DJI disguised-gadgets proposal。
+- [2026-07-21 Slides](daily/2026/07/2026-07-21/slides-2026-07-21.html) - 今日新聞網頁版投影片。
+
+- [2026-07-20 Daily News](daily/2026/07/2026-07-20/daily-news-2026-07-20.md) - 今日主軸是「戰爭外溢、制度重整與 AI agent 化同時推進」：U.S.-Iran / Hormuz 第八夜空襲與 Gulf 基地回擊、Russia 對 Kyiv 的大型彈道攻擊、Spain World Cup 奪冠、Israeli ministers march to Gaza settlements、Syria security reshuffle、Chongqing landslide、Nigeria malnutrition spillover、China CDB anti-corruption probe、Iran unity decree 與 Tropical Storm Fausto。科技／AI 聚焦 Kimi K3 subscription pause、Qwen3.8-Max preview、Nubia NaviX Ultra agentic phone、Apple Live Notes、Netflix InterPositive filing、Claude Code Bun/Rust、D.C. robotaxi rules 與 Current AI public stack。
+- [2026-07-20 Slides](daily/2026/07/2026-07-20/slides-2026-07-20.html) - 今日新聞網頁版投影片。
 
 - [2026-07-19 Daily News](daily/2026/07/2026-07-19/daily-news-2026-07-19.md) - 今日主軸是「戰事續報與 AI 基礎設施接受度同時受壓」：U.S.-Iran/Hormuz 因約旦基地美軍死亡再升級，Gaza residential strikes、Venezuela quake death toll、Ukraine long-range drones、Mali ambush、Belgium settlement import ban、Norway fire、Iran execution、Brazil court limits Bolsonaro visit 與 Josh Kerr world mile record 補足安全、災害、制度與文化焦點。科技／AI 聚焦 AI data center protests、Claude Fable 5 pricing / limits、Waymo outage response、Product Hunt AI agent launches、EV charging reliability 與 U.S. EV product retreat。
 - [2026-07-19 Slides](daily/2026/07/2026-07-19/slides-2026-07-19.html) - 今日新聞網頁版投影片。

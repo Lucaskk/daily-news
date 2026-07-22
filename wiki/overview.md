@@ -2,7 +2,7 @@
 title: "Overview"
 type: overview
 created: 2026-05-24
-updated: 2026-07-19
+updated: 2026-07-22
 status: seed
 tags: [overview]
 sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
@@ -29,6 +29,15 @@ sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
 - 輸出偏好：簡短摘要、深度脈絡、比較表、時間線、決策 memo。
 
 ## Latest Daily News
+
+- [2026-07-22 Daily News](daily/2026/07/2026-07-22/daily-news-2026-07-22.md) - 今日主軸是「戰爭成本公開化、邊界制度化與 AI 安全事件進入產品治理」：U.S.-Iran 第 11 夜空襲、Hegseth US$37.5bn 戰費、Houthi Red Sea / Bab el-Mandeb 封鎖風險與 Gaza yellow line 土堤，把戰爭成本、航道風險與停火邊界同時推向可量測節點。U.S.-Lebanon direct flights、France under-15 social media ban、Canada tariff talks、Ukraine Drapatyi 接任、Sikkim tunnel collapse 與 Chile El Nino floods 補足外交、兒少數位治理、貿易、軍事領導與災害韌性。科技／AI 由 OpenAI/Hugging Face cyber evaluation breach 領跑，並延伸到 ChatGPT small business program、Gemini 3.6 Flash / GitHub Copilot、Meta Genesis Mission、Gritt robotics、AI data-center electricity、Sila battery materials 與 Bluecore floating SMRs。
+- [2026-07-22 Slides](daily/2026/07/2026-07-22/slides-2026-07-22.html) - 今日新聞網頁版投影片。
+
+- [2026-07-21 Daily News](daily/2026/07/2026-07-21/daily-news-2026-07-21.md) - 今日主軸是「戰爭外溢、國內政治再定義與 AI 產品治理同時進入執行層」：U.S.-Iran / Hormuz 第十夜空襲、Ukraine 400+ drones toward Moscow、Trump Canada 50% tariffs 與 Andy Burnham 正式接任構成安全、貿易與政權交接主線；Houthis Saudi shipping embargo、Afghanistan Nuristan 山洪、Zambada life sentence、Nicaragua no elections、Netanyahu ICC / Mamdani dispute 與 Paramount-Warner TRO 補足航運、災害、司法、威權化與媒體反壟斷。科技／AI 從模型能力轉向產品執行：GitHub Copilot AI credits、Natural agent payments、X Android rewrite、Sony-Udio copyright case、Adobe Indigo AI Playground、Apple Spotlight pre-index、Tesla remote operator filing 與 FCC DJI enforcement。
+- [2026-07-21 Slides](daily/2026/07/2026-07-21/slides-2026-07-21.html) - 今日新聞網頁版投影片。
+
+- [2026-07-20 Daily News](daily/2026/07/2026-07-20/daily-news-2026-07-20.md) - 今日主軸是「戰爭外溢、制度重整與 AI agent 化同時推進」：U.S.-Iran / Hormuz 第八夜空襲與 Gulf 基地回擊、Russia 對 Kyiv 的大型彈道攻擊、Spain World Cup 奪冠、Israeli ministers march to Gaza settlements、Syria security reshuffle、Chongqing landslide、Nigeria malnutrition spillover、China CDB anti-corruption probe、Iran unity decree 與 Tropical Storm Fausto。科技／AI 聚焦 Kimi K3 subscription pause、Qwen3.8-Max preview、Nubia NaviX Ultra agentic phone、Apple Live Notes、Netflix InterPositive filing、Claude Code Bun/Rust、D.C. robotaxi rules 與 Current AI public stack。
+- [2026-07-20 Slides](daily/2026/07/2026-07-20/slides-2026-07-20.html) - 今日新聞網頁版投影片。
 
 - [2026-07-19 Daily News](daily/2026/07/2026-07-19/daily-news-2026-07-19.md) - 今日主軸是「戰事續報與 AI 基礎設施接受度同時受壓」：U.S.-Iran/Hormuz 因約旦基地美軍死亡再升級，Gaza residential strikes、Venezuela quake death toll、Ukraine long-range drones、Mali ambush、Belgium settlement import ban、Norway fire、Iran execution、Brazil court limits Bolsonaro visit 與 Josh Kerr world mile record 補足安全、災害、制度與文化焦點。科技／AI 聚焦 AI data center protests、Claude Fable 5 pricing / limits、Waymo outage response、Product Hunt AI agent launches、EV charging reliability 與 U.S. EV product retreat。
 - [2026-07-19 Slides](daily/2026/07/2026-07-19/slides-2026-07-19.html) - 今日新聞網頁版投影片。
