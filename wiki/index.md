@@ -2,7 +2,7 @@
 title: "Knowledge Base Index"
 type: overview
 created: 2026-05-24
-updated: 2026-07-22
+updated: 2026-07-23
 status: seed
 tags: [index]
 sources: []
@@ -25,6 +25,9 @@ sources: []
 每日新聞報告會放在 `wiki/daily/YYYY/MM/YYYY-MM-DD/`。
 
 - [每日全球與科技 AI 新聞產製規則](daily/README.md) - 包含研究截點前 24 小時限制、跨日去重、重大續報判定、來源紀錄與發布驗證規則。
+
+- [2026-07-23 Daily News](daily/2026/07/2026-07-23/daily-news-2026-07-23.md) - 今日主軸是「戰爭進入可執行成本，AI 產品進入企業與治理介面」：U.S.-Iran 第 12 夜、Trump 橋梁／電廠威脅、U.S.-Saudi 核能協議、House GOP 950 億美元方案、Bulgaria air-base、Lebanon pilot zones、Spain Guadalajara wildfire、Canada bridge ceremony cancellation、Maduro trial、Sikkim rescue 與 Ukraine top-brass overhaul。科技／AI 聚焦 OpenAI Presence、Anthropic Economic Index connector、Synthesia Roleplay、Glow endpoint security、Substack AI detection、Science PRIMA、Atoms robotics 與 Tesla product timeline slips。
+- [2026-07-23 Slides](daily/2026/07/2026-07-23/slides-2026-07-23.html) - 今日新聞網頁版投影片。
 
 - [2026-07-22 Daily News](daily/2026/07/2026-07-22/daily-news-2026-07-22.md) - 今日主軸是「戰爭成本公開化、邊界制度化與 AI 安全事件進入產品治理」：U.S.-Iran 第 11 夜空襲、Hegseth US$37.5bn 戰費、Houthi Red Sea / Bab el-Mandeb 封鎖風險、Gaza yellow line 土堤、U.S.-Lebanon 直航、France under-15 social media ban、Canada tariff talks、Ukraine Drapatyi 接任、Sikkim tunnel collapse 與 Chile El Nino floods。科技／AI 聚焦 OpenAI/Hugging Face cyber evaluation breach、ChatGPT small business program、Gemini 3.6 Flash / Copilot、Meta Genesis Mission、Gritt robotics、AI data-center electricity、Sila batteries 與 Bluecore floating SMRs。
 - [2026-07-22 Slides](daily/2026/07/2026-07-22/slides-2026-07-22.html) - 今日新聞網頁版投影片。
