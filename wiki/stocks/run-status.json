@@ -1,16 +1,15 @@
 {
-  "run_at": "2026-07-25T00:19:29+08:00",
+  "run_at": "2026-07-25T00:35:05+08:00",
   "successful": [
-    "6175",
-    "8299"
+    "2317",
+    "2603"
   ],
-  "failed": {
-    "2317": "HTTP 520 while fetching https://goodinfo.tw/tw/StockFinDetail.asp?RPT_CAT=BS_YEAR&STOCK_ID=2317&REINIT=20659.0132690713: error code: 520\n",
-    "2603": "HTTP 500 while fetching https://goodinfo.tw/tw/StockFinDetail.asp?RPT_CAT=BS_YEAR&STOCK_ID=2603&REINIT=20659.0133216755: \r\n<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01//EN\" \"http://www.w3.org/TR/html4/strict.dtd\">\r\n<HTML><HEAD><TITLE>無法顯示網頁</TITLE>\r\n<META HTTP-EQUIV=\"Content-Type\" Content=\"text/html; charset=UTF-8\">\r\n<STYLE type=\"text/css\">\r\n  BODY { font: 8pt/12pt verdana }\r\n  H1 { font: 13pt/15pt verdana }\r\n  H2 { f"
-  },
+  "failed": {},
   "skipped_fresh_today": [
     "2330",
     "2327",
-    "2344"
+    "2344",
+    "6175",
+    "8299"
   ]
 }
