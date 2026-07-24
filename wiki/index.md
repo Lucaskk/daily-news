@@ -2,7 +2,7 @@
 title: "Knowledge Base Index"
 type: overview
 created: 2026-05-24
-updated: 2026-07-23
+updated: 2026-07-24
 status: seed
 tags: [index]
 sources: []
@@ -25,6 +25,9 @@ sources: []
 每日新聞報告會放在 `wiki/daily/YYYY/MM/YYYY-MM-DD/`。
 
 - [每日全球與科技 AI 新聞產製規則](daily/README.md) - 包含研究截點前 24 小時限制、跨日去重、重大續報判定、來源紀錄與發布驗證規則。
+
+- [2026-07-24 Daily News](daily/2026/07/2026-07-24/daily-news-2026-07-24.md) - 今日主軸是「戰爭外溢轉成能源與政治成本，AI 產品進入高信任個資與即時語音」：U.S.-Iran 第 13 夜、Houthis 攻擊 Saudi tankers、Iran war powers vote、Saudi nuclear / Abraham Accords、Trump forced-labor tariffs、Nepal USAID cuts investigation、France Saumos wildfire、Mexico mayor killing、Angola Russian convictions、Rubio-Lavrov talks 與 Hormuz bypass pipelines。科技／AI 聚焦 OpenAI Health、ChatGPT Voice GPT-Live-1、Claude voice mode、Gemini 950M users、Runway router、AMD Helios、Etched valuation、EU Google fine 與 AegisAI。
+- [2026-07-24 Slides](daily/2026/07/2026-07-24/slides-2026-07-24.html) - 今日新聞網頁版投影片。
 
 - [2026-07-23 Daily News](daily/2026/07/2026-07-23/daily-news-2026-07-23.md) - 今日主軸是「戰爭進入可執行成本，AI 產品進入企業與治理介面」：U.S.-Iran 第 12 夜、Trump 橋梁／電廠威脅、U.S.-Saudi 核能協議、House GOP 950 億美元方案、Bulgaria air-base、Lebanon pilot zones、Spain Guadalajara wildfire、Canada bridge ceremony cancellation、Maduro trial、Sikkim rescue 與 Ukraine top-brass overhaul。科技／AI 聚焦 OpenAI Presence、Anthropic Economic Index connector、Synthesia Roleplay、Glow endpoint security、Substack AI detection、Science PRIMA、Atoms robotics 與 Tesla product timeline slips。
 - [2026-07-23 Slides](daily/2026/07/2026-07-23/slides-2026-07-23.html) - 今日新聞網頁版投影片。

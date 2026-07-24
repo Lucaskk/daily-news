@@ -1,0 +1,845 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>2026-07-24 Daily Global and Tech AI News</title>
+  <style>
+    :root {
+      --ink: #f8fafc;
+      --muted: #cbd5e1;
+      --line: rgba(226, 232, 240, 0.28);
+      --panel: rgba(9, 19, 33, 0.9);
+      --panel-strong: rgba(12, 24, 42, 0.96);
+      --accent: #38bdf8;
+      --accent-2: #f59e0b;
+      --ok: #34d399;
+      --warn: #f97316;
+      --shadow: 0 24px 60px rgba(0, 0, 0, 0.42);
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body {
+      margin: 0;
+      min-height: 100%;
+      background: #091321;
+      color: var(--ink);
+    }
+
+    body {
+      overflow: hidden;
+    }
+
+    .deck {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .slide {
+      --bg: url("https://images.unsplash.com/photo-1495020689067-958852a7765e?auto=format&fit=crop&w=2400&q=80");
+      position: absolute;
+      inset: 0;
+      display: grid;
+      align-content: start;
+      gap: 22px;
+      width: 100%;
+      height: 100%;
+      padding: clamp(22px, 4vw, 54px) clamp(18px, 5vw, 72px) 96px;
+      overflow-y: auto;
+      opacity: 0;
+      pointer-events: none;
+      transform: translateX(28px);
+      transition: opacity 180ms ease, transform 180ms ease;
+      background-image:
+        linear-gradient(90deg, rgba(3, 10, 20, 0.78), rgba(3, 10, 20, 0.38) 46%, rgba(3, 10, 20, 0.7)),
+        var(--bg);
+      background-size: cover;
+      background-position: center;
+    }
+
+    .slide.active {
+      opacity: 1;
+      pointer-events: auto;
+      transform: translateX(0);
+      z-index: 2;
+    }
+
+    .slide.center { align-content: center; }
+
+    .kicker {
+      width: fit-content;
+      border: 1px solid rgba(56, 189, 248, 0.42);
+      border-radius: 999px;
+      padding: 7px 12px;
+      background: rgba(8, 22, 38, 0.78);
+      color: #bae6fd;
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0;
+    }
+
+    h1, h2, h3, p {
+      margin: 0;
+      letter-spacing: 0;
+    }
+
+    h1 {
+      max-width: 980px;
+      font-size: clamp(2.3rem, 6vw, 5rem);
+      line-height: 1;
+      text-shadow: 0 5px 22px rgba(0, 0, 0, 0.55);
+    }
+
+    h2 {
+      max-width: 980px;
+      font-size: clamp(1.8rem, 4vw, 3.4rem);
+      line-height: 1.05;
+      text-shadow: 0 4px 18px rgba(0, 0, 0, 0.55);
+    }
+
+    .lead {
+      max-width: 980px;
+      color: #e2e8f0;
+      font-size: clamp(1.02rem, 1.7vw, 1.35rem);
+      line-height: 1.65;
+      text-shadow: 0 3px 14px rgba(0, 0, 0, 0.48);
+    }
+
+    .meta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .pill {
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 8px 12px;
+      background: rgba(15, 23, 42, 0.78);
+      color: #e2e8f0;
+      font-size: 0.92rem;
+      white-space: normal;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      width: min(1160px, 100%);
+    }
+
+    .grid.three {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .grid.single {
+      grid-template-columns: minmax(0, 1fr);
+      width: min(980px, 100%);
+    }
+
+    details.card {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--panel);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    details.card[open] {
+      background: var(--panel-strong);
+    }
+
+    summary {
+      min-height: 76px;
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      align-items: center;
+      gap: 12px;
+      padding: 15px 16px;
+      cursor: pointer;
+      list-style: none;
+    }
+
+    summary::-webkit-details-marker { display: none; }
+
+    .rank, .tag {
+      display: inline-grid;
+      place-items: center;
+      min-width: 38px;
+      height: 38px;
+      border-radius: 8px;
+      background: rgba(56, 189, 248, 0.18);
+      color: #e0f2fe;
+      border: 1px solid rgba(56, 189, 248, 0.4);
+      font-weight: 800;
+    }
+
+    .tag.tech {
+      background: rgba(245, 158, 11, 0.18);
+      border-color: rgba(245, 158, 11, 0.48);
+      color: #fde68a;
+    }
+
+    .summary-text {
+      display: grid;
+      gap: 5px;
+      min-width: 0;
+    }
+
+    .summary-text strong {
+      font-size: 1.02rem;
+      line-height: 1.35;
+    }
+
+    .summary-text span {
+      color: var(--muted);
+      font-size: 0.9rem;
+      line-height: 1.35;
+    }
+
+    .chev {
+      color: #93c5fd;
+      font-size: 1.15rem;
+      transition: transform 160ms ease;
+    }
+
+    details[open] .chev {
+      transform: rotate(90deg);
+    }
+
+    .body {
+      display: grid;
+      gap: 12px;
+      padding: 0 16px 16px;
+      color: #e5edf7;
+      font-size: 0.95rem;
+      line-height: 1.62;
+    }
+
+    .body ul {
+      margin: 0;
+      padding-left: 1.2rem;
+    }
+
+    .body li + li { margin-top: 5px; }
+
+    .body b { color: #f8fafc; }
+
+    .source-label {
+      display: grid;
+      gap: 5px;
+      margin-top: 2px;
+      border-top: 1px solid rgba(226, 232, 240, 0.18);
+      padding-top: 10px;
+      color: #bae6fd;
+      overflow-wrap: anywhere;
+    }
+
+    .source-label a {
+      color: #7dd3fc;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+
+    .note {
+      border-left: 3px solid var(--accent-2);
+      padding-left: 10px;
+      color: #fed7aa;
+    }
+
+    .nav {
+      position: fixed;
+      left: 50%;
+      bottom: 18px;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      transform: translateX(-50%);
+      border: 1px solid rgba(226, 232, 240, 0.22);
+      border-radius: 999px;
+      padding: 8px;
+      background: rgba(5, 11, 22, 0.86);
+      box-shadow: 0 18px 50px rgba(0, 0, 0, 0.38);
+    }
+
+    button {
+      border: 1px solid rgba(125, 211, 252, 0.34);
+      border-radius: 999px;
+      background: rgba(14, 165, 233, 0.16);
+      color: #e0f2fe;
+      min-width: 44px;
+      height: 38px;
+      padding: 0 14px;
+      font: inherit;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    button:disabled {
+      opacity: 0.38;
+      cursor: default;
+    }
+
+    .counter {
+      min-width: 72px;
+      text-align: center;
+      color: #cbd5e1;
+      font-size: 0.92rem;
+    }
+
+    .progress {
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      z-index: 12;
+      width: 100vw;
+      height: 4px;
+      background: rgba(15, 23, 42, 0.82);
+    }
+
+    .progress span {
+      display: block;
+      height: 100%;
+      width: 0;
+      background: linear-gradient(90deg, #38bdf8, #f59e0b);
+      transition: width 160ms ease;
+    }
+
+    @media (max-width: 900px) {
+      body { overflow: hidden; }
+      .slide {
+        padding: 22px 14px 92px;
+        background-position: center;
+      }
+      .grid, .grid.three {
+        grid-template-columns: 1fr;
+      }
+      summary {
+        grid-template-columns: auto 1fr auto;
+        min-height: 72px;
+        padding: 13px;
+      }
+      .summary-text strong {
+        font-size: 0.98rem;
+      }
+      .meta-row {
+        gap: 8px;
+      }
+      .pill {
+        font-size: 0.82rem;
+      }
+      .nav {
+        width: calc(100vw - 24px);
+        justify-content: space-between;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Image source notes:
+    Title/news: https://images.unsplash.com/photo-1495020689067-958852a7765e?auto=format&fit=crop&w=2400&q=80
+    Sea / conflict: https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=2400&q=80
+    Diplomacy / institutions: https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?auto=format&fit=crop&w=2400&q=80
+    Nepal / mountains: https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=2400&q=80
+    Climate / landscape: https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=2400&q=80
+    City / security: https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&w=2400&q=80
+    Tech workspace: https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=2400&q=80
+    AI hardware: https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=2400&q=80
+    Earth / sources: https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=2400&q=80
+  -->
+  <main class="deck" aria-live="polite">
+    <section class="slide center active" data-title="Title" style="--bg:url('https://images.unsplash.com/photo-1495020689067-958852a7765e?auto=format&fit=crop&w=2400&q=80')">
+      <div class="kicker">Daily Global and Tech AI News</div>
+      <h1>2026-07-24 全球與科技 AI 新聞</h1>
+      <p class="lead">戰爭外溢轉成能源與政治成本，AI 產品進入高信任個資與即時語音。</p>
+      <div class="meta-row">
+        <span class="pill">研究截點｜2026-07-24 08:01:59 Asia/Taipei</span>
+        <span class="pill">窗口｜2026-07-23 08:01:59 至 2026-07-24 08:01:59</span>
+        <span class="pill">全球 Top 10 + 科技／AI 9 則</span>
+      </div>
+      <div class="grid three">
+        <details class="card">
+          <summary><span class="tag">24h</span><span class="summary-text"><strong>今日時間邊界</strong><span>只納入窗口內事件或首次可靠發布。</span></span><span class="chev">›</span></summary>
+          <div class="body">
+            <p>本輪 Asia/Taipei 研究截點為 2026-07-24 08:01:59，UTC 對應窗口為 2026-07-23T00:01:59Z 至 2026-07-24T00:01:59Z。舊事件若只是更新標題或改寫，未被當成新新聞。</p>
+            <div class="source-label">來源標籤｜本地 production rule file<br><a href="https://lucaskk.github.io/daily-news/wiki/daily/README.md">https://lucaskk.github.io/daily-news/wiki/daily/README.md</a></div>
+          </div>
+        </details>
+        <details class="card">
+          <summary><span class="tag">10</span><span class="summary-text"><strong>全球 Top 10</strong><span>中東戰事、關稅、人道、災害與安全事件。</span></span><span class="chev">›</span></summary>
+          <div class="body">
+            <p>全球新聞採用 AP、The Guardian、Al Jazeera 等主要國際來源，並用既有 daily archive 搜尋避免重複收錄。</p>
+            <div class="source-label">來源標籤｜Source notes<br><a href="https://lucaskk.github.io/daily-news/wiki/daily/2026/07/2026-07-24/source-notes-2026-07-24.md">https://lucaskk.github.io/daily-news/wiki/daily/2026/07/2026-07-24/source-notes-2026-07-24.md</a></div>
+          </div>
+        </details>
+        <details class="card">
+          <summary><span class="tag tech">AI</span><span class="summary-text"><strong>科技／AI 產品線</strong><span>健康資料、語音、模型路由、AI infra 與平台監管。</span></span><span class="chev">›</span></summary>
+          <div class="body">
+            <p>科技 section 優先選官方 release notes、公司公告與具精確時間戳的科技媒體，並將產品發布、重大用戶指標與基礎設施發布分開記錄。</p>
+            <div class="source-label">來源標籤｜Source notes<br><a href="https://lucaskk.github.io/daily-news/wiki/daily/2026/07/2026-07-24/source-notes-2026-07-24.md">https://lucaskk.github.io/daily-news/wiki/daily/2026/07/2026-07-24/source-notes-2026-07-24.md</a></div>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <section class="slide" data-title="Signals" style="--bg:url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=2400&q=80')">
+      <div class="kicker">今日輪廓</div>
+      <h2>從戰場到供應鏈，從聊天到個人資料</h2>
+      <p class="lead">最強主線是 U.S.-Iran / Hormuz 風險同時推高 Red Sea 航運、Brent oil、國會 war powers 與 Gulf pipeline planning。科技端則是 OpenAI、Anthropic、Google、Runway、AMD 把 AI 從模型能力推到個人資料、語音控制、流量規模與算力系統。</p>
+      <div class="grid three">
+        <details class="card">
+          <summary><span class="tag">戰</span><span class="summary-text"><strong>戰爭外溢</strong><span>第 13 夜空襲與 tanker attacks 把焦點推向 Red Sea。</span></span><span class="chev">›</span></summary>
+          <div class="body">
+            <p>Iran crisis 今日有三個層次：美軍 strikes 延續、Houthis 攻擊 Saudi-linked shipping、Trump 暗示更大攻擊。這讓風險從 Hormuz 擴到 Bab el-Mandeb。</p>
+            <div class="source-label">來源標籤｜AP<br><a href="https://apnews.com/article/iran-us-hormuz-strait-war-60d46bf8c83c43a8f2268b7b87627c55">https://apnews.com/article/iran-us-hormuz-strait-war-60d46bf8c83c43a8f2268b7b87627c55</a></div>
+          </div>
+        </details>
+        <details class="card">
+          <summary><span class="tag">油</span><span class="summary-text"><strong>能源成本</strong><span>Brent 重返 100 美元，bypass pipelines 重新變成戰略投資。</span></span><span class="chev">›</span></summary>
+          <div class="body">
+            <p>AP 市場報導顯示 Brent 一度到 US$102，另一篇 AP synthesis 指至少七項繞開 Hormuz 的 pipeline projects 正在建設、規劃或討論中。</p>
+            <div class="source-label">來源標籤｜AP<br><a href="https://apnews.com/article/oil-strait-of-hormuz-iran-896c02f0c978986fff0ae7fc389ea51f">https://apnews.com/article/oil-strait-of-hormuz-iran-896c02f0c978986fff0ae7fc389ea51f</a></div>
+          </div>
+        </details>
+        <details class="card">
+          <summary><span class="tag tech">信任</span><span class="summary-text"><strong>AI 高信任場景</strong><span>Health records、Apple Health data 與 voice coordination 成為主線。</span></span><span class="chev">›</span></summary>
+          <div class="body">
+            <p>OpenAI Health 讓 ChatGPT 連接健康紀錄與 Apple Health data；ChatGPT Voice / GPT-Live-1 讓 desktop app 的任務協調更接近 voice control surface。</p>
+            <div class="source-label">來源標籤｜OpenAI<br><a href="https://openai.com/index/health-in-chatgpt/">https://openai.com/index/health-in-chatgpt/</a></div>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <section class="slide" data-title="Global 1-2" style="--bg:url('https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=2400&q=80')">
+      <div class="kicker">全球焦點 1-2</div>
+      <h2>中東戰事變成航線與國會授權問題</h2>
+      <div class="grid">
+        <details class="card" data-rank="1">
+          <summary><span class="rank">1</span><span class="summary-text"><strong>續報｜U.S.-Iran 第 13 夜，Houthis 攻擊 Saudi tankers</strong><span><time datetime="2026-07-23T07:02:46Z">2026-07-23 15:02:46 Asia/Taipei</time></span></span><span class="chev">›</span></summary>
+          <div class="body">
+            <p><b>為何重要：</b>危機從 Hormuz 推向 Bab el-Mandeb / Red Sea，Suez 航線、insurance、oil routing 與 U.S. strike tempo 同時承壓。</p>
+            <ul>
+              <li>AP 報導 U.S. military announced 13th night of strikes against Iran。</li>
+              <li>Houthis said they attacked Saudi tankers Encelia and Layla；Saudi and UKMTO reporting showed at least one tanker-strike signal。</li>
+              <li>Al Jazeera 與 Guardian 同日補充 Trump 對更大攻擊的威脅。</li>
+            </ul>
+            <p class="note">不確定性：兩艘 tanker 的受損細節仍有口徑差異；Iran 對 Houthi action 的 command chain 未有可核實定論。</p>
+            <div class="source-label">來源標籤｜AP, Al Jazeera, The Guardian<br><a href="https://apnews.com/article/iran-us-hormuz-strait-war-60d46bf8c83c43a8f2268b7b87627c55">https://apnews.com/article/iran-us-hormuz-strait-war-60d46bf8c83c43a8f2268b7b87627c55</a><br><a href="https://www.aljazeera.com/news/2026/7/23/trump-warns-of-biggest-strikes-yet-on-iran-as-tehran-lashes-out-across-gulf">https://www.aljazeera.com/news/2026/7/23/trump-warns-of-biggest-strikes-yet-on-iran-as-tehran-lashes-out-across-gulf</a><br><a href="https://www.theguardian.com/world/2026/jul/23/trump-says-he-is-close-to-decision-on-largest-yet-attack-on-iran">https://www.theguardian.com/world/2026/jul/23/trump-says-he-is-close-to-decision-on-largest-yet-attack-on-iran</a></div>
+          </div>
+        </details>
+        <details class="card" data-rank="2">
+          <summary><span class="rank">2</span><span class="summary-text"><strong>續報｜House 通過 Iran war powers resolution，Senate 否決類似案</strong><span><time datetime="2026-07-23T14:26:40Z">2026-07-23 22:26:40 Asia/Taipei</time></span></span><span class="chev">›</span></summary>
+          <div class="body">
+            <p><b>為何重要：</b>Iran war 從 budget package 延伸到 presidential war powers legitimacy。雖然 vote 多屬象徵性，但國會制衡與 midterm pressure 變得更可見。</p>
+            <ul>
+              <li>House 以 214-208 通過要求 congressional approval 的 halt-war resolution。</li>
+              <li>Senate 同日以 47-49 否決類似案。</li>
+              <li>White House 稱 resolution 不具法律強制力，並要求 lawmakers oppose。</li>
+            </ul>
+            <p class="note">不確定性：House passage 不等於 binding constraint，後續要看 appropriations 是否被用來限制戰費。</p>
+            <div class="source-label">來源標籤｜AP, Al Jazeera<br><a href="https://apnews.com/article/iran-congress-war-powers-resolution-vote-0ba2387a476fe08de0bfd6281adb9639">https://apnews.com/article/iran-congress-war-powers-resolution-vote-0ba2387a476fe08de0bfd6281adb9639</a><br><a href="https://www.aljazeera.com/news/2026/7/23/us-house-votes-to-limit-iran-war-for-first-time-since-ceasefire-breakdown">https://www.aljazeera.com/news/2026/7/23/us-house-votes-to-limit-iran-war-for-first-time-since-ceasefire-breakdown</a></div>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <section class="slide" data-title="Global 3-4" style="--bg:url('https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?auto=format&fit=crop&w=2400&q=80')">
+      <div class="kicker">全球焦點 3-4</div>
+      <h2>核能交易與關稅政策同時重排外交籌碼</h2>
+      <div class="grid">
+        <details class="card" data-rank="3">
+          <summary><span class="rank">3</span><span class="summary-text"><strong>續報｜Trump 將 Saudi nuclear deal 綁上 Abraham Accords</strong><span><time datetime="2026-07-23T12:13:56Z">2026-07-23 20:13:56 Asia/Taipei</time></span></span><span class="chev">›</span></summary>
+          <div class="body">
+            <p><b>為何重要：</b>civilian nuclear cooperation 從 nonproliferation issue 變成 Israel normalization bargaining，讓 Saudi、Israel、Palestinian statehood path 與 U.S. nuclear-export controls 同時卡在談判桌。</p>
+            <ul>
+              <li>Trump said approval is subject to Saudi Arabia joining the Abraham Accords。</li>
+              <li>Trump also said U.S. supports civil non-enriched nuclear facilities。</li>
+              <li>AP 指 deal expected to last 30 years and involve U.S. firms；但協議文本未公開。</li>
+            </ul>
+            <p class="note">不確定性：Trump 的 no-enrichment 說法與先前匿名 sourcing 對 enrichment facility 的擔憂仍有張力。</p>
+            <div class="source-label">來源標籤｜AP<br><a href="https://apnews.com/article/trump-saudia-arabia-nuclear-israel-abraham-accords-6d498a1e851f226c04831bbedf979ec9">https://apnews.com/article/trump-saudia-arabia-nuclear-israel-abraham-accords-6d498a1e851f226c04831bbedf979ec9</a></div>
+          </div>
+        </details>
+        <details class="card" data-rank="4">
+          <summary><span class="rank">4</span><span class="summary-text"><strong>Trump forced-labor tariffs 對大批貿易夥伴加徵 10% 至 12.5%</strong><span><time datetime="2026-07-23T21:04:11Z">2026-07-24 05:04:11 Asia/Taipei</time></span></span><span class="chev">›</span></summary>
+          <div class="body">
+            <p><b>為何重要：</b>U.S. 把 forced-labor import-ban enforcement、human-rights due diligence 與 protectionism 混成同一 tariff tool，可能造成新一輪 supply-chain cost and legal challenges。</p>
+            <ul>
+              <li>AP 報導 60 trading partners accounting for 99% of U.S. imports 將受 10% 至 12.5% tariffs 影響。</li>
+              <li>Guardian 使用 over 80 / 85 countries 口徑，指 critics 認為政策像是繞過 Supreme Court and Congress。</li>
+              <li>Oil、gas、fertilizers and USMCA-covered goods are exempt。</li>
+            </ul>
+            <p class="note">不確定性：60 trading partners vs over 80 countries 是口徑差異，需等 USTR final list and legal filings。</p>
+            <div class="source-label">來源標籤｜AP, The Guardian<br><a href="https://apnews.com/article/trump-tariffs-supreme-court-forced-labor-4ea091eeee3fa1bfbe55af3f482e6bc1">https://apnews.com/article/trump-tariffs-supreme-court-forced-labor-4ea091eeee3fa1bfbe55af3f482e6bc1</a><br><a href="https://www.theguardian.com/us-news/2026/jul/23/trump-administration-trade-tariffs">https://www.theguardian.com/us-news/2026/jul/23/trump-administration-trade-tariffs</a></div>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <section class="slide" data-title="Global 5-6" style="--bg:url('https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=2400&q=80')">
+      <div class="kicker">全球焦點 5-6</div>
+      <h2>援助斷裂與氣候災害進入可見傷害</h2>
+      <div class="grid">
+        <details class="card" data-rank="5">
+          <summary><span class="rank">5</span><span class="summary-text"><strong>AP 調查｜Nepal LGBTQ+ aid workers 因 USAID cuts 轉向 sex work</strong><span><time datetime="2026-07-23T04:21:59Z">2026-07-23 12:21:59 Asia/Taipei</time></span></span><span class="chev">›</span></summary>
+          <div class="body">
+            <p><b>為何重要：</b>這把 U.S. foreign-aid cuts 從 budget line 具體化為 HIV prevention、marginalised workers 和生計崩塌問題。</p>
+            <ul>
+              <li>AP 報導全球 more than 280,000 aid workers lost jobs after U.S. foreign aid cuts last year。</li>
+              <li>In Nepal, around 100 LGBTQ+ aid workers reportedly turned to sex work to survive。</li>
+              <li>報導特別指出 transgender people 在 conservative settings 的合法工作選項有限。</li>
+            </ul>
+            <p class="note">不確定性：不同 aid-sector job-loss estimates and health-outcome impact 仍需後續追蹤。</p>
+            <div class="source-label">來源標籤｜AP<br><a href="https://apnews.com/article/usaid-nepal-sex-workers-trump-budget-cuts-d8ea21ca4d43f1598ea54499123d46e0">https://apnews.com/article/usaid-nepal-sex-workers-trump-budget-cuts-d8ea21ca4d43f1598ea54499123d46e0</a></div>
+          </div>
+        </details>
+        <details class="card" data-rank="6">
+          <summary><span class="rank">6</span><span class="summary-text"><strong>France Saumos wildfire 迫使近 20,000 人撤離</strong><span><time datetime="2026-07-23T16:36:51Z">2026-07-24 00:36:51 Asia/Taipei</time></span></span><span class="chev">›</span></summary>
+          <div class="body">
+            <p><b>為何重要：</b>Saumos / Arcachon wildfire 把 tourist evacuation、semi-urban fire risk、extreme heat and marine heatwave 放在同一災害鏈。</p>
+            <ul>
+              <li>Guardian 報導 nearly 20,000 people evacuated。</li>
+              <li>Fire near Saumos burned over 3,700 hectares。</li>
+              <li>約 800 firefighters and four water-bombing planes deployed。</li>
+              <li>同文指出 southern Europe extreme heat，Spain parts reached 44.7C，Mediterranean marine heatwave affected around 80% of sea surface。</li>
+            </ul>
+            <p class="note">不確定性：final burned area、origin、property loss and weather risk remain moving figures。</p>
+            <div class="source-label">來源標籤｜The Guardian<br><a href="https://www.theguardian.com/world/2026/jul/23/people-evacuated-intense-wildfire-saumos-france">https://www.theguardian.com/world/2026/jul/23/people-evacuated-intense-wildfire-saumos-france</a></div>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <section class="slide" data-title="Global 7-8" style="--bg:url('https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&w=2400&q=80')">
+      <div class="kicker">全球焦點 7-8</div>
+      <h2>地方治理暴力與影響行動進入司法場域</h2>
+      <div class="grid">
+        <details class="card" data-rank="7">
+          <summary><span class="rank">7</span><span class="summary-text"><strong>Mexico Temoac 市長 Valentín Lavín Romero 在 town hall 遭槍殺</strong><span><time datetime="2026-07-23T16:32:53Z">2026-07-24 00:32:53 Asia/Taipei</time></span></span><span class="chev">›</span></summary>
+          <div class="body">
+            <p><b>為何重要：</b>這是 Mexico municipal violence 的新案例，讓 organized crime、local governance and federal security strategy 再度受壓。</p>
+            <ul>
+              <li>Valentín Lavín Romero was shot dead inside town hall after surviving a January assassination attempt。</li>
+              <li>Guardian 指他是 Sheinbaum 2024 年 10 月就任以來第 14 名遭殺市長。</li>
+              <li>Mexico since 2006 has seen nearly 100 mayoral killings, according to the report。</li>
+            </ul>
+            <p class="note">不確定性：motive、suspects and alleged criminal links 尚待正式調查與法院確認。</p>
+            <div class="source-label">來源標籤｜The Guardian<br><a href="https://www.theguardian.com/world/2026/jul/23/mayor-shot-dead-mexico-after-surviving-assassination">https://www.theguardian.com/world/2026/jul/23/mayor-shot-dead-mexico-after-surviving-assassination</a></div>
+          </div>
+        </details>
+        <details class="card" data-rank="8">
+          <summary><span class="rank">8</span><span class="summary-text"><strong>Angola 以 terrorism and spying 定罪兩名 Russian men</strong><span><time datetime="2026-07-23T14:24:01Z">2026-07-23 22:24:01 Asia/Taipei</time></span></span><span class="chev">›</span></summary>
+          <div class="body">
+            <p><b>為何重要：</b>這是 Russia influence operations in Africa 的司法化案例，牽涉 Wagner successor networks、disinformation and great-power competition。</p>
+            <ul>
+              <li>Lev Lakshtanov and Igor Ratchin were found guilty of terrorism and spying。</li>
+              <li>Reported sentences were eight and 11 years。</li>
+              <li>Prosecutors alleged coup and deadly-demonstration planning；defendants deny charges。</li>
+            </ul>
+            <p class="note">不確定性：prosecution evidence and Russia-linked network attribution 需與 court record 分開追蹤。</p>
+            <div class="source-label">來源標籤｜The Guardian<br><a href="https://www.theguardian.com/world/2026/jul/23/two-russian-men-jailed-angola-terrorism-and-spying">https://www.theguardian.com/world/2026/jul/23/two-russian-men-jailed-angola-terrorism-and-spying</a></div>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <section class="slide" data-title="Global 9-10" style="--bg:url('https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=2400&q=80')">
+      <div class="kicker">全球焦點 9-10</div>
+      <h2>外交管道與能源基礎設施的長尾風險</h2>
+      <div class="grid">
+        <details class="card" data-rank="9">
+          <summary><span class="rank">9</span><span class="summary-text"><strong>續報｜Rubio 與 Lavrov 在 Manila 會談，Ukraine 沒有 quick deal</strong><span><time datetime="2026-07-23T01:21:56Z">2026-07-23 09:21:56 Asia/Taipei</time></span></span><span class="chev">›</span></summary>
+          <div class="body">
+            <p><b>為何重要：</b>Iran war 正吸走 Washington attention，但 U.S.-Russia foreign ministers' meeting 顯示 Ukraine diplomacy 尚未停擺。</p>
+            <ul>
+              <li>Rubio said U.S. wants to help end the senseless war in Ukraine but no quick deal is ahead。</li>
+              <li>Rubio met Sergey Lavrov in Manila at ASEAN sidelines。</li>
+              <li>Al Jazeera also framed the meeting as renewed but limited Ukraine-war discussion。</li>
+            </ul>
+            <p class="note">不確定性：no concrete proposal announced；battlefield and sanctions constraints remain decisive。</p>
+            <div class="source-label">來源標籤｜AP, Al Jazeera<br><a href="https://apnews.com/article/asean-rubio-lavrov-russia-ukraine-502b5eb2dc21caf13fab7928acdc5b1e">https://apnews.com/article/asean-rubio-lavrov-russia-ukraine-502b5eb2dc21caf13fab7928acdc5b1e</a><br><a href="https://www.aljazeera.com/news/2026/7/23/top-us-and-russian-diplomats-discuss-ukraine-war-in-manila">https://www.aljazeera.com/news/2026/7/23/top-us-and-russian-diplomats-discuss-ukraine-war-in-manila</a></div>
+          </div>
+        </details>
+        <details class="card" data-rank="10">
+          <summary><span class="rank">10</span><span class="summary-text"><strong>續報｜Brent oil 重返 100 美元，Gulf producers 規劃繞開 Hormuz</strong><span><time datetime="2026-07-23T07:29:47Z">2026-07-23 15:29:47 Asia/Taipei</time></span></span><span class="chev">›</span></summary>
+          <div class="body">
+            <p><b>為何重要：</b>若 Gulf oil producers 真的擴建 Red Sea、Gulf of Oman and Mediterranean routes，Hormuz 的地緣槓桿會被長期重估。</p>
+            <ul>
+              <li>AP 指 before Iran war, roughly 15 million barrels per day of Persian Gulf oil went through Hormuz。</li>
+              <li>At least seven pipeline projects are under construction, planned or discussed。</li>
+              <li>AP market story reported Brent jumped as high as US$102 from US$72 early this month。</li>
+            </ul>
+            <p class="note">不確定性：project financing、timeline and usable capacity vary；oil prices may reverse if routes stabilize。</p>
+            <div class="source-label">來源標籤｜AP<br><a href="https://apnews.com/article/oil-strait-of-hormuz-iran-896c02f0c978986fff0ae7fc389ea51f">https://apnews.com/article/oil-strait-of-hormuz-iran-896c02f0c978986fff0ae7fc389ea51f</a><br><a href="https://apnews.com/article/stocks-markets-iran-trump-ai-inflation-45b9165d6c518f5bea668b6ba7a89838">https://apnews.com/article/stocks-markets-iran-trump-ai-inflation-45b9165d6c518f5bea668b6ba7a89838</a></div>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <section class="slide" data-title="Tech 1-3" style="--bg:url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=2400&q=80')">
+      <div class="kicker">科技／AI 1-3</div>
+      <h2>個人資料與語音介面成為 AI 產品主場</h2>
+      <div class="grid three">
+        <details class="card">
+          <summary><span class="tag tech">T1</span><span class="summary-text"><strong>OpenAI Health in ChatGPT</strong><span><time datetime="2026-07-23T17:00:00Z">2026-07-24 01:00:00 Asia/Taipei</time></span></span><span class="chev">›</span></summary>
+          <div class="body">
+            <p><b>重點：</b>U.S. 18+ users can connect supported health records and Apple Health data，讓 ChatGPT 進入個人健康資料 grounded context。</p>
+            <ul>
+              <li>OpenAI official page dated July 23, 2026。</li>
+              <li>Release notes mention logged-in Free, Go, Plus and Pro users。</li>
+              <li>TechCrunch reports Apple Health, Function and MyFitnessPal integrations。</li>
+            </ul>
+            <p class="note">不確定性：medical-advice boundary、privacy retention and rollout safeguards 仍需追蹤。</p>
+            <div class="source-label">來源標籤｜OpenAI, TechCrunch<br><a href="https://openai.com/index/health-in-chatgpt/">https://openai.com/index/health-in-chatgpt/</a><br><a href="https://help.openai.com/en/articles/6825453-chatgpt-release-notes">https://help.openai.com/en/articles/6825453-chatgpt-release-notes</a><br><a href="https://techcrunch.com/2026/07/23/openai-makes-chatgpt-health-available-to-all-u-s-users/">https://techcrunch.com/2026/07/23/openai-makes-chatgpt-health-available-to-all-u-s-users/</a></div>
+          </div>
+        </details>
+        <details class="card">
+          <summary><span class="tag tech">T2</span><span class="summary-text"><strong>ChatGPT Voice 導入 GPT-Live-1</strong><span><time datetime="2026-07-23T19:36:11Z">2026-07-24 03:36:11 Asia/Taipei</time></span></span><span class="chev">›</span></summary>
+          <div class="body">
+            <p><b>重點：</b>Voice interface 從 dictation / Q&A 走向 task coordination，特別是 desktop app 的 Chat、Work and Codex threads。</p>
+            <ul>
+              <li>OpenAI release notes say paid users use GPT-Live-1；Free users use GPT-Live-1 mini。</li>
+              <li>Models can listen and speak at the same time。</li>
+              <li>9to5Mac cites app update notes about coordinating tasks in ChatGPT desktop app。</li>
+            </ul>
+            <p class="note">不確定性：global rollout visibility and hands-free task-control safety need user-side testing。</p>
+            <div class="source-label">來源標籤｜OpenAI, 9to5Mac<br><a href="https://help.openai.com/en/articles/6825453-chatgpt-release-notes">https://help.openai.com/en/articles/6825453-chatgpt-release-notes</a><br><a href="https://9to5mac.com/2026/07/23/openai-updating-chatgpt-desktop-app-with-gpt-voice-for-talking-through-work/">https://9to5mac.com/2026/07/23/openai-updating-chatgpt-desktop-app-with-gpt-voice-for-talking-through-work/</a><br><a href="https://openai.com/index/introducing-gpt-live/">https://openai.com/index/introducing-gpt-live/</a></div>
+          </div>
+        </details>
+        <details class="card">
+          <summary><span class="tag tech">T3</span><span class="summary-text"><strong>Anthropic 升級 Claude voice mode</strong><span><time datetime="2026-07-23T19:00:00Z">2026-07-24 03:00:00 Asia/Taipei</time></span></span><span class="chev">›</span></summary>
+          <div class="body">
+            <p><b>重點：</b>Claude voice mode 取得更 capable models，與 OpenAI Voice 同日形成 consumer voice AI competition。</p>
+            <ul>
+              <li>TechCrunch reported Anthropic updated Claude voice mode with more capable models。</li>
+              <li>Voice assistant competition is moving from novelty to daily workflow access。</li>
+            </ul>
+            <p class="note">不確定性：availability by plan, region and platform requires product-page confirmation。</p>
+            <div class="source-label">來源標籤｜TechCrunch<br><a href="https://techcrunch.com/2026/07/23/anthropic-updates-claude-voice-mode-with-more-capable-models/">https://techcrunch.com/2026/07/23/anthropic-updates-claude-voice-mode-with-more-capable-models/</a></div>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <section class="slide" data-title="Tech 4-6" style="--bg:url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=2400&q=80')">
+      <div class="kicker">科技／AI 4-6</div>
+      <h2>AI scale 從用戶、路由到 rack-scale hardware</h2>
+      <div class="grid three">
+        <details class="card">
+          <summary><span class="tag tech">T4</span><span class="summary-text"><strong>Google Gemini approaching 950M monthly users</strong><span><time datetime="2026-07-23T14:52:44Z">2026-07-23 22:52:44 Asia/Taipei</time></span></span><span class="chev">›</span></summary>
+          <div class="body">
+            <p><b>重點：</b>Gemini 接近 10 億月活，顯示 AI assistant 正被既有 distribution channels 快速推向 billion-user scale。</p>
+            <ul>
+              <li>TechCrunch reports Google is closing in on another billion-user product with Gemini。</li>
+              <li>此數字是平台規模訊號，不等於 engagement depth or paid conversion。</li>
+            </ul>
+            <p class="note">不確定性：MAU calculation、regional distribution and active usage depth remain opaque。</p>
+            <div class="source-label">來源標籤｜TechCrunch<br><a href="https://techcrunch.com/2026/07/23/google-closes-in-on-another-billion-user-product-with-gemini/">https://techcrunch.com/2026/07/23/google-closes-in-on-another-billion-user-product-with-gemini/</a></div>
+          </div>
+        </details>
+        <details class="card">
+          <summary><span class="tag tech">T5</span><span class="summary-text"><strong>Runway 推 AI model router</strong><span><time datetime="2026-07-23T17:07:35Z">2026-07-24 01:07:35 Asia/Taipei</time></span></span><span class="chev">›</span></summary>
+          <div class="body">
+            <p><b>重點：</b>generative media competition 變擁擠後，Runway 把產品價值從單一模型移到 routing、latency、cost and output fit。</p>
+            <ul>
+              <li>TechCrunch reported Runway is betting on AI model routing。</li>
+              <li>Router logic may become creative AI stack 的新控制面。</li>
+            </ul>
+            <p class="note">不確定性：routing criteria, user control and quality guarantees need product testing。</p>
+            <div class="source-label">來源標籤｜TechCrunch<br><a href="https://techcrunch.com/2026/07/23/runway-bets-on-ai-model-routing-as-generative-media-gets-crowded/">https://techcrunch.com/2026/07/23/runway-bets-on-ai-model-routing-as-generative-media-gets-crowded/</a></div>
+          </div>
+        </details>
+        <details class="card">
+          <summary><span class="tag tech">T6</span><span class="summary-text"><strong>AMD Helios AI rack-scale system</strong><span><time datetime="2026-07-23T20:33:02Z">2026-07-24 04:33:02 Asia/Taipei</time></span></span><span class="chev">›</span></summary>
+          <div class="body">
+            <p><b>重點：</b>AMD 用 Helios 對 Nvidia 的 AI rack-scale architecture 發起更直接競爭，說明 AI infrastructure 正從 chips 走到 full system competition。</p>
+            <ul>
+              <li>TechCrunch reported AMD takes on Nvidia with Helios AI rack-scale system。</li>
+              <li>AI data-center buyers now compare compute, networking, power and software stack together。</li>
+            </ul>
+            <p class="note">不確定性：customer wins, performance benchmarks and deployment timeline remain the key proof points。</p>
+            <div class="source-label">來源標籤｜TechCrunch<br><a href="https://techcrunch.com/2026/07/23/amd-takes-on-nvidia-with-its-helios-ai-rack-scale-system/">https://techcrunch.com/2026/07/23/amd-takes-on-nvidia-with-its-helios-ai-rack-scale-system/</a></div>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <section class="slide" data-title="Tech 7-9" style="--bg:url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=2400&q=80')">
+      <div class="kicker">科技／AI 7-9</div>
+      <h2>資本、平台監管與 AI 攻擊防護同步升溫</h2>
+      <div class="grid three">
+        <details class="card">
+          <summary><span class="tag tech">T7</span><span class="summary-text"><strong>續報｜Etched 估值升至 US$10.3B</strong><span><time datetime="2026-07-23T15:00:00Z">2026-07-23 23:00:00 Asia/Taipei</time></span></span><span class="chev">›</span></summary>
+          <div class="body">
+            <p><b>重點：</b>specialized AI chips 仍能吸引大型資本，即使市場對 single-workload silicon 的商業彈性保持懷疑。</p>
+            <ul>
+              <li>TechCrunch reported Etched hit a US$10.3B valuation from big-name investors。</li>
+              <li>這是 2026-07-01 Etched product direction 之後的資本續報。</li>
+            </ul>
+            <p class="note">不確定性：valuation is not proof of production scale；watch tapeout, customers and unit economics。</p>
+            <div class="source-label">來源標籤｜TechCrunch<br><a href="https://techcrunch.com/2026/07/23/ai-chip-startup-etched-defies-skeptics-hits-10-3b-valuation-from-big-name-investors/">https://techcrunch.com/2026/07/23/ai-chip-startup-etched-defies-skeptics-hits-10-3b-valuation-from-big-name-investors/</a></div>
+          </div>
+        </details>
+        <details class="card">
+          <summary><span class="tag tech">T8</span><span class="summary-text"><strong>EU 對 Google Play / Search restrictions 開罰</strong><span><time datetime="2026-07-23T10:08:44Z">2026-07-23 18:08:44 Asia/Taipei</time></span></span><span class="chev">›</span></summary>
+          <div class="body">
+            <p><b>重點：</b>EU platform enforcement 繼續把 app distribution and search placement 視為 competition chokepoints。</p>
+            <ul>
+              <li>AP reported Google was hit with an EU fine over Play Store and search restrictions。</li>
+              <li>此事與 AI 無直接產品發布關係，但會影響 AI app distribution and platform bargaining power。</li>
+            </ul>
+            <p class="note">不確定性：appeal path, remedy design and product changes still pending。</p>
+            <div class="source-label">來源標籤｜AP<br><a href="https://apnews.com/article/google-eu-competition-fine-antitrust-play-search-199c77e09d3829ebfc3d9e51281a369a">https://apnews.com/article/google-eu-competition-fine-antitrust-play-search-199c77e09d3829ebfc3d9e51281a369a</a></div>
+          </div>
+        </details>
+        <details class="card">
+          <summary><span class="tag tech">T9</span><span class="summary-text"><strong>AegisAI raises US$36M for AI-driven spear-phishing defense</strong><span><time datetime="2026-07-23T18:38:34Z">2026-07-24 02:38:34 Asia/Taipei</time></span></span><span class="chev">›</span></summary>
+          <div class="body">
+            <p><b>重點：</b>AI-generated spear phishing 正把 enterprise security 從 rule-based filters 推向 behavior, identity and generated-content detection。</p>
+            <ul>
+              <li>TechCrunch reported AegisAI was founded by former Google security executives。</li>
+              <li>The startup raised US$36M to stop AI-driven spear phishing。</li>
+            </ul>
+            <p class="note">不確定性：customer adoption, false-positive rates and adversarial adaptation need field evidence。</p>
+            <div class="source-label">來源標籤｜TechCrunch<br><a href="https://techcrunch.com/2026/07/23/aegisai-founded-by-former-google-security-execs-lands-36m-to-stop-ai-driven-spear-phishing/">https://techcrunch.com/2026/07/23/aegisai-founded-by-former-google-security-execs-lands-36m-to-stop-ai-driven-spear-phishing/</a></div>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <section class="slide" data-title="Follow-up" style="--bg:url('https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?auto=format&fit=crop&w=2400&q=80')">
+      <div class="kicker">綜合判讀</div>
+      <h2>明日最值得追的四條線</h2>
+      <div class="grid">
+        <details class="card">
+          <summary><span class="tag">1</span><span class="summary-text"><strong>Iran war 是否進入更大攻擊節點</strong><span>看 U.S. target set、Houthis shipping actions 與 UN diplomacy。</span></span><span class="chev">›</span></summary>
+          <div class="body">
+            <p>若 Trump 真的授權 larger strikes，Red Sea tanker attacks、Hormuz insurance pricing and congressional war powers pressure 會連成單一風險鏈。</p>
+            <div class="source-label">來源標籤｜AP<br><a href="https://apnews.com/article/iran-us-hormuz-strait-war-60d46bf8c83c43a8f2268b7b87627c55">https://apnews.com/article/iran-us-hormuz-strait-war-60d46bf8c83c43a8f2268b7b87627c55</a></div>
+          </div>
+        </details>
+        <details class="card">
+          <summary><span class="tag">2</span><span class="summary-text"><strong>Forced-labor tariffs 的法律與價格衝擊</strong><span>看 final country list、retaliation、consumer-price pass-through。</span></span><span class="chev">›</span></summary>
+          <div class="body">
+            <p>這次關稅的最大問題不是單一稅率，而是行政部門用 forced-labor enforcement 將供應鏈稽核變成廣泛關稅工具。</p>
+            <div class="source-label">來源標籤｜AP<br><a href="https://apnews.com/article/trump-tariffs-supreme-court-forced-labor-4ea091eeee3fa1bfbe55af3f482e6bc1">https://apnews.com/article/trump-tariffs-supreme-court-forced-labor-4ea091eeee3fa1bfbe55af3f482e6bc1</a></div>
+          </div>
+        </details>
+        <details class="card">
+          <summary><span class="tag tech">3</span><span class="summary-text"><strong>OpenAI Health 的 privacy / safety 邊界</strong><span>看 retention、connector consent、medical advice guardrails。</span></span><span class="chev">›</span></summary>
+          <div class="body">
+            <p>Health in ChatGPT 可能是 consumer AI 進入最敏感資料層的關鍵測試；產品成功與否取決於信任設計，不只是 UX。</p>
+            <div class="source-label">來源標籤｜OpenAI<br><a href="https://openai.com/index/health-in-chatgpt/">https://openai.com/index/health-in-chatgpt/</a></div>
+          </div>
+        </details>
+        <details class="card">
+          <summary><span class="tag tech">4</span><span class="summary-text"><strong>AI infrastructure 的 system-level competition</strong><span>AMD Helios、Etched valuation 與 Runway router 指向同一趨勢。</span></span><span class="chev">›</span></summary>
+          <div class="body">
+            <p>AI 競爭正在從單一 model spec 轉向 complete system：routing、hardware rack、chip economics、platform distribution and cybersecurity。</p>
+            <div class="source-label">來源標籤｜TechCrunch<br><a href="https://techcrunch.com/2026/07/23/amd-takes-on-nvidia-with-its-helios-ai-rack-scale-system/">https://techcrunch.com/2026/07/23/amd-takes-on-nvidia-with-its-helios-ai-rack-scale-system/</a></div>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <section class="slide" data-title="Sources" style="--bg:url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=2400&q=80')">
+      <div class="kicker">來源與圖片</div>
+      <h2>每張新聞卡片皆含完整 URL</h2>
+      <p class="lead">本頁只列素材與總來源入口；新聞與科技卡片的展開內容末尾都有自己的可讀來源標籤與完整原始 URL。</p>
+      <div class="grid">
+        <details class="card">
+          <summary><span class="tag">文</span><span class="summary-text"><strong>報告與來源筆記</strong><span>本地知識庫入口。</span></span><span class="chev">›</span></summary>
+          <div class="body">
+            <ul>
+              <li>Daily report: daily-news-2026-07-24.md</li>
+              <li>Source notes: source-notes-2026-07-24.md</li>
+            </ul>
+            <div class="source-label">來源標籤｜Local files<br><a href="https://lucaskk.github.io/daily-news/wiki/daily/2026/07/2026-07-24/daily-news-2026-07-24.md">https://lucaskk.github.io/daily-news/wiki/daily/2026/07/2026-07-24/daily-news-2026-07-24.md</a><br><a href="https://lucaskk.github.io/daily-news/wiki/daily/2026/07/2026-07-24/source-notes-2026-07-24.md">https://lucaskk.github.io/daily-news/wiki/daily/2026/07/2026-07-24/source-notes-2026-07-24.md</a></div>
+          </div>
+        </details>
+        <details class="card">
+          <summary><span class="tag">圖</span><span class="summary-text"><strong>背景圖片來源</strong><span>Stable remote image URLs from Unsplash image CDN.</span></span><span class="chev">›</span></summary>
+          <div class="body">
+            <p>圖片用於主題背景；本簡報未將新聞來源放在浮動 footer，而是放在每張展開卡片內。</p>
+            <div class="source-label">來源標籤｜Unsplash image URLs<br><a href="https://images.unsplash.com/photo-1495020689067-958852a7765e?auto=format&fit=crop&w=2400&q=80">https://images.unsplash.com/photo-1495020689067-958852a7765e?auto=format&fit=crop&w=2400&q=80</a><br><a href="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=2400&q=80">https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=2400&q=80</a><br><a href="https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?auto=format&fit=crop&w=2400&q=80">https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?auto=format&fit=crop&w=2400&q=80</a><br><a href="https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=2400&q=80">https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=2400&q=80</a><br><a href="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=2400&q=80">https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=2400&q=80</a><br><a href="https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&w=2400&q=80">https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&w=2400&q=80</a><br><a href="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=2400&q=80">https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=2400&q=80</a><br><a href="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=2400&q=80">https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=2400&q=80</a><br><a href="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=2400&q=80">https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=2400&q=80</a></div>
+          </div>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <nav class="nav" aria-label="Slide controls">
+    <button type="button" id="prev" aria-label="Previous slide">‹</button>
+    <span class="counter" id="counter">1 / 12</span>
+    <button type="button" id="next" aria-label="Next slide">›</button>
+  </nav>
+  <div class="progress" aria-hidden="true"><span id="progress"></span></div>
+
+  <script>
+    const slides = Array.from(document.querySelectorAll(".slide"));
+    const prev = document.getElementById("prev");
+    const next = document.getElementById("next");
+    const counter = document.getElementById("counter");
+    const progress = document.getElementById("progress");
+    let current = 0;
+
+    function clampIndex(value) {
+      return Math.max(0, Math.min(slides.length - 1, value));
+    }
+
+    function showSlide(index, pushHash = true) {
+      current = clampIndex(index);
+      slides.forEach((slide, idx) => {
+        slide.classList.toggle("active", idx === current);
+        if (idx === current) slide.scrollTop = 0;
+      });
+      prev.disabled = current === 0;
+      next.disabled = current === slides.length - 1;
+      counter.textContent = `${current + 1} / ${slides.length}`;
+      progress.style.width = `${((current + 1) / slides.length) * 100}%`;
+      if (pushHash) {
+        const title = slides[current].dataset.title || `slide-${current + 1}`;
+        history.replaceState(null, "", `#${current + 1}-${encodeURIComponent(title)}`);
+      }
+    }
+
+    function fromHash() {
+      const match = location.hash.match(/^#(\d+)/);
+      if (match) showSlide(Number(match[1]) - 1, false);
+      else showSlide(0, false);
+    }
+
+    prev.addEventListener("click", () => showSlide(current - 1));
+    next.addEventListener("click", () => showSlide(current + 1));
+    window.addEventListener("hashchange", fromHash);
+    window.addEventListener("keydown", (event) => {
+      const target = event.target;
+      if (target && ["INPUT", "TEXTAREA", "SELECT"].includes(target.tagName)) return;
+      if (event.key === "ArrowRight" || event.key === "PageDown" || event.key === " ") {
+        event.preventDefault();
+        showSlide(current + 1);
+      }
+      if (event.key === "ArrowLeft" || event.key === "PageUp") {
+        event.preventDefault();
+        showSlide(current - 1);
+      }
+      if (event.key === "Home") {
+        event.preventDefault();
+        showSlide(0);
+      }
+      if (event.key === "End") {
+        event.preventDefault();
+        showSlide(slides.length - 1);
+      }
+    });
+    fromHash();
+  </script>
+</body>
+</html>
