@@ -1,0 +1,557 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>2026-07-25 Daily Global and Tech AI News</title>
+  <!--
+    Background image sources:
+    Title/news: Unsplash, Roman Kraft, https://images.unsplash.com/photo-1504711434969-e33886168f5c
+    Research/map: Unsplash, Andrew Stutesman, https://images.unsplash.com/photo-1521295121783-8a321d551ad2
+    Maritime/ocean: Unsplash, Sean Oulashin, https://images.unsplash.com/photo-1507525428034-b723cf961d3e
+    Climate/landscape: Unsplash, Luca Bravo, https://images.unsplash.com/photo-1500530855697-b586d89ba3ee
+    Conflict/map: Unsplash, Annie Spratt, https://images.unsplash.com/photo-1524661135-423995f22d0b
+    Trade/city: Unsplash, Anders Jilden, https://images.unsplash.com/photo-1486406146926-c627a92ad1ab
+    Institutions/building: Unsplash, Harold Mendoza, https://images.unsplash.com/photo-1529107386315-e1a2ed48a620
+    Forest/Canada: Unsplash, Casey Horner, https://images.unsplash.com/photo-1511497584788-876760111969
+    AI/circuit: Unsplash, Umberto, https://images.unsplash.com/photo-1518770660439-4636190af475
+    Work/office: Unsplash, Copernico, https://images.unsplash.com/photo-1497366754035-f200968a6e72
+  -->
+  <style>
+    :root {
+      --text: #101827;
+      --muted: #475569;
+      --panel: rgba(255, 255, 255, 0.94);
+      --panel-strong: rgba(255, 255, 255, 0.98);
+      --accent: #0f766e;
+      --accent-2: #b45309;
+      --line: rgba(15, 23, 42, 0.18);
+      --nav: rgba(15, 23, 42, 0.9);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      color: var(--text);
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #0b1220;
+    }
+    .slide {
+      display: none;
+      min-height: 100vh;
+      padding: clamp(24px, 4vw, 58px) clamp(18px, 5vw, 76px) 104px;
+      background-image:
+        linear-gradient(90deg, rgba(248, 250, 252, 0.92) 0%, rgba(248, 250, 252, 0.82) 48%, rgba(248, 250, 252, 0.52) 100%),
+        var(--bg);
+      background-size: cover;
+      background-position: center;
+    }
+    .slide.active { display: block; }
+    .kicker {
+      margin: 0 0 10px;
+      color: var(--accent);
+      font-weight: 800;
+      letter-spacing: 0;
+      font-size: clamp(0.86rem, 1.4vw, 1rem);
+    }
+    h1, h2 {
+      margin: 0;
+      letter-spacing: 0;
+      line-height: 1.08;
+      max-width: 1120px;
+    }
+    h1 { font-size: clamp(2.25rem, 6vw, 5.6rem); }
+    h2 { font-size: clamp(1.8rem, 4vw, 3.5rem); }
+    .lead {
+      max-width: 900px;
+      margin: 18px 0 0;
+      color: #1f2937;
+      font-size: clamp(1rem, 2vw, 1.28rem);
+      line-height: 1.65;
+      text-shadow: 0 1px 0 rgba(255,255,255,0.45);
+    }
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 24px;
+      max-width: 980px;
+    }
+    .pill {
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.88);
+      padding: 8px 11px;
+      border-radius: 999px;
+      color: #334155;
+      font-size: 0.9rem;
+      font-weight: 650;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 26px;
+      max-width: 1180px;
+    }
+    .grid.three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    details.card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      box-shadow: 0 14px 38px rgba(15, 23, 42, 0.16);
+      overflow: hidden;
+    }
+    details.card[open] { background: var(--panel-strong); }
+    summary {
+      cursor: pointer;
+      padding: 14px 15px;
+      list-style: none;
+      min-height: 86px;
+      display: grid;
+      align-content: center;
+      gap: 6px;
+    }
+    summary::-webkit-details-marker { display: none; }
+    summary::after {
+      content: "+";
+      float: right;
+      color: var(--accent);
+      font-weight: 900;
+      font-size: 1.1rem;
+    }
+    details[open] summary::after { content: "-"; }
+    .rank, .tag {
+      color: var(--accent-2);
+      font-weight: 850;
+      font-size: 0.85rem;
+    }
+    .headline {
+      font-weight: 850;
+      line-height: 1.35;
+      font-size: clamp(1rem, 1.6vw, 1.18rem);
+    }
+    .time {
+      color: var(--muted);
+      font-size: 0.86rem;
+      font-weight: 650;
+    }
+    .detail-body {
+      border-top: 1px solid var(--line);
+      padding: 0 15px 15px;
+      color: #1e293b;
+      line-height: 1.6;
+      font-size: 0.95rem;
+    }
+    .detail-body ul { margin: 10px 0 0 18px; padding: 0; }
+    .detail-body li { margin: 6px 0; }
+    .source-line {
+      margin: 14px 0 0;
+      padding-top: 10px;
+      border-top: 1px solid var(--line);
+      color: #334155;
+      font-size: 0.86rem;
+      overflow-wrap: anywhere;
+    }
+    .source-line strong { color: #0f766e; }
+    .takeaways {
+      margin-top: 28px;
+      max-width: 960px;
+      display: grid;
+      gap: 12px;
+    }
+    .nav {
+      position: fixed;
+      left: 50%;
+      bottom: 14px;
+      transform: translateX(-50%);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--nav);
+      border: 1px solid rgba(255,255,255,0.18);
+      color: #f8fafc;
+      padding: 10px 12px;
+      border-radius: 999px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.32);
+      z-index: 20;
+    }
+    .nav button {
+      border: 0;
+      border-radius: 999px;
+      background: #f8fafc;
+      color: #0f172a;
+      font-weight: 850;
+      padding: 8px 12px;
+      cursor: pointer;
+      min-width: 42px;
+    }
+    .counter { min-width: 86px; text-align: center; font-weight: 750; font-size: 0.92rem; }
+    @media (max-width: 760px) {
+      .slide { padding: 22px 14px 98px; }
+      .grid, .grid.three { grid-template-columns: 1fr; }
+      summary { min-height: 76px; }
+      .nav { width: calc(100vw - 24px); justify-content: space-between; }
+    }
+  </style>
+</head>
+<body>
+  <section class="slide active" style="--bg:url('https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&w=1800&q=80')">
+    <p class="kicker">2026-07-25 Daily Brief</p>
+    <h1>全球與科技 AI 新聞</h1>
+    <p class="lead">戰爭外溢到航道與制度，AI 競爭轉向價格、人格與開放模型政策。</p>
+    <div class="meta">
+      <span class="pill">研究截點：2026-07-25 08:01:44 Asia/Taipei</span>
+      <span class="pill">24 小時窗口：2026-07-24 08:01:44 至 2026-07-25 08:01:44</span>
+      <span class="pill">全球 Top 10 + 科技／AI 10 則</span>
+    </div>
+  </section>
+
+  <section class="slide" style="--bg:url('https://images.unsplash.com/photo-1521295121783-8a321d551ad2?auto=format&fit=crop&w=1800&q=80')">
+    <p class="kicker">Research Scope</p>
+    <h2>今日研究範圍</h2>
+    <div class="grid three">
+      <details class="card stat">
+        <summary><span class="tag">統計</span><span class="headline">全球新聞固定 10 則，科技／AI 另列 10 則</span></summary>
+        <div class="detail-body">
+          本日依 `wiki/daily/README.md` 規則，全球新聞恰好保留 10 則；科技／AI 產品、平台、資本與政策另列 10 則，不與全球 Top 10 混算。
+          <p class="source-line"><strong>來源｜Source Notes</strong><br>https://lucaskk.github.io/daily-news/wiki/daily/2026/07/2026-07-25/source-notes-2026-07-25.md</p>
+        </div>
+      </details>
+      <details class="card stat">
+        <summary><span class="tag">統計</span><span class="headline">合格窗口為 UTC 2026-07-24T00:01:44Z 至 2026-07-25T00:01:44Z</span></summary>
+        <div class="detail-body">
+          所有事件、官方發布或首次可靠發布均須落在 Asia/Taipei 研究截點往前 24 小時內；Gaza famine IPC 題材因 AP 原始發布在窗口外而排除。
+          <p class="source-line"><strong>來源｜Source Notes</strong><br>https://lucaskk.github.io/daily-news/wiki/daily/2026/07/2026-07-25/source-notes-2026-07-25.md</p>
+        </div>
+      </details>
+      <details class="card stat">
+        <summary><span class="tag">統計</span><span class="headline">保留 4 則重大續報，皆標示前次收錄日</span></summary>
+        <div class="detail-body">
+          續報為 U.S.-Iran / Hormuz、France / Spain wildfires、forced-labor tariffs backlash、EU tech fines investigation。每則都具備新船隻、新撤離規模、新官方反彈或新調查威脅。
+          <p class="source-line"><strong>來源｜Source Notes</strong><br>https://lucaskk.github.io/daily-news/wiki/daily/2026/07/2026-07-25/source-notes-2026-07-25.md</p>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <section class="slide" style="--bg:url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1800&q=80')">
+    <p class="kicker">Global 1</p>
+    <h2>航道戰爭擴大</h2>
+    <div class="grid">
+      <details class="card news" data-rank="1">
+        <summary><span class="rank">1</span><span class="headline">續報｜U.S.-Iran / Hormuz 危機升級，美軍再對闖封鎖商船開火且 Saudi 打擊 Hodeida</span><time class="time" datetime="2026-07-24T04:39:16Z">發佈時間｜2026-07-24 12:39:16（Asia/Taipei）</time></summary>
+        <div class="detail-body">
+          前次 2026-07-24 已收錄第 13 夜空襲、Houthis 攻擊 Saudi tankers 與 Hormuz bypass pipelines。今日新增 M/T Lavine 被美軍擊傷、Saudi-led coalition 打擊 Yemen Hodeida、Iran 對 Gulf 美軍據點及盟國周邊目標施壓，以及至少 6,000 名海員受困。這使 Hormuz、Bab el-Mandeb、撤僑、油價與海運保險同時承壓。
+          <p class="source-line"><strong>來源｜AP / Guardian</strong><br>https://apnews.com/article/iran-us-hormuz-strait-war-24-july-2026-78c2dbf538f6e61ab816479a4d9bdd85<br>https://www.theguardian.com/world/2026/jul/24/us-expands-iran-attacks-as-trump-warns-tehran-and-houthis-over-red-sea-strikes</p>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <section class="slide" style="--bg:url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1800&q=80')">
+    <p class="kicker">Global 2</p>
+    <h2>歐洲火場成為跨國緊急狀態</h2>
+    <div class="grid">
+      <details class="card news" data-rank="2">
+        <summary><span class="rank">2</span><span class="headline">續報｜France 與 Spain 野火迫使逾 200,000 人撤離或封鎖，Spain 首度啟動 wildfire national emergency</span><time class="time" datetime="2026-07-24T07:34:07Z">發佈時間｜2026-07-24 15:34:07（Asia/Taipei）</time></summary>
+        <div class="detail-body">
+          前次只收錄 France Saumos 近 20,000 人撤離。今日新增 Cap Ferret、Gironde、Landes、Madrid 周邊火場合併與 Spain national wildfire emergency，撤離或封鎖人數擴大到 200,000 以上。這讓 EU emergency resources、tourism evacuation、消防飛機與都市邊緣火災風險成為同一危機。
+          <p class="source-line"><strong>來源｜AP / Guardian</strong><br>https://apnews.com/article/54c3d375fa1cca8399ea2645a8e119b0<br>https://www.theguardian.com/world/2026/jul/24/france-evacuation-cap-ferret-peninsula-wildfire</p>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <section class="slide" style="--bg:url('https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&w=1800&q=80')">
+    <p class="kicker">Global 3-4</p>
+    <h2>戰場與佔領區的平民風險</h2>
+    <div class="grid">
+      <details class="card news" data-rank="3">
+        <summary><span class="rank">3</span><span class="headline">Russia 對 Ukraine Kyiv region 防務活動發動 ballistic strike，Zelenskyy 會晤 Patriot 廠商後至少 10 死</span><time class="time" datetime="2026-07-24T09:33:31Z">發佈時間｜2026-07-24 17:33:31（Asia/Taipei）</time></summary>
+        <div class="detail-body">
+          Russian ballistic strike hit a defense-industry related event or training site near Kyiv，造成至少 10 死、近百人受傷。事件發生在 Zelenskyy 會晤 Raytheon / Patriot missile systems 代表後，Ukraine 也對活動安全與 Russia war crimes 分別展開調查。這會改變戰時防務產業活動的資訊公開與安全流程。
+          <p class="source-line"><strong>來源｜AP</strong><br>https://apnews.com/article/russiak-ukraine-war-patriots-trump-loomer-raytheon-a2f06208baa0759215d973f01758e30f</p>
+        </div>
+      </details>
+      <details class="card news" data-rank="4">
+        <summary><span class="rank">4</span><span class="headline">Israeli military 在 West Bank Tell village 殺死 4 名 Palestinians，settler death 後 Nablus 周邊升高封鎖</span><time class="time" datetime="2026-07-24T07:08:29Z">發佈時間｜2026-07-24 15:08:29（Asia/Taipei）</time></summary>
+        <div class="detail-body">
+          Tell village 發生 armed settlers and villagers confrontation 後，一名 Israeli settler 死亡，Israeli military 隨後殺死 4 名 Palestinians 並向 West Bank 增派部隊。AP 指 incident circumstances remained unclear，並提到 video evidence 對射擊時序和責任提出疑問。
+          <p class="source-line"><strong>來源｜AP / Guardian</strong><br>https://apnews.com/article/israel-palestinians-west-bank-violence-settlers-c9394defe87c7529655d9b23cab58cdc<br>https://www.theguardian.com/world/2026/jul/24/palestinians-israeli-killed-west-bank-shooting</p>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <section class="slide" style="--bg:url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1800&q=80')">
+    <p class="kicker">Global 5</p>
+    <h2>關稅理由受到盟友與競爭者反擊</h2>
+    <div class="grid">
+      <details class="card news" data-rank="5">
+        <summary><span class="rank">5</span><span class="headline">續報｜Trump forced-labor tariffs 引發 Asia-Pacific、EU 與 China 等貿易夥伴反彈</span><time class="time" datetime="2026-07-24T07:03:22Z">發佈時間｜2026-07-24 15:03:22（Asia/Taipei）</time></summary>
+        <div class="detail-body">
+          前次已收錄 tariff announcement；今日新節點是 Australia、New Zealand、Japan、South Korea、EU、China 等正式反彈或否認 forced-labor rationale。AP 指 tariffs cover goods from 60 economies and trigger legal criticism。此事把人權執法、供應鏈查核與繞過法院 / 國會的質疑拉進同一貿易爭議。
+          <p class="source-line"><strong>來源｜AP / Guardian</strong><br>https://apnews.com/article/us-tariffs-trump-labor-reaction-china-asia-b178ead12f022009817c60010ac07eb3<br>https://www.theguardian.com/business/live/2026/jul/24/asian-stocks-slide-trump-countries-trade-tariffs-latest-economy-news</p>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <section class="slide" style="--bg:url('https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?auto=format&fit=crop&w=1800&q=80')">
+    <p class="kicker">Global 6-7</p>
+    <h2>國際機構的公信力測試</h2>
+    <div class="grid">
+      <details class="card news" data-rank="6">
+        <summary><span class="rank">6</span><span class="headline">ICC 首席檢察官 Karim Khan 因 sexual misconduct allegations 被免職</span><time class="time" datetime="2026-07-24T11:07:01Z">發佈時間｜2026-07-24 19:07:01（Asia/Taipei）</time></summary>
+        <div class="detail-body">
+          ICC member states voted to remove Karim Khan for serious misconduct and serious breach of duty。Khan 否認 allegations 並稱將挑戰程序。這發生在 ICC 同時承受 U.S.、Israel、Russia 等政治壓力之際，會影響重大國際刑事案件的管理與法院可信度。
+          <p class="source-line"><strong>來源｜AP / Guardian</strong><br>https://apnews.com/article/icc-court-prosecutor-karim-khan-united-nations-5a9490e98b74f3bf13f5eae26fb3c3d7<br>https://www.theguardian.com/law/2026/jul/24/karim-khan-ousted-from-role-as-prosecutor-of-international-criminal-court</p>
+        </div>
+      </details>
+      <details class="card news" data-rank="7">
+        <summary><span class="rank">7</span><span class="headline">UN 人權高專 Volker Türk 在 U.S.、Russia、Israel 反對下連任</span><time class="time" datetime="2026-07-24T18:21:16Z">發佈時間｜2026-07-25 02:21:16（Asia/Taipei）</time></summary>
+        <div class="detail-body">
+          UN General Assembly 以 144-10、13 abstentions 讓 Volker Türk 連任四年；U.S. proposal to delay vote and Russian shorter-extension proposal were rejected。人權高專辦公室在 Gaza、Ukraine、Iran war and migration enforcement 等議題都與大國摩擦，連任同時顯示支持與阻力。
+          <p class="source-line"><strong>來源｜AP</strong><br>https://apnews.com/article/turk-human-rights-chief-united-nations-61dc91622d141da0aba689e6436ea47c</p>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <section class="slide" style="--bg:url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1800&q=80')">
+    <p class="kicker">Global 8</p>
+    <h2>科技罰款進入貿易報復敘事</h2>
+    <div class="grid">
+      <details class="card news" data-rank="8">
+        <summary><span class="rank">8</span><span class="headline">續報｜Trump 宣布將調查 EU trade practices，稱 Google 與 Apple 罰款不公平</span><time class="time" datetime="2026-07-24T17:31:34Z">發佈時間｜2026-07-25 01:31:34（Asia/Taipei）</time></summary>
+        <div class="detail-body">
+          前次 2026-07-24 科技欄已收錄 EU 對 Google Play / Search restrictions 開罰。今日新增 Trump 宣布 U.S. will open a formal investigation into EU trade practices，將 Google、Apple 等美國科技公司遭罰列為理由。平台治理與貿易摩擦因此更難切割。
+          <p class="source-line"><strong>來源｜AP</strong><br>https://apnews.com/article/trump-eu-trade-tech-fine-google-2e125ac0d3c1ac7a96c9194a372ba47e</p>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <section class="slide" style="--bg:url('https://images.unsplash.com/photo-1521295121783-8a321d551ad2?auto=format&fit=crop&w=1800&q=80')">
+    <p class="kicker">Global 9-10</p>
+    <h2>文化與氣候的長期風險</h2>
+    <div class="grid">
+      <details class="card news" data-rank="9">
+        <summary><span class="rank">9</span><span class="headline">UN committee 將 West Bank Sebastia 與 Lebanon castles 列入 World Heritage 名錄，Israel 表示反對</span><time class="time" datetime="2026-07-24T09:38:36Z">發佈時間｜2026-07-24 17:38:36（Asia/Taipei）</time></summary>
+        <div class="detail-body">
+          Busan meeting 將 West Bank Sebastia 與 Lebanon Mount Amel castles 列入 World Heritage List / danger list。Israel 稱 designation politicized，Lebanese representatives 否認 Beaufort Castle military-use claims。文化遺產、主權敘事與安全指控在同一議題上重疊。
+          <p class="source-line"><strong>來源｜AP</strong><br>https://apnews.com/article/12c558a4b6aa03fa40ad33ffb6e54b89</p>
+        </div>
+      </details>
+      <details class="card news" data-rank="10">
+        <summary><span class="rank">10</span><span class="headline">Canada 西部近 34,000 次雷擊引發新野火，British Columbia 至少 90 處 active blazes</span><time class="time" datetime="2026-07-24T17:58:00Z">發佈時間｜2026-07-25 01:58:00（Asia/Taipei）</time></summary>
+        <div class="detail-body">
+          Guardian / Reuters 報導 British Columbia 近一週約 34,000 次雷擊，引發 evacuation orders and 90 active wildfires；northwestern Ontario 也有 139 active fires。Canada 今年已燒掉約 2.95m hectares，高於 10-year average，並持續影響北美空氣品質。
+          <p class="source-line"><strong>來源｜Guardian / Reuters</strong><br>https://www.theguardian.com/world/2026/jul/24/thousands-of-lightning-strikes-trigger-fresh-wildfires-in-western-canada</p>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <section class="slide" style="--bg:url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1800&q=80')">
+    <p class="kicker">Technology / AI 1-4</p>
+    <h2>模型與 app 入口重排</h2>
+    <div class="grid">
+      <details class="card technology">
+        <summary><span class="tag">T1</span><span class="headline">Anthropic 推出 Claude Opus 5</span><time class="time" datetime="2026-07-24T17:00:00Z">發佈時間｜2026-07-25 01:00:00（Asia/Taipei）</time></summary>
+        <div class="detail-body">
+          Opus 5 主打 long-running agents、coding and professional work。TechCrunch 指其接近 Fable 5、價格更低、限制較少，並新增 Automatic Fallbacks beta。企業關鍵在於真實成本、拒答率與長任務可靠度。
+          <p class="source-line"><strong>來源｜Anthropic / TechCrunch</strong><br>https://www.anthropic.com/news/claude-opus-5<br>https://techcrunch.com/2026/07/24/anthropic-launches-opus-5/</p>
+        </div>
+      </details>
+      <details class="card technology">
+        <summary><span class="tag">T2</span><span class="headline">Facebook Marketplace seller app 加入 AI listing workflow</span><time class="time" datetime="2026-07-24T12:47:15Z">發佈時間｜2026-07-24 20:47:15（Asia/Taipei）</time></summary>
+        <div class="detail-body">
+          Meta 將 Marketplace sellers 拆出專用 app，加入 free verification and AI listing creation signals。這讓 AI 進入二手交易、庫存整理、商品文案與信任建立，而非只留在聊天介面。
+          <p class="source-line"><strong>來源｜TechCrunch / Investor's Business Daily</strong><br>https://techcrunch.com/2026/07/24/facebook-launches-a-dedicated-marketplace-app-for-sellers-adds-a-free-verification-system/<br>https://www.investors.com/news/technology/meta-stock-ebay-stock-facebook-marketplace-seller-app/</p>
+        </div>
+      </details>
+      <details class="card technology">
+        <summary><span class="tag">T3</span><span class="headline">Midjourney 收購 Co-Star</span><time class="time" datetime="2026-07-24T15:09:55Z">發佈時間｜2026-07-24 23:09:55（Asia/Taipei）</time></summary>
+        <div class="detail-body">
+          Midjourney 買下 reportedly 4.3M MAU 的 social astrology app Co-Star，取得 consumer app and personalization team。這可能補足 Midjourney 在 Discord 之外的 standalone consumer product 能力。
+          <p class="source-line"><strong>來源｜TechCrunch</strong><br>https://techcrunch.com/2026/07/24/midjourney-acquired-the-astrology-app-co-star/</p>
+        </div>
+      </details>
+      <details class="card technology">
+        <summary><span class="tag">T4</span><span class="headline">Bluesky Attie Quests 成為 open social research tool</span><time class="time" datetime="2026-07-24T15:13:57Z">發佈時間｜2026-07-24 23:13:57（Asia/Taipei）</time></summary>
+        <div class="detail-body">
+          Attie 從 custom feed builder 擴成可查詢 Bluesky / AT Protocol ecosystem 的 open-ended research tool。社群平台的 AI 入口開始競爭 trends、influence mapping and misinformation sensemaking。
+          <p class="source-line"><strong>來源｜TechCrunch</strong><br>https://techcrunch.com/2026/07/24/blueskys-ai-assistant-attie-expands-into-an-open-social-research-tool/</p>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <section class="slide" style="--bg:url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1800&q=80')">
+    <p class="kicker">Technology / AI 5-7</p>
+    <h2>身份、開源與人格化助理</h2>
+    <div class="grid three">
+      <details class="card technology">
+        <summary><span class="tag">T5</span><span class="headline">World 以 token sale 募得 US$52.5M</span><time class="time" datetime="2026-07-24T16:11:56Z">發佈時間｜2026-07-25 00:11:56（Asia/Taipei）</time></summary>
+        <div class="detail-body">
+          World 透過 WLD token sale 籌資，資金進入 World Foundation。AI bots and agents 增加後，proof-of-human infrastructure 再受關注，但 biometric privacy and crypto volatility 仍是核心風險。
+          <p class="source-line"><strong>來源｜TechCrunch</strong><br>https://techcrunch.com/2026/07/24/sam-altmans-biometric-startup-world-raises-52-5-million-via-crypto-sale/</p>
+        </div>
+      </details>
+      <details class="card technology">
+        <summary><span class="tag">T6</span><span class="headline">India 疑要求 GitHub 限制 Bitchat repos</span><time class="time" datetime="2026-07-24T16:54:58Z">發佈時間｜2026-07-25 00:54:58（Asia/Taipei）</time></summary>
+        <div class="detail-body">
+          Jack Dorsey posted what he said was an Indian MHA notice seeking GitHub restrictions on Bitchat repos。GitHub did not confirm receipt and repos remained accessible。問題是政府能否因 decentralized architecture 而非特定內容限制 open-source code。
+          <p class="source-line"><strong>來源｜TechCrunch</strong><br>https://techcrunch.com/2026/07/24/indias-move-against-jack-dorseys-bitchat-sparks-legal-debate/</p>
+        </div>
+      </details>
+      <details class="card technology">
+        <summary><span class="tag">T7</span><span class="headline">Cognition 收購 Poke</span><time class="time" datetime="2026-07-24T18:07:32Z">發佈時間｜2026-07-25 02:07:32（Asia/Taipei）</time></summary>
+        <div class="detail-body">
+          Cognition acquired Poke in a low-nine-figure deal，將 proactive, personal messaging assistant 經驗帶入 Devin ecosystem。Poke users exchanged over 100M messages in three months，顯示 personality 可能成為 agent retention moat。
+          <p class="source-line"><strong>來源｜TechCrunch</strong><br>https://techcrunch.com/2026/07/24/why-cognition-bought-poke-ai-personality-is-becoming-a-competitive-advantage/</p>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <section class="slide" style="--bg:url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1800&q=80')">
+    <p class="kicker">Technology / AI 8-10</p>
+    <h2>資本與政策推高 AI 風險溢價</h2>
+    <div class="grid three">
+      <details class="card technology">
+        <summary><span class="tag">T8</span><span class="headline">Anduril 據報洽談 US$100B valuation round</span><time class="time" datetime="2026-07-24T17:33:19Z">發佈時間｜2026-07-25 01:33:19（Asia/Taipei）</time></summary>
+        <div class="detail-body">
+          Reuters-sourced report says Anduril is in talks for new funding that could value it at about US$100B。Autonomous defense and AI-enabled warfare are drawing capital as Middle East and Eastern Europe wars continue。
+          <p class="source-line"><strong>來源｜TechCrunch</strong><br>https://techcrunch.com/2026/07/24/anduril-reportedly-in-talks-to-raise-funding-at-100b-valuation-more-than-3x-last-years-mark/</p>
+        </div>
+      </details>
+      <details class="card technology">
+        <summary><span class="tag">T9</span><span class="headline">Prentis 洽談 US$100M 融資</span><time class="time" datetime="2026-07-24T22:25:58Z">發佈時間｜2026-07-25 06:25:58（Asia/Taipei）</time></summary>
+        <div class="detail-body">
+          Prentis trains computer-use models for office workflows across documents and systems，reportedly with contracts worth up to US$50M。這反映 enterprise agents 正從 chat 進入 insurance, customs and back-office exception handling。
+          <p class="source-line"><strong>來源｜TechCrunch</strong><br>https://techcrunch.com/2026/07/24/prentis-new-ai-lab-co-founded-by-reid-hoffman-marc-pincus-in-talks-to-raise-100m/</p>
+        </div>
+      </details>
+      <details class="card technology">
+        <summary><span class="tag">T10</span><span class="headline">Industry letter 反對 broad open-weight restrictions</span><time class="time" datetime="2026-07-24T15:51:49Z">發佈時間｜2026-07-24 23:51:49（Asia/Taipei）</time></summary>
+        <div class="detail-body">
+          U.S. considers responses to Chinese AI as open-weight models grow stronger。TechCrunch 報導多家 industry players urge against broad restrictions，支持 compute access、shared training assets and plural frontier development；closed providers are notably absent from signers。
+          <p class="source-line"><strong>來源｜TechCrunch</strong><br>https://techcrunch.com/2026/07/24/as-us-weighs-response-to-chinese-ai-industry-urges-against-broad-open-weight-restrictions/</p>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <section class="slide" style="--bg:url('https://images.unsplash.com/photo-1521295121783-8a321d551ad2?auto=format&fit=crop&w=1800&q=80')">
+    <p class="kicker">Synthesis</p>
+    <h2>今日綜合判讀</h2>
+    <div class="takeaways">
+      <details class="card followup">
+        <summary><span class="tag">判讀</span><span class="headline">戰爭成本正在從 strike count 轉向航道、撤離與制度壓力</span></summary>
+        <div class="detail-body">
+          U.S.-Iran 的今日新增點集中在 commercial vessel disablement、Saudi strikes、Gulf base threats and stranded mariners。這會讓保險、撤僑、能源價格與國會授權壓力比單純空襲次數更重要。
+          <p class="source-line"><strong>來源｜AP</strong><br>https://apnews.com/article/iran-us-hormuz-strait-war-24-july-2026-78c2dbf538f6e61ab816479a4d9bdd85</p>
+        </div>
+      </details>
+      <details class="card followup">
+        <summary><span class="tag">判讀</span><span class="headline">氣候災害進入多地同時消耗救援容量的階段</span></summary>
+        <div class="detail-body">
+          Europe and Canada wildfires both escalated inside the window。關鍵不是單一火場，而是消防飛機、人員、跨境支援、避難中心與空氣品質同時被拉滿。
+          <p class="source-line"><strong>來源｜AP / Guardian</strong><br>https://apnews.com/article/54c3d375fa1cca8399ea2645a8e119b0<br>https://www.theguardian.com/world/2026/jul/24/thousands-of-lightning-strikes-trigger-fresh-wildfires-in-western-canada</p>
+        </div>
+      </details>
+      <details class="card followup">
+        <summary><span class="tag">判讀</span><span class="headline">AI 競爭的焦點從能力轉向可用性、入口與政策風險</span></summary>
+        <div class="detail-body">
+          Opus 5 的成本與限制、Meta Marketplace 的 AI listing、Attie / Poke 的互動入口，以及 open-weight restrictions debate，都在處理同一個問題：AI 如何真正進入工作流且不被成本、拒答、法規或信任拖垮。
+          <p class="source-line"><strong>來源｜Anthropic / TechCrunch</strong><br>https://www.anthropic.com/news/claude-opus-5<br>https://techcrunch.com/2026/07/24/as-us-weighs-response-to-chinese-ai-industry-urges-against-broad-open-weight-restrictions/</p>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <section class="slide" style="--bg:url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1800&q=80')">
+    <p class="kicker">Follow-Up</p>
+    <h2>後續追蹤</h2>
+    <div class="grid">
+      <details class="card followup">
+        <summary><span class="tag">追蹤</span><span class="headline">Hormuz / Red Sea：船員、Hodeida、撤僑與談判</span></summary>
+        <div class="detail-body">
+          追蹤 M/T Lavine crew status、Hodeida damage assessment、Gulf base claims、trapped mariner relief and Oman / Pakistan mediation。若 Houthi or Saudi escalation 延續，航運與油價會再被重估。
+          <p class="source-line"><strong>來源｜AP</strong><br>https://apnews.com/article/iran-us-hormuz-strait-war-24-july-2026-78c2dbf538f6e61ab816479a4d9bdd85</p>
+        </div>
+      </details>
+      <details class="card followup">
+        <summary><span class="tag">追蹤</span><span class="headline">Claude Opus 5：第三方 benchmark、fallbacks 與 refusal evidence</span></summary>
+        <div class="detail-body">
+          追蹤 Opus 5 在 API、AWS、Google Cloud、Microsoft Foundry 的可用性，並觀察 Automatic Fallbacks 是否真的改善 cyber classifiers 觸發時的 user experience。
+          <p class="source-line"><strong>來源｜Anthropic / TechCrunch</strong><br>https://www.anthropic.com/news/claude-opus-5<br>https://techcrunch.com/2026/07/24/anthropic-launches-opus-5/</p>
+        </div>
+      </details>
+      <details class="card followup">
+        <summary><span class="tag">追蹤</span><span class="headline">Bitchat：GitHub transparency log 與印度政府正式回應</span></summary>
+        <div class="detail-body">
+          目前 TechCrunch 報導的 notice 尚未由 GitHub 確認，repos at publication time remained accessible。後續重點是 GitHub transparency report、Indian authority response and possible court challenge。
+          <p class="source-line"><strong>來源｜TechCrunch</strong><br>https://techcrunch.com/2026/07/24/indias-move-against-jack-dorseys-bitchat-sparks-legal-debate/</p>
+        </div>
+      </details>
+      <details class="card followup">
+        <summary><span class="tag">追蹤</span><span class="headline">AI 資本：Anduril / Prentis financing 是否成交</span></summary>
+        <div class="detail-body">
+          Anduril and Prentis are reported talks, not closed rounds。若成交，defense autonomy and computer-use agents 的估值錨點會被明顯上修；若延後，則可能反映 AI capital selectivity。
+          <p class="source-line"><strong>來源｜TechCrunch</strong><br>https://techcrunch.com/2026/07/24/anduril-reportedly-in-talks-to-raise-funding-at-100b-valuation-more-than-3x-last-years-mark/<br>https://techcrunch.com/2026/07/24/prentis-new-ai-lab-co-founded-by-reid-hoffman-marc-pincus-in-talks-to-raise-100m/</p>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <section class="slide" style="--bg:url('https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&w=1800&q=80')">
+    <p class="kicker">Sources</p>
+    <h2>來源與圖片</h2>
+    <div class="grid">
+      <details class="card stat">
+        <summary><span class="tag">來源</span><span class="headline">完整新聞來源與去重紀錄</span></summary>
+        <div class="detail-body">
+          完整來源、發布時間依據、排除項與續報判定保留在 source notes。每張新聞卡片也已在展開內容尾端放置自己的來源 URL。
+          <p class="source-line"><strong>來源｜Source Notes</strong><br>https://lucaskk.github.io/daily-news/wiki/daily/2026/07/2026-07-25/source-notes-2026-07-25.md</p>
+        </div>
+      </details>
+      <details class="card stat">
+        <summary><span class="tag">圖片</span><span class="headline">背景圖片來源</span></summary>
+        <div class="detail-body">
+          背景圖使用 Unsplash 遠端圖片，主題分別對應新聞、地圖、海運、氣候、制度、城市、森林、AI circuit and office work。圖片來源也保留於 HTML comment。
+          <p class="source-line"><strong>來源｜Unsplash image URLs</strong><br>https://images.unsplash.com/photo-1504711434969-e33886168f5c<br>https://images.unsplash.com/photo-1521295121783-8a321d551ad2<br>https://images.unsplash.com/photo-1507525428034-b723cf961d3e<br>https://images.unsplash.com/photo-1518770660439-4636190af475</p>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <nav class="nav" aria-label="slide navigation">
+    <button id="prev" type="button" aria-label="Previous slide">‹</button>
+    <span class="counter" id="counter">1 / 15</span>
+    <button id="next" type="button" aria-label="Next slide">›</button>
+  </nav>
+
+  <script>
+    const slides = Array.from(document.querySelectorAll('.slide'));
+    const counter = document.getElementById('counter');
+    let index = 0;
+    function show(i) {
+      index = Math.max(0, Math.min(slides.length - 1, i));
+      slides.forEach((slide, n) => slide.classList.toggle('active', n === index));
+      counter.textContent = `${index + 1} / ${slides.length}`;
+      window.scrollTo({ top: 0, behavior: 'instant' });
+    }
+    document.getElementById('prev').addEventListener('click', () => show(index - 1));
+    document.getElementById('next').addEventListener('click', () => show(index + 1));
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'ArrowRight' || event.key === 'PageDown') show(index + 1);
+      if (event.key === 'ArrowLeft' || event.key === 'PageUp') show(index - 1);
+      if (event.key === 'Home') show(0);
+      if (event.key === 'End') show(slides.length - 1);
+    });
+    show(0);
+  </script>
+</body>
+</html>

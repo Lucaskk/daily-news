@@ -2,7 +2,7 @@
 title: "Overview"
 type: overview
 created: 2026-05-24
-updated: 2026-07-24
+updated: 2026-07-25
 status: seed
 tags: [overview]
 sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
@@ -29,6 +29,9 @@ sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
 - 輸出偏好：簡短摘要、深度脈絡、比較表、時間線、決策 memo。
 
 ## Latest Daily News
+
+- [2026-07-25 Daily News](daily/2026/07/2026-07-25/daily-news-2026-07-25.md) - 今日主軸是「戰爭外溢到航道與制度，AI 競爭轉向價格、人格與開放模型政策」：U.S.-Iran / Hormuz merchant vessel and Hodeida escalation、France / Spain >200,000 wildfire evacuations、Ukraine Patriot-related strike、West Bank Tell killings、forced-labor tariff backlash、ICC Karim Khan removal、Volker Türk reappointment、Trump EU tech-fines trade investigation、UNESCO West Bank / Lebanon heritage listing 與 Canada lightning wildfires。科技／AI 聚焦 Claude Opus 5、Facebook Marketplace seller app、Midjourney-Co-Star、Bluesky Attie、World token sale、Bitchat GitHub notice、Cognition-Poke、Anduril、Prentis 與 open-weight restrictions debate。
+- [2026-07-25 Slides](daily/2026/07/2026-07-25/slides-2026-07-25.html) - 今日新聞網頁版投影片。
 
 - [2026-07-24 Daily News](daily/2026/07/2026-07-24/daily-news-2026-07-24.md) - 今日主軸是「戰爭外溢轉成能源與政治成本，AI 產品進入高信任個資與即時語音」：U.S.-Iran 第 13 夜、Houthis 攻擊 Saudi tankers、Iran war powers vote、Saudi nuclear / Abraham Accords、Trump forced-labor tariffs、Nepal USAID cuts investigation、France Saumos wildfire、Mexico mayor killing、Angola Russian convictions、Rubio-Lavrov talks 與 Hormuz bypass pipelines。科技／AI 聚焦 OpenAI Health、ChatGPT Voice GPT-Live-1、Claude voice mode、Gemini 950M users、Runway router、AMD Helios、Etched valuation、EU Google fine 與 AegisAI。
 - [2026-07-24 Slides](daily/2026/07/2026-07-24/slides-2026-07-24.html) - 今日新聞網頁版投影片。
