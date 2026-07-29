@@ -2,7 +2,7 @@
 title: "Overview"
 type: overview
 created: 2026-05-24
-updated: 2026-07-25
+updated: 2026-07-29
 status: seed
 tags: [overview]
 sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
@@ -19,6 +19,12 @@ sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
 - 抽出持續出現的人物、組織、事件、政策、技術與市場概念。
 - 維護跨來源的矛盾、時間線、趨勢與待查問題。
 - 將重要查詢結果回寫成可累積的 wiki 頁面。
+
+## 2026-07-29 Daily News Synthesis
+
+- 全球新聞主軸轉為「戰爭與災害的可執行成本」：美伊衝突新增 Iranian missiles intercepted by U.S. forces and Patriot / THAAD stockpile pressure；Japan Kyushu earthquake and France / Spain wildfires show evacuation, infrastructure and supply-chain stress。
+- 外交與制度面出現多條新裂縫：Zelenskyy 在白宮尋求 Patriot interceptor 生產授權，Netanyahu 在 Iran war 後與 Trump 討論 Tehran / Lebanon / Abraham Accords，UN / IOM 分別把 scam-center trafficking and Afghanistan-Pakistan casualties 量化。
+- 科技／AI 轉向控制面與入口：OpenAI / Hugging Face update, MCP 2026-07-28, Runlayer / Rippling and Spur all point to agent security, identity and governance；Apple Upgrade、Granola Apple Watch and Ozlo Sleepbuds 2 show hardware-as-service and wearable capture surfaces。
 
 ## Current Focus
 

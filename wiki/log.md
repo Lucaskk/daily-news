@@ -1,5 +1,14 @@
 # Knowledge Base Log
 
+## [2026-07-29] ingest | Daily global and tech AI news
+
+- Created `wiki/daily/2026/07/2026-07-29/daily-news-2026-07-29.md` with exactly 10 global items and 10 technology / AI product and platform items.
+- Recorded the exact Asia/Taipei 24-hour window, per-item event or publication-time basis, material continuations and duplicate / out-of-window exclusions in `source-notes-2026-07-29.md`.
+- Created `slides-2026-07-29.html` as a standalone HTML deck with themed backgrounds, browser / keyboard / touch navigation, expandable cards and per-card complete source URLs.
+- Updated `wiki/daily/latest-slides.html`, `wiki/index.md`, `wiki/overview.md`, `.nojekyll`, and the root Pages entry timestamp.
+- Published the scoped daily-news package to `main` and verified the dated deck plus cache-busted latest redirect on GitHub Pages.
+- LINE delivery was skipped because `.env` contains `LINE_TO_ID` but its value is empty.
+
 ## [2026-07-25] ingest | Daily global and tech AI news
 
 - Created `wiki/daily/2026/07/2026-07-25/daily-news-2026-07-25.md` with exactly 10 global items and 10 technology / AI product and platform items.
