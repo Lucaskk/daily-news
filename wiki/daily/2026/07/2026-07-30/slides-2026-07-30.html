@@ -1,0 +1,510 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>每日全球與科技 AI 新聞｜2026-07-30</title>
+  <style>
+    :root {
+      --ink: #172033;
+      --muted: #566173;
+      --paper: rgba(255, 255, 255, 0.92);
+      --paper-strong: rgba(255, 255, 255, 0.97);
+      --line: rgba(23, 32, 51, 0.16);
+      --nav: #101827;
+      --accent: #0f766e;
+      --accent-2: #b45309;
+      --accent-3: #6d28d9;
+    }
+
+    * { box-sizing: border-box; }
+    html, body { margin: 0; min-height: 100%; }
+    body {
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #0b1020;
+      color: var(--ink);
+      overflow: hidden;
+    }
+    a { color: #0f5f9f; overflow-wrap: anywhere; }
+    .deck { height: 100vh; width: 100vw; position: relative; }
+    .slide {
+      display: none;
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+      background-image: var(--bg);
+      background-size: cover;
+      background-position: center;
+    }
+    .slide.active { display: block; }
+    .slide::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: var(--bg);
+      background-size: cover;
+      background-position: center;
+      z-index: 0;
+    }
+    .slide::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, rgba(255,255,255,0.82), rgba(255,255,255,0.46) 58%, rgba(255,255,255,0.24));
+      z-index: 1;
+      pointer-events: none;
+    }
+    .slide-content {
+      position: relative;
+      z-index: 2;
+      width: min(1180px, calc(100vw - 44px));
+      height: calc(100vh - 92px);
+      margin: 0 auto;
+      padding: 34px 0 88px;
+      overflow-y: auto;
+    }
+    .eyebrow {
+      color: #0f766e;
+      font-size: 14px;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+    h1, h2 {
+      margin: 8px 0 12px;
+      color: #111827;
+      line-height: 1.08;
+      letter-spacing: 0;
+      text-shadow: 0 1px 0 rgba(255,255,255,0.5);
+    }
+    h1 { font-size: 46px; max-width: 880px; }
+    h2 { font-size: 34px; max-width: 920px; }
+    .lead {
+      max-width: 900px;
+      font-size: 18px;
+      line-height: 1.65;
+      color: #20293a;
+      background: rgba(255,255,255,0.76);
+      padding: 14px 16px;
+      border-left: 5px solid var(--accent);
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      align-items: start;
+      margin-top: 18px;
+    }
+    .cards.two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .cards.one { grid-template-columns: minmax(0, 1fr); }
+    details.card {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.14);
+      overflow: hidden;
+    }
+    details.card[open] { background: var(--paper-strong); }
+    summary {
+      cursor: pointer;
+      list-style: none;
+      padding: 14px 15px 12px;
+      display: grid;
+      gap: 8px;
+    }
+    summary::-webkit-details-marker { display: none; }
+    .summary-line {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 10px;
+      align-items: start;
+    }
+    .rank, .tech-rank, .stat-rank {
+      display: inline-grid;
+      place-items: center;
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: #0f766e;
+      color: white;
+      font-weight: 900;
+      font-size: 14px;
+      flex: none;
+    }
+    .tech-rank { background: #6d28d9; }
+    .stat-rank { background: #b45309; }
+    .headline {
+      font-size: 17px;
+      font-weight: 850;
+      line-height: 1.32;
+      color: #111827;
+    }
+    time {
+      display: block;
+      color: #4b5563;
+      font-size: 13px;
+      line-height: 1.35;
+    }
+    .detail-body {
+      padding: 0 15px 15px;
+      color: #1f2937;
+      font-size: 15px;
+      line-height: 1.58;
+    }
+    .detail-body p { margin: 9px 0; }
+    .detail-body ul { margin: 8px 0 10px 19px; padding: 0; }
+    .source-block {
+      border-top: 1px solid var(--line);
+      margin-top: 12px;
+      padding-top: 10px;
+      color: #334155;
+      font-size: 13px;
+      line-height: 1.45;
+    }
+    .meta-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 20px;
+    }
+    .metric {
+      background: rgba(255,255,255,0.92);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 14px;
+    }
+    .metric strong {
+      display: block;
+      font-size: 26px;
+      color: #0f766e;
+      margin-bottom: 4px;
+    }
+    .nav {
+      position: fixed;
+      z-index: 20;
+      left: 50%;
+      bottom: 16px;
+      transform: translateX(-50%);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px;
+      border-radius: 999px;
+      background: rgba(16, 24, 39, 0.88);
+      color: white;
+      box-shadow: 0 14px 40px rgba(0,0,0,0.25);
+    }
+    .nav button {
+      border: 0;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.12);
+      color: white;
+      padding: 9px 14px;
+      font-weight: 800;
+      cursor: pointer;
+    }
+    .nav button:hover { background: rgba(255,255,255,0.22); }
+    .counter { min-width: 72px; text-align: center; font-weight: 800; font-size: 14px; }
+    .hint { font-size: 13px; color: rgba(255,255,255,0.72); }
+    .cover-panel {
+      margin-top: 22px;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      max-width: 920px;
+    }
+    .cover-panel div {
+      background: rgba(255,255,255,0.88);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 14px;
+      line-height: 1.45;
+      font-weight: 700;
+    }
+    .source-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 18px;
+    }
+
+    @media (max-width: 860px) {
+      body { overflow: hidden; }
+      .slide-content {
+        width: min(100vw - 24px, 720px);
+        height: calc(100vh - 76px);
+        padding-top: 24px;
+        padding-bottom: 82px;
+      }
+      h1 { font-size: 34px; }
+      h2 { font-size: 28px; }
+      .lead { font-size: 16px; }
+      .cards, .cards.two, .source-list, .meta-grid, .cover-panel {
+        grid-template-columns: 1fr;
+      }
+      .headline { font-size: 16px; }
+      .nav { bottom: 10px; gap: 6px; }
+      .nav button { padding: 8px 11px; }
+      .hint { display: none; }
+    }
+  </style>
+</head>
+<body>
+<!--
+Background image sources are also listed visibly on the final slide.
+Unsplash URLs used with fixed photo IDs:
+photo-1451187580459-43490279c0fa, photo-1495020689067-958852a7765e,
+photo-1516937941344-00b4e0337589, photo-1545569341-9eb8b30979d9,
+photo-1529107386315-e1a2ed48a620, photo-1518770660439-4636190af475,
+photo-1535223289827-42f1e9919769, photo-1500530855697-b586d89ba3ee,
+photo-1504711434969-e33886168f5c.
+-->
+<main class="deck" aria-live="polite">
+  <section class="slide active" style="--bg:url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1800&q=80')">
+    <div class="slide-content">
+      <div class="eyebrow">Daily Global + Tech AI News</div>
+      <h1>2026-07-30 每日全球與科技 AI 新聞</h1>
+      <p class="lead">研究截點：2026-07-30 08:02:44（Asia/Taipei）。本日全球主軸是戰事外溢、政策成本與災害救援；科技／AI 主軸是入口整合、研究者存取與模型效率。</p>
+      <div class="cover-panel">
+        <div>全球 Top 10：美伊、烏克蘭、Fed、市場、機器人禁令、災害、FIFA、人權、Ebola 與肯亞邊境安全。</div>
+        <div>科技／AI：Google Gemini Mac、Microsoft Copilot、Meta agents、OpenAI academic access, GPT-5.6 and hardware roadmap。</div>
+        <div>所有新聞、數字、科技摘要與追蹤卡皆可展開，並在卡片底部保留完整來源 URL。</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide" style="--bg:url('https://images.unsplash.com/photo-1495020689067-958852a7765e?auto=format&fit=crop&w=1800&q=80')">
+    <div class="slide-content">
+      <div class="eyebrow">Research Scope</div>
+      <h2>24 小時窗與去重稽核</h2>
+      <p class="lead">只收錄 2026-07-29 08:02:44 至 2026-07-30 08:02:44（Asia/Taipei）內發生或首次可靠發布的事件。既有主線必須有重大新進展才可列為續報。</p>
+      <div class="meta-grid">
+        <details class="card stat-card">
+          <summary><div class="summary-line"><span class="stat-rank">1</span><div><div class="headline">精確時間窗</div><time datetime="2026-07-29T00:02:44Z">UTC｜2026-07-29T00:02:44Z 至 2026-07-30T00:02:44Z</time></div></div></summary>
+          <div class="detail-body"><p>本次以 Asia/Taipei 研究截點倒推 24 小時，避免把舊事件因更新標題或仍在熱門位置而重複收錄。日期級官方頁面只在來源筆記明確標記限制後使用。</p><p class="source-block">來源｜本地規則檔 wiki/daily/README.md；完整 URL：https://lucaskk.github.io/daily-news/wiki/daily/README.md</p></div>
+        </details>
+        <details class="card stat-card">
+          <summary><div class="summary-line"><span class="stat-rank">2</span><div><div class="headline">全球新聞恰好 10 則</div><time datetime="2026-07-30T00:02:44+08:00">檢查｜Top 10 DOM 排名 1-10</time></div></div></summary>
+          <div class="detail-body"><p>全球新聞依重要性和時間有效性排序，簡報 DOM 內保留 data-rank 1 到 10 的連續順序；科技／AI 另列，不混入全球名額。</p><p class="source-block">來源｜今日 source notes；完整 URL：https://lucaskk.github.io/daily-news/wiki/daily/2026/07/2026-07-30/source-notes-2026-07-30.md</p></div>
+        </details>
+        <details class="card stat-card">
+          <summary><div class="summary-line"><span class="stat-rank">3</span><div><div class="headline">5 則續報保留</div><time datetime="2026-07-30T00:02:44+08:00">續報｜只保留重大新節點</time></div></div></summary>
+          <div class="detail-body"><p>美伊、烏克蘭煉油廠、日本強震、南歐野火與剛果 Ebola 都是既有主線，但今日各自出現新的地點、傷亡、政策、數字或人道連鎖效果。</p><p class="source-block">來源｜今日 source notes continuation log；完整 URL：https://lucaskk.github.io/daily-news/wiki/daily/2026/07/2026-07-30/source-notes-2026-07-30.md</p></div>
+        </details>
+        <details class="card stat-card">
+          <summary><div class="summary-line"><span class="stat-rank">4</span><div><div class="headline">7 則科技／AI</div><time datetime="2026-07-30T00:02:44+08:00">產品與平台｜官方優先</time></div></div></summary>
+          <div class="detail-body"><p>科技段落優先採官方頁與一線科技媒體，聚焦 Gemini Mac、Copilot super app、Meta agents、OpenAI academic access、GPT-5.6 efficiency、ARC-AGI settings and hardware roadmap。</p><p class="source-block">來源｜今日 daily report 科技段落；完整 URL：https://lucaskk.github.io/daily-news/wiki/daily/2026/07/2026-07-30/daily-news-2026-07-30.md</p></div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide" style="--bg:url('https://images.unsplash.com/photo-1516937941344-00b4e0337589?auto=format&fit=crop&w=1800&q=80')">
+    <div class="slide-content">
+      <div class="eyebrow">Global 1-3｜War, Energy, Markets</div>
+      <h2>戰事外溢進入能源與利率定價</h2>
+      <div class="cards">
+        <details class="card global-card" data-rank="1">
+          <summary><div class="summary-line"><span class="rank">1</span><div><div class="headline">續報｜美伊戰事擴大：伊朗攻擊美軍，美沙空襲伊拉克親伊朗民兵</div><time datetime="2026-07-29T05:09:02Z">發佈時間｜2026-07-29 13:09:02（Asia/Taipei）</time></div></div></summary>
+          <div class="detail-body"><p>AP 報導 Iran fired missiles at U.S. forces while U.S. and Saudi aircraft struck Tehran-backed militias in Iraq, killing at least 20 fighters and six Iranian advisers. Jordan intercepted missiles, Damietta gas vessels caught fire, oil rose 7.3%, and Iran rejected an Oman Hormuz proposal.</p><p>這是 2026-07-29 美伊攔截與 Patriot / THAAD 壓力的續報；今日新增是跨入 Iraq, Jordan, Egypt and Oman diplomacy 的多點擴散。</p><p class="source-block">來源｜AP: https://apnews.com/article/iran-war-us-hormuz-strait-july-29-2026-e31d249ba6443decdd3e63cd00f0fb84<br>Al Jazeera: https://www.aljazeera.com/news/2026/7/29/iran-hits-us-in-jordan-us-saudi-strikes-on-iraq-is-war-spreading</p></div>
+        </details>
+        <details class="card global-card" data-rank="2">
+          <summary><div class="summary-line"><span class="rank">2</span><div><div class="headline">續報｜烏克蘭稱擊中兩座俄羅斯大型煉油廠，能源戰在白宮會後升高</div><time datetime="2026-07-29T10:10:51Z">發佈時間｜2026-07-29 18:10:51（Asia/Taipei）</time></div></div></summary>
+          <div class="detail-body"><p>Ukraine says it hit Ryazan and Perm oil refineries, facilities AP described as two major Russian refineries with combined annual capacity around 220 million barrels. The strikes followed Zelenskyy's Washington meetings seeking Patriot and defense-production support.</p><p>這延續 7 月初已收錄的 Russia fuel crisis 主線，但今日新點是兩座大型設施同時成為目標，且外交時點緊貼 Trump / Zelenskyy meeting。</p><p class="source-block">來源｜AP: https://apnews.com/article/russia-ukraine-war-oil-refinery-trump-zelenskyy-4275c2280107aedba37df8704f226ce6<br>Al Jazeera: https://www.aljazeera.com/news/2026/7/29/russian-industrial-sites-on-fire-after-ukrainian-drone-attacks</p></div>
+        </details>
+        <details class="card global-card" data-rank="3">
+          <summary><div class="summary-line"><span class="rank">3</span><div><div class="headline">Fed 維持利率不變但三名官員異議，油價與 AI 股拖累華爾街</div><time datetime="2026-07-29T21:18:27Z">發佈時間｜2026-07-30 05:18:27（Asia/Taipei）</time></div></div></summary>
+          <div class="detail-body"><p>Fed left rates unchanged but three officials dissented as inflation remained elevated. AP market coverage put the Dow down 1,153 points, S&P 500 down 1.5% and Nasdaq down 1.7%, with oil and AI-stock pressure amplifying the move.</p><p>AP URL 先有預稿再更新為結果稿；本卡採 final decision update and market close update 作為事件時間，避免把預稿當作決策完成時間。</p><p class="source-block">來源｜AP Fed: https://apnews.com/article/federal-reserve-inflation-interest-rates-iran-war-ad10c177cb8d96f9e3ed122e12352a74<br>AP Markets: https://apnews.com/article/stocks-markets-ai-oil-trump-rates-b8bfaf782877957bbaa7196b70a4d725</p></div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide" style="--bg:url('https://images.unsplash.com/photo-1545569341-9eb8b30979d9?auto=format&fit=crop&w=1800&q=80')">
+    <div class="slide-content">
+      <div class="eyebrow">Global 4-6｜Controls, Disaster, Climate</div>
+      <h2>供應鏈管制與災害救援同日加壓</h2>
+      <div class="cards">
+        <details class="card global-card" data-rank="4">
+          <summary><div class="summary-line"><span class="rank">4</span><div><div class="headline">美國 FCC 禁止新外製人形機器人與電力逆變器進口，矛頭指向中國</div><time datetime="2026-07-29T05:50:20Z">發佈時間｜2026-07-29 13:50:20（Asia/Taipei）</time></div></div></summary>
+          <div class="detail-body"><p>AP says the FCC is banning imports of new foreign-made humanoid and quadruped robots plus power inverters, citing national security risks. The policy targets China, which AP says controls about 85% of the global humanoid robot market.</p><p>這把 AI / robotics competition 從模型、晶片與資料中心推進到 physical AI hardware and grid equipment imports。</p><p class="source-block">來源｜AP: https://apnews.com/article/china-us-humanoid-robots-ban-tech-c9f5e3c94d91d00eff3b61b141fab366<br>TechCrunch: https://techcrunch.com/2026/07/29/us-government-bans-new-foreign-made-humanoids-robot-dogs-and-solar-inverters-citing-risks-to-national-security/</p></div>
+        </details>
+        <details class="card global-card" data-rank="5">
+          <summary><div class="summary-line"><span class="rank">5</span><div><div class="headline">續報｜日本九州強震死亡升至 18 人，商場爆炸與工廠坍塌成救援焦點</div><time datetime="2026-07-29T01:17:53Z">發佈時間｜2026-07-29 09:17:53（Asia/Taipei）</time></div></div></summary>
+          <div class="detail-body"><p>AP reported the magnitude 7.1 quake killed at least 18 and injured 62. New detail separated casualty sites: Aeon Mall gas explosion, Nippon Paper chimney collapse and a factory crane accident. Utilities also suffered: tens of thousands lost power and thousands entered shelters.</p><p>這是前日初報的重大續報；新資訊讓救援焦點從「地震發生」轉到 mall gas systems, industrial structures, utilities and transport disruption。</p><p class="source-block">來源｜AP: https://apnews.com/article/japan-earthquake-kumamoto-kagoshima-mall-factory-6b0fe69d44fa5c82ac4765a8ad82ebf6<br>Al Jazeera: https://www.aljazeera.com/news/2026/7/28/magnitude-7-1-earthquake-shakes-southern-japan-tsunami-warning-issued</p></div>
+        </details>
+        <details class="card global-card" data-rank="6">
+          <summary><div class="summary-line"><span class="rank">6</span><div><div class="headline">續報｜南歐野火延燒，希臘消防員殉職、法國 Gironde 大火仍威脅觀光區</div><time datetime="2026-07-29T07:49:09Z">發佈時間｜2026-07-29 15:49:09（Asia/Taipei）</time></div></div></summary>
+          <div class="detail-body"><p>AP says three firefighters died across Greece's wildfire response while France battled a Gironde blaze four times the size of Paris. Guardian updates kept warning of heatwave, wind and rekindling risk even as some evacuees returned in Spain.</p><p>這是 2026-07-29 France / Spain evacuation-scale story 的續報；今日新點是 firefighter deaths and fresh cross-Europe risk assessment。</p><p class="source-block">來源｜AP: https://apnews.com/article/c3d9c45cdbf57d19bbec46d49e5237de<br>The Guardian: https://www.theguardian.com/world/2026/jul/29/pedro-sanchez-next-12-hours-decisive-extreme-heat-wildfires-madrid-europe<br>The Guardian live: https://www.theguardian.com/world/live/2026/jul/29/france-spain-wildfires-heatwave-extreme-heat-europe-latest-news-updates</p></div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide" style="--bg:url('https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?auto=format&fit=crop&w=1800&q=80')">
+    <div class="slide-content">
+      <div class="eyebrow">Global 7-10｜Governance, Rights, Humanitarian Risk</div>
+      <h2>制度壓力與人道風險擴大</h2>
+      <div class="cards two">
+        <details class="card global-card" data-rank="7">
+          <summary><div class="summary-line"><span class="rank">7</span><div><div class="headline">FIFA 要會員 9 月前接受 2,000 萬美元方案，世界盃股權出售引爆 UEFA 反彈</div><time datetime="2026-07-29T10:59:51Z">發佈時間｜2026-07-29 18:59:51（Asia/Taipei）</time></div></div></summary>
+          <div class="detail-body"><p>AP reports Gianni Infantino set a Sept. 19 deadline for 211 FIFA members to accept one-time $20 million offers tied to a proposed World Cup investor vehicle. UEFA reacted angrily and said the tournament is not FIFA's to sell.</p><p>World Cup revenue and ownership are moving from sports administration into private-capital governance, with member federations facing strong financial incentives.</p><p class="source-block">來源｜AP: https://apnews.com/article/world-cup-fifa-investors-kushner-infantino-uefa-e66dc5d5f9907f9ea5323716b7e49ca2</p></div>
+        </details>
+        <details class="card global-card" data-rank="8">
+          <summary><div class="summary-line"><span class="rank">8</span><div><div class="headline">緬甸法院因抵制軍方選舉抗議重判九名活動人士，最高 37 年徒刑</div><time datetime="2026-07-29T15:53:39Z">發佈時間｜2026-07-29 23:53:39（Asia/Taipei）</time></div></div></summary>
+          <div class="detail-body"><p>AP and Al Jazeera report nine Myanmar activists were sentenced for an election-boycott protest. Eight, including Htet Myat Aung, received 37 years; one received 27 years under electoral and counterterrorism laws in Mandalay courts.</p><p>The sentences show how the junta is criminalizing election opposition before the December vote, with over 31,000 arrests since the 2021 coup cited by AP.</p><p class="source-block">來源｜AP: https://apnews.com/article/60690dd13d28b35f955506c9f14b2eab<br>Al Jazeera: https://www.aljazeera.com/news/2026/7/29/myanmar-court-sentences-activists-to-37-years-over-election-protest</p></div>
+        </details>
+        <details class="card global-card" data-rank="9">
+          <summary><div class="summary-line"><span class="rank">9</span><div><div class="headline">續報｜剛果 Ebola 快速擴散加劇飢荒，WFP 警告 Ituri 190 萬人急需糧援</div><time datetime="2026-07-29T15:57:27Z">發佈時間｜2026-07-29 23:57:27（Asia/Taipei）</time></div></div></summary>
+          <div class="detail-body"><p>AP reports WFP warned that the fastest-growing Ebola outbreak ever recorded is worsening hunger in eastern Congo. Ituri has 1.9 million people facing acute food insecurity, while AP cited 3,360 cases and 1,487 deaths for the Bundibugyo outbreak.</p><p>這是 2026-07-07 Congo Ebola 主線續報；今日新增重點是 outbreak controls, conflict, market disruption and WFP funding gaps combining into food-security stress。</p><p class="source-block">來源｜AP: https://apnews.com/article/288100564a7155ef6afffee6f2025b37</p></div>
+        </details>
+        <details class="card global-card" data-rank="10">
+          <summary><div class="summary-line"><span class="rank">10</span><div><div class="headline">Al-Shabab 伏擊肯亞邊境巡邏隊，五名安全人員死亡</div><time datetime="2026-07-29T19:06:38Z">發佈時間｜2026-07-30 03:06:38（Asia/Taipei）</time></div></div></summary>
+          <div class="detail-body"><p>Al Jazeera reported five Kenyan security personnel were killed in an ambush near the Somalia border in Mandera County. Reports described a patrol-vehicle attack near Lafey, about 10 km from Somalia, consistent with Al-Shabab's IED and border-ambush pattern.</p><p>This is a fresh security event distinct from prior Kenya protest coverage, and it points to renewed pressure on Nairobi's northern frontier.</p><p class="source-block">來源｜Al Jazeera: https://www.aljazeera.com/news/2026/7/29/al-shabab-kills-five-kenyan-security-personnel-in-ambush<br>Reuters-distributed report via AOL: https://www.aol.com/articles/five-kenyan-security-officers-killed-045736000.html</p></div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide" style="--bg:url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1800&q=80')">
+    <div class="slide-content">
+      <div class="eyebrow">Technology / AI 1-3｜App Surfaces</div>
+      <h2>AI 入口從單點工具走向整合工作台</h2>
+      <div class="cards">
+        <details class="card tech-card">
+          <summary><div class="summary-line"><span class="tech-rank">T1</span><div><div class="headline">Google Gemini for macOS 加入自然語音工作流</div><time datetime="2026-07-29T15:00:00Z">發佈時間｜2026-07-29 23:00:00（Asia/Taipei）</time></div></div></summary>
+          <div class="detail-body"><p>Google says Gemini app for macOS now lets users speak naturally to get clean transcriptions, edits and summaries dropped into the app they are already using. The direction turns Gemini into a desktop text and voice layer rather than only a separate chat window.</p><p class="source-block">來源｜Google Blog: https://blog.google/innovation-and-ai/products/gemini-app/speak-naturally-gemini-app-mac-os/</p></div>
+        </details>
+        <details class="card tech-card">
+          <summary><div class="summary-line"><span class="tech-rank">T2</span><div><div class="headline">Microsoft 確認 Copilot super app，今年整合聊天、Cowork、Autopilots 與 code</div><time datetime="2026-07-29T22:17:38Z">發佈時間｜2026-07-30 06:17:38（Asia/Taipei）</time></div></div></summary>
+          <div class="detail-body"><p>The Verge reports Satya Nadella confirmed a Copilot super app during Microsoft's earnings call. The app is intended to bring Copilot chat, Cowork, Autopilots and code experiences together across consumer and commercial use.</p><p class="source-block">來源｜The Verge: https://www.theverge.com/tech/972927/microsoft-copilot-super-app-confirmed</p></div>
+        </details>
+        <details class="card tech-card">
+          <summary><div class="summary-line"><span class="tech-rank">T3</span><div><div class="headline">Meta 將 personal AI agents 放進核心路線，商業 agents 每週觸及逾百萬企業</div><time datetime="2026-07-29T21:48:07Z">發佈時間｜2026-07-30 05:48:07（Asia/Taipei）</time></div></div></summary>
+          <div class="detail-body"><p>The Verge reports Zuckerberg is preparing personal AI agents for goals such as health, finances and relationships. Meta also said business AI agents on WhatsApp, Messenger and Instagram are used weekly by more than 1 million businesses.</p><p class="source-block">來源｜The Verge: https://www.theverge.com/tech/972294/meta-q2-2026-earnings-mark-zuckerberg-personal-ai-agents<br>AP: https://apnews.com/article/bcbc62dde6d2cac724e3b3385fcabeab</p></div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide" style="--bg:url('https://images.unsplash.com/photo-1535223289827-42f1e9919769?auto=format&fit=crop&w=1800&q=80')">
+    <div class="slide-content">
+      <div class="eyebrow">Technology / AI 4-7｜OpenAI Research, Cost, Devices</div>
+      <h2>OpenAI 今日重點：研究者存取、效率、benchmark 設定與硬體方向</h2>
+      <div class="cards two">
+        <details class="card tech-card">
+          <summary><div class="summary-line"><span class="tech-rank">T4</span><div><div class="headline">ChatGPT for Academic Researchers 規劃 2027 年前提供 10 萬名研究者免費高階存取</div><time datetime="2026-07-29T12:00:00Z">發佈時間｜2026-07-29 20:00:00（Asia/Taipei；日期級）</time></div></div></summary>
+          <div class="detail-body"><p>OpenAI says it will start with 10,000 researchers this summer and expand to 100,000 through 2027. Access includes frontier models such as GPT-5.6 Sol Pro, Codex, ChatGPT Work, higher limits and more than 75 life-science skills / connectors.</p><p class="source-block">來源｜OpenAI: https://openai.com/index/chatgpt-for-academic-researchers/<br>Axios: https://www.axios.com/2026/07/29/openai-academics-research-chatgpt-sol</p></div>
+        </details>
+        <details class="card tech-card">
+          <summary><div class="summary-line"><span class="tech-rank">T5</span><div><div class="headline">GPT-5.6 效率工程：服務成本降 20%，token 生成效率提升逾 15%</div><time datetime="2026-07-29T12:00:00Z">發佈時間｜2026-07-29 20:00:00（Asia/Taipei；日期級）</time></div></div></summary>
+          <div class="detail-body"><p>OpenAI claims GPT-5.6 Sol, Terra and Luna move the intelligence-per-dollar frontier through model-family tiering, serving optimizations, caching and speculator improvements. Vendor figures include 20% lower end-to-end serving cost and more than 15% token-generation efficiency improvement.</p><p class="source-block">來源｜OpenAI: https://openai.com/index/gpt-5-6-frontier-intelligence-efficiency/</p></div>
+        </details>
+        <details class="card tech-card">
+          <summary><div class="summary-line"><span class="tech-rank">T6</span><div><div class="headline">兩個 ARC-AGI-3 設定把 GPT-5.6 Sol 分數提高到 38.3%，輸出 token 減少 6 倍</div><time datetime="2026-07-29T12:00:00Z">發佈時間｜2026-07-29 20:00:00（Asia/Taipei；日期級）</time></div></div></summary>
+          <div class="detail-body"><p>OpenAI says retained reasoning and compaction tripled GPT-5.6 Sol's ARC-AGI-3 score from 13.3% to 38.3%, while reducing output tokens by 6x. The lesson for builders is that harness settings can materially change agent performance and cost.</p><p class="source-block">來源｜OpenAI: https://openai.com/index/how-two-settings-tripled-our-arc-agi-3-scores/</p></div>
+        </details>
+        <details class="card tech-card">
+          <summary><div class="summary-line"><span class="tech-rank">T7</span><div><div class="headline">OpenAI 高層稱正在打造 AI 聊天硬體「一系列裝置」</div><time datetime="2026-07-29T18:15:02Z">發佈時間｜2026-07-30 02:15:02（Asia/Taipei）</time></div></div></summary>
+          <div class="detail-body"><p>The Verge reports OpenAI president Greg Brockman said the company is building a family of devices for AI chatbots, with voice interaction, privacy and auditability emerging as central design questions. This is roadmap commentary, not a shipping product.</p><p class="source-block">來源｜The Verge: https://www.theverge.com/ai-artificial-intelligence/972709/openai-hardware-greg-brockman-interview</p></div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide" style="--bg:url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1800&q=80')">
+    <div class="slide-content">
+      <div class="eyebrow">Follow-Up Cards</div>
+      <h2>未來 24-72 小時追蹤重點</h2>
+      <div class="cards two">
+        <details class="card follow-card">
+          <summary><div class="summary-line"><span class="stat-rank">A</span><div><div class="headline">戰事與能源</div><time datetime="2026-07-30T00:02:44Z">追蹤｜美伊、Hormuz、Ukraine refineries</time></div></div></summary>
+          <div class="detail-body"><p>留意 Jordan, Iraq, Saudi Arabia and Iran 是否釋出更多 strike evidence, casualty revisions or Hormuz shipping measures；Ukraine refinery damage 需看 satellite imagery, refinery downtime and Russian domestic fuel prices。</p><p class="source-block">來源｜AP U.S.-Iran: https://apnews.com/article/iran-war-us-hormuz-strait-july-29-2026-e31d249ba6443decdd3e63cd00f0fb84<br>AP Ukraine: https://apnews.com/article/russia-ukraine-war-oil-refinery-trump-zelenskyy-4275c2280107aedba37df8704f226ce6</p></div>
+        </details>
+        <details class="card follow-card">
+          <summary><div class="summary-line"><span class="stat-rank">B</span><div><div class="headline">利率與市場</div><time datetime="2026-07-30T00:02:44Z">追蹤｜inflation, oil, AI capex</time></div></div></summary>
+          <div class="detail-body"><p>Fed three dissents make next inflation prints more important. If oil shock passes through to gasoline and AI buildout keeps chip / electricity costs elevated, markets may reprice the probability of a rate hike rather than a hold.</p><p class="source-block">來源｜AP Fed: https://apnews.com/article/federal-reserve-inflation-interest-rates-iran-war-ad10c177cb8d96f9e3ed122e12352a74<br>AP Markets: https://apnews.com/article/stocks-markets-ai-oil-trump-rates-b8bfaf782877957bbaa7196b70a4d725</p></div>
+        </details>
+        <details class="card follow-card">
+          <summary><div class="summary-line"><span class="stat-rank">C</span><div><div class="headline">災害救援</div><time datetime="2026-07-30T00:02:44Z">追蹤｜Japan quake, Europe fires</time></div></div></summary>
+          <div class="detail-body"><p>Japan needs final missing-person counts and mall gas-explosion cause; Europe needs updated firefighter casualty totals, Gironde containment, Crete / Peloponnese fire status and whether renewed heat / winds undo recent progress.</p><p class="source-block">來源｜AP Japan: https://apnews.com/article/japan-earthquake-kumamoto-kagoshima-mall-factory-6b0fe69d44fa5c82ac4765a8ad82ebf6<br>AP Europe fires: https://apnews.com/article/c3d9c45cdbf57d19bbec46d49e5237de</p></div>
+        </details>
+        <details class="card follow-card">
+          <summary><div class="summary-line"><span class="stat-rank">D</span><div><div class="headline">AI 產品落地</div><time datetime="2026-07-30T00:02:44Z">追蹤｜Copilot, Gemini, Meta, OpenAI</time></div></div></summary>
+          <div class="detail-body"><p>Next checks: Copilot super app packaging and admin controls, Gemini Mac account / language availability, Meta personal-agent safety and privacy constraints, OpenAI academic eligibility and whether GPT-5.6 efficiency claims appear in independent workloads.</p><p class="source-block">來源｜Google: https://blog.google/innovation-and-ai/products/gemini-app/speak-naturally-gemini-app-mac-os/<br>The Verge Microsoft: https://www.theverge.com/tech/972927/microsoft-copilot-super-app-confirmed<br>OpenAI: https://openai.com/index/gpt-5-6-frontier-intelligence-efficiency/</p></div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide" style="--bg:url('https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&w=1800&q=80')">
+    <div class="slide-content">
+      <div class="eyebrow">Sources + Image Credits</div>
+      <h2>來源與背景圖註記</h2>
+      <p class="lead">每張新聞卡片已在展開內容底部列出該卡自己的完整來源 URL。本頁補充整體來源檔與背景影像來源。</p>
+      <div class="source-list">
+        <details class="card">
+          <summary><div class="summary-line"><span class="stat-rank">S</span><div><div class="headline">今日日報與來源筆記</div><time datetime="2026-07-30T00:02:44Z">本地檔案｜2026-07-30</time></div></div></summary>
+          <div class="detail-body"><p>日報與 source notes 保留完整選題、時間基準、續報前次日期、排除候選與矛盾報導。這些檔案是後續查詢與跨日去重的主要依據。</p><p class="source-block">來源｜Daily report: https://lucaskk.github.io/daily-news/wiki/daily/2026/07/2026-07-30/daily-news-2026-07-30.md<br>Source notes: https://lucaskk.github.io/daily-news/wiki/daily/2026/07/2026-07-30/source-notes-2026-07-30.md</p></div>
+        </details>
+        <details class="card">
+          <summary><div class="summary-line"><span class="stat-rank">I</span><div><div class="headline">背景圖來源</div><time datetime="2026-07-30T00:02:44Z">Unsplash fixed photo URLs</time></div></div></summary>
+          <div class="detail-body"><p>Deck uses fixed Unsplash image URLs for the title, scope, war / energy, Japan / disaster, governance, technology, OpenAI research, follow-up and sources slides. The URLs are embedded directly in the HTML so the deck is standalone aside from remote image fetches.</p><p class="source-block">圖片來源｜Unsplash photo-1451187580459-43490279c0fa: https://images.unsplash.com/photo-1451187580459-43490279c0fa<br>Unsplash photo-1495020689067-958852a7765e: https://images.unsplash.com/photo-1495020689067-958852a7765e<br>Unsplash photo-1516937941344-00b4e0337589: https://images.unsplash.com/photo-1516937941344-00b4e0337589<br>Unsplash photo-1545569341-9eb8b30979d9: https://images.unsplash.com/photo-1545569341-9eb8b30979d9<br>Unsplash photo-1529107386315-e1a2ed48a620: https://images.unsplash.com/photo-1529107386315-e1a2ed48a620<br>Unsplash photo-1518770660439-4636190af475: https://images.unsplash.com/photo-1518770660439-4636190af475<br>Unsplash photo-1535223289827-42f1e9919769: https://images.unsplash.com/photo-1535223289827-42f1e9919769<br>Unsplash photo-1500530855697-b586d89ba3ee: https://images.unsplash.com/photo-1500530855697-b586d89ba3ee<br>Unsplash photo-1504711434969-e33886168f5c: https://images.unsplash.com/photo-1504711434969-e33886168f5c</p></div>
+        </details>
+      </div>
+    </div>
+  </section>
+</main>
+
+<nav class="nav" aria-label="Slide navigation">
+  <button type="button" id="prevBtn" aria-label="上一頁">‹</button>
+  <span class="counter" id="counter">1 / 9</span>
+  <button type="button" id="nextBtn" aria-label="下一頁">›</button>
+  <span class="hint">方向鍵 / Home / End</span>
+</nav>
+
+<script>
+  const slides = Array.from(document.querySelectorAll('.slide'));
+  const counter = document.getElementById('counter');
+  let current = 0;
+
+  function showSlide(index) {
+    current = (index + slides.length) % slides.length;
+    slides.forEach((slide, i) => {
+      slide.classList.toggle('active', i === current);
+      slide.setAttribute('aria-hidden', i === current ? 'false' : 'true');
+    });
+    counter.textContent = `${current + 1} / ${slides.length}`;
+    location.hash = `slide-${current + 1}`;
+  }
+
+  document.getElementById('prevBtn').addEventListener('click', () => showSlide(current - 1));
+  document.getElementById('nextBtn').addEventListener('click', () => showSlide(current + 1));
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'ArrowRight' || event.key === 'PageDown') showSlide(current + 1);
+    if (event.key === 'ArrowLeft' || event.key === 'PageUp') showSlide(current - 1);
+    if (event.key === 'Home') showSlide(0);
+    if (event.key === 'End') showSlide(slides.length - 1);
+  });
+
+  let touchStartX = null;
+  document.addEventListener('touchstart', (event) => {
+    touchStartX = event.changedTouches[0].clientX;
+  }, { passive: true });
+  document.addEventListener('touchend', (event) => {
+    if (touchStartX === null) return;
+    const delta = event.changedTouches[0].clientX - touchStartX;
+    if (Math.abs(delta) > 70) showSlide(current + (delta < 0 ? 1 : -1));
+    touchStartX = null;
+  }, { passive: true });
+
+  const hashMatch = location.hash.match(/slide-(\d+)/);
+  if (hashMatch) {
+    const initial = Number(hashMatch[1]) - 1;
+    if (initial >= 0 && initial < slides.length) showSlide(initial);
+  } else {
+    showSlide(0);
+  }
+</script>
+</body>
+</html>

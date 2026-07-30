@@ -2,7 +2,7 @@
 title: "Knowledge Base Index"
 type: overview
 created: 2026-05-24
-updated: 2026-07-29
+updated: 2026-07-30
 status: seed
 tags: [index]
 sources: []
@@ -25,6 +25,9 @@ sources: []
 每日新聞報告會放在 `wiki/daily/YYYY/MM/YYYY-MM-DD/`。
 
 - [每日全球與科技 AI 新聞產製規則](daily/README.md) - 包含研究截點前 24 小時限制、跨日去重、重大續報判定、來源紀錄與發布驗證規則。
+
+- [2026-07-30 Daily News](daily/2026/07/2026-07-30/daily-news-2026-07-30.md) - 今日主軸是「戰事外溢、政策成本與災害救援同步升高」：U.S.-Iran / Saudi strikes in Iraq、Ukraine strikes on two Russian refineries、Fed hold with market selloff、U.S. humanoid robot import ban、Japan Kyushu quake death toll、Southern Europe wildfires、FIFA investor plan、Myanmar activist sentences、Congo Ebola hunger warning and Kenya Al-Shabab ambush。科技／AI 聚焦 Gemini for macOS voice workflow、Microsoft Copilot super app、Meta personal / business agents、OpenAI academic researcher access、GPT-5.6 efficiency、ARC-AGI-3 settings and OpenAI hardware roadmap。
+- [2026-07-30 Slides](daily/2026/07/2026-07-30/slides-2026-07-30.html) - 今日新聞網頁版投影片。
 
 - [2026-07-29 Daily News](daily/2026/07/2026-07-29/daily-news-2026-07-29.md) - 今日主軸是「多線戰爭回到可執行成本，AI 產品化轉向基礎設施、治理與新入口」：Iran missile intercepts and Patriot / THAAD stockpiles、Japan Kyushu earthquake、France / Spain wildfire evacuations、Ukraine drone expo accountability、Zelenskyy Patriot licensing request、Netanyahu Iran / Lebanon White House meeting、IOM scam-center trafficking warning、Afghanistan-Pakistan civilian casualty accounting、China overcapacity tariffs and Cyprus peace visit。科技／AI 聚焦 OpenAI / Hugging Face update、MCP 2026-07-28、OpenAI scientific computing field report、Apple Upgrade、Recursive AWS compute、Fish Audio、Granola Apple Watch、Runlayer / Rippling、Spur and Ozlo Sleepbuds 2。
 - [2026-07-29 Slides](daily/2026/07/2026-07-29/slides-2026-07-29.html) - 今日新聞網頁版投影片。

@@ -2,7 +2,7 @@
 title: "Overview"
 type: overview
 created: 2026-05-24
-updated: 2026-07-29
+updated: 2026-07-30
 status: seed
 tags: [overview]
 sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
@@ -20,6 +20,12 @@ sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
 - 維護跨來源的矛盾、時間線、趨勢與待查問題。
 - 將重要查詢結果回寫成可累積的 wiki 頁面。
 
+## 2026-07-30 Daily News Synthesis
+
+- 全球新聞主軸轉為「戰事外溢、政策成本與災害救援同步升高」：U.S.-Iran / Saudi strikes, Ukraine refinery attacks, Fed / market repricing and U.S. humanoid robot import controls all show security events moving into economic and supply-chain channels。
+- 災害與制度面同時承壓：Japan Kyushu quake and Southern Europe wildfires stress rescue, utilities and climate adaptation；FIFA investor plan, Myanmar activist sentences, Congo Ebola hunger warning and Kenya Al-Shabab ambush show governance and humanitarian risk widening。
+- 科技／AI 入口進入整合競爭：Gemini for macOS voice workflow, Copilot super app, Meta personal / business agents and OpenAI academic access / GPT-5.6 efficiency / ARC-AGI settings make the next AI battleground interface, cost and high-value user allocation。
+
 ## 2026-07-29 Daily News Synthesis
 
 - 全球新聞主軸轉為「戰爭與災害的可執行成本」：美伊衝突新增 Iranian missiles intercepted by U.S. forces and Patriot / THAAD stockpile pressure；Japan Kyushu earthquake and France / Spain wildfires show evacuation, infrastructure and supply-chain stress。
@@ -35,6 +41,9 @@ sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
 - 輸出偏好：簡短摘要、深度脈絡、比較表、時間線、決策 memo。
 
 ## Latest Daily News
+
+- [2026-07-30 Daily News](daily/2026/07/2026-07-30/daily-news-2026-07-30.md) - 今日主軸是「戰事外溢、政策成本與災害救援同步升高」：U.S.-Iran / Saudi strikes in Iraq、Ukraine strikes on two Russian refineries、Fed hold with market selloff、U.S. humanoid robot import ban、Japan Kyushu quake death toll、Southern Europe wildfires、FIFA investor plan、Myanmar activist sentences、Congo Ebola hunger warning and Kenya Al-Shabab ambush。科技／AI 聚焦 Gemini for macOS voice workflow、Microsoft Copilot super app、Meta personal / business agents、OpenAI academic researcher access、GPT-5.6 efficiency、ARC-AGI-3 settings and OpenAI hardware roadmap。
+- [2026-07-30 Slides](daily/2026/07/2026-07-30/slides-2026-07-30.html) - 今日新聞網頁版投影片。
 
 - [2026-07-25 Daily News](daily/2026/07/2026-07-25/daily-news-2026-07-25.md) - 今日主軸是「戰爭外溢到航道與制度，AI 競爭轉向價格、人格與開放模型政策」：U.S.-Iran / Hormuz merchant vessel and Hodeida escalation、France / Spain >200,000 wildfire evacuations、Ukraine Patriot-related strike、West Bank Tell killings、forced-labor tariff backlash、ICC Karim Khan removal、Volker Türk reappointment、Trump EU tech-fines trade investigation、UNESCO West Bank / Lebanon heritage listing 與 Canada lightning wildfires。科技／AI 聚焦 Claude Opus 5、Facebook Marketplace seller app、Midjourney-Co-Star、Bluesky Attie、World token sale、Bitchat GitHub notice、Cognition-Poke、Anduril、Prentis 與 open-weight restrictions debate。
 - [2026-07-25 Slides](daily/2026/07/2026-07-25/slides-2026-07-25.html) - 今日新聞網頁版投影片。
