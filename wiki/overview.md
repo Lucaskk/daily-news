@@ -2,7 +2,7 @@
 title: "Overview"
 type: overview
 created: 2026-05-24
-updated: 2026-07-30
+updated: 2026-07-31
 status: seed
 tags: [overview]
 sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
@@ -19,6 +19,12 @@ sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
 - 抽出持續出現的人物、組織、事件、政策、技術與市場概念。
 - 維護跨來源的矛盾、時間線、趨勢與待查問題。
 - 將重要查詢結果回寫成可累積的 wiki 頁面。
+
+## 2026-07-31 Daily News Synthesis
+
+- 全球新聞主軸轉為「戰爭外溢、氣候災害與 AI 基礎設施同時重定價」：U.S.-Iran renewed barrages and Russia’s missile crossing into Polish airspace show conflicts pushing third countries into response mode。
+- 公共風險集中在治理韌性：Ceuta border deaths, France / Europe wildfires, Congo Ebola deaths above 1,500, Chongqing landslide, Danube drought and Pakistan monsoon collapse all require logistics, trust and sustained infrastructure response。
+- 科技／AI 競爭從模型本身轉向產品經濟與供應鏈：OpenAI GPT-5.6 price cuts / Fast mode, Gemini Spark Chrome, Gemini Robotics 2, EU AI Gigafactories, AWS capex, Samsung AI memory and Apple device-cost pressure connect AI adoption to compute, memory and electricity constraints。
 
 ## 2026-07-30 Daily News Synthesis
 
