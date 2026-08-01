@@ -2,7 +2,7 @@
 title: "Overview"
 type: overview
 created: 2026-05-24
-updated: 2026-07-31
+updated: 2026-08-01
 status: seed
 tags: [overview]
 sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
@@ -19,6 +19,12 @@ sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
 - 抽出持續出現的人物、組織、事件、政策、技術與市場概念。
 - 維護跨來源的矛盾、時間線、趨勢與待查問題。
 - 將重要查詢結果回寫成可累積的 wiki 頁面。
+
+## 2026-08-01 Daily News Synthesis
+
+- 全球新聞主軸轉為「邊界、停火與平台治理都進入執行測試」：Ceuta 危機從突破升級為 60,000 人跨境、57 死與大批返回；Hamas conditional disarmament roadmap 則把 Gaza ceasefire 的核心障礙推到可驗證排序。
+- 公共安全與問責面同時升高：Japan Kumamoto earthquake, Algeria bus crash, Broad Peak avalanche, Sri Lanka Easter bombings sentencing, Mali HRW airstrike report and alleged Hamas-finance extradition case all require accountable evidence, rescue capacity and legal process。
+- 科技／AI 產品進入真實世界責任期：OpenAI audio provenance, Google Gemini Drop, Google Earth Nano Banana rollback, Snap Spotlight AI-content rules, Anthropic cyber-test containment, Amazon-OpenAI capital and Kalshi regulation show AI adoption now depends on provenance, guardrails, infrastructure and law。
 
 ## 2026-07-31 Daily News Synthesis
 
@@ -47,6 +53,12 @@ sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
 - 輸出偏好：簡短摘要、深度脈絡、比較表、時間線、決策 memo。
 
 ## Latest Daily News
+
+- [2026-08-01 Daily News](daily/2026/08/2026-08-01/daily-news-2026-08-01.md) - 今日主軸是「邊界、停火與平台治理都進入執行測試」：Ceuta 危機升級、Hamas conditional disarmament roadmap、Japan Kumamoto earthquake、Algeria bus crash、Broad Peak avalanche、Sri Lanka Easter bombings sentencing、U.S. visa bond permanence、FIFA sell-off backlash、Mali HRW airstrike report and Hamas-finance extradition case。科技／AI 聚焦 OpenAI audio provenance、Google Gemini Drop、Google Earth Nano Banana rollback、Snap Spotlight AI-content rules、Anthropic cyber-test containment、Smallest.ai voice funding、Amazon-OpenAI investment completion and Kalshi lawsuit。
+- [2026-08-01 Slides](daily/2026/08/2026-08-01/slides-2026-08-01.html) - 今日新聞網頁版投影片。
+
+- [2026-07-31 Daily News](daily/2026/07/2026-07-31/daily-news-2026-07-31.md) - 今日主軸是「戰爭外溢、氣候災害與 AI 基礎設施同時重定價」：U.S.-Iran renewed missile barrages、Russia missile in Poland、Ceuta border breach、Europe wildfires、U.S. GDP slowdown、Congo Ebola death toll、Chongqing landslide、Danube drought、Australia-Telegram action and Pakistan monsoon collapse。科技／AI 聚焦 OpenAI GPT-5.6 price cuts / Fast mode、Gemini Spark Chrome、Gemini Robotics 2、EU AI Gigafactories、Amazon AWS/chips、Samsung AI memory、Apple Q3、Chrome AI security fixes、LinkedIn AI slop reporting and Friend wearable。
+- [2026-07-31 Slides](daily/2026/07/2026-07-31/slides-2026-07-31.html) - 今日新聞網頁版投影片。
 
 - [2026-07-30 Daily News](daily/2026/07/2026-07-30/daily-news-2026-07-30.md) - 今日主軸是「戰事外溢、政策成本與災害救援同步升高」：U.S.-Iran / Saudi strikes in Iraq、Ukraine strikes on two Russian refineries、Fed hold with market selloff、U.S. humanoid robot import ban、Japan Kyushu quake death toll、Southern Europe wildfires、FIFA investor plan、Myanmar activist sentences、Congo Ebola hunger warning and Kenya Al-Shabab ambush。科技／AI 聚焦 Gemini for macOS voice workflow、Microsoft Copilot super app、Meta personal / business agents、OpenAI academic researcher access、GPT-5.6 efficiency、ARC-AGI-3 settings and OpenAI hardware roadmap。
 - [2026-07-30 Slides](daily/2026/07/2026-07-30/slides-2026-07-30.html) - 今日新聞網頁版投影片。

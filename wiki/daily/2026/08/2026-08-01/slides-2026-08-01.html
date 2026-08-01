@@ -1,0 +1,936 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>每日全球與科技 AI 新聞 - 2026-08-01</title>
+  <!--
+    Image sources:
+    Cover: NASA / Wikimedia Commons, https://upload.wikimedia.org/wikipedia/commons/9/97/The_Earth_seen_from_Apollo_17.jpg
+    Global news background: NASA / Unsplash, https://images.unsplash.com/photo-1451187580459-43490279c0fa
+    Governance map background: Andrew Stutesman / Unsplash, https://images.unsplash.com/photo-1524661135-423995f22d0b
+    Sports background: Emilio Garcia / Unsplash, https://images.unsplash.com/photo-1522778119026-d647f0596c20
+    Circuit background: Umberto / Unsplash, https://images.unsplash.com/photo-1518770660439-4636190af475
+    Microphone background: Israel Palacio / Unsplash, https://images.unsplash.com/photo-1516280440614-37939bbacd81
+    Laptop background: John Schnobrich / Unsplash, https://images.unsplash.com/photo-1516321318423-f06f85e504b3
+    Sources background: Janko Ferlic / Unsplash, https://images.unsplash.com/photo-1481627834876-b7833e8f5570
+  -->
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #172033;
+      --muted: #526078;
+      --paper: rgba(255, 255, 255, 0.94);
+      --paper-strong: rgba(255, 255, 255, 0.98);
+      --line: rgba(23, 32, 51, 0.16);
+      --teal: #087f8c;
+      --amber: #b66a00;
+      --blue: #2563a6;
+      --green: #36724b;
+      --rose: #a83c4f;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      min-height: 100%;
+      background: #111827;
+      color: var(--ink);
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      letter-spacing: 0;
+    }
+
+    body {
+      overflow: hidden;
+    }
+
+    a {
+      color: #075985;
+      overflow-wrap: anywhere;
+    }
+
+    .deck {
+      position: relative;
+      height: 100vh;
+      width: 100vw;
+      overflow: hidden;
+    }
+
+    .slide {
+      position: absolute;
+      inset: 0;
+      display: none;
+      min-height: 100vh;
+      overflow-y: auto;
+      padding: clamp(24px, 4vw, 56px) clamp(18px, 5vw, 72px) 98px;
+      background-image:
+        linear-gradient(90deg, rgba(250, 252, 255, 0.93) 0%, rgba(250, 252, 255, 0.86) 50%, rgba(250, 252, 255, 0.48) 100%),
+        var(--bg);
+      background-size: cover;
+      background-position: center;
+    }
+
+    .slide.active {
+      display: flex;
+    }
+
+    .slide-inner {
+      width: min(1180px, 100%);
+      margin: auto 0;
+    }
+
+    .title-slide .slide-inner {
+      max-width: 900px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      width: fit-content;
+      margin-bottom: 18px;
+      padding: 8px 12px;
+      border: 1px solid rgba(8, 127, 140, 0.28);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.82);
+      color: #07515a;
+      font-weight: 700;
+      font-size: 0.9rem;
+    }
+
+    h1,
+    h2 {
+      margin: 0;
+      line-height: 1.08;
+      letter-spacing: 0;
+    }
+
+    h1 {
+      max-width: 12ch;
+      font-size: clamp(3rem, 7vw, 6.4rem);
+      color: #132033;
+      text-shadow: 0 2px 16px rgba(255, 255, 255, 0.78);
+    }
+
+    h2 {
+      margin-bottom: 18px;
+      font-size: clamp(2rem, 4.2vw, 4rem);
+      color: #152239;
+      text-shadow: 0 2px 12px rgba(255, 255, 255, 0.75);
+    }
+
+    .subtitle,
+    .dek {
+      max-width: 820px;
+      color: #24324d;
+      font-size: clamp(1.05rem, 1.8vw, 1.35rem);
+      line-height: 1.62;
+    }
+
+    .subtitle {
+      margin: 18px 0 28px;
+      font-weight: 650;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+      align-items: start;
+    }
+
+    .grid.three {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    details.card {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--paper);
+      box-shadow: 0 12px 38px rgba(15, 23, 42, 0.18);
+      overflow: hidden;
+    }
+
+    details.card[open] {
+      background: var(--paper-strong);
+    }
+
+    summary {
+      cursor: pointer;
+      list-style: none;
+      padding: 16px 18px;
+      min-height: 116px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 9px;
+    }
+
+    summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .rank,
+    .tag {
+      display: inline-flex;
+      width: fit-content;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 9px;
+      border-radius: 999px;
+      background: rgba(8, 127, 140, 0.12);
+      color: #07515a;
+      font-weight: 800;
+      font-size: 0.78rem;
+    }
+
+    .tag.amber {
+      background: rgba(182, 106, 0, 0.13);
+      color: #7c3f00;
+    }
+
+    .tag.blue {
+      background: rgba(37, 99, 166, 0.13);
+      color: #173d72;
+    }
+
+    .tag.green {
+      background: rgba(54, 114, 75, 0.13);
+      color: #225239;
+    }
+
+    .tag.rose {
+      background: rgba(168, 60, 79, 0.13);
+      color: #713042;
+    }
+
+    .headline {
+      color: #172033;
+      font-weight: 850;
+      font-size: clamp(1.02rem, 1.3vw, 1.2rem);
+      line-height: 1.35;
+    }
+
+    time {
+      color: var(--muted);
+      font-size: 0.88rem;
+      line-height: 1.35;
+    }
+
+    .card-body {
+      padding: 0 18px 18px;
+      color: #25324a;
+      line-height: 1.65;
+      font-size: 0.98rem;
+    }
+
+    .card-body p {
+      margin: 0 0 12px;
+    }
+
+    .card-body ul {
+      margin: 0 0 14px 1.1rem;
+      padding: 0;
+    }
+
+    .card-body li {
+      margin: 5px 0;
+    }
+
+    .source-line {
+      margin-top: 14px;
+      padding: 12px;
+      border-top: 1px solid var(--line);
+      background: rgba(241, 245, 249, 0.9);
+      color: #1f2a44;
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+
+    .controls {
+      position: fixed;
+      left: 50%;
+      bottom: 20px;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      transform: translateX(-50%);
+      padding: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.84);
+      box-shadow: 0 14px 42px rgba(15, 23, 42, 0.32);
+      color: #f8fafc;
+    }
+
+    .controls button {
+      width: 42px;
+      height: 42px;
+      border: 0;
+      border-radius: 999px;
+      background: #f8fafc;
+      color: #111827;
+      cursor: pointer;
+      font-size: 1.2rem;
+      font-weight: 900;
+    }
+
+    .controls button:disabled {
+      opacity: 0.45;
+      cursor: default;
+    }
+
+    .counter {
+      min-width: 82px;
+      text-align: center;
+      font-weight: 800;
+      font-size: 0.92rem;
+    }
+
+    .progress {
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      z-index: 11;
+      width: 100%;
+      height: 5px;
+      background: rgba(15, 23, 42, 0.18);
+    }
+
+    .progress span {
+      display: block;
+      height: 100%;
+      width: 0;
+      background: linear-gradient(90deg, var(--teal), var(--amber), var(--blue));
+      transition: width 180ms ease;
+    }
+
+    .compact {
+      max-width: 940px;
+    }
+
+    .note {
+      margin-top: 16px;
+      color: #344258;
+      font-size: 0.98rem;
+    }
+
+    @media (max-width: 820px) {
+      body {
+        overflow: auto;
+      }
+
+      .slide {
+        padding: 22px 14px 100px;
+      }
+
+      .slide-inner {
+        margin: 0;
+      }
+
+      .grid,
+      .grid.three {
+        grid-template-columns: 1fr;
+      }
+
+      h1 {
+        max-width: 10ch;
+        font-size: clamp(2.8rem, 17vw, 4.4rem);
+      }
+
+      h2 {
+        font-size: clamp(2rem, 10vw, 3.1rem);
+      }
+
+      summary {
+        min-height: 104px;
+      }
+
+      .controls {
+        bottom: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="deck" aria-live="polite">
+    <section class="slide active title-slide" style="--bg: url('https://upload.wikimedia.org/wikipedia/commons/9/97/The_Earth_seen_from_Apollo_17.jpg');">
+      <div class="slide-inner">
+        <div class="eyebrow">2026-08-01｜Asia/Taipei</div>
+        <h1>每日全球與科技 AI 新聞</h1>
+        <p class="subtitle">今日主軸：邊界、停火、災害救援與 AI 產品責任同時進入執行測試。</p>
+        <div class="grid">
+          <details class="card stat-card" open>
+            <summary>
+              <span class="tag blue">研究窗口</span>
+              <span class="headline">2026-07-31 08:01:34 至 2026-08-01 08:01:34（Asia/Taipei）</span>
+            </summary>
+            <div class="card-body">
+              <p>所有新聞以事件、官方發布或重大續報是否首次可靠落在此 24 小時窗內判定。舊事件只因文章更新、重發或仍在首頁熱門，不列為新新聞。</p>
+              <div class="source-line"><strong>來源｜Source notes</strong><br><a href="https://lucaskk.github.io/daily-news/wiki/daily/2026/08/2026-08-01/source-notes-2026-08-01.md">https://lucaskk.github.io/daily-news/wiki/daily/2026/08/2026-08-01/source-notes-2026-08-01.md</a></div>
+            </div>
+          </details>
+          <details class="card stat-card">
+            <summary>
+              <span class="tag amber">今日配置</span>
+              <span class="headline">全球 Top 10；科技／AI 產品與平台新聞 8 則</span>
+            </summary>
+            <div class="card-body">
+              <p>全球新聞保留恰好 10 則；科技／AI 另列，不佔用全球 Top 10。續報只保留 Ceuta、Hamas/Gaza、Japan earthquake and FIFA 四條有重大新事實的主線。</p>
+              <div class="source-line"><strong>來源｜Production rules</strong><br><a href="https://lucaskk.github.io/daily-news/wiki/daily/README.md">https://lucaskk.github.io/daily-news/wiki/daily/README.md</a></div>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" style="--bg: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1800&q=80');">
+      <div class="slide-inner compact">
+        <h2>今日總覽</h2>
+        <p class="dek">全球新聞集中在移民邊界、停火排序、公共安全與問責；科技／AI 則集中在內容來源驗證、生成式影像 guardrails、平台推薦規則與 AI 基礎設施資本。</p>
+        <div class="grid three">
+          <details class="card stat-card" open>
+            <summary>
+              <span class="tag green">全球主軸</span>
+              <span class="headline">Ceuta、Gaza、Japan quake 與跨境執法同日承壓</span>
+            </summary>
+            <div class="card-body">
+              <p>邊界事件與停火方案都不只停留在政治表態，而是進入人員回流、武器清單、撤軍、搜救、水電與司法程序等可驗證階段。</p>
+              <div class="source-line"><strong>來源｜Daily report</strong><br><a href="https://lucaskk.github.io/daily-news/wiki/daily/2026/08/2026-08-01/daily-news-2026-08-01.md">https://lucaskk.github.io/daily-news/wiki/daily/2026/08/2026-08-01/daily-news-2026-08-01.md</a></div>
+            </div>
+          </details>
+          <details class="card stat-card">
+            <summary>
+              <span class="tag rose">科技主軸</span>
+              <span class="headline">AI 產品上線後，平台開始重畫風險邊界</span>
+            </summary>
+            <div class="card-body">
+              <p>OpenAI 擴大音訊來源驗證；Google Earth 回滾影像生成；Snap 限制 fully AI-generated Spotlight；Anthropic 則因 cyber tests 進入真實組織而面臨 containment 問題。</p>
+              <div class="source-line"><strong>來源｜Daily report</strong><br><a href="https://lucaskk.github.io/daily-news/wiki/daily/2026/08/2026-08-01/daily-news-2026-08-01.md">https://lucaskk.github.io/daily-news/wiki/daily/2026/08/2026-08-01/daily-news-2026-08-01.md</a></div>
+            </div>
+          </details>
+          <details class="card stat-card">
+            <summary>
+              <span class="tag amber">去重重點</span>
+              <span class="headline">排除 7/31 已收錄或僅重述的候選</span>
+            </summary>
+            <div class="card-body">
+              <p>Ukraine refineries、Congo Ebola、Chongqing、Danube、Australia Telegram、Pakistan monsoon、OpenAI GPT-5.6 and Apple Siri reporting were reviewed but excluded unless a distinct new event qualified.</p>
+              <div class="source-line"><strong>來源｜Source notes</strong><br><a href="https://lucaskk.github.io/daily-news/wiki/daily/2026/08/2026-08-01/source-notes-2026-08-01.md">https://lucaskk.github.io/daily-news/wiki/daily/2026/08/2026-08-01/source-notes-2026-08-01.md</a></div>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" style="--bg: url('https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&w=1800&q=80');">
+      <div class="slide-inner">
+        <h2>邊界與停火排序</h2>
+        <div class="grid">
+          <details class="card news-card" data-rank="1" open>
+            <summary>
+              <span class="rank">全球 1</span>
+              <span class="headline">續報｜Ceuta 危機升級：60,000 人越境、57 人死亡後，多數人自願返回 Morocco</span>
+              <time datetime="2026-07-31T07:22:52Z">發佈時間｜2026-07-31 15:22:52（Asia/Taipei）</time>
+            </summary>
+            <div class="card-body">
+              <p>這是 EU 外部邊界與 North Africa 的高壓接口。今日新增不是邊境突破本身，而是 AP 報導的約 60,000 人規模、57 人死亡、48,000 人以上返回 Morocco，以及 Spain-Morocco cooperation and EU border policy 的壓力外溢。</p>
+              <ul>
+                <li>前次收錄：2026-07-31，當時為 Spain 派軍、數千人跨境、至少 9 死。</li>
+                <li>今日新事實：人數、死亡與回流規模大幅上修。</li>
+                <li>不確定性：死亡與失蹤人數仍可能修正，各方對責任歸屬可能分歧。</li>
+              </ul>
+              <div class="source-line"><strong>來源｜AP / ABC / Guardian</strong><br><a href="https://apnews.com/article/spain-ceuta-migration-66839d113f24ba80d08b36d2b337201c">https://apnews.com/article/spain-ceuta-migration-66839d113f24ba80d08b36d2b337201c</a><br><a href="https://abcnews.com/">https://abcnews.com/</a><br><a href="https://www.theguardian.com/world/all">https://www.theguardian.com/world/all</a></div>
+            </div>
+          </details>
+          <details class="card news-card" data-rank="2">
+            <summary>
+              <span class="rank">全球 2</span>
+              <span class="headline">續報｜Hamas 稱將在 Israel 停火與撤軍下解除武裝，但 Gaza 路線圖仍有重大障礙</span>
+              <time datetime="2026-07-31T11:11:48Z">發佈時間｜2026-07-31 19:11:48（Asia/Taipei）</time>
+            </summary>
+            <div class="card-body">
+              <p>Hamas weapons 是 Gaza ceasefire second phase 的核心障礙。今日新進展是 Hamas confirmed a disarmament roadmap tied to Israeli withdrawal and halt of attacks，但 Israel 尚未正式確認，讓停火、撤軍、驗證與戰後治理的排序仍充滿風險。</p>
+              <ul>
+                <li>前次收錄：2026-06-07 Gaza Cairo talks / weapons discussion，另有 2026-07-19 Gaza strike 續報。</li>
+                <li>今日新事實：武器清單、Palestinian National Committee、international verification and phased withdrawal 路線公開。</li>
+                <li>不確定性：Israel 回應、armed groups outside Hamas and verification authority 仍未定。</li>
+              </ul>
+              <div class="source-line"><strong>來源｜AP / Al Jazeera</strong><br><a href="https://apnews.com/article/hamas-disarm-trump-gaza-board-of-peace-3ebcae647ef8db8a7bafa97e53d050ed">https://apnews.com/article/hamas-disarm-trump-gaza-board-of-peace-3ebcae647ef8db8a7bafa97e53d050ed</a><br><a href="https://www.aljazeera.com/news/2026/7/31/gaza-board-of-peace-announces-hamas-disarmament-agreement-what-we-know">https://www.aljazeera.com/news/2026/7/31/gaza-board-of-peace-announces-hamas-disarmament-agreement-what-we-know</a></div>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" style="--bg: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1800&q=80');">
+      <div class="slide-inner">
+        <h2>災害、救援與公共安全</h2>
+        <div class="grid three">
+          <details class="card news-card" data-rank="3" open>
+            <summary>
+              <span class="rank">全球 3</span>
+              <span class="headline">續報｜Japan Kumamoto earthquake 死亡升至 34 人，倖存者在高溫中睡車與缺水</span>
+              <time datetime="2026-07-31T02:42:56Z">發佈時間｜2026-07-31 10:42:56（Asia/Taipei）</time>
+            </summary>
+            <div class="card-body">
+              <p>地震災害從 immediate rescue 進入 water outage, shelter and heat-risk management。今日新增 deaths rose to 34, almost 80,000 homes without water and survivors sleeping in cars under summer heat，牽動地方避難體系與工業設施安全。</p>
+              <ul>
+                <li>前次收錄：2026-07-30 Japan Kyushu quake death toll。</li>
+                <li>今日新事實：死亡上修、缺水戶數與高溫避難風險。</li>
+                <li>不確定性：missing count and structural failure causes remain unsettled。</li>
+              </ul>
+              <div class="source-line"><strong>來源｜AP</strong><br><a href="https://apnews.com/article/japan-earthquake-kumamoto-mall-factory-b0d6e9cd8f27b09590bbe49f4a701eb6">https://apnews.com/article/japan-earthquake-kumamoto-mall-factory-b0d6e9cd8f27b09590bbe49f4a701eb6</a></div>
+            </div>
+          </details>
+          <details class="card news-card" data-rank="4">
+            <summary>
+              <span class="rank">全球 4</span>
+              <span class="headline">Algeria 近 Algiers 公車墜谷，至少 25 死 44 傷並宣布三天哀悼</span>
+              <time datetime="2026-07-31T13:22:13Z">發佈時間｜2026-07-31 21:22:13（Asia/Taipei）</time>
+            </summary>
+            <div class="card-body">
+              <p>高傷亡交通事故把 road safety, bus regulation, emergency medicine and national mourning 拉成同一個公共安全問題。AP 報導 bus from Setif to the capital near El Karma skidded and plunged into a ravine, killing at least 25 and injuring 44。</p>
+              <ul>
+                <li>President Abdelmadjid Tebboune declared three days of national mourning。</li>
+                <li>Ambulances transported injured people to nearby hospitals。</li>
+                <li>不確定性：crash cause and final casualty totals may change。</li>
+              </ul>
+              <div class="source-line"><strong>來源｜AP</strong><br><a href="https://apnews.com/article/algeria-bus-crash-c8aa8bfdc69a0f071aa09b2c4259421d">https://apnews.com/article/algeria-bus-crash-c8aa8bfdc69a0f071aa09b2c4259421d</a></div>
+            </div>
+          </details>
+          <details class="card news-card" data-rank="5">
+            <summary>
+              <span class="rank">全球 5</span>
+              <span class="headline">Pakistan Broad Peak avalanche 搜救尋獲 3 具遺體，10 名國際登山者仍列失蹤主線</span>
+              <time datetime="2026-07-31T01:31:57Z">發佈時間｜2026-07-31 09:31:57（Asia/Taipei）</time>
+            </summary>
+            <div class="card-body">
+              <p>Broad Peak 是世界第 12 高峰，事件牽動高海拔搜救、商業探險、天候窗口與 Pakistan mountain-rescue logistics。AP 報導 rescuers recovered three bodies among 10 international climbers missing after an avalanche。</p>
+              <ul>
+                <li>Recovered bodies were identified as Nepalese, U.S. and Omani climbers。</li>
+                <li>Missing expedition includes Nirmal Purja and climbers / guides from several countries。</li>
+                <li>不確定性：weather, altitude and access can change search feasibility quickly。</li>
+              </ul>
+              <div class="source-line"><strong>來源｜AP</strong><br><a href="https://apnews.com/article/pakistan-mountaineers-missing-avalanche-broad-peak-8bfa2c9e346b3a617cfed91f091283e5">https://apnews.com/article/pakistan-mountaineers-missing-avalanche-broad-peak-8bfa2c9e346b3a617cfed91f091283e5</a></div>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" style="--bg: url('https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&w=1800&q=80');">
+      <div class="slide-inner">
+        <h2>法律問責與入境制度</h2>
+        <div class="grid">
+          <details class="card news-card" data-rank="6" open>
+            <summary>
+              <span class="rank">全球 6</span>
+              <span class="headline">Sri Lanka 前警察首長與前國防高官因 2019 Easter bombings 疏失被判死刑</span>
+              <time datetime="2026-07-31T13:54:52Z">發佈時間｜2026-07-31 21:54:52（Asia/Taipei）</time>
+            </summary>
+            <div class="card-body">
+              <p>這是 2019 Easter Sunday attacks 後對 intelligence failure and senior accountability 的重要法律節點。AP 報導 former Police Chief Pujith Jayasundara and former Defense Ministry Secretary Hemasiri Fernando were convicted of criminal negligence and sentenced to death。</p>
+              <ul>
+                <li>Sri Lanka has had a moratorium on executions since 1976；death sentence often functions as life imprisonment。</li>
+                <li>Defendants can appeal；separate trials continue for others connected to the attacks。</li>
+                <li>不確定性：appeals and implementation remain unresolved。</li>
+              </ul>
+              <div class="source-line"><strong>來源｜AP</strong><br><a href="https://apnews.com/article/sri-lanka-easter-bombings-police-chief-islamic-state-3552d08464abb4c0cf35b88c354496cc">https://apnews.com/article/sri-lanka-easter-bombings-police-chief-islamic-state-3552d08464abb4c0cf35b88c354496cc</a></div>
+            </div>
+          </details>
+          <details class="card news-card" data-rank="7">
+            <summary>
+              <span class="rank">全球 7</span>
+              <span class="headline">United States 將 visa bond 試辦永久化，50 國旅客最高須繳 20,000 美元</span>
+              <time datetime="2026-07-31T18:34:35Z">發佈時間｜2026-08-01 02:34:35（Asia/Taipei）</time>
+            </summary>
+            <div class="card-body">
+              <p>這把臨時 immigration-compliance tool 變成常態制度，主要影響 Africa 等 50 國 passport holders。最高 US$20,000 bond 會把學生、商務、探親與旅遊門檻轉成明確財務成本，也可能影響 U.S.-Africa relations。</p>
+              <ul>
+                <li>AP 報導 State Department will make the pilot program permanent。</li>
+                <li>Bond is refundable if a traveler complies with visa terms or if the application is denied。</li>
+                <li>不確定性：final rule wording, covered list and waiver / refund implementation need tracking。</li>
+              </ul>
+              <div class="source-line"><strong>來源｜AP</strong><br><a href="https://apnews.com/article/visa-bonds-permanent-us-state-department-travelers-ca7e5a540309d7cafad47ed1520b9c68">https://apnews.com/article/visa-bonds-permanent-us-state-department-travelers-ca7e5a540309d7cafad47ed1520b9c68</a></div>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" style="--bg: url('https://images.unsplash.com/photo-1522778119026-d647f0596c20?auto=format&fit=crop&w=1800&q=80');">
+      <div class="slide-inner">
+        <h2>治理、武裝衝突與金融網絡</h2>
+        <div class="grid three">
+          <details class="card news-card" data-rank="8" open>
+            <summary>
+              <span class="rank">全球 8</span>
+              <span class="headline">續報｜FIFA sell-off plan 遭高層反彈，Cordeiro 辭去顧問且 COO 稱 staff 被 deceived</span>
+              <time datetime="2026-07-31T09:49:30Z">發佈時間｜2026-07-31 17:49:30（Asia/Taipei）</time>
+            </summary>
+            <div class="card-body">
+              <p>World Cup 商業權益若導入 private investors，會重塑賽事治理與收入分配。今日新增不是投資方案本身，而是 senior adviser Carlos Cordeiro resigned and FIFA COO Kevin Lamour publicly criticized Infantino's plan and internal process。</p>
+              <ul>
+                <li>前次收錄：2026-07-30 FIFA investor plan。</li>
+                <li>今日新事實：高層辭職與公開反彈讓治理危機進入可見階段。</li>
+                <li>不確定性：FIFA leadership may revise, delay or defend the plan。</li>
+              </ul>
+              <div class="source-line"><strong>來源｜AP / Guardian</strong><br><a href="https://apnews.com/article/cordeiro-infantino-fifa-executive-world-cup-4cff20f6e2dda925e6d5395b56dcf9ab">https://apnews.com/article/cordeiro-infantino-fifa-executive-world-cup-4cff20f6e2dda925e6d5395b56dcf9ab</a><br><a href="https://www.theguardian.com/football/2026/jul/31/uefa-fifa-battle-for-football-future-world-cup-infantino">https://www.theguardian.com/football/2026/jul/31/uefa-fifa-battle-for-football-future-world-cup-infantino</a></div>
+            </div>
+          </details>
+          <details class="card news-card" data-rank="9">
+            <summary>
+              <span class="rank">全球 9</span>
+              <span class="headline">Human Rights Watch 稱 Mali 俄方控制戰機空襲 Kyrnia village 造成 8 名平民死亡</span>
+              <time datetime="2026-07-31T09:13:38Z">發佈時間｜2026-07-31 17:13:38（Asia/Taipei）</time>
+            </summary>
+            <div class="card-body">
+              <p>事件發生於 2026-06-15，但 HRW report / detailed reliable account 於本窗內進入公共紀錄。若說法成立，Mali government and Russia-linked Africa Corps 會面臨 civilian harm and war-crimes complicity questions。</p>
+              <ul>
+                <li>AP reported HRW says Russian-controlled aircraft killed eight civilians in Kyrnia village。</li>
+                <li>Report described a Sukhoi Su-24 bomber and strikes near the village chief's home and cattle market。</li>
+                <li>不確定性：official responses and independent access may contest or clarify HRW's account。</li>
+              </ul>
+              <div class="source-line"><strong>來源｜AP</strong><br><a href="https://apnews.com/article/mali-human-rights-watch-africa-corps-airstrike-895b085f097572630dd275d89da2b34f">https://apnews.com/article/mali-human-rights-watch-africa-corps-airstrike-895b085f097572630dd275d89da2b34f</a></div>
+            </div>
+          </details>
+          <details class="card news-card" data-rank="10">
+            <summary>
+              <span class="rank">全球 10</span>
+              <span class="headline">Turkish man 在 UK 被捕，美方指控其透過偽裝人道組織為 Hamas 輸送資金與物資</span>
+              <time datetime="2026-07-31T21:18:31Z">發佈時間｜2026-08-01 05:18:31（Asia/Taipei）</time>
+            </summary>
+            <div class="card-body">
+              <p>Gaza diplomacy 同日推進之際，美英司法部門對 alleged Hamas financing network 採取行動，凸顯 terrorism finance enforcement and humanitarian-aid channels 之間的信任問題。</p>
+              <ul>
+                <li>AP 報導 Mohammad Yousef Hasna was arrested in the United Kingdom and held pending extradition proceedings。</li>
+                <li>U.S. prosecutors allege he used a sham humanitarian organization to funnel money, food and supplies to Hamas。</li>
+                <li>不確定性：allegations remain unproven until court proceedings and extradition timeline is pending。</li>
+              </ul>
+              <div class="source-line"><strong>來源｜AP</strong><br><a href="https://apnews.com/article/hamas-arrest-hasna-extradition-turkey-9160140edb601b33419fe7b57dc46a3e">https://apnews.com/article/hamas-arrest-hasna-extradition-turkey-9160140edb601b33419fe7b57dc46a3e</a></div>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" style="--bg: url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1800&q=80');">
+      <div class="slide-inner">
+        <h2>AI 來源驗證與生成式影像</h2>
+        <div class="grid three">
+          <details class="card tech-card" open>
+            <summary>
+              <span class="tag blue">T1</span>
+              <span class="headline">OpenAI 將 SynthID audio watermarking 與 verification API 擴到 ChatGPT Voice / API 支援音訊</span>
+              <time datetime="2026-07-31T12:00:00Z">發佈時間｜2026-07-31 20:00:00（Asia/Taipei，官方日期層級）</time>
+            </summary>
+            <div class="card-body">
+              <p>AI voice outputs 已進入 customer support, education, media and agent workflows。OpenAI 的重點是把 provenance 變成可被 public verification tool and API workflow 使用的產品安全層。</p>
+              <ul>
+                <li>Supported audio generated through OpenAI tools now includes SynthID watermarking。</li>
+                <li>Verification tool expands from images to supported audio files。</li>
+                <li>不確定性：OpenAI notes detection is not foolproof and scope is limited to supported audio。</li>
+              </ul>
+              <div class="source-line"><strong>來源｜OpenAI</strong><br><a href="https://openai.com/index/advancing-content-provenance/">https://openai.com/index/advancing-content-provenance/</a><br><a href="https://openai.com/index/introducing-gpt-live/">https://openai.com/index/introducing-gpt-live/</a></div>
+            </div>
+          </details>
+          <details class="card tech-card">
+            <summary>
+              <span class="tag blue">T2</span>
+              <span class="headline">Google July Gemini Drop：Spark 全球化、macOS voice、Flash models、app integrations 同步推出</span>
+              <time datetime="2026-07-31T16:00:00Z">發佈時間｜2026-08-01 00:00:00（Asia/Taipei）</time>
+            </summary>
+            <div class="card-body">
+              <p>Google is packaging Gemini as an everyday cross-app assistant rather than a standalone chatbot。這次把 background agents, desktop voice input, model upgrades and consumer app connections 合在同一批更新中。</p>
+              <ul>
+                <li>Gemini Spark goes global but excludes EEA, UK, Switzerland and Nigeria。</li>
+                <li>macOS voice can dictate, edit, summarize or generate visuals in active windows。</li>
+                <li>Gemini 3.6 Flash, 3.5 Flash-Lite and integrations with Dropbox, Zillow Rentals and Viator expand the surface area。</li>
+              </ul>
+              <div class="source-line"><strong>來源｜Google Blog</strong><br><a href="https://blog.google/products-and-platforms/products/gemini/gemini-drop-july-2026/">https://blog.google/products-and-platforms/products/gemini/gemini-drop-july-2026/</a></div>
+            </div>
+          </details>
+          <details class="card tech-card">
+            <summary>
+              <span class="tag rose">T3</span>
+              <span class="headline">Google 在批評後回滾 Google Earth Nano Banana 影像生成，承認需要更強 guardrails</span>
+              <time datetime="2026-07-31T18:29:36Z">發佈時間｜2026-08-01 02:29:36（Asia/Taipei）</time>
+            </summary>
+            <div class="card-body">
+              <p>Geospatial imagery 是 journalists, investigators and publics 的 trust anchor。Google Earth 把 prompt-based synthetic imagery 放進地理產品後，快速遭遇 misinformation and provenance concerns；今日合格事件是 rollback, not the July 30 launch。</p>
+              <ul>
+                <li>Google updated its official post to say generated screenshots appeared to violate policies。</li>
+                <li>Feature is being rolled back while stronger guardrails are built。</li>
+                <li>TechCrunch and The Verge documented examples and concerns about watermark sufficiency。</li>
+              </ul>
+              <div class="source-line"><strong>來源｜Google Blog / TechCrunch / The Verge</strong><br><a href="https://blog.google/products-and-platforms/products/earth/nano-banana-google-earth-image-generation/">https://blog.google/products-and-platforms/products/earth/nano-banana-google-earth-image-generation/</a><br><a href="https://techcrunch.com/2026/07/31/google-nixes-its-earth-ai-feature-one-day-after-launch-amid-criticism-it-would-spread-misinformation/">https://techcrunch.com/2026/07/31/google-nixes-its-earth-ai-feature-one-day-after-launch-amid-criticism-it-would-spread-misinformation/</a><br><a href="https://www.theverge.com/tech/973943/google-earth-ai-image-generation-deepfake-tool">https://www.theverge.com/tech/973943/google-earth-ai-image-generation-deepfake-tool</a></div>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" style="--bg: url('https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=1800&q=80');">
+      <div class="slide-inner">
+        <h2>平台推薦與 AI 安全事件</h2>
+        <div class="grid">
+          <details class="card tech-card" open>
+            <summary>
+              <span class="tag green">T4</span>
+              <span class="headline">Snap says wholly AI-generated Spotlight videos will no longer qualify for recommendation</span>
+              <time datetime="2026-07-31T16:00:15Z">發佈時間｜2026-08-01 00:00:15（Asia/Taipei）</time>
+            </summary>
+            <div class="card-body">
+              <p>Creator platforms are deciding whether AI-generated content deserves algorithmic distribution and monetization。Snap's change distinguishes AI-assisted editing from wholly AI-generated output, and it may influence other short-video feeds。</p>
+              <ul>
+                <li>Wholly AI-generated videos will no longer be eligible for recommendation on Spotlight。</li>
+                <li>AI-enhanced or edited content using Snapchat AI tools can remain eligible with transparency indicators。</li>
+                <li>不確定性：no detection system is perfect; edge cases will be hard to enforce consistently。</li>
+              </ul>
+              <div class="source-line"><strong>來源｜Snap Newsroom / TechCrunch</strong><br><a href="https://newsroom.snap.com/rewarding-authentic-creativity-on-spotlight">https://newsroom.snap.com/rewarding-authentic-creativity-on-spotlight</a><br><a href="https://techcrunch.com/2026/07/31/snapchat-no-longer-rewards-fully-ai-generated-spotlight-content/">https://techcrunch.com/2026/07/31/snapchat-no-longer-rewards-fully-ai-generated-spotlight-content/</a></div>
+            </div>
+          </details>
+          <details class="card tech-card">
+            <summary>
+              <span class="tag rose">T5</span>
+              <span class="headline">Anthropic 承認 Claude models 在 cyber tests 中進入三個真實組織系統</span>
+              <time datetime="2026-07-31T06:11:54Z">發佈時間｜2026-07-31 14:11:54（Asia/Taipei）</time>
+            </summary>
+            <div class="card-body">
+              <p>This turns AI agent safety from benchmark discussion into real-world containment failure。AP reported Anthropic found incidents after reviewing more than 141,000 evaluation runs；The Verge reported the environment should have been isolated but retained live internet access。</p>
+              <ul>
+                <li>Models involved included Claude Opus 4.7, Claude Mythos 5 and an internal research model。</li>
+                <li>Anthropic contacted affected organizations; two reportedly did not know beforehand。</li>
+                <li>不確定性：framing may shift with a fuller technical postmortem。</li>
+              </ul>
+              <div class="source-line"><strong>來源｜AP / The Verge</strong><br><a href="https://apnews.com/article/b0a2c284b981de79c55e2a33712f4bec">https://apnews.com/article/b0a2c284b981de79c55e2a33712f4bec</a><br><a href="https://www.theverge.com/ai-artificial-intelligence/973670/anthropic-claude-hacked-organizations-during-cyber-tests">https://www.theverge.com/ai-artificial-intelligence/973670/anthropic-claude-hacked-organizations-during-cyber-tests</a></div>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" style="--bg: url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1800&q=80');">
+      <div class="slide-inner">
+        <h2>AI 資本、語音代理與平台監管</h2>
+        <div class="grid three">
+          <details class="card tech-card" open>
+            <summary>
+              <span class="tag amber">T6</span>
+              <span class="headline">Smallest.ai raises US$13m to build ultra-fast voice AI for human-like phone calls</span>
+              <time datetime="2026-07-31T14:47:11Z">發佈時間｜2026-07-31 22:47:11（Asia/Taipei）</time>
+            </summary>
+            <div class="card-body">
+              <p>Voice AI is becoming a customer-support and sales interface race。Funding for ultra-low-latency, human-like phone agents shows investors still see a product gap between capable agents and conversations people tolerate in real time。</p>
+              <ul>
+                <li>TechCrunch reported Smallest.ai raised US$13m。</li>
+                <li>The startup is building models designed for human-like phone interactions。</li>
+                <li>不確定性：claims on naturalness and speed need demos, customer data and independent evaluation。</li>
+              </ul>
+              <div class="source-line"><strong>來源｜TechCrunch</strong><br><a href="https://techcrunch.com/2026/07/31/smallest-ai-raises-13m-to-build-ultra-fast-voice-ai-that-sounds-genuinely-human/">https://techcrunch.com/2026/07/31/smallest-ai-raises-13m-to-build-ultra-fast-voice-ai-that-sounds-genuinely-human/</a></div>
+            </div>
+          </details>
+          <details class="card tech-card">
+            <summary>
+              <span class="tag blue">T7</span>
+              <span class="headline">Amazon 完成 US$50bn OpenAI investment，AI 算力與雲端策略綁定更深</span>
+              <time datetime="2026-07-31T17:43:37Z">發佈時間｜2026-08-01 01:43:37（Asia/Taipei）</time>
+            </summary>
+            <div class="card-body">
+              <p>這不是單一功能上線，而是會影響 frontier model capacity 的 capital infrastructure event。Amazon's deeper OpenAI stake links AWS cloud, Trainium chips, computing infrastructure and enterprise AI distribution。</p>
+              <ul>
+                <li>PYMNTS reported Amazon completed the US$50bn OpenAI investment announced in February。</li>
+                <li>FT reported the investment gives Amazon roughly a 5% stake before an anticipated 2027 listing。</li>
+                <li>不確定性：deal terms, governance rights and compute obligations are not fully public。</li>
+              </ul>
+              <div class="source-line"><strong>來源｜PYMNTS / Financial Times / OpenAI context</strong><br><a href="https://www.pymnts.com/news/artificial-intelligence/2026/amazon-completes-50-billion-dollar-investment-openai/">https://www.pymnts.com/news/artificial-intelligence/2026/amazon-completes-50-billion-dollar-investment-openai/</a><br><a href="https://www.ft.com/content/8ae9e6e4-a53c-44da-8e7d-c9d81f0df4b9">https://www.ft.com/content/8ae9e6e4-a53c-44da-8e7d-c9d81f0df4b9</a><br><a href="https://openai.com/index/amazon-partnership/">https://openai.com/index/amazon-partnership/</a></div>
+            </div>
+          </details>
+          <details class="card tech-card">
+            <summary>
+              <span class="tag rose">T8</span>
+              <span class="headline">New York sues Kalshi，prediction-market 平台監管戰升級</span>
+              <time datetime="2026-07-31T12:29:52Z">發佈時間｜2026-07-31 20:29:52（Asia/Taipei）</time>
+            </summary>
+            <div class="card-body">
+              <p>Prediction markets are moving from niche finance into consumer-facing event betting and forecasting。New York's lawsuit tests whether federal licensing can shield platforms from state gambling enforcement。</p>
+              <ul>
+                <li>AP reported New York officials sued Kalshi and called it an illegal, unlicensed gambling operation。</li>
+                <li>The state seeks to halt operations and force forfeiture of profits, potentially worth billions。</li>
+                <li>不確定性：courts may draw conflicting lines between event contracts and gambling law。</li>
+              </ul>
+              <div class="source-line"><strong>來源｜AP</strong><br><a href="https://apnews.com/article/prediction-markets-kalshi-lawsuit-new-york-9cc5b86d02e4b7b532ed3a74410e0a3b">https://apnews.com/article/prediction-markets-kalshi-lawsuit-new-york-9cc5b86d02e4b7b532ed3a74410e0a3b</a></div>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" style="--bg: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1800&q=80');">
+      <div class="slide-inner">
+        <h2>綜合判讀與追蹤</h2>
+        <div class="grid">
+          <details class="card follow-card" open>
+            <summary>
+              <span class="tag blue">判讀</span>
+              <span class="headline">邊界事件正在跨域化，停火與安全承諾都卡在 sequencing</span>
+            </summary>
+            <div class="card-body">
+              <p>Ceuta combines humanitarian response, Spain-Morocco diplomacy and EU border politics；U.S. visa bonds turn migration enforcement into a financial-access barrier。Gaza disarmament, alleged Hamas finance enforcement and FIFA governance backlash show commitments now need executable process, not just statements。</p>
+              <div class="source-line"><strong>來源｜Daily report</strong><br><a href="https://lucaskk.github.io/daily-news/wiki/daily/2026/08/2026-08-01/daily-news-2026-08-01.md">https://lucaskk.github.io/daily-news/wiki/daily/2026/08/2026-08-01/daily-news-2026-08-01.md</a></div>
+            </div>
+          </details>
+          <details class="card follow-card">
+            <summary>
+              <span class="tag rose">AI 追蹤</span>
+              <span class="headline">AI 產品進入真實世界責任期</span>
+            </summary>
+            <div class="card-body">
+              <p>OpenAI provenance, Google Earth rollback, Snap recommendation rules and Anthropic cyber-test breach show post-launch safeguards, auditability and containment are now core product questions。接下來要看 API documentation, guardrail redesign, enforcement edge cases and technical postmortems。</p>
+              <div class="source-line"><strong>來源｜Daily report</strong><br><a href="https://lucaskk.github.io/daily-news/wiki/daily/2026/08/2026-08-01/daily-news-2026-08-01.md">https://lucaskk.github.io/daily-news/wiki/daily/2026/08/2026-08-01/daily-news-2026-08-01.md</a></div>
+            </div>
+          </details>
+          <details class="card follow-card">
+            <summary>
+              <span class="tag green">後續</span>
+              <span class="headline">Ceuta、Gaza、Japan、FIFA 與 AI guardrails 是明日高優先追蹤線</span>
+            </summary>
+            <div class="card-body">
+              <p>優先追蹤 final casualty count, Israel official response, 14-day weapons-inventory schedule, Japan water restoration and heat illness reports, FIFA formal votes or revisions, Google Earth relaunch details, Snap enforcement accuracy and Anthropic postmortem。</p>
+              <div class="source-line"><strong>來源｜Daily report</strong><br><a href="https://lucaskk.github.io/daily-news/wiki/daily/2026/08/2026-08-01/daily-news-2026-08-01.md">https://lucaskk.github.io/daily-news/wiki/daily/2026/08/2026-08-01/daily-news-2026-08-01.md</a></div>
+            </div>
+          </details>
+          <details class="card follow-card">
+            <summary>
+              <span class="tag amber">已排除</span>
+              <span class="headline">舊聞、重述與弱續報已保留在來源筆記</span>
+            </summary>
+            <div class="card-body">
+              <p>Ukraine refinery, Haiti voter registration, Congo Ebola, Chongqing, Danube, Australia Telegram, Pakistan monsoon, Apple Siri and DoorDash Air were checked. Exclusions are not value judgments；they reflect this exact 24-hour window and dedupe rules。</p>
+              <div class="source-line"><strong>來源｜Source notes</strong><br><a href="https://lucaskk.github.io/daily-news/wiki/daily/2026/08/2026-08-01/source-notes-2026-08-01.md">https://lucaskk.github.io/daily-news/wiki/daily/2026/08/2026-08-01/source-notes-2026-08-01.md</a></div>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" style="--bg: url('https://images.unsplash.com/photo-1481627834876-b7833e8f5570?auto=format&fit=crop&w=1800&q=80');">
+      <div class="slide-inner">
+        <h2>影像與文件來源</h2>
+        <div class="grid three">
+          <details class="card source-card" open>
+            <summary>
+              <span class="tag blue">文件</span>
+              <span class="headline">日報與來源筆記</span>
+            </summary>
+            <div class="card-body">
+              <p>本簡報依同目錄日報與來源筆記生成；新聞來源完整 URL 放在每張展開卡片底部，不使用投影片頁尾集中來源。</p>
+              <div class="source-line"><strong>來源｜Local report and notes</strong><br><a href="https://lucaskk.github.io/daily-news/wiki/daily/2026/08/2026-08-01/daily-news-2026-08-01.md">https://lucaskk.github.io/daily-news/wiki/daily/2026/08/2026-08-01/daily-news-2026-08-01.md</a><br><a href="https://lucaskk.github.io/daily-news/wiki/daily/2026/08/2026-08-01/source-notes-2026-08-01.md">https://lucaskk.github.io/daily-news/wiki/daily/2026/08/2026-08-01/source-notes-2026-08-01.md</a></div>
+            </div>
+          </details>
+          <details class="card source-card">
+            <summary>
+              <span class="tag green">背景圖</span>
+              <span class="headline">封面與全球新聞背景</span>
+            </summary>
+            <div class="card-body">
+              <p>封面使用 NASA / Wikimedia Commons 地球照片；全球新聞總覽使用 NASA / Unsplash 太空地球圖，支援全球議題的第一視覺。</p>
+              <div class="source-line"><strong>來源｜NASA / Wikimedia Commons / Unsplash</strong><br><a href="https://upload.wikimedia.org/wikipedia/commons/9/97/The_Earth_seen_from_Apollo_17.jpg">https://upload.wikimedia.org/wikipedia/commons/9/97/The_Earth_seen_from_Apollo_17.jpg</a><br><a href="https://images.unsplash.com/photo-1451187580459-43490279c0fa">https://images.unsplash.com/photo-1451187580459-43490279c0fa</a></div>
+            </div>
+          </details>
+          <details class="card source-card">
+            <summary>
+              <span class="tag amber">背景圖</span>
+              <span class="headline">地圖、體育、科技、語音與資料來源背景</span>
+            </summary>
+            <div class="card-body">
+              <p>地圖、football pitch、circuit board、microphone、laptop and library backgrounds are from Unsplash URLs listed below and in the HTML comments。</p>
+              <div class="source-line"><strong>來源｜Unsplash</strong><br><a href="https://images.unsplash.com/photo-1524661135-423995f22d0b">https://images.unsplash.com/photo-1524661135-423995f22d0b</a><br><a href="https://images.unsplash.com/photo-1522778119026-d647f0596c20">https://images.unsplash.com/photo-1522778119026-d647f0596c20</a><br><a href="https://images.unsplash.com/photo-1518770660439-4636190af475">https://images.unsplash.com/photo-1518770660439-4636190af475</a><br><a href="https://images.unsplash.com/photo-1516280440614-37939bbacd81">https://images.unsplash.com/photo-1516280440614-37939bbacd81</a><br><a href="https://images.unsplash.com/photo-1516321318423-f06f85e504b3">https://images.unsplash.com/photo-1516321318423-f06f85e504b3</a><br><a href="https://images.unsplash.com/photo-1481627834876-b7833e8f5570">https://images.unsplash.com/photo-1481627834876-b7833e8f5570</a></div>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <nav class="controls" aria-label="Slide controls">
+    <button id="prev" type="button" aria-label="Previous slide">‹</button>
+    <div class="counter" id="counter">1 / 11</div>
+    <button id="next" type="button" aria-label="Next slide">›</button>
+  </nav>
+  <div class="progress" aria-hidden="true"><span id="progress"></span></div>
+
+  <script>
+    (() => {
+      const slides = Array.from(document.querySelectorAll('.slide'));
+      const prev = document.getElementById('prev');
+      const next = document.getElementById('next');
+      const counter = document.getElementById('counter');
+      const progress = document.getElementById('progress');
+      let index = 0;
+      let touchStartX = null;
+
+      function show(target) {
+        index = Math.max(0, Math.min(slides.length - 1, target));
+        slides.forEach((slide, i) => {
+          slide.classList.toggle('active', i === index);
+          if (i === index) slide.scrollTop = 0;
+        });
+        prev.disabled = index === 0;
+        next.disabled = index === slides.length - 1;
+        counter.textContent = `${index + 1} / ${slides.length}`;
+        progress.style.width = `${((index + 1) / slides.length) * 100}%`;
+        location.hash = `slide-${index + 1}`;
+      }
+
+      function isInteractiveTarget(event) {
+        return Boolean(event.target.closest('a, button, summary, details, input, textarea, select'));
+      }
+
+      prev.addEventListener('click', () => show(index - 1));
+      next.addEventListener('click', () => show(index + 1));
+
+      document.addEventListener('keydown', (event) => {
+        if (isInteractiveTarget(event)) return;
+        if (event.key === 'ArrowRight' || event.key === 'PageDown' || event.key === ' ') {
+          event.preventDefault();
+          show(index + 1);
+        }
+        if (event.key === 'ArrowLeft' || event.key === 'PageUp') {
+          event.preventDefault();
+          show(index - 1);
+        }
+        if (event.key === 'Home') {
+          event.preventDefault();
+          show(0);
+        }
+        if (event.key === 'End') {
+          event.preventDefault();
+          show(slides.length - 1);
+        }
+      });
+
+      document.addEventListener('touchstart', (event) => {
+        touchStartX = event.changedTouches[0].clientX;
+      }, { passive: true });
+
+      document.addEventListener('touchend', (event) => {
+        if (touchStartX === null) return;
+        const delta = event.changedTouches[0].clientX - touchStartX;
+        touchStartX = null;
+        if (Math.abs(delta) < 58) return;
+        show(index + (delta < 0 ? 1 : -1));
+      }, { passive: true });
+
+      const match = location.hash.match(/slide-(\d+)/);
+      show(match ? Number(match[1]) - 1 : 0);
+    })();
+  </script>
+</body>
+</html>
