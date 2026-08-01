@@ -91,4 +91,7 @@ window_utc: "2026-07-31T00:01:34Z 至 2026-08-01T00:01:34Z"
 
 - Created `wiki/daily/2026/08/2026-08-01/daily-news-2026-08-01.md`, `source-notes-2026-08-01.md` and `slides-2026-08-01.html` locally.
 - Created / updated `wiki/daily/latest-slides.html` and root `index.html` with cache-busting version `20260801-080134-ai-news-r1`.
-- Local and GitHub Pages publication checks are recorded in the run summary after publishing.
+- Local HTTP verification passed on `http://localhost:4175/wiki/daily/latest-slides.html`; port 4173 was occupied but returned an empty response, and 4174 was already occupied.
+- Published the scoped daily-news package to `main` through local git; the first content commit was `33b9b08`.
+- GitHub Pages verification passed for the dated deck, latest redirect, daily report and source notes.
+- LINE delivery was skipped because `.env` contains `LINE_CHANNEL_ACCESS_TOKEN` and `PUBLIC_SLIDES_BASE_URL`, but `LINE_TO_ID` is empty.
