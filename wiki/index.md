@@ -2,7 +2,7 @@
 title: "Knowledge Base Index"
 type: overview
 created: 2026-05-24
-updated: 2026-08-01
+updated: 2026-08-03
 status: seed
 tags: [index]
 sources: []
@@ -25,6 +25,9 @@ sources: []
 每日新聞報告會放在 `wiki/daily/YYYY/MM/YYYY-MM-DD/`。
 
 - [每日全球與科技 AI 新聞產製規則](daily/README.md) - 包含研究截點前 24 小時限制、跨日去重、重大續報判定、來源紀錄與發布驗證規則。
+
+- [2026-08-03 Daily News](daily/2026/08/2026-08-03/daily-news-2026-08-03.md) - 今日主軸是「戰事拉回交易桌，野火與公共安全升高，AI 成本進入消費硬體」：Trump 暫緩 Iran strikes、Israel 對 Gaza deal 提出疑慮、Ukraine drone / Wildberries strikes、Eastern Washington and Greece wildfires、Pakistan Swat bombing、Indonesia ferry fire、Ceuta 續報、Brazil Lula election and FIFA leadership backlash。科技／AI 聚焦 AI memory shortage hitting MacBook Air / Xbox / gaming laptops、Pippa artist royalties、robotaxi regulation、Bayreuth AI staging、Altman AI pacing and LM Studio DeepSeek V4 Flash availability。
+- [2026-08-03 Slides](daily/2026/08/2026-08-03/slides-2026-08-03.html) - 今日新聞網頁版投影片。
 
 - [2026-08-01 Daily News](daily/2026/08/2026-08-01/daily-news-2026-08-01.md) - 今日主軸是「邊界、停火與平台治理都進入執行測試」：Ceuta 危機升級、Hamas conditional disarmament roadmap、Japan Kumamoto earthquake、Algeria bus crash、Broad Peak avalanche、Sri Lanka Easter bombings sentencing、U.S. visa bond permanence、FIFA sell-off backlash、Mali HRW airstrike report and Hamas-finance extradition case。科技／AI 聚焦 OpenAI audio provenance、Google Gemini Drop、Google Earth Nano Banana rollback、Snap Spotlight AI-content rules、Anthropic cyber-test containment、Smallest.ai voice funding、Amazon-OpenAI investment completion and Kalshi lawsuit。
 - [2026-08-01 Slides](daily/2026/08/2026-08-01/slides-2026-08-01.html) - 今日新聞網頁版投影片。

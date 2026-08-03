@@ -2,7 +2,7 @@
 title: "Overview"
 type: overview
 created: 2026-05-24
-updated: 2026-08-01
+updated: 2026-08-03
 status: seed
 tags: [overview]
 sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
@@ -19,6 +19,12 @@ sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
 - 抽出持續出現的人物、組織、事件、政策、技術與市場概念。
 - 維護跨來源的矛盾、時間線、趨勢與待查問題。
 - 將重要查詢結果回寫成可累積的 wiki 頁面。
+
+## 2026-08-03 Daily News Synthesis
+
+- 全球新聞主軸轉為「戰事拉回交易桌，但公共風險同步升高」：Trump 暫緩 Iran strikes 與 Gulf 斡旋讓 Hormuz 危機短暫從軍事轉回交易，Gaza deal 則因 Israel 對 Hamas disarmament sequencing 的疑慮而保持脆弱。
+- 災害與公共安全壓力集中在城市、交通與群眾場景：Eastern Washington 60,000 人撤離、Greece firefighting helicopter deaths、Pakistan Swat bombing、Indonesia ferry fire and Ceuta death-toll update 都需要後續傷亡與問責資料。
+- 科技／AI 的今日重點是成本與治理落地：memory shortage hits MacBook Air / Xbox / HP Omen，Pippa artist royalties and Bayreuth AI staging test creative-AI legitimacy，robotaxi rules and Altman pacing push deployment into safety governance。
 
 ## 2026-08-01 Daily News Synthesis
 
@@ -53,6 +59,9 @@ sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
 - 輸出偏好：簡短摘要、深度脈絡、比較表、時間線、決策 memo。
 
 ## Latest Daily News
+
+- [2026-08-03 Daily News](daily/2026/08/2026-08-03/daily-news-2026-08-03.md) - 今日主軸是「戰事拉回交易桌，野火與公共安全升高，AI 成本進入消費硬體」：Trump 暫緩 Iran strikes 與油價回落、Gaza deal sequencing 疑慮、Ukraine drone / Wildberries strikes、Eastern Washington / Greece wildfires、Pakistan bombing、Indonesia ferry fire、Ceuta 續報、Brazil Lula election and FIFA governance backlash。科技／AI 聚焦 memory shortage、Pippa royalties、robotaxi deployment、Bayreuth AI staging、Altman pacing and LM Studio DeepSeek V4 Flash availability。
+- [2026-08-03 Slides](daily/2026/08/2026-08-03/slides-2026-08-03.html) - 今日新聞網頁版投影片。
 
 - [2026-08-01 Daily News](daily/2026/08/2026-08-01/daily-news-2026-08-01.md) - 今日主軸是「邊界、停火與平台治理都進入執行測試」：Ceuta 危機升級、Hamas conditional disarmament roadmap、Japan Kumamoto earthquake、Algeria bus crash、Broad Peak avalanche、Sri Lanka Easter bombings sentencing、U.S. visa bond permanence、FIFA sell-off backlash、Mali HRW airstrike report and Hamas-finance extradition case。科技／AI 聚焦 OpenAI audio provenance、Google Gemini Drop、Google Earth Nano Banana rollback、Snap Spotlight AI-content rules、Anthropic cyber-test containment、Smallest.ai voice funding、Amazon-OpenAI investment completion and Kalshi lawsuit。
 - [2026-08-01 Slides](daily/2026/08/2026-08-01/slides-2026-08-01.html) - 今日新聞網頁版投影片。
