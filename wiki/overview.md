@@ -2,7 +2,7 @@
 title: "Overview"
 type: overview
 created: 2026-05-24
-updated: 2026-08-03
+updated: 2026-08-04
 status: seed
 tags: [overview]
 sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
@@ -19,6 +19,12 @@ sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
 - 抽出持續出現的人物、組織、事件、政策、技術與市場概念。
 - 維護跨來源的矛盾、時間線、趨勢與待查問題。
 - 將重要查詢結果回寫成可累積的 wiki 頁面。
+
+## 2026-08-04 Daily News Synthesis
+
+- 全球新聞主軸轉為「戰爭外交未解除現場風險」：Iran/Hormuz talks、Gaza Board of Peace pressure 與 Ukraine glide-bomb / drone casualties 顯示談判、停火與防空資源仍彼此牽動。
+- 治理壓力集中在可信資料與脆弱群體：Ceuta minors、Indonesia ferry manifest failure、Liechtenstein beneficial-ownership breach and Head Start overhaul all expose how records, eligibility and protection systems behave under stress。
+- 科技／AI 產品今日從模型能力轉向高信任工作流：GPT-Live real-time architecture、Wispr meeting data、Design Arena taste evaluation、Base Power grid batteries and DNA lab equipment security flaw connect AI/product news to voice control, workplace capture, energy infrastructure and evidence integrity。
 
 ## 2026-08-03 Daily News Synthesis
 
@@ -59,6 +65,9 @@ sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
 - 輸出偏好：簡短摘要、深度脈絡、比較表、時間線、決策 memo。
 
 ## Latest Daily News
+
+- [2026-08-04 Daily News](daily/2026/08/2026-08-04/daily-news-2026-08-04.md) - 今日主軸是「戰爭外交未解除現場風險，氣候與邊界治理同步承壓，AI 產品走向即時語音與高風險資料鏈」：Iran/Hormuz talks、Gaza halt-attacks pressure、Ukraine glide bombs、Ceuta minors、Aung San Suu Kyi ICRC contact、Europe wildfires / drought、yen intervention、Indonesia ferry manifest failure、Liechtenstein register breach and Head Start overhaul。科技／AI 聚焦 GPT-Live architecture、Design Arena、Wispr Flow notetaker terms、Base Power grid batteries、Xbox 360 on PC、Palworld Online and DNA lab evidence security flaw。
+- [2026-08-04 Slides](daily/2026/08/2026-08-04/slides-2026-08-04.html) - 今日新聞網頁版投影片。
 
 - [2026-08-03 Daily News](daily/2026/08/2026-08-03/daily-news-2026-08-03.md) - 今日主軸是「戰事拉回交易桌，野火與公共安全升高，AI 成本進入消費硬體」：Trump 暫緩 Iran strikes 與油價回落、Gaza deal sequencing 疑慮、Ukraine drone / Wildberries strikes、Eastern Washington / Greece wildfires、Pakistan bombing、Indonesia ferry fire、Ceuta 續報、Brazil Lula election and FIFA governance backlash。科技／AI 聚焦 memory shortage、Pippa royalties、robotaxi deployment、Bayreuth AI staging、Altman pacing and LM Studio DeepSeek V4 Flash availability。
 - [2026-08-03 Slides](daily/2026/08/2026-08-03/slides-2026-08-03.html) - 今日新聞網頁版投影片。
