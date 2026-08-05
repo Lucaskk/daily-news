@@ -6,6 +6,8 @@
 - Recorded the exact Asia/Taipei 24-hour window, per-item event or publication-time basis, material continuations, date-level OpenAI source limitation and duplicate / out-of-window exclusions in `source-notes-2026-08-05.md`.
 - Created `slides-2026-08-05.html` as a standalone HTML deck with themed backgrounds, browser / keyboard / touch navigation, expandable cards and per-card complete source URLs.
 - Updated `wiki/daily/latest-slides.html`, `wiki/index.md`, `wiki/overview.md`, `.nojekyll`, and the root Pages entry timestamp.
+- Published the scoped daily-news package to `main` with commit `deeea65` through a clean fast-forward clone after the dirty local branch push was rejected as non-fast-forward; verified the dated deck and latest redirect on GitHub Pages.
+- LINE delivery was skipped because `.env` contains `LINE_TO_ID`, but its value is empty and `scripts/send_line_daily_slides.py` requires a non-empty target ID.
 
 ## [2026-08-04] ingest | Daily global and tech AI news
 
