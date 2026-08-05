@@ -2,7 +2,7 @@
 title: "Knowledge Base Index"
 type: overview
 created: 2026-05-24
-updated: 2026-08-04
+updated: 2026-08-05
 status: seed
 tags: [index]
 sources: []
@@ -26,6 +26,9 @@ sources: []
 
 - [每日全球與科技 AI 新聞產製規則](daily/README.md) - 包含研究截點前 24 小時限制、跨日去重、重大續報判定、來源紀錄與發布驗證規則。
 
+
+- [2026-08-05 Daily News](daily/2026/08/2026-08-05/daily-news-2026-08-05.md) - 今日主軸是「談判未停火，AI 進入部署成本表」：Iran/Oman Hormuz route-control plan、Netanyahu Gaza no-withdrawal stance、Russia / Ukraine drone casualties、Ceuta rumor mechanism、Congo Ebola 1,707 deaths、Fuego volcano evacuation、U.S. stocks record、Amazon environmental-crime arrests、El Nino heat risk and Kenya Article 6 carbon cap。科技／AI 聚焦 OpenAI education plugins、GitHub Spark deprecation、Copilot billing settings、SpaceX / Anthropic compute deals、Waymo Dallas、Spotify Merlin AI music、Texas data-center audits、Apple-OpenAI injunction and GLM-5.2 safety gap。
+- [2026-08-05 Slides](daily/2026/08/2026-08-05/slides-2026-08-05.html) - 今日新聞網頁版投影片。
 
 - [2026-08-04 Daily News](daily/2026/08/2026-08-04/daily-news-2026-08-04.md) - 今日主軸是「戰爭外交未解除現場風險，氣候與邊界治理同步承壓，AI 產品走向即時語音與高風險資料鏈」：Iran/Hormuz 談判矛盾、Gaza Board of Peace 停攻要求、Ukraine glide bombs、Ceuta 未成年移民、Aung San Suu Kyi rare ICRC contact、Europe wildfires / drought、yen intervention、Indonesia ferry manifest failure、Liechtenstein register breach and Head Start overhaul。科技／AI 聚焦 GPT-Live architecture、Design Arena、Wispr meeting notetaker signal、Base Power batteries、Xbox 360 on PC、Palworld Online and DNA lab equipment security flaw。
 - [2026-08-04 Slides](daily/2026/08/2026-08-04/slides-2026-08-04.html) - 今日新聞網頁版投影片。

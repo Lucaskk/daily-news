@@ -2,7 +2,7 @@
 title: "Overview"
 type: overview
 created: 2026-05-24
-updated: 2026-08-04
+updated: 2026-08-05
 status: seed
 tags: [overview]
 sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
@@ -19,6 +19,12 @@ sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
 - 抽出持續出現的人物、組織、事件、政策、技術與市場概念。
 - 維護跨來源的矛盾、時間線、趨勢與待查問題。
 - 將重要查詢結果回寫成可累積的 wiki 頁面。
+
+## 2026-08-05 Daily News Synthesis
+
+- 全球新聞主軸轉為「談判未停火」：Iran/Oman Hormuz route-control plan 與 Netanyahu Gaza no-withdrawal stance 顯示外交進展仍被航道控制、制裁與解除武裝排序卡住；Russia / Ukraine drone casualties 則提醒戰場沒有同步降溫。
+- 公共治理今日集中在資料可信度與執行能力：Ceuta online rumors、Congo Ebola 1,707 deaths / 3,802 cases、Fuego volcano evacuation、Amazon environmental-crime arrests and Kenya Article 6 carbon cap 都需要可信統計、跨境協作與可驗證執法。
+- 科技／AI 產品焦點進入部署成本表：OpenAI education plugins、GitHub Spark deprecation / Copilot billing settings、SpaceX and Anthropic compute deals、Texas data-center audits、Waymo Dallas and GLM-5.2 safety gap show AI adoption now constrained by schools, budgets, power, compute and legal safety boundaries。
 
 ## 2026-08-04 Daily News Synthesis
 
@@ -65,6 +71,9 @@ sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
 - 輸出偏好：簡短摘要、深度脈絡、比較表、時間線、決策 memo。
 
 ## Latest Daily News
+
+- [2026-08-05 Daily News](daily/2026/08/2026-08-05/daily-news-2026-08-05.md) - 今日主軸是「談判未停火，AI 進入部署成本表」：Iran/Oman Hormuz route-control plan、Netanyahu Gaza no-withdrawal stance、Russia / Ukraine drone casualties、Ceuta rumor mechanism、Congo Ebola 1,707 deaths、Fuego volcano evacuation、U.S. stocks record、Amazon environmental-crime arrests、El Nino heat risk and Kenya Article 6 carbon cap。科技／AI 聚焦 OpenAI education plugins、GitHub Spark deprecation、Copilot billing settings、SpaceX / Anthropic compute deals、Waymo Dallas、Spotify Merlin AI music、Texas data-center audits、Apple-OpenAI injunction and GLM-5.2 safety gap。
+- [2026-08-05 Slides](daily/2026/08/2026-08-05/slides-2026-08-05.html) - 今日新聞網頁版投影片。
 
 - [2026-08-04 Daily News](daily/2026/08/2026-08-04/daily-news-2026-08-04.md) - 今日主軸是「戰爭外交未解除現場風險，氣候與邊界治理同步承壓，AI 產品走向即時語音與高風險資料鏈」：Iran/Hormuz talks、Gaza halt-attacks pressure、Ukraine glide bombs、Ceuta minors、Aung San Suu Kyi ICRC contact、Europe wildfires / drought、yen intervention、Indonesia ferry manifest failure、Liechtenstein register breach and Head Start overhaul。科技／AI 聚焦 GPT-Live architecture、Design Arena、Wispr Flow notetaker terms、Base Power grid batteries、Xbox 360 on PC、Palworld Online and DNA lab evidence security flaw。
 - [2026-08-04 Slides](daily/2026/08/2026-08-04/slides-2026-08-04.html) - 今日新聞網頁版投影片。

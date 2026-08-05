@@ -1,0 +1,493 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>2026-08-05 Daily Global and Tech AI News</title>
+  <!--
+    Background image sources:
+    Title / media desk: https://images.unsplash.com/photo-1495020689067-958852a7765e
+    World map: https://images.unsplash.com/photo-1521295121783-8a321d551ad2
+    Sea / diplomacy: https://images.unsplash.com/photo-1500530855697-b586d89ba3ee
+    Europe city / war context: https://images.unsplash.com/photo-1516483638261-f4dbaf036963
+    Nature / disaster: https://images.unsplash.com/photo-1469474968028-56623f02e42e
+    Markets: https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3
+    Technology circuit: https://images.unsplash.com/photo-1518779578993-ec3579fee39f
+    Office infrastructure: https://images.unsplash.com/photo-1497366754035-f200968a6e72
+    Earth from space: https://images.unsplash.com/photo-1451187580459-43490279c0fa
+    All images from Unsplash, used as stable remote background URLs with visible attribution on the sources slide.
+  -->
+  <style>
+    :root {
+      --ink: #172033;
+      --muted: #5d6678;
+      --panel: rgba(255, 255, 255, .92);
+      --panel-strong: rgba(255, 255, 255, .97);
+      --line: rgba(26, 38, 59, .16);
+      --teal: #007c89;
+      --red: #ba3b2f;
+      --gold: #a66900;
+      --green: #27744a;
+      --shadow: 0 18px 48px rgba(28, 40, 62, .18);
+    }
+
+    * { box-sizing: border-box; }
+    html, body { margin: 0; min-height: 100%; }
+    body {
+      overflow: hidden;
+      background: #e9edf1;
+      color: var(--ink);
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      letter-spacing: 0;
+    }
+
+    .deck { width: 100vw; height: 100vh; position: relative; }
+    .slide {
+      position: absolute;
+      inset: 0;
+      display: none;
+      overflow: auto;
+      padding: clamp(18px, 3vw, 44px);
+      background: #f8fafc;
+    }
+    .slide.active { display: grid; }
+    .slide::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background-image: var(--bg);
+      background-size: cover;
+      background-position: center;
+      opacity: .24;
+      pointer-events: none;
+    }
+    .slide::after {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background:
+        linear-gradient(90deg, rgba(248, 250, 252, .95) 0%, rgba(248, 250, 252, .80) 48%, rgba(248, 250, 252, .66) 100%),
+        linear-gradient(180deg, rgba(255,255,255,.18), rgba(255,255,255,.90));
+      pointer-events: none;
+    }
+    .content {
+      position: relative;
+      z-index: 1;
+      width: min(1200px, 100%);
+      margin: auto;
+      align-self: center;
+    }
+
+    h1, h2, h3, p { margin-top: 0; }
+    h1 { font-size: clamp(36px, 6vw, 74px); line-height: 1.03; max-width: 980px; margin-bottom: 18px; }
+    h2 { font-size: clamp(26px, 4vw, 48px); line-height: 1.08; margin-bottom: 18px; }
+    h3 { font-size: 18px; line-height: 1.25; margin-bottom: 8px; }
+    .eyebrow {
+      color: var(--teal);
+      font-size: 13px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0;
+      margin-bottom: 12px;
+    }
+    .lead {
+      max-width: 900px;
+      color: #2f3a4f;
+      font-size: clamp(17px, 2vw, 23px);
+      line-height: 1.55;
+      margin-bottom: 24px;
+    }
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 12px 0 22px;
+    }
+    .pill {
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.86);
+      border-radius: 999px;
+      padding: 8px 12px;
+      color: #243046;
+      font-size: 13px;
+      font-weight: 700;
+    }
+    .grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+    .grid.two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .grid.four { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+
+    details.card {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--panel);
+      box-shadow: var(--shadow);
+      padding: 0;
+      overflow: hidden;
+    }
+    details.card[open] { background: var(--panel-strong); }
+    details.card summary {
+      min-height: 96px;
+      list-style: none;
+      cursor: pointer;
+      padding: 16px 16px 14px;
+      display: grid;
+      gap: 8px;
+    }
+    details.card summary::-webkit-details-marker { display: none; }
+    .rank {
+      display: inline-flex;
+      width: 28px;
+      height: 28px;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: var(--teal);
+      color: white;
+      font-weight: 800;
+      font-size: 13px;
+    }
+    .rank.red { background: var(--red); }
+    .rank.gold { background: var(--gold); }
+    .rank.green { background: var(--green); }
+    .tag {
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+    .headline {
+      font-weight: 850;
+      line-height: 1.28;
+      font-size: 17px;
+    }
+    details.card .body {
+      padding: 0 16px 16px;
+      color: #2d374d;
+      font-size: 15px;
+      line-height: 1.55;
+    }
+    details.card .body p,
+    details.card .body ul { margin: 0 0 10px; }
+    details.card .body ul { padding-left: 18px; }
+    .source {
+      border-top: 1px solid var(--line);
+      padding-top: 10px;
+      color: #33425c;
+      font-size: 12px;
+      word-break: break-word;
+    }
+    .source a { color: #005f6b; }
+    .kpi {
+      font-size: clamp(28px, 4vw, 46px);
+      font-weight: 900;
+      color: var(--red);
+      line-height: 1;
+    }
+    .compact summary { min-height: 72px; }
+    .controls {
+      position: fixed;
+      z-index: 5;
+      left: 50%;
+      bottom: 16px;
+      transform: translateX(-50%);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,.88);
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 8px;
+      box-shadow: 0 12px 34px rgba(20, 31, 49, .20);
+    }
+    button {
+      width: 40px;
+      height: 40px;
+      border-radius: 999px;
+      border: 1px solid rgba(23,32,51,.18);
+      background: #ffffff;
+      color: #172033;
+      font-size: 18px;
+      font-weight: 800;
+      cursor: pointer;
+    }
+    button:hover { background: #edf7f8; border-color: rgba(0,124,137,.35); }
+    .counter {
+      min-width: 72px;
+      text-align: center;
+      font-size: 13px;
+      font-weight: 800;
+      color: #40506d;
+    }
+    a { color: #005f6b; }
+
+    @media (max-width: 900px) {
+      body { overflow: auto; }
+      .deck { min-height: 100svh; height: 100svh; }
+      .slide { padding: 18px 14px 86px; }
+      .content { align-self: start; margin-top: 12px; }
+      .grid, .grid.two, .grid.four { grid-template-columns: 1fr; }
+      details.card summary { min-height: auto; }
+      .controls { bottom: 10px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="deck" aria-live="polite">
+    <section class="slide active" style="--bg:url('https://images.unsplash.com/photo-1495020689067-958852a7765e?auto=format&fit=crop&w=1800&q=80')" data-title="Title">
+      <div class="content">
+        <div class="eyebrow">每日全球與科技 AI 新聞</div>
+        <h1>2026-08-05<br>談判未停火，AI 進入部署成本表</h1>
+        <p class="lead">研究截點 2026-08-05 08:01:35 Asia/Taipei。Top 10 全球新聞聚焦 Hormuz、Gaza、Ukraine、Ceuta、Ebola、災害、氣候與市場；科技／AI 則聚焦教育插件、GitHub 產品退場、AI compute、robotaxi、音樂授權與資料中心電力。</p>
+        <div class="grid four">
+          <details class="card compact" open>
+            <summary><span class="tag">Window</span><span class="headline">精確 24 小時採樣</span></summary>
+            <div class="body"><p>2026-08-04 08:01:35 至 2026-08-05 08:01:35 Asia/Taipei；只收錄事件、官方發布或 first reliable publication 落在窗口內者。</p><p class="source">來源｜Local run rule - wiki/daily/README.md</p></div>
+          </details>
+          <details class="card compact">
+            <summary><span class="tag">Global</span><span class="kpi">10</span><span class="headline">全球／國際要聞</span></summary>
+            <div class="body"><p>嚴格保留 10 則，續報需具 material new development 並標示前次捕捉日期。</p><p class="source">來源｜Daily report - wiki/daily/2026/08/2026-08-05/daily-news-2026-08-05.md</p></div>
+          </details>
+          <details class="card compact">
+            <summary><span class="tag">Tech / AI</span><span class="kpi">10</span><span class="headline">產品與基礎設施事件</span></summary>
+            <div class="body"><p>以官方公司發布、可靠科技媒體與 AI 基礎設施重大變動為優先。</p><p class="source">來源｜Source notes - wiki/daily/2026/08/2026-08-05/source-notes-2026-08-05.md</p></div>
+          </details>
+          <details class="card compact">
+            <summary><span class="tag">Deduped</span><span class="headline">跨日去重後只收重大續報</span></summary>
+            <div class="body"><p>Hormuz、Gaza、Ukraine、Ceuta、Congo Ebola、Waymo、GitHub Models / Spark、Apple-OpenAI 均比對既有 daily reports。</p><p class="source">來源｜Source notes - wiki/daily/2026/08/2026-08-05/source-notes-2026-08-05.md</p></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" style="--bg:url('https://images.unsplash.com/photo-1521295121783-8a321d551ad2?auto=format&fit=crop&w=1800&q=80')" data-title="Scope">
+      <div class="content">
+        <div class="eyebrow">Production Rules</div>
+        <h2>今天的選題邊界</h2>
+        <div class="grid two">
+          <details class="card" open>
+            <summary><span class="rank">1</span><span class="headline">只採窗口內新事實，不採舊文更新</span></summary>
+            <div class="body"><p>Tariff lawsuit 因 first published 在 2026-08-04 04:25:13 Asia/Taipei，早於窗口起點，排除；OpenAI GPT-5 搜尋結果實際為 2025-08-07 官方舊頁，也排除。</p><p class="source">來源｜Source notes - wiki/daily/2026/08/2026-08-05/source-notes-2026-08-05.md</p></div>
+          </details>
+          <details class="card">
+            <summary><span class="rank gold">2</span><span class="headline">續報需回答「今天新增什麼」</span></summary>
+            <div class="body"><p>Hormuz 新增 route-control / toll plan；Gaza 新增 Netanyahu no-withdrawal stance；Ceuta 新增 rumor mechanism；Congo 新增 1,707 deaths / 3,802 cases；Apple-OpenAI 新增 preliminary injunction 與 11 名前員工線索。</p><p class="source">來源｜Source notes - wiki/daily/2026/08/2026-08-05/source-notes-2026-08-05.md</p></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" style="--bg:url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1800&q=80')" data-title="Global 1-3">
+      <div class="content">
+        <div class="eyebrow">Global Top 10 | 1-3</div>
+        <h2>戰爭外交：航道、撤軍與無人機傷亡</h2>
+        <div class="grid">
+          <details class="card" data-rank="1" open>
+            <summary><span class="rank red">1</span><span class="tag">續報｜Hormuz</span><span class="headline">Iran 與 Oman 接近重開方案，但 U.S. 反對 Iran 收費／控制航道</span></summary>
+            <div class="body"><p>AP 於 2026-08-04 14:07:14 TPE first published。新增重點是具體 route-control / toll plan：船隻可能以 Iran 控制航道入灣、Oman 管理航道出灣；Washington 反對 Iran 對通行收費或取得控制權。</p><p>前次捕捉：2026-08-04 Hormuz last chance / Oman route。今日續報的 material change 是 U.S. 對具體方案的公開反對。</p><p class="source">來源｜AP - https://apnews.com/article/iran-us-hormuz-mideast-gaza-israel-palestinians-ff5f13230ab92b5ae3022f45b2585444</p></div>
+          </details>
+          <details class="card" data-rank="2">
+            <summary><span class="rank red">2</span><span class="tag">續報｜Gaza</span><span class="headline">Netanyahu：Hamas 未完全解除武裝前 Israel 不撤出 Gaza</span></summary>
+            <div class="body"><p>AP 於 2026-08-04 21:10:23 TPE first published。Netanyahu 的 no-withdrawal stance 直接凸顯與 Trump framework 及 Board of Peace sequencing 的分歧。</p><p>前次捕捉：2026-08-01 Hamas roadmap、2026-08-03 Israel concerns、2026-08-04 Board of Peace。今日新增的是以撤軍為交換條件的公開硬化。</p><p class="source">來源｜AP - https://apnews.com/article/israel-palestinians-hamas-war-gaza-news-1215e52022856b9de9837237a0e188fa</p></div>
+          </details>
+          <details class="card" data-rank="3">
+            <summary><span class="rank red">3</span><span class="tag">續報｜Ukraine</span><span class="headline">Russia 與 Ukraine 互控無人機攻擊，兒童傷亡拉高報復風險</span></summary>
+            <div class="body"><p>AP 於 2026-08-04 17:26:18 TPE first published。雙方官員互控無人機攻擊造成平民死亡；報導含兒童死亡，且版本更新中死亡數表述有變。</p><p>前次捕捉：2026-08-04 Ukraine glide bombs。今日新增的是雙方城市／度假區無人機互控與兒童傷亡。</p><p class="source">來源｜AP - https://apnews.com/article/russia-ukraine-war-beach-drone-222d8755b524c231faa8fd6de10f38ef</p></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" style="--bg:url('https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1800&q=80')" data-title="Global 4-6">
+      <div class="content">
+        <div class="eyebrow">Global Top 10 | 4-6</div>
+        <h2>公共治理：邊界謠言、疫情與火山</h2>
+        <div class="grid">
+          <details class="card" data-rank="4" open>
+            <summary><span class="rank gold">4</span><span class="tag">續報｜Ceuta</span><span class="headline">AP 追查 online rumors 如何推動 60,000 人 rush Ceuta</span></summary>
+            <div class="body"><p>AP 於 2026-08-04 12:01:52 TPE first published。今日重點不是重複人數，而是 runaway online rumors 如何觸發 Morocco-Spain 邊界 rush。</p><p>前次捕捉：2026-07-31 breach、2026-08-01 60,000 / deaths、2026-08-03 death toll、2026-08-04 minors。今日新增的是 misinformation mechanism。</p><p class="source">來源｜AP - https://apnews.com/article/ceuta-spain-morocco-migration-f3a7f514a7792c39d8b8d5d814fa5158</p></div>
+          </details>
+          <details class="card" data-rank="5">
+            <summary><span class="rank gold">5</span><span class="tag">續報｜Ebola</span><span class="headline">Congo Ebola 死亡 1,707、病例 3,802，Ituri 疫情仍擴大</span></summary>
+            <div class="body"><p>AP 於 2026-08-04 17:22:20 TPE first published。新增官方／機構統計顯示 1,707 deaths and 3,802 cases；Bundibugyo 型別缺乏已批准疫苗。</p><p>前次捕捉：2026-07-31 deaths >1,500 / 3,442 cases。今日新增的是更高病例／死亡數與 fastest-growing outbreak framing。</p><p class="source">來源｜AP - https://apnews.com/article/congo-ebola-ituri-19ec34982849f2799f226bfa6ae04c96</p></div>
+          </details>
+          <details class="card" data-rank="6">
+            <summary><span class="rank gold">6</span><span class="tag">Guatemala</span><span class="headline">Fuego 火山噴發，8 村 659 人撤離並封閉道路停課</span></summary>
+            <div class="body"><p>AP 於 2026-08-04 16:53:50 TPE first published。Guatemala 從 8 個村莊撤離 659 人，National Route 14 關閉、學校停課，可能還有 10 個社區需撤離。</p><p>不確定性：撤離人數與噴發強度仍隨火山監測更新。</p><p class="source">來源｜AP - https://apnews.com/article/fuego-volcano-guatemala-eruption-evacuation-d4791ca218180a2daa42a3b09673a52c</p></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" style="--bg:url('https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=1800&q=80')" data-title="Global 7-10">
+      <div class="content">
+        <div class="eyebrow">Global Top 10 | 7-10</div>
+        <h2>市場、環境犯罪、氣候與碳市場</h2>
+        <div class="grid four">
+          <details class="card" data-rank="7" open>
+            <summary><span class="rank green">7</span><span class="tag">Markets</span><span class="headline">U.S. 股市創新高，企業獲利與油價回落壓過風險</span></summary>
+            <div class="body"><p>AP 於 2026-08-04 11:34:26 TPE first published。S&P 500 +1.8%、Dow +1.7%、Nasdaq +2.6%，S&P 500 超越 6 月前高。</p><p class="source">來源｜AP - https://apnews.com/article/stocks-markets-dollar-yen-trump-iran-war-fbbe6128d618509e33d45a493c2615b1</p></div>
+          </details>
+          <details class="card" data-rank="8">
+            <summary><span class="rank green">8</span><span class="tag">Amazon</span><span class="headline">五國環境犯罪行動逮捕 839 人，查扣 US$280m 資產</span></summary>
+            <div class="body"><p>AP 於 2026-08-05 01:59:45 TPE first published。Operation Green Shield 查扣 280,000 立方米木材、195 公噸礦物，救出超過 3,000 隻活體動物。</p><p class="source">來源｜AP - https://apnews.com/article/amazon-environmental-crime-wildlife-trafficking-police-colombia-uae-e2687c95a1f9281d0fe1b94b02a6177b</p></div>
+          </details>
+          <details class="card" data-rank="9">
+            <summary><span class="rank green">9</span><span class="tag">Climate</span><span class="headline">2026 尚未破熱紀錄，但 El Nino 可能推高 2027</span></summary>
+            <div class="body"><p>AP 於 2026-08-05 00:57:32 TPE first published。科學家稱 2026 目前約第三熱，落後 2024 / 2025；strengthening El Nino 可能讓 2027 創新高。</p><p class="source">來源｜AP - https://apnews.com/article/warming-heat-climate-change-summer-el-nino-ffd31dd358a894667c63f4c0a21cd677</p></div>
+          </details>
+          <details class="card" data-rank="10">
+            <summary><span class="rank green">10</span><span class="tag">Carbon</span><span class="headline">Kenya Article 6 碳市場海外銷售上限 1,000 萬噸</span></summary>
+            <div class="body"><p>AP 於 2026-08-05 01:35:25 TPE first published。Kenya 將 2030 前國際碳信用銷售 cap 設為 1,000 萬公噸 CO2e，年度配置約 167 萬公噸。</p><p class="source">來源｜AP - https://apnews.com/article/carbon-credits-caps-kenya-paris-agreement-cc9833a1431cfb77086d1b2c06c4a20d</p></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" style="--bg:url('https://images.unsplash.com/photo-1518779578993-ec3579fee39f?auto=format&fit=crop&w=1800&q=80')" data-title="Tech 1-3">
+      <div class="content">
+        <div class="eyebrow">Technology / AI | 1-3</div>
+        <h2>官方產品：教育工作流與 GitHub 成本治理</h2>
+        <div class="grid">
+          <details class="card" open>
+            <summary><span class="rank">T1</span><span class="tag">OpenAI</span><span class="headline">ChatGPT Work / Codex 教育插件面向 Edu 與 Teachers 部署</span></summary>
+            <div class="body"><p>官方頁 dated 2026-08-04；因未提供精確時分，以 date-level basis 記錄。三個插件面向大學生、K-12 educators、college educators，連接文件、課程材料、calendar 與 approved apps。</p><p class="source">來源｜OpenAI - https://openai.com/index/learn-teach-chatgpt-work-codex/</p></div>
+          </details>
+          <details class="card">
+            <summary><span class="rank">T2</span><span class="tag">GitHub</span><span class="headline">GitHub Spark 退場，新用戶與新 app 建立即日停止</span></summary>
+            <div class="body"><p>GitHub Changelog 於 2026-08-04 23:54:47 TPE published。Spark 不再接受新 users / apps；existing users 到 2026-08-31 export；`llm()` 因 GitHub Models retired on 2026-07-30 失效。</p><p class="source">來源｜GitHub Changelog - https://github.blog/changelog/2026-08-04-upcoming-deprecation-of-github-spark-on-github-com/</p></div>
+          </details>
+          <details class="card">
+            <summary><span class="rank">T3</span><span class="tag">GitHub</span><span class="headline">Copilot Billing Preview app retired，AI credits moved into settings</span></summary>
+            <div class="body"><p>GitHub Changelog 於 2026-08-05 03:09:32 TPE published。usage page、budgets、raw usage data/API、cost centers 與 pool allocation 進入 billing settings。</p><p class="source">來源｜GitHub Changelog - https://github.blog/changelog/2026-08-04-retiring-the-copilot-billing-preview-app/</p></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" style="--bg:url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1800&q=80')" data-title="Tech 4-6">
+      <div class="content">
+        <div class="eyebrow">Technology / AI | 4-6</div>
+        <h2>AI compute、資料中心與 robotaxi 可用性</h2>
+        <div class="grid">
+          <details class="card" open>
+            <summary><span class="rank red">T4</span><span class="tag">SpaceX</span><span class="headline">AI compute deals 拉動 Q2 revenue 翻倍</span></summary>
+            <div class="body"><p>TechCrunch 於 2026-08-05 04:36:30 TPE published。Q2 2026 revenue US$7.8bn，年增 92%；近 US$2bn growth 來自 AI division，Anthropic / Google compute deals 是關鍵。</p><p class="source">來源｜TechCrunch - https://techcrunch.com/2026/08/04/spacex-doubles-revenues-on-anthropic-and-google-compute-deals-starlink-growth/</p></div>
+          </details>
+          <details class="card">
+            <summary><span class="rank red">T5</span><span class="tag">Anthropic</span><span class="headline">Anthropic 據報簽下 Volta US$10bn AI cloud deal</span></summary>
+            <div class="body"><p>TechCrunch citing Bloomberg，於 2026-08-05 03:48:40 TPE published。六年 US$10bn deal；Norway data center 133MW，Nvidia Vera Rubin systems；Anthropic 當下未立即確認。</p><p class="source">來源｜TechCrunch - https://techcrunch.com/2026/08/04/anthropic-signs-10-billion-deal-with-ai-cloud-startup-volta/</p></div>
+          </details>
+          <details class="card">
+            <summary><span class="rank red">T6</span><span class="tag">Waymo</span><span class="headline">Dallas robotaxi waitlist removed，居民與訪客可直接叫車</span></summary>
+            <div class="body"><p>TechCrunch 於 2026-08-05 01:31:01 TPE published。Waymo 移除 Dallas waitlist；Dallas Love Field airport 尚未開放但正在測試；Avis 管理 Jaguar I-Pace fleet。</p><p class="source">來源｜TechCrunch - https://techcrunch.com/2026/08/04/waymo-opens-up-robotaxi-service-in-dallas-to-everyone/</p></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" style="--bg:url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1800&q=80')" data-title="Tech 7-10">
+      <div class="content">
+        <div class="eyebrow">Technology / AI | 7-10</div>
+        <h2>授權、電力、訴訟與 open-weight safety</h2>
+        <div class="grid four">
+          <details class="card" open>
+            <summary><span class="rank gold">T7</span><span class="tag">Spotify</span><span class="headline">Merlin 30,000+ labels 加入 AI remix / covers effort</span></summary>
+            <div class="body"><p>TechCrunch 於 2026-08-04 23:50:06 TPE published。Spotify 預告 paid AI covers / remix，承諾 artist opt-in、credit and compensation。</p><p class="source">來源｜TechCrunch - https://techcrunch.com/2026/08/04/spotify-adds-merlin-to-its-ai-music-remix-and-covers-effort/</p></div>
+          </details>
+          <details class="card">
+            <summary><span class="rank gold">T8</span><span class="tag">Texas</span><span class="headline">新 data centers approvals 暫停並要求 PUCT / ERCOT audits</span></summary>
+            <div class="body"><p>TechCrunch 於 2026-08-04 23:42:35 TPE published。ERCOT queue 約 474GW，其中約 90% 為 data centers，超過 Texas peak demand 五倍。</p><p class="source">來源｜TechCrunch - https://techcrunch.com/2026/08/04/texas-halts-new-data-centers-as-governor-calls-for-audits/</p></div>
+          </details>
+          <details class="card">
+            <summary><span class="rank gold">T9</span><span class="tag">續報｜Apple / OpenAI</span><span class="headline">Apple seeks preliminary injunction and cites 11 more ex-employees</span></summary>
+            <div class="body"><p>TechCrunch 於 2026-08-04 22:03:01 TPE published。前次捕捉 2026-07-14 initial allegations；今日新增 preliminary injunction、expedited discovery 與 11 名前員工線索。</p><p class="source">來源｜TechCrunch - https://techcrunch.com/2026/08/04/apple-says-more-ex-employees-may-have-taken-confidential-data-to-openai/</p></div>
+          </details>
+          <details class="card">
+            <summary><span class="rank gold">T10</span><span class="tag">Safety</span><span class="headline">GLM-5.2 接近 frontier，但 SaferAI 指 cyber / bio refusal gap</span></summary>
+            <div class="body"><p>TechCrunch 於 2026-08-05 04:05:26 TPE published。SaferAI 指 GLM-5.2 在 cyber / bio benchmarks 上只落後 frontier 數月，但測試中未拒絕 offensive cyber / dual-use biology tasks。</p><p class="source">來源｜TechCrunch - https://techcrunch.com/2026/08/04/open-weight-ai-models-are-catching-up-to-the-frontier-the-safety-gap-remains/</p></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" style="--bg:url('https://images.unsplash.com/photo-1521295121783-8a321d551ad2?auto=format&fit=crop&w=1800&q=80')" data-title="Follow-up">
+      <div class="content">
+        <div class="eyebrow">Follow-up Watchlist</div>
+        <h2>接下來 24-72 小時應追什麼</h2>
+        <div class="grid two">
+          <details class="card" open>
+            <summary><span class="rank red">A</span><span class="headline">Hormuz / Gaza：是否出現可驗證文本與排序</span></summary>
+            <div class="body"><p>Hormuz 追公開文本、費用安排、Oman / Iran 航道分工與 U.S. sanctions carve-out；Gaza 追 Netanyahu stance 是否迫使 Trump framework or Board of Peace sequencing 調整。</p><p class="source">來源｜Daily report follow-up - wiki/daily/2026/08/2026-08-05/daily-news-2026-08-05.md</p></div>
+          </details>
+          <details class="card">
+            <summary><span class="rank gold">B</span><span class="headline">Ceuta / Congo：資料可信度與保護系統壓力</span></summary>
+            <div class="body"><p>Ceuta 追 rumor networks、未成年移民安置與 Spain-Morocco border coordination；Congo 追 Ituri new cases、cross-border risk、contact tracing 與 Bundibugyo vaccine gap。</p><p class="source">來源｜Daily report follow-up - wiki/daily/2026/08/2026-08-05/daily-news-2026-08-05.md</p></div>
+          </details>
+          <details class="card">
+            <summary><span class="rank">C</span><span class="headline">AI infrastructure：電網、算力長約與 capex disclosure</span></summary>
+            <div class="body"><p>Texas approvals pause、SpaceX / Anthropic compute deals 與 Volta Norway 133MW buildout 共同指向 AI data center electricity and capital planning risk。</p><p class="source">來源｜Daily report follow-up - wiki/daily/2026/08/2026-08-05/daily-news-2026-08-05.md</p></div>
+          </details>
+          <details class="card">
+            <summary><span class="rank green">D</span><span class="headline">AI product governance：校園資料、Spark export、trade secrets</span></summary>
+            <div class="body"><p>OpenAI education plugins 需要看校園資料權限；GitHub Spark 的 2026-08-31 export deadline 需要 migration；Apple-OpenAI case 要看 injunction and discovery rulings。</p><p class="source">來源｜Daily report follow-up - wiki/daily/2026/08/2026-08-05/daily-news-2026-08-05.md</p></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" style="--bg:url('https://images.unsplash.com/photo-1495020689067-958852a7765e?auto=format&fit=crop&w=1800&q=80')" data-title="Sources">
+      <div class="content">
+        <div class="eyebrow">Sources</div>
+        <h2>來源與圖片註記</h2>
+        <div class="grid two">
+          <details class="card" open>
+            <summary><span class="rank">S</span><span class="headline">完整新聞來源</span></summary>
+            <div class="body"><p>每張新聞與科技卡片展開後皆附完整原始 URL。完整 publication basis、去重、續報與排除候選詳見 source notes。</p><p class="source">來源｜Source notes - wiki/daily/2026/08/2026-08-05/source-notes-2026-08-05.md</p></div>
+          </details>
+          <details class="card">
+            <summary><span class="rank green">I</span><span class="headline">背景圖片來源</span></summary>
+            <div class="body"><p>本 deck 背景圖使用 Unsplash stable remote URLs：news desk、world map、sea landscape、Europe city、nature, markets, technology circuit, office infrastructure and earth from space。</p><p class="source">來源｜Unsplash - https://unsplash.com/</p></div>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <nav class="controls" aria-label="投影片導覽">
+    <button type="button" id="prev" aria-label="上一張" title="上一張">‹</button>
+    <button type="button" id="home" aria-label="第一張" title="第一張">⌂</button>
+    <div class="counter" id="counter">1 / 10</div>
+    <button type="button" id="next" aria-label="下一張" title="下一張">›</button>
+  </nav>
+
+  <script>
+    const slides = Array.from(document.querySelectorAll('.slide'));
+    let index = 0;
+    const counter = document.getElementById('counter');
+    const show = (nextIndex) => {
+      index = (nextIndex + slides.length) % slides.length;
+      slides.forEach((slide, i) => slide.classList.toggle('active', i === index));
+      counter.textContent = `${index + 1} / ${slides.length}`;
+      document.title = `2026-08-05 Daily News - ${slides[index].dataset.title}`;
+    };
+    document.getElementById('prev').addEventListener('click', () => show(index - 1));
+    document.getElementById('next').addEventListener('click', () => show(index + 1));
+    document.getElementById('home').addEventListener('click', () => show(0));
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'ArrowRight' || event.key === 'PageDown' || event.key === ' ') show(index + 1);
+      if (event.key === 'ArrowLeft' || event.key === 'PageUp') show(index - 1);
+      if (event.key === 'Home') show(0);
+      if (event.key === 'End') show(slides.length - 1);
+    });
+    let touchStartX = null;
+    document.addEventListener('touchstart', (event) => { touchStartX = event.changedTouches[0].clientX; }, { passive: true });
+    document.addEventListener('touchend', (event) => {
+      if (touchStartX === null) return;
+      const delta = event.changedTouches[0].clientX - touchStartX;
+      if (Math.abs(delta) > 48) show(index + (delta < 0 ? 1 : -1));
+      touchStartX = null;
+    }, { passive: true });
+    show(0);
+  </script>
+</body>
+</html>
