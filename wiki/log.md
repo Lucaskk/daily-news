@@ -6,7 +6,8 @@
 - Recorded the exact Asia/Taipei 24-hour window, per-item event or publication-time basis, material continuations, duplicate checks and exclusion rationale in `source-notes-2026-08-06.md`.
 - Created `slides-2026-08-06.html` as a standalone HTML deck with themed backgrounds, browser / keyboard / touch navigation, expandable cards and per-card complete source URLs.
 - Updated `wiki/daily/latest-slides.html`, `wiki/index.md`, `wiki/overview.md`, `.nojekyll`, and the root Pages entry timestamp.
-- Published the scoped daily-news package to `main` through a clean fast-forward clone based on `origin/main`; LINE delivery checked after publish.
+- Published the scoped daily-news package to `main` through a clean fast-forward clone based on `origin/main` with commit `6fd671b`.
+- LINE delivery was skipped because `.env` contains `LINE_CHANNEL_ACCESS_TOKEN` and `PUBLIC_SLIDES_BASE_URL`, but `LINE_TO_ID` is empty.
 
 ## [2026-08-05] ingest | Daily global and tech AI news
 
