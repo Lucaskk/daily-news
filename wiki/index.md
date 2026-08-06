@@ -2,7 +2,7 @@
 title: "Knowledge Base Index"
 type: overview
 created: 2026-05-24
-updated: 2026-08-05
+updated: 2026-08-06
 status: seed
 tags: [index]
 sources: []
@@ -25,6 +25,10 @@ sources: []
 每日新聞報告會放在 `wiki/daily/YYYY/MM/YYYY-MM-DD/`。
 
 - [每日全球與科技 AI 新聞產製規則](daily/README.md) - 包含研究截點前 24 小時限制、跨日去重、重大續報判定、來源紀錄與發布驗證規則。
+
+
+- [2026-08-06 Daily News](daily/2026/08/2026-08-06/daily-news-2026-08-06.md) - 今日主軸是「談判、戰場與基礎設施安全同時受測，AI agent 產品化與發布治理同步升級」：Hormuz 草案待批、Kyiv 17 死與 Patriot 缺口、Leipzig 爆裂物無人機、South Lebanon 撤離警告、Taiwan Han Kuang、CJNG 懸賞、Fuego / Spokane 災害、U.S. military-family immigration investigation 與 Michigan Senate primary。科技／AI 聚焦 Meta Muse Code、Hark Handoff、Wispr Flow Mac notetaker、MacPaw / Liquid AI、Klaviyo / Agency、Discovery Loop、Anthropic custom silicon、WindBorne、Shopify AI search 與 White House AI framework。
+- [2026-08-06 Slides](daily/2026/08/2026-08-06/slides-2026-08-06.html) - 今日新聞網頁版投影片。
 
 
 - [2026-08-05 Daily News](daily/2026/08/2026-08-05/daily-news-2026-08-05.md) - 今日主軸是「談判未停火，AI 進入部署成本表」：Iran/Oman Hormuz route-control plan、Netanyahu Gaza no-withdrawal stance、Russia / Ukraine drone casualties、Ceuta rumor mechanism、Congo Ebola 1,707 deaths、Fuego volcano evacuation、U.S. stocks record、Amazon environmental-crime arrests、El Nino heat risk and Kenya Article 6 carbon cap。科技／AI 聚焦 OpenAI education plugins、GitHub Spark deprecation、Copilot billing settings、SpaceX / Anthropic compute deals、Waymo Dallas、Spotify Merlin AI music、Texas data-center audits、Apple-OpenAI injunction and GLM-5.2 safety gap。

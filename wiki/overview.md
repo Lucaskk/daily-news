@@ -2,7 +2,7 @@
 title: "Overview"
 type: overview
 created: 2026-05-24
-updated: 2026-08-05
+updated: 2026-08-06
 status: seed
 tags: [overview]
 sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
@@ -19,6 +19,12 @@ sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
 - 抽出持續出現的人物、組織、事件、政策、技術與市場概念。
 - 維護跨來源的矛盾、時間線、趨勢與待查問題。
 - 將重要查詢結果回寫成可累積的 wiki 頁面。
+
+## 2026-08-06 Daily News Synthesis
+
+- 全球新聞主軸轉為「談判、戰場與基礎設施安全同時受測」：Hormuz 草案進入 Iran 最高領袖待批，但 Kyiv 防空失效、Leipzig 爆裂物無人機與 South Lebanon 撤離警告顯示軍事與關鍵基礎設施風險仍在升高。
+- 公共治理壓力集中在疏散、執法與制度信任：Taiwan Han Kuang 演訓、CJNG 2,500 萬美元懸賞、Fuego / Spokane evacuations、military-family immigration investigation and Michigan Senate primary all require accountable records and resilient public systems。
+- 科技／AI 今日進入「agent 產品化與發布治理」：Meta Muse Code、Hark Handoff、Wispr Flow、MacPaw / Liquid AI、Klaviyo / Agency and Discovery Loop move AI into code, browser tasks, meetings, local inference, commerce operations and science；Anthropic custom silicon, WindBorne AI weather, Shopify AI search and White House model-review scope show cost, data and governance becoming product constraints。
 
 ## 2026-08-05 Daily News Synthesis
 
@@ -71,6 +77,9 @@ sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
 - 輸出偏好：簡短摘要、深度脈絡、比較表、時間線、決策 memo。
 
 ## Latest Daily News
+
+- [2026-08-06 Daily News](daily/2026/08/2026-08-06/daily-news-2026-08-06.md) - 今日主軸是「談判、戰場與基礎設施安全同時受測，AI agent 產品化與發布治理同步升級」：Hormuz 草案待批、Kyiv 17 死、Leipzig 爆裂物無人機、South Lebanon 撤離警告、Taiwan Han Kuang、CJNG 懸賞、Fuego / Spokane 災害、U.S. military-family immigration investigation and Michigan Senate primary。科技／AI 聚焦 Meta Muse Code、Hark Handoff、Wispr Flow、MacPaw / Liquid AI、Klaviyo / Agency、Discovery Loop、Anthropic custom silicon、WindBorne、Shopify AI search and White House AI framework。
+- [2026-08-06 Slides](daily/2026/08/2026-08-06/slides-2026-08-06.html) - 今日新聞網頁版投影片。
 
 - [2026-08-05 Daily News](daily/2026/08/2026-08-05/daily-news-2026-08-05.md) - 今日主軸是「談判未停火，AI 進入部署成本表」：Iran/Oman Hormuz route-control plan、Netanyahu Gaza no-withdrawal stance、Russia / Ukraine drone casualties、Ceuta rumor mechanism、Congo Ebola 1,707 deaths、Fuego volcano evacuation、U.S. stocks record、Amazon environmental-crime arrests、El Nino heat risk and Kenya Article 6 carbon cap。科技／AI 聚焦 OpenAI education plugins、GitHub Spark deprecation、Copilot billing settings、SpaceX / Anthropic compute deals、Waymo Dallas、Spotify Merlin AI music、Texas data-center audits、Apple-OpenAI injunction and GLM-5.2 safety gap。
 - [2026-08-05 Slides](daily/2026/08/2026-08-05/slides-2026-08-05.html) - 今日新聞網頁版投影片。
