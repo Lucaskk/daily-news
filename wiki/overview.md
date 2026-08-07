@@ -2,7 +2,7 @@
 title: "Overview"
 type: overview
 created: 2026-05-24
-updated: 2026-08-06
+updated: 2026-08-07
 status: seed
 tags: [overview]
 sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
@@ -19,6 +19,12 @@ sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
 - 抽出持續出現的人物、組織、事件、政策、技術與市場概念。
 - 維護跨來源的矛盾、時間線、趨勢與待查問題。
 - 將重要查詢結果回寫成可累積的 wiki 頁面。
+
+## 2026-08-07 Daily News Synthesis
+
+- 全球新聞主軸轉為「降溫談判與擴大治理同日並行」：Hormuz 協議接近定案，但 Yemen 大規模攻擊、Lebanon explosion、Ukraine 對 Russia oil / Black Sea 船隻反擊與 Leipzig drone bomb 顯示安全風險沒有同步降溫。
+- 公共治理壓力集中在資料、程序與跨境授權：Congo Ebola cases crossed 4,000, Kinshasa route quarantine, U.S. birthright citizenship executive orders, Uganda Gaza international force approval, West Bank healthcare collapse warning and Awdah Hathaleen indictment all require transparent follow-up records。
+- 科技／AI 今日從模型能力轉向可用性、發布風險與基礎設施：OpenAI GPT-5.6 Sol / Luna access update, GitHub Kimi K3 rollout pause, WeatherNext 2 open source, Mirendil compute deal, Tesla / SpaceX Terafab and California AI therapists bill show model distribution, compute, chips and high-risk-use regulation becoming product constraints。
 
 ## 2026-08-06 Daily News Synthesis
 
@@ -77,6 +83,9 @@ sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
 - 輸出偏好：簡短摘要、深度脈絡、比較表、時間線、決策 memo。
 
 ## Latest Daily News
+
+- [2026-08-07 Daily News](daily/2026/08/2026-08-07/daily-news-2026-08-07.md) - 今日主軸是「降溫談判與擴大治理同日並行」：Hormuz near-deal、Yemen / Lebanon 升級、Ukraine 反擊 Russia oil / Black Sea 船隻、Leipzig drone bomb、Congo Ebola、U.S. birthright citizenship orders、Uganda Gaza force、West Bank healthcare、Awdah Hathaleen indictment、U.S. consulate closures and India-Bangladesh row。科技／AI 聚焦 OpenAI GPT-5.6 Sol / Luna access、GitHub Copilot Kimi K3 rollout pause、WeatherNext 2、OpenAI hardware rumor、Pixel 11 event、Mirendil compute deal、Terafab、California AI therapists bill、Naive and eBay live shopping。
+- [2026-08-07 Slides](daily/2026/08/2026-08-07/slides-2026-08-07.html) - 今日新聞網頁版投影片。
 
 - [2026-08-06 Daily News](daily/2026/08/2026-08-06/daily-news-2026-08-06.md) - 今日主軸是「談判、戰場與基礎設施安全同時受測，AI agent 產品化與發布治理同步升級」：Hormuz 草案待批、Kyiv 17 死、Leipzig 爆裂物無人機、South Lebanon 撤離警告、Taiwan Han Kuang、CJNG 懸賞、Fuego / Spokane 災害、U.S. military-family immigration investigation and Michigan Senate primary。科技／AI 聚焦 Meta Muse Code、Hark Handoff、Wispr Flow、MacPaw / Liquid AI、Klaviyo / Agency、Discovery Loop、Anthropic custom silicon、WindBorne、Shopify AI search and White House AI framework。
 - [2026-08-06 Slides](daily/2026/08/2026-08-06/slides-2026-08-06.html) - 今日新聞網頁版投影片。

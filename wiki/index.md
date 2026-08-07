@@ -2,7 +2,7 @@
 title: "Knowledge Base Index"
 type: overview
 created: 2026-05-24
-updated: 2026-08-06
+updated: 2026-08-07
 status: seed
 tags: [index]
 sources: []
@@ -25,6 +25,10 @@ sources: []
 每日新聞報告會放在 `wiki/daily/YYYY/MM/YYYY-MM-DD/`。
 
 - [每日全球與科技 AI 新聞產製規則](daily/README.md) - 包含研究截點前 24 小時限制、跨日去重、重大續報判定、來源紀錄與發布驗證規則。
+
+
+- [2026-08-07 Daily News](daily/2026/08/2026-08-07/daily-news-2026-08-07.md) - 今日主軸是「降溫談判與擴大治理同日並行」：Hormuz near-deal、Yemen / Lebanon 升級、Ukraine 反擊 Russia oil / Black Sea 船隻、Leipzig drone bomb、Congo Ebola、U.S. birthright citizenship orders、Uganda Gaza force、West Bank healthcare、U.S. consulate closures and India-Bangladesh row。科技／AI 聚焦 OpenAI GPT-5.6 Sol / Luna access、GitHub Copilot Kimi K3 rollout pause、WeatherNext 2、OpenAI hardware rumor、Pixel 11 event、Mirendil compute deal、Terafab、California AI therapists bill、Naive and eBay live shopping。
+- [2026-08-07 Slides](daily/2026/08/2026-08-07/slides-2026-08-07.html) - 今日新聞網頁版投影片。
 
 
 - [2026-08-06 Daily News](daily/2026/08/2026-08-06/daily-news-2026-08-06.md) - 今日主軸是「談判、戰場與基礎設施安全同時受測，AI agent 產品化與發布治理同步升級」：Hormuz 草案待批、Kyiv 17 死與 Patriot 缺口、Leipzig 爆裂物無人機、South Lebanon 撤離警告、Taiwan Han Kuang、CJNG 懸賞、Fuego / Spokane 災害、U.S. military-family immigration investigation 與 Michigan Senate primary。科技／AI 聚焦 Meta Muse Code、Hark Handoff、Wispr Flow Mac notetaker、MacPaw / Liquid AI、Klaviyo / Agency、Discovery Loop、Anthropic custom silicon、WindBorne、Shopify AI search 與 White House AI framework。

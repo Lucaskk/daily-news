@@ -1,0 +1,674 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>2026-08-07 Daily Global and Tech AI News</title>
+  <!--
+    Background image sources:
+    - Unsplash newsroom / media desk: https://images.unsplash.com/photo-1495020689067-958852a7765e?auto=format&fit=crop&w=1800&q=80
+    - Unsplash earth from space: https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1800&q=80
+    - Unsplash shipping lane / containers: https://images.unsplash.com/photo-1566576721346-d4a3b4eaeb55?auto=format&fit=crop&w=1800&q=80
+    - Unsplash night / security: https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1800&q=80
+    - Unsplash medical / lab: https://images.unsplash.com/photo-1582719471384-894fbb16e074?auto=format&fit=crop&w=1800&q=80
+    - Unsplash civic building: https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?auto=format&fit=crop&w=1800&q=80
+    - Unsplash map: https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&w=1800&q=80
+    - Unsplash circuit board: https://images.unsplash.com/photo-1518779578993-ec3579fee39f?auto=format&fit=crop&w=1800&q=80
+    - Unsplash cloud / work: https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1800&q=80
+    - Unsplash mobile devices: https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=1800&q=80
+    - Unsplash electronics / chips: https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?auto=format&fit=crop&w=1800&q=80
+    - Unsplash documents: https://images.unsplash.com/photo-1492724441997-5dc865305da7?auto=format&fit=crop&w=1800&q=80
+    All background images are remote Unsplash URLs; visible attribution and full URLs are included on the sources slide.
+  -->
+  <style>
+    :root {
+      --ink: #172033;
+      --muted: #566278;
+      --panel: rgba(255, 255, 255, .92);
+      --panel-strong: rgba(255, 255, 255, .98);
+      --line: rgba(23, 32, 51, .16);
+      --teal: #006d77;
+      --red: #b6412f;
+      --gold: #98690c;
+      --green: #2c704c;
+      --blue: #325a97;
+      --shadow: 0 18px 48px rgba(20, 30, 46, .18);
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; min-height: 100%; }
+    body {
+      overflow: hidden;
+      background: #eef2f4;
+      color: var(--ink);
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      letter-spacing: 0;
+    }
+    .deck { width: 100vw; height: 100vh; position: relative; }
+    .slide {
+      position: absolute;
+      inset: 0;
+      display: none;
+      overflow: auto;
+      padding: clamp(18px, 3vw, 44px);
+      background: #f8fafc;
+    }
+    .slide.active { display: grid; }
+    .slide::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background-image: var(--bg);
+      background-size: cover;
+      background-position: center;
+      opacity: .28;
+      pointer-events: none;
+    }
+    .slide::after {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background:
+        linear-gradient(90deg, rgba(249, 251, 252, .97) 0%, rgba(249, 251, 252, .85) 48%, rgba(249, 251, 252, .72) 100%),
+        linear-gradient(180deg, rgba(255,255,255,.18), rgba(255,255,255,.92));
+      pointer-events: none;
+    }
+    .content {
+      position: relative;
+      z-index: 1;
+      width: min(1220px, 100%);
+      margin: auto;
+      align-self: center;
+      padding-bottom: 72px;
+    }
+    h1, h2, h3, p { margin-top: 0; }
+    h1 { font-size: clamp(34px, 6vw, 72px); line-height: 1.04; max-width: 980px; margin-bottom: 18px; }
+    h2 { font-size: clamp(25px, 4vw, 46px); line-height: 1.1; margin-bottom: 16px; }
+    .eyebrow { color: var(--teal); font-size: 13px; font-weight: 850; text-transform: uppercase; letter-spacing: 0; margin-bottom: 12px; }
+    .lead { max-width: 940px; color: #2f3b50; font-size: clamp(16px, 2vw, 22px); line-height: 1.52; margin-bottom: 22px; }
+    .lede-note { color: #35445d; font-size: 15px; max-width: 850px; }
+    .meta { display: flex; flex-wrap: wrap; gap: 10px; margin: 12px 0 22px; }
+    .pill { border: 1px solid var(--line); background: rgba(255,255,255,.88); border-radius: 999px; padding: 8px 12px; color: #25324a; font-size: 13px; font-weight: 760; }
+    .grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+    .grid.two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .grid.four { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    details.card { border: 1px solid var(--line); border-radius: 8px; background: var(--panel); box-shadow: var(--shadow); padding: 0; overflow: hidden; }
+    details.card[open] { background: var(--panel-strong); }
+    details.card summary { min-height: 116px; list-style: none; cursor: pointer; padding: 15px 15px 13px; display: grid; gap: 8px; }
+    details.card summary::-webkit-details-marker { display: none; }
+    details.card time { color: #4d5b73; font-size: 12px; font-weight: 760; }
+    .rank { display: inline-flex; width: 28px; height: 28px; align-items: center; justify-content: center; border-radius: 50%; background: var(--teal); color: white; font-weight: 850; font-size: 13px; margin-right: 6px; }
+    .rank.red { background: var(--red); }
+    .rank.green { background: var(--green); }
+    .rank.gold { background: var(--gold); }
+    .rank.blue { background: var(--blue); }
+    .tag { color: var(--muted); font-size: 12px; font-weight: 850; text-transform: uppercase; }
+    .headline { font-weight: 850; line-height: 1.29; font-size: 16px; }
+    details.card .body { padding: 0 15px 16px; color: #2d374d; font-size: 14px; line-height: 1.55; }
+    details.card .body p, details.card .body ul { margin: 0 0 10px; }
+    details.card .body ul { padding-left: 18px; }
+    .source { border-top: 1px solid var(--line); padding-top: 10px; color: #33425c; font-size: 12px; word-break: break-word; }
+    .source a { color: #005f6b; }
+    .kpi { font-size: clamp(28px, 4vw, 44px); font-weight: 900; color: var(--red); line-height: 1; }
+    .compact summary { min-height: 82px; }
+    .controls { position: fixed; z-index: 5; left: 50%; bottom: 16px; transform: translateX(-50%); display: flex; align-items: center; gap: 8px; background: rgba(255,255,255,.90); border: 1px solid var(--line); border-radius: 999px; padding: 8px; box-shadow: 0 12px 34px rgba(20, 31, 49, .20); }
+    button { width: 40px; height: 40px; border-radius: 999px; border: 1px solid rgba(23,32,51,.18); background: #ffffff; color: #172033; font-size: 18px; font-weight: 800; cursor: pointer; }
+    button:hover { background: #edf7f8; border-color: rgba(0,109,119,.35); }
+    .counter { min-width: 74px; text-align: center; font-size: 13px; font-weight: 800; color: #40506d; }
+    @media (max-width: 900px) {
+      body { overflow: auto; }
+      .deck { min-height: 100vh; height: auto; }
+      .slide { min-height: 100vh; padding: 18px; }
+      .content { align-self: start; padding-bottom: 90px; }
+      .grid, .grid.two, .grid.four { grid-template-columns: 1fr; }
+      details.card summary { min-height: 90px; }
+      .controls { bottom: 10px; }
+      .pill { border-radius: 8px; }
+    }
+    @media print {
+      body { overflow: visible; }
+      .slide { position: relative; display: block; min-height: 100vh; page-break-after: always; }
+      .controls { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <main class="deck" aria-live="polite">
+    <section class="slide active" style="--bg:url('https://images.unsplash.com/photo-1495020689067-958852a7765e?auto=format&fit=crop&w=1800&q=80')">
+      <div class="content">
+        <p class="eyebrow">Daily Global and Tech AI News</p>
+        <h1>2026-08-07<br>每日全球與科技 AI 新聞</h1>
+        <p class="lead">降溫談判、戰場外溢、公共衛生與 AI 產品發布治理同日並行。今日重點不是單一危機，而是各系統在擴張時如何維持控制。</p>
+        <div class="meta">
+          <span class="pill">研究截點｜2026-08-07 08:02:03（Asia/Taipei）</span>
+          <span class="pill">窗口｜2026-08-06 08:02:03 至 2026-08-07 08:02:03（Asia/Taipei）</span>
+          <span class="pill">Global 10 + Tech/AI 10</span>
+        </div>
+        <p class="lede-note">所有新聞、統計、科技摘要與後續觀察卡均可展開；每張卡展開後都有自己的來源標籤與完整原始 URL。</p>
+      </div>
+    </section>
+
+    <section class="slide" style="--bg:url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1800&q=80')">
+      <div class="content">
+        <p class="eyebrow">Research Window</p>
+        <h2>本次只收 24 小時內的新事件或重大續報</h2>
+        <p class="lead">先讀取 production rules，再掃描既有 daily reports 與 source notes。舊事件只因被更新、改標或仍然熱門，不會被當成今日新事件。</p>
+        <div class="grid four">
+          <details class="card compact" data-kind="stat">
+            <summary><span class="tag">Statistic</span><span class="kpi">10</span><span class="headline">全球新聞</span></summary>
+            <div class="body">
+              <p>依規則固定選出 10 則 global/world items，DOM 與閱讀順序維持 1 到 10。</p>
+              <p class="source">來源｜Source notes - https://lucaskk.github.io/daily-news/wiki/daily/2026/08/2026-08-07/source-notes-2026-08-07.md</p>
+            </div>
+          </details>
+          <details class="card compact" data-kind="stat">
+            <summary><span class="tag">Statistic</span><span class="kpi">10</span><span class="headline">科技 / AI</span></summary>
+            <div class="body">
+              <p>科技段落選出 10 則產品、平台、基礎設施或 AI governance 對產品部署有直接影響的項目。</p>
+              <p class="source">來源｜Source notes - https://lucaskk.github.io/daily-news/wiki/daily/2026/08/2026-08-07/source-notes-2026-08-07.md</p>
+            </div>
+          </details>
+          <details class="card compact" data-kind="stat">
+            <summary><span class="tag">Statistic</span><span class="kpi">5</span><span class="headline">全球續報</span></summary>
+            <div class="body">
+              <p>續報包含 Hormuz / Lebanon、Ukraine / Patriot、Leipzig、Congo Ebola 與 Gaza force；各自列出前次收錄日期與本日新增材料。</p>
+              <p class="source">來源｜Source notes - https://lucaskk.github.io/daily-news/wiki/daily/2026/08/2026-08-07/source-notes-2026-08-07.md</p>
+            </div>
+          </details>
+          <details class="card compact" data-kind="stat">
+            <summary><span class="tag">Statistic</span><span class="kpi">24h</span><span class="headline">精確窗口</span></summary>
+            <div class="body">
+              <p>採用 2026-08-06 08:02:03 至 2026-08-07 08:02:03（Asia/Taipei）；UTC 為 2026-08-06T00:02:03Z 至 2026-08-07T00:02:03Z。</p>
+              <p class="source">來源｜Source notes - https://lucaskk.github.io/daily-news/wiki/daily/2026/08/2026-08-07/source-notes-2026-08-07.md</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" style="--bg:url('https://images.unsplash.com/photo-1566576721346-d4a3b4eaeb55?auto=format&fit=crop&w=1800&q=80')">
+      <div class="content">
+        <p class="eyebrow">Global 1-2</p>
+        <h2>航道草案與 Ukraine 反擊同日升級</h2>
+        <p class="lead">外交訊號和戰場壓力都在擴散到航運、能源、保險與盟友補給。</p>
+        <div class="grid two">
+          <details class="card" data-kind="global">
+            <summary>
+              <span class="tag">Global #1</span>
+              <span class="headline"><span class="rank red">1</span>續報｜Hormuz 協議接近定案，但 Yemen 與 Lebanon 同日升級</span>
+              <time datetime="2026-08-06T08:34:42Z">發佈時間｜2026-08-06 16:34:42（Asia/Taipei）</time>
+            </summary>
+            <div class="body">
+              <p><strong>為何重要：</strong>Hormuz 是能源與航運市場瓶頸；協議接近不代表區域風險解除。</p>
+              <ul><li>AP 稱 Iran 與 Oman 正接近完成 Hormuz 相關安排。</li><li>同日 Yemen 攻擊造成 30 多名政府軍死亡，Lebanon 也有 Israeli soldiers 在爆炸中死亡。</li><li>續報：前次收錄 2026-08-06；新增 near-deal framing 及 Yemen / Lebanon 升級對照。</li></ul>
+              <p><strong>不確定性：</strong>草案未公開，通航、費用與 U.S. blockade 仍待官方文件。</p>
+              <p class="source">來源｜AP News - https://apnews.com/article/mideast-news-roundup-iran-lebanon-israel-aug-6-2026-07074f3374339a34bc539f56d7d6287a</p>
+            </div>
+          </details>
+          <details class="card" data-kind="global">
+            <summary>
+              <span class="tag">Global #2</span>
+              <span class="headline"><span class="rank red">2</span>續報｜Ukraine 打擊 Russia 煉油與 Black Sea 船隻，盟友急尋 Patriot</span>
+              <time datetime="2026-08-06T09:22:19Z">發佈時間｜2026-08-06 17:22:19（Asia/Taipei）</time>
+            </summary>
+            <div class="body">
+              <p><strong>為何重要：</strong>Ukraine 正把壓力打到 Russia wartime economy，同時自身仍承受攔截彈短缺。</p>
+              <ul><li>Zelenskyy 稱 strikes 命中 Bashkortostan 與 Yaroslavl 煉油設施。</li><li>Ukraine 也稱攻擊 Russian patrol boats 與 shadow fleet 相關船隻。</li><li>續報：前次收錄 2026-08-06 Kyiv barrage / Patriot failure；今日新增反擊俄油與 Black Sea 船隻。</li></ul>
+              <p><strong>不確定性：</strong>Kyiv 與 Moscow 對命中目標、擊落數字與損害規模說法不同。</p>
+              <p class="source">來源｜AP News - https://apnews.com/article/russia-ukraine-war-ballistic-missiles-patriots-drones-30447169b0145caa2e48ebf22b235c7a</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" style="--bg:url('https://images.unsplash.com/photo-1582719471384-894fbb16e074?auto=format&fit=crop&w=1800&q=80')">
+      <div class="content">
+        <p class="eyebrow">Global 3-4</p>
+        <h2>歐洲基礎設施與 Congo 公衛壓力</h2>
+        <p class="lead">安全風險一端進入貨運機場，另一端逼近首都航線與接觸追蹤能力。</p>
+        <div class="grid two">
+          <details class="card" data-kind="global">
+            <summary>
+              <span class="tag">Global #3</span>
+              <span class="headline"><span class="rank gold">3</span>續報｜Leipzig 爆裂物無人機據稱靠近 Ukraine 載彈飛機</span>
+              <time datetime="2026-08-06T15:06:28Z">發佈時間｜2026-08-06 23:06:28（Asia/Taipei）</time>
+            </summary>
+            <div class="body">
+              <p><strong>為何重要：</strong>事件從機場發現爆裂物無人機，升級為疑似針對 Ukraine ammunition logistics 的 hybrid attack。</p>
+              <ul><li>The Guardian 報導 drone bomb was found near a Ukrainian plane carrying ammunition。</li><li>German MP Roderich Kiesewetter 稱他認為這是 Russia-orchestrated hybrid attack / attempted terrorism。</li><li>續報：前次收錄 2026-08-06；新增目標脈絡與 German attribution concern。</li></ul>
+              <p><strong>不確定性：</strong>德國官方調查尚未完成，Russia attribution 尚非最終結論。</p>
+              <p class="source">來源｜The Guardian - https://www.theguardian.com/world/2026/aug/06/leipzig-drone-bomb-found-near-ukrainian-plane-carrying-ammunition</p>
+            </div>
+          </details>
+          <details class="card" data-kind="global">
+            <summary>
+              <span class="tag">Global #4</span>
+              <span class="headline"><span class="rank gold">4</span>續報｜Congo Ebola 確診突破 4,000，Kinshasa 附近船客隔離</span>
+              <time datetime="2026-08-06T08:57:26Z">發佈時間｜2026-08-06 16:57:26（Asia/Taipei）</time>
+            </summary>
+            <div class="body">
+              <p><strong>為何重要：</strong>second-largest Ebola outbreak on record 正測試 regional public-health governance。</p>
+              <ul><li>AP 報導 Kinshasa 附近近 200 名船客隔離；首都尚無 confirmed Ebola case。</li><li>Africa CDC 表示 cases 已達 4,000、deaths 超過 1,800。</li><li>The Guardian 引述 officials 憂 Bundibugyo strain 可能正在 mutation。</li><li>續報：前次收錄 2026-08-05；新增 cases crossed 4,000、Kinshasa route quarantine、mutation concern。</li></ul>
+              <p><strong>不確定性：</strong>mutation 尚未證實，隔離者檢測結果仍待公布。</p>
+              <p class="source">來源｜AP News - https://apnews.com/article/congo-ebola-outbreak-ituri-protest-health-workers-1de45c3ecedabb974dce0b176f0dcc3f；The Guardian - https://www.theguardian.com/world/2026/aug/06/ebola-virus-drc-mutating</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" style="--bg:url('https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?auto=format&fit=crop&w=1800&q=80')">
+      <div class="content">
+        <p class="eyebrow">Global 5-6</p>
+        <h2>行政命令與 Gaza force 進入制度攻防</h2>
+        <p class="lead">兩則都不是戰場本身，但都決定下一步治理如何執行。</p>
+        <div class="grid two">
+          <details class="card" data-kind="global">
+            <summary>
+              <span class="tag">Global #5</span>
+              <span class="headline"><span class="rank blue">5</span>Trump 再簽出生公民權與 birth tourism 行政命令</span>
+              <time datetime="2026-08-06T21:10:05Z">發佈時間｜2026-08-07 05:10:05（Asia/Taipei）</time>
+            </summary>
+            <div class="body">
+              <p><strong>為何重要：</strong>U.S. birthright citizenship 是 14th Amendment 與 migration policy 核心制度。</p>
+              <ul><li>AP 報導 Trump 簽署兩項 immigration executive actions。</li><li>新版比 Supreme Court rejected 的前次版本窄，鎖定 diplomats / foreign organizations、alien enemy 與 alleged fraudulent citizenship 等類別。</li><li>Migration Policy Institute 估計每年約 26,000 births 可能屬 birth tourism。</li></ul>
+              <p><strong>不確定性：</strong>White House 稱合憲，civil liberties groups 預期 litigation；執行細節仍待公布。</p>
+              <p class="source">來源｜AP News - https://apnews.com/article/trump-border-immigration-birthright-citizenship-494add8239eb1c0c9f4ccb45db03f1f0；The White House - https://www.whitehouse.gov/news/；The Guardian - https://www.theguardian.com/us-news/2026/aug/06/trump-birthright-citizenship-executive-orders</p>
+            </div>
+          </details>
+          <details class="card" data-kind="global">
+            <summary>
+              <span class="tag">Global #6</span>
+              <span class="headline"><span class="rank blue">6</span>續報｜Uganda 國會批准派兵參與 Gaza international force</span>
+              <time datetime="2026-08-06T14:27:21Z">發佈時間｜2026-08-06 22:27:21（Asia/Taipei）</time>
+            </summary>
+            <div class="body">
+              <p><strong>為何重要：</strong>Gaza disarmament roadmap 若要執行，需要外部 force、警察、重建與政治授權。</p>
+              <ul><li>AP 報導 Uganda lawmakers approved sending troops for an international force in Gaza。</li><li>Proposed international stabilization force 尚未真正成形。</li><li>續報：前次收錄 2026-08-01 / 2026-08-03；新增第三國部隊進入 domestic authorization。</li></ul>
+              <p><strong>不確定性：</strong>mandate、command structure、rules of engagement、Israel / Palestinian acceptance 都未確定。</p>
+              <p class="source">來源｜AP News - https://apnews.com/article/uganda-troops-gaza-international-force-2363467ec800644552f8be5a1b84f8f4</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" style="--bg:url('https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&w=1800&q=80')">
+      <div class="content">
+        <p class="eyebrow">Global 7-8</p>
+        <h2>West Bank 醫療與 settler violence accountability</h2>
+        <p class="lead">兩則都把安全政策、財政與司法責任推回 West Bank 日常治理。</p>
+        <div class="grid two">
+          <details class="card" data-kind="global">
+            <summary>
+              <span class="tag">Global #7</span>
+              <span class="headline"><span class="rank green">7</span>Rights group 警告 Israel 政策正把 West Bank healthcare 推向崩潰</span>
+              <time datetime="2026-08-06T09:39:55Z">發佈時間｜2026-08-06 17:39:55（Asia/Taipei）</time>
+            </summary>
+            <div class="body">
+              <p><strong>為何重要：</strong>醫療崩潰把 checkpoints、tax revenue withholding、raids 與 hospital access 連成 humanitarian governance crisis。</p>
+              <ul><li>AP 報導 rights group 指 Israel withholding Palestinian tax revenues、raids 與 checkpoints 推動 healthcare collapse。</li><li>Checkpoints 與 raids 妨礙 adequate medical care，造成 life-threatening consequences。</li></ul>
+              <p><strong>不確定性：</strong>Rights group 判斷需與 Israeli government / military 說法對照；醫院容量與藥品短缺因地區而異。</p>
+              <p class="source">來源｜AP News - https://apnews.com/article/west-bank-healthcare-physicians-human-rights-israel-17a6c89efefa7e3ec07b3c68705ee043</p>
+            </div>
+          </details>
+          <details class="card" data-kind="global">
+            <summary>
+              <span class="tag">Global #8</span>
+              <span class="headline"><span class="rank green">8</span>Israel 起訴 settler 涉 2025 年 Awdah Hathaleen 死亡案</span>
+              <time datetime="2026-08-06T14:38:40Z">發佈時間｜2026-08-06 22:38:40（Asia/Taipei）</time>
+            </summary>
+            <div class="body">
+              <p><strong>為何重要：</strong>West Bank settler violence 長期被批評 accountability 稀少；起訴是舊殺人事件進入正式司法程序的新節點。</p>
+              <ul><li>Reuters / The Guardian 報導 Israeli prosecutors charged Yinon Levi with reckless manslaughter。</li><li>Awdah Hathaleen 曾參與 Oscar-winning documentary No Other Land。</li><li>B'Tselem 稱這是 2023-10-07 以來 first such indictment。</li></ul>
+              <p><strong>不確定性：</strong>Levi 否認關鍵指控，indictment 不代表定罪。</p>
+              <p class="source">來源｜The Guardian - https://www.theguardian.com/world/2026/aug/06/israel-charges-west-bank-settler-killing-palestinian-activist-awdah-hathaleen</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" style="--bg:url('https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&w=1800&q=80')">
+      <div class="content">
+        <p class="eyebrow">Global 9-10</p>
+        <h2>外交足跡收縮與 South Asia 摩擦</h2>
+        <p class="lead">領事館關閉與流亡領袖發聲，分別牽動美中競爭與 India-Bangladesh 關係。</p>
+        <div class="grid two">
+          <details class="card" data-kind="global">
+            <summary>
+              <span class="tag">Global #9</span>
+              <span class="headline"><span class="rank">9</span>U.S. 將關閉五個海外領事館，批評者稱 China 可能填補外交真空</span>
+              <time datetime="2026-08-06T15:41:29Z">發佈時間｜2026-08-06 23:41:29（Asia/Taipei）</time>
+            </summary>
+            <div class="body">
+              <p><strong>為何重要：</strong>U.S. diplomatic footprint 縮減會影響 trade promotion、citizen services、regional intelligence 與 allied confidence。</p>
+              <ul><li>The Guardian 報導將關閉 Grenada、Nagoya、Medan、Douala、Winnipeg 五處 missions。</li><li>Jeanne Shaheen 指 China 在五處中的三處有 diplomatic presence；State Department 否認會形成 vacuum。</li><li>報導稱 U.S. 195 ambassadorial posts 中超過半數未補滿。</li></ul>
+              <p><strong>不確定性：</strong>實際影響取決於 closure implementation、替代 coverage 與 host-country reaction。</p>
+              <p class="source">來源｜The Guardian - https://www.theguardian.com/us-news/2026/aug/05/us-state-department-consulate-closures</p>
+            </div>
+          </details>
+          <details class="card" data-kind="global">
+            <summary>
+              <span class="tag">Global #10</span>
+              <span class="headline"><span class="rank">10</span>India-Bangladesh 關係因 Sheikh Hasina 在 Delhi 發聲再探低點</span>
+              <time datetime="2026-08-06T14:30:43Z">發佈時間｜2026-08-06 22:30:43（Asia/Taipei）</time>
+            </summary>
+            <div class="body">
+              <p><strong>為何重要：</strong>Hasina 流亡、Bangladesh 要求引渡與 India 提供安全空間，使 South Asia 關係延伸到主權、司法與安全合作。</p>
+              <ul><li>Bangladesh foreign ministry 指控 India 允許 Hasina 對 New Delhi journalists 發聲，侵犯 sovereignty。</li><li>Hasina 稱無論 imprisonment 或 death 都會在 December return to Bangladesh。</li><li>India 稱未組織 press event，也不 endorse Hasina political views。</li></ul>
+              <p><strong>不確定性：</strong>Hasina 稱政治迫害，Dhaka 稱其為 convicted genocider；引渡立場仍會升高外交摩擦。</p>
+              <p class="source">來源｜The Guardian - https://www.theguardian.com/world/2026/aug/06/india-bangladesh-relations-exiled-pm-speech-delhi-sheikh-hasina</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" style="--bg:url('https://images.unsplash.com/photo-1518779578993-ec3579fee39f?auto=format&fit=crop&w=1800&q=80')">
+      <div class="content">
+        <p class="eyebrow">Tech / AI 1-2</p>
+        <h2>模型可用性擴張與 coding model 發布治理</h2>
+        <p class="lead">AI 平台今日的關鍵是誰能取得模型、怎麼控風險，以及發布事故如何被處理。</p>
+        <div class="grid two">
+          <details class="card" data-kind="tech">
+            <summary>
+              <span class="tag">Tech #1</span>
+              <span class="headline"><span class="rank red">T1</span>OpenAI 更新 GPT-5.6 Sol，並將 Luna / unlimited text chats 擴到 Free / Go</span>
+              <time datetime="2026-08-06T17:34:42Z">發佈時間｜2026-08-07 01:34:42（Asia/Taipei）</time>
+            </summary>
+            <div class="body">
+              <p><strong>為何重要：</strong>ChatGPT 週活躍使用者已達 10 億級後，免費層可用性會改變 AI usage economics 與 paid conversion。</p>
+              <ul><li>Plus / Pro users 可使用 updated GPT-5.6 Sol 與 new thought slider。</li><li>Free users 將以 GPT-5.6 Luna 作為 default model，並取得 unlimited text chats；Think button 用於較難問題。</li><li>File uploads、images 與 tools 仍有額度限制；Work and Codex versions of Sol 不受本次變更影響。</li></ul>
+              <p><strong>不確定性：</strong>OpenAI 官方頁未提供秒級時間；unlimited text chats 仍受 abuse guardrails。</p>
+              <p class="source">來源｜OpenAI - https://openai.com/index/improving-gpt-5-6-sol-in-chatgpt/；TechCrunch - https://techcrunch.com/2026/08/06/openai-brings-unlimited-chatgpt-text-chats-to-free-users/</p>
+            </div>
+          </details>
+          <details class="card" data-kind="tech">
+            <summary>
+              <span class="tag">Tech #2</span>
+              <span class="headline"><span class="rank red">T2</span>GitHub Copilot 上架 Kimi K3 後暫停 rollout</span>
+              <time datetime="2026-08-06T17:27:25Z">發佈時間｜2026-08-07 01:27:25（Asia/Taipei）</time>
+            </summary>
+            <div class="body">
+              <p><strong>為何重要：</strong>open-weight model 進入主流 developer workflow，會改變 coding assistant 的成本、延遲與 model choice。</p>
+              <ul><li>GitHub Changelog 稱 Kimi K3 is generally available in GitHub Copilot，hosted on Fireworks AI。</li><li>官方稱其適合 agentic coding，pricing 為 US$3 input / US$15 output / US$0.30 cached input per 1M tokens。</li><li>Editor's note 同日表示 rollout 暫停，以 mitigate an incident with GitHub Actions。</li></ul>
+              <p><strong>不確定性：</strong>官方尚未公布 incident 技術細節、影響範圍與恢復時間。</p>
+              <p class="source">來源｜GitHub Changelog - https://github.blog/changelog/2026-08-06-kimi-k3-is-now-available-in-github-copilot/</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" style="--bg:url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1800&q=80')">
+      <div class="content">
+        <p class="eyebrow">Tech / AI 3-4</p>
+        <h2>AI 天氣模型與 consumer hardware rumor</h2>
+        <p class="lead">一端是開源科學模型，一端是家用 AI 裝置介面開始具象化。</p>
+        <div class="grid two">
+          <details class="card" data-kind="tech">
+            <summary>
+              <span class="tag">Tech #3</span>
+              <span class="headline"><span class="rank gold">T3</span>Google DeepMind 開源 WeatherNext 2，宣稱 cyclone forecast 多約一天預警</span>
+              <time datetime="2026-08-06T04:00:00Z">發佈時間｜2026-08-06 12:00:00（Asia/Taipei，官方日期級標記）</time>
+            </summary>
+            <div class="body">
+              <p><strong>為何重要：</strong>AI weather models 正從 benchmark 走向 emergency planning。</p>
+              <ul><li>Google Blog 與 DeepMind 官方頁宣布 WeatherNext 2 在 tropical cyclones 的 track、intensity、wind structure 達 state-of-the-art accuracy。</li><li>Google 稱可讓 forecasters 多取得約一天 predictive accuracy。</li><li>DeepMind 表示將 open-source the model to the global research community。</li></ul>
+              <p><strong>不確定性：</strong>官方僅提供日期級時間；AI forecasts 仍需人類氣象員與 emergency management integration。</p>
+              <p class="source">來源｜Google DeepMind - https://deepmind.google/blog/weathernext-ai-model-achieves-breakthrough-in-forecasting-cyclones/；Google Blog - https://blog.google/innovation-and-ai/models-and-research/google-deepmind/weathernext-2-cyclones/</p>
+            </div>
+          </details>
+          <details class="card" data-kind="tech">
+            <summary>
+              <span class="tag">Tech #4</span>
+              <span class="headline"><span class="rank gold">T4</span>OpenAI 與 Jony Ive 首款裝置據報像 hockey puck smart speaker</span>
+              <time datetime="2026-08-06T20:55:39Z">發佈時間｜2026-08-07 04:55:39（Asia/Taipei）</time>
+            </summary>
+            <div class="body">
+              <p><strong>為何重要：</strong>OpenAI hardware 從概念進入具體形態傳聞，暗示 ChatGPT voice / sensor / always-available assistant 可能走向家用裝置。</p>
+              <ul><li>The Verge 引 Bloomberg 報導，首款 gadget 可能是 hockey puck-sized、doughnut-shaped、battery-powered smart speaker。</li><li>Expected launch in 2027，價格可能 above US$300，採 display-less voice assistant 形態。</li></ul>
+              <p><strong>不確定性：</strong>OpenAI 未正式宣布；形態、價格、感測器、privacy design 與 launch date 都可能變動。</p>
+              <p class="source">來源｜The Verge - https://www.theverge.com/ai-artificial-intelligence/976431/openai-chatgpt-battery-smart-speaker-rumor</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" style="--bg:url('https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=1800&q=80')">
+      <div class="content">
+        <p class="eyebrow">Tech / AI 5-6</p>
+        <h2>Pixel 發表走向娛樂化，AI lab 繼續買算力</h2>
+        <p class="lead">一邊是 consumer launch 的注意力策略，一邊是模型公司競爭的 compute 長約。</p>
+        <div class="grid two">
+          <details class="card" data-kind="tech">
+            <summary>
+              <span class="tag">Tech #5</span>
+              <span class="headline"><span class="rank blue">T5</span>Google 宣布 Pixel 11 發表會由 Trevor Noah 主持</span>
+              <time datetime="2026-08-06T21:15:47Z">發佈時間｜2026-08-07 05:15:47（Asia/Taipei）</time>
+            </summary>
+            <div class="body">
+              <p><strong>為何重要：</strong>Pixel launch 是 Android / Gemini / wearables 的 flagship distribution moment。</p>
+              <ul><li>The Verge 報導 Made by Google 2026 event 將於 2026-08-12 18:00 ET 在 New York City 舉行。</li><li>Trevor Noah 主持，teaser 顯示 new phone and smartwatch。</li><li>這是 launch event announcement，不是 device availability。</li></ul>
+              <p><strong>不確定性：</strong>正式 specs、pricing、availability 與 AI features 仍待 2026-08-12 發表。</p>
+              <p class="source">來源｜The Verge - https://www.theverge.com/tech/976454/made-by-google-2026-event-pixel-11-trevor-noah</p>
+            </div>
+          </details>
+          <details class="card" data-kind="tech">
+            <summary>
+              <span class="tag">Tech #6</span>
+              <span class="headline"><span class="rank blue">T6</span>Mirendil 與 Google Cloud 簽 US$100m+ compute deal</span>
+              <time datetime="2026-08-06T13:00:00Z">發佈時間｜2026-08-06 21:00:00（Asia/Taipei）</time>
+            </summary>
+            <div class="body">
+              <p><strong>為何重要：</strong>Compute deals 正成為 frontier / self-improving AI labs 的產品前提。</p>
+              <ul><li>TechCrunch exclusive 報導 Mirendil 與 Google Cloud 簽下 multiyear partnership，金額超過 US$100m。</li><li>目標是取得 compute capacity，以 scale self-improving AI research。</li><li>雲端容量長約會影響模型訓練節奏、成本結構與供應商依賴。</li></ul>
+              <p><strong>不確定性：</strong>chips、regions、reserved capacity、pricing concessions 與 safety commitments 仍未完整揭露。</p>
+              <p class="source">來源｜TechCrunch - https://techcrunch.com/2026/08/06/exclusive-mirendil-inks-100m-google-cloud-deal-to-scale-self-improving-ai/</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" style="--bg:url('https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?auto=format&fit=crop&w=1800&q=80')">
+      <div class="content">
+        <p class="eyebrow">Tech / AI 7-8</p>
+        <h2>Semiconductor buildout 與 AI therapy regulation</h2>
+        <p class="lead">AI 產業一端加速垂直整合，一端進入高風險醫療應用邊界。</p>
+        <div class="grid two">
+          <details class="card" data-kind="tech">
+            <summary>
+              <span class="tag">Tech #7</span>
+              <span class="headline"><span class="rank green">T7</span>Tesla 與 SpaceX 將投資 US$16.8bn 建 Terafab chip factory</span>
+              <time datetime="2026-08-06T15:21:51Z">發佈時間｜2026-08-06 23:21:51（Asia/Taipei）</time>
+            </summary>
+            <div class="body">
+              <p><strong>為何重要：</strong>AI chips、robotics、autonomy 與 space compute 正逼迫大型公司重塑供應鏈。</p>
+              <ul><li>TechCrunch 報導 Terafab advanced chip factory 將建在 Texas Grimes County、Houston 外圍。</li><li>Initial investment 為 US$16.8bn。</li><li>若落地，將牽動 AI chips、electricity demand、workforce 與 local permitting。</li></ul>
+              <p><strong>不確定性：</strong>實際產能、製程節點、伙伴、environmental review 與投產時程仍未確定。</p>
+              <p class="source">來源｜TechCrunch - https://techcrunch.com/2026/08/06/tesla-and-spacex-will-invest-16-8b-to-start-building-terafab-chip-factory-in-texas/</p>
+            </div>
+          </details>
+          <details class="card" data-kind="tech">
+            <summary>
+              <span class="tag">Tech #8</span>
+              <span class="headline"><span class="rank green">T8</span>California SB 903 限制 AI "therapists" 與心理健康 triage 自動化</span>
+              <time datetime="2026-08-06T17:56:30Z">發佈時間｜2026-08-07 01:56:30（Asia/Taipei）</time>
+            </summary>
+            <div class="body">
+              <p><strong>為何重要：</strong>AI companions、chatbots 與 therapy apps 已進入高風險心理健康情境。</p>
+              <ul><li>AP / CalMatters 報導 SB 903 將禁止公司把 chatbots advertised as therapy。</li><li>未經 licensed professional review，AI 不得做 therapeutic decisions。</li><li>使用 AI record therapy sessions 或 triage mental healthcare 前，需 disclose 並取得 patient permission。</li></ul>
+              <p><strong>不確定性：</strong>法案尚未成法；適用範圍與 healthcare tools 例外仍有爭議。</p>
+              <p class="source">來源｜AP News - https://apnews.com/article/california-chatbots-therapy-ai-health-regulations-438eaaa4afc617153aa83acc150b9bda</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" style="--bg:url('https://images.unsplash.com/photo-1492724441997-5dc865305da7?auto=format&fit=crop&w=1800&q=80')">
+      <div class="content">
+        <p class="eyebrow">Tech / AI 9-10</p>
+        <h2>Back-office agents 與 live shopping marketplace</h2>
+        <p class="lead">AI 與平台產品都在處理同一件事：把原本分散的流程整合成交易或營運入口。</p>
+        <div class="grid two">
+          <details class="card" data-kind="tech">
+            <summary>
+              <span class="tag">Tech #9</span>
+              <span class="headline"><span class="rank">T9</span>Naive 募得 US$28.5m，要自動化公司設立與營運雜務</span>
+              <time datetime="2026-08-06T17:00:37Z">發佈時間｜2026-08-07 01:00:37（Asia/Taipei）</time>
+            </summary>
+            <div class="body">
+              <p><strong>為何重要：</strong>Enterprise agents 正從 coding 走向 company operations。</p>
+              <ul><li>TechCrunch 報導 Naive raises US$28.5m to automate the grunt work of setting up and running a company。</li><li>產品方向是把創業與營運的重複性流程轉成可自動處理的 workflow。</li></ul>
+              <p><strong>不確定性：</strong>公司設立涉及 jurisdiction-specific law、tax、banking 與 compliance；可自動化範圍仍待驗證。</p>
+              <p class="source">來源｜TechCrunch - https://techcrunch.com/2026/08/06/naive-raises-28-5m-to-automate-the-grunt-work-of-setting-up-and-running-a-company/</p>
+            </div>
+          </details>
+          <details class="card" data-kind="tech">
+            <summary>
+              <span class="tag">Tech #10</span>
+              <span class="headline"><span class="rank">T10</span>eBay 在 record quarter 後加碼 live shopping</span>
+              <time datetime="2026-08-06T14:17:46Z">發佈時間｜2026-08-06 22:17:46（Asia/Taipei）</time>
+            </summary>
+            <div class="body">
+              <p><strong>為何重要：</strong>Live shopping 是 marketplace 對 social commerce 的產品回應。</p>
+              <ul><li>TechCrunch 報導 eBay continues to bet on live shopping after record quarter。</li><li>eBay 正試圖跟上 Whatnot 與 TikTok Shop，並在 live shopping 上加大 push。</li><li>Legacy ecommerce 正把 discovery、creator-led selling 與 transaction 合併。</li></ul>
+              <p><strong>不確定性：</strong>eBay 仍需證明 live shopping 能長期轉化為 GMV、seller retention 與 buyer trust。</p>
+              <p class="source">來源｜TechCrunch - https://techcrunch.com/2026/08/06/ebay-continues-to-bet-on-live-shopping-after-record-quarter/</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" style="--bg:url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1800&q=80')">
+      <div class="content">
+        <p class="eyebrow">Synthesis and Follow-up</p>
+        <h2>今日綜合判讀</h2>
+        <p class="lead">三條線最值得後續追蹤：降溫協議的執行安全、公共治理的資料缺口，以及 AI 產品化後的風險邊界。</p>
+        <div class="grid three">
+          <details class="card" data-kind="follow-up">
+            <summary><span class="tag">Synthesis</span><span class="headline">談判不能替代執行安全</span></summary>
+            <div class="body">
+              <p>Hormuz 接近交易、Gaza force approval 與 Lebanon / Yemen / Ukraine / Leipzig 同日升級顯示，文本進度與現場安全可能不同步。</p>
+              <p class="source">來源｜Daily report synthesis - https://lucaskk.github.io/daily-news/wiki/daily/2026/08/2026-08-07/daily-news-2026-08-07.md</p>
+            </div>
+          </details>
+          <details class="card" data-kind="follow-up">
+            <summary><span class="tag">Synthesis</span><span class="headline">公共治理受限於資料與程序</span></summary>
+            <div class="body">
+              <p>Congo Ebola、West Bank healthcare、birthright citizenship、consulate closures 與 India-Bangladesh row 都需要可驗證資料與程序透明。</p>
+              <p class="source">來源｜Daily report synthesis - https://lucaskk.github.io/daily-news/wiki/daily/2026/08/2026-08-07/daily-news-2026-08-07.md</p>
+            </div>
+          </details>
+          <details class="card" data-kind="follow-up">
+            <summary><span class="tag">Synthesis</span><span class="headline">AI 核心是可用性與風險同時擴張</span></summary>
+            <div class="body">
+              <p>OpenAI 放寬 Free/Go text chats，GitHub rollout 同日遇 incident，Google open-sources WeatherNext，California 限制 AI therapy，硬體與 compute deals 擴大供應鏈競爭。</p>
+              <p class="source">來源｜Daily report synthesis - https://lucaskk.github.io/daily-news/wiki/daily/2026/08/2026-08-07/daily-news-2026-08-07.md</p>
+            </div>
+          </details>
+          <details class="card" data-kind="follow-up">
+            <summary><span class="tag">Follow-up</span><span class="headline">Hormuz、Yemen、Lebanon 與 Gaza force</span></summary>
+            <div class="body">
+              <p>追蹤 Hormuz 草案是否公開、Iran Supreme Leader 是否批准，以及 Yemen / Lebanon 是否讓中東談判進度倒退。</p>
+              <p class="source">來源｜Daily report follow-up - https://lucaskk.github.io/daily-news/wiki/daily/2026/08/2026-08-07/daily-news-2026-08-07.md</p>
+            </div>
+          </details>
+          <details class="card" data-kind="follow-up">
+            <summary><span class="tag">Follow-up</span><span class="headline">Ebola、citizenship orders 與 litigation</span></summary>
+            <div class="body">
+              <p>追蹤 Congo quarantine test results、mutation studies、U.S. birthright citizenship lawsuits 與 agency implementation guidance。</p>
+              <p class="source">來源｜Daily report follow-up - https://lucaskk.github.io/daily-news/wiki/daily/2026/08/2026-08-07/daily-news-2026-08-07.md</p>
+            </div>
+          </details>
+          <details class="card" data-kind="follow-up">
+            <summary><span class="tag">Follow-up</span><span class="headline">Kimi K3、WeatherNext 與 AI therapy bill</span></summary>
+            <div class="body">
+              <p>追蹤 GitHub Kimi K3 rollout resume、WeatherNext 2 adoption、California SB 903 committee vote 以及 OpenAI Free/Go 實際 usage limits。</p>
+              <p class="source">來源｜Daily report follow-up - https://lucaskk.github.io/daily-news/wiki/daily/2026/08/2026-08-07/daily-news-2026-08-07.md</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" style="--bg:url('https://images.unsplash.com/photo-1492724441997-5dc865305da7?auto=format&fit=crop&w=1800&q=80')">
+      <div class="content">
+        <p class="eyebrow">Sources</p>
+        <h2>來源與圖片註記</h2>
+        <p class="lead">新聞來源以 AP News、The Guardian、official company announcements、TechCrunch 與 The Verge 為主；背景圖使用 Unsplash 遠端圖片。</p>
+        <div class="grid three">
+          <details class="card" data-kind="source">
+            <summary><span class="tag">Report</span><span class="headline">Daily report</span></summary>
+            <div class="body">
+              <p>每日報告包含完整 10 則全球新聞、10 則科技／AI 產品新聞、相關實體、衝突與後續追蹤。</p>
+              <p class="source">來源｜Daily report - https://lucaskk.github.io/daily-news/wiki/daily/2026/08/2026-08-07/daily-news-2026-08-07.md</p>
+            </div>
+          </details>
+          <details class="card" data-kind="source">
+            <summary><span class="tag">Provenance</span><span class="headline">Source notes</span></summary>
+            <div class="body">
+              <p>來源筆記記錄精確窗口、每則 event / publication-time basis、跨日去重與排除候選。</p>
+              <p class="source">來源｜Source notes - https://lucaskk.github.io/daily-news/wiki/daily/2026/08/2026-08-07/source-notes-2026-08-07.md</p>
+            </div>
+          </details>
+          <details class="card" data-kind="source">
+            <summary><span class="tag">Images</span><span class="headline">Unsplash backgrounds</span></summary>
+            <div class="body">
+              <p>背景圖使用 Unsplash 遠端圖片，包含 media desk、earth, shipping containers、security, lab, civic building, map, circuit board, cloud work, mobile devices, electronics and documents scenes。</p>
+              <p class="source">來源｜Unsplash image list - https://images.unsplash.com/photo-1495020689067-958852a7765e?auto=format&fit=crop&w=1800&q=80；https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1800&q=80；https://images.unsplash.com/photo-1566576721346-d4a3b4eaeb55?auto=format&fit=crop&w=1800&q=80；https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1800&q=80；https://images.unsplash.com/photo-1582719471384-894fbb16e074?auto=format&fit=crop&w=1800&q=80；https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?auto=format&fit=crop&w=1800&q=80；https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&w=1800&q=80；https://images.unsplash.com/photo-1518779578993-ec3579fee39f?auto=format&fit=crop&w=1800&q=80；https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1800&q=80；https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=1800&q=80；https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?auto=format&fit=crop&w=1800&q=80；https://images.unsplash.com/photo-1492724441997-5dc865305da7?auto=format&fit=crop&w=1800&q=80</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+  <nav class="controls" aria-label="Slide controls">
+    <button type="button" id="prev" aria-label="上一頁">‹</button>
+    <span class="counter" id="counter">1 / 14</span>
+    <button type="button" id="next" aria-label="下一頁">›</button>
+  </nav>
+  <script>
+    const slides = Array.from(document.querySelectorAll('.slide'));
+    const counter = document.getElementById('counter');
+    let current = 0;
+    function showSlide(nextIndex) {
+      current = Math.max(0, Math.min(slides.length - 1, nextIndex));
+      slides.forEach((slide, index) => slide.classList.toggle('active', index === current));
+      counter.textContent = `${current + 1} / ${slides.length}`;
+      history.replaceState(null, '', `#${current + 1}`);
+    }
+    document.getElementById('prev').addEventListener('click', () => showSlide(current - 1));
+    document.getElementById('next').addEventListener('click', () => showSlide(current + 1));
+    window.addEventListener('keydown', (event) => {
+      if (event.target.closest('summary, details, a, button')) return;
+      if (['ArrowRight', 'PageDown', ' '].includes(event.key)) {
+        event.preventDefault();
+        showSlide(current + 1);
+      }
+      if (['ArrowLeft', 'PageUp'].includes(event.key)) {
+        event.preventDefault();
+        showSlide(current - 1);
+      }
+      if (event.key === 'Home') showSlide(0);
+      if (event.key === 'End') showSlide(slides.length - 1);
+    });
+    let touchStartX = null;
+    window.addEventListener('touchstart', (event) => { touchStartX = event.changedTouches[0].clientX; }, { passive: true });
+    window.addEventListener('touchend', (event) => {
+      if (touchStartX === null) return;
+      const delta = event.changedTouches[0].clientX - touchStartX;
+      if (Math.abs(delta) > 60) showSlide(current + (delta < 0 ? 1 : -1));
+      touchStartX = null;
+    }, { passive: true });
+    const initial = Number(location.hash.replace('#', ''));
+    if (Number.isFinite(initial) && initial > 0) showSlide(initial - 1);
+    else showSlide(0);
+  </script>
+</body>
+</html>
