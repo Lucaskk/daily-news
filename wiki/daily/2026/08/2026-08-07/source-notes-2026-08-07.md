@@ -110,4 +110,8 @@ tags: [daily-news, source-notes, provenance, deduplication]
 
 - Created `wiki/daily/2026/08/2026-08-07/daily-news-2026-08-07.md`, `source-notes-2026-08-07.md` and `slides-2026-08-07.html`.
 - Updated `wiki/daily/latest-slides.html`, root `index.html`, `.nojekyll`, `wiki/index.md`, `wiki/overview.md` and `wiki/log.md` with cache-busting version `20260807-080203-ai-news-r1`.
-- Local and GitHub Pages publication details are recorded in the automation run summary and memory after verification.
+- Local verification passed at `http://localhost:4173/wiki/daily/latest-slides.html`.
+- GitHub Pages verification passed for the dated deck, latest redirect, daily report and source notes：
+  - https://lucaskk.github.io/daily-news/wiki/daily/2026/08/2026-08-07/slides-2026-08-07.html?v=20260807-080203-ai-news-r1
+  - https://lucaskk.github.io/daily-news/wiki/daily/latest-slides.html?v=20260807-080203-ai-news-r1
+- LINE delivery was skipped because `.env` contains `LINE_CHANNEL_ACCESS_TOKEN` and `PUBLIC_SLIDES_BASE_URL`, but `LINE_TO_ID` is missing or empty.
