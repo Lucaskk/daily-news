@@ -6,7 +6,8 @@
 - Recorded the exact Asia/Taipei 24-hour window, per-item event or publication-time basis, material continuations, duplicate checks and exclusion rationale in `source-notes-2026-08-08.md`.
 - Created `slides-2026-08-08.html` as a standalone HTML deck with themed backgrounds, browser / keyboard navigation, expandable cards and per-card complete source URLs.
 - Updated `wiki/daily/latest-slides.html`, `wiki/index.md`, `wiki/overview.md`, `.nojekyll`, and the root Pages entry timestamp.
-- Publishing and LINE delivery status are recorded in the automation run summary after verification.
+- Published the scoped daily-news package to `main` through a clean checkout with commit `437a534` and verified the dated deck, latest redirect, daily report, source notes and root index on GitHub Pages.
+- LINE delivery was skipped because `.env` contains `LINE_CHANNEL_ACCESS_TOKEN` and `PUBLIC_SLIDES_BASE_URL`, but `LINE_TO_ID` is missing or empty.
 
 
 ## [2026-08-07] ingest | Daily global and tech AI news
