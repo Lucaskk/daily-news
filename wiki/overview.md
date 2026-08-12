@@ -2,7 +2,7 @@
 title: "Overview"
 type: overview
 created: 2026-05-24
-updated: 2026-08-08
+updated: 2026-08-12
 status: seed
 tags: [overview]
 sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
@@ -19,6 +19,18 @@ sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
 - 抽出持續出現的人物、組織、事件、政策、技術與市場概念。
 - 維護跨來源的矛盾、時間線、趨勢與待查問題。
 - 將重要查詢結果回寫成可累積的 wiki 頁面。
+
+## 2026-08-12 Daily News Synthesis
+
+- 全球新聞主軸轉為「危機從敘事進入執行」：Colombia earthquake toll jumped above 180, U.S. forces fired on a blockade-running ship, Houthis killed six in Bab el-Mandeb, and Syrian courts sentenced Assad in absentia.
+- 戰爭、氣候與制度修復同時承壓：Ukraine tied Russian attacks to North Korean missiles / troops, Hungary elected Andras Baka president, Canada put military forces on wildfire standby, and UK / France heat warnings moved climate records into emergency management.
+- 科技／AI 今日聚焦分發、營利與成本治理：OpenAI started ChatGPT ads testing and moved Daybreak to AWS, Google disclosed Gemini app above 1B monthly users and a Health-Abbott data partnership, while GitHub expanded Copilot models, memory, token reporting and GHES air-gapped support.
+
+## 2026-08-11 Daily News Synthesis
+
+- 全球新聞主軸轉為「災害、公共衛生與能源外交同時測試制度」：Colombia 7.4 earthquake、Trump vaccine order、Hormuz sanctions / reparations demand and Gaza peace plan rejection force governments to prove rescue, evidence, negotiation sequencing and public trust.
+- 戰爭與氣候風險更基礎設施化：Ukraine struck Russia's Nizhnekamsk petroleum hub, Typhoon Dolphin disrupted eastern China and the Philippines, while Copernicus / NOAA reported ocean and U.S. heat records with direct electricity, cooling-water and agriculture implications.
+- 科技／AI 今日聚焦可信能力分發與平台規則：OpenAI Daybreak / GPT-5.6-Cyber / Business Premium seats, Meta Muse Glimmer, Discovered Materials, YouTube YPP, Aptoide, GitHub Copilot / notifications and Claude Sonnet 5 pricing show AI moving through access control, local agents, creator economics, app distribution and model cost.
 
 ## 2026-08-08 Daily News Synthesis
 
@@ -89,6 +101,13 @@ sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
 - 輸出偏好：簡短摘要、深度脈絡、比較表、時間線、決策 memo。
 
 ## Latest Daily News
+
+
+- [2026-08-12 Daily News](daily/2026/08/2026-08-12/daily-news-2026-08-12.md) - 今日主軸是「海上封鎖、震災救援、司法問責與 AI 產品分發同日進入可驗證節點」：Colombia toll above 180、U.S. firing on M/V Vela Nova、Houthis Bab el-Mandeb deaths、Assad death sentence、Ukraine / North Korea escalation、Hungary Baka presidency、Canada wildfires、UK / France heat、social-media liability and xAI lawsuit。科技／AI 聚焦 OpenAI ads / Daybreak AWS / Linux app、Google Gemini 1B / Health-Abbott、GitHub Copilot model / memory / token reports / GHES and River AI。
+- [2026-08-12 Slides](daily/2026/08/2026-08-12/slides-2026-08-12.html) - 今日新聞網頁版投影片。
+
+- [2026-08-11 Daily News](daily/2026/08/2026-08-11/daily-news-2026-08-11.md) - 今日主軸是「災害、公共衛生與 AI 安全治理同日進入可驗證壓力測試」：Colombia 強震、Trump vaccine order、Hormuz reparations demand、Gaza plan rejection、Ukraine Nizhnekamsk oil strike、Typhoon Dolphin、Copernicus / NOAA heat records、Todd Blanche DOJ and FIFA governance。科技／AI 聚焦 OpenAI Daybreak / GPT-5.6-Cyber / Premium seats、Meta Muse Glimmer、Discovered Materials、YouTube YPP、Aptoide、GitHub Copilot / notifications and Claude Sonnet 5 pricing。
+- [2026-08-11 Slides](daily/2026/08/2026-08-11/slides-2026-08-11.html) - 今日新聞網頁版投影片。
 
 - [2026-08-08 Daily News](daily/2026/08/2026-08-08/daily-news-2026-08-08.md) - 今日主軸是「安全事件、經濟轉弱與 AI 工具治理同日壓縮決策空間」：Thailand school shooting、U.S. jobs contraction、Russia sanctions、Ukraine / Wildberries 續報、Zelenskyy Serbia visit、White House ballroom court order、Colombia inauguration、Boeing 737 Max inspections、South Sudan TPS and Colorado River water / hydropower tradeoff。科技／AI 聚焦 Cloudflare Kitesurf、Rippling AI Spend Console、Airbnb AI shipping、Terafab power 續報、GitHub Copilot ROI / security / review / metrics updates、Meta child-safety penalty and Polish public-sector cybersecurity。
 - [2026-08-08 Slides](daily/2026/08/2026-08-08/slides-2026-08-08.html) - 今日新聞網頁版投影片。

@@ -2,7 +2,7 @@
 title: "Knowledge Base Index"
 type: overview
 created: 2026-05-24
-updated: 2026-08-08
+updated: 2026-08-12
 status: seed
 tags: [index]
 sources: []
@@ -25,6 +25,13 @@ sources: []
 每日新聞報告會放在 `wiki/daily/YYYY/MM/YYYY-MM-DD/`。
 
 - [每日全球與科技 AI 新聞產製規則](daily/README.md) - 包含研究截點前 24 小時限制、跨日去重、重大續報判定、來源紀錄與發布驗證規則。
+
+
+- [2026-08-12 Daily News](daily/2026/08/2026-08-12/daily-news-2026-08-12.md) - 今日主軸是「海上封鎖、震災救援、司法問責與 AI 產品分發同日進入可驗證節點」：Colombia 震災死亡上修、U.S. / Iran blockade actual firing、Houthis Bab el-Mandeb deaths、Assad death sentence、Ukraine / North Korea escalation、Hungary Baka presidency、Canada wildfires、UK / France heat、social-media liability and xAI nudification lawsuit。科技／AI 聚焦 OpenAI ChatGPT ads / Daybreak AWS / Linux app、Google Gemini 1B / Health-Abbott、GitHub Copilot MAI-Code / memory / token reports / GHES and River AI。
+- [2026-08-12 Slides](daily/2026/08/2026-08-12/slides-2026-08-12.html) - 今日新聞網頁版投影片。
+
+- [2026-08-11 Daily News](daily/2026/08/2026-08-11/daily-news-2026-08-11.md) - 今日主軸是「災害、公共衛生與 AI 安全治理同日進入可驗證壓力測試」：Colombia 7.4 強震、Trump vaccine order、Hormuz reparations demand、Gaza peace plan rejection、Ukraine Nizhnekamsk oil strike、Typhoon Dolphin、Copernicus / NOAA heat records、Todd Blanche DOJ and FIFA governance。科技／AI 聚焦 OpenAI Daybreak / GPT-5.6-Cyber / Premium seats、Meta Muse Glimmer、Discovered Materials、YouTube YPP、Aptoide、GitHub Copilot / notifications and Claude Sonnet 5 pricing。
+- [2026-08-11 Slides](daily/2026/08/2026-08-11/slides-2026-08-11.html) - 今日新聞網頁版投影片。
 
 
 - [2026-08-08 Daily News](daily/2026/08/2026-08-08/daily-news-2026-08-08.md) - 今日主軸是「安全事件、經濟轉弱與 AI 工具治理同日壓縮決策空間」：Thailand school shooting、U.S. jobs contraction、Russia sanctions、Ukraine / Wildberries 續報、Zelenskyy Serbia visit、White House ballroom court order、Colombia inauguration、Boeing 737 Max inspections、South Sudan TPS and Colorado River water / hydropower tradeoff。科技／AI 聚焦 Cloudflare Kitesurf、Rippling AI Spend Console、Airbnb AI shipping、Terafab power 續報、GitHub Copilot ROI / security / review / metrics updates、Meta child-safety penalty and Polish public-sector cybersecurity。
