@@ -1,5 +1,29 @@
 # Knowledge Base Log
 
+## [2026-08-16] ingest | Daily global and tech AI news
+
+- Created `wiki/daily/2026/08/2026-08-16/daily-news-2026-08-16.md` with exactly 10 global items and five technology / AI product, platform or governance items.
+- Recorded the exact Asia/Taipei 24-hour window, per-item event or publication-time basis, material continuations, duplicate checks and exclusion rationale in `source-notes-2026-08-16.md`.
+- Created `slides-2026-08-16.html` as a standalone HTML deck with themed backgrounds, browser / keyboard / touch navigation, expandable cards and per-card complete source URLs.
+- Updated `wiki/daily/latest-slides.html`, `wiki/index.md`, `wiki/overview.md`, `.nojekyll`, and the root Pages entry timestamp.
+- Publishing and LINE delivery status are recorded by this automation after verification.
+
+## [2026-08-14] ingest | Daily global and tech AI news
+
+- Created `wiki/daily/2026/08/2026-08-14/daily-news-2026-08-14.md` with exactly 10 global items and 10 technology / AI product, platform, governance, model or deployment items.
+- Recorded the exact Asia/Taipei 24-hour window, per-item event or publication-time basis, material continuations, duplicate checks and exclusion rationale in `source-notes-2026-08-14.md`.
+- Created `slides-2026-08-14.html` as a standalone HTML deck with themed backgrounds, browser / keyboard / touch navigation, expandable cards and per-card complete source URLs.
+- Updated `wiki/daily/latest-slides.html`, `wiki/index.md`, `wiki/overview.md`, `.nojekyll`, and the root Pages entry timestamp.
+- Publishing and LINE delivery status are recorded by this automation after verification.
+
+## [2026-08-13] ingest | Daily global and tech AI news
+
+- Created `wiki/daily/2026/08/2026-08-13/daily-news-2026-08-13.md` with exactly 10 global items and 11 technology / AI product, platform, data-rights or adoption-signal items.
+- Recorded the exact Asia/Taipei 24-hour window, per-item event or publication-time basis, material continuations, duplicate checks and exclusion rationale in `source-notes-2026-08-13.md`.
+- Created `slides-2026-08-13.html` as a standalone HTML deck with themed backgrounds, browser / keyboard / touch navigation, expandable cards and per-card complete source URLs.
+- Updated `wiki/daily/latest-slides.html`, `wiki/index.md`, `wiki/overview.md`, `.nojekyll`, and the root Pages entry timestamp.
+- Publishing and LINE delivery status are recorded by this automation after verification.
+
 ## [2026-08-12] ingest | Daily global and tech AI news
 
 - Created `wiki/daily/2026/08/2026-08-12/daily-news-2026-08-12.md` with exactly 10 global items and 10 technology / AI product, platform, model, pricing, infrastructure or workflow items.

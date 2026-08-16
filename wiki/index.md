@@ -2,7 +2,7 @@
 title: "Knowledge Base Index"
 type: overview
 created: 2026-05-24
-updated: 2026-08-12
+updated: 2026-08-16
 status: seed
 tags: [index]
 sources: []
@@ -26,6 +26,15 @@ sources: []
 
 - [每日全球與科技 AI 新聞產製規則](daily/README.md) - 包含研究截點前 24 小時限制、跨日去重、重大續報判定、來源紀錄與發布驗證規則。
 
+
+- [2026-08-16 Daily News](daily/2026/08/2026-08-16/daily-news-2026-08-16.md) - 今日主軸是「中東衝突外溢牽動軍事部署，災害與難民治理進入可驗證節點，AI 產品焦點轉向治理、用量與 agent 可觀測性」：Lebanon strikes、U.S. carrier gap、Qatar / UAE / Hormuz / Yemen escalation、Hurricane Lala、Indiana flooding、Zimbabwe ferry continuation、South Korea peace-regime proposal、Taliban five-year rights warning、Myanmar Rohingya verification and Virginia State University shooting。科技／AI 聚焦 OpenAI Enterprise usage limits、ChatGPT Search restaurant reservations、Google Cloud semantic governance metrics、Rime Arcana-to-Coda routing and Sim AI Workspace v0.8.2。
+- [2026-08-16 Slides](daily/2026/08/2026-08-16/slides-2026-08-16.html) - 今日新聞網頁版投影片。
+
+- [2026-08-14 Daily News](daily/2026/08/2026-08-14/daily-news-2026-08-14.md) - 今日主軸是「戰爭外溢、外交抗議與公共系統問責同日升高」：Qusra settler siege、Ukraine Salavat refinery strike、Yemen clashes、Poland Russian plot、Rotterdam explosion、Nepal USAID cuts investigation、Putin Kuril visit、Dominican-Cuba expulsion、Ryanair NTSB finding and U.S. tariff transshipment claims。科技／AI 聚焦 Gemini 3.7 Flash、Copilot rollout、GPT-5.6 Sol Ultrafast、Grok 4.6、DeepSeek-V4-Pro、Writer Palmyra X6、IBM-OpenAI、Flock guardrails、Cascadia and Hugging Face / Strands / LeRobot workflow。
+- [2026-08-14 Slides](daily/2026/08/2026-08-14/slides-2026-08-14.html) - 今日新聞網頁版投影片。
+
+- [2026-08-13 Daily News](daily/2026/08/2026-08-13/daily-news-2026-08-13.md) - 今日主軸是「危機進入執行與問責細節」：Congo Ebola 可能刷新死亡紀錄、Ukraine 襲擊 Novorossiysk、Spain total eclipse、U.S.-Iraq withdrawal、Gaza targeted strike、Pentagon Yemen civilian-casualty review、Zimbabwe / Indonesia ferry disasters、Panama canal fees and U.S. CPI。科技／AI 聚焦 Google Pixel 11 / Watch / Tag / Gemini connected apps、GitHub Agent Plugins、LangSmith BYOC、Twitch AI training opt-out、Facebook Creator Studio、Apple publisher talks、Ahrefs Letaido and OpenAI enterprise reports。
+- [2026-08-13 Slides](daily/2026/08/2026-08-13/slides-2026-08-13.html) - 今日新聞網頁版投影片。
 
 - [2026-08-12 Daily News](daily/2026/08/2026-08-12/daily-news-2026-08-12.md) - 今日主軸是「海上封鎖、震災救援、司法問責與 AI 產品分發同日進入可驗證節點」：Colombia 震災死亡上修、U.S. / Iran blockade actual firing、Houthis Bab el-Mandeb deaths、Assad death sentence、Ukraine / North Korea escalation、Hungary Baka presidency、Canada wildfires、UK / France heat、social-media liability and xAI nudification lawsuit。科技／AI 聚焦 OpenAI ChatGPT ads / Daybreak AWS / Linux app、Google Gemini 1B / Health-Abbott、GitHub Copilot MAI-Code / memory / token reports / GHES and River AI。
 - [2026-08-12 Slides](daily/2026/08/2026-08-12/slides-2026-08-12.html) - 今日新聞網頁版投影片。

@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>2026-08-16 每日全球與科技 AI 新聞</title>
+  <style>
+    :root {
+      --ink: #13212a;
+      --muted: #4e6270;
+      --line: rgba(19, 33, 42, .18);
+      --paper: rgba(250, 253, 255, .92);
+      --accent: #0b6b78;
+      --accent-2: #a6422d;
+      --accent-3: #6b5b00;
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; min-height: 100%; background: #eef5f4; color: var(--ink); }
+    body { overflow: hidden; }
+    a { color: #075f6a; word-break: break-word; }
+    .deck { width: 100vw; height: 100vh; position: relative; overflow: hidden; }
+    .slide {
+      position: absolute;
+      inset: 0;
+      display: none;
+      padding: clamp(22px, 4vw, 54px);
+      background-image: linear-gradient(90deg, rgba(255,255,255,.88), rgba(255,255,255,.74)), var(--bg);
+      background-size: cover;
+      background-position: var(--pos, center);
+    }
+    .slide.active { display: grid; align-items: center; }
+    .content {
+      width: min(1180px, 100%);
+      max-height: calc(100vh - 116px);
+      overflow: auto;
+      margin: 0 auto;
+      padding: clamp(18px, 2.4vw, 30px);
+      border: 1px solid var(--line);
+      background: var(--paper);
+      box-shadow: 0 18px 40px rgba(43, 56, 65, .12);
+    }
+    .title .content { border: 0; background: rgba(255,255,255,.82); box-shadow: none; max-width: 1040px; margin-left: 0; }
+    .kicker { margin: 0 0 10px; color: var(--accent); text-transform: uppercase; font-size: 13px; font-weight: 800; letter-spacing: 0; }
+    h1, h2 { margin: 0; letter-spacing: 0; line-height: 1.05; }
+    h1 { font-size: clamp(38px, 7vw, 82px); max-width: 920px; }
+    h2 { font-size: clamp(30px, 4vw, 54px); }
+    .lead { max-width: 950px; color: var(--muted); font-size: clamp(17px, 2vw, 22px); line-height: 1.55; }
+    .meta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
+    .meta a, .pill {
+      display: inline-flex;
+      align-items: center;
+      min-height: 36px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.78);
+      padding: 8px 12px;
+      font-weight: 750;
+      text-decoration: none;
+      color: var(--ink);
+    }
+    .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; margin-top: 24px; }
+    .grid.three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    details.card {
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.86);
+      padding: 0;
+      min-width: 0;
+    }
+    details.card[open] { background: rgba(255,255,255,.96); }
+    summary {
+      cursor: pointer;
+      list-style: none;
+      min-height: 82px;
+      display: grid;
+      grid-template-columns: 46px 1fr;
+      gap: 12px;
+      align-items: center;
+      padding: 14px;
+    }
+    summary::-webkit-details-marker { display: none; }
+    .rank {
+      width: 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      background: #e1f0f0;
+      color: #075f6a;
+      border: 1px solid rgba(7,95,106,.24);
+      font-weight: 900;
+    }
+    .rank.red { background: #f7e8e2; color: #8b321e; border-color: rgba(139,50,30,.24); }
+    .rank.gold { background: #f6edc5; color: #725f00; border-color: rgba(114,95,0,.24); }
+    .summary-text strong { display: block; font-size: 17px; line-height: 1.25; }
+    time { display: block; margin-top: 6px; color: var(--muted); font-size: 13px; }
+    .details-body { border-top: 1px solid var(--line); padding: 0 16px 16px; color: #20313a; font-size: 15px; line-height: 1.52; }
+    .details-body ul { padding-left: 20px; }
+    .source-line {
+      margin: 14px 0 0;
+      padding-top: 12px;
+      border-top: 1px solid var(--line);
+      color: #20313a;
+      font-size: 13px;
+    }
+    .controls {
+      position: fixed;
+      left: 50%;
+      bottom: 16px;
+      transform: translateX(-50%);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      z-index: 10;
+      background: rgba(255,255,255,.9);
+      border: 1px solid var(--line);
+      padding: 8px;
+    }
+    button {
+      appearance: none;
+      border: 1px solid var(--line);
+      background: #fff;
+      color: var(--ink);
+      width: 42px;
+      height: 38px;
+      font-size: 25px;
+      cursor: pointer;
+    }
+    .counter { min-width: 68px; text-align: center; font-weight: 850; color: var(--muted); }
+    .progress { position: fixed; left: 0; right: 0; bottom: 0; height: 5px; background: rgba(19,33,42,.12); z-index: 10; }
+    .bar { height: 100%; width: 0; background: linear-gradient(90deg, #0b6b78, #a6422d); }
+    @media (max-width: 860px) {
+      body { overflow: auto; }
+      .deck { min-height: 100vh; height: auto; }
+      .slide { min-height: 100vh; padding: 16px 14px 84px; }
+      .content { max-height: none; }
+      .grid, .grid.three { grid-template-columns: 1fr; }
+      summary { min-height: 72px; }
+      .summary-text strong { font-size: 16px; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Background images are from Unsplash stable image URLs. Visible attribution cards appear on the final slide. -->
+  <main class="deck" id="deck">
+    <section class="slide title active" style="--bg:url('https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&w=1800&q=80'); --pos:center;">
+      <div class="content">
+        <p class="kicker">Daily Global and Tech AI News</p>
+        <h1>2026-08-16 每日全球與科技 AI 新聞</h1>
+        <p class="lead">研究截點：2026-08-16 08:02:05（Asia/Taipei）<br>24 小時視窗：2026-08-15 08:02:05 至 2026-08-16 08:02:05（Asia/Taipei）</p>
+        <div class="meta">
+          <a href="daily-news-2026-08-16.md">日報 Markdown</a>
+          <a href="source-notes-2026-08-16.md">來源筆記</a>
+          <span class="pill">全球 Top 10 + 科技／AI 5 則</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" style="--bg:url('https://images.unsplash.com/photo-1521295121783-8a321d551ad2?auto=format&fit=crop&w=1800&q=80'); --pos:center;">
+      <div class="content">
+        <p class="kicker">Scope</p>
+        <h2>窗口、查重與今日主軸</h2>
+        <p class="lead">舊事件只在出現重大新節點時標示續報；所有卡片展開後都有自己的完整來源 URL。</p>
+        <div class="grid three">
+          <details class="card">
+            <summary><span class="rank">窗</span><span class="summary-text"><strong>24 小時窗口與截點</strong><time datetime="2026-08-16T00:02:05Z">發佈時間｜2026-08-16 08:02:05（Asia/Taipei）</time></span></summary>
+            <div class="details-body"><p>本次只收錄 2026-08-15 08:02:05 至 2026-08-16 08:02:05（Asia/Taipei）內發生、官方發布、首次可靠發布或重大續報的新節點。UTC 等值為 2026-08-15T00:02:05Z 至 2026-08-16T00:02:05Z。</p><p class="source-line">來源｜README / Source Notes<br><a href="https://lucaskk.github.io/daily-news/wiki/daily/README.md">https://lucaskk.github.io/daily-news/wiki/daily/README.md</a><br><a href="https://lucaskk.github.io/daily-news/wiki/daily/2026/08/2026-08-16/source-notes-2026-08-16.md">https://lucaskk.github.io/daily-news/wiki/daily/2026/08/2026-08-16/source-notes-2026-08-16.md</a></p></div>
+          </details>
+          <details class="card">
+            <summary><span class="rank gold">去</span><span class="summary-text"><strong>今日排除的高顯著舊聞</strong><time datetime="2026-08-16T00:02:05Z">發佈時間｜2026-08-16 08:02:05（Asia/Taipei）</time></span></summary>
+            <div class="details-body"><p>Indonesia magnitude 7.7 quake 與 Japan / Yasukuni visits 都在 AP metadata 中落於窗口前；Ceuta arrests 雖在窗口內，但此主線已多次收錄且本日新事實較小。</p><p class="source-line">來源｜Source Notes<br><a href="https://lucaskk.github.io/daily-news/wiki/daily/2026/08/2026-08-16/source-notes-2026-08-16.md">https://lucaskk.github.io/daily-news/wiki/daily/2026/08/2026-08-16/source-notes-2026-08-16.md</a></p></div>
+          </details>
+          <details class="card">
+            <summary><span class="rank red">軸</span><span class="summary-text"><strong>今日主軸</strong><time datetime="2026-08-16T00:02:05Z">發佈時間｜2026-08-16 08:02:05（Asia/Taipei）</time></span></summary>
+            <div class="details-body"><p>中東衝突外溢牽動軍事部署，災害與難民治理進入可驗證節點，AI 產品焦點轉向治理、用量與 agent 可觀測性。</p><p class="source-line">來源｜Daily Report<br><a href="https://lucaskk.github.io/daily-news/wiki/daily/2026/08/2026-08-16/daily-news-2026-08-16.md">https://lucaskk.github.io/daily-news/wiki/daily/2026/08/2026-08-16/daily-news-2026-08-16.md</a></p></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" style="--bg:url('https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1800&q=80'); --pos:center;">
+      <div class="content">
+        <p class="kicker">Global Top 10 · 1-3</p>
+        <h2>中東衝突與美軍部署</h2>
+        <div class="grid three">
+          <details class="card">
+            <summary><span class="rank red">1</span><span class="summary-text"><strong>續報｜以色列空襲黎巴嫩南部釀 11 死</strong><time datetime="2026-08-15T06:00:10Z">發佈時間｜2026-08-15 14:00:10（Asia/Taipei）</time></span></summary>
+            <div class="details-body"><p>AP 報導 Israeli strikes 命中 Ansar 與 Deir al-Zahrani；Guardian 引述 Lebanese state media 指死亡增至 11 人，包括 3 名兒童。以方稱目標為 Hezbollah infrastructure，Lebanon 政府稱停火安排受破壞。</p><p>續報：2026-08-07 已收錄 Lebanon / Yemen escalation；本日新進展是 post-June-truce 最高級別死亡節點。</p><p class="source-line">來源｜AP / The Guardian<br><a href="https://apnews.com/article/southern-lebanon-israel-strike-hezbollah-iran-ansar-1124fd2bd0b7ed76b0e97683dddbcaad">https://apnews.com/article/southern-lebanon-israel-strike-hezbollah-iran-ansar-1124fd2bd0b7ed76b0e97683dddbcaad</a><br><a href="https://www.theguardian.com/world/2026/aug/15/israeli-strike-on-southern-lebanon-kills-seven-in-worst-toll-since-june-state-media-says">https://www.theguardian.com/world/2026/aug/15/israeli-strike-on-southern-lebanon-kills-seven-in-worst-toll-since-june-state-media-says</a></p></div>
+          </details>
+          <details class="card">
+            <summary><span class="rank red">2</span><span class="summary-text"><strong>續報｜美軍調走西太平洋最後一艘航母</strong><time datetime="2026-08-15T12:37:01Z">發佈時間｜2026-08-15 20:37:01（Asia/Taipei）</time></span></summary>
+            <div class="details-body"><p>USS George Washington 離開 Asia-Pacific 後，美國短期在 western Pacific 沒有 carrier。AP 指此舉與 Iran / Western Hemisphere focus 有關，對 Japan、Philippines 與 China deterrence narrative 都有影響。</p><p>續報：2026-08-12 已收錄 U.S. / Iran blockade 與 carrier context；本日新事實是具體 Indo-Pacific carrier gap。</p><p class="source-line">來源｜AP / ABC News / Ground News<br><a href="https://apnews.com/article/87cfb838de8c13464fa3cab1840ad87d">https://apnews.com/article/87cfb838de8c13464fa3cab1840ad87d</a><br><a href="https://abcnews.com/US/wireStory/us-pulls-aircraft-carrier-asia-trump-focuses-iran-135669614">https://abcnews.com/US/wireStory/us-pulls-aircraft-carrier-asia-trump-focuses-iran-135669614</a><br><a href="https://ground.news/article/us-pulls-last-aircraft-carrier-in-asia-as-trump-focuses-on-iran-and-the-western-hemisphere">https://ground.news/article/us-pulls-last-aircraft-carrier-in-asia-as-trump-focuses-on-iran-and-the-western-hemisphere</a></p></div>
+          </details>
+          <details class="card">
+            <summary><span class="rank red">3</span><span class="summary-text"><strong>續報｜Qatar、UAE、Hormuz 與 Yemen 同日升級</strong><time datetime="2026-08-15T07:13:25Z">發佈時間｜2026-08-15 15:13:25（Asia/Taipei）</time></span></summary>
+            <div class="details-body"><p>Iran claims Qatar holds three pilots；Qatar 否認。UAE 又指 Iran 攻擊 ADNOC 相關船隻，Houthis 則襲擊 Yemen Mokha port。多線發展使 Gulf diplomacy、shipping security 與 Red Sea logistics 同時承壓。</p><p>續報：2026-08-12 Hormuz 與 2026-08-14 Yemen 已收錄；本日新增 Qatar denial、UAE vessel allegation 與 Mokha port strike。</p><p class="source-line">來源｜AP / Doha News / Al Jazeera / CBS News<br><a href="https://apnews.com/article/ba738b9fb8803f28313a19df8bbcac19">https://apnews.com/article/ba738b9fb8803f28313a19df8bbcac19</a><br><a href="https://dohanews.co/qatar-denies-detaining-iranian-pilots-says-iran-did-not-respond-to-rescue-invitation/">https://dohanews.co/qatar-denies-detaining-iranian-pilots-says-iran-did-not-respond-to-rescue-invitation/</a><br><a href="https://www.aljazeera.com/news/liveblog/2026/8/15/iran-war-live-trump-vows-to-make-hormuz-us-territory-pretty-soon">https://www.aljazeera.com/news/liveblog/2026/8/15/iran-war-live-trump-vows-to-make-hormuz-us-territory-pretty-soon</a><br><a href="https://www.cbsnews.com/live-updates/iran-war-donald-trump-strait-of-hormuz-uae-accuses-attacks-vance-oil-gas/">https://www.cbsnews.com/live-updates/iran-war-donald-trump-strait-of-hormuz-uae-accuses-attacks-vance-oil-gas/</a></p></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" style="--bg:url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1800&q=80'); --pos:center;">
+      <div class="content">
+        <p class="kicker">Global Top 10 · 4-6</p>
+        <h2>颶風、洪水與渡輪災難</h2>
+        <div class="grid three">
+          <details class="card">
+            <summary><span class="rank gold">4</span><span class="summary-text"><strong>Hurricane Lala 掠近夏威夷大島</strong><time datetime="2026-08-16T00:00:00Z">發佈時間｜2026-08-16 08:00:00（Asia/Taipei）</time></span></summary>
+            <div class="details-body"><p>NHC / CPHC advisory 14A 指 Lala 位於 South Point Hawaii 以南約 50 miles，最大持續風速 75 mph。Hawaii County 仍在 Hurricane Warning，Big Island 局部降雨最高可能 25 inches。</p><p>不確定性：terrain interaction 可能造成短期路徑和強度變化；洪水和停電影響需要持續更新。</p><p class="source-line">來源｜NHC / AP<br><a href="https://www.nhc.noaa.gov/mobile/text/refresh/HFOTCPCP2+html/152056.shtml">https://www.nhc.noaa.gov/mobile/text/refresh/HFOTCPCP2+html/152056.shtml</a><br><a href="https://apnews.com/article/0c3d63c8a87943cdf8d57c530a7ed9d0">https://apnews.com/article/0c3d63c8a87943cdf8d57c530a7ed9d0</a></p></div>
+          </details>
+          <details class="card">
+            <summary><span class="rank gold">5</span><span class="summary-text"><strong>Indiana 洪水至少 5 死</strong><time datetime="2026-08-15T17:59:29Z">發佈時間｜2026-08-16 01:59:29（Asia/Taipei）</time></span></summary>
+            <div class="details-body"><p>AP 報導 Indianapolis area 遭遇三十多年來最嚴重洪災，至少 5 人死亡。Authorities reported 95 people and 45 pets rescued, more than 350 evacuations, and heavy rain around 11 inches in parts of the region。</p><p>不確定性：死亡、救援與損害統計仍可能更新。</p><p class="source-line">來源｜AP<br><a href="https://apnews.com/article/df4201a28c303852432144447db78cf0">https://apnews.com/article/df4201a28c303852432144447db78cf0</a></p></div>
+          </details>
+          <details class="card">
+            <summary><span class="rank gold">6</span><span class="summary-text"><strong>續報｜Zimbabwe ferry death toll 升至 72</strong><time datetime="2026-08-15T16:50:33Z">發佈時間｜2026-08-16 00:50:33（Asia/Taipei）</time></span></summary>
+            <div class="details-body"><p>AP 報導 Lake Kariba ferry disaster 又尋獲 26 具遺體，總死亡升至 72 人，包含 18 名兒童。船隻安全容量約 90 人，估計可能載至 153 人。</p><p>續報：2026-08-13 已收錄死亡 44；本日新增死亡上修、兒童罹難與遺體尋獲。</p><p class="source-line">來源｜AP<br><a href="https://apnews.com/article/zimbabwe-ferry-capsize-death-toll-rises-children-8c45f83769ef978a64899d851911e8c7">https://apnews.com/article/zimbabwe-ferry-capsize-death-toll-rises-children-8c45f83769ef978a64899d851911e8c7</a></p></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" style="--bg:url('https://images.unsplash.com/photo-1480714378408-67cf0d13bc1f?auto=format&fit=crop&w=1800&q=80'); --pos:center;">
+      <div class="content">
+        <p class="kicker">Global Top 10 · 7-10</p>
+        <h2>朝鮮半島、人權、難民與校園安全</h2>
+        <div class="grid">
+          <details class="card">
+            <summary><span class="rank">7</span><span class="summary-text"><strong>South Korea 總統 Lee 籲與 North Korea 談判終戰</strong><time datetime="2026-08-15T03:58:00Z">發佈時間｜2026-08-15 11:58:00（Asia/Taipei）</time></span></summary>
+            <div class="details-body"><p>Lee Jae Myung 在 Liberation Day speech 呼籲與 North Korea 討論 peaceful coexistence，並將 Korean War armistice 轉向 peace regime。Pyongyang 近年已拒絕多項 engagement offers。</p><p class="source-line">來源｜The Guardian / Reuters<br><a href="https://www.theguardian.com/world/2026/aug/15/south-koreas-lee-urges-talks-with-north-korea-about-finally-ending-korean-war">https://www.theguardian.com/world/2026/aug/15/south-koreas-lee-urges-talks-with-north-korea-about-finally-ending-korean-war</a></p></div>
+          </details>
+          <details class="card">
+            <summary><span class="rank">8</span><span class="summary-text"><strong>Taliban 掌權五週年，UN 警告權利危機</strong><time datetime="2026-08-15T09:39:37Z">發佈時間｜2026-08-15 17:39:37（Asia/Taipei）</time></span></summary>
+            <div class="details-body"><p>Taliban leaders 在 Kabul 標記掌權五週年；UN official warning 聚焦 girls' education、women's rights 與 NGO / aid access。國際承認仍未解。</p><p class="source-line">來源｜CityNews / AP<br><a href="https://montreal.citynews.ca/2026/08/15/while-taliban-leaders-mark-5-years-in-power-in-afghanistan-a-un-official-warns-of-a-rights-crisis/">https://montreal.citynews.ca/2026/08/15/while-taliban-leaders-mark-5-years-in-power-in-afghanistan-a-un-official-warns-of-a-rights-crisis/</a></p></div>
+          </details>
+          <details class="card">
+            <summary><span class="rank">9</span><span class="summary-text"><strong>Myanmar 稱已核查 308,797 名 Rohingya 難民</strong><time datetime="2026-08-15T05:47:44Z">發佈時間｜2026-08-15 13:47:44（Asia/Taipei）</time></span></summary>
+            <div class="details-body"><p>Myanmar junta 稱已在 828,824 名 refugees 中核查 308,797 人為 former residents，另拒絕 113,507 人並稱 4,241 人 linked to terrorism。返鄉安全與 citizenship guarantees 仍不透明。</p><p class="source-line">來源｜AP<br><a href="https://apnews.com/article/89fcdccc35af7126d62ea7331fa8fdbb">https://apnews.com/article/89fcdccc35af7126d62ea7331fa8fdbb</a></p></div>
+          </details>
+          <details class="card">
+            <summary><span class="rank">10</span><span class="summary-text"><strong>Virginia State University 槍擊 5 傷</strong><time datetime="2026-08-15T12:07:44Z">發佈時間｜2026-08-15 20:07:44（Asia/Taipei）</time></span></summary>
+            <div class="details-body"><p>AP 報導 Virginia State University 校園附近槍擊造成 5 人受傷，其中一人為學生。Lockdown 後解除，警方稱可能有 multiple suspects；截點前動機與逮捕狀態未明。</p><p class="source-line">來源｜AP<br><a href="https://apnews.com/article/783d5190d7fe0818fc27a98123311dc3">https://apnews.com/article/783d5190d7fe0818fc27a98123311dc3</a></p></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" style="--bg:url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1800&q=80'); --pos:center;">
+      <div class="content">
+        <p class="kicker">Technology / AI Product News</p>
+        <h2>產品焦點：用量、搜尋交易、agent governance</h2>
+        <div class="grid">
+          <details class="card">
+            <summary><span class="rank">T1</span><span class="summary-text"><strong>OpenAI Enterprise / Edu usage limits 轉 monthly controls</strong><time datetime="2026-08-15T02:10:00Z">發佈時間｜2026-08-15 10:10:00（Asia/Taipei）</time></span></summary>
+            <div class="details-body"><p>OpenAI Help Center 指 remaining weekly role-based limits 於 2026-08-15 自動轉成 monthly Usage limits；未被 monthly setting 覆蓋的 weekly amounts 乘以 4。這會改變 Enterprise / Edu workspace 的 credit governance。</p><p class="source-line">來源｜OpenAI Help Center<br><a href="https://help.openai.com/en/articles/20001001-manage-usage-limits-and-overages-in-chatgpt-enterprise-and-edu">https://help.openai.com/en/articles/20001001-manage-usage-limits-and-overages-in-chatgpt-enterprise-and-edu</a></p></div>
+          </details>
+          <details class="card">
+            <summary><span class="rank">T2</span><span class="summary-text"><strong>續報｜ChatGPT Search 補上 restaurant reservation details</strong><time datetime="2026-08-15T06:10:00Z">發佈時間｜2026-08-15 14:10:00（Asia/Taipei）</time></span></summary>
+            <div class="details-body"><p>OpenAI Search help page 在本視窗內更新，說明 restaurant reservation flow、OpenTable / Resy / Yelp coverage、name/email sharing permission 與取消修改限制。初始 release note 較早，本卡只收官方支援內容更新。</p><p class="source-line">來源｜OpenAI Help Center<br><a href="https://help.openai.com/en/articles/9237897-chatgpt-search">https://help.openai.com/en/articles/9237897-chatgpt-search</a><br><a href="https://help.openai.com/en/articles/6825453-chatgpt-release-notes">https://help.openai.com/en/articles/6825453-chatgpt-release-notes</a></p></div>
+          </details>
+          <details class="card">
+            <summary><span class="rank">T3</span><span class="summary-text"><strong>Google Cloud semantic governance metrics preview</strong><time datetime="2026-08-15T04:00:00Z">發佈時間｜2026-08-15 12:00:00（Asia/Taipei）</time></span></summary>
+            <div class="details-body"><p>Google Cloud release notes August 15 顯示 Gemini Enterprise Agent Platform 的 semantic governance policy engine 可在 Cloud Monitoring 中觀測 throughput、evaluation counts、latencies、ALLOW / DENY verdicts 與 token consumption。</p><p class="source-line">來源｜Google Cloud Release Notes<br><a href="https://docs.cloud.google.com/release-notes">https://docs.cloud.google.com/release-notes</a></p></div>
+          </details>
+          <details class="card">
+            <summary><span class="rank">T4</span><span class="summary-text"><strong>Rime Arcana cloud traffic 轉向 Coda 生效</strong><time datetime="2026-08-15T04:00:00Z">發佈時間｜2026-08-15 12:00:00（Asia/Taipei）</time></span></summary>
+            <div class="details-body"><p>Rime changelog 指 Cloud Arcana requests switch to Coda on August 15, 2026；API contract unchanged，但建議把 `modelId: arcana` 改為 `modelId: coda`。On-prem Arcana images 8 月 15 日後不再支援更新。</p><p class="source-line">來源｜Rime Docs<br><a href="https://docs.rime.ai/docs/changelog">https://docs.rime.ai/docs/changelog</a></p></div>
+          </details>
+          <details class="card">
+            <summary><span class="rank">T5</span><span class="summary-text"><strong>Sim AI Workspace v0.8.2 發布</strong><time datetime="2026-08-15T04:00:00Z">發佈時間｜2026-08-15 12:00:00（Asia/Taipei）</time></span></summary>
+            <div class="details-body"><p>Sim v0.8.2 新增 managed credential groups、9 個 knowledge base connectors、Azure Data Explorer、RabbitMQ 與 Ashby lifecycle operations，並修正 permission group defaulting 與 API correctness gaps。</p><p class="source-line">來源｜Sim AI Workspace Changelog<br><a href="https://www.sim.ai/changelog">https://www.sim.ai/changelog</a></p></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" style="--bg:url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1800&q=80'); --pos:center;">
+      <div class="content">
+        <p class="kicker">Follow-up</p>
+        <h2>後續追蹤卡</h2>
+        <div class="grid three">
+          <details class="card">
+            <summary><span class="rank red">中</span><span class="summary-text"><strong>中東：航母調度、航運保險與 Qatar mediation</strong><time datetime="2026-08-16T00:02:05Z">發佈時間｜2026-08-16 08:02:05（Asia/Taipei）</time></span></summary>
+            <div class="details-body"><p>追蹤 U.S. carrier rotation、西太平洋 replacement posture、Hormuz insurance premiums、Qatar / Iran pilot dispute、UAE vessel verification 與 Lebanon ceasefire monitoring。</p><p class="source-line">來源｜Source Notes<br><a href="https://lucaskk.github.io/daily-news/wiki/daily/2026/08/2026-08-16/source-notes-2026-08-16.md">https://lucaskk.github.io/daily-news/wiki/daily/2026/08/2026-08-16/source-notes-2026-08-16.md</a></p></div>
+          </details>
+          <details class="card">
+            <summary><span class="rank gold">災</span><span class="summary-text"><strong>災害：Lala、Indiana、Zimbabwe、VSU</strong><time datetime="2026-08-16T00:02:05Z">發佈時間｜2026-08-16 08:02:05（Asia/Taipei）</time></span></summary>
+            <div class="details-body"><p>追蹤 Lala rainfall/outage、Indiana federal aid、Zimbabwe passenger manifest and overloading accountability、Virginia State University arrests and victim condition updates。</p><p class="source-line">來源｜Daily Report<br><a href="https://lucaskk.github.io/daily-news/wiki/daily/2026/08/2026-08-16/daily-news-2026-08-16.md">https://lucaskk.github.io/daily-news/wiki/daily/2026/08/2026-08-16/daily-news-2026-08-16.md</a></p></div>
+          </details>
+          <details class="card">
+            <summary><span class="rank">AI</span><span class="summary-text"><strong>AI：治理層比模型發布更重要</strong><time datetime="2026-08-16T00:02:05Z">發佈時間｜2026-08-16 08:02:05（Asia/Taipei）</time></span></summary>
+            <div class="details-body"><p>下一步追蹤 OpenAI monthly usage limits 的 admin impact、ChatGPT reservation partner expansion、Google semantic governance metrics pricing / rollout、Rime Coda regressions and Sim connector adoption。</p><p class="source-line">來源｜Daily Report<br><a href="https://lucaskk.github.io/daily-news/wiki/daily/2026/08/2026-08-16/daily-news-2026-08-16.md">https://lucaskk.github.io/daily-news/wiki/daily/2026/08/2026-08-16/daily-news-2026-08-16.md</a></p></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" style="--bg:url('https://images.unsplash.com/photo-1495020689067-958852a7765e?auto=format&fit=crop&w=1800&q=80'); --pos:center;">
+      <div class="content">
+        <p class="kicker">Attribution</p>
+        <h2>圖片來源與完整入口</h2>
+        <div class="grid three">
+          <details class="card">
+            <summary><span class="rank">1</span><span class="summary-text"><strong>Title / newsroom background</strong><time datetime="2026-08-16T00:02:05Z">發佈時間｜2026-08-16 08:02:05（Asia/Taipei）</time></span></summary>
+            <div class="details-body"><p>Background image provider: Unsplash stable image URL.</p><p class="source-line">來源｜Unsplash<br><a href="https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&w=1800&q=80">https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&w=1800&q=80</a></p></div>
+          </details>
+          <details class="card">
+            <summary><span class="rank">2</span><span class="summary-text"><strong>Map / world background</strong><time datetime="2026-08-16T00:02:05Z">發佈時間｜2026-08-16 08:02:05（Asia/Taipei）</time></span></summary>
+            <div class="details-body"><p>Background image provider: Unsplash stable image URL.</p><p class="source-line">來源｜Unsplash<br><a href="https://images.unsplash.com/photo-1521295121783-8a321d551ad2?auto=format&fit=crop&w=1800&q=80">https://images.unsplash.com/photo-1521295121783-8a321d551ad2?auto=format&fit=crop&w=1800&q=80</a></p></div>
+          </details>
+          <details class="card">
+            <summary><span class="rank">3</span><span class="summary-text"><strong>City / conflict background</strong><time datetime="2026-08-16T00:02:05Z">發佈時間｜2026-08-16 08:02:05（Asia/Taipei）</time></span></summary>
+            <div class="details-body"><p>Background image provider: Unsplash stable image URL.</p><p class="source-line">來源｜Unsplash<br><a href="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1800&q=80">https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1800&q=80</a></p></div>
+          </details>
+          <details class="card">
+            <summary><span class="rank">4</span><span class="summary-text"><strong>Ocean / storm background</strong><time datetime="2026-08-16T00:02:05Z">發佈時間｜2026-08-16 08:02:05（Asia/Taipei）</time></span></summary>
+            <div class="details-body"><p>Background image provider: Unsplash stable image URL.</p><p class="source-line">來源｜Unsplash<br><a href="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1800&q=80">https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1800&q=80</a></p></div>
+          </details>
+          <details class="card">
+            <summary><span class="rank">5</span><span class="summary-text"><strong>Technology background</strong><time datetime="2026-08-16T00:02:05Z">發佈時間｜2026-08-16 08:02:05（Asia/Taipei）</time></span></summary>
+            <div class="details-body"><p>Background image provider: Unsplash stable image URL.</p><p class="source-line">來源｜Unsplash<br><a href="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1800&q=80">https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1800&q=80</a></p></div>
+          </details>
+          <details class="card">
+            <summary><span class="rank">6</span><span class="summary-text"><strong>Earth / follow-up background</strong><time datetime="2026-08-16T00:02:05Z">發佈時間｜2026-08-16 08:02:05（Asia/Taipei）</time></span></summary>
+            <div class="details-body"><p>Background image provider: Unsplash stable image URL.</p><p class="source-line">來源｜Unsplash<br><a href="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1800&q=80">https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1800&q=80</a></p></div>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <nav class="controls" aria-label="投影片控制">
+    <button id="prev" aria-label="上一頁">‹</button>
+    <div class="counter"><span id="current">1</span>/<span id="total">8</span></div>
+    <button id="next" aria-label="下一頁">›</button>
+  </nav>
+  <div class="progress"><div class="bar" id="bar"></div></div>
+
+  <script>
+    const slides = [...document.querySelectorAll('.slide')];
+    const current = document.getElementById('current');
+    const total = document.getElementById('total');
+    const bar = document.getElementById('bar');
+    let index = 0;
+    total.textContent = slides.length;
+    function show(nextIndex) {
+      index = Math.max(0, Math.min(slides.length - 1, nextIndex));
+      slides.forEach((slide, i) => slide.classList.toggle('active', i === index));
+      current.textContent = String(index + 1);
+      bar.style.width = `${((index + 1) / slides.length) * 100}%`;
+    }
+    document.getElementById('prev').addEventListener('click', () => show(index - 1));
+    document.getElementById('next').addEventListener('click', () => show(index + 1));
+    document.addEventListener('keydown', (event) => {
+      if (['ArrowRight', 'PageDown', ' '].includes(event.key)) show(index + 1);
+      if (['ArrowLeft', 'PageUp'].includes(event.key)) show(index - 1);
+      if (event.key === 'Home') show(0);
+      if (event.key === 'End') show(slides.length - 1);
+    });
+    let touchX = null;
+    document.addEventListener('touchstart', (event) => {
+      touchX = event.changedTouches[0].clientX;
+    }, { passive: true });
+    document.addEventListener('touchend', (event) => {
+      if (touchX === null) return;
+      const diff = event.changedTouches[0].clientX - touchX;
+      if (Math.abs(diff) > 48) show(index + (diff < 0 ? 1 : -1));
+      touchX = null;
+    }, { passive: true });
+    show(0);
+  </script>
+</body>
+</html>

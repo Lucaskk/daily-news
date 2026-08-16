@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2026-08-13 每日全球與科技 AI 新聞</title>
+<!--
+Image attributions are also visible on the final slide.
+Unsplash images are used as thematic backgrounds only, not as factual news sources.
+Version: 20260813-081308-ai-news-r1
+-->
+<style>
+:root{color-scheme:light;--ink:#172033;--muted:#526070;--line:#d8e0e8;--panel:rgba(255,255,255,.88);--accent:#0f766e;--accent2:#b45309;--shadow:0 18px 50px rgba(15,23,42,.18)}
+*{box-sizing:border-box}
+body{margin:0;background:#edf2f7;color:var(--ink);font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;letter-spacing:0}
+a{color:#0f766e;word-break:break-all}
+.deck{min-height:100dvh;position:relative;overflow:hidden}
+.slide{display:none;min-height:100dvh;padding:clamp(18px,3vw,44px);overflow-y:auto;background-image:linear-gradient(90deg,rgba(248,250,252,.94),rgba(248,250,252,.86)),var(--bg);background-size:cover;background-position:center}
+.slide.active{display:flex}
+.wrap{width:min(1180px,100%);margin:auto;display:grid;gap:22px}
+.kicker{margin:0;color:var(--accent);font-weight:750;text-transform:uppercase;font-size:.82rem}
+h1,h2{margin:0;line-height:1.08;font-weight:800;letter-spacing:0}
+h1{font-size:clamp(2.2rem,6vw,5.2rem);max-width:980px}
+h2{font-size:clamp(1.8rem,4vw,3.4rem);max-width:900px}
+.lead{max-width:920px;margin:0;color:#263447;font-size:clamp(1.02rem,2vw,1.35rem);line-height:1.65}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.grid.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+details.card{background:var(--panel);border:1px solid rgba(15,23,42,.12);border-radius:8px;box-shadow:var(--shadow);overflow:hidden}
+details.card summary{cursor:pointer;list-style:none;padding:15px 16px;font-weight:750;display:grid;gap:7px}
+details.card summary::-webkit-details-marker{display:none}
+details.card summary::after{content:"展開";justify-self:start;color:#fff;background:var(--accent);font-size:.74rem;border-radius:999px;padding:3px 9px}
+details.card[open] summary::after{content:"收合";background:#64748b}
+.rank{color:var(--accent2);font-size:.8rem;font-weight:800}
+.time{display:block;color:var(--muted);font-size:.78rem;font-weight:650}
+.body{padding:0 16px 16px;color:#243244;line-height:1.55;font-size:.96rem}
+.body ul{margin:8px 0 0;padding-left:1.1rem}
+.body li{margin:5px 0}
+.source-line{margin:12px 0 0;padding-top:10px;border-top:1px solid var(--line);font-size:.82rem;color:#334155}
+.nav{position:fixed;left:50%;bottom:16px;transform:translateX(-50%);display:flex;gap:8px;align-items:center;background:rgba(255,255,255,.9);border:1px solid rgba(15,23,42,.15);border-radius:999px;padding:8px;box-shadow:0 12px 30px rgba(15,23,42,.14);z-index:5}
+button{border:0;border-radius:999px;background:#0f766e;color:white;font-weight:800;padding:10px 14px;cursor:pointer}
+button.secondary{background:#e2e8f0;color:#172033}
+.count{font-variant-numeric:tabular-nums;color:#334155;font-weight:800;min-width:64px;text-align:center}
+.dots{display:flex;gap:5px}
+.dot{width:8px;height:8px;border-radius:50%;background:#cbd5e1}
+.dot.active{background:#0f766e}
+.note{font-size:.85rem;color:#475569}
+@media (max-width:820px){
+  .slide{padding:16px 14px 86px}
+  .grid,.grid.three{grid-template-columns:1fr}
+  .nav{bottom:10px;width:calc(100% - 20px);justify-content:space-between}
+  .dots{display:none}
+  button{padding:10px 12px}
+}
+</style>
+</head>
+<body>
+<main class="deck" aria-live="polite">
+  <section class="slide active" style="--bg:url('https://images.unsplash.com/photo-1495020689067-958852a7765e?auto=format&fit=crop&w=1800&q=80')">
+    <div class="wrap">
+      <p class="kicker">Daily Global + Tech AI News</p>
+      <h1>2026-08-13 每日全球與科技 AI 新聞</h1>
+      <p class="lead">研究截點：2026-08-13 08:13:08（Asia/Taipei）。精確窗口：2026-08-12 08:13:08 至 2026-08-13 08:13:08。</p>
+      <div class="grid three" id="introCards"></div>
+    </div>
+  </section>
+
+  <section class="slide" style="--bg:url('https://images.unsplash.com/photo-1582719471384-894fbb16e074?auto=format&fit=crop&w=1800&q=80')">
+    <div class="wrap">
+      <p class="kicker">Top 10 Global</p>
+      <h2>公共衛生、戰爭與重大公共事件</h2>
+      <p class="lead">Congo Ebola 進入歷史級風險，Ukraine 對 Russia 黑海基地的攻擊擴大戰場外溢，Spain 日食則帶來大規模群眾與科學傳播事件。</p>
+      <div class="grid" id="worldA"></div>
+    </div>
+  </section>
+
+  <section class="slide" style="--bg:url('https://images.unsplash.com/photo-1566576721346-d4a3b4eaeb55?auto=format&fit=crop&w=1800&q=80')">
+    <div class="wrap">
+      <p class="kicker">Top 10 Global</p>
+      <h2>軍事責任、撤軍時程與交通安全</h2>
+      <p class="lead">Iraq withdrawal、Gaza strike and Yemen civilian-casualty review 把軍事決策推到可驗證問責；Zimbabwe and Indonesia ferry incidents 暴露運輸治理缺口。</p>
+      <div class="grid" id="worldB"></div>
+    </div>
+  </section>
+
+  <section class="slide" style="--bg:url('https://images.unsplash.com/photo-1498822260655-9272603a13f9?auto=format&fit=crop&w=1800&q=80')">
+    <div class="wrap">
+      <p class="kicker">Top 10 Global</p>
+      <h2>航運瓶頸與價格壓力</h2>
+      <p class="lead">Panama canal fees and U.S. CPI show war, weather and AI infrastructure demand entering shipping and consumer prices.</p>
+      <div class="grid" id="worldC"></div>
+    </div>
+  </section>
+
+  <section class="slide" style="--bg:url('https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=1800&q=80')">
+    <div class="wrap">
+      <p class="kicker">Technology / AI</p>
+      <h2>Google hardware event：AI 進入手機、手錶、追蹤器與跨 app 工作流</h2>
+      <p class="lead">Pixel 11、Pixel Watch 5、Pixel Tag and Gemini connected apps show Google pushing Gemini from app into device-level actions.</p>
+      <div class="grid" id="techGoogle"></div>
+    </div>
+  </section>
+
+  <section class="slide" style="--bg:url('https://images.unsplash.com/photo-1518779578993-ec3579fee39f?auto=format&fit=crop&w=1800&q=80')">
+    <div class="wrap">
+      <p class="kicker">Technology / AI</p>
+      <h2>Agents、BYOC 與 creator data rights</h2>
+      <p class="lead">GitHub and LangChain strengthen agent deployment surfaces, while Twitch and Facebook expose the governance layer around creator data and AI-assisted publishing.</p>
+      <div class="grid" id="techAgents"></div>
+    </div>
+  </section>
+
+  <section class="slide" style="--bg:url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1800&q=80')">
+    <div class="wrap">
+      <p class="kicker">Technology / AI</p>
+      <h2>內容授權、垂直 agent 與企業採用訊號</h2>
+      <p class="lead">Apple publisher talks, Ahrefs Letaido and OpenAI enterprise reports frame AI product value through licensed content, domain data and measurable workflow depth.</p>
+      <div class="grid" id="techMarket"></div>
+    </div>
+  </section>
+
+  <section class="slide" style="--bg:url('https://images.unsplash.com/photo-1492724441997-5dc865305da7?auto=format&fit=crop&w=1800&q=80')">
+    <div class="wrap">
+      <p class="kicker">Follow Up</p>
+      <h2>今日後續追蹤</h2>
+      <p class="lead">這些不是新增新聞量，而是後續查詢時最需要保持上下文的追蹤方向。</p>
+      <div class="grid" id="followCards"></div>
+    </div>
+  </section>
+
+  <section class="slide" style="--bg:url('https://images.unsplash.com/photo-1495020689067-958852a7765e?auto=format&fit=crop&w=1800&q=80')">
+    <div class="wrap">
+      <p class="kicker">Sources</p>
+      <h2>來源與圖像註記</h2>
+      <p class="lead">新聞來源分散在 AP、The Guardian、TechCrunch、Google、GitHub、LangChain、OpenAI、SiliconANGLE、WSJ / Reuters summary。圖片只作主題背景。</p>
+      <div class="grid" id="sourceCards"></div>
+      <p class="note">所有新聞卡的展開內容均以自己的來源標籤與完整 URL 結尾。</p>
+    </div>
+  </section>
+</main>
+
+<nav class="nav" aria-label="投影片導覽">
+  <button class="secondary" id="prevBtn" type="button" aria-label="上一頁">←</button>
+  <span class="count" id="count">1 / 9</span>
+  <div class="dots" id="dots" aria-hidden="true"></div>
+  <button id="nextBtn" type="button" aria-label="下一頁">→</button>
+</nav>
+
+<script>
+const intro = [
+  {rank:"窗口",title:"精確 24 小時範圍",time:"2026-08-12 08:13:08 至 2026-08-13 08:13:08（Asia/Taipei）",iso:"2026-08-12T00:13:08Z",why:"本次只收錄在此窗口內發生、正式發布或首次可靠發布的事件。date-level 官方頁會明確標註，不假裝成秒級來源。",facts:["全球新聞固定 10 則。","科技／AI 收錄 11 則產品、平台、資料權利與採用信號。","所有卡片均可展開，且卡片內有自己的完整來源 URL。"],source:"來源：本地產製規則 - https://lucaskk.github.io/daily-news/wiki/daily/README.md"},
+  {rank:"綜合判讀",title:"執行、問責與成本傳導",time:"2026-08-13 08:13:08（Asia/Taipei）",iso:"2026-08-13T00:13:08Z",why:"今日主軸不是單一大事件，而是多條危機進入可驗證細節：疫情曲線、撤軍時程、民航海運安全、通膨與航道費率。",facts:["Ebola and Ukraine are material continuations, not duplicate captures.","Iraq withdrawal and Yemen review create accountability timestamps.","Panama canal and CPI link war / weather / AI spending to price pressure."],source:"來源：今日報告 - https://lucaskk.github.io/daily-news/wiki/daily/2026/08/2026-08-13/daily-news-2026-08-13.md"},
+  {rank:"科技主軸",title:"AI 從模型進入裝置、工作流與內容權利",time:"2026-08-13 08:13:08（Asia/Taipei）",iso:"2026-08-13T00:13:08Z",why:"Google 的硬體發布帶出裝置端 AI，GitHub / LangSmith 聚焦 agent infrastructure，Twitch / Apple / Facebook / Ahrefs / OpenAI 則把 AI 放進內容、授權與企業流程。",facts:["Pixel 11 uses Tensor G6 and Gemini Intelligence as headline platform layer.","Agent Plugins and BYOC both target enterprise deployment governance.","Creator and publisher content rights are now product strategy, not only legal footnotes."],source:"來源：Source notes - https://lucaskk.github.io/daily-news/wiki/daily/2026/08/2026-08-13/source-notes-2026-08-13.md"}
+];
+
+const world = [
+  {rank:"G1",title:"續報｜WHO 警告 Congo Ebola 疫情恐超越史上最致命紀錄",time:"2026-08-12 23:08:55（Asia/Taipei）",iso:"2026-08-12T15:08:55Z",why:"Congo Ebola 從持續擴散推進到可能刷新死亡紀錄的公共衛生節點。",facts:["AP 引述 WHO chief 表示疫情 on track to surpass history's deadliest one。","已逾 4,300 cases / 2,000 deaths。","兩款 Bundibugyo vaccines 正首次於人類疫情中測試。"],source:"來源：AP News - https://apnews.com/article/congo-ebola-outbreak-africa-who-d9bb9bfa9816e278ba36a2382334d65f"},
+  {rank:"G2",title:"續報｜Ukraine 襲擊 Novorossiysk，重創 Russia 黑海艦隊基地與穀物碼頭",time:"2026-08-12 17:20:11（Asia/Taipei）",iso:"2026-08-12T09:20:11Z",why:"Novorossiysk 是 Russia Black Sea Fleet 重要基地；港口與 grain terminals 受損會外溢到 naval operations and shipping。",facts:["Zelenskyy described a unique operation on Novorossiysk。","AP 報導 targets included naval base, air defenses and port infrastructure。","Two of three grain terminals reportedly damaged, with one halting operations."],source:"來源：AP News - https://apnews.com/article/russia-ukraine-black-sea-attack-9eadff0d7590923e3d98c99e2b61150b"},
+  {rank:"G3",title:"Spain 逾百年首見 total solar eclipse，歐洲多地同步觀測",time:"2026-08-12 16:04:47（Asia/Taipei）",iso:"2026-08-12T08:04:47Z",why:"這是高關注度自然事件，也測試城市 crowd management, transport and science communication。",facts:["AP 報導 millions crowded Spanish cities and towns。","Totality path also crossed Iceland and Greenland。","本項是天文與公共管理事件，不作為災害或氣候事件解讀。"],source:"來源：AP News - https://apnews.com/article/solar-eclipse-spain-europe-iceland-sun-4748323b3df8272d546683cc1dbc1d15"},
+  {rank:"G4",title:"U.S. military 將於 9 月底前完成 Iraq withdrawal",time:"2026-08-13 01:16:17（Asia/Taipei）",iso:"2026-08-12T17:16:17Z",why:"這是 2003 年 Iraq War 以來 U.S. military presence 的重大收束節點。",facts:["AP 引述 Iraqi PM statement and U.S. official confirmation。","U.S. forces are on track to pull all forces out by Sept. 30。","撤軍不等於 U.S. regional military posture 全面下降。"],source:"來源：AP News - https://apnews.com/article/iraq-us-withdrawal-7d050ff17a0c52298207bd9e60851fcd"},
+  {rank:"G5",title:"續報｜Israel 稱 Gaza 北部 drone strike 鎖定 Hamas commander",time:"2026-08-12 17:52:34（Asia/Taipei）",iso:"2026-08-12T09:52:34Z",why:"Gaza peace pressure 下仍出現 publicly announced targeted strike，顯示談判與軍事行動並行。",facts:["Israel military said it struck a Hamas commander in northern Gaza。","AP says this is Israel's first announced targeted strike since Aug. 3。","Target identity and civilian impact remain externally unconfirmed."],source:"來源：AP News - https://apnews.com/article/iran-us-strait-hormuz-yemen-houthi-august-12-2026-870153cd1ea715829c5f15c9757f4e60"},
+  {rank:"G6",title:"續報｜Pentagon review 指 U.S. strikes 造成 153 名 Yemen civilians 死亡",time:"2026-08-13 02:17:03（Asia/Taipei）",iso:"2026-08-12T18:17:03Z",why:"Yemen / Houthi conflict 進入 civilian harm accountability，影響 congressional oversight and rules of engagement。",facts:["Pentagon review found U.S. strikes targeting Houthis last year killed 153 civilians。","The unclassified assessment was sent to Congress。","Local or human-rights counts may differ by methodology."],source:"來源：AP News - https://apnews.com/article/yemen-civilians-killed-pentagon-houthis-c5e2190729a93aa54f6a4d5d1232fce3"},
+  {rank:"G7",title:"Zimbabwe Lake Kariba ferry capsizing 死亡升至 44",time:"2026-08-12 19:55:01（Asia/Taipei）",iso:"2026-08-12T11:55:01Z",why:"Capacity 90 的 ferry estimated at up to 153 aboard，暴露公共運輸安全和清冊治理缺口。",facts:["AP reports at least 44 dead。","Survivors said passengers pleaded with the captain to turn back。","President Emmerson Mnangagwa declared a state of disaster."],source:"來源：AP News - https://apnews.com/article/zimbabwe-ferry-capsize-deaths-kariba-9e18737fb13970ce3b458a466a0dfbe3"},
+  {rank:"G8",title:"Indonesia Bali-Lombok ferry fire，211 人獲救、至少 1 死",time:"2026-08-12 12:02:53（Asia/Taipei）",iso:"2026-08-12T04:02:53Z",why:"Bali-Lombok corridor 是觀光與民生交通線；rough seas 中的 ferry fire 測試 evacuation capacity。",facts:["AP says rescuers evacuated 211 people。","One passenger body was recovered。","Putri Yasmin caught fire in Lombok Strait shortly after departure."],source:"來源：AP News - https://apnews.com/article/indonesia-bali-lombok-ferry-fire-ab527cf29730147f86c4c82f341584eb"},
+  {rank:"G9",title:"Panama canal fees 因 Iran war and El Nino 飆升",time:"2026-08-12 20:26:48（Asia/Taipei）",iso:"2026-08-12T12:26:48Z",why:"Global trade chokepoint 的 fee surge 會傳導到 shipping, energy, food and consumer prices。",facts:["The Guardian reports canal fees soared due to Iran war and El Nino。","One ship reportedly paid $4m to jump queue。","Falling water levels are expected to limit transit slots."],source:"來源：The Guardian - https://www.theguardian.com/business/2026/aug/12/panama-canal-fees-iran-war-el-nino-ship-jump-queue"},
+  {rank:"G10",title:"U.S. July inflation 降至 3.4%，AI spending 仍推高部分價格",time:"2026-08-12 12:01:06（Asia/Taipei）",iso:"2026-08-12T04:01:06Z",why:"Headline CPI cooling reduces some Fed pressure, but Iran war and AI infrastructure demand remain visible in price channels。",facts:["Consumer prices rose 3.4% year over year, down from 3.5%。","Monthly prices rose 0.1%；core inflation slipped to 2.5%。","AP notes airfares, computers and used cars still grew last month."],source:"來源：AP News - https://apnews.com/article/consumer-prices-inflation-fed-interest-rates-150e179a6c6b3182ba05cedf0188394b"}
+];
+
+const tech = [
+  {rank:"T1",title:"Google 發布 Pixel 11 series，Tensor G6 and Gemini Intelligence 成核心賣點",time:"2026-08-12 22:00:06（Asia/Taipei）",iso:"2026-08-12T14:00:06Z",why:"Pixel 11 is Google's annual test of whether mobile AI features can justify premium hardware pricing.",facts:["Google says Pixel 11 / Pro / Pro XL use Tensor G6 and latest Gemini Nano。","AP reports starting prices around $900 / $1,100 / $1,300, with Pro Fold at $1,900。","Pro models include HiLight LED notification system and six months of Google AI Pro."],source:"來源：Google Blog - https://blog.google/products-and-platforms/devices/pixel/google-pixel-11-pro-xl/；AP News - https://apnews.com/article/3bbad7afc4d25e15527477123415e50a"},
+  {rank:"T2",title:"Pixel Watch 5 推出 proactive Gemini and Health Guardian",time:"2026-08-12 08:13:08（Asia/Taipei；date-level）",iso:"2026-08-12T00:13:08Z",why:"Wearables are shifting from tracking to proactive health and AI assistance on the wrist.",facts:["Google highlights proactive Gemini, Health Guardian and most accurate GPS route tracking yet。","Features include breathing emergency detection and monthly wellness trend summaries。","Pre-order starts Aug. 12; availability begins Aug. 20."],source:"來源：Google Blog - https://blog.google/products-and-platforms/devices/pixel/pixel-watch-5/"},
+  {rank:"T3",title:"Google Pixel Tag 正式登場，Find Hub 補上第一方 tracker",time:"2026-08-12 08:13:08（Asia/Taipei；date-level）",iso:"2026-08-12T00:13:08Z",why:"Pixel Tag gives Android / Find Hub a first-party tracker and creates a direct AirTag-like ecosystem layer.",facts:["Google says Pixel Tag uses Find Hub network。","$29 single / $99 four-pack; launch Nov. 11。","Includes UWB with Bluetooth Channel Sounding and sharing with up to 10 people."],source:"來源：Google Blog - https://blog.google/products-and-platforms/devices/pixel/google-pixel-tag/"},
+  {rank:"T4",title:"Gemini 新增 connected apps and services",time:"2026-08-12 08:13:08（Asia/Taipei；date-level）",iso:"2026-08-12T00:13:08Z",why:"Assistant value is moving from chat to actions across apps and services.",facts:["Google announced a new slate of connected apps at Made by Google。","The feature aims to help users plan, create and manage to-do lists in one place。","Rollout happens over the next few weeks."],source:"來源：Google Blog - https://blog.google/innovation-and-ai/products/gemini-app/new-connected-apps-services-gemini-august-2026/"},
+  {rank:"T5",title:"GitHub Agent Plugins 1.0 support 在 Copilot clients GA",time:"2026-08-12 08:13:08（Asia/Taipei；date-level）",iso:"2026-08-12T00:13:08Z",why:"Portable skills + MCP packages can reduce agent-tool duplication across IDEs, CLIs and apps.",facts:["Support is generally available in VS Code, Copilot CLI, GitHub Copilot SDK and Copilot app。","Agent Plugins 1.0 packages skills and MCP servers into one installable plugin。","Managed settings can govern plugins, marketplaces and MCP allowlists."],source:"來源：GitHub Changelog - https://github.blog/changelog/2026-08-12-agent-plugins-1-0-in-vs-code-copilot-cli-and-the-copilot-app/"},
+  {rank:"T6",title:"LangSmith BYOC on AWS GA",time:"2026-08-12 08:13:08（Asia/Taipei；date-level）",iso:"2026-08-12T00:13:08Z",why:"Agent observability and evaluation are moving into customer-controlled cloud boundaries.",facts:["LangChain says BYOC is generally available on AWS for Enterprise customers。","Sensitive LangSmith data can stay in the customer's AWS account and VPC。","Available across 15 AWS regions in U.S., EU and APAC."],source:"來源：LangChain Blog - https://www.langchain.com/blog/langsmith-byoc-is-now-generally-available-on-aws"},
+  {rank:"T7",title:"Twitch 將 creator content 預設用於 Amazon generative AI training",time:"2026-08-13 04:10:40（Asia/Taipei）",iso:"2026-08-12T20:10:40Z",why:"Opt-out training makes creator consent and platform data rights a product governance issue.",facts:["TechCrunch reports Amazon will train on Twitch streamers' content by default。","Creators can opt out through a setting。","The policy triggered backlash because creator content becomes input for Amazon AI models."],source:"來源：TechCrunch - https://techcrunch.com/2026/08/12/amazon-will-train-on-twitch-streamers-content-by-default-unless-they-opt-out/"},
+  {rank:"T8",title:"Facebook 推出 standalone Creator Studio app with AI tools",time:"2026-08-12 23:56:13（Asia/Taipei）",iso:"2026-08-12T15:56:13Z",why:"Meta is packaging AI analytics and reply drafting into creator operations, not just consumer chat.",facts:["The app includes Facebook's AI creator assistant。","AI assistant gives personalized recommendations based on content style, performance, audience and goals。","An AI-powered comment tool can draft replies in the creator's tone."],source:"來源：TechCrunch - https://techcrunch.com/2026/08/12/facebook-officially-rolls-out-its-standalone-creator-studio-app-with-ai-tools-for-creators/"},
+  {rank:"T9",title:"Apple reportedly negotiating publisher payments for AI-powered Siri",time:"2026-08-13 06:32:00（Asia/Taipei）",iso:"2026-08-12T22:32:00Z",why:"AI assistants need fresh licensed information; publisher deals could become a core cost of answer products.",facts:["WSJ report says Apple is in talks to pay publishers to improve Siri。","Reuters / TradingView summary says compensation may vary with usage。","This is a reported negotiation, not an official Apple announcement."],source:"來源：WSJ - https://www.wsj.com/business/media/apple-in-talks-to-pay-publishers-to-improve-ai-powered-siri-0641f64b；TradingView / Reuters - https://www.tradingview.com/news/reuters.com%2C2026%3Anewsml_FWN4491DF%3A0-apple-in-talks-to-pay-publishers-to-improve-ai-powered-siri-wsj/"},
+  {rank:"T10",title:"Ahrefs launches Letaido agent-powered marketing workspace",time:"2026-08-12 21:00:00（Asia/Taipei）",iso:"2026-08-12T13:00:00Z",why:"Vertical AI agents gain value when tied to proprietary domain data, permissions and recurring workflows.",facts:["SiliconANGLE reports Ahrefs launched Letaido for marketers and agencies。","Letaido targets recurring research, reporting and monitoring work。","Ahrefs pages describe native data access, shared workspace and audit logs."],source:"來源：SiliconANGLE - https://siliconangle.com/2026/08/12/ahrefs-launches-ai-agent-workspace-letaido-marketers-agencies/；Ahrefs - https://ahrefs.com/agent-a"},
+  {rank:"T11",title:"OpenAI publishes enterprise AI reports on agentic use gap",time:"2026-08-12 08:13:08（Asia/Taipei；date-level）",iso:"2026-08-12T00:13:08Z",why:"The report is not a single product launch, but it provides a benchmark for ChatGPT Work, Codex, Plugins and skills adoption.",facts:["Frontier firms generate 8.3x output tokens per active user versus typical firms。","As of June, Codex generated 64% of combined Codex and ChatGPT enterprise output tokens。","Weekly active enterprise Codex users grew 108x in legal since February."],source:"來源：OpenAI - https://openai.com/index/how-enterprises-put-ai-to-work/"}
+];
+
+const follow = [
+  {rank:"F1",title:"Congo Ebola vaccine and spread watch",time:"2026-08-13 08:13:08（Asia/Taipei）",iso:"2026-08-13T00:13:08Z",why:"The next material update is whether case growth, deaths or vaccine-trial signals change the outbreak trajectory.",facts:["Watch WHO and Africa CDC situation reports。","Track cross-border spread and Kinshasa-related mobility。","Separate official counts from media-estimated death totals."],source:"來源：AP News - https://apnews.com/article/congo-ebola-outbreak-africa-who-d9bb9bfa9816e278ba36a2382334d65f"},
+  {rank:"F2",title:"Black Sea and Panama canal price chain",time:"2026-08-13 08:13:08（Asia/Taipei）",iso:"2026-08-13T00:13:08Z",why:"Novorossiysk and Panama canal events both affect shipping risk, but through different mechanisms: military damage vs chokepoint pricing.",facts:["Check satellite / port status for Novorossiysk。","Check canal authority slots and auction prices。","Watch grain and freight market reactions."],source:"來源：The Guardian - https://www.theguardian.com/business/2026/aug/12/panama-canal-fees-iran-war-el-nino-ship-jump-queue"},
+  {rank:"F3",title:"AI content rights: Twitch and Apple",time:"2026-08-13 08:13:08（Asia/Taipei）",iso:"2026-08-13T00:13:08Z",why:"Creator opt-out policies and publisher payment talks are two sides of AI data legitimacy.",facts:["Twitch shows the backlash risk of default training rights。","Apple talks show paid current-information access becoming strategic。","Both can change model costs and product rollout speed."],source:"來源：TechCrunch - https://techcrunch.com/2026/08/12/amazon-will-train-on-twitch-streamers-content-by-default-unless-they-opt-out/"},
+  {rank:"F4",title:"Pixel 11 reviews and Gemini permission scope",time:"2026-08-13 08:13:08（Asia/Taipei）",iso:"2026-08-13T00:13:08Z",why:"The product question is whether Gemini Intelligence works reliably enough to justify phone, watch and connected-app adoption.",facts:["Watch independent reviews for camera, battery and on-device AI claims。","Check regional rollout and account eligibility。","Inspect connected-app permission defaults before treating Gemini as a workflow platform."],source:"來源：Google Blog - https://blog.google/products-and-platforms/devices/pixel/google-pixel-11-pro-xl/"}
+];
+
+const imageSources = [
+  {rank:"IMG",title:"新聞室與全球資訊流",time:"Background image",iso:"2026-08-13T00:13:08Z",why:"Title and source slides use a newsroom background to indicate daily global synthesis.",facts:["Unsplash / Roman Kraft。","Image URL: https://images.unsplash.com/photo-1495020689067-958852a7765e?auto=format&fit=crop&w=1800&q=80"],source:"來源：Unsplash - https://unsplash.com/photos/turned-on-flat-screen-monitor-QgX1ET--cdg"},
+  {rank:"IMG",title:"公共衛生與實驗室",time:"Background image",iso:"2026-08-13T00:13:08Z",why:"Used for the public health and global crisis slide.",facts:["Unsplash / National Cancer Institute。","Image URL: https://images.unsplash.com/photo-1582719471384-894fbb16e074?auto=format&fit=crop&w=1800&q=80"],source:"來源：Unsplash - https://unsplash.com/photos/woman-in-blue-scrub-suit-holding-white-paper-6l4GBNyXLPY"},
+  {rank:"IMG",title:"港口與航運",time:"Background image",iso:"2026-08-13T00:13:08Z",why:"Used for maritime, withdrawal, accountability and transport topics.",facts:["Unsplash / CHUTTERSNAP。","Image URL: https://images.unsplash.com/photo-1566576721346-d4a3b4eaeb55?auto=format&fit=crop&w=1800&q=80"],source:"來源：Unsplash - https://unsplash.com/photos/white-cargo-ship-on-sea-during-daytime-9cCeS9Sg6nU"},
+  {rank:"IMG",title:"AI、裝置與開發者工作流",time:"Background image",iso:"2026-08-13T00:13:08Z",why:"Used for Google hardware, agent tooling and enterprise AI slides.",facts:["Unsplash / Alexandre Debieve, Jefferson Santos and Jonas Leupe。","Images are thematic only and not evidence for product details."],source:"來源：Unsplash - https://unsplash.com/photos/turned-on-blue-and-white-electronic-device-FO7JIlwjOtU"}
+];
+
+function renderCard(item){
+  const facts = item.facts.map(f => `<li>${f}</li>`).join("");
+  return `<details class="card"><summary><span class="rank">${item.rank}</span><span>${item.title}</span><time class="time" datetime="${item.iso}">${item.time}</time></summary><div class="body"><p>${item.why}</p><ul>${facts}</ul><p class="source-line">${item.source}</p></div></details>`;
+}
+
+function mount(id, items){document.getElementById(id).innerHTML = items.map(renderCard).join("");}
+mount("introCards", intro);
+mount("worldA", world.slice(0,4));
+mount("worldB", world.slice(4,8));
+mount("worldC", world.slice(8));
+mount("techGoogle", tech.slice(0,4));
+mount("techAgents", tech.slice(4,8));
+mount("techMarket", tech.slice(8));
+mount("followCards", follow);
+mount("sourceCards", imageSources.concat([{rank:"DOC",title:"完整報告與來源註記",time:"2026-08-13 08:13:08（Asia/Taipei）",iso:"2026-08-13T00:13:08Z",why:"The markdown report contains the full Traditional Chinese write-up; source notes hold the dedupe table, exclusions and raw provenance.",facts:["Daily report: https://lucaskk.github.io/daily-news/wiki/daily/2026/08/2026-08-13/daily-news-2026-08-13.md","Source notes: https://lucaskk.github.io/daily-news/wiki/daily/2026/08/2026-08-13/source-notes-2026-08-13.md"],source:"來源：Source notes - https://lucaskk.github.io/daily-news/wiki/daily/2026/08/2026-08-13/source-notes-2026-08-13.md"}]));
+
+const slides = [...document.querySelectorAll(".slide")];
+const dots = document.getElementById("dots");
+slides.forEach((_,i)=>{const dot=document.createElement("span");dot.className="dot";dots.appendChild(dot);});
+let current = 0;
+function show(i){
+  current = (i + slides.length) % slides.length;
+  slides.forEach((s,idx)=>s.classList.toggle("active", idx===current));
+  [...dots.children].forEach((d,idx)=>d.classList.toggle("active", idx===current));
+  document.getElementById("count").textContent = `${current+1} / ${slides.length}`;
+}
+document.getElementById("prevBtn").addEventListener("click",()=>show(current-1));
+document.getElementById("nextBtn").addEventListener("click",()=>show(current+1));
+document.addEventListener("keydown",(event)=>{
+  if(event.target.closest("summary,a,button")) return;
+  if(["ArrowRight","PageDown"," "].includes(event.key)){event.preventDefault();show(current+1);}
+  if(["ArrowLeft","PageUp"].includes(event.key)){event.preventDefault();show(current-1);}
+  if(event.key==="Home"){show(0);}
+  if(event.key==="End"){show(slides.length-1);}
+});
+let touchStartX = 0;
+let touchStartY = 0;
+document.addEventListener("touchstart",(event)=>{
+  const t = event.changedTouches[0];
+  touchStartX = t.clientX;
+  touchStartY = t.clientY;
+},{passive:true});
+document.addEventListener("touchend",(event)=>{
+  const t = event.changedTouches[0];
+  const dx = t.clientX - touchStartX;
+  const dy = t.clientY - touchStartY;
+  if(Math.abs(dx) > 70 && Math.abs(dx) > Math.abs(dy) * 1.4){show(current + (dx < 0 ? 1 : -1));}
+},{passive:true});
+show(0);
+</script>
+</body>
+</html>

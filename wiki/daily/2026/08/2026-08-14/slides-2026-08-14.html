@@ -1,0 +1,549 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>2026-08-14 每日全球與科技 AI 新聞</title>
+  <!--
+    Version: 20260814-081228-ai-news-r1
+    Background image attributions are listed in the final slide and in source-notes-2026-08-14.md.
+  -->
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #172033;
+      --muted: #536072;
+      --paper: rgba(255, 255, 255, 0.92);
+      --paper-strong: rgba(255, 255, 255, 0.97);
+      --line: rgba(25, 32, 48, 0.16);
+      --accent: #005f73;
+      --accent-2: #8f3d2f;
+      --nav: rgba(255, 255, 255, 0.96);
+      --shadow: 0 16px 48px rgba(7, 20, 38, 0.24);
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC", sans-serif;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: #0c1724;
+      color: var(--ink);
+      overflow: hidden;
+    }
+    .deck {
+      height: 100vh;
+      width: 100vw;
+      position: relative;
+    }
+    .slide {
+      position: absolute;
+      inset: 0;
+      display: none;
+      overflow-y: auto;
+      padding: 44px 54px 112px;
+      background-image:
+        linear-gradient(90deg, rgba(255,255,255,0.92) 0%, rgba(255,255,255,0.82) 44%, rgba(255,255,255,0.42) 100%),
+        var(--bg);
+      background-size: cover;
+      background-position: center;
+    }
+    .slide.active { display: block; }
+    .slide::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background: linear-gradient(180deg, rgba(255,255,255,0.12), rgba(255,255,255,0.04));
+    }
+    .content {
+      position: relative;
+      max-width: 1180px;
+      margin: 0 auto;
+    }
+    .eyebrow {
+      margin: 0 0 10px;
+      color: #26495c;
+      font-size: 0.8rem;
+      font-weight: 800;
+      letter-spacing: 0;
+      text-transform: uppercase;
+    }
+    h1, h2 {
+      margin: 0;
+      line-height: 1.05;
+      letter-spacing: 0;
+      text-wrap: balance;
+    }
+    h1 {
+      max-width: 900px;
+      font-size: clamp(2.5rem, 7vw, 5.7rem);
+      color: #0d1b2a;
+      text-shadow: 0 2px 18px rgba(255,255,255,0.72);
+    }
+    h2 {
+      max-width: 920px;
+      font-size: clamp(2rem, 4.6vw, 4.1rem);
+      color: #0d1b2a;
+      text-shadow: 0 2px 16px rgba(255,255,255,0.78);
+    }
+    .lede {
+      max-width: 780px;
+      margin: 18px 0 0;
+      color: #223047;
+      font-size: clamp(1rem, 2vw, 1.35rem);
+      line-height: 1.55;
+      text-shadow: 0 1px 12px rgba(255,255,255,0.68);
+    }
+    .meta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 22px;
+    }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      min-height: 34px;
+      padding: 7px 11px;
+      border: 1px solid rgba(0, 95, 115, 0.26);
+      background: rgba(255,255,255,0.78);
+      color: #163246;
+      border-radius: 8px;
+      font-size: 0.88rem;
+      font-weight: 700;
+      box-shadow: 0 8px 24px rgba(21, 32, 48, 0.10);
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 26px;
+    }
+    .grid.two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .grid.four { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    details.card {
+      border: 1px solid var(--line);
+      background: var(--paper);
+      border-radius: 8px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+    details.card[open] {
+      background: var(--paper-strong);
+    }
+    summary {
+      cursor: pointer;
+      list-style: none;
+      padding: 16px 16px 14px;
+      min-height: 132px;
+    }
+    summary::-webkit-details-marker { display: none; }
+    .rank {
+      display: inline-flex;
+      width: 30px;
+      height: 30px;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: #0f5967;
+      color: white;
+      font-size: 0.88rem;
+      font-weight: 800;
+      margin-bottom: 10px;
+    }
+    .tech .rank { background: #71452f; }
+    .stat .rank { background: #4d5b2e; }
+    .follow .rank { background: #6f3550; }
+    .card-title {
+      display: block;
+      color: #13243a;
+      font-weight: 850;
+      font-size: 1.05rem;
+      line-height: 1.32;
+    }
+    .time {
+      display: block;
+      margin-top: 10px;
+      color: var(--muted);
+      font-size: 0.82rem;
+      line-height: 1.35;
+      font-weight: 700;
+    }
+    .card-body {
+      padding: 0 16px 16px;
+      color: #233249;
+      font-size: 0.94rem;
+      line-height: 1.58;
+    }
+    .card-body p {
+      margin: 0 0 12px;
+    }
+    .card-body ul {
+      margin: 0 0 12px 18px;
+      padding: 0;
+    }
+    .source-line {
+      margin: 14px 0 0;
+      padding-top: 12px;
+      border-top: 1px solid rgba(25, 32, 48, 0.14);
+      color: #31425a;
+      font-size: 0.82rem;
+      overflow-wrap: anywhere;
+    }
+    a { color: var(--accent); }
+    .nav {
+      position: fixed;
+      left: 50%;
+      bottom: 22px;
+      transform: translateX(-50%);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px;
+      background: var(--nav);
+      border: 1px solid rgba(20, 32, 48, 0.14);
+      border-radius: 10px;
+      box-shadow: 0 12px 34px rgba(0,0,0,0.22);
+      z-index: 10;
+    }
+    button {
+      appearance: none;
+      border: 1px solid rgba(0, 95, 115, 0.35);
+      background: #f7fbfc;
+      color: #153246;
+      min-width: 42px;
+      height: 38px;
+      border-radius: 8px;
+      font-weight: 900;
+      cursor: pointer;
+    }
+    button:hover { background: #e8f5f7; }
+    .counter {
+      min-width: 74px;
+      text-align: center;
+      color: #223047;
+      font-size: 0.9rem;
+      font-weight: 800;
+    }
+    .progress {
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 5px;
+      background: rgba(255,255,255,0.3);
+      z-index: 11;
+    }
+    .bar {
+      width: 0;
+      height: 100%;
+      background: linear-gradient(90deg, #005f73, #8f3d2f);
+      transition: width 160ms ease;
+    }
+    .split {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(260px, 0.9fr);
+      gap: 24px;
+      align-items: end;
+    }
+    .section-note {
+      max-width: 760px;
+      margin-top: 14px;
+      padding: 14px 16px;
+      border-left: 5px solid var(--accent);
+      background: rgba(255,255,255,0.76);
+      border-radius: 8px;
+      color: #25344a;
+      line-height: 1.55;
+      box-shadow: 0 10px 28px rgba(0,0,0,0.12);
+    }
+    @media (max-width: 900px) {
+      body { overflow: auto; }
+      .deck, .slide { min-height: 100vh; height: auto; }
+      .slide {
+        padding: 30px 18px 108px;
+        background-image:
+          linear-gradient(180deg, rgba(255,255,255,0.94) 0%, rgba(255,255,255,0.86) 54%, rgba(255,255,255,0.62) 100%),
+          var(--bg);
+      }
+      .grid, .grid.two, .grid.four, .split {
+        grid-template-columns: 1fr;
+      }
+      summary { min-height: 116px; }
+      .nav { width: calc(100vw - 24px); justify-content: space-between; bottom: 14px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="deck" id="deck">
+    <section class="slide active" data-title="封面" style="--bg:url('https://images.unsplash.com/photo-1495020689067-958852a7765e?auto=format&fit=crop&w=1800&q=80')">
+      <div class="content split">
+        <div>
+          <p class="eyebrow">Daily Global and Technology AI News</p>
+          <h1>2026-08-14 每日全球與科技 AI 新聞</h1>
+          <p class="lede">戰爭外溢、外交抗議、公共系統問責與 AI 速度／成本競爭，同日進入可驗證節點。</p>
+          <div class="meta-row">
+            <span class="pill">研究截點：2026-08-14 08:12:28 TPE</span>
+            <span class="pill">窗口：前 24 小時</span>
+            <span class="pill">全球 Top 10 + 科技／AI 10 則</span>
+          </div>
+        </div>
+        <details class="card stat">
+          <summary>
+            <span class="rank">i</span>
+            <span class="card-title">本簡報的選題規則</span>
+            <span class="time">所有事件或官方發布必須落在 24 小時窗口內</span>
+          </summary>
+          <div class="card-body">
+            <p>每則新聞都保留 Asia/Taipei 發佈時間、事件時間基準與去重判斷；舊事件僅因文章更新或仍在熱門榜單不會重新入選。續報只在出現新地點、新官方報告、新產品層或新制度節點時保留。</p>
+            <p class="source-line">來源：本日來源筆記 - https://lucaskk.github.io/daily-news/wiki/daily/2026/08/2026-08-14/source-notes-2026-08-14.md</p>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <section class="slide" data-title="研究範圍" style="--bg:url('https://images.unsplash.com/photo-1492724441997-5dc865305da7?auto=format&fit=crop&w=1800&q=80')">
+      <div class="content">
+        <p class="eyebrow">Scope and Signals</p>
+        <h2>24 小時窗口與今日主線</h2>
+        <p class="section-note">研究窗口：2026-08-13 08:12:28 至 2026-08-14 08:12:28（Asia/Taipei）。今日的高討論度集中在安全外溢、外交抗議、公共事故調查、AI 模型速度與企業部署成本。</p>
+        <div class="grid four">
+          <details class="card stat">
+            <summary><span class="rank">1</span><span class="card-title">全球新聞恰好 10 則</span><span class="time">安全、外交、公共衛生、航空與貿易</span></summary>
+            <div class="card-body"><p>全球 Top 10 依重要性排序並在 DOM 閱讀順序保持 1 到 10；續報項目明確標示前次收錄日期與今日新增事實。</p><p class="source-line">來源：本日來源筆記 - https://lucaskk.github.io/daily-news/wiki/daily/2026/08/2026-08-14/source-notes-2026-08-14.md</p></div>
+          </details>
+          <details class="card stat">
+            <summary><span class="rank">2</span><span class="card-title">科技／AI 10 則</span><span class="time">模型、Copilot、企業部署、邊緣推論與機器人工作流</span></summary>
+            <div class="card-body"><p>科技段只納入新模型、新服務層、正式 GA、重大企業合作或產品治理變更；昨天已捕捉的 Pixel、Twitch、Facebook Creator Studio 和 Apple publisher talks 不重複。</p><p class="source-line">來源：本日來源筆記 - https://lucaskk.github.io/daily-news/wiki/daily/2026/08/2026-08-14/source-notes-2026-08-14.md</p></div>
+          </details>
+          <details class="card stat">
+            <summary><span class="rank">3</span><span class="card-title">3 則重大續報</span><span class="time">Ukraine, Yemen, OpenAI</span></summary>
+            <div class="card-body"><p>Salavat refinery strike、Taiz clashes / UN warning、GPT-5.6 Sol Ultrafast service tier 分別是已追蹤主線的新節點；來源筆記中列明前次收錄日與今日新增內容。</p><p class="source-line">來源：本日來源筆記 - https://lucaskk.github.io/daily-news/wiki/daily/2026/08/2026-08-14/source-notes-2026-08-14.md</p></div>
+          </details>
+          <details class="card stat">
+            <summary><span class="rank">4</span><span class="card-title">主要排除方向</span><span class="time">重複、出窗或只有分析更新</span></summary>
+            <div class="card-body"><p>Kennedy Center、Trump vaccine-plan consequence articles、Databricks financing、Google Quick Share、Apple publisher talks and Anthropic watermarking were excluded or downgraded for lower global relevance, out-of-window timing, or duplicate capture.</p><p class="source-line">來源：本日來源筆記 - https://lucaskk.github.io/daily-news/wiki/daily/2026/08/2026-08-14/source-notes-2026-08-14.md</p></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" data-title="全球 1-3" style="--bg:url('https://images.unsplash.com/photo-1566576721346-d4a3b4eaeb55?auto=format&fit=crop&w=1800&q=80')">
+      <div class="content">
+        <p class="eyebrow">Global Top 10 | 1-3</p>
+        <h2>戰爭外溢與代理戰線升高</h2>
+        <div class="grid">
+          <details class="card">
+            <summary><span class="rank">1</span><span class="card-title">Qusra settler siege draws sharp U.S. rebuke</span><time class="time" datetime="2026-08-13T09:00:50Z">發佈時間｜2026-08-13 17:00:50（Asia/Taipei）</time></summary>
+            <div class="card-body"><p>Settlers surrounded three Palestinian homes in Qusra for five nights, including a Palestinian-American-owned house. The U.S. ambassador called the siege an act of terror, turning West Bank settler violence into a direct U.S.-Israel diplomatic friction point.</p><p>不確定性：Israeli military accounts, resident testimony and rights-group evidence may differ on whether residents were effectively displaced and whether authorities ended the siege.</p><p class="source-line">來源：AP News - https://apnews.com/article/israel-west-bank-settler-violence-palestinian-qusra-huckabee-aad901d8ee7cf54e5e4952bf61a4f6d1</p></div>
+          </details>
+          <details class="card">
+            <summary><span class="rank">2</span><span class="card-title">續報｜Ukraine hits Gazprom Neftekhim Salavat refinery</span><time class="time" datetime="2026-08-13T11:20:32Z">發佈時間｜2026-08-13 19:20:32（Asia/Taipei）</time></summary>
+            <div class="card-body"><p>After yesterday's Novorossiysk capture, the new event is a strike on Gazprom Neftekhim Salavat in Bashkortostan, about 1,300 km from Ukraine. AP called it the fourth refinery strike in three days, with Orsk repairs possibly taking up to six months.</p><p>不確定性：Damage scale and actual refinery downtime require satellite, company and fuel-market confirmation.</p><p class="source-line">來源：AP News - https://apnews.com/article/russia-ukraine-war-oil-refinery-8050b4afb5bfd6f4d93c76b4d9795dfa</p></div>
+          </details>
+          <details class="card">
+            <summary><span class="rank">3</span><span class="card-title">續報｜Yemen clashes renew civil-war risk</span><time class="time" datetime="2026-08-13T10:42:01Z">發佈時間｜2026-08-13 18:42:01（Asia/Taipei）</time></summary>
+            <div class="card-body"><p>Houthis and Yemeni government forces clashed in Taiz, killing at least one government soldier and critically wounding another. The UN warned Yemen faces its highest risk of returning to large-scale conflict since the 2022 truce.</p><p>不確定性：Houthi claims against Saudi Aramco Jazan and humanitarian counts need verification.</p><p class="source-line">來源：AP News - https://apnews.com/article/iran-us-strait-hormuz-yemen-houthi-august-13-2026-42eb6af678a8f16d3a2cb14bd7918a12</p></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" data-title="全球 4-7" style="--bg:url('https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?auto=format&fit=crop&w=1800&q=80')">
+      <div class="content">
+        <p class="eyebrow">Global Top 10 | 4-7</p>
+        <h2>外交、港口安全與援助問責</h2>
+        <div class="grid four">
+          <details class="card">
+            <summary><span class="rank">4</span><span class="card-title">Poland says Russian plot targeted Ukrainian American</span><time class="time" datetime="2026-08-13T13:41:10Z">發佈時間｜2026-08-13 21:41:10（Asia/Taipei）</time></summary>
+            <div class="card-body"><p>Donald Tusk said Poland arrested a Russian citizen allegedly recruited by Russian services to attack a Ukrainian American in Warsaw, in coordination with U.S. services. The case raises NATO-territory covert-action risk.</p><p>不確定性：Target identity and operational evidence are limited by the active investigation.</p><p class="source-line">來源：AP News - https://apnews.com/article/poland-russia-plot-c7f8dc3e5a9ba20ae722a1b9d44614db</p></div>
+          </details>
+          <details class="card">
+            <summary><span class="rank">5</span><span class="card-title">Rotterdam port explosion kills one</span><time class="time" datetime="2026-08-13T12:27:12Z">發佈時間｜2026-08-13 20:27:12（Asia/Taipei）</time></summary>
+            <div class="card-body"><p>An explosion at a Gunvor Energy refinery and fuel terminal in Europe's largest port killed one person and injured several. Police set up a crime scene while saying it currently appeared to be a workplace accident.</p><p>不確定性：Cause and any regulatory breach remain under investigation; a same-day blackout was later described as unrelated.</p><p class="source-line">來源：AP News - https://apnews.com/article/netherlands-rotterdam-port-explosion-blackout-police-3196dd5655bc2a1e39914eaa1927ef81</p></div>
+          </details>
+          <details class="card">
+            <summary><span class="rank">6</span><span class="card-title">USAID cuts linked to maternal deaths in Nepal</span><time class="time" datetime="2026-08-13T04:36:10Z">發佈時間｜2026-08-13 12:36:10（Asia/Taipei）</time></summary>
+            <div class="card-body"><p>AP found U.S. aid cuts shuttered nutrition and reproductive outreach programs in Nepal, contributing to pregnancy complications and deaths. The story documents how public-health data and prenatal support collapsed after funding ended.</p><p>不確定性：Mortality is likely undercounted because some data collection also stopped; U.S. officials dispute the overall support picture.</p><p class="source-line">來源：AP News - https://apnews.com/article/usaid-nepal-maternal-child-death-trump-aid-cuts-43fb5e8aff8a4f65b7f18781455c3f91</p></div>
+          </details>
+          <details class="card">
+            <summary><span class="rank">7</span><span class="card-title">Putin Kuril visit draws Japan protest</span><time class="time" datetime="2026-08-13T07:32:33Z">發佈時間｜2026-08-13 15:32:33（Asia/Taipei）</time></summary>
+            <div class="card-body"><p>Putin visited Iturup, one of the disputed Kuril / Northern Territories islands controlled by Russia and claimed by Japan. Tokyo protested and summoned Russia's ambassador, keeping the post-WWII peace-treaty dispute alive.</p><p>不確定性：Russia and Japan maintain incompatible sovereignty claims; practical military follow-through is not yet clear.</p><p class="source-line">來源：AP News - https://apnews.com/article/russia-putin-japan-kuril-islands-northern-territories-iturup-bc9cf6a0aa3fdbed5264d32297d740b4</p></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" data-title="全球 8-10" style="--bg:url('https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=1800&q=80')">
+      <div class="content">
+        <p class="eyebrow">Global Top 10 | 8-10</p>
+        <h2>外交斷裂、航空調查與關稅執法</h2>
+        <div class="grid">
+          <details class="card">
+            <summary><span class="rank">8</span><span class="card-title">Dominican Republic expels Cuban officials</span><time class="time" datetime="2026-08-13T23:48:21Z">發佈時間｜2026-08-14 07:48:21（Asia/Taipei）</time></summary>
+            <div class="card-body"><p>The Dominican Republic expelled Cuban diplomatic officials and family members without a detailed public reason. Dominican authorities said nine officials; Cuba said ten and condemned the move as aligned with U.S. pressure.</p><p>不確定性：Official motive and exact count remain disputed.</p><p class="source-line">來源：AP News - https://apnews.com/article/afc79dfb2c416f2a97909b240857ca9b</p></div>
+          </details>
+          <details class="card">
+            <summary><span class="rank">9</span><span class="card-title">NTSB finds engine fragments broke Ryanair window</span><time class="time" datetime="2026-08-13T18:27:06Z">發佈時間｜2026-08-14 02:27:06（Asia/Taipei）</time></summary>
+            <div class="card-body"><p>The qualifying new event is the NTSB preliminary report, not the older July 10 incident. A Boeing 737-800 fan blade broke loose, fragments shattered a window, and a passenger was injured after partial suction toward the opening.</p><p>不確定性：Bird remains were found, but NTSB has not determined final cause or responsibility.</p><p class="source-line">來源：AP News - https://apnews.com/article/5a1fa51fef28f6a8d27fec5a036808c3</p></div>
+          </details>
+          <details class="card">
+            <summary><span class="rank">10</span><span class="card-title">White House claims US$19B-US$26B tariff transshipment loss</span><time class="time" datetime="2026-08-13T16:37:01Z">發佈時間｜2026-08-14 00:37:01（Asia/Taipei）</time></summary>
+            <div class="card-body"><p>The White House says countries are routing goods through third countries to dodge tariffs, costing the U.S. US$19B-US$26B annually. The report targets alleged China-linked transshipment and previews AI-assisted customs enforcement.</p><p>不確定性：The range is a White House estimate and may be disputed by affected countries or importers.</p><p class="source-line">來源：AP News - https://apnews.com/article/trump-white-house-china-tariffs-avoidance-5dacb82bc5a0a1d550b0ea2353ace005</p></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" data-title="科技 1-5" style="--bg:url('https://images.unsplash.com/photo-1518779578993-ec3579fee39f?auto=format&fit=crop&w=1800&q=80')">
+      <div class="content">
+        <p class="eyebrow">Technology and AI | 1-5</p>
+        <h2>Frontier models move on speed, coding and distribution</h2>
+        <div class="grid">
+          <details class="card tech">
+            <summary><span class="rank">T1</span><span class="card-title">Google introduces Gemini 3.7 Flash</span><time class="time" datetime="2026-08-13T17:00:00Z">發佈時間｜2026-08-14 01:00:00（Asia/Taipei）</time></summary>
+            <div class="card-body"><p>Gemini 3.7 Flash is positioned as Google's most intelligent workhorse model for coding and agents, with improvements in software engineering, knowledge work and web development, plus an introductory price half the original 3.6 Flash cost per million tokens.</p><p>不確定性：Benchmarks are provider-published and need independent workload tests.</p><p class="source-line">來源：Google Blog - https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-3-7-flash/</p></div>
+          </details>
+          <details class="card tech">
+            <summary><span class="rank">T2</span><span class="card-title">GitHub Copilot rolls out Gemini 3.7 Flash</span><time class="time" datetime="2026-08-13T14:00:53Z">發佈時間｜2026-08-13 22:00:53（Asia/Taipei）</time></summary>
+            <div class="card-body"><p>GitHub is rolling the model into Copilot for Pro, Pro+, Max, Business and Enterprise users across VS Code, Visual Studio, Copilot CLI, cloud agent, Copilot app, JetBrains, Xcode and Eclipse, with enterprise preview policy controls.</p><p>不確定性：Rollout is gradual and organization admins can restrict preview access.</p><p class="source-line">來源：GitHub Changelog - https://github.blog/changelog/2026-08-13-gemini-3-7-flash-is-now-available-in-github-copilot/</p></div>
+          </details>
+          <details class="card tech">
+            <summary><span class="rank">T3</span><span class="card-title">續報｜OpenAI previews GPT-5.6 Sol Ultrafast</span><time class="time" datetime="2026-08-13T00:12:28Z">發佈時間｜2026-08-13 08:12:28（Asia/Taipei；date-level）</time></summary>
+            <div class="card-body"><p>OpenAI previewed Ultrafast, a new API service tier powered by Cerebras. OpenAI says it runs GPT-5.6 Sol up to 14x faster than Standard processing and reaches up to 750 output tokens per second for selected customers.</p><p>不確定性：Pricing, broad access and sustained throughput limits are not yet public.</p><p class="source-line">來源：OpenAI - https://openai.com/index/previewing-ultrafast/</p></div>
+          </details>
+          <details class="card tech">
+            <summary><span class="rank">T4</span><span class="card-title">xAI releases Grok 4.6</span><time class="time" datetime="2026-08-13T00:12:28Z">發佈時間｜2026-08-13 08:12:28（Asia/Taipei；date-level）</time></summary>
+            <div class="card-body"><p>xAI says Grok 4.6 reaches frontier intelligence across agentic coding and knowledge-work benchmarks and matches GPT-5.6 Sol on the Artificial Analysis Intelligence Index. The model is framed around price-performance competition.</p><p>不確定性：Benchmark comparisons rely partly on provider-published figures and composite scoring.</p><p class="source-line">來源：xAI - https://x.ai/news/grok-4-6</p></div>
+          </details>
+          <details class="card tech">
+            <summary><span class="rank">T5</span><span class="card-title">DeepSeek-V4-Pro GA adds Responses API and Codex support</span><time class="time" datetime="2026-08-13T00:12:28Z">發佈時間｜2026-08-13 08:12:28（Asia/Taipei；date-level）</time></summary>
+            <div class="card-body"><p>DeepSeek-V4-Pro is generally available on app, web and API, with Responses API support, Codex-focused setup and flexible thinking-effort controls. Pricing changes are scheduled for 2026-08-16 16:00 UTC.</p><p>不確定性：Docs confirm protocol support; practical latency and coding-agent quality need external tests.</p><p class="source-line">來源：DeepSeek API Docs - https://api-docs.deepseek.com/news/news260813 ; https://api-docs.deepseek.com/updates/</p></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" data-title="科技 6-10" style="--bg:url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1800&q=80')">
+      <div class="content">
+        <p class="eyebrow">Technology and AI | 6-10</p>
+        <h2>Enterprise, governance, edge and robotics workflows</h2>
+        <div class="grid">
+          <details class="card tech">
+            <summary><span class="rank">T6</span><span class="card-title">Writer launches Palmyra X6 and agent harness upgrades</span><time class="time" datetime="2026-08-13T12:32:43Z">發佈時間｜2026-08-13 20:32:43（Asia/Taipei）</time></summary>
+            <div class="card-body"><p>Writer announced Palmyra X6 and WRITER Agent harness upgrades for enterprise agentic workflows, emphasizing cost per task, faster execution and governance controls for production deployments.</p><p>不確定性：Cost figures are workload-dependent and partly company-provided.</p><p class="source-line">來源：Writer - https://writer.com/blog/aug-roundup-new-at-writer/ ; TechCrunch - https://techcrunch.com/2026/08/13/writer-introduces-new-ai-model-and-upgraded-harness-to-contain-token-costs/</p></div>
+          </details>
+          <details class="card tech">
+            <summary><span class="rank">T7</span><span class="card-title">IBM and OpenAI partner on secure enterprise AI</span><time class="time" datetime="2026-08-13T00:12:28Z">發佈時間｜2026-08-13 08:12:28（Asia/Taipei；date-level）</time></summary>
+            <div class="card-body"><p>IBM announced a strategic OpenAI partnership for enterprise AI across core operations, modernization, cybersecurity and AI risk management, including a dedicated IBM Consulting OpenAI practice and training plan.</p><p>不確定性：Commercial terms and customer adoption pace are not fully public.</p><p class="source-line">來源：IBM Newsroom - https://newsroom.ibm.com/2026-08-13-ibm-partners-with-openai-to-accelerate-secure-ai-deployment-for-enterprises-across-core-operations</p></div>
+          </details>
+          <details class="card tech">
+            <summary><span class="rank">T8</span><span class="card-title">Flock Safety adds ALPR audit and retention guardrails</span><time class="time" datetime="2026-08-13T00:12:28Z">發佈時間｜2026-08-13 08:12:28（Asia/Taipei；date-level）</time></summary>
+            <div class="card-body"><p>Flock is recommending seven-day default data retention, adding Evidence Mode, offense filtering, required Audit Assistance, case codes and proactive lockouts after ALPR misuse backlash. Critics still argue police control remains too broad.</p><p>不確定性：Governance impact depends on city adoption, audits and whether courts or lawmakers require stronger oversight.</p><p class="source-line">來源：Flock Safety - https://www.flocksafety.com/blog/flock-guardrails-address-lpr-privacy-concerns-and-police-transparency ; AP News - https://apnews.com/article/2a93bc075e2f7ffcca9e04a35d75a3fe</p></div>
+          </details>
+          <details class="card tech">
+            <summary><span class="rank">T9</span><span class="card-title">Cascadia launches distributed AI inference for Intel hardware</span><time class="time" datetime="2026-08-13T00:12:28Z">發佈時間｜2026-08-13 08:12:28（Asia/Taipei；date-level）</time></summary>
+            <div class="card-body"><p>Cascadia splits large models into shards and uses Intel OpenVINO across CPUs, integrated GPUs, NPUs and Arc Pro GPUs. The pitch is lower-cost on-prem or edge inference using existing hardware.</p><p>不確定性：Performance and cost claims await independent benchmarks and promised research papers.</p><p class="source-line">來源：AIwire - https://www.hpcwire.com/aiwire/2026/08/13/cascadia-launches-distributed-ai-inference-for-intel-hardware/</p></div>
+          </details>
+          <details class="card tech">
+            <summary><span class="rank">T10</span><span class="card-title">Hugging Face, Strands Agents and LeRobot connect robotics workflow</span><time class="time" datetime="2026-08-13T17:16:04Z">發佈時間｜2026-08-14 01:16:04（Asia/Taipei）</time></summary>
+            <div class="card-body"><p>Hugging Face published an Amazon-contributed workflow using Strands Agents, LeRobot and Storage Buckets to connect data recording, storage, training and deployment for robotics loops.</p><p>不確定性：This is a workflow integration, not a new foundation model; usefulness depends on hardware and developer adoption.</p><p class="source-line">來源：Hugging Face - https://huggingface.co/blog/amazon/strands-lerobot-streaming-data-loop ; AIGC.news - https://aigc.news/events/record-train-and-deploy-from-one-place-with-strands-agents-lerobot-and-hugging-face-storage-buckets-2026-08-13-cdcdd974/</p></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" data-title="後續追蹤" style="--bg:url('https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=1800&q=80')">
+      <div class="content">
+        <p class="eyebrow">Follow-up Cards</p>
+        <h2>明日應追蹤的可驗證節點</h2>
+        <div class="grid">
+          <details class="card follow">
+            <summary><span class="rank">1</span><span class="card-title">Qusra accountability</span><span class="time">West Bank settler violence and U.S. consular response</span></summary>
+            <div class="card-body"><p>Track Israeli military orders, arrests, displacement evidence and any U.S. consular follow-up involving the Palestinian American family. The key question is whether intervention ended the siege or merely displaced responsibility.</p><p class="source-line">來源：AP News - https://apnews.com/article/israel-west-bank-settler-violence-palestinian-qusra-huckabee-aad901d8ee7cf54e5e4952bf61a4f6d1</p></div>
+          </details>
+          <details class="card follow">
+            <summary><span class="rank">2</span><span class="card-title">Russian refinery throughput</span><span class="time">Salavat, Orsk and domestic fuel supply</span></summary>
+            <div class="card-body"><p>Watch satellite imagery, refinery repair statements and Russian gasoline / diesel availability. The strategic signal is whether deep refinery strikes become a persistent campaign rather than episodic drone damage.</p><p class="source-line">來源：AP News - https://apnews.com/article/russia-ukraine-war-oil-refinery-8050b4afb5bfd6f4d93c76b4d9795dfa</p></div>
+          </details>
+          <details class="card follow">
+            <summary><span class="rank">3</span><span class="card-title">Yemen escalation markers</span><span class="time">Taiz, Jazan, UN Security Council and food security</span></summary>
+            <div class="card-body"><p>Verify the Jazan claim, Taiz front casualty counts, any UN Security Council action and updated emergency-food-insecurity figures. Yemen's risk is returning from shipping crisis to renewed civil war.</p><p class="source-line">來源：AP News - https://apnews.com/article/iran-us-strait-hormuz-yemen-houthi-august-13-2026-42eb6af678a8f16d3a2cb14bd7918a12</p></div>
+          </details>
+          <details class="card follow">
+            <summary><span class="rank">4</span><span class="card-title">Model cost and latency race</span><span class="time">Gemini 3.7, GPT-5.6 Ultrafast, Grok 4.6, DeepSeek-V4-Pro</span></summary>
+            <div class="card-body"><p>Compare independent coding-agent completion quality, latency, retry rate and total cost per finished task. The model race is now about useful work per second and per dollar, not only leaderboard rank.</p><p class="source-line">來源：Google Blog - https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-3-7-flash/ ; OpenAI - https://openai.com/index/previewing-ultrafast/ ; xAI - https://x.ai/news/grok-4-6 ; DeepSeek - https://api-docs.deepseek.com/news/news260813</p></div>
+          </details>
+          <details class="card follow">
+            <summary><span class="rank">5</span><span class="card-title">Flock guardrail adoption</span><span class="time">Audit Assistance, seven-day retention and city contracts</span></summary>
+            <div class="card-body"><p>Track whether agencies activate mandatory audits, whether cities renegotiate contracts and whether civil-liberties groups or courts demand judicial controls beyond Flock's product settings.</p><p class="source-line">來源：Flock Safety - https://www.flocksafety.com/blog/flock-guardrails-address-lpr-privacy-concerns-and-police-transparency ; AP News - https://apnews.com/article/2a93bc075e2f7ffcca9e04a35d75a3fe</p></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" data-title="來源與圖片" style="--bg:url('https://images.unsplash.com/photo-1492724441997-5dc865305da7?auto=format&fit=crop&w=1800&q=80')">
+      <div class="content">
+        <p class="eyebrow">Sources and Images</p>
+        <h2>來源、報告與圖片註記</h2>
+        <div class="grid two">
+          <details class="card stat">
+            <summary><span class="rank">S</span><span class="card-title">日報與來源筆記</span><span class="time">完整事件基準、去重和排除清單</span></summary>
+            <div class="card-body"><p>本日報告與來源筆記保存所有原始新聞 URL、事件時間、date-level 限制、重大續報說明、未入選項目和驗證清單。</p><p class="source-line">來源：每日來源筆記 - https://lucaskk.github.io/daily-news/wiki/daily/2026/08/2026-08-14/source-notes-2026-08-14.md ; 每日日報 - https://lucaskk.github.io/daily-news/wiki/daily/2026/08/2026-08-14/daily-news-2026-08-14.md</p></div>
+          </details>
+          <details class="card stat">
+            <summary><span class="rank">I</span><span class="card-title">背景圖片來源</span><span class="time">Unsplash remote image URLs, used only as visual context</span></summary>
+            <div class="card-body"><p>使用 Roman Kraft、CHUTTERSNAP、Florian Wehde、National Cancer Institute、Alexandre Debieve、Jefferson Santos、Possessed Photography and rawpixel 的 Unsplash 圖片；圖片僅作主題背景，不作為新聞事實來源。</p><p class="source-line">來源：Unsplash image URLs - https://images.unsplash.com/photo-1495020689067-958852a7765e?auto=format&fit=crop&w=1800&q=80 ; https://images.unsplash.com/photo-1566576721346-d4a3b4eaeb55?auto=format&fit=crop&w=1800&q=80 ; https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?auto=format&fit=crop&w=1800&q=80 ; https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=1800&q=80 ; https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=1800&q=80 ; https://images.unsplash.com/photo-1518779578993-ec3579fee39f?auto=format&fit=crop&w=1800&q=80 ; https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1800&q=80 ; https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=1800&q=80 ; https://images.unsplash.com/photo-1492724441997-5dc865305da7?auto=format&fit=crop&w=1800&q=80</p></div>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <nav class="nav" aria-label="Slide controls">
+    <button type="button" id="prev" aria-label="上一頁">‹</button>
+    <span class="counter" id="counter">1 / 9</span>
+    <button type="button" id="next" aria-label="下一頁">›</button>
+  </nav>
+  <div class="progress" aria-hidden="true"><div class="bar" id="bar"></div></div>
+
+  <script>
+    const slides = Array.from(document.querySelectorAll('.slide'));
+    const counter = document.getElementById('counter');
+    const bar = document.getElementById('bar');
+    let index = 0;
+
+    function show(nextIndex) {
+      index = Math.max(0, Math.min(slides.length - 1, nextIndex));
+      slides.forEach((slide, i) => slide.classList.toggle('active', i === index));
+      counter.textContent = `${index + 1} / ${slides.length}`;
+      bar.style.width = `${((index + 1) / slides.length) * 100}%`;
+      const active = slides[index];
+      active.scrollTop = 0;
+      document.title = `${active.dataset.title} | 2026-08-14 每日新聞`;
+    }
+
+    document.getElementById('prev').addEventListener('click', () => show(index - 1));
+    document.getElementById('next').addEventListener('click', () => show(index + 1));
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'ArrowRight' || event.key === 'PageDown' || event.key === ' ') show(index + 1);
+      if (event.key === 'ArrowLeft' || event.key === 'PageUp') show(index - 1);
+      if (event.key === 'Home') show(0);
+      if (event.key === 'End') show(slides.length - 1);
+    });
+
+    let touchStartX = null;
+    document.addEventListener('touchstart', (event) => {
+      touchStartX = event.changedTouches[0].clientX;
+    }, { passive: true });
+    document.addEventListener('touchend', (event) => {
+      if (touchStartX === null) return;
+      const delta = event.changedTouches[0].clientX - touchStartX;
+      if (Math.abs(delta) > 56) show(index + (delta < 0 ? 1 : -1));
+      touchStartX = null;
+    }, { passive: true });
+
+    show(0);
+  </script>
+</body>
+</html>
