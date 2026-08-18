@@ -1,5 +1,24 @@
 # Knowledge Base Log
 
+## [2026-08-18] ingest | Daily global and tech AI news
+
+- Created `wiki/daily/2026/08/2026-08-18/daily-news-2026-08-18.md` with exactly 10 global items and six technology / AI product, platform, standards, infrastructure or capacity items.
+- Recorded the exact Asia/Taipei 24-hour window, per-item event or publication-time basis, material continuations, archive dedupe checks and exclusion rationale in `source-notes-2026-08-18.md`.
+- Created `slides-2026-08-18.html` as a standalone HTML deck with local SVG themed backgrounds, browser / keyboard / touch navigation, expandable cards and per-card complete source URLs.
+- Updated `wiki/daily/latest-slides.html`, `wiki/index.md`, `wiki/overview.md`, `.nojekyll`, and the root Pages entry timestamp.
+- Publishing, GitHub Pages verification, LINE watchdog delivery and localhost preview status are recorded by this automation after verification.
+
+## [2026-08-17] ingest | Daily global and tech AI news
+
+- Created `wiki/daily/2026/08/2026-08-17/daily-news-2026-08-17.md` with exactly 10 global items and six technology / AI product, platform, pricing or agent-release items.
+- Recorded the exact Asia/Taipei 24-hour window, per-item event or publication-time basis, material continuations, duplicate checks and exclusion rationale in `source-notes-2026-08-17.md`.
+- Created `slides-2026-08-17.html` as a standalone HTML deck with themed backgrounds, browser / keyboard / touch navigation, expandable cards and per-card complete source URLs.
+- Updated `wiki/daily/latest-slides.html`, `wiki/index.md`, `wiki/overview.md`, `.nojekyll`, and the root Pages entry timestamp.
+- Local git / SSH publishing was unavailable, so the scoped public package was published to `main` through the GitHub connector at commit `c35ac26e78930b7704ca5b50f66dec07601b0e16`.
+- GitHub Pages verification passed for the dated deck, latest redirect, daily report, source notes and root index.
+- LINE watchdog delivery succeeded at `2026-08-17T08:31:19+08:00` with the public dated deck URL.
+- Localhost preview verified at `http://localhost:4174/wiki/daily/latest-slides.html`; preferred port 4173 had a listener but returned an empty HTTP response.
+
 ## [2026-08-16] ingest | Daily global and tech AI news
 
 - Created `wiki/daily/2026/08/2026-08-16/daily-news-2026-08-16.md` with exactly 10 global items and five technology / AI product, platform or governance items.

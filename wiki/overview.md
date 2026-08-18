@@ -2,7 +2,7 @@
 title: "Overview"
 type: overview
 created: 2026-05-24
-updated: 2026-08-16
+updated: 2026-08-18
 status: seed
 tags: [overview]
 sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
@@ -19,6 +19,18 @@ sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
 - 抽出持續出現的人物、組織、事件、政策、技術與市場概念。
 - 維護跨來源的矛盾、時間線、趨勢與待查問題。
 - 將重要查詢結果回寫成可累積的 wiki 頁面。
+
+## 2026-08-18 Daily News Synthesis
+
+- 全球新聞主軸轉為「承諾進入執行壓力」：Hormuz 的 Oman-Iran 通航方案遭 Trump threat，Gaza 方案在 Kushner-Netanyahu 會後仍沒有以色列明確承諾，U.S. anti-cartel campaign 則從 Latin America boat strikes 走向 land operations，讓外交、軍事授權與主權問題同日升高。
+- 災害與公共衛生主軸是「門檻上修」：Indonesia Flores quake death toll reached 68 with 19,000 displaced，Congo Ebola became DRC's deadliest outbreak，Zimbabwe ferry disaster rose to 92 deaths，Europe wildfires stayed active near Germany and India religious-pilgrimage safety failures killed 14。
+- 科技／AI 今日聚焦「算力、標準與入口」：OpenAI / NVIDIA / SB Energy PORTS-Pike deal, A2A moving into AAIF, OpenAI's Defender's Window, Gemini / Pixel football partnerships, Relay staff moving to Chrome and Microsoft's disputed AI chip-capacity picture show AI products constrained by power, governance, browser context and real operational compute。
+
+## 2026-08-17 Daily News Synthesis
+
+- 全球新聞主軸轉為「外溢風險變得可量化」：Ukraine 大規模 drone strikes and NATO Romania interception, Kushner-Hamas direct meeting, Trump scaling back U.S.-South Korea exercises and USS Lincoln's >240-day deployment all turn abstract security commitments into visible air-defense, diplomacy and force-posture tests.
+- 災害與公共安全主軸轉向 recovery capacity：Tropical Storm Lala avoided landfall but still damaged Hawaii housing and power, Colombia asked Trump for tariff relief after the quake, Indonesia's Flores death toll rose to 53, Europe fought Belgium / Greece wildfires, and Hungary / Sicily incidents expose road-safety and cultural-heritage security gaps.
+- 科技／AI 今日沒有單一 frontier model shock；產品焦點是 deployable workflow and cost governance：DeepSeek V4 pricing effective, Gemini Enterprise 3.7 Flash mobile availability, Zoom Phone Agentic Workflows, H2O Managed Cloud v26.08.0, Transmit Security agentic AI recognition and Hermes Agent v0.20.2 all show AI products moving into billing, mobile endpoints, enterprise workflows, fraud signals and release discipline.
 
 ## 2026-08-16 Daily News Synthesis
 
@@ -120,6 +132,9 @@ sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
 
 ## Latest Daily News
 
+
+- [2026-08-17 Daily News](daily/2026/08/2026-08-17/daily-news-2026-08-17.md) - 今日主軸是「戰爭外溢風險、救援復原與 AI 工作流治理同日升高」：Ukraine 大規模無人機攻擊與 NATO Romania 攔截、Kushner-Hamas meeting、Trump 縮減美韓軍演、USS Lincoln 長部署、Tropical Storm Lala、Colombia quake tariff request、Indonesia Flores quake death toll、Greece / Belgium wildfires、Hungary bus crash and Sicily museum heist。科技／AI 聚焦 DeepSeek V4 pricing effective、Google Gemini Enterprise mobile app、Zoom Phone Agentic Workflows、H2O AI Managed Cloud v26.08.0、Transmit Security SDK and Hermes Agent v0.20.2。
+- [2026-08-17 Slides](daily/2026/08/2026-08-17/slides-2026-08-17.html) - 今日新聞網頁版投影片。
 
 - [2026-08-16 Daily News](daily/2026/08/2026-08-16/daily-news-2026-08-16.md) - 今日主軸是「中東衝突外溢牽動軍事部署，災害與難民治理進入可驗證節點，AI 產品焦點轉向治理、用量與 agent 可觀測性」：Lebanon strikes、U.S. carrier gap、Qatar / UAE / Hormuz / Yemen escalation、Hurricane Lala、Indiana flooding、Zimbabwe ferry continuation、South Korea peace-regime proposal、Taliban five-year rights warning、Myanmar Rohingya verification and Virginia State University shooting。科技／AI 聚焦 OpenAI Enterprise usage limits、ChatGPT Search restaurant reservations、Google Cloud semantic governance metrics、Rime Arcana-to-Coda routing and Sim AI Workspace v0.8.2。
 - [2026-08-16 Slides](daily/2026/08/2026-08-16/slides-2026-08-16.html) - 今日新聞網頁版投影片。

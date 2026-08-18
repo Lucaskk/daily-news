@@ -1,0 +1,445 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>2026-08-18 全球與科技 AI 新聞</title>
+  <!-- Background image notes: all major-section backgrounds are local inline SVG assets generated for this standalone deck. No external photo license or network dependency is required for slide imagery. -->
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #172033;
+      --muted: #526071;
+      --paper: #f7f6ef;
+      --panel: rgba(255, 253, 246, 0.92);
+      --line: rgba(23, 32, 51, 0.18);
+      --teal: #006d77;
+      --brick: #a33d2f;
+      --gold: #b27a13;
+      --green: #317453;
+      --blue: #315f9a;
+      --bg-world: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900'%3E%3Crect width='1600' height='900' fill='%23edf5f6'/%3E%3Cpath d='M40 650C260 510 420 520 640 620s420 70 650-70 280-110 330-80' fill='none' stroke='%23006d77' stroke-width='10' opacity='.22'/%3E%3Cpath d='M120 250c130-90 270-120 390-80s190 140 320 160 230-70 390-120 260-20 340 60' fill='none' stroke='%23315f9a' stroke-width='8' opacity='.20'/%3E%3Cg fill='%23a33d2f' opacity='.55'%3E%3Ccircle cx='315' cy='325' r='14'/%3E%3Ccircle cx='710' cy='500' r='12'/%3E%3Ccircle cx='1015' cy='295' r='13'/%3E%3Ccircle cx='1275' cy='575' r='11'/%3E%3C/g%3E%3Cg fill='none' stroke='%23172033' opacity='.09'%3E%3Cpath d='M180 145h520v270H180zM840 115h470v250H840zM520 520h690v230H520z'/%3E%3C/g%3E%3C/svg%3E");
+      --bg-geopolitics: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900'%3E%3Crect width='1600' height='900' fill='%23f4f1e7'/%3E%3Cpath d='M0 680c180-70 360-40 540-95 190-60 330-190 540-170 220 22 305 170 520 100v385H0z' fill='%23dfe9e4'/%3E%3Cpath d='M1010 160c110 80 185 156 225 230 36 67 40 132 14 198' fill='none' stroke='%23a33d2f' stroke-width='13' opacity='.30'/%3E%3Cpath d='M360 240c240 35 390 115 555 255s275 172 425 110' fill='none' stroke='%23006d77' stroke-width='9' opacity='.28'/%3E%3Cg fill='%23315f9a' opacity='.42'%3E%3Crect x='940' y='260' width='210' height='54' rx='6'/%3E%3Crect x='1080' y='360' width='250' height='54' rx='6'/%3E%3Crect x='780' y='472' width='230' height='54' rx='6'/%3E%3C/g%3E%3C/svg%3E");
+      --bg-disaster: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900'%3E%3Crect width='1600' height='900' fill='%23eff2ec'/%3E%3Cg fill='none' stroke='%23172033' opacity='.10'%3E%3Cpath d='M80 180c160-70 280-70 420 0s280 75 420 0 280-70 510 20'/%3E%3Cpath d='M20 320c220-60 400-30 520 50 140 94 290 95 470 0 190-101 360-80 560 45'/%3E%3Cpath d='M0 550c220-90 410-80 590 20s370 95 560-30c150-100 280-100 450-10'/%3E%3C/g%3E%3Cpath d='M1090 170l55 120 130 18-95 88 24 126-114-64-112 64 22-126-92-88 127-18z' fill='%23a33d2f' opacity='.30'/%3E%3Cpath d='M1170 580c80-120 200-100 250-10 45 80 20 170-70 215-110 50-260-20-180-205z' fill='%23b27a13' opacity='.22'/%3E%3Cg stroke='%23006d77' stroke-width='9' opacity='.25'%3E%3Cline x1='260' y1='620' x2='420' y2='700'/%3E%3Cline x1='290' y1='735' x2='470' y2='640'/%3E%3Cline x1='340' y1='560' x2='520' y2='760'/%3E%3C/g%3E%3C/svg%3E");
+      --bg-tech: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900'%3E%3Crect width='1600' height='900' fill='%23eef6f3'/%3E%3Cg fill='none' stroke='%23006d77' stroke-width='5' opacity='.18'%3E%3Cpath d='M950 130h360v220H950zM1020 205h220M1020 275h220M1125 350v160M820 510h610M900 605h400M780 700h560'/%3E%3Ccircle cx='1125' cy='510' r='48'/%3E%3C/g%3E%3Cg fill='%23315f9a' opacity='.26'%3E%3Crect x='1070' y='150' width='45' height='180' rx='5'/%3E%3Crect x='1150' y='150' width='45' height='180' rx='5'/%3E%3Crect x='1230' y='150' width='45' height='180' rx='5'/%3E%3C/g%3E%3Cpath d='M310 215c140-80 270-60 340 25s54 205-35 275-240 68-345-18-98-205 40-282z' fill='%23b27a13' opacity='.18'/%3E%3Cg fill='%23a33d2f' opacity='.34'%3E%3Ccircle cx='455' cy='315' r='18'/%3E%3Ccircle cx='515' cy='425' r='14'/%3E%3Ccircle cx='370' cy='455' r='12'/%3E%3C/g%3E%3C/svg%3E");
+      --bg-source: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900'%3E%3Crect width='1600' height='900' fill='%23f4f6f8'/%3E%3Cg fill='%23ffffff' stroke='%23172033' opacity='.18'%3E%3Crect x='910' y='125' width='420' height='560' rx='10'/%3E%3Crect x='1010' y='190' width='420' height='560' rx='10'/%3E%3C/g%3E%3Cg stroke='%23006d77' stroke-width='9' opacity='.22'%3E%3Cline x1='1080' y1='275' x2='1330' y2='275'/%3E%3Cline x1='1080' y1='350' x2='1380' y2='350'/%3E%3Cline x1='1080' y1='425' x2='1320' y2='425'/%3E%3Cline x1='1080' y1='500' x2='1360' y2='500'/%3E%3C/g%3E%3Cpath d='M200 680c220-150 430-130 650-20' fill='none' stroke='%23a33d2f' stroke-width='12' opacity='.20'/%3E%3C/svg%3E");
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; min-height: 100%; }
+    body {
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC", "PingFang TC", sans-serif;
+      color: var(--ink);
+      background: #101827;
+      overflow: hidden;
+      letter-spacing: 0;
+    }
+    .deck { height: 100vh; width: 100vw; position: relative; overflow: hidden; }
+    .slide {
+      position: absolute;
+      inset: 0;
+      display: none;
+      padding: 42px 52px 88px;
+      background-image: linear-gradient(90deg, rgba(247,246,239,0.96), rgba(247,246,239,0.88) 52%, rgba(247,246,239,0.76)), var(--bg);
+      background-size: cover;
+      background-position: center;
+      overflow-y: auto;
+    }
+    .slide.active { display: block; }
+    .world { --bg: var(--bg-world); }
+    .geopolitics { --bg: var(--bg-geopolitics); }
+    .disaster { --bg: var(--bg-disaster); }
+    .tech { --bg: var(--bg-tech); }
+    .source-bg { --bg: var(--bg-source); }
+    .slide::after {
+      content: "";
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 72px;
+      background: linear-gradient(0deg, rgba(247,246,239,0.97), rgba(247,246,239,0));
+      pointer-events: none;
+    }
+    .kicker {
+      margin: 0 0 10px;
+      color: var(--teal);
+      font-size: 0.82rem;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+    h1, h2, h3 { margin: 0; letter-spacing: 0; }
+    h1 { max-width: 940px; font-size: 3.2rem; line-height: 1.08; color: #101827; }
+    h2 { max-width: 980px; font-size: 2.05rem; line-height: 1.18; color: #101827; }
+    .lede { max-width: 920px; margin: 18px 0 24px; font-size: 1.05rem; line-height: 1.65; color: #293241; }
+    .meta { display: flex; flex-wrap: wrap; gap: 10px; margin: 20px 0 0; }
+    .pill {
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.66);
+      padding: 8px 11px;
+      border-radius: 999px;
+      color: #263238;
+      font-size: 0.86rem;
+      font-weight: 700;
+    }
+    .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; max-width: 1140px; margin-top: 24px; }
+    .grid.three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .grid.one { grid-template-columns: minmax(0, 1fr); max-width: 980px; }
+    details.card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      box-shadow: 0 14px 30px rgba(16, 24, 39, 0.13);
+      overflow: hidden;
+    }
+    details.card summary {
+      list-style: none;
+      cursor: pointer;
+      padding: 16px 16px 14px;
+      min-height: 116px;
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 12px;
+      align-items: start;
+    }
+    details.card summary::-webkit-details-marker { display: none; }
+    .rank {
+      width: 34px;
+      height: 34px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: var(--teal);
+      color: white;
+      font-weight: 900;
+      font-size: 0.9rem;
+    }
+    .rank.brick { background: var(--brick); }
+    .rank.gold { background: var(--gold); }
+    .rank.green { background: var(--green); }
+    .rank.blue { background: var(--blue); }
+    .card h3 { font-size: 1.02rem; line-height: 1.35; margin-bottom: 6px; }
+    .card time, .tagline { display: block; color: var(--muted); font-size: 0.82rem; line-height: 1.38; }
+    .card-body {
+      border-top: 1px solid var(--line);
+      padding: 0 16px 16px 62px;
+      color: #243142;
+      font-size: 0.91rem;
+      line-height: 1.55;
+    }
+    .card-body p { margin: 12px 0 0; }
+    .card-body ul { margin: 10px 0 0; padding-left: 18px; }
+    .source-line {
+      margin-top: 14px;
+      padding-top: 10px;
+      border-top: 1px solid var(--line);
+      color: #1f3d4d;
+      overflow-wrap: anywhere;
+      font-weight: 700;
+    }
+    .controls {
+      position: fixed;
+      left: 50%;
+      bottom: 18px;
+      transform: translateX(-50%);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      z-index: 5;
+      background: rgba(255, 253, 246, 0.9);
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 8px 10px;
+      box-shadow: 0 8px 20px rgba(16, 24, 39, 0.18);
+    }
+    .controls button {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      border: 1px solid rgba(23, 32, 51, 0.2);
+      background: #ffffff;
+      color: var(--ink);
+      font-size: 1.25rem;
+      font-weight: 900;
+      cursor: pointer;
+    }
+    .counter { min-width: 68px; text-align: center; color: var(--muted); font-weight: 800; font-size: 0.9rem; }
+    a { color: #005f6b; }
+    @media (max-width: 920px) {
+      body { overflow: auto; }
+      .deck { min-height: 100vh; height: auto; }
+      .slide { position: relative; min-height: 100dvh; padding: 28px 18px 92px; }
+      .slide:not(.active) { display: none; }
+      h1 { font-size: clamp(2.0rem, 12vw, 2.75rem); }
+      h2 { font-size: clamp(1.55rem, 8vw, 2.05rem); }
+      .lede { font-size: 0.98rem; }
+      .grid, .grid.three { grid-template-columns: 1fr; }
+      details.card summary { min-height: auto; grid-template-columns: 32px 1fr; padding: 14px; }
+      .rank { width: 30px; height: 30px; font-size: 0.8rem; }
+      .card-body { padding: 0 14px 14px 56px; font-size: 0.9rem; }
+      .controls { bottom: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="deck" id="deck">
+    <section class="slide active world">
+      <p class="kicker">Daily Global + Tech AI News</p>
+      <h1>2026-08-18 全球與科技 AI 新聞</h1>
+      <p class="lede">中東外交、U.S. Latin America 軍事擴張、Ukraine energy strikes、Congo Ebola、Indonesia / Zimbabwe 災害，以及 AI 基礎設施與 agent 標準，是今日最需要追蹤的執行層變化。</p>
+      <div class="meta">
+        <span class="pill">研究截點：2026-08-18 08:02:31 Asia/Taipei</span>
+        <span class="pill">窗口：2026-08-17 08:02:31 至 2026-08-18 08:02:31</span>
+        <span class="pill">全球新聞 10 則 + 科技／AI 6 則</span>
+      </div>
+      <div class="grid one">
+        <details class="card">
+          <summary><span class="rank">S</span><div><h3>今日主軸</h3><span class="tagline">外交承諾、救援能力與 AI 算力供給都進入可驗證節點。</span></div></summary>
+          <div class="card-body">
+            <p>全球新聞以重大續報為主：Hormuz、Gaza、Korea drills、Ukraine energy、Indonesia quake、Congo Ebola、Zimbabwe ferry and Europe wildfires 都出現新的數字、會談結果或執行風險。科技／AI 則由 PORTS-Pike data center、A2A governance、OpenAI defender workflow、Gemini / Pixel sports distribution、Relay shutdown and Microsoft chip-capacity investigation 串成一條「AI 是否能被供電、標準化並可靠交付」的主線。</p>
+            <p class="source-line">來源：Daily report 與 Source notes - https://lucaskk.github.io/daily-news/wiki/daily/2026/08/2026-08-18/daily-news-2026-08-18.md ; https://lucaskk.github.io/daily-news/wiki/daily/2026/08/2026-08-18/source-notes-2026-08-18.md</p>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <section class="slide world">
+      <p class="kicker">Selection Map</p>
+      <h2>10 則全球新聞的選擇邏輯</h2>
+      <p class="lede">今天不是靠單一頭條壓倒全場，而是多個已收錄主線同時跨過新的材料門檻。為避免重複，舊事件只在新增實質進展時保留。</p>
+      <div class="grid three">
+        <details class="card">
+          <summary><span class="rank brick">1</span><div><h3>外交與軍事執行</h3><span class="tagline">Hormuz、Gaza、Latin America and Korea 的重點都落在行動授權與承諾細節。</span></div></summary>
+          <div class="card-body"><p>G1-G3 and G8 都不是單純表態：Hormuz 出現 Oman-Iran statement and U.S. threat，Gaza 有 Netanyahu meeting outcome，Latin America 有 sea-to-land operational expansion，Korea 則是演訓已開訓但 downsizing details unknown。</p><p class="source-line">來源：Source notes - https://lucaskk.github.io/daily-news/wiki/daily/2026/08/2026-08-18/source-notes-2026-08-18.md</p></div>
+        </details>
+        <details class="card">
+          <summary><span class="rank gold">2</span><div><h3>死亡上修與救援壓力</h3><span class="tagline">Indonesia、Congo、Zimbabwe 的新點都是數字或門檻改變。</span></div></summary>
+          <div class="card-body"><p>Indonesia death toll rose to 68 with 19,000 displaced；Congo Ebola became DRC's deadliest outbreak at 2,325 deaths；Zimbabwe ferry disaster rose to at least 92 deaths. 這些不是舊事件更新標題，而是救援、公共衛生與監管的實質新狀態。</p><p class="source-line">來源：Source notes - https://lucaskk.github.io/daily-news/wiki/daily/2026/08/2026-08-18/source-notes-2026-08-18.md</p></div>
+        </details>
+        <details class="card">
+          <summary><span class="rank green">3</span><div><h3>排除重複題</h3><span class="tagline">Lake Powell、USS Lincoln、Wildberries、DeepSeek / Gemini rollout 等沒有新事件基準。</span></div></summary>
+          <div class="card-body"><p>Lake Powell AP first publication fell before the window；USS Lincoln and carrier posture were captured on 2026-08-16 / 2026-08-17；DeepSeek V4 pricing, Gemini Enterprise mobile, Zoom Phone and H2O were yesterday's eligible tech items and were not repeated.</p><p class="source-line">來源：Duplicate / Exclusion Notes - https://lucaskk.github.io/daily-news/wiki/daily/2026/08/2026-08-18/source-notes-2026-08-18.md</p></div>
+        </details>
+      </div>
+    </section>
+
+    <section class="slide geopolitics">
+      <p class="kicker">Global News 1-3</p>
+      <h2>中東外交與美國軍事外溢</h2>
+      <div class="grid three">
+        <details class="card">
+          <summary><span class="rank brick">G1</span><div><h3>續報｜Trump 威脅 Oman，Hormuz talks 到期</h3><time datetime="2026-08-17T09:37:56Z">2026-08-17 17:37:56 Asia/Taipei</time></div></summary>
+          <div class="card-body"><p>Iran 表示正與 Oman 敲定 Strait of Hormuz shipping statement；AP 同時指出 U.S.-Iran 60-day negotiating period 到期且未見延期。新點是 Oman 調停角色本身遭 Trump 公開威脅，讓航道管理、封鎖解除與油運保險更難降溫。</p><p>不確定性：Iran and U.S. 對 deadline legitimacy and acceptable Hormuz control 有不同說法；Oman-Iran statement 未見最終文本。</p><p class="source-line">來源：AP News - https://apnews.com/article/iran-us-israel-lebanon-gaza-hormuz-august-17-2026-53ae10812e472a4e5bb228b9f318a5fc ; The Guardian - https://www.theguardian.com/world/live/2026/aug/17/trump-kushner-netanyahu-hamas-gaza-israel-blair-us-iran-hormuz-oil-latest-news-updates</p></div>
+        </details>
+        <details class="card">
+          <summary><span class="rank brick">G2</span><div><h3>續報｜Kushner-Netanyahu 會後 Gaza 方案仍無明確承諾</h3><time datetime="2026-08-17T08:48:43Z">2026-08-17 16:48:43 Asia/Taipei</time></div></summary>
+          <div class="card-body"><p>AP 報導 marathon U.S.-Israel meeting 帶來有限樂觀，但沒有以色列對美國 Gaza plan 的具體承諾。談判焦點落在 Hamas disarmament before reconstruction、Israeli withdrawal from Gaza and implementation sequencing。</p><p>不確定性：Hamas、Israel and U.S. 尚未公開共同文本；撤軍與解除武裝的先後仍可能阻塞整個 road map。</p><p class="source-line">來源：AP News - https://apnews.com/article/kushner-trump-netanyahu-board-of-peace-mladenov-18252d84c29658ca13ac3380743953be ; The Guardian - https://www.theguardian.com/world/live/2026/aug/17/trump-kushner-netanyahu-hamas-gaza-israel-blair-us-iran-hormuz-oil-latest-news-updates</p></div>
+        </details>
+        <details class="card">
+          <summary><span class="rank brick">G3</span><div><h3>U.S. 反毒行動從 Latin America 海上船襲推向陸上</h3><time datetime="2026-08-17T07:03:22Z">2026-08-17 15:03:22 Asia/Taipei</time></div></summary>
+          <div class="card-body"><p>AP 報導，Trump administration says it is seeking to expand lethal anti-cartel operations from boat strikes off Latin America to land, after more than 60 boat strikes killed more than 200 people. Colombia、Guatemala、Honduras 等國被點名，但 Guatemala 否認已達成協議。</p><p>不確定性：legal basis, host-country consent and civilian casualty verification 都尚未清楚。</p><p class="source-line">來源：AP News - https://apnews.com/article/trump-military-operations-latin-american-western-hemisphere-a1fccf4414e44341d3dbd54e19ae1ba4</p></div>
+        </details>
+      </div>
+    </section>
+
+    <section class="slide geopolitics">
+      <p class="kicker">Global News 4 + 8</p>
+      <h2>Ukraine 能源戰與 Korea 同盟壓力</h2>
+      <div class="grid">
+        <details class="card">
+          <summary><span class="rank blue">G4</span><div><h3>續報｜Russia 一週 13 次攻擊 Naftogaz 設施</h3><time datetime="2026-08-17T11:12:59Z">2026-08-17 19:12:59 Asia/Taipei</time></div></summary>
+          <div class="card-body"><p>Ukraine state energy company Naftogaz said Russia attacked its facilities 13 times over the past week and almost 300 times this year, causing serious damage to equipment and production capacity. 新材料不是 drone count，而是 winter energy resilience。</p><p>不確定性：facility-level damage and production loss are not fully public；Russia and Ukraine target descriptions often conflict。</p><p class="source-line">來源：AP News - https://apnews.com/article/russia-ukraine-war-energy-facilities-winter-strikes-8cec7f6dacd1bc0508b8365d62e0d436</p></div>
+        </details>
+        <details class="card">
+          <summary><span class="rank blue">G8</span><div><h3>續報｜South Korea 盼美朝外交，但 Ulchi 已開訓</h3><time datetime="2026-08-17T10:44:45Z">2026-08-17 18:44:45 Asia/Taipei</time></div></summary>
+          <div class="card-body"><p>South Korea on Monday expressed hope for renewed U.S.-North Korea diplomacy after Trump ordered annual drills scaled back. AP says the 11-day Ulchi Freedom Shield exercises began as scheduled, but it was not known which parts were being downsized。</p><p>不確定性：actual exercise reductions, North Korea response and U.S.-ROK readiness impacts remain unknown。</p><p class="source-line">來源：AP News - https://apnews.com/article/trump-north-south-korea-military-drills-kim-84d2ae42b527d6a71d2e7d69acf8483d</p></div>
+        </details>
+      </div>
+    </section>
+
+    <section class="slide disaster">
+      <p class="kicker">Global News 5-7</p>
+      <h2>災害與公共衛生的門檻變化</h2>
+      <div class="grid three">
+        <details class="card">
+          <summary><span class="rank gold">G5</span><div><h3>續報｜Indonesia Flores 強震死亡升至 68</h3><time datetime="2026-08-17T04:11:45Z">2026-08-17 12:11:45 Asia/Taipei</time></div></summary>
+          <div class="card-body"><p>AP 報導 magnitude 7.7 Flores earthquake killed at least 68, injured more than 200, damaged more than 4,500 homes and displaced about 19,000 people. Authorities declared a 14-day state of emergency and relief was slowed by difficult access.</p><p>不確定性：remote regencies and continuing aftershocks make casualty/damage figures provisional。</p><p class="source-line">來源：AP News - https://apnews.com/article/indonesia-flores-earthquake-landslide-ec45607ccc22d9df2d5cfe4ab82d33eb</p></div>
+        </details>
+        <details class="card">
+          <summary><span class="rank gold">G6</span><div><h3>續報｜Congo Ebola 成為 DRC 史上最嚴重疫情</h3><time datetime="2026-08-17T13:23:53Z">2026-08-17 21:23:53 Asia/Taipei</time></div></summary>
+          <div class="card-body"><p>Congo government data released overnight into Monday showed 4,945 cases and 2,325 deaths, surpassing the 2018-2020 DRC Ebola toll. AP reported 101 new cases and 33 deaths in the latest 24 hours, with 730 people hospitalized or isolated.</p><p>不確定性：Bundibugyo variant has no approved specific vaccine/treatment, and conflict-zone surveillance may undercount cases。</p><p class="source-line">來源：AP News - https://apnews.com/article/congo-ebola-disease-ituri-bundibugyo-outbreak-d4a5aac8a82a35144ebfe9de96bef7d2</p></div>
+        </details>
+        <details class="card">
+          <summary><span class="rank gold">G7</span><div><h3>續報｜Zimbabwe ferry disaster 死亡升至 92</h3><time datetime="2026-08-17T19:12:19Z">2026-08-18 03:12:19 Asia/Taipei</time></div></summary>
+          <div class="card-body"><p>Al Jazeera reported Zimbabwe police recovered eight more bodies, raising Lake Kariba ferry deaths to at least 92. Sky News reported at least 77 rescued and uncertainty over the number aboard, with estimates above the reported capacity of 90.</p><p>不確定性：final passenger count, overloading responsibility and rescue timeline remain under investigation。</p><p class="source-line">來源：Al Jazeera - https://www.aljazeera.com/news/2026/8/17/death-toll-from-capsized-ferry-in-zimbabwe-rises-to-92 ; Sky News - https://news.sky.com/story/more-bodies-found-after-lake-kariba-ferry-disaster-in-zimbabwe-as-number-of-deaths-hits-72-13573572</p></div>
+        </details>
+      </div>
+    </section>
+
+    <section class="slide disaster">
+      <p class="kicker">Global News 9-10</p>
+      <h2>Europe wildfires 與 India 公共安全</h2>
+      <div class="grid three">
+        <details class="card">
+          <summary><span class="rank green">G9</span><div><h3>續報｜Belgium High Fens 野火逼近 Germany</h3><time datetime="2026-08-17T11:37:26Z">2026-08-17 19:37:26 Asia/Taipei</time></div></summary>
+          <div class="card-body"><p>AP 報導 Belgium High Fens blaze burned about 30 square kilometers and remained out of control in inaccessible areas, roughly eight kilometers from Germany. Greece probed a deadly Salamina fire；France announced 12 million euros in aid after controlling Landes fire。</p><p>不確定性：peat-bog fires can smolder underground and flare later；arson / cause investigations are preliminary。</p><p class="source-line">來源：AP News - https://apnews.com/article/wildfire-belgium-france-heat-europe-greece-cd5a8524ca3136b009422bd24eb4194e ; The Guardian - https://www.theguardian.com/world/live/2026/aug/17/europe-wildfires-france-greece-belgium-germany-climate-crisis-drought-extreme-heat-latest-news-updates</p></div>
+        </details>
+        <details class="card">
+          <summary><span class="rank green">G10</span><div><h3>India 寺廟踩踏與旅館火災至少 14 死</h3><time datetime="2026-08-17T05:19:02Z">2026-08-17 13:19:02 Asia/Taipei</time></div></summary>
+          <div class="card-body"><p>AP 報導 Bihar Ashok Dham Temple stampede killed seven and injured more than a dozen after preliminary reports of a snapped electric wire. Hours earlier, a West Bengal Tarapith hotel fire killed at least seven pilgrims and critically injured several others。</p><p>不確定性：electrical malfunction and crowd-control responsibility remain under official investigation。</p><p class="source-line">來源：AP News - https://apnews.com/article/india-bihar-hindu-festival-stampede-44325dd6fb2a98b5329921d52b74932b</p></div>
+        </details>
+        <details class="card">
+          <summary><span class="rank green">C</span><div><h3>共同風險：人流、熱浪與救援容量</h3><span class="tagline">大型活動、偏遠地區與跨境天災都在測試地方治理。</span></div></summary>
+          <div class="card-body"><p>今日災害線索都需要後續官方數字：Indonesia 是 shelter and access，Congo 是 contact tracing，Zimbabwe 是 passenger count，Europe 是 fire perimeter and origin，India 是 electrical and crowd-control accountability。</p><p class="source-line">來源：Daily report follow-up - https://lucaskk.github.io/daily-news/wiki/daily/2026/08/2026-08-18/daily-news-2026-08-18.md</p></div>
+        </details>
+      </div>
+    </section>
+
+    <section class="slide tech">
+      <p class="kicker">Technology / AI Overview</p>
+      <h2>科技／AI 今日主線</h2>
+      <p class="lede">今天的科技新聞不靠模型參數，而靠基礎設施、標準、入口與可信供給。AI 產品競爭越來越像能源、瀏覽器、企業資安和 sports distribution 的混合問題。</p>
+      <div class="grid three">
+        <details class="card">
+          <summary><span class="rank blue">A</span><div><h3>算力交易變金融工程</h3><span class="tagline">PORTS-Pike 把 land / power / shell capacity 和 GPU demand 綁成 20-year lease。</span></div></summary>
+          <div class="card-body"><p>OpenAI secured approximately 8 IT-GW at PORTS-Pike；NVIDIA / SB Energy described initial 4.25 IT-GW support with an option for the remaining 3.75 IT-GW and NVIDIA's $1.5B investment in SB Energy。</p><p class="source-line">來源：OpenAI - https://openai.com/index/openai-joins-ports-pike-project/ ; Markets Insider / GlobeNewswire - https://markets.businessinsider.com/news/stocks/nvidia-guarantees-sb-energy-s-ports-pike-technology-campus-in-ohio-to-exclusively-host-nvidia-ai-compute-1036465396</p></div>
+        </details>
+        <details class="card">
+          <summary><span class="rank blue">B</span><div><h3>Agent 標準進入基金會治理</h3><span class="tagline">A2A moving to AAIF puts inter-agent communication beside MCP.</span></div></summary>
+          <div class="card-body"><p>A2A defines how agents discover each other, delegate tasks and exchange work regardless of framework. Moving it into AAIF gives enterprise agent stacks a more neutral governance path。</p><p class="source-line">來源：AAIF - https://aaif.io/blog/a2a-joins-aaif ; Axios - https://www.axios.com/2026/08/17/a2a-agentic-ai-foundation-open-ai-standards</p></div>
+        </details>
+        <details class="card">
+          <summary><span class="rank blue">C</span><div><h3>產品入口從雲端移到瀏覽器與球迷場景</h3><span class="tagline">Chrome AI, Gemini sports partnerships and Codex Security show AI moving into workflows.</span></div></summary>
+          <div class="card-body"><p>Relay shutdown points to workflow automation talent entering Chrome；Google's football partnerships put Gemini / Pixel into fan experience；OpenAI's defender framework pushes Codex-style remediation into security operations。</p><p class="source-line">來源：TechCrunch - https://techcrunch.com/2026/08/17/ai-automation-startup-relay-shuts-down-staff-joins-googles-chrome-team/ ; Google Blog - https://blog.google/products-and-platforms/products/gemini/google-gemini-pixel-football-club-partnerships/ ; OpenAI - https://openai.com/index/the-defenders-window/</p></div>
+        </details>
+      </div>
+    </section>
+
+    <section class="slide tech">
+      <p class="kicker">Technology / AI 1-3</p>
+      <h2>AI 基礎設施、開放標準與供給可信度</h2>
+      <div class="grid three">
+        <details class="card">
+          <summary><span class="rank blue">T1</span><div><h3>PORTS-Pike：OpenAI 鎖定 8 IT-GW AI campus</h3><time datetime="2026-08-17T12:33:00Z">2026-08-17 20:33:00 Asia/Taipei</time></div></summary>
+          <div class="card-body"><p>OpenAI, SB Energy, NVIDIA and DOE announced a Pike County, Ohio project. OpenAI says it secured approximately 8 IT-GW；NVIDIA says it will be exclusive AI compute infrastructure provider, support initial 4.25 IT-GW and invest $1.5B in SB Energy.</p><p>不確定性：8 IT-GW total project and 4.25 IT-GW initial NVIDIA support are different scopes; financing exposure and build schedule need follow-up。</p><p class="source-line">來源：OpenAI - https://openai.com/index/openai-joins-ports-pike-project/ ; Markets Insider / GlobeNewswire - https://markets.businessinsider.com/news/stocks/nvidia-guarantees-sb-energy-s-ports-pike-technology-campus-in-ohio-to-exclusively-host-nvidia-ai-compute-1036465396 ; Axios - https://www.axios.com/2026/08/17/openai-nvidia-ohio-data-center-sb-energy</p></div>
+        </details>
+        <details class="card">
+          <summary><span class="rank blue">T2</span><div><h3>A2A 加入 AAIF open agentic stack</h3><time datetime="2026-08-17T04:00:00Z">2026-08-17 12:00:00 Asia/Taipei</time></div></summary>
+          <div class="card-body"><p>Agent2Agent becomes an AAIF hosted project. The standard covers agent discovery, delegation and work exchange across frameworks, and sits beside MCP in the broader agentic stack.</p><p>不確定性：AAIF's 150+ A2A support count and Axios' 250+ AAIF member count use different denominators。</p><p class="source-line">來源：AAIF - https://aaif.io/blog/a2a-joins-aaif ; Axios - https://www.axios.com/2026/08/17/a2a-agentic-ai-foundation-open-ai-standards</p></div>
+        </details>
+        <details class="card">
+          <summary><span class="rank blue">T6</span><div><h3>Microsoft AI chip capacity 遭 Guardian 調查</h3><time datetime="2026-08-17T04:00:46Z">2026-08-17 12:00:46 Asia/Taipei</time></div></summary>
+          <div class="card-body"><p>Guardian investigation says internal documents and expert estimates suggest Microsoft's operational AI chip capacity may lag headline infrastructure claims, while Microsoft disputes the methodology. This matters because Azure, Copilot and OpenAI ecosystem reliability depend on real inference capacity.</p><p>不確定性：chip inventory and operational power are not fully public; Microsoft says the Guardian estimates are inaccurate。</p><p class="source-line">來源：The Guardian - https://www.theguardian.com/technology/2026/aug/17/are-microsofts-ai-plans-being-held-back-by-a-shortage-of-chips</p></div>
+        </details>
+      </div>
+    </section>
+
+    <section class="slide tech">
+      <p class="kicker">Technology / AI 4-6</p>
+      <h2>安全框架、消費入口與 browser AI</h2>
+      <div class="grid three">
+        <details class="card">
+          <summary><span class="rank green">T3</span><div><h3>OpenAI 發布 The Defender's Window</h3><time datetime="2026-08-17T04:00:00Z">2026-08-17 12:00:00 Asia/Taipei</time></div></summary>
+          <div class="card-body"><p>OpenAI's Greg Brockman framed a defender's window for cyber teams, tying Codex Security, AI alert triage, bounded automated response and vulnerability remediation into an operational playbook.</p><p>不確定性：文章是 strategic / product-direction guidance, not a new public SKU or independent benchmark。</p><p class="source-line">來源：OpenAI - https://openai.com/index/the-defenders-window/</p></div>
+        </details>
+        <details class="card">
+          <summary><span class="rank green">T4</span><div><h3>Google Gemini / Pixel 進入五大足球俱樂部場景</h3><time datetime="2026-08-17T08:00:00Z">2026-08-17 16:00:00 Asia/Taipei</time></div></summary>
+          <div class="card-body"><p>Google announced long-term partnerships with Arsenal, FC Barcelona, Bayern Munich, Liverpool and PSG. Gemini and Pixel become Official Consumer AI and Official Smartphone Partner, supporting match insights, club media teams, Shot on Pixel content and Pixel 11 wallpapers.</p><p>不確定性：club-specific features, country availability and sports-media rights may vary。</p><p class="source-line">來源：Google Blog - https://blog.google/products-and-platforms/products/gemini/google-gemini-pixel-football-club-partnerships/</p></div>
+        </details>
+        <details class="card">
+          <summary><span class="rank green">T5</span><div><h3>Relay 關閉，部分團隊加入 Google Chrome</h3><time datetime="2026-08-17T21:27:05Z">2026-08-18 05:27:05 Asia/Taipei</time></div></summary>
+          <div class="card-body"><p>TechCrunch reported Relay is shutting down its workflow automation app; paid customers keep access until September 14 while free users lost access August 15. Some staff, including CEO Jacob Bank, are joining Google's Chrome team to work on AI in Chrome.</p><p>不確定性：deal terms and Chrome product roadmap are undisclosed。</p><p class="source-line">來源：TechCrunch - https://techcrunch.com/2026/08/17/ai-automation-startup-relay-shuts-down-staff-joins-googles-chrome-team/</p></div>
+        </details>
+      </div>
+    </section>
+
+    <section class="slide world">
+      <p class="kicker">Follow-Up</p>
+      <h2>接下來最值得追的 6 個驗證點</h2>
+      <div class="grid three">
+        <details class="card"><summary><span class="rank brick">1</span><div><h3>Hormuz 船流與 Oman-Iran 文本</h3><span class="tagline">看 statement 是否發布，以及保險與實際通航是否變化。</span></div></summary><div class="card-body"><p>若 Oman-Iran statement 沒有被 U.S. 接受，60-day talks 到期後可能轉為更高風險的航道執法與能源價格壓力。</p><p class="source-line">來源：AP News - https://apnews.com/article/iran-us-israel-lebanon-gaza-hormuz-august-17-2026-53ae10812e472a4e5bb228b9f318a5fc</p></div></details>
+        <details class="card"><summary><span class="rank brick">2</span><div><h3>Gaza sequencing 是否書面化</h3><span class="tagline">disarmament、withdrawal and reconstruction 的順序是核心。</span></div></summary><div class="card-body"><p>短期關鍵不是會談長度，而是 Israel 是否承諾 withdrawal、Hamas disarmament 如何驗證，以及 reconstruction 是否被放在可執行時間表。</p><p class="source-line">來源：AP News - https://apnews.com/article/kushner-trump-netanyahu-board-of-peace-mladenov-18252d84c29658ca13ac3380743953be</p></div></details>
+        <details class="card"><summary><span class="rank brick">3</span><div><h3>Latin America 陸上授權</h3><span class="tagline">host-country consent and casualty review 會決定政治成本。</span></div></summary><div class="card-body"><p>Colombia、Guatemala and Honduras 的正式說法，以及 U.S. legal memos / casualty records，是判斷這是否變成長期 military campaign 的核心材料。</p><p class="source-line">來源：AP News - https://apnews.com/article/trump-military-operations-latin-american-western-hemisphere-a1fccf4414e44341d3dbd54e19ae1ba4</p></div></details>
+        <details class="card"><summary><span class="rank gold">4</span><div><h3>Congo Ebola 24 小時曲線</h3><span class="tagline">101 cases / 33 deaths 是今日警訊，接觸追蹤是下個關鍵。</span></div></summary><div class="card-body"><p>DRC deadliest threshold 之後，真正要追的是 daily new cases, hospital/isolation capacity, vaccine/treatment alternatives and MSF / WHO access constraints。</p><p class="source-line">來源：AP News - https://apnews.com/article/congo-ebola-disease-ituri-bundibugyo-outbreak-d4a5aac8a82a35144ebfe9de96bef7d2</p></div></details>
+        <details class="card"><summary><span class="rank blue">5</span><div><h3>PORTS-Pike build milestones</h3><span class="tagline">4.25 IT-GW initial support vs 8 IT-GW campus needs timeline reconciliation。</span></div></summary><div class="card-body"><p>追蹤 first 800MW / 2028 milestones, power generation, NVIDIA credit exposure, SB Energy financing and OpenAI's tenant obligations。</p><p class="source-line">來源：OpenAI - https://openai.com/index/openai-joins-ports-pike-project/ ; Markets Insider / GlobeNewswire - https://markets.businessinsider.com/news/stocks/nvidia-guarantees-sb-energy-s-ports-pike-technology-campus-in-ohio-to-exclusively-host-nvidia-ai-compute-1036465396</p></div></details>
+        <details class="card"><summary><span class="rank blue">6</span><div><h3>Microsoft capacity disclosure</h3><span class="tagline">Copilot / Azure reliability depends on real operational chips, not only planned capacity。</span></div></summary><div class="card-body"><p>Microsoft disputes Guardian's analysis, so useful follow-up would be concrete chip inventory, operational power, OpenAI allocation and facility readiness disclosure。</p><p class="source-line">來源：The Guardian - https://www.theguardian.com/technology/2026/aug/17/are-microsofts-ai-plans-being-held-back-by-a-shortage-of-chips</p></div></details>
+      </div>
+    </section>
+
+    <section class="slide source-bg">
+      <p class="kicker">Dedupe</p>
+      <h2>今日排除與續報邊界</h2>
+      <div class="grid three">
+        <details class="card"><summary><span class="rank">D1</span><div><h3>Lake Powell excluded</h3><span class="tagline">AP first publication before the window start.</span></div></summary><div class="card-body"><p>Lake Powell record-low story was prominent, but AP first-published at 2026-08-17 05:18:27 Asia/Taipei, before the 08:02:31 window. Later republication was not treated as a new event.</p><p class="source-line">來源：Source notes exclusion - https://lucaskk.github.io/daily-news/wiki/daily/2026/08/2026-08-18/source-notes-2026-08-18.md</p></div></details>
+        <details class="card"><summary><span class="rank">D2</span><div><h3>USS Lincoln not repeated</h3><span class="tagline">Carrier posture was already captured on 2026-08-16 / 2026-08-17.</span></div></summary><div class="card-body"><p>Today's Middle East slots focus on new Oman-Iran / Gaza meeting material. USS Lincoln remains important but did not supply a separate in-window factual development beyond yesterday's capture.</p><p class="source-line">來源：Source notes exclusion - https://lucaskk.github.io/daily-news/wiki/daily/2026/08/2026-08-18/source-notes-2026-08-18.md</p></div></details>
+        <details class="card"><summary><span class="rank">D3</span><div><h3>Wildberries not repeated</h3><span class="tagline">Ukraine logistics strikes already have prior captures.</span></div></summary><div class="card-body"><p>Prior reports captured Wildberries / Ukraine aerial threads on 2026-08-03, 2026-08-08 and 2026-08-17. Today's Ukraine item uses a distinct Naftogaz / winter energy basis.</p><p class="source-line">來源：Source notes exclusion - https://lucaskk.github.io/daily-news/wiki/daily/2026/08/2026-08-18/source-notes-2026-08-18.md</p></div></details>
+        <details class="card"><summary><span class="rank">D4</span><div><h3>E. Jean Carroll excluded</h3><span class="tagline">Fresh but below the global top-10 threshold today.</span></div></summary><div class="card-body"><p>The Supreme Court / Trump verdict item was in-window and notable, but ranked below conflict, health, disaster and cross-border governance items in the 10-slot global list.</p><p class="source-line">來源：Source notes exclusion - https://lucaskk.github.io/daily-news/wiki/daily/2026/08/2026-08-18/source-notes-2026-08-18.md</p></div></details>
+        <details class="card"><summary><span class="rank">D5</span><div><h3>Meta trial excluded from tech</h3><span class="tagline">Important platform law, but not today's strongest AI/product item.</span></div></summary><div class="card-body"><p>The Meta child-harms trial is a major tech-governance story, but today's tech section prioritized AI infrastructure, standards, security workflow, consumer AI distribution, browser agents and hyperscaler capacity.</p><p class="source-line">來源：Source notes exclusion - https://lucaskk.github.io/daily-news/wiki/daily/2026/08/2026-08-18/source-notes-2026-08-18.md</p></div></details>
+        <details class="card"><summary><span class="rank">D6</span><div><h3>Yesterday's tech releases not repeated</h3><span class="tagline">DeepSeek, Gemini Enterprise, Zoom, H2O, Transmit and Hermes had no new in-window node.</span></div></summary><div class="card-body"><p>Those items remain useful background, but today's automation rules require a new event/effective date. No material Aug. 17/18 product development was found for them.</p><p class="source-line">來源：Source notes exclusion - https://lucaskk.github.io/daily-news/wiki/daily/2026/08/2026-08-18/source-notes-2026-08-18.md</p></div></details>
+      </div>
+    </section>
+
+    <section class="slide source-bg">
+      <p class="kicker">Sources + Imagery</p>
+      <h2>來源與影像說明</h2>
+      <div class="grid">
+        <details class="card">
+          <summary><span class="rank">N</span><div><h3>新聞來源原則</h3><span class="tagline">每張新聞卡的展開內容都附完整原始 URL。</span></div></summary>
+          <div class="card-body"><p>本日使用 AP News, The Guardian, Al Jazeera, Sky News, OpenAI, Google Blog, Agentic AI Foundation, Axios, Markets Insider / GlobeNewswire and TechCrunch。所有新聞、科技摘要、統計與追蹤卡的來源都放在該卡展開內容末端，不使用 slide-level floating footer。</p><p class="source-line">來源：Source notes - https://lucaskk.github.io/daily-news/wiki/daily/2026/08/2026-08-18/source-notes-2026-08-18.md</p></div>
+        </details>
+        <details class="card">
+          <summary><span class="rank">I</span><div><h3>背景影像授權</h3><span class="tagline">本 deck 使用本檔內嵌 SVG，不依賴外部照片。</span></div></summary>
+          <div class="card-body"><p>Title / world map, geopolitics, disaster, technology and source slides use local inline SVG background images generated specifically for this deck. They are visual motifs, not documentary photos, and avoid external image-host availability or unclear photo licensing.</p><p class="source-line">來源：本 HTML 檔內註解 - https://lucaskk.github.io/daily-news/wiki/daily/2026/08/2026-08-18/slides-2026-08-18.html</p></div>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <nav class="controls" aria-label="slide controls">
+    <button type="button" id="prev" aria-label="Previous slide">‹</button>
+    <div class="counter" id="counter">1 / 12</div>
+    <button type="button" id="next" aria-label="Next slide">›</button>
+  </nav>
+
+  <script>
+    const slides = Array.from(document.querySelectorAll('.slide'));
+    const counter = document.getElementById('counter');
+    const prev = document.getElementById('prev');
+    const next = document.getElementById('next');
+    let current = 0;
+    function show(index) {
+      current = Math.max(0, Math.min(slides.length - 1, index));
+      slides.forEach((slide, i) => slide.classList.toggle('active', i === current));
+      counter.textContent = `${current + 1} / ${slides.length}`;
+      location.hash = `slide-${current + 1}`;
+    }
+    function isInteractive(target) {
+      return target.closest('details, summary, a, button, input, textarea, select');
+    }
+    prev.addEventListener('click', () => show(current - 1));
+    next.addEventListener('click', () => show(current + 1));
+    document.addEventListener('keydown', (event) => {
+      if (isInteractive(event.target) && !['ArrowLeft', 'ArrowRight', 'PageUp', 'PageDown', 'Home', 'End'].includes(event.key)) return;
+      if (event.key === 'ArrowRight' || event.key === 'PageDown' || event.key === ' ') { event.preventDefault(); show(current + 1); }
+      if (event.key === 'ArrowLeft' || event.key === 'PageUp') { event.preventDefault(); show(current - 1); }
+      if (event.key === 'Home') { event.preventDefault(); show(0); }
+      if (event.key === 'End') { event.preventDefault(); show(slides.length - 1); }
+    });
+    let touchStartX = 0;
+    let touchStartY = 0;
+    document.addEventListener('touchstart', (event) => {
+      const touch = event.changedTouches[0];
+      touchStartX = touch.clientX;
+      touchStartY = touch.clientY;
+    }, { passive: true });
+    document.addEventListener('touchend', (event) => {
+      if (isInteractive(event.target)) return;
+      const touch = event.changedTouches[0];
+      const dx = touch.clientX - touchStartX;
+      const dy = touch.clientY - touchStartY;
+      if (Math.abs(dx) > 60 && Math.abs(dx) > Math.abs(dy) * 1.4) show(current + (dx < 0 ? 1 : -1));
+    }, { passive: true });
+    const match = location.hash.match(/slide-(\d+)/);
+    if (match) show(Number(match[1]) - 1); else show(0);
+  </script>
+</body>
+</html>

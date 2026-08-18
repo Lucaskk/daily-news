@@ -2,7 +2,7 @@
 title: "Knowledge Base Index"
 type: overview
 created: 2026-05-24
-updated: 2026-08-16
+updated: 2026-08-18
 status: seed
 tags: [index]
 sources: []
@@ -26,6 +26,12 @@ sources: []
 
 - [每日全球與科技 AI 新聞產製規則](daily/README.md) - 包含研究截點前 24 小時限制、跨日去重、重大續報判定、來源紀錄與發布驗證規則。
 
+
+- [2026-08-18 Daily News](daily/2026/08/2026-08-18/daily-news-2026-08-18.md) - 今日主軸是「外交承諾、救援能力與 AI 算力供給進入可驗證節點」：Trump 威脅 Oman and Hormuz talks, Kushner-Netanyahu Gaza meeting, U.S. Latin America land-campaign expansion, Ukraine Naftogaz energy strikes, Indonesia quake death toll 68, Congo Ebola deadliest outbreak, Zimbabwe ferry toll 92, South Korea drill diplomacy, Europe wildfires and India stampede / hotel fire。科技／AI 聚焦 OpenAI / NVIDIA / SB Energy PORTS-Pike, A2A joining AAIF, OpenAI Defender's Window, Google Gemini / Pixel football partnerships, Relay shutdown into Chrome AI and Microsoft AI chip-capacity investigation。
+- [2026-08-18 Slides](daily/2026/08/2026-08-18/slides-2026-08-18.html) - 今日新聞網頁版投影片。
+
+- [2026-08-17 Daily News](daily/2026/08/2026-08-17/daily-news-2026-08-17.md) - 今日主軸是「戰爭外溢風險、救援復原與 AI 工作流治理同日升高」：Ukraine 大規模無人機攻擊與 NATO Romania 攔截、Kushner-Hamas meeting、Trump 縮減美韓軍演、USS Lincoln 長部署、Tropical Storm Lala、Colombia quake tariff request、Indonesia Flores quake death toll、Greece / Belgium wildfires、Hungary bus crash and Sicily museum heist。科技／AI 聚焦 DeepSeek V4 pricing effective、Google Gemini Enterprise mobile app、Zoom Phone Agentic Workflows、H2O AI Managed Cloud v26.08.0、Transmit Security SDK and Hermes Agent v0.20.2。
+- [2026-08-17 Slides](daily/2026/08/2026-08-17/slides-2026-08-17.html) - 今日新聞網頁版投影片。
 
 - [2026-08-16 Daily News](daily/2026/08/2026-08-16/daily-news-2026-08-16.md) - 今日主軸是「中東衝突外溢牽動軍事部署，災害與難民治理進入可驗證節點，AI 產品焦點轉向治理、用量與 agent 可觀測性」：Lebanon strikes、U.S. carrier gap、Qatar / UAE / Hormuz / Yemen escalation、Hurricane Lala、Indiana flooding、Zimbabwe ferry continuation、South Korea peace-regime proposal、Taliban five-year rights warning、Myanmar Rohingya verification and Virginia State University shooting。科技／AI 聚焦 OpenAI Enterprise usage limits、ChatGPT Search restaurant reservations、Google Cloud semantic governance metrics、Rime Arcana-to-Coda routing and Sim AI Workspace v0.8.2。
 - [2026-08-16 Slides](daily/2026/08/2026-08-16/slides-2026-08-16.html) - 今日新聞網頁版投影片。
