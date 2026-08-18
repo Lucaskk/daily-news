@@ -6,7 +6,10 @@
 - Recorded the exact Asia/Taipei 24-hour window, per-item event or publication-time basis, material continuations, archive dedupe checks and exclusion rationale in `source-notes-2026-08-18.md`.
 - Created `slides-2026-08-18.html` as a standalone HTML deck with local SVG themed backgrounds, browser / keyboard / touch navigation, expandable cards and per-card complete source URLs.
 - Updated `wiki/daily/latest-slides.html`, `wiki/index.md`, `wiki/overview.md`, `.nojekyll`, and the root Pages entry timestamp.
-- Publishing, GitHub Pages verification, LINE watchdog delivery and localhost preview status are recorded by this automation after verification.
+- Published the scoped daily-news package to `main` through a clean local clone at commit `04b13f6`.
+- GitHub Pages verification passed for the dated deck, latest redirect, daily report, source notes and root index.
+- LINE watchdog delivery succeeded at `2026-08-18T08:24:06+08:00` with the public dated deck URL.
+- Localhost preview verified at `http://localhost:4176/wiki/daily/latest-slides.html`; preferred port 4173 was unavailable.
 
 ## [2026-08-17] ingest | Daily global and tech AI news
 
