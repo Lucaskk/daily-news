@@ -5,7 +5,7 @@
 - Created `wiki/daily/2026/08/2026-08-19/daily-news-2026-08-19.md` with exactly 10 global items and seven technology / AI product, browser-agent, software-factory, enterprise-governance or education items.
 - Recorded the exact Asia/Taipei 24-hour window, per-item event or publication-time basis, material continuations, date-level source limitations, archive dedupe checks and exclusion rationale in `source-notes-2026-08-19.md`.
 - Created `slides-2026-08-19.html` as a standalone HTML deck with local inline SVG themed backgrounds, browser / keyboard / touch navigation, expandable cards and per-card complete source URLs.
-- Updated `wiki/daily/latest-slides.html`, `wiki/index.md`, `wiki/overview.md`, `.nojekyll`, and the root Pages entry timestamp.
+- Updated `wiki/daily/latest-slides.html`, `wiki/index.md`, `wiki/overview.md`, and the root Pages entry timestamp; confirmed `.nojekyll` remains present for GitHub Pages.
 - Published the scoped daily-news package to `main` through a clean local clone at commit `bf8cd2e`.
 - GitHub Pages verification passed for the dated deck, latest redirect, daily report, source notes and root index.
 - LINE watchdog delivery succeeded at `2026-08-19T08:25:54+08:00` with the public dated deck URL.
