@@ -1,5 +1,13 @@
 # Knowledge Base Log
 
+## [2026-08-19] ingest | Daily global and tech AI news
+
+- Created `wiki/daily/2026/08/2026-08-19/daily-news-2026-08-19.md` with exactly 10 global items and seven technology / AI product, browser-agent, software-factory, enterprise-governance or education items.
+- Recorded the exact Asia/Taipei 24-hour window, per-item event or publication-time basis, material continuations, date-level source limitations, archive dedupe checks and exclusion rationale in `source-notes-2026-08-19.md`.
+- Created `slides-2026-08-19.html` as a standalone HTML deck with local inline SVG themed backgrounds, browser / keyboard / touch navigation, expandable cards and per-card complete source URLs.
+- Updated `wiki/daily/latest-slides.html`, `wiki/index.md`, `wiki/overview.md`, `.nojekyll`, and the root Pages entry timestamp.
+- Publishing, GitHub Pages verification, LINE watchdog delivery and localhost preview status are recorded after deployment verification.
+
 ## [2026-08-18] ingest | Daily global and tech AI news
 
 - Created `wiki/daily/2026/08/2026-08-18/daily-news-2026-08-18.md` with exactly 10 global items and six technology / AI product, platform, standards, infrastructure or capacity items.

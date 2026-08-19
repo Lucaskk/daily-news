@@ -2,7 +2,7 @@
 title: "Knowledge Base Index"
 type: overview
 created: 2026-05-24
-updated: 2026-08-18
+updated: 2026-08-19
 status: seed
 tags: [index]
 sources: []
@@ -26,6 +26,9 @@ sources: []
 
 - [每日全球與科技 AI 新聞產製規則](daily/README.md) - 包含研究截點前 24 小時限制、跨日去重、重大續報判定、來源紀錄與發布驗證規則。
 
+
+- [2026-08-19 Daily News](daily/2026/08/2026-08-19/daily-news-2026-08-19.md) - 今日主軸是「戰爭與航道風險延伸到制度壓力，AI 產品轉向青少年、瀏覽器代理與高能力安全管制」：Ukraine 近 800 架 drones and Kharkiv 10 deaths、Trump no Iran talks / Hormuz pressure、U.S. sanctions ICC leadership、U.S.-Canada tariff deadline、Roadless Rule rescission、ABC / FCC lawsuit、Meta child-safety trial、Fedorov wartime election call、Syria detention-death protests and Philippines livestreamed school shooting。科技／AI 聚焦 ChatGPT for Teens、Gemini in Chrome Android / Auto Browse、OpenAI cyber-critical pacing、Warp Factories、GitHub Copilot JetBrains enterprise controls、Gemini SAT practice tests and OpenAI-CodeAI partnership。
+- [2026-08-19 Slides](daily/2026/08/2026-08-19/slides-2026-08-19.html) - 今日新聞網頁版投影片。
 
 - [2026-08-18 Daily News](daily/2026/08/2026-08-18/daily-news-2026-08-18.md) - 今日主軸是「外交承諾、救援能力與 AI 算力供給進入可驗證節點」：Trump 威脅 Oman and Hormuz talks, Kushner-Netanyahu Gaza meeting, U.S. Latin America land-campaign expansion, Ukraine Naftogaz energy strikes, Indonesia quake death toll 68, Congo Ebola deadliest outbreak, Zimbabwe ferry toll 92, South Korea drill diplomacy, Europe wildfires and India stampede / hotel fire。科技／AI 聚焦 OpenAI / NVIDIA / SB Energy PORTS-Pike, A2A joining AAIF, OpenAI Defender's Window, Google Gemini / Pixel football partnerships, Relay shutdown into Chrome AI and Microsoft AI chip-capacity investigation。
 - [2026-08-18 Slides](daily/2026/08/2026-08-18/slides-2026-08-18.html) - 今日新聞網頁版投影片。

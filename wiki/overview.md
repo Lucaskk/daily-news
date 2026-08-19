@@ -2,7 +2,7 @@
 title: "Overview"
 type: overview
 created: 2026-05-24
-updated: 2026-08-18
+updated: 2026-08-19
 status: seed
 tags: [overview]
 sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
@@ -19,6 +19,12 @@ sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
 - 抽出持續出現的人物、組織、事件、政策、技術與市場概念。
 - 維護跨來源的矛盾、時間線、趨勢與待查問題。
 - 將重要查詢結果回寫成可累積的 wiki 頁面。
+
+## 2026-08-19 Daily News Synthesis
+
+- 全球新聞主軸轉為「戰爭與航道風險延伸到制度壓力」：Ukraine 近 800 架 drones and Russia missile strike on Kharkiv village, Trump saying no U.S.-Iran talks are planned, and U.S. sanctions on ICC leadership turn military escalation, maritime chokepoints and international justice into active governance crises.
+- U.S.-centered制度壓力同日跨越 trade, environment, media and platform accountability：Canada 50% tariff deadline, Roadless Rule rescission proposal, ABC / Disney's FCC lawsuit and Meta child-safety trial all require court, regulatory or deadline follow-up rather than headline repetition.
+- 科技／AI 今日聚焦「高風險人群與 agent 化入口」：ChatGPT for Teens, Gemini in Chrome Android / Auto Browse, OpenAI cyber-critical development pacing, Warp Factories, Copilot JetBrains enterprise settings, Gemini SAT practice and OpenAI-CodeAI partnership show AI products moving into youth learning, browser action, software delivery and organizational controls.
 
 ## 2026-08-18 Daily News Synthesis
 
@@ -132,6 +138,12 @@ sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
 
 ## Latest Daily News
 
+
+- [2026-08-19 Daily News](daily/2026/08/2026-08-19/daily-news-2026-08-19.md) - 今日主軸是「戰爭與航道風險延伸到制度壓力，AI 產品轉向青少年、瀏覽器代理與高能力安全管制」：Ukraine 近 800 架 drones and Kharkiv 10 deaths、Trump no Iran talks / Hormuz pressure、U.S. sanctions ICC leadership、U.S.-Canada tariff deadline、Roadless Rule rescission、ABC / FCC lawsuit、Meta child-safety trial、Fedorov wartime election call、Syria detention-death protests and Philippines livestreamed school shooting。科技／AI 聚焦 ChatGPT for Teens、Gemini in Chrome Android / Auto Browse、OpenAI cyber-critical pacing、Warp Factories、GitHub Copilot JetBrains enterprise controls、Gemini SAT practice tests and OpenAI-CodeAI partnership。
+- [2026-08-19 Slides](daily/2026/08/2026-08-19/slides-2026-08-19.html) - 今日新聞網頁版投影片。
+
+- [2026-08-18 Daily News](daily/2026/08/2026-08-18/daily-news-2026-08-18.md) - 今日主軸是「外交承諾、救援能力與 AI 算力供給進入可驗證節點」：Trump 威脅 Oman and Hormuz talks, Kushner-Netanyahu Gaza meeting, U.S. Latin America land-campaign expansion, Ukraine Naftogaz energy strikes, Indonesia quake death toll 68, Congo Ebola deadliest outbreak, Zimbabwe ferry toll 92, South Korea drill diplomacy, Europe wildfires and India stampede / hotel fire。科技／AI 聚焦 OpenAI / NVIDIA / SB Energy PORTS-Pike, A2A joining AAIF, OpenAI Defender's Window, Google Gemini / Pixel football partnerships, Relay shutdown into Chrome AI and Microsoft AI chip-capacity investigation。
+- [2026-08-18 Slides](daily/2026/08/2026-08-18/slides-2026-08-18.html) - 今日新聞網頁版投影片。
 
 - [2026-08-17 Daily News](daily/2026/08/2026-08-17/daily-news-2026-08-17.md) - 今日主軸是「戰爭外溢風險、救援復原與 AI 工作流治理同日升高」：Ukraine 大規模無人機攻擊與 NATO Romania 攔截、Kushner-Hamas meeting、Trump 縮減美韓軍演、USS Lincoln 長部署、Tropical Storm Lala、Colombia quake tariff request、Indonesia Flores quake death toll、Greece / Belgium wildfires、Hungary bus crash and Sicily museum heist。科技／AI 聚焦 DeepSeek V4 pricing effective、Google Gemini Enterprise mobile app、Zoom Phone Agentic Workflows、H2O AI Managed Cloud v26.08.0、Transmit Security SDK and Hermes Agent v0.20.2。
 - [2026-08-17 Slides](daily/2026/08/2026-08-17/slides-2026-08-17.html) - 今日新聞網頁版投影片。
