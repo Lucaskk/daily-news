@@ -2,7 +2,7 @@
 title: "Overview"
 type: overview
 created: 2026-05-24
-updated: 2026-08-19
+updated: 2026-08-20
 status: seed
 tags: [overview]
 sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
@@ -19,6 +19,12 @@ sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
 - 抽出持續出現的人物、組織、事件、政策、技術與市場概念。
 - 維護跨來源的矛盾、時間線、趨勢與待查問題。
 - 將重要查詢結果回寫成可累積的 wiki 頁面。
+
+## 2026-08-20 Daily News Synthesis
+
+- 全球新聞主軸轉為「航道、戰爭與制度問責同時進入執行層」：UAE 對 Iran 的貿易與金融禁運、Gaza strikes plus Hind Rajab / paramedic criminal investigations, and Zelenskyy's office corruption-probe fallout all require follow-up through sanctions enforcement, ceasefire / accountability records and wartime governance.
+- 市場與安全風險變得更可量化：U.S.-Canada trade deal terms remain unclear before a Saturday tariff trigger, U.S. Treasury bond buybacks and the $40T debt marker expose funding stress, Nord Stream arrest moves sabotage attribution toward extradition, and U.S.-South Korea drill cuts test deterrence signaling.
+- 科技／AI 今日聚焦「高頻入口與企業治理」：OpenAI ZDR / Private Safety Processing, Replit Free Mode, Google student AI tools, Alexa+ on Fire TV, Gemini in Waymo vehicles, GitHub Code Quality / CodeQL and Calendly note-taking show AI moving into privacy-preserving enterprise use, free coding funnels, education, living rooms, vehicles and developer-quality dashboards.
 
 ## 2026-08-19 Daily News Synthesis
 
@@ -138,6 +144,9 @@ sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
 
 ## Latest Daily News
 
+
+- [2026-08-20 Daily News](daily/2026/08/2026-08-20/daily-news-2026-08-20.md) - 今日主軸是「航道與戰爭續報進入制裁、問責與市場壓力，AI 產品推向企業隱私、教育、客廳與車內助理」：UAE-Iran embargo、Gaza strikes / Hind Rajab investigations、Zelenskyy office corruption probe、U.S.-Canada trade deal terms unclear、U.S. Treasury buybacks / $40T debt、Nord Stream arrest、U.S.-South Korea drill cuts、Moderna / Merck mRNA melanoma trial、Kenya helicopter crash and FDA nomination。科技／AI 聚焦 OpenAI ZDR / Private Safety Processing、OpenAI-Replit Free Mode、Google student AI tools、Amazon Alexa+ Fire TV、Gemini in Waymo、GitHub Code Quality / CodeQL and Calendly AI note-taking。
+- [2026-08-20 Slides](daily/2026/08/2026-08-20/slides-2026-08-20.html) - 今日新聞網頁版投影片。
 
 - [2026-08-19 Daily News](daily/2026/08/2026-08-19/daily-news-2026-08-19.md) - 今日主軸是「戰爭與航道風險延伸到制度壓力，AI 產品轉向青少年、瀏覽器代理與高能力安全管制」：Ukraine 近 800 架 drones and Kharkiv 10 deaths、Trump no Iran talks / Hormuz pressure、U.S. sanctions ICC leadership、U.S.-Canada tariff deadline、Roadless Rule rescission、ABC / FCC lawsuit、Meta child-safety trial、Fedorov wartime election call、Syria detention-death protests and Philippines livestreamed school shooting。科技／AI 聚焦 ChatGPT for Teens、Gemini in Chrome Android / Auto Browse、OpenAI cyber-critical pacing、Warp Factories、GitHub Copilot JetBrains enterprise controls、Gemini SAT practice tests and OpenAI-CodeAI partnership。
 - [2026-08-19 Slides](daily/2026/08/2026-08-19/slides-2026-08-19.html) - 今日新聞網頁版投影片。

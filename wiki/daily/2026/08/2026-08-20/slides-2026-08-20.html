@@ -1,0 +1,774 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>2026-08-20 全球與科技 AI 新聞投影片</title>
+  <meta name="description" content="2026-08-20 全球與科技 AI 新聞，含 10 則全球新聞與科技／AI 產品新聞。">
+  <style>
+    :root {
+      --ink: #172033;
+      --muted: #5d6676;
+      --paper: rgba(255, 255, 255, 0.92);
+      --paper-strong: rgba(255, 255, 255, 0.98);
+      --line: rgba(23, 32, 51, 0.16);
+      --accent: #006c67;
+      --accent-2: #9b4f16;
+      --accent-3: #315c9d;
+      --shadow: 0 18px 48px rgba(13, 24, 45, 0.18);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      color: var(--ink);
+      background: #eef3f4;
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      overflow: hidden;
+    }
+
+    a { color: #005f6b; }
+
+    .deck {
+      min-height: 100vh;
+      position: relative;
+    }
+
+    .slide {
+      display: none;
+      min-height: 100vh;
+      padding: clamp(20px, 4vw, 52px);
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      overflow-y: auto;
+    }
+
+    .slide.active {
+      display: grid;
+      align-content: center;
+    }
+
+    .slide::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background: linear-gradient(110deg, rgba(247, 250, 250, 0.88), rgba(247, 250, 250, 0.56));
+      pointer-events: none;
+    }
+
+    .slide > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    .cover {
+      background-image:
+        linear-gradient(105deg, rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.58)),
+        url("https://images.unsplash.com/photo-1495020689067-958852a7765e?auto=format&fit=crop&w=1800&q=82");
+    }
+
+    .world { background-image: linear-gradient(105deg, rgba(255,255,255,.9), rgba(255,255,255,.62)), url("https://images.unsplash.com/photo-1521295121783-8a321d551ad2?auto=format&fit=crop&w=1800&q=82"); }
+    .gulf { background-image: linear-gradient(105deg, rgba(255,255,255,.91), rgba(255,255,255,.62)), url("https://images.unsplash.com/photo-1494412651409-8963ce7935a7?auto=format&fit=crop&w=1800&q=82"); }
+    .governance { background-image: linear-gradient(105deg, rgba(255,255,255,.91), rgba(255,255,255,.62)), url("https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?auto=format&fit=crop&w=1800&q=82"); }
+    .finance { background-image: linear-gradient(105deg, rgba(255,255,255,.91), rgba(255,255,255,.63)), url("https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?auto=format&fit=crop&w=1800&q=82"); }
+    .security { background-image: linear-gradient(105deg, rgba(255,255,255,.91), rgba(255,255,255,.63)), url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1800&q=82"); }
+    .tech { background-image: linear-gradient(105deg, rgba(255,255,255,.92), rgba(255,255,255,.62)), url("https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1800&q=82"); }
+    .learning { background-image: linear-gradient(105deg, rgba(255,255,255,.92), rgba(255,255,255,.64)), url("https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1800&q=82"); }
+
+    .content {
+      width: min(1180px, 100%);
+      margin: 0 auto;
+    }
+
+    .cover .content {
+      width: min(1040px, 100%);
+    }
+
+    .eyebrow {
+      margin: 0 0 12px;
+      color: #006c67;
+      font-weight: 800;
+      text-transform: uppercase;
+      font-size: clamp(0.78rem, 1.3vw, 0.95rem);
+    }
+
+    h1 {
+      margin: 0;
+      max-width: 880px;
+      font-size: clamp(2.45rem, 7.4vw, 5.8rem);
+      line-height: 1.02;
+      font-weight: 850;
+    }
+
+    h2 {
+      margin: 0 0 14px;
+      font-size: clamp(1.75rem, 4.2vw, 3.4rem);
+      line-height: 1.1;
+    }
+
+    .lede {
+      max-width: 900px;
+      margin: 18px 0 0;
+      color: #263347;
+      font-size: clamp(1.04rem, 2vw, 1.35rem);
+      line-height: 1.65;
+    }
+
+    .publish {
+      display: inline-flex;
+      margin-top: 22px;
+      padding: 8px 10px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: rgba(255,255,255,.82);
+      color: #2b3548;
+      font-size: 0.95rem;
+    }
+
+    .grid {
+      display: grid;
+      gap: 14px;
+    }
+
+    .grid.two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .grid.three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+
+    .news-card,
+    .stat-card,
+    .follow-card {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    details {
+      padding: 0;
+    }
+
+    summary {
+      cursor: pointer;
+      list-style: none;
+      padding: 16px 18px;
+      font-weight: 830;
+      line-height: 1.35;
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: var(--paper-strong);
+    }
+
+    summary::-webkit-details-marker { display: none; }
+
+    summary::after {
+      content: "+";
+      margin-left: auto;
+      color: var(--accent);
+      font-size: 1.45rem;
+      line-height: 1;
+    }
+
+    details[open] summary::after { content: "-"; }
+
+    .rank,
+    .tag {
+      flex: 0 0 auto;
+      min-width: 34px;
+      height: 34px;
+      border-radius: 999px;
+      display: inline-grid;
+      place-items: center;
+      color: white;
+      background: var(--accent);
+      font-size: 0.88rem;
+      font-weight: 900;
+    }
+
+    .tag { background: var(--accent-3); min-width: 42px; padding: 0 8px; }
+    .continuation .rank { background: var(--accent-2); }
+    .tech-card .tag { background: #1e6b54; }
+
+    .body {
+      padding: 0 18px 18px;
+      color: #243047;
+      line-height: 1.58;
+    }
+
+    .body time,
+    .meta {
+      display: block;
+      color: var(--muted);
+      font-size: 0.92rem;
+      margin: 2px 0 12px;
+    }
+
+    .body ul {
+      padding-left: 1.2rem;
+      margin: 8px 0;
+    }
+
+    .body li { margin: 4px 0; }
+
+    .card-source {
+      margin: 14px 0 0;
+      padding-top: 10px;
+      border-top: 1px solid var(--line);
+      color: #364154;
+      word-break: break-word;
+      font-size: 0.93rem;
+    }
+
+    .controls {
+      position: fixed;
+      left: 50%;
+      bottom: 18px;
+      transform: translateX(-50%);
+      z-index: 5;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px;
+      border-radius: 8px;
+      background: rgba(255,255,255,.9);
+      box-shadow: 0 8px 24px rgba(12, 23, 39, 0.18);
+      border: 1px solid var(--line);
+    }
+
+    .controls button {
+      width: 42px;
+      height: 38px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #ffffff;
+      color: var(--ink);
+      font-size: 1.1rem;
+      font-weight: 850;
+      cursor: pointer;
+    }
+
+    .controls button:focus-visible,
+    summary:focus-visible {
+      outline: 3px solid rgba(0, 108, 103, .35);
+      outline-offset: 2px;
+    }
+
+    .counter {
+      min-width: 72px;
+      text-align: center;
+      font-weight: 800;
+      color: #2b3548;
+    }
+
+    .sources-list {
+      display: grid;
+      gap: 8px;
+      padding: 14px 18px 18px;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      box-shadow: var(--shadow);
+      line-height: 1.55;
+      word-break: break-word;
+    }
+
+    @media (max-width: 860px) {
+      body { overflow: auto; }
+      .slide { padding: 20px 14px 86px; }
+      .slide.active { align-content: start; }
+      .grid.two,
+      .grid.three { grid-template-columns: 1fr; }
+      summary { min-height: 64px; padding: 14px; }
+      .body { padding: 0 14px 14px; }
+      .controls { bottom: 10px; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Background image credits are repeated on the final slide. Unsplash image URLs are stable remote image assets used for theme-relevant section backgrounds. -->
+  <main class="deck" id="deck">
+    <section class="slide cover active" data-title="Title">
+      <div class="content">
+        <p class="eyebrow">每日全球與科技 AI 新聞</p>
+        <h1>2026-08-20<br>全球與科技 AI 新聞</h1>
+        <p class="lede">航道與戰爭續報進入制裁、問責與市場壓力；AI 產品把企業隱私、教育、客廳與車內助理推向量產。</p>
+        <time class="publish" datetime="2026-08-20T08:02:15+08:00">發佈時間｜2026-08-20 08:02:15（Asia/Taipei）</time>
+      </div>
+    </section>
+
+    <section class="slide world" data-title="Window">
+      <div class="content">
+        <p class="eyebrow">Research Window</p>
+        <h2>24 小時窗口與選題邊界</h2>
+        <div class="grid three">
+          <article class="stat-card">
+            <details>
+              <summary><span class="tag">時段</span>本次研究截點</summary>
+              <div class="body">
+                <time datetime="2026-08-20T08:02:15+08:00">發佈時間｜2026-08-20 08:02:15（Asia/Taipei）</time>
+                <p><strong>窗口：</strong>2026-08-19 08:02:15 至 2026-08-20 08:02:15（Asia/Taipei）。UTC 為 2026-08-19T00:02:15Z 至 2026-08-20T00:02:15Z。</p>
+                <p><strong>規則：</strong>只收錄窗口內發生、官方發布或首次可靠發布的事件與產品更新。</p>
+                <p class="card-source"><strong>來源：</strong>Source Notes<br>https://lucaskk.github.io/daily-news/wiki/daily/2026/08/2026-08-20/source-notes-2026-08-20.md</p>
+              </div>
+            </details>
+          </article>
+          <article class="stat-card">
+            <details>
+              <summary><span class="tag">10</span>全球新聞 Top 10</summary>
+              <div class="body">
+                <time datetime="2026-08-20T08:02:15+08:00">發佈時間｜2026-08-20 08:02:15（Asia/Taipei）</time>
+                <p><strong>排序邏輯：</strong>綜合 AP、The Guardian、Al Jazeera、官方聲明與跨版面 prominence，優先選擇有清楚事件時間與重大影響的國際新聞。</p>
+                <p><strong>去重：</strong>Gaza、Hormuz、Ukraine、Korea and U.S.-Canada 等續報只在有新制裁、調查、交易結果或軍事姿態確認時收錄。</p>
+                <p class="card-source"><strong>來源：</strong>Daily Report<br>https://lucaskk.github.io/daily-news/wiki/daily/2026/08/2026-08-20/daily-news-2026-08-20.md</p>
+              </div>
+            </details>
+          </article>
+          <article class="stat-card">
+            <details>
+              <summary><span class="tag">AI</span>7 則科技／AI 產品新聞</summary>
+              <div class="body">
+                <time datetime="2026-08-20T08:02:15+08:00">發佈時間｜2026-08-20 08:02:15（Asia/Taipei）</time>
+                <p><strong>今日重點：</strong>OpenAI ZDR / Private Safety Processing、Replit Free Mode、Google student tools、Alexa+ Fire TV、Gemini in Waymo、GitHub CodeQL and Calendly note-taking。</p>
+                <p><strong>選擇標準：</strong>優先官方產品發布、價格／分發改變、企業治理功能與可驗證 rollout。</p>
+                <p class="card-source"><strong>來源：</strong>Source Notes<br>https://lucaskk.github.io/daily-news/wiki/daily/2026/08/2026-08-20/source-notes-2026-08-20.md</p>
+              </div>
+            </details>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide gulf" data-title="Global 1-2">
+      <div class="content">
+        <p class="eyebrow">Global Top 10</p>
+        <h2>航道與 Gaza 問責</h2>
+        <div class="grid two">
+          <article class="news-card continuation" data-global-rank="1">
+            <details>
+              <summary><span class="rank">1</span>續報｜UAE 對 Iran 實施貿易與金融禁運</summary>
+              <div class="body">
+                <time datetime="2026-08-19T10:56:38Z">發佈時間｜2026-08-19 18:56:38（Asia/Taipei）</time>
+                <p><strong>為何重要：</strong>Dubai / UAE 是 Iran 在 sanctions 環境下的重要商業與金融出口，禁運會把 Hormuz 風險轉成供應鏈、油輪保險與金融流動壓力。</p>
+                <ul>
+                  <li>AP 報導 UAE suspended all trade with Iran after renewed missile fire and shelter warnings。</li>
+                  <li>Al Jazeera 指出 embargo covers trade, commercial exchanges and financial transactions。</li>
+                  <li>Iran denies missile / maritime targeting claims and calls related claims false-flag framing。</li>
+                </ul>
+                <p><strong>不確定性：</strong>實際豁免、金融清算執行方式與各方 missile narrative 仍不一致。</p>
+                <p class="card-source"><strong>來源：</strong>AP News - United Arab Emirates suspends trade with Iran<br>https://apnews.com/article/iran-united-arab-emirates-trade-august-19-2026-47c95fe382c49289ab0419310b6d8057<br>Al Jazeera - UAE trade embargo could shut Iran's key economic escape route<br>https://www.aljazeera.com/news/2026/8/19/uae-trade-embargo-could-shut-irans-key-economic-escape-route-heres-why</p>
+              </div>
+            </details>
+          </article>
+          <article class="news-card continuation" data-global-rank="2">
+            <details>
+              <summary><span class="rank">2</span>續報｜Gaza 空襲與以軍刑事調查同日發生</summary>
+              <div class="body">
+                <time datetime="2026-08-19T13:20:48Z">發佈時間｜2026-08-19 21:20:48（Asia/Taipei）</time>
+                <p><strong>為何重要：</strong>Gaza 同日出現 strikes that damage ceasefire momentum and criminal probes into two emblematic killings，談判與問責壓力同步升高。</p>
+                <ul>
+                  <li>AP 稱 Wednesday Gaza strikes killed at least 10 people。</li>
+                  <li>Israeli troops crossed the ceasefire line and detained a Hamas police colonel。</li>
+                  <li>Israel's military opened criminal investigations into Hind Rajab and 15 Palestinian paramedics killings。</li>
+                </ul>
+                <p><strong>不確定性：</strong>Israel and Gaza health / aid sources 對 strike targets and civilian harm 的敘述不同；investigation outcomes unknown。</p>
+                <p class="card-source"><strong>來源：</strong>AP News - Israel strikes on Gaza cast more doubt on ceasefire progress<br>https://apnews.com/article/gaza-israel-war-kushner-talks-trump-netanyahu-8c8741e238c72bcbc45e1647afbde206<br>AP News - Israel's military will investigate killings of Hind Rajab and Palestinian paramedics<br>https://apnews.com/article/israel-military-hind-rajab-gaza-parademics-investigations-c0a733a3ac78660b474e5bdb47154f8b</p>
+              </div>
+            </details>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide governance" data-title="Global 3-4">
+      <div class="content">
+        <p class="eyebrow">Global Top 10</p>
+        <h2>戰時治理與北美貿易</h2>
+        <div class="grid two">
+          <article class="news-card continuation" data-global-rank="3">
+            <details>
+              <summary><span class="rank">3</span>續報｜Zelenskyy 辦公室貪腐風暴擴大</summary>
+              <div class="body">
+                <time datetime="2026-08-19T07:29:47Z">發佈時間｜2026-08-19 15:29:47（Asia/Taipei）</time>
+                <p><strong>為何重要：</strong>Ukraine 的戰時合法性不只取決於戰場，也取決於 anti-corruption credibility, ministerial continuity and martial-law democratic pressure。</p>
+                <ul>
+                  <li>Zelenskyy fired one of the most senior officials in his office。</li>
+                  <li>Investigators described an alleged 150 million hryvnia money-laundering scheme tied to bail payments。</li>
+                  <li>Lawmakers approved Yevhenii Khmara as defense minister and Andrii Sybiha as foreign minister。</li>
+                </ul>
+                <p><strong>不確定性：</strong>Iryna Mudra was dismissed but not publicly named as a suspect; wartime election feasibility remains disputed。</p>
+                <p class="card-source"><strong>來源：</strong>AP News - Ukrainian anti-corruption agencies probe senior officials in Zelenskyy's office<br>https://apnews.com/article/russia-ukraine-war-fedorov-zelenskyy-8c808244dcf51217027ebc97dba01761<br>The Guardian - Europe live updates on Ukraine, corruption probe and Fedorov<br>https://www.theguardian.com/world/live/2026/aug/19/europe-ukraine-zelenskyy-mykhailo-fedorov-parliament-vote-corruption-probe-russia-belgium-wildfires-latest-news-updates</p>
+              </div>
+            </details>
+          </article>
+          <article class="news-card continuation" data-global-rank="4">
+            <details>
+              <summary><span class="rank">4</span>續報｜U.S.-Canada trade deal 條款仍不明</summary>
+              <div class="body">
+                <time datetime="2026-08-19T19:48:05Z">發佈時間｜2026-08-20 03:48:05（Asia/Taipei）</time>
+                <p><strong>為何重要：</strong>50% tariffs 若只是延後而非解除，將繼續壓迫汽車、農業、酒類、乳製品與 USMCA 供應鏈。</p>
+                <ul>
+                  <li>AP 報導 U.S. and Canada moved closer to a deal that would avert threatened tariffs。</li>
+                  <li>Trump said the deal was fair; Canadian officials said talks were not complete。</li>
+                  <li>Tariffs on about $20 billion of Canadian imports were postponed until Saturday 12:01 a.m.。</li>
+                </ul>
+                <p><strong>不確定性：</strong>核心條款沒有公布，deal vs delay 的政策效果仍待確認。</p>
+                <p class="card-source"><strong>來源：</strong>AP News - Trump says US and Canada have a trade deal, but key terms remain unclear<br>https://apnews.com/article/trump-canada-tariffs-usmca-be3fb41e167108aed07059bb58de7b28</p>
+              </div>
+            </details>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide finance" data-title="Global 5-6">
+      <div class="content">
+        <p class="eyebrow">Global Top 10</p>
+        <h2>債市壓力與能源基礎設施司法</h2>
+        <div class="grid two">
+          <article class="news-card" data-global-rank="5">
+            <details>
+              <summary><span class="rank">5</span>U.S. Treasury 擴大 buybacks，國債達 $40T</summary>
+              <div class="body">
+                <time datetime="2026-08-19T18:30:12Z">發佈時間｜2026-08-20 02:30:12（Asia/Taipei）</time>
+                <p><strong>為何重要：</strong>Long-term yields now shape mortgages, AI data-center financing, valuations and U.S. fiscal credibility at once。</p>
+                <ul>
+                  <li>Treasury will more than double bond buybacks to calm longer-term yields。</li>
+                  <li>10-year Treasury yield recently topped 4.70%; 30-year yield moved above 5%。</li>
+                  <li>AP separately reported U.S. national debt reached $40 trillion。</li>
+                </ul>
+                <p><strong>不確定性：</strong>Buybacks may ease liquidity, but structural deficits and AI infrastructure debt still compete for buyers。</p>
+                <p class="card-source"><strong>來源：</strong>AP News - An alarmed bond market gets the Trump administration to act again<br>https://apnews.com/article/bond-market-yields-treasury-bessent-bd0cead63ff1b7f2e99d4c8cce0a28d3<br>AP News - US national debt hits a record $40 trillion<br>https://apnews.com/article/treasury-national-debt-limit-a27a8d3651ff810b25c610d3e1b6259d</p>
+              </div>
+            </details>
+          </article>
+          <article class="news-card" data-global-rank="6">
+            <details>
+              <summary><span class="rank">6</span>Nord Stream suspect 在 Croatia 被捕</summary>
+              <div class="body">
+                <time datetime="2026-08-19T09:42:51Z">發佈時間｜2026-08-19 17:42:51（Asia/Taipei）</time>
+                <p><strong>為何重要：</strong>2022 pipeline sabotage is moving from attribution conflict to extradition and courtroom evidence, with direct energy-security implications for Europe。</p>
+                <ul>
+                  <li>AP 報導 a Ukrainian man wanted in Germany was arrested in Croatia。</li>
+                  <li>German prosecutors describe him as a trained scuba diver linked to the explosives group。</li>
+                  <li>The case follows a previous failed extradition effort in Poland。</li>
+                </ul>
+                <p><strong>不確定性：</strong>Allegations remain unproven until trial; broader command responsibility remains disputed。</p>
+                <p class="card-source"><strong>來源：</strong>AP News - Ukrainian man arrested in Croatia over Nord Stream pipeline blasts<br>https://apnews.com/article/nord-stream-explosions-arrest-b53e8345e4e9c1125324806d83041f9d<br>The Guardian - Ukrainian diver arrested in Croatia over Nord Stream pipeline bombings<br>https://www.theguardian.com/business/2026/aug/19/ukrainian-diver-arrested-in-croatia-over-nord-stream-pipeline-bombings</p>
+              </div>
+            </details>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide security" data-title="Global 7-8">
+      <div class="content">
+        <p class="eyebrow">Global Top 10</p>
+        <h2>安全姿態與醫療科技</h2>
+        <div class="grid two">
+          <article class="news-card continuation" data-global-rank="7">
+            <details>
+              <summary><span class="rank">7</span>續報｜U.S.-South Korea drills 大幅縮短</summary>
+              <div class="body">
+                <time datetime="2026-08-19T00:53:41Z">發佈時間｜2026-08-19 08:53:41（Asia/Taipei）</time>
+                <p><strong>為何重要：</strong>軍演縮短可能開啟外交空間，也會測試 deterrence credibility and readiness。</p>
+                <ul>
+                  <li>U.S. and South Korea confirmed scaling back Ulchi Freedom Shield。</li>
+                  <li>The Guardian reported U.S.-led drills would end six days early。</li>
+                  <li>North Korea said the reduction did not change its view of U.S. hostility。</li>
+                </ul>
+                <p><strong>不確定性：</strong>Washington views reduction as diplomatic opening; Pyongyang rejects it; Seoul still needs readiness assurance。</p>
+                <p class="card-source"><strong>來源：</strong>AP News - North Korea shrugs off Trump's scaled-back drills with South Korea<br>https://apnews.com/article/korea-us-military-drills-313e01e4ee305b4c9b1b8bf12643fb17<br>The Guardian - US and South Korea to cut short annual joint military drills<br>https://www.theguardian.com/world/2026/aug/19/us-south-korea-army-drills-cut-trump-push-kim-jong-un-talks</p>
+              </div>
+            </details>
+          </article>
+          <article class="news-card" data-global-rank="8">
+            <details>
+              <summary><span class="rank">8</span>Moderna / Merck mRNA melanoma 試驗過關</summary>
+              <div class="body">
+                <time datetime="2026-08-19T15:41:55Z">發佈時間｜2026-08-19 23:41:55（Asia/Taipei）</time>
+                <p><strong>為何重要：</strong>Personalized mRNA cancer treatment could move mRNA medicine deeper into oncology and reshape biotech market expectations。</p>
+                <ul>
+                  <li>Moderna shares surged after positive results for intismeran with Merck's Keytruda。</li>
+                  <li>The combination showed longer recurrence-free / metastasis-free period than Keytruda alone。</li>
+                  <li>Overall survival data were not disclosed; full results are expected at a medical conference。</li>
+                </ul>
+                <p><strong>不確定性：</strong>Trial details, effect size, safety and overall survival data remain key before regulatory conclusions。</p>
+                <p class="card-source"><strong>來源：</strong>AP News - Moderna shares surge after it says its experimental mRNA cancer treatment passed a key test<br>https://apnews.com/article/moderna-mrna-merck-cancer-melanoma-intismeran-keytruda-2330dce708b0af215b68570b19d025df</p>
+              </div>
+            </details>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide world" data-title="Global 9-10">
+      <div class="content">
+        <p class="eyebrow">Global Top 10</p>
+        <h2>事故調查與 FDA 領導</h2>
+        <div class="grid two">
+          <article class="news-card" data-global-rank="9">
+            <details>
+              <summary><span class="rank">9</span>Kenya safari 直升機墜毀七死</summary>
+              <div class="body">
+                <time datetime="2026-08-19T10:54:48Z">發佈時間｜2026-08-19 18:54:48（Asia/Taipei）</time>
+                <p><strong>為何重要：</strong>Remote safari aviation accident becomes an international casualty and safety-investigation story due to the victims and route。</p>
+                <ul>
+                  <li>Seven people died, including five Americans。</li>
+                  <li>The helicopter was traveling from Loisaba Conservancy to Ewaso Nyiro。</li>
+                  <li>Kenya Civil Aviation Authority is investigating。</li>
+                </ul>
+                <p><strong>不確定性：</strong>Cause, weather, maintenance record and operator responsibility remain under investigation。</p>
+                <p class="card-source"><strong>來源：</strong>AP News - Police say 7 killed in helicopter crash in northern Kenya<br>https://apnews.com/article/kenya-helicopter-crash-mount-ololokwe-3fcfa098795e1756ceba873c9cc4fa1a<br>The Guardian - Kenya helicopter safari crash<br>https://www.theguardian.com/world/2026/aug/19/kenya-helicopter-safari-crash</p>
+              </div>
+            </details>
+          </article>
+          <article class="news-card" data-global-rank="10">
+            <details>
+              <summary><span class="rank">10</span>Trump 提名 Dr. Heidi Overton 掌 FDA</summary>
+              <div class="body">
+                <time datetime="2026-08-19T16:31:08Z">發佈時間｜2026-08-20 00:31:08（Asia/Taipei）</time>
+                <p><strong>為何重要：</strong>FDA leadership shapes drug approvals, vaccine policy, food safety and abortion-pill regulation under a highly political health agenda。</p>
+                <ul>
+                  <li>Trump nominated Dr. Heidi Overton, a White House deputy domestic policy director。</li>
+                  <li>The nomination requires Senate confirmation。</li>
+                  <li>AP frames the nomination after a turbulent FDA leadership period and Marty Makary's resignation。</li>
+                </ul>
+                <p><strong>不確定性：</strong>Confirmation outcome, vaccine policy positions and FDA independence will be tested in hearings。</p>
+                <p class="card-source"><strong>來源：</strong>AP News - Trump picks Dr. Heidi Overton, a White House aide, to lead the FDA<br>https://apnews.com/article/fda-donald-trump-heidi-overton-marty-makary-a54907d62a2482bd462410c0778266b9</p>
+              </div>
+            </details>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide tech" data-title="Tech 1-3">
+      <div class="content">
+        <p class="eyebrow">Technology / AI Product News</p>
+        <h2>企業隱私、軟體創作與教育入口</h2>
+        <div class="grid three">
+          <article class="news-card tech-card">
+            <details>
+              <summary><span class="tag">T1</span>OpenAI ZDR / Private Safety Processing</summary>
+              <div class="body">
+                <time datetime="2026-08-19T04:00:00Z">發佈時間｜2026-08-19 12:00:00（Asia/Taipei；官方日期）</time>
+                <p><strong>為何重要：</strong>Enterprise customers often need both no-retention guarantees and abuse monitoring; OpenAI is proposing safety processing without personnel access to content。</p>
+                <ul>
+                  <li>ZDR customer content is not retained after the request and not used for training unless opted in。</li>
+                  <li>Private Safety Processing identifies patterns across related interactions without personnel access。</li>
+                  <li>Rollout planned for September with a technical white paper。</li>
+                </ul>
+                <p><strong>不確定性：</strong>Technical guarantees, early-customer results and audit model remain pending。</p>
+                <p class="card-source"><strong>來源：</strong>OpenAI - Offering Zero Data Retention for frontier models<br>https://openai.com/index/offering-zero-data-retention-for-frontier-models/<br>OpenAI News index<br>https://openai.com/news/</p>
+              </div>
+            </details>
+          </article>
+          <article class="news-card tech-card">
+            <details>
+              <summary><span class="tag">T2</span>OpenAI / Replit Free Mode with GPT-5.6 Luna</summary>
+              <div class="body">
+                <time datetime="2026-08-19T04:00:00Z">發佈時間｜2026-08-19 12:00:00（Asia/Taipei；官方日期）</time>
+                <p><strong>為何重要：</strong>Free AI software creation changes the funnel for students, non-programmers and small teams。</p>
+                <ul>
+                  <li>Replit Free Mode is powered by GPT-5.6 Luna。</li>
+                  <li>Users can get suggestions, feedback and analysis without consuming usage。</li>
+                  <li>Harder reasoning can route to GPT-5.6 Sol and return to Luna with project context。</li>
+                </ul>
+                <p><strong>不確定性：</strong>Usage limits, reliability, abuse controls and paid-mode escalation patterns still need observation。</p>
+                <p class="card-source"><strong>來源：</strong>OpenAI - Replit expands access to software creation with GPT-5.6 Luna<br>https://openai.com/index/replit/</p>
+              </div>
+            </details>
+          </article>
+          <article class="news-card tech-card">
+            <details>
+              <summary><span class="tag">T3</span>Google Search / Gemini student AI tools</summary>
+              <div class="body">
+                <time datetime="2026-08-19T19:00:00Z">發佈時間｜2026-08-20 03:00:00（Asia/Taipei）</time>
+                <p><strong>為何重要：</strong>Google is embedding AI study workflows into Search and Gemini, turning education AI into a distribution battle across search, live tutoring and subscriptions。</p>
+                <ul>
+                  <li>Eligible U.S. college students get one year of Google AI Pro free。</li>
+                  <li>New tools include student hub, study notebooks, quizzes and Gemini Live Deep Research。</li>
+                  <li>TechCrunch reported AI visuals, 3D simulations and AI Mode / Lens study support。</li>
+                </ul>
+                <p><strong>不確定性：</strong>Eligibility, regional availability and classroom policy acceptance vary by market。</p>
+                <p class="card-source"><strong>來源：</strong>Google Blog - College students get 12 months of Google AI free<br>https://blog.google/innovation-and-ai/products/gemini-app/student-offer-google-ai/<br>TechCrunch - Google packs Search and Gemini with new AI study tools<br>https://techcrunch.com/2026/08/19/google-launches-new-study-tools-for-students-across-search-and-gemini/</p>
+              </div>
+            </details>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide learning" data-title="Tech 4-7">
+      <div class="content">
+        <p class="eyebrow">Technology / AI Product News</p>
+        <h2>AI 進入客廳、車內、程式治理與會議</h2>
+        <div class="grid two">
+          <article class="news-card tech-card">
+            <details>
+              <summary><span class="tag">T4</span>Amazon Alexa+ free on Fire TV</summary>
+              <div class="body">
+                <time datetime="2026-08-19T14:55:04Z">發佈時間｜2026-08-19 22:55:04（Asia/Taipei）</time>
+                <p><strong>為何重要：</strong>Fire TV turns Alexa+ into a high-frequency living-room AI surface and removes a non-Prime subscription barrier。</p>
+                <ul>
+                  <li>Alexa+ is rolling out at no additional cost to U.S. customers with compatible Fire TV devices。</li>
+                  <li>TechCrunch notes it previously cost $19.99 per month for non-Prime users。</li>
+                  <li>Amazon says Alexa+ recommendations are selected 40% more often than original Alexa recommendations。</li>
+                </ul>
+                <p><strong>不確定性：</strong>U.S.-only rollout, device compatibility and household privacy expectations limit immediate reach。</p>
+                <p class="card-source"><strong>來源：</strong>Amazon - Alexa+ comes to Fire TV at no additional cost for all U.S. customers<br>https://www.aboutamazon.com/news/devices/alexa-plus-fire-tv-free-ai<br>TechCrunch - Amazon makes its AI-powered Alexa+ free on Fire TV, no Prime required<br>https://techcrunch.com/2026/08/19/amazon-makes-its-ai-powered-alexa-free-on-fire-tv-no-prime-required/</p>
+              </div>
+            </details>
+          </article>
+          <article class="news-card tech-card">
+            <details>
+              <summary><span class="tag">T5</span>Gemini in Waymo Ojai vehicles</summary>
+              <div class="body">
+                <time datetime="2026-08-19T17:30:00Z">發佈時間｜2026-08-20 01:30:00（Asia/Taipei）</time>
+                <p><strong>為何重要：</strong>Generative AI is entering the autonomous-vehicle passenger experience while remaining separate from the driving stack。</p>
+                <ul>
+                  <li>Google says Waymo brought Gemini to purpose-built Ojai vehicles。</li>
+                  <li>Passengers can use voice to control cabin settings and ask about places or surroundings。</li>
+                  <li>Gemini is separate from the Waymo Driver and remains inactive until engaged。</li>
+                </ul>
+                <p><strong>不確定性：</strong>Passenger trust, distraction risk and data handling inside moving vehicles still need validation。</p>
+                <p class="card-source"><strong>來源：</strong>Google Blog - Waymo brings Gemini to Ojai vehicles<br>https://blog.google/innovation-and-ai/products/gemini-app/gemini-waymo/</p>
+              </div>
+            </details>
+          </article>
+          <article class="news-card tech-card">
+            <details>
+              <summary><span class="tag">T6</span>GitHub Code Quality trends / CodeQL 2.26.3</summary>
+              <div class="body">
+                <time datetime="2026-08-19T12:56:57Z">發佈時間｜2026-08-19 20:56:57（Asia/Taipei）</time>
+                <p><strong>為何重要：</strong>As AI coding increases code volume, teams need organization-level quality trends and stronger security queries。</p>
+                <ul>
+                  <li>Code Quality now has an organization Trends tab for open findings and repositories driving change。</li>
+                  <li>CodeQL 2.26.3 improves GitHub Actions queries and JavaScript modeling。</li>
+                  <li>New query modeling includes merge groups, Vue Router `useRoute` and Sails inputs。</li>
+                </ul>
+                <p><strong>不確定性：</strong>Dashboards expose issues; teams still need remediation capacity and false-positive management。</p>
+                <p class="card-source"><strong>來源：</strong>GitHub Changelog - Track organization code quality trends<br>https://github.blog/changelog/2026-08-19-track-organization-code-quality-trends/<br>GitHub Changelog - CodeQL 2.26.3 improves GitHub Actions queries and JavaScript modeling<br>https://github.blog/changelog/2026-08-19-codeql-2-26-3-improves-github-actions-queries-and-javascript-modeling/</p>
+              </div>
+            </details>
+          </article>
+          <article class="news-card tech-card">
+            <details>
+              <summary><span class="tag">T7</span>Calendly AI note-taker and Callie</summary>
+              <div class="body">
+                <time datetime="2026-08-19T14:09:39Z">發佈時間｜2026-08-19 22:09:39（Asia/Taipei）</time>
+                <p><strong>為何重要：</strong>Calendly can connect meeting notes with scheduling context, moving from calendar utility toward agentic workflow。</p>
+                <ul>
+                  <li>TechCrunch reported a note-taking product for audio/video recording, transcription, summaries and follow-up drafts。</li>
+                  <li>Calendly is testing system-audio transcription similar to Granola。</li>
+                  <li>Callie is planned to set up meetings, check availability and surface context。</li>
+                </ul>
+                <p><strong>不確定性：</strong>The note-taker market is crowded; differentiation depends on scheduling-context depth and privacy controls。</p>
+                <p class="card-source"><strong>來源：</strong>TechCrunch - Calendly throws its hat into meeting note-taker circus<br>https://techcrunch.com/2026/08/19/calendly-throws-its-hat-into-meeting-note-taker-circus/</p>
+              </div>
+            </details>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide tech" data-title="Follow-up">
+      <div class="content">
+        <p class="eyebrow">Follow-up</p>
+        <h2>後續追蹤重點</h2>
+        <div class="grid three">
+          <article class="follow-card">
+            <details>
+              <summary><span class="tag">F1</span>中東與航道</summary>
+              <div class="body">
+                <time datetime="2026-08-20T08:02:15+08:00">發佈時間｜2026-08-20 08:02:15（Asia/Taipei）</time>
+                <p>追蹤 UAE-Iran embargo execution, exemptions, maritime insurance, Oman mediation and whether Gaza criminal investigations produce public indictments or disciplinary records。</p>
+                <p class="card-source"><strong>來源：</strong>Daily Report follow-up notes<br>https://lucaskk.github.io/daily-news/wiki/daily/2026/08/2026-08-20/daily-news-2026-08-20.md</p>
+              </div>
+            </details>
+          </article>
+          <article class="follow-card">
+            <details>
+              <summary><span class="tag">F2</span>市場與治理</summary>
+              <div class="body">
+                <time datetime="2026-08-20T08:02:15+08:00">發佈時間｜2026-08-20 08:02:15（Asia/Taipei）</time>
+                <p>Saturday U.S.-Canada tariff deadline, U.S. long-end yields, Treasury buybacks and AI data-center debt competition are the fastest-moving watchpoints。</p>
+                <p class="card-source"><strong>來源：</strong>Source Notes selection table<br>https://lucaskk.github.io/daily-news/wiki/daily/2026/08/2026-08-20/source-notes-2026-08-20.md</p>
+              </div>
+            </details>
+          </article>
+          <article class="follow-card">
+            <details>
+              <summary><span class="tag">F3</span>AI 產品驗證</summary>
+              <div class="body">
+                <time datetime="2026-08-20T08:02:15+08:00">發佈時間｜2026-08-20 08:02:15（Asia/Taipei）</time>
+                <p>OpenAI September white paper, Replit Free Mode limits, Google education rollout, Alexa+ household use, Waymo Gemini safety boundary and CodeQL adoption need later verification。</p>
+                <p class="card-source"><strong>來源：</strong>Daily Report technology section<br>https://lucaskk.github.io/daily-news/wiki/daily/2026/08/2026-08-20/daily-news-2026-08-20.md</p>
+              </div>
+            </details>
+          </article>
+        </div>
+        <div class="sources-list" style="margin-top:14px;">
+          <strong>Background image sources:</strong>
+          <span>Title newspaper: https://images.unsplash.com/photo-1495020689067-958852a7765e?auto=format&amp;fit=crop&amp;w=1800&amp;q=82 </span>
+          <span>World map: https://images.unsplash.com/photo-1521295121783-8a321d551ad2?auto=format&amp;fit=crop&amp;w=1800&amp;q=82 </span>
+          <span>Port / trade: https://images.unsplash.com/photo-1494412651409-8963ce7935a7?auto=format&amp;fit=crop&amp;w=1800&amp;q=82 </span>
+          <span>Governance: https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?auto=format&amp;fit=crop&amp;w=1800&amp;q=82 </span>
+          <span>Finance: https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?auto=format&amp;fit=crop&amp;w=1800&amp;q=82 </span>
+          <span>Technology circuit: https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&amp;fit=crop&amp;w=1800&amp;q=82 </span>
+          <span>Learning / teamwork: https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&amp;fit=crop&amp;w=1800&amp;q=82 </span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <nav class="controls" aria-label="Slide navigation">
+    <button id="prev" type="button" title="上一張" aria-label="上一張">‹</button>
+    <span class="counter" id="counter">1 / 10</span>
+    <button id="next" type="button" title="下一張" aria-label="下一張">›</button>
+  </nav>
+
+  <script>
+    const slides = Array.from(document.querySelectorAll(".slide"));
+    const counter = document.getElementById("counter");
+    let index = 0;
+
+    function showSlide(nextIndex) {
+      index = Math.max(0, Math.min(slides.length - 1, nextIndex));
+      slides.forEach((slide, i) => {
+        slide.classList.toggle("active", i === index);
+      });
+      counter.textContent = `${index + 1} / ${slides.length}`;
+      history.replaceState(null, "", `#${index + 1}`);
+    }
+
+    document.getElementById("prev").addEventListener("click", () => showSlide(index - 1));
+    document.getElementById("next").addEventListener("click", () => showSlide(index + 1));
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "ArrowRight" || event.key === "PageDown" || event.key === " ") {
+        event.preventDefault();
+        showSlide(index + 1);
+      }
+      if (event.key === "ArrowLeft" || event.key === "PageUp") {
+        event.preventDefault();
+        showSlide(index - 1);
+      }
+      if (event.key === "Home") showSlide(0);
+      if (event.key === "End") showSlide(slides.length - 1);
+    });
+
+    const hashIndex = Number.parseInt(location.hash.replace("#", ""), 10);
+    if (Number.isFinite(hashIndex) && hashIndex > 0) {
+      showSlide(hashIndex - 1);
+    } else {
+      showSlide(0);
+    }
+  </script>
+</body>
+</html>

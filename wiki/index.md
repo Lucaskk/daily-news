@@ -2,7 +2,7 @@
 title: "Knowledge Base Index"
 type: overview
 created: 2026-05-24
-updated: 2026-08-19
+updated: 2026-08-20
 status: seed
 tags: [index]
 sources: []
@@ -26,6 +26,9 @@ sources: []
 
 - [每日全球與科技 AI 新聞產製規則](daily/README.md) - 包含研究截點前 24 小時限制、跨日去重、重大續報判定、來源紀錄與發布驗證規則。
 
+
+- [2026-08-20 Daily News](daily/2026/08/2026-08-20/daily-news-2026-08-20.md) - 今日主軸是「航道與戰爭續報進入制裁、問責與市場壓力，AI 產品推向企業隱私、教育、客廳與車內助理」：UAE-Iran embargo、Gaza strikes / Hind Rajab investigations、Zelenskyy office corruption probe、U.S.-Canada trade deal terms unclear、U.S. Treasury buybacks / $40T debt、Nord Stream arrest、U.S.-South Korea drill cuts、Moderna / Merck mRNA melanoma trial、Kenya helicopter crash and FDA nomination。科技／AI 聚焦 OpenAI ZDR / Private Safety Processing、OpenAI-Replit Free Mode、Google student AI tools、Amazon Alexa+ Fire TV、Gemini in Waymo、GitHub Code Quality / CodeQL and Calendly AI note-taking。
+- [2026-08-20 Slides](daily/2026/08/2026-08-20/slides-2026-08-20.html) - 今日新聞網頁版投影片。
 
 - [2026-08-19 Daily News](daily/2026/08/2026-08-19/daily-news-2026-08-19.md) - 今日主軸是「戰爭與航道風險延伸到制度壓力，AI 產品轉向青少年、瀏覽器代理與高能力安全管制」：Ukraine 近 800 架 drones and Kharkiv 10 deaths、Trump no Iran talks / Hormuz pressure、U.S. sanctions ICC leadership、U.S.-Canada tariff deadline、Roadless Rule rescission、ABC / FCC lawsuit、Meta child-safety trial、Fedorov wartime election call、Syria detention-death protests and Philippines livestreamed school shooting。科技／AI 聚焦 ChatGPT for Teens、Gemini in Chrome Android / Auto Browse、OpenAI cyber-critical pacing、Warp Factories、GitHub Copilot JetBrains enterprise controls、Gemini SAT practice tests and OpenAI-CodeAI partnership。
 - [2026-08-19 Slides](daily/2026/08/2026-08-19/slides-2026-08-19.html) - 今日新聞網頁版投影片。
