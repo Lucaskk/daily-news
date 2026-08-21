@@ -1,0 +1,893 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>2026-08-21 每日全球與科技 AI 新聞</title>
+  <!--
+    Background image source notes:
+    - Title / news: https://images.unsplash.com/photo-1495020689067-958852a7765e
+    - Global / earth: https://images.unsplash.com/photo-1451187580459-43490279c0fa
+    - Security / map: https://images.unsplash.com/photo-1521295121783-8a321d551ad2
+    - Justice / law: https://images.unsplash.com/photo-1589829545856-d10d557cf95f
+    - Sea / deployment: https://images.unsplash.com/photo-1500375592092-40eb2168fd21
+    - Technology / circuits: https://images.unsplash.com/photo-1518770660439-4636190af475d
+    - Work / code: https://images.unsplash.com/photo-1516321318423-f06f85e504b3
+    - Data / dashboard: https://images.unsplash.com/photo-1551288049-bebda4e38f71
+    - Publishing / media: https://images.unsplash.com/photo-1504711434969-e33886168f5c
+  -->
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #172033;
+      --muted: #536075;
+      --panel: rgba(255, 255, 255, 0.92);
+      --panel-strong: rgba(255, 255, 255, 0.97);
+      --line: rgba(23, 32, 51, 0.16);
+      --accent: #007a78;
+      --accent-2: #8a4b12;
+      --danger: #9f2f3a;
+      --shadow: 0 18px 50px rgba(20, 26, 39, 0.26);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      min-height: 100%;
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--ink);
+      background: #101827;
+    }
+
+    body {
+      overflow: hidden;
+    }
+
+    .deck {
+      width: 100vw;
+      height: 100vh;
+      position: relative;
+      background: #101827;
+    }
+
+    .slide {
+      position: absolute;
+      inset: 0;
+      display: none;
+      overflow-y: auto;
+      padding: clamp(22px, 4vw, 56px);
+      padding-bottom: 92px;
+      background-color: #e8eef5;
+      background-image:
+        linear-gradient(90deg, rgba(246, 248, 251, 0.95), rgba(246, 248, 251, 0.78), rgba(246, 248, 251, 0.48)),
+        var(--bg);
+      background-size: cover;
+      background-position: center;
+    }
+
+    .slide.active {
+      display: block;
+    }
+
+    .slide.dark {
+      color: #f7fbff;
+      background-image:
+        linear-gradient(90deg, rgba(12, 18, 29, 0.84), rgba(12, 18, 29, 0.58), rgba(12, 18, 29, 0.22)),
+        var(--bg);
+    }
+
+    .slide.center {
+      display: none;
+      place-items: center start;
+    }
+
+    .slide.center.active {
+      display: grid;
+    }
+
+    .content {
+      width: min(1120px, 100%);
+      margin: 0 auto;
+    }
+
+    .hero {
+      width: min(980px, 100%);
+      margin-left: clamp(0px, 4vw, 40px);
+    }
+
+    .eyebrow {
+      margin: 0 0 12px;
+      font-size: 0.86rem;
+      font-weight: 800;
+      letter-spacing: 0;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+
+    .dark .eyebrow {
+      color: #78e7da;
+    }
+
+    h1,
+    h2 {
+      margin: 0;
+      letter-spacing: 0;
+      line-height: 1.04;
+    }
+
+    h1 {
+      font-size: clamp(2.25rem, 8vw, 5.5rem);
+      max-width: 980px;
+      text-wrap: balance;
+    }
+
+    h2 {
+      font-size: clamp(1.85rem, 5vw, 4.2rem);
+      max-width: 980px;
+      text-wrap: balance;
+    }
+
+    .dek {
+      margin: 20px 0 0;
+      max-width: 780px;
+      font-size: clamp(1.02rem, 2.2vw, 1.32rem);
+      line-height: 1.65;
+      color: inherit;
+    }
+
+    .dark .dek,
+    .dark .meta {
+      color: rgba(247, 251, 255, 0.86);
+      text-shadow: 0 2px 18px rgba(0, 0, 0, 0.35);
+    }
+
+    .meta {
+      margin-top: 18px;
+      color: var(--muted);
+      font-size: 0.96rem;
+      line-height: 1.55;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 28px;
+    }
+
+    .grid.three {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    details.card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      box-shadow: var(--shadow);
+      color: var(--ink);
+      overflow: hidden;
+    }
+
+    details.card[open] {
+      background: var(--panel-strong);
+    }
+
+    details.card summary {
+      list-style: none;
+      cursor: pointer;
+      padding: 18px 20px;
+      font-weight: 850;
+      line-height: 1.28;
+      display: grid;
+      gap: 8px;
+    }
+
+    details.card summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .rank {
+      color: var(--accent);
+      font-size: 0.82rem;
+      font-weight: 900;
+      letter-spacing: 0;
+      text-transform: uppercase;
+    }
+
+    .tag {
+      display: inline-flex;
+      width: fit-content;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.76rem;
+      font-weight: 800;
+      color: #fff;
+      background: var(--accent);
+      border-radius: 999px;
+      padding: 4px 9px;
+    }
+
+    .tag.warn {
+      background: var(--accent-2);
+    }
+
+    .tag.danger {
+      background: var(--danger);
+    }
+
+    .body {
+      padding: 0 20px 18px;
+      color: #243044;
+      font-size: 0.98rem;
+      line-height: 1.62;
+    }
+
+    .body p {
+      margin: 10px 0;
+    }
+
+    .body ul {
+      margin: 10px 0 0;
+      padding-left: 20px;
+    }
+
+    .source-line {
+      margin-top: 16px;
+      padding-top: 12px;
+      border-top: 1px solid var(--line);
+      font-size: 0.88rem;
+      color: #30394d;
+      word-break: break-word;
+    }
+
+    a {
+      color: #005f6b;
+    }
+
+    .dark a {
+      color: #95f0e5;
+    }
+
+    .split {
+      display: grid;
+      grid-template-columns: 0.88fr 1.12fr;
+      gap: 28px;
+      align-items: start;
+    }
+
+    .section-panel {
+      background: rgba(255, 255, 255, 0.88);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 22px;
+      box-shadow: var(--shadow);
+    }
+
+    .section-panel h3 {
+      margin: 0 0 12px;
+      font-size: 1.1rem;
+    }
+
+    .section-panel p {
+      margin: 0;
+      color: #37445a;
+      line-height: 1.65;
+    }
+
+    .controls {
+      position: fixed;
+      left: 50%;
+      bottom: 18px;
+      transform: translateX(-50%);
+      z-index: 20;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid rgba(255, 255, 255, 0.42);
+      background: rgba(15, 23, 42, 0.88);
+      color: #fff;
+      box-shadow: 0 12px 36px rgba(0, 0, 0, 0.25);
+    }
+
+    .controls button {
+      appearance: none;
+      border: 0;
+      background: #f7fbff;
+      color: #152033;
+      font-weight: 850;
+      border-radius: 6px;
+      min-width: 44px;
+      min-height: 38px;
+      cursor: pointer;
+    }
+
+    .controls button:disabled {
+      opacity: 0.45;
+      cursor: default;
+    }
+
+    .counter {
+      min-width: 72px;
+      text-align: center;
+      font-weight: 850;
+      font-size: 0.92rem;
+    }
+
+    .progress {
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      z-index: 21;
+      width: 100%;
+      height: 4px;
+      background: rgba(255, 255, 255, 0.24);
+    }
+
+    .progress span {
+      display: block;
+      width: 0;
+      height: 100%;
+      background: #39d7c6;
+      transition: width 160ms ease;
+    }
+
+    @media (max-width: 820px) {
+      body {
+        overflow: hidden;
+      }
+
+      .slide {
+        padding: 20px;
+        padding-bottom: 92px;
+        background-image:
+          linear-gradient(180deg, rgba(246, 248, 251, 0.96), rgba(246, 248, 251, 0.88), rgba(246, 248, 251, 0.72)),
+          var(--bg);
+      }
+
+      .slide.dark {
+        background-image:
+          linear-gradient(180deg, rgba(12, 18, 29, 0.88), rgba(12, 18, 29, 0.68), rgba(12, 18, 29, 0.44)),
+          var(--bg);
+      }
+
+      .hero {
+        margin-left: 0;
+      }
+
+      .grid,
+      .grid.three,
+      .split {
+        grid-template-columns: 1fr;
+      }
+
+      .controls {
+        width: calc(100vw - 24px);
+        justify-content: space-between;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="deck" aria-live="polite">
+    <section class="slide center dark active" style="--bg:url('https://images.unsplash.com/photo-1495020689067-958852a7765e?auto=format&fit=crop&w=1800&q=80')">
+      <div class="hero">
+        <p class="eyebrow">每日全球與科技 AI 新聞</p>
+        <h1>2026-08-21</h1>
+        <p class="dek">戰爭壓力轉入執行細節，AI 產品走向可部署代理與平台控制。</p>
+        <p class="meta">研究截止：2026-08-21 08:02:16 Asia/Taipei<br>時間窗：2026-08-20 08:02:16 至 2026-08-21 08:02:16 Asia/Taipei</p>
+        <div class="grid three">
+          <details class="card">
+            <summary><span class="rank">Window</span>24 小時內事件與首發</summary>
+            <div class="body">
+              <p>只選入在窗口內發生、官方發布或首次可靠發布的事件；舊事件僅因更新或重刊不列入。</p>
+              <p class="source-line">來源：Production rules - wiki/daily/README.md</p>
+            </div>
+          </details>
+          <details class="card">
+            <summary><span class="rank">Scope</span>10 則全球新聞</summary>
+            <div class="body">
+              <p>涵蓋 Ukraine、Iran、Korea、Israel / Gaza、U.S. force posture、Pakistan、Liberia、China 與 Syria。</p>
+              <p class="source-line">來源：Daily report - wiki/daily/2026/08/2026-08-21/daily-news-2026-08-21.md</p>
+            </div>
+          </details>
+          <details class="card">
+            <summary><span class="rank">Scope</span>7 則科技／AI 產品新聞</summary>
+            <div class="body">
+              <p>聚焦 production agents、AI trading agents、vibe-code games、model routing、publisher distribution、open model ecosystem 與 developer-security governance。</p>
+              <p class="source-line">來源：Daily report - wiki/daily/2026/08/2026-08-21/daily-news-2026-08-21.md</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide center dark" style="--bg:url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1800&q=80')">
+      <div class="hero">
+        <p class="eyebrow">Global Synthesis</p>
+        <h2>安全、制裁、拘押與問責同時升高</h2>
+        <p class="dek">今日全球主軸不是單一戰場，而是多條衝突線進入可檢驗的執行層：防空是否足夠、制裁如何外溢、軍演訊號是否失效、羈押與遣返是否可被問責。</p>
+        <div class="grid three">
+          <details class="card">
+            <summary><span class="rank">Pattern</span>戰爭與軍事姿態</summary>
+            <div class="body">
+              <p>Kyiv 空襲、North Korea 導彈與 U.S. carrier rotation 都把戰略承諾轉成現場資源限制。</p>
+              <p class="source-line">來源：AP Kyiv - https://apnews.com/article/russia-ukraine-war-kyiv-attack-92ff5d7d1073fd8692a75e4e677f425b</p>
+            </div>
+          </details>
+          <details class="card">
+            <summary><span class="rank">Pattern</span>制裁與戰時經濟</summary>
+            <div class="body">
+              <p>Iran 次級制裁威脅與 Gaza smuggling investigation 都指向戰爭如何進入金融、走私與價格體系。</p>
+              <p class="source-line">來源：The Guardian Iran - https://www.theguardian.com/world/2026/aug/20/trump-threatens-crush-iran-economy-war-hormuz</p>
+            </div>
+          </details>
+          <details class="card">
+            <summary><span class="rank">Pattern</span>拘押與法治壓力</summary>
+            <div class="body">
+              <p>Imran Khan、Min Zin、Syria detainee death 與 Israel death-penalty push 都需要後續司法與外交紀錄。</p>
+              <p class="source-line">來源：ABC Min Zin - https://abcnews.com/International/china-wrongfully-detaining-us-citizen-state-department-declares/story?id=135808767</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" style="--bg:url('https://images.unsplash.com/photo-1521295121783-8a321d551ad2?auto=format&fit=crop&w=1800&q=80')">
+      <div class="content">
+        <p class="eyebrow">Top Global News 1-2</p>
+        <h2>Kyiv 空襲與 Iran 經濟戰</h2>
+        <div class="grid">
+          <details class="card">
+            <summary><span class="rank">1</span>Russia 對 Kyiv 發動大規模飛彈與無人機攻擊</summary>
+            <div class="body">
+              <p><strong>為什麼重要：</strong>Ukraine 防空缺口再次轉化為平民傷亡，也讓 Patriot 攔截彈供應變成歐洲安全關鍵。</p>
+              <ul>
+                <li>AP 首發時間：2026-08-20 12:38 TPE。</li>
+                <li>至少 16 人死亡；The Guardian 更新稱至少 33 人受傷。</li>
+                <li>Ukraine 稱 Russia 發射數十枚飛彈與 168 架 drones；彈道飛彈攔截受 Patriot shortage 限制。</li>
+              </ul>
+              <p><strong>不確定性：</strong>傷亡仍可能上修；攔截數主要來自 Ukraine 官方。</p>
+              <p class="source-line">來源：AP - https://apnews.com/article/russia-ukraine-war-kyiv-attack-92ff5d7d1073fd8692a75e4e677f425b<br>The Guardian - https://www.theguardian.com/world/2026/aug/20/ukraine-kyiv-deaths-russian-missile-attack</p>
+            </div>
+          </details>
+          <details class="card">
+            <summary><span class="rank">2</span><span class="tag warn">續報</span>Trump 對 Iran 宣示「經濟戰」與次級制裁威脅</summary>
+            <div class="body">
+              <p><strong>前次收錄：</strong>2026-08-19 U.S.-Iran / Hormuz no-talks；2026-08-20 UAE-Iran embargo。</p>
+              <p><strong>本次新增：</strong>U.S. 從 UAE 禁運壓力擴大為 broader economic campaign，Iran 外長公開反擊。</p>
+              <ul>
+                <li>The Guardian 首發時間：2026-08-20 12:53 TPE。</li>
+                <li>U.S. threat 指向 oil smuggling、cash transfers、exchange houses、ship registries 與 front companies。</li>
+                <li>AP 報導 Iran 外長 Abbas Araghchi 稱這是失敗政策與 economic terrorism。</li>
+              </ul>
+              <p><strong>不確定性：</strong>U.S. 尚未公開完整制裁規則，China / India 等買家是否被正式納入仍待確認。</p>
+              <p class="source-line">來源：The Guardian - https://www.theguardian.com/world/2026/aug/20/trump-threatens-crush-iran-economy-war-hormuz<br>AP - https://apnews.com/article/iran-us-hormuz-gulf-war-bbc5df71e56f000515edef0817468c9d</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" style="--bg:url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=1800&q=80')">
+      <div class="content">
+        <p class="eyebrow">Top Global News 3-4</p>
+        <h2>Korea deterrence test 與 Israel 死刑政治</h2>
+        <div class="grid">
+          <details class="card">
+            <summary><span class="rank">3</span><span class="tag warn">續報</span>North Korea 發射約 10 枚短程彈道飛彈</summary>
+            <div class="body">
+              <p><strong>前次收錄：</strong>2026-08-20 U.S.-South Korea drill cuts。</p>
+              <p><strong>本次新增：</strong>North Korea 在軍演縮減後實際發射 missiles，South Korea 與 Japan 啟動安全應對。</p>
+              <ul>
+                <li>AP 首發時間：2026-08-20 16:32 TPE；The Guardian fuller report：18:25 TPE。</li>
+                <li>飛彈從 Pyongyang 區域附近射向東部海域。</li>
+                <li>South Korea 召開 national-security emergency meeting。</li>
+              </ul>
+              <p><strong>不確定性：</strong>missile model、測試目的與實際落點細節仍待軍事分析。</p>
+              <p class="source-line">來源：AP - https://apnews.com/article/south-north-korea-projectile-launch-military-exercises-b3af05067e4258f90f67023c7b2b3e9a<br>The Guardian - https://www.theguardian.com/world/2026/aug/20/north-korea-fires-10-missiles-day-after-trump-curtails-south-korea-joint-drills</p>
+            </div>
+          </details>
+          <details class="card">
+            <summary><span class="rank">4</span>Ben-Gvir 發布絞刑場影片，推動 Palestinians death penalty</summary>
+            <div class="body">
+              <p><strong>為什麼重要：</strong>Israel 內部司法、national security 與 West Bank / Gaza 人權壓力被推到更高衝突點。</p>
+              <ul>
+                <li>The Guardian 首發時間：2026-08-20 20:34 TPE。</li>
+                <li>報導稱 death-penalty framework 適用 Palestinians convicted of terror offences，但不適用 Jewish extremists。</li>
+                <li>法案通過後引發 France、Ireland、UK 與 UN Secretary-General criticism。</li>
+              </ul>
+              <p><strong>不確定性：</strong>影片地點未公開；法律實施與司法挑戰仍待追蹤。</p>
+              <p class="source-line">來源：The Guardian - https://www.theguardian.com/world/2026/aug/20/israel-ben-gvir-video-gallows-site-hanging-palestinians</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" style="--bg:url('https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=1800&q=80')">
+      <div class="content">
+        <p class="eyebrow">Top Global News 5-6</p>
+        <h2>U.S. force posture 與 Pakistan 反對派領袖醫療羈押</h2>
+        <div class="grid">
+          <details class="card">
+            <summary><span class="rank">5</span>USS George Washington 到 Middle East 接替 USS Abraham Lincoln</summary>
+            <div class="body">
+              <p><strong>為什麼重要：</strong>Middle East 軍事需求直接擠壓 Indo-Pacific carrier presence。</p>
+              <ul>
+                <li>AP 首發時間：2026-08-20 23:48 TPE。</li>
+                <li>USS Abraham Lincoln 已連續在海上超過 250 天，支援 Iran war。</li>
+                <li>Asia theater 暫無 U.S. carrier strike group，發生在 China 更積極活動的背景下。</li>
+              </ul>
+              <p><strong>不確定性：</strong>Pentagon 後續輪調與 Asia 空窗安排未完全公開。</p>
+              <p class="source-line">來源：AP - https://apnews.com/article/aircraft-carrier-washington-lincoln-iran-war-trump-10ddf7b55104e0eeec2e9213e1021b98<br>The Guardian - https://www.theguardian.com/us-news/2026/aug/20/uss-lincoln-washington-sailors-military</p>
+            </div>
+          </details>
+          <details class="card">
+            <summary><span class="rank">6</span>Imran Khan 深夜轉往私人醫院治療</summary>
+            <div class="body">
+              <p><strong>為什麼重要：</strong>Khan 的健康、羈押條件與司法程序可能再次牽動 Pakistan 街頭政治。</p>
+              <ul>
+                <li>AP 首發時間：2026-08-21 01:48 TPE。</li>
+                <li>Khan 在 Supreme Court order 後轉至 Shifa International Hospital。</li>
+                <li>家屬與 PTI 稱健康惡化；政府稱海外治療可能列入考量。</li>
+              </ul>
+              <p><strong>不確定性：</strong>病情與 solitary confinement 說法仍缺完整獨立醫療紀錄。</p>
+              <p class="source-line">來源：AP - https://apnews.com/article/815992ebe21c1114ffaf4aac2f9d3fd1<br>The Guardian - https://www.theguardian.com/world/2026/aug/20/imran-khan-hospital-pakistan</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" style="--bg:url('https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&w=1800&q=80')">
+      <div class="content">
+        <p class="eyebrow">Top Global News 7-8</p>
+        <h2>第三國遣返與 Gaza 戰時經濟</h2>
+        <div class="grid">
+          <details class="card">
+            <summary><span class="rank">7</span>U.S. 首批 20 名第三國遣返者被送往 Liberia</summary>
+            <div class="body">
+              <p><strong>為什麼重要：</strong>第三國遣返協議從政策文字進入實際航班，會影響 non-citizen deportees 的程序權與接收國責任。</p>
+              <ul>
+                <li>AP 首發時間：2026-08-20 21:04 TPE。</li>
+                <li>首批 20 名 deportees 抵達 Liberia。</li>
+                <li>pact reportedly covers up to 1,200 non-Liberian deportees。</li>
+              </ul>
+              <p><strong>不確定性：</strong>個別國籍、程序、接收後待遇與法院挑戰仍待公開。</p>
+              <p class="source-line">來源：AP - https://apnews.com/article/liberia-us-deportees-318ab0f9ad74ada4fcd2dff8653c342e</p>
+            </div>
+          </details>
+          <details class="card">
+            <summary><span class="rank">8</span><span class="tag warn">續報</span>AP 調查 Gaza 禁運品走私與價格飆升</summary>
+            <div class="body">
+              <p><strong>前次收錄：</strong>2026-08-20 Gaza strikes / Hind Rajab investigations。</p>
+              <p><strong>本次新增：</strong>新調查聚焦 banned goods 如何進入 Gaza，以及 wartime scarcity profits。</p>
+              <ul>
+                <li>AP 首發時間：2026-08-20 13:03 TPE。</li>
+                <li>cigarettes、iPhones、fuel、solar panels 等被報導經邊界走私。</li>
+                <li>AP 指官員、士兵與中間人被指控從價格飆升中獲利。</li>
+              </ul>
+              <p><strong>不確定性：</strong>利益鏈與個別責任需後續司法或獨立調查確認。</p>
+              <p class="source-line">來源：AP - https://apnews.com/article/gaza-smuggling-goods-israel-hamas-war-0eb43885ba1ee2045457b4bb8d26dfd5</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" style="--bg:url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=1800&q=80')">
+      <div class="content">
+        <p class="eyebrow">Top Global News 9-10</p>
+        <h2>Wrongful detention 與 Syria 問責測試</h2>
+        <div class="grid">
+          <details class="card">
+            <summary><span class="rank">9</span>U.S. 認定 Min Zin 在 China 被 wrongfully detained</summary>
+            <div class="body">
+              <p><strong>為什麼重要：</strong>Min Zin case 從拘押事件升級為 U.S.-China consular / hostage diplomacy issue。</p>
+              <ul>
+                <li>State Department release dated 2026-08-20；ABC 首發時間：2026-08-21 02:49 TPE。</li>
+                <li>Min Zin 是 U.S. citizen、Myanmar democracy activist 與 UC Berkeley PhD candidate。</li>
+                <li>China 指控 espionage / endangering national security；U.S. 認定 wrongfully detained。</li>
+              </ul>
+              <p><strong>不確定性：</strong>官方頁曾出現可訪問性不穩；China 對指控證據未公開。</p>
+              <p class="source-line">來源：U.S. State Department - https://www.state.gov/releases/office-of-the-spokesperson/2026/08/statement-from-assistant-secretary-dylan-johnson-on-wrongful-detention-designation-for-u-s-citizen-min-zin/<br>ABC News - https://abcnews.com/International/china-wrongfully-detaining-us-citizen-state-department-declares/story?id=135808767<br>CBS News - https://www.cbsnews.com/news/min-zin-us-designates-american-citizen-held-by-china-wrongfully-detained/</p>
+            </div>
+          </details>
+          <details class="card">
+            <summary><span class="rank">10</span><span class="tag warn">續報</span>Syria 拘押死亡案進入起訴階段</summary>
+            <div class="body">
+              <p><strong>前次收錄：</strong>2026-08-19 Syria detention-death protests。</p>
+              <p><strong>本次新增：</strong>Syrian authorities 將涉案 police investigator 送交 prosecution。</p>
+              <ul>
+                <li>AP 首發時間：2026-08-20 19:50 TPE。</li>
+                <li>死者患 hemophilia，拘押死亡引發 protests and outrage。</li>
+                <li>事件測試 post-Assad Syria 對 security-sector abuse 的問責能力。</li>
+              </ul>
+              <p><strong>不確定性：</strong>是否追究上級責任、審理是否公開透明仍待追蹤。</p>
+              <p class="source-line">來源：AP - https://apnews.com/article/syria-hemophilia-white-helmets-detainee-death-investigation-ce11c889b5d1e076e1bd4ac9309d6bb5</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide center dark" style="--bg:url('https://images.unsplash.com/photo-1518770660439-4636190af475d?auto=format&fit=crop&w=1800&q=80')">
+      <div class="hero">
+        <p class="eyebrow">Technology / AI Product News</p>
+        <h2>Agent deployment、model routing 與平台治理成為產品主線</h2>
+        <p class="dek">今日科技新聞不是單一 frontier model 發布，而是 AI 產品把權限、資料、交易、發行商流量與 code-quality governance 推向實際工作流。</p>
+        <div class="grid three">
+          <details class="card">
+            <summary><span class="rank">Theme</span>可部署代理</summary>
+            <div class="body">
+              <p>Anthropic GA agent APIs、Binance Agent OS 與 Meta Pocket 代表 AI 從生成內容進一步接入軟體操作、交易與互動遊戲。</p>
+              <p class="source-line">來源：Anthropic - https://claude.com/blog/computer-use-skills-api-files-api</p>
+            </div>
+          </details>
+          <details class="card">
+            <summary><span class="rank">Theme</span>模型與成本控制</summary>
+            <div class="body">
+              <p>Ramp Router 把多模型成本、latency、quality 與 fallback 做成服務；Gemma milestone 則顯示 open model 生態正在擴大。</p>
+              <p class="source-line">來源：Ramp / TechCrunch - https://techcrunch.com/2026/08/20/ramp-launches-its-own-ai-model-router-called-router/</p>
+            </div>
+          </details>
+          <details class="card">
+            <summary><span class="rank">Theme</span>平台治理</summary>
+            <div class="body">
+              <p>Google Preferred Sources 與 GitHub Code Quality updates 都是平台把演算法分發、掃描、審計與例外理由變成可操作介面。</p>
+              <p class="source-line">來源：Google Preferred Sources / TechCrunch - https://techcrunch.com/2026/08/20/google-gives-publishers-a-new-way-to-fight-ai-driven-traffic-losses/</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" style="--bg:url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1800&q=80')">
+      <div class="content">
+        <p class="eyebrow">Tech / AI 1-2</p>
+        <h2>Production agents 與 AI trading agents</h2>
+        <div class="grid">
+          <details class="card">
+            <summary><span class="rank">T1</span>Anthropic 將 computer use、Skills API、Files API 推為 Claude Platform GA</summary>
+            <div class="body">
+              <p><strong>為什麼重要：</strong>Claude agent capabilities 從實驗進入 production deployment 介面。</p>
+              <ul>
+                <li>官方日期：2026-08-20。</li>
+                <li>Computer use、Skills API、Files API generally available。</li>
+                <li>新增 browser use tool；Files API 提供 auto expiration、rate-limit increase 與 1TB org storage。</li>
+              </ul>
+              <p><strong>不確定性：</strong>官方頁為 date-level time；Microsoft Foundry / Vertex AI tool updates 需分別追蹤。</p>
+              <p class="source-line">來源：Anthropic Claude Blog - https://claude.com/blog/computer-use-skills-api-files-api</p>
+            </div>
+          </details>
+          <details class="card">
+            <summary><span class="rank">T2</span>Binance Agent OS 允許 AI agents 分析市場並執行交易</summary>
+            <div class="body">
+              <p><strong>為什麼重要：</strong>AI agents 進入 real-money execution，授權、風控與責任邊界變成核心問題。</p>
+              <ul>
+                <li>TechCrunch 首發時間：2026-08-20 17:30 TPE。</li>
+                <li>支援 APIs、Wallet Agentic Hub、x402、Skill Hub 與 MCP support。</li>
+                <li>使用者可要求每筆 approval 或允許 autonomous trades。</li>
+              </ul>
+              <p><strong>不確定性：</strong>風險控制依賴使用者與 subaccount 設定；監管反應未明。</p>
+              <p class="source-line">來源：TechCrunch - https://techcrunch.com/2026/08/20/binance-now-lets-ai-agents-trade-but-keeping-them-in-check-is-largely-up-to-users/</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" style="--bg:url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1800&q=80')">
+      <div class="content">
+        <p class="eyebrow">Tech / AI 3-4</p>
+        <h2>AI-native social games 與 model router</h2>
+        <div class="grid">
+          <details class="card">
+            <summary><span class="rank">T3</span>Meta Pocket U.S. rollout：prompt 建立並分享小遊戲</summary>
+            <div class="body">
+              <p><strong>為什麼重要：</strong>Meta 測試 AI-native social entertainment，讓使用者把 prompt 變成可 remix 的 interactive games。</p>
+              <ul>
+                <li>TechCrunch 首發時間：2026-08-21 00:07 TPE。</li>
+                <li>支援 publish、scroll、share、save、remix、repost。</li>
+                <li>來自 Gizmo acqui-hire；原 Gizmo 產品將關閉。</li>
+              </ul>
+              <p><strong>不確定性：</strong>內容安全、版權與兒少使用規則需觀察。</p>
+              <p class="source-line">來源：TechCrunch - https://techcrunch.com/2026/08/20/meta-brings-pocket-an-app-that-lets-you-vibe-code-and-share-games-to-us-users/</p>
+            </div>
+          </details>
+          <details class="card">
+            <summary><span class="rank">T4</span>Ramp 推出 Router，多模型 AI routing API</summary>
+            <div class="body">
+              <p><strong>為什麼重要：</strong>企業把模型選擇、成本、latency、fallback 交給 routing layer，AI infrastructure 產品化再往前一步。</p>
+              <ul>
+                <li>TechCrunch 首發時間：2026-08-21 00:46 TPE。</li>
+                <li>支援 OpenAI、Anthropic、DeepSeek、Moonshot、Minimax、Nvidia、xAI、Z.ai 等模型。</li>
+                <li>U.S.-only；2026 年底前除 inference costs 外免費。</li>
+                <li>預設保留 inputs / outputs / tool calls 一年，可 opt out。</li>
+              </ul>
+              <p><strong>不確定性：</strong>routing 品質與資料保留設定需合約與實測驗證。</p>
+              <p class="source-line">來源：TechCrunch - https://techcrunch.com/2026/08/20/ramp-launches-its-own-ai-model-router-called-router/</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" style="--bg:url('https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&w=1800&q=80')">
+      <div class="content">
+        <p class="eyebrow">Tech / AI 5-6</p>
+        <h2>Search 分發與 open model 生態</h2>
+        <div class="grid">
+          <details class="card">
+            <summary><span class="rank">T5</span>Google Preferred Sources button 給 publishers 嵌入</summary>
+            <div class="body">
+              <p><strong>為什麼重要：</strong>AI Overviews / AI Mode 壓縮 referrals 後，publishers 可把讀者偏好帶回 Google Search、Discover 與 News。</p>
+              <ul>
+                <li>TechCrunch 首發時間：2026-08-21 03:18 TPE。</li>
+                <li>readers 可 favorite sources，來源可在 Google surfaces 中被 highlight。</li>
+                <li>May launch 時已有 345,000 unique sources 被 selected。</li>
+              </ul>
+              <p><strong>不確定性：</strong>ranking weight 與 traffic recovery 效果仍不透明。</p>
+              <p class="source-line">來源：TechCrunch - https://techcrunch.com/2026/08/20/google-gives-publishers-a-new-way-to-fight-ai-driven-traffic-losses/</p>
+            </div>
+          </details>
+          <details class="card">
+            <summary><span class="rank">T6</span>Google 宣布 Gemma family 超過 10 億 downloads</summary>
+            <div class="body">
+              <p><strong>為什麼重要：</strong>open model ecosystem 已是 AI 產品基礎層，並延伸到 healthcare、space 與 edge deployment。</p>
+              <ul>
+                <li>Google 官方發布時間：2026-08-20 23:30 TPE。</li>
+                <li>Gemma family surpassed 1 billion downloads。</li>
+                <li>Google 稱 ecosystem 有超過 100,000 model variants。</li>
+                <li>案例包含 NASA / Satlyt / Starcloud orbit use，以及 India NHA 的 Aarogya Setu 2.0 integration。</li>
+              </ul>
+              <p><strong>不確定性：</strong>downloads 不等於 active deployment；案例多為官方敘述。</p>
+              <p class="source-line">來源：Google Blog - https://blog.google/innovation-and-ai/technology/developers-tools/gemma-one-billion-downloads/</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" style="--bg:url('https://images.unsplash.com/photo-1518770660439-4636190af475d?auto=format&fit=crop&w=1800&q=80')">
+      <div class="content">
+        <p class="eyebrow">Tech / AI 7 + Follow-up</p>
+        <h2>Developer governance 與排除項</h2>
+        <div class="grid">
+          <details class="card">
+            <summary><span class="rank">T7</span><span class="tag warn">續報</span>GitHub Code Quality 新增 Actions path、audit logs 與 Mitigated reason</summary>
+            <div class="body">
+              <p><strong>前次收錄：</strong>2026-08-20 GitHub Code Quality / CodeQL。</p>
+              <p><strong>本次新增：</strong>GitHub 發布 workflow path、audit events 與 code scanning dismissal 的治理細節。</p>
+              <ul>
+                <li>`dynamic/github-code-quality/codeql` dedicated Actions path。</li>
+                <li>audit log events：`repo.code_quality_enabled`、`repo.code_quality_disabled`、`repo.code_quality_updated`。</li>
+                <li>Code scanning 新增「Mitigated」alert dismissal reason。</li>
+              </ul>
+              <p><strong>不確定性：</strong>組織自訂 scripts、reports 或 SIEM ingest 需實際遷移確認。</p>
+              <p class="source-line">來源：GitHub Changelog - https://github.blog/changelog/2026-08-20-separate-github-actions-path-for-github-code-quality/<br>GitHub Changelog - https://github.blog/changelog/2026-08-20-track-github-code-quality-enablement-changes-in-the-audit-log/<br>GitHub Changelog - https://github.blog/changelog/2026-08-20-code-scanning-adds-a-mitigated-alert-dismissal-reason/</p>
+            </div>
+          </details>
+          <details class="card">
+            <summary><span class="rank">Watch</span>未選入但值得追蹤的項目</summary>
+            <div class="body">
+              <ul>
+                <li>Hong Kong Tiananmen vigil verdict preview：AP 在窗口內預告，但 verdict 尚未在 cutoff 前發生。</li>
+                <li>AP Instagram / YouTube liability：metadata 顯示 2026-03-25 首發，非今日事件。</li>
+                <li>OpenAI / Google older product pages：current visibility 不等於新發布。</li>
+                <li>Pew AI-authored webpage study：是重要 AI ecosystem signal，但今日產品段落優先收 concrete product updates。</li>
+              </ul>
+              <p class="source-line">來源：Source notes - wiki/daily/2026/08/2026-08-21/source-notes-2026-08-21.md</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide center dark" style="--bg:url('https://images.unsplash.com/photo-1495020689067-958852a7765e?auto=format&fit=crop&w=1800&q=80')">
+      <div class="hero">
+        <p class="eyebrow">Image Sources</p>
+        <h2>背景圖片來源</h2>
+        <p class="dek">此投影片使用 Unsplash remote images 作為主題背景；新聞與產品來源則放在每張 expandable card 內。</p>
+        <div class="grid">
+          <details class="card">
+            <summary><span class="rank">Backgrounds</span>Unsplash image URLs</summary>
+            <div class="body">
+              <p>Title / news: https://images.unsplash.com/photo-1495020689067-958852a7765e</p>
+              <p>Global / earth: https://images.unsplash.com/photo-1451187580459-43490279c0fa</p>
+              <p>Security / map: https://images.unsplash.com/photo-1521295121783-8a321d551ad2</p>
+              <p>Justice / law: https://images.unsplash.com/photo-1589829545856-d10d557cf95f</p>
+              <p>Sea / deployment: https://images.unsplash.com/photo-1500375592092-40eb2168fd21</p>
+              <p>Technology / circuits: https://images.unsplash.com/photo-1518770660439-4636190af475d</p>
+              <p>Work / code: https://images.unsplash.com/photo-1516321318423-f06f85e504b3</p>
+              <p>Data / dashboard: https://images.unsplash.com/photo-1551288049-bebda4e38f71</p>
+              <p>Publishing / media: https://images.unsplash.com/photo-1504711434969-e33886168f5c</p>
+              <p class="source-line">來源：Unsplash image CDN URLs - https://unsplash.com/</p>
+            </div>
+          </details>
+          <details class="card">
+            <summary><span class="rank">Report</span>完整報告與來源筆記</summary>
+            <div class="body">
+              <p>每日報告與 source notes 保留 cutoff、24 小時窗口、continuation labels、duplicate checks 與 exclusion rationale。</p>
+              <p class="source-line">來源：Daily report - wiki/daily/2026/08/2026-08-21/daily-news-2026-08-21.md<br>Source notes - wiki/daily/2026/08/2026-08-21/source-notes-2026-08-21.md</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <nav class="controls" aria-label="Slide controls">
+    <button id="prev" type="button" aria-label="Previous slide">‹</button>
+    <span class="counter" id="counter">1 / 13</span>
+    <button id="next" type="button" aria-label="Next slide">›</button>
+  </nav>
+  <div class="progress" aria-hidden="true"><span id="bar"></span></div>
+
+  <script>
+    (() => {
+      const slides = Array.from(document.querySelectorAll(".slide"));
+      const prev = document.getElementById("prev");
+      const next = document.getElementById("next");
+      const counter = document.getElementById("counter");
+      const bar = document.getElementById("bar");
+      let index = 0;
+
+      function show(nextIndex) {
+        index = Math.max(0, Math.min(slides.length - 1, nextIndex));
+        slides.forEach((slide, i) => {
+          slide.classList.toggle("active", i === index);
+          if (i !== index) {
+            slide.querySelectorAll("details[open]").forEach((detail) => detail.removeAttribute("open"));
+          }
+        });
+        prev.disabled = index === 0;
+        next.disabled = index === slides.length - 1;
+        counter.textContent = `${index + 1} / ${slides.length}`;
+        bar.style.width = `${((index + 1) / slides.length) * 100}%`;
+        history.replaceState(null, "", `#${index + 1}`);
+      }
+
+      function fromHash() {
+        const raw = Number.parseInt(location.hash.replace("#", ""), 10);
+        if (Number.isFinite(raw) && raw >= 1 && raw <= slides.length) {
+          index = raw - 1;
+        }
+      }
+
+      prev.addEventListener("click", () => show(index - 1));
+      next.addEventListener("click", () => show(index + 1));
+      window.addEventListener("keydown", (event) => {
+        if (event.defaultPrevented) return;
+        const tag = event.target && event.target.tagName;
+        if (tag === "INPUT" || tag === "TEXTAREA" || tag === "SELECT") return;
+        if (event.key === "ArrowRight" || event.key === "PageDown" || event.key === " ") {
+          event.preventDefault();
+          show(index + 1);
+        }
+        if (event.key === "ArrowLeft" || event.key === "PageUp") {
+          event.preventDefault();
+          show(index - 1);
+        }
+        if (event.key === "Home") {
+          event.preventDefault();
+          show(0);
+        }
+        if (event.key === "End") {
+          event.preventDefault();
+          show(slides.length - 1);
+        }
+      });
+
+      fromHash();
+      show(index);
+    })();
+  </script>
+</body>
+</html>

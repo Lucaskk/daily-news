@@ -2,7 +2,7 @@
 title: "Overview"
 type: overview
 created: 2026-05-24
-updated: 2026-08-20
+updated: 2026-08-21
 status: seed
 tags: [overview]
 sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
@@ -19,6 +19,12 @@ sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
 - 抽出持續出現的人物、組織、事件、政策、技術與市場概念。
 - 維護跨來源的矛盾、時間線、趨勢與待查問題。
 - 將重要查詢結果回寫成可累積的 wiki 頁面。
+
+## 2026-08-21 Daily News Synthesis
+
+- 全球新聞主軸轉為「戰爭壓力轉入執行細節」：Kyiv mass attack and Patriot shortage, U.S.-Iran economic-warfare threats, North Korea's missile barrage after U.S.-South Korea drill cuts, and USS George Washington moving to the Middle East all make security commitments measurable through interceptors, sanctions, launches and force posture.
+- 制度與人道問責同日升高：Ben-Gvir's gallows video, U.S. third-country deportees to Liberia, Imran Khan's hospital transfer, Min Zin's wrongful-detention designation and Syria's detainee-death prosecution require follow-up through courts, consular pressure, rights monitors and public records.
+- 科技／AI 今日聚焦「可部署代理與平台控制」：Anthropic production-agent APIs, Binance Agent OS, Meta Pocket, Ramp Router, Google Preferred Sources, Gemma one-billion downloads and GitHub Code Quality governance move AI into browser/computer operation, finance execution, social games, routing economics, publisher distribution, open-model adoption and auditable developer security.
 
 ## 2026-08-20 Daily News Synthesis
 
@@ -144,6 +150,9 @@ sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
 
 ## Latest Daily News
 
+
+- [2026-08-21 Daily News](daily/2026/08/2026-08-21/daily-news-2026-08-21.md) - 今日主軸是「戰爭壓力轉入執行細節，AI 產品走向可部署代理與平台控制」：Kyiv mass attack、U.S.-Iran economic war threat、North Korea missile launches、Ben-Gvir gallows video、U.S. carrier rotation、Imran Khan hospital transfer、U.S.-Liberia deportees、Gaza smuggling investigation、Min Zin wrongful-detention designation and Syria detainee-death prosecution。科技／AI 聚焦 Anthropic production-agent APIs、Binance Agent OS、Meta Pocket、Ramp Router、Google Preferred Sources、Gemma 1B downloads and GitHub Code Quality governance。
+- [2026-08-21 Slides](daily/2026/08/2026-08-21/slides-2026-08-21.html) - 今日新聞網頁版投影片。
 
 - [2026-08-20 Daily News](daily/2026/08/2026-08-20/daily-news-2026-08-20.md) - 今日主軸是「航道與戰爭續報進入制裁、問責與市場壓力，AI 產品推向企業隱私、教育、客廳與車內助理」：UAE-Iran embargo、Gaza strikes / Hind Rajab investigations、Zelenskyy office corruption probe、U.S.-Canada trade deal terms unclear、U.S. Treasury buybacks / $40T debt、Nord Stream arrest、U.S.-South Korea drill cuts、Moderna / Merck mRNA melanoma trial、Kenya helicopter crash and FDA nomination。科技／AI 聚焦 OpenAI ZDR / Private Safety Processing、OpenAI-Replit Free Mode、Google student AI tools、Amazon Alexa+ Fire TV、Gemini in Waymo、GitHub Code Quality / CodeQL and Calendly AI note-taking。
 - [2026-08-20 Slides](daily/2026/08/2026-08-20/slides-2026-08-20.html) - 今日新聞網頁版投影片。
