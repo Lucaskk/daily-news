@@ -2,7 +2,7 @@
 title: "Overview"
 type: overview
 created: 2026-05-24
-updated: 2026-08-21
+updated: 2026-08-22
 status: seed
 tags: [overview]
 sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
@@ -19,6 +19,12 @@ sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
 - 抽出持續出現的人物、組織、事件、政策、技術與市場概念。
 - 維護跨來源的矛盾、時間線、趨勢與待查問題。
 - 將重要查詢結果回寫成可累積的 wiki 頁面。
+
+## 2026-08-22 Daily News Synthesis
+
+- 全球新聞主軸轉為「安全危機進入執行成本」：Kryvyi Rih shopping-mall strike, Ulchi Freedom Shield early end, Myanmar Sagaing monastery strike and Iran household economic stress all make war, deterrence and sanctions measurable through casualties, exercises, inflation and civilian-protection records.
+- 制度與財政壓力同日升高：Evergrande bankruptcy case, U.S. Treasury sanctions on Ecuador cocaine shipping, partial U.S. UN arrears payment, Pentagon firings at Stars and Stripes and Bolivia minister / adviser turmoil require follow-up through courts, sanctions enforcement, budget transfers, press-freedom scrutiny and legislative votes.
+- 科技／AI 今日聚焦「工作流與平台責任」：OpenAI Daybreak / Codex Security, GitHub Copilot in Slack / Teams, Walmart Tap to Pay, China EV door-handle recalls, Tesla Solar Roof discontinuation, Pebble Time 2, Nvidia AVO, TikTok privacy settlement, Uber automated-suspension fine and Rillet funding show AI/product competition moving into security operations, collaboration, payments, physical safety and algorithmic accountability.
 
 ## 2026-08-21 Daily News Synthesis
 

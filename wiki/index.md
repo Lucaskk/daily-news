@@ -2,7 +2,7 @@
 title: "Knowledge Base Index"
 type: overview
 created: 2026-05-24
-updated: 2026-08-21
+updated: 2026-08-22
 status: seed
 tags: [index]
 sources: []
@@ -25,6 +25,10 @@ sources: []
 每日新聞報告會放在 `wiki/daily/YYYY/MM/YYYY-MM-DD/`。
 
 - [每日全球與科技 AI 新聞產製規則](daily/README.md) - 包含研究截點前 24 小時限制、跨日去重、重大續報判定、來源紀錄與發布驗證規則。
+
+
+- [2026-08-22 Daily News](daily/2026/08/2026-08-22/daily-news-2026-08-22.md) - 今日主軸是「安全危機進入執行成本，AI 產品從模型能力轉到工作流與平台責任」：Kryvyi Rih shopping-mall strike、Ulchi Freedom Shield early end、Myanmar Sagaing monastery strike、Evergrande bankruptcy case、Iran economic crisis、Borneo haze、Ecuador trafficking sanctions、U.S. UN dues、Stars and Stripes firings and Bolivia political turmoil。科技／AI 聚焦 OpenAI Daybreak / Codex Security、GitHub Copilot in Slack / Teams、Walmart Tap to Pay、China EV door-handle recalls、Tesla Solar Roof discontinuation、Pebble Time 2、Nvidia AVO、TikTok privacy settlement、Uber automated-suspension fine and Rillet AI accounting funding。
+- [2026-08-22 Slides](daily/2026/08/2026-08-22/slides-2026-08-22.html) - 今日新聞網頁版投影片。
 
 
 - [2026-08-21 Daily News](daily/2026/08/2026-08-21/daily-news-2026-08-21.md) - 今日主軸是「戰爭壓力轉入執行細節，AI 產品走向可部署代理與平台控制」：Kyiv mass attack、U.S.-Iran economic war threat、North Korea missile launches、Ben-Gvir gallows video、U.S. carrier rotation、Imran Khan hospital transfer、U.S.-Liberia deportees、Gaza smuggling investigation、Min Zin wrongful-detention designation and Syria detainee-death prosecution。科技／AI 聚焦 Anthropic production-agent APIs、Binance Agent OS、Meta Pocket、Ramp Router、Google Preferred Sources、Gemma 1B downloads and GitHub Code Quality governance。
