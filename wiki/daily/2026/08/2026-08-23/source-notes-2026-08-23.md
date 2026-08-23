@@ -150,4 +150,7 @@ tags: [daily-news, source-notes, provenance, deduplication]
 
 ## 發布與傳遞狀態
 
-- 初始狀態：本檔建立時尚未完成 GitHub Pages 與 LINE watchdog；最終狀態寫入 `wiki/log.md` 與 automation memory。
+- GitHub Pages：已驗證 dated deck、latest redirect、daily report、source notes、root index 與 public log 皆為 HTTP 200。
+- Public deck URL：https://lucaskk.github.io/daily-news/wiki/daily/2026/08/2026-08-23/slides-2026-08-23.html?v=20260823-080113-ai-news-r1
+- LINE watchdog：`2026-08-23T08:22:03+08:00 Sent LINE message`，exit code 0。
+- Localhost preview：`http://localhost:4174/wiki/daily/latest-slides.html` 已驗證；preferred port 4173 有 listener 但回傳 empty response。
