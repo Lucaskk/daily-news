@@ -2,7 +2,7 @@
 title: "Knowledge Base Index"
 type: overview
 created: 2026-05-24
-updated: 2026-08-22
+updated: 2026-08-23
 status: seed
 tags: [index]
 sources: []
@@ -26,6 +26,9 @@ sources: []
 
 - [每日全球與科技 AI 新聞產製規則](daily/README.md) - 包含研究截點前 24 小時限制、跨日去重、重大續報判定、來源紀錄與發布驗證規則。
 
+
+- [2026-08-23 Daily News](daily/2026/08/2026-08-23/daily-news-2026-08-23.md) - 今日主軸是「關稅與戰爭壓力進入執行節點，AI 產品焦點轉向科學代理與安全治理」：U.S.-Canada 50% tariffs、Iran economic-warfare warning、Russia-Ukraine reciprocal strikes、U.S. visa ruling、Israel-Syria notification dispute、Nigeria kidnapping、Japan earthquake、Central African Republic mine closure、Europe wildfire UXO risk and Pope Leo XIV anti-war message。科技／AI 聚焦 Inherent Faraday AI scientist、OpenAI SB 53、Guidelight rogue-model containment、Harvard AI avatars、Outer Biosciences living-skin AI and Letara hybrid rocket funding。
+- [2026-08-23 Slides](daily/2026/08/2026-08-23/slides-2026-08-23.html) - 今日新聞網頁版投影片。
 
 - [2026-08-22 Daily News](daily/2026/08/2026-08-22/daily-news-2026-08-22.md) - 今日主軸是「安全危機進入執行成本，AI 產品從模型能力轉到工作流與平台責任」：Kryvyi Rih shopping-mall strike、Ulchi Freedom Shield early end、Myanmar Sagaing monastery strike、Evergrande bankruptcy case、Iran economic crisis、Borneo haze、Ecuador trafficking sanctions、U.S. UN dues、Stars and Stripes firings and Bolivia political turmoil。科技／AI 聚焦 OpenAI Daybreak / Codex Security、GitHub Copilot in Slack / Teams、Walmart Tap to Pay、China EV door-handle recalls、Tesla Solar Roof discontinuation、Pebble Time 2、Nvidia AVO、TikTok privacy settlement、Uber automated-suspension fine and Rillet AI accounting funding。
 - [2026-08-22 Slides](daily/2026/08/2026-08-22/slides-2026-08-22.html) - 今日新聞網頁版投影片。

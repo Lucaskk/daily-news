@@ -2,7 +2,7 @@
 title: "Overview"
 type: overview
 created: 2026-05-24
-updated: 2026-08-22
+updated: 2026-08-23
 status: seed
 tags: [overview]
 sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
@@ -19,6 +19,12 @@ sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
 - 抽出持續出現的人物、組織、事件、政策、技術與市場概念。
 - 維護跨來源的矛盾、時間線、趨勢與待查問題。
 - 將重要查詢結果回寫成可累積的 wiki 頁面。
+
+## 2026-08-23 Daily News Synthesis
+
+- 全球新聞主軸轉為「關稅與戰爭壓力進入執行節點」：U.S.-Canada 50% tariffs, Iran economic-warfare warning, Russia-Ukraine reciprocal strikes and U.S. visa ruling all move policy risk from statements into courts, tariffs, battlefield deaths and executable government processes.
+- 公共安全與制度風險同日升高：Israel / U.S. contradictory Syria air-base notification claims, Nigeria mosque kidnappings, Japan Ibaraki earthquake, Central African Republic mine closure and European wildfire UXO danger require follow-up through casualty confirmation, evacuation / search records, diplomatic logs and regulatory enforcement.
+- 科技／AI 今日聚焦「科學代理與安全治理」：Inherent Faraday, OpenAI SB 53 stance, Guidelight containment study, Harvard AI avatars, Outer Biosciences living-skin AI and Letara hybrid rocket funding show AI and deep tech moving into scientific replication, legal disclosure, professional coaching, biological data collection and dual-use space markets.
 
 ## 2026-08-22 Daily News Synthesis
 
@@ -155,6 +161,9 @@ sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
 - 輸出偏好：簡短摘要、深度脈絡、比較表、時間線、決策 memo。
 
 ## Latest Daily News
+
+- [2026-08-23 Daily News](daily/2026/08/2026-08-23/daily-news-2026-08-23.md) - 今日主軸是「關稅與戰爭壓力進入執行節點，AI 產品焦點轉向科學代理與安全治理」。
+- [2026-08-23 Slides](daily/2026/08/2026-08-23/slides-2026-08-23.html) - 今日新聞網頁版投影片。
 
 
 - [2026-08-21 Daily News](daily/2026/08/2026-08-21/daily-news-2026-08-21.md) - 今日主軸是「戰爭壓力轉入執行細節，AI 產品走向可部署代理與平台控制」：Kyiv mass attack、U.S.-Iran economic war threat、North Korea missile launches、Ben-Gvir gallows video、U.S. carrier rotation、Imran Khan hospital transfer、U.S.-Liberia deportees、Gaza smuggling investigation、Min Zin wrongful-detention designation and Syria detainee-death prosecution。科技／AI 聚焦 Anthropic production-agent APIs、Binance Agent OS、Meta Pocket、Ramp Router、Google Preferred Sources、Gemma 1B downloads and GitHub Code Quality governance。
