@@ -1,14 +1,15 @@
 {
-  "run_at": "2026-08-25T00:08:24+08:00",
+  "run_at": "2026-08-26T00:02:12+08:00",
   "successful": [
     "2330",
     "2317",
     "2327",
     "2344",
-    "2603",
     "6175",
     "8299"
   ],
-  "failed": {},
+  "failed": {
+    "2603": "HTTP 520 while fetching https://www.tpex.org.tw/openapi/v1/tpex_mainboard_quotes: error code: 520\n"
+  },
   "skipped_fresh_today": []
 }
