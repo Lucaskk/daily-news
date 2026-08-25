@@ -2,7 +2,7 @@
 title: "Knowledge Base Index"
 type: overview
 created: 2026-05-24
-updated: 2026-08-23
+updated: 2026-08-25
 status: seed
 tags: [index]
 sources: []
@@ -26,6 +26,9 @@ sources: []
 
 - [每日全球與科技 AI 新聞產製規則](daily/README.md) - 包含研究截點前 24 小時限制、跨日去重、重大續報判定、來源紀錄與發布驗證規則。
 
+
+- [2026-08-25 Daily News](daily/2026/08/2026-08-25/daily-news-2026-08-25.md) - 今日主軸是「制裁、關稅、戰時技術轉移與 AI agent 基礎設施同日進入執行層」：Operation Economic Outcast、Canada retaliatory tariffs、Ukraine SCALP / Storm Shadow local production、U.S. mail-voting order、Gaza force talks、Haiti Kenscoff attack、Syria terrorism-list removal、Houthis Saudi tanker attack、Indonesia haze firefighting and Japan-China Taiwan diplomacy。科技／AI 聚焦 GPT-5.6 in Kiro、NVIDIA Groq 3 LPX、Alibaba Wan3.0、Google Cloud Migration Center AI assessments、Okta Agent SSO、AWS AgentCore payments and Taiwan AI-server export-control case。
+- [2026-08-25 Slides](daily/2026/08/2026-08-25/slides-2026-08-25.html) - 今日新聞網頁版投影片。
 
 - [2026-08-23 Daily News](daily/2026/08/2026-08-23/daily-news-2026-08-23.md) - 今日主軸是「關稅與戰爭壓力進入執行節點，AI 產品焦點轉向科學代理與安全治理」：U.S.-Canada 50% tariffs、Iran economic-warfare warning、Russia-Ukraine reciprocal strikes、U.S. visa ruling、Israel-Syria notification dispute、Nigeria kidnapping、Japan earthquake、Central African Republic mine closure、Europe wildfire UXO risk and Pope Leo XIV anti-war message。科技／AI 聚焦 Inherent Faraday AI scientist、OpenAI SB 53、Guidelight rogue-model containment、Harvard AI avatars、Outer Biosciences living-skin AI and Letara hybrid rocket funding。
 - [2026-08-23 Slides](daily/2026/08/2026-08-23/slides-2026-08-23.html) - 今日新聞網頁版投影片。
