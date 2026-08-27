@@ -1,11 +1,35 @@
 # Knowledge Base Log
 
+## [2026-08-27] ingest | Daily global and tech AI news
+
+- Created `wiki/daily/2026/08/2026-08-27/daily-news-2026-08-27.md` with exactly 10 global items and 10 technology / AI product, platform, infrastructure, voice-agent or cybersecurity items.
+- Recorded the exact Asia/Taipei 24-hour window, per-item event or publication-time basis, material continuations, prior capture dates, duplicate checks, conflict notes and exclusion rationale in `source-notes-2026-08-27.md`.
+- Created `slides-2026-08-27.html` as a standalone HTML deck with remote themed background images, browser / keyboard / touch navigation, expandable cards and per-card complete source URLs.
+- Updated `wiki/daily/latest-slides.html`, `wiki/index.md`, `wiki/overview.md`, `.nojekyll`, and the root Pages entry for the 2026-08-27 daily-news package.
+- Publishing, GitHub Pages verification, LINE watchdog delivery and localhost preview status will be updated after execution.
+
+## [2026-08-26] ingest | Daily global and tech AI news
+
+- Created `wiki/daily/2026/08/2026-08-26/daily-news-2026-08-26.md` with exactly 10 global items and eight technology / AI product, infrastructure, identity, privacy or creative-governance items.
+- Recorded the exact Asia/Taipei 24-hour window, per-item event or publication-time basis, material continuations, prior capture dates, duplicate checks, date-level caveats and exclusion rationale in `source-notes-2026-08-26.md`.
+- Created `slides-2026-08-26.html` as a standalone HTML deck with remote themed background images, browser / keyboard navigation, expandable cards and per-card complete source URLs.
+- Updated `wiki/daily/latest-slides.html`, `wiki/index.md`, `wiki/overview.md`, `.nojekyll`, and the root Pages entry timestamp for the 2026-08-26 daily-news package.
+- Publishing, GitHub Pages verification, LINE watchdog delivery and localhost preview status will be updated after execution.
+
 ## [2026-08-25] ingest | Daily global and tech AI news
 
 - Created `wiki/daily/2026/08/2026-08-25/daily-news-2026-08-25.md` with exactly 10 global items and seven technology / AI product, infrastructure, identity, payment or supply-chain-governance items.
 - Recorded the exact Asia/Taipei 24-hour window, per-item event or publication-time basis, material continuations, prior capture dates, duplicate checks, date-level caveats and exclusion rationale in `source-notes-2026-08-25.md`.
 - Created `slides-2026-08-25.html` as a standalone HTML deck with remote themed background images, browser / keyboard / touch navigation, expandable cards and per-card complete source URLs.
 - Updated `wiki/daily/latest-slides.html`, `wiki/index.md`, `wiki/overview.md`, `.nojekyll`, and the root Pages entry timestamp for the 2026-08-25 daily-news package.
+- Publishing, GitHub Pages verification, LINE watchdog delivery and localhost preview status will be updated after execution.
+
+## [2026-08-24] ingest | Daily global and tech AI news
+
+- Created `wiki/daily/2026/08/2026-08-24/daily-news-2026-08-24.md` with exactly 10 global items and five technology / AI product, market, safety or governance items.
+- Recorded the exact Asia/Taipei 24-hour window, per-item event or publication-time basis, material continuations, prior capture dates, duplicate checks, date-level caveats and exclusion rationale in `source-notes-2026-08-24.md`.
+- Created `slides-2026-08-24.html` as a standalone HTML deck with remote themed background images, browser / keyboard navigation, expandable cards and per-card complete source URLs.
+- Updated `wiki/daily/latest-slides.html`, `wiki/index.md`, `wiki/overview.md`, and the root Pages entry timestamp for the 2026-08-24 daily-news package.
 - Publishing, GitHub Pages verification, LINE watchdog delivery and localhost preview status will be updated after execution.
 
 ## [2026-08-23] ingest | Daily global and tech AI news

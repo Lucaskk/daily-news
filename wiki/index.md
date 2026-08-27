@@ -2,7 +2,7 @@
 title: "Knowledge Base Index"
 type: overview
 created: 2026-05-24
-updated: 2026-08-25
+updated: 2026-08-27
 status: seed
 tags: [index]
 sources: []
@@ -26,9 +26,18 @@ sources: []
 
 - [每日全球與科技 AI 新聞產製規則](daily/README.md) - 包含研究截點前 24 小時限制、跨日去重、重大續報判定、來源紀錄與發布驗證規則。
 
+- [2026-08-27 Daily News](daily/2026/08/2026-08-27/daily-news-2026-08-27.md) - 今日主軸是「災害、停火與基礎設施風險進入更硬的執行層，AI 產品競爭轉向算力、代理安全、音訊資料與實體部署」：Nepal/China flash floods、Gaza Board of Peace、Hormuz military-vessel ban、Ratcliffe Moscow confirmation、Meta teen-safety settlement、Fed independence clash、U.S. anti-drug boat strike、Pakistan nursery fire、Rasonque and ICC sanctions diplomacy。科技／AI 聚焦 Anthropic-Nscale compute、OpenAI Hugging Face incident report、Radar、Arga、Perceptron Isaac 0.5、Ring TAKE、Runable、Ringg、CISA water-system cyber scale and Boston Scientific disruption。
+- [2026-08-27 Slides](daily/2026/08/2026-08-27/slides-2026-08-27.html) - 今日新聞網頁版投影片。
+
+- [2026-08-26 Daily News](daily/2026/08/2026-08-26/daily-news-2026-08-26.md) - 今日主軸是「制裁與航道風險進入執行層，AI 產品把算力、記憶、身份與資料駐留推到前台」：Canada tariff list、Hormuz temporary corridor、China sanctions retaliation warning、Putin infrastructure decree、Dolly Parton、SDF dissolution、Gaza aid warehouse strike、Bihar youth protests、Ohio voter-registration injunction and Ratcliffe Moscow reports。科技／AI 聚焦 Apple local AI desktops、OpenAI Jalapeño first results、Claude memory everywhere、Perplexity Portable Computer、Google Gemini Enterprise verticals、WhatsApp passkeys、Brazil TikTok fine and ARIA AI-song rules。
+- [2026-08-26 Slides](daily/2026/08/2026-08-26/slides-2026-08-26.html) - 今日新聞網頁版投影片。
+
 
 - [2026-08-25 Daily News](daily/2026/08/2026-08-25/daily-news-2026-08-25.md) - 今日主軸是「制裁、關稅、戰時技術轉移與 AI agent 基礎設施同日進入執行層」：Operation Economic Outcast、Canada retaliatory tariffs、Ukraine SCALP / Storm Shadow local production、U.S. mail-voting order、Gaza force talks、Haiti Kenscoff attack、Syria terrorism-list removal、Houthis Saudi tanker attack、Indonesia haze firefighting and Japan-China Taiwan diplomacy。科技／AI 聚焦 GPT-5.6 in Kiro、NVIDIA Groq 3 LPX、Alibaba Wan3.0、Google Cloud Migration Center AI assessments、Okta Agent SSO、AWS AgentCore payments and Taiwan AI-server export-control case。
 - [2026-08-25 Slides](daily/2026/08/2026-08-25/slides-2026-08-25.html) - 今日新聞網頁版投影片。
+
+- [2026-08-24 Daily News](daily/2026/08/2026-08-24/daily-news-2026-08-24.md) - 今日主軸是「戰爭與制裁壓力轉為預算、航道與治理缺口，極端天候與城市安全同步測試救援能力」：Zelenskyy/Fedorov 裂痕與 Patriot 缺口、Iran sanctions act-of-war warning、Baltic cyclone、Chang'e-7 延期、Thailand southern coordinated attacks、Guinea landfill landslide、Reno Hawk Fire、Indonesia haze arrests、Greece migrant detention breach and Mexico Sinaloa governor reversal。科技／AI 聚焦 Apple foldable iPhone credible sourcing、Anthropic Fable 5 demand/pricing、Ox Alpha stealth-model provenance、AI deepfake fraud and Flock surveillance backlash。
+- [2026-08-24 Slides](daily/2026/08/2026-08-24/slides-2026-08-24.html) - 今日新聞網頁版投影片。
 
 - [2026-08-23 Daily News](daily/2026/08/2026-08-23/daily-news-2026-08-23.md) - 今日主軸是「關稅與戰爭壓力進入執行節點，AI 產品焦點轉向科學代理與安全治理」：U.S.-Canada 50% tariffs、Iran economic-warfare warning、Russia-Ukraine reciprocal strikes、U.S. visa ruling、Israel-Syria notification dispute、Nigeria kidnapping、Japan earthquake、Central African Republic mine closure、Europe wildfire UXO risk and Pope Leo XIV anti-war message。科技／AI 聚焦 Inherent Faraday AI scientist、OpenAI SB 53、Guidelight rogue-model containment、Harvard AI avatars、Outer Biosciences living-skin AI and Letara hybrid rocket funding。
 - [2026-08-23 Slides](daily/2026/08/2026-08-23/slides-2026-08-23.html) - 今日新聞網頁版投影片。
