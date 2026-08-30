@@ -2,7 +2,7 @@
 title: "Overview"
 type: overview
 created: 2026-05-24
-updated: 2026-08-27
+updated: 2026-08-30
 status: seed
 tags: [overview]
 sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
@@ -19,6 +19,12 @@ sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
 - 抽出持續出現的人物、組織、事件、政策、技術與市場概念。
 - 維護跨來源的矛盾、時間線、趨勢與待查問題。
 - 將重要查詢結果回寫成可累積的 wiki 頁面。
+
+## 2026-08-30 Daily News Synthesis
+
+- 全球新聞主軸轉為「災害傷亡上修、戰爭與軍政風險續升」：Nepal／Tibet floods revised to 750 dead and more than 3,000 missing, Russia's Myla warehouse strike killed 37, and Niger's Niamey airport-base mutiny moved crisis monitoring into casualty confirmation, military control and external-force involvement.
+- 制度節點集中在「選舉、法律與遣返程序」：Iceland EU talks referendum partial results, U.S. student-speech deportation ruling, Haiti hostage releases, Central African Republic deportation flights and Netanyahu's West Bank condemnation all require follow-up through final counts, court records, release lists and official accountability.
+- 科技／AI 今日聚焦「資料權利、算力堆疊與入口控制」：Sony / Warner's Anthropic lawsuit, Nvidia's Vera Rubin rack-scale moat, Europe AI sovereignty debates, VZVC AI biotech thesis, Theragun Coach AI and microdrama apps show AI competition moving into licensing risk, data movement, OS agency, health datasets and mobile media economics.
 
 ## 2026-08-27 Daily News Synthesis
 
@@ -186,7 +192,7 @@ sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
 
 ## Latest Daily News
 
-- [2026-08-27 Daily News](daily/2026/08/2026-08-27/daily-news-2026-08-27.md) - 今日主軸是「災害、停火與基礎設施風險進入更硬的執行層，AI 產品競爭轉向算力、代理安全、音訊資料與實體部署」。
-- [2026-08-27 Slides](daily/2026/08/2026-08-27/slides-2026-08-27.html) - 今日新聞網頁版投影片。
-- [2026-08-26 Daily News](daily/2026/08/2026-08-26/daily-news-2026-08-26.md) - 前次報告。
-- [2026-08-26 Slides](daily/2026/08/2026-08-26/slides-2026-08-26.html) - 前次網頁版投影片.
+- [2026-08-30 Daily News](daily/2026/08/2026-08-30/daily-news-2026-08-30.md) - 今日主軸是「災害傷亡上修、戰爭與軍政風險續升、制度程序進入可驗證節點，AI 產品競爭轉向資料權利、算力堆疊與入口控制」。
+- [2026-08-30 Slides](daily/2026/08/2026-08-30/slides-2026-08-30.html) - 今日新聞網頁版投影片。
+- [2026-08-27 Daily News](daily/2026/08/2026-08-27/daily-news-2026-08-27.md) - 前次報告。
+- [2026-08-27 Slides](daily/2026/08/2026-08-27/slides-2026-08-27.html) - 前次網頁版投影片。

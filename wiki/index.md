@@ -2,7 +2,7 @@
 title: "Knowledge Base Index"
 type: overview
 created: 2026-05-24
-updated: 2026-08-27
+updated: 2026-08-30
 status: seed
 tags: [index]
 sources: []
@@ -25,6 +25,9 @@ sources: []
 每日新聞報告會放在 `wiki/daily/YYYY/MM/YYYY-MM-DD/`。
 
 - [每日全球與科技 AI 新聞產製規則](daily/README.md) - 包含研究截點前 24 小時限制、跨日去重、重大續報判定、來源紀錄與發布驗證規則。
+
+- [2026-08-30 Daily News](daily/2026/08/2026-08-30/daily-news-2026-08-30.md) - 今日主軸是「災害傷亡上修、戰爭與軍政風險續升、制度程序進入可驗證節點，AI 產品競爭轉向資料權利、算力堆疊與入口控制」：Nepal／Tibet floods、Ukraine Myla strike、Niger mutiny、Venezuela oil terms、West Bank / Gaza、Iceland referendum、Haiti release、CAR deportations、student speech ruling and Warsh Jackson Hole。科技／AI 聚焦 Anthropic music lawsuit、Nvidia Vera Rubin infrastructure、TechBBQ AI sovereignty、VZVC AI biotech、Theragun Coach AI and microdrama apps。
+- [2026-08-30 Slides](daily/2026/08/2026-08-30/slides-2026-08-30.html) - 今日新聞網頁版投影片。
 
 - [2026-08-27 Daily News](daily/2026/08/2026-08-27/daily-news-2026-08-27.md) - 今日主軸是「災害、停火與基礎設施風險進入更硬的執行層，AI 產品競爭轉向算力、代理安全、音訊資料與實體部署」：Nepal/China flash floods、Gaza Board of Peace、Hormuz military-vessel ban、Ratcliffe Moscow confirmation、Meta teen-safety settlement、Fed independence clash、U.S. anti-drug boat strike、Pakistan nursery fire、Rasonque and ICC sanctions diplomacy。科技／AI 聚焦 Anthropic-Nscale compute、OpenAI Hugging Face incident report、Radar、Arga、Perceptron Isaac 0.5、Ring TAKE、Runable、Ringg、CISA water-system cyber scale and Boston Scientific disruption。
 - [2026-08-27 Slides](daily/2026/08/2026-08-27/slides-2026-08-27.html) - 今日新聞網頁版投影片。
