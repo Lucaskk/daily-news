@@ -288,11 +288,13 @@
 - Collaboration workspace background from Unsplash: image URL `https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=1800&q=80`; source / attribution page `https://unsplash.com/`
 - Cybersecurity / server background from Unsplash: image URL `https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1800&q=80`; source / attribution page `https://unsplash.com/`
 
-## Verification checklist planned
+## Verification and delivery status
 
-- Markdown global item count must equal exactly 10.
-- Slide deck global cards must appear in DOM order 1 through 10.
-- Every selected global and tech item must show `發佈時間｜YYYY-MM-DD HH:mm:ss（Asia/Taipei）` in report and slides, and HTML must include UTC ISO in `<time datetime=...>`.
-- Every expandable card must end with a source block containing readable labels and complete original URLs.
-- `wiki/daily/latest-slides.html` and root `index.html` must redirect to the dated deck with cache-busting query.
-- Publishing, GitHub Pages verification, LINE watchdog result and localhost preview status are appended after execution.
+- Local validation: passed. Markdown has exactly 10 global items and 10 technology / AI items; the HTML deck has 14 slides, 34 expandable cards, 34 matching source blocks, global `data-rank` order 1-10, and 20 report / slide publication timestamps with UTC ISO `<time datetime=...>` values.
+- Slide constraints: every slide has a themed background image; the stylesheet does not use `blur`, `filter` or `backdrop-filter`; every expandable card includes its own source block with readable labels and complete original URLs.
+- JavaScript validation: passed with `node --check` on the embedded script extracted from `slides-2026-08-27.html`.
+- GitHub publishing: local dirty branch was not used for publish. A clean `/tmp` clone of `Lucaskk/daily-news` `main` was used; content commit `cc2aa3657b8e91bfef4b9e86419fb6df052a2402` created the dated report, source notes and slide deck, and root-index commit `7bdd8240b110bcf1e8cc33c0edd7397c94f5b832` updated the root Pages redirect text.
+- GitHub Pages verification: passed with HTTP 200 and `2026-08-27` content checks for the dated deck, latest redirect, daily report, source notes, root index and public log.
+- Public deck URL: https://lucaskk.github.io/daily-news/wiki/daily/2026/08/2026-08-27/slides-2026-08-27.html?v=20260827-080053-ai-news-r1
+- LINE watchdog: first sandboxed run sent the watchdog through its normal path but failed when writing `/Users/lucas/.codex/automations/ai/line-sent-key`; the escalated rerun exited 0 and the watchdog state now records `2026-08-27`, but it produced no visible `Sent LINE message` or `already sent` text in tool output, so delivery is recorded as ambiguous under the strict automation success rule.
+- Localhost preview: preferred port 4173 returned an empty response; 4174 also returned an empty response. A Python HTTP server was started on port 4175 and the latest-slide redirect was verified at `http://localhost:4175/wiki/daily/latest-slides.html?v=20260827-080053-ai-news-r1`.
