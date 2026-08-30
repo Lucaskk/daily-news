@@ -3,7 +3,7 @@ title: "2026-08-30 每日全球與科技 AI 新聞"
 type: daily_news
 created: 2026-08-30
 updated: 2026-08-30
-status: published-draft
+status: published
 tags: [daily-news, global-news, technology, ai, provenance]
 ---
 

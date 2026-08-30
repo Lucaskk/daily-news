@@ -3,7 +3,7 @@ title: "2026-08-30 source notes"
 type: source_notes
 created: 2026-08-30
 updated: 2026-08-30
-status: published-draft
+status: published
 tags: [daily-news, source-notes, provenance, deduplication]
 ---
 
@@ -72,7 +72,8 @@ tags: [daily-news, source-notes, provenance, deduplication]
 
 ## 發布與傳送紀錄
 
-- GitHub Pages dated deck：待發布驗證。
-- GitHub Pages latest redirect：待發布驗證。
-- LINE watchdog：待 GitHub Pages 驗證成功後執行。
-- Localhost best-effort preview：目標 http://localhost:4173/wiki/daily/latest-slides.html?v=20260830-141310-ai-news-r1，待 LINE 後測試。
+- GitHub publishing：clean local clone commit `a63ed38` pushed to `Lucaskk/daily-news` `main`.
+- GitHub Pages dated deck：HTTP 200 verified on attempt 2 at https://lucaskk.github.io/daily-news/wiki/daily/2026/08/2026-08-30/slides-2026-08-30.html?v=20260830-141310-ai-news-r1
+- GitHub Pages latest redirect：HTTP 200 verified on attempt 2 at https://lucaskk.github.io/daily-news/wiki/daily/latest-slides.html?v=20260830-141310-ai-news-r1
+- LINE watchdog：sandboxed run failed while writing private `line-sent-key`; escalated rerun exited 0 and output contained `already sent` at 2026-08-30T18:32:13+08:00, so delivery is success under the strict rule.
+- Localhost best-effort preview：preferred port 4173 and 4174 returned empty responses; verified on http://localhost:4175/wiki/daily/latest-slides.html?v=20260830-141310-ai-news-r1
