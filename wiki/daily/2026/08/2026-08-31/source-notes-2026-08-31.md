@@ -72,7 +72,11 @@ tags: [daily-news, source-notes, provenance]
 
 ## Publishing and Delivery Record
 
-待更新：artifact generation completed before publishing verification。
+- Local scoped validation passed: daily report has exactly 10 global items and five technology / AI items; HTML deck has 35 expandable cards, every details block contains its own source block, global ranks are 1-10 in DOM order, every slide has a data-bg image, and extracted JavaScript passed Node syntax check.
+- Published to GitHub main through clean local clone at commit c519ff5.
+- GitHub Pages verification passed on retry for dated deck, latest redirect, daily report, source notes, root index and public log.
+- LINE watchdog ran as the only LINE delivery path. Sandboxed run failed writing its private state at /Users/lucas/.codex/automations/ai/line-sent-key; escalated rerun exited 0 and emitted Sent LINE message for 2026-08-31, so delivery is recorded as successful under the strict success rule.
+- Localhost preview verified at http://localhost:4175/wiki/daily/latest-slides.html?v=20260831-110031-ai-news-r1. Preferred URL remains http://localhost:4173/wiki/daily/latest-slides.html?v=20260831-110031-ai-news-r1 but this machine served the current deck from port 4175 during verification.
 
 ## Public Links Planned
 
