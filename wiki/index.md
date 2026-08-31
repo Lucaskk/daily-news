@@ -2,7 +2,7 @@
 title: "Knowledge Base Index"
 type: overview
 created: 2026-05-24
-updated: 2026-08-30
+updated: 2026-08-31
 status: seed
 tags: [index]
 sources: []
@@ -25,6 +25,9 @@ sources: []
 每日新聞報告會放在 `wiki/daily/YYYY/MM/YYYY-MM-DD/`。
 
 - [每日全球與科技 AI 新聞產製規則](daily/README.md) - 包含研究截點前 24 小時限制、跨日去重、重大續報判定、來源紀錄與發布驗證規則。
+
+- [2026-08-31 Daily News](daily/2026/08/2026-08-31/daily-news-2026-08-31.md) - 今日主軸是「航道戰爭、災害基礎設施與 AI 供應鏈同時進入硬約束」：Hormuz 美伊互擊、Ukraine Myla 死亡上修與能源威脅、Nepal／Tibet 洪災破 800 死、North Cyprus ferry capsizing、Grand Canyon 供水中斷、Iceland EU referendum final result、G20 press credentials dispute、Roman Space Telescope and NATO drone training。科技／AI 聚焦 SpaceX turbine foundry、Caterpillar Cat AI Assistant、Big Tech AI stakes windfall、Google Maps Lake America and Docsie AI Content Comparison。
+- [2026-08-31 Slides](daily/2026/08/2026-08-31/slides-2026-08-31.html) - 今日新聞網頁版投影片。
 
 - [2026-08-30 Daily News](daily/2026/08/2026-08-30/daily-news-2026-08-30.md) - 今日主軸是「災害傷亡上修、戰爭與軍政風險續升、制度程序進入可驗證節點，AI 產品競爭轉向資料權利、算力堆疊與入口控制」：Nepal／Tibet floods、Ukraine Myla strike、Niger mutiny、Venezuela oil terms、West Bank / Gaza、Iceland referendum、Haiti release、CAR deportations、student speech ruling and Warsh Jackson Hole。科技／AI 聚焦 Anthropic music lawsuit、Nvidia Vera Rubin infrastructure、TechBBQ AI sovereignty、VZVC AI biotech、Theragun Coach AI and microdrama apps。
 - [2026-08-30 Slides](daily/2026/08/2026-08-30/slides-2026-08-30.html) - 今日新聞網頁版投影片。

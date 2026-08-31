@@ -2,7 +2,7 @@
 title: "Overview"
 type: overview
 created: 2026-05-24
-updated: 2026-08-30
+updated: 2026-08-31
 status: seed
 tags: [overview]
 sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
@@ -19,6 +19,12 @@ sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
 - 抽出持續出現的人物、組織、事件、政策、技術與市場概念。
 - 維護跨來源的矛盾、時間線、趨勢與待查問題。
 - 將重要查詢結果回寫成可累積的 wiki 頁面。
+
+## 2026-08-31 Daily News Synthesis
+
+- 全球新聞主軸轉為「航道戰爭、災害基礎設施與公共系統韌性」：U.S. strikes Iranian launchers near Hormuz, Iran missile retaliation toward Jordan, Ukraine Myla death toll and Russia energy-strike threat, Nepal／Tibet floods above 800 deaths, Northern Cyprus ferry disaster and Grand Canyon pipeline outage all demand follow-up through casualty, shipping, rescue, energy and infrastructure records.
+- 制度與資訊治理同日變硬：Iceland final referendum result closes the EU talks question for now, U.S. Treasury G20 credential denials raise press-access transparency risk, and Google Maps Lake America shows how state naming decisions enter platform UX.
+- 科技／AI 今日聚焦「物理供應鏈、現場部署與帳面獲利品質」：SpaceX turbine-blade foundry, Caterpillar Cat AI Assistant, Big Tech AI equity-stakes windfall and Docsie Content Comparison show AI competition moving from model headlines into power equipment, repair workflows, accounting transparency and auditable knowledge operations.
 
 ## 2026-08-30 Daily News Synthesis
 
