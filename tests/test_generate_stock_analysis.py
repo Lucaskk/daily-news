@@ -10,14 +10,14 @@ stock_analysis = importlib.util.module_from_spec(SPEC)
 SPEC.loader.exec_module(stock_analysis)
 
 
-def goodinfo_page(rows: str) -> str:
+def legacy_financial_page(rows: str) -> str:
     filler = "".join("<table></table>" for _ in range(6))
     return f"<html><body>{filler}<table>{rows}</table></body></html>"
 
 
 class FinancialPeriodTests(unittest.TestCase):
     def test_parse_quarterly_amount_and_percentage_columns(self) -> None:
-        page = goodinfo_page(
+        page = legacy_financial_page(
             """
             <tr><th>本業獲利</th><th>2026Q1</th><th>2025Q1</th></tr>
             <tr><td>金額</td><td>％</td><td>金額</td><td>％</td></tr>
@@ -26,7 +26,7 @@ class FinancialPeriodTests(unittest.TestCase):
             """
         )
 
-        table, periods = stock_analysis.parse_goodinfo_table(page, period_kind="quarter")
+        table, periods = stock_analysis.parse_legacy_financial_html_table(page, period_kind="quarter")
 
         self.assertEqual(periods, ["2026Q1", "2025Q1"])
         self.assertEqual(table["營業收入"], {"2026Q1": 1234.0, "2025Q1": 1000.0})
@@ -58,6 +58,62 @@ class FinancialPeriodTests(unittest.TestCase):
 
         self.assertEqual(latest, "2026Q2")
         self.assertIsNone(comparison)
+
+
+class FinMindConversionTests(unittest.TestCase):
+    def test_finmind_date_to_quarter_period(self) -> None:
+        self.assertEqual(stock_analysis.period_from_date("2026-06-30"), "2026Q2")
+        self.assertEqual(stock_analysis.period_from_date("2026-12-31"), "2026Q4")
+
+    def test_finmind_money_fields_convert_to_billion_but_eps_stays_per_share(self) -> None:
+        table = stock_analysis.finmind_rows_to_table(
+            "income_statement",
+            [
+                {"date": "2026-03-31", "type": "Revenue", "value": 120_000_000_000, "origin_name": "營業收入"},
+                {"date": "2026-03-31", "type": "EPS", "value": 2.5, "origin_name": "基本每股盈餘"},
+            ],
+        )
+
+        self.assertEqual(table["營業收入"]["2026Q1"], 1200.0)
+        self.assertEqual(table["EPS"]["2026Q1"], 2.5)
+
+    def test_cash_flow_cumulative_values_are_converted_to_single_quarter_values(self) -> None:
+        quarterly = stock_analysis.cash_flow_quarterly_from_cumulative(
+            {
+                "營業活動之淨現金流入(出)": {"2026Q1": 100.0, "2026Q2": 260.0},
+                "不動產、廠房及設備": {"2026Q1": -40.0, "2026Q2": -120.0},
+            }
+        )
+
+        self.assertEqual(quarterly["營業活動之淨現金流入(出)"]["2026Q1"], 100.0)
+        self.assertEqual(quarterly["營業活動之淨現金流入(出)"]["2026Q2"], 160.0)
+        self.assertEqual(quarterly["不動產、廠房及設備"]["2026Q2"], -80.0)
+
+    def test_annual_aggregation_sums_income_and_uses_fourth_quarter_balance_sheet(self) -> None:
+        income = stock_analysis.aggregate_annual_table(
+            "income_statement",
+            {
+                "營業收入": {"2025Q1": 100.0, "2025Q2": 110.0, "2025Q3": 120.0, "2025Q4": 130.0},
+                "EPS": {"2025Q1": 1.0, "2025Q2": 1.2, "2025Q3": 1.3, "2025Q4": 1.5},
+            },
+        )
+        balance = stock_analysis.aggregate_annual_table(
+            "balance_sheet",
+            {"資產總額": {"2025Q1": 900.0, "2025Q4": 1000.0}},
+        )
+        cash_flow = stock_analysis.aggregate_annual_table(
+            "cash_flow",
+            {"營業活動之淨現金流入(出)": {"2025Q4": 100.0}},
+            cumulative={"營業活動之淨現金流入(出)": {"2025Q4": 460.0}},
+        )
+
+        self.assertEqual(income["營業收入"]["2025"], 460.0)
+        self.assertAlmostEqual(income["EPS"]["2025"], 5.0)
+        self.assertEqual(balance["資產總額"]["2025"], 1000.0)
+        self.assertEqual(cash_flow["營業活動之淨現金流入(出)"]["2025"], 460.0)
+
+    def test_official_openapi_amounts_are_thousand_twd(self) -> None:
+        self.assertEqual(stock_analysis.official_amount_to_billion("2404483690.00"), 24044.8369)
 
 
 if __name__ == "__main__":

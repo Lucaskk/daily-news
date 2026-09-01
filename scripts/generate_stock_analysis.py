@@ -2,8 +2,10 @@
 """Generate a Taiwan stock analysis page for GitHub Pages.
 
 The script accepts a Taiwan stock code or company name, fetches public quote
-and financial-statement data, then writes a compact HTML dashboard plus JSON
-and Markdown provenance files under wiki/stocks/.
+data plus FinMind financial statements, validates the latest income/balance
+sheet values against TWSE/TPEx official OpenAPI when available, then writes a
+compact HTML dashboard plus JSON and Markdown provenance files under
+wiki/stocks/.
 
 This is research tooling only. It does not make investment recommendations.
 """
@@ -20,7 +22,6 @@ from pathlib import Path
 import posixpath
 import re
 import sys
-import time
 from typing import Any
 import urllib.error
 import urllib.parse
@@ -29,7 +30,12 @@ import urllib.request
 
 TWSE_QUOTES_URL = "https://openapi.twse.com.tw/v1/exchangeReport/STOCK_DAY_ALL"
 TPEX_QUOTES_URL = "https://www.tpex.org.tw/openapi/v1/tpex_mainboard_quotes"
-GOODINFO_URL = "https://goodinfo.tw/tw/StockFinDetail.asp"
+FINMIND_API_URL = "https://api.finmindtrade.com/api/v4/data"
+FINMIND_FUNDAMENTAL_URL = "https://finmind.github.io/tutor/TaiwanMarket/Fundamental/"
+FINMIND_LOOKBACK_YEARS = 7
+TWSE_OFFICIAL_BASE_URL = "https://openapi.twse.com.tw/v1/opendata"
+TPEX_OFFICIAL_BASE_URL = "https://www.tpex.org.tw/openapi/v1"
+OFFICIAL_REPORT_VARIANTS = ("ci", "bd", "fh", "ins", "mim", "basi")
 TAIPEI_TZ = dt.timezone(dt.timedelta(hours=8))
 DEFAULT_OUTPUT_ROOT = Path("wiki/stocks")
 YEAR_PERIOD_PATTERN = re.compile(r"\d{4}")
@@ -41,7 +47,7 @@ class StockAnalysisError(RuntimeError):
 
 
 class FinancialTableParser(HTMLParser):
-    """Extract table rows from Goodinfo HTML with the Python standard library."""
+    """Extract table rows from a legacy financial HTML page with the Python standard library."""
 
     def __init__(self) -> None:
         super().__init__(convert_charrefs=True)
@@ -126,9 +132,12 @@ def read_url_bytes(url: str, headers: dict[str, str] | None = None, timeout: int
         raise StockAnalysisError(f"Network error while fetching {url}: {exc}") from exc
 
 
-def read_json(url: str) -> Any:
-    raw = read_url_bytes(url, headers={"User-Agent": "Mozilla/5.0"})
-    return json.loads(raw.decode("utf-8"))
+def read_json(url: str, headers: dict[str, str] | None = None) -> Any:
+    request_headers = {"User-Agent": "daily-news-stock-analysis/1.0"}
+    if headers:
+        request_headers.update(headers)
+    raw = read_url_bytes(url, headers=request_headers)
+    return json.loads(raw.decode("utf-8-sig"))
 
 
 def parse_number(value: Any) -> float | None:
@@ -306,40 +315,6 @@ def resolve_stock(query: str, quotes: list[dict[str, Any]] | None = None) -> dic
     raise StockAnalysisError("找不到股票代碼或名稱。請輸入 4 位數代碼，例如 2330，或完整股票名稱。")
 
 
-def goodinfo_client_key() -> tuple[str, float]:
-    tz_offset = -480
-    now_ms = time.time() * 1000
-    days_since_epoch = now_ms / 86400000
-    days_adjusted = days_since_epoch - tz_offset / 1440
-    client_key = f"2.8|38057.1435627105|46946.0324515993|{tz_offset}|{days_adjusted}|{days_adjusted}"
-    return client_key, days_adjusted
-
-
-def fetch_goodinfo_html(stock_id: str, report_category: str) -> str:
-    client_key, days_adjusted = goodinfo_client_key()
-    query = urllib.parse.urlencode(
-        {
-            "RPT_CAT": report_category,
-            "STOCK_ID": stock_id,
-            "REINIT": f"{days_adjusted:.10f}",
-        }
-    )
-    headers = {
-        "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
-        "Referer": "https://goodinfo.tw/",
-        "Cookie": f"CLIENT_KEY={client_key}",
-    }
-    raw = read_url_bytes(f"{GOODINFO_URL}?{query}", headers=headers)
-    return raw.decode("utf-8", errors="replace")
-
-
-def extract_goodinfo_name(html_text: str, stock_id: str) -> str:
-    title_match = re.search(rf"<title>\s*{re.escape(stock_id)}\s+(.+?)\s+-", html_text)
-    if title_match:
-        return html_lib.unescape(title_match.group(1)).strip()
-    return ""
-
-
 def normalize_financial_period(value: str) -> str:
     return re.sub(r"\s+", "", value).upper()
 
@@ -363,14 +338,14 @@ def display_financial_period(period: str) -> str:
     return period
 
 
-def parse_goodinfo_table(
+def parse_legacy_financial_html_table(
     html_text: str,
     period_kind: str = "year",
 ) -> tuple[dict[str, dict[str, float | None]], list[str]]:
     parser = FinancialTableParser()
     parser.feed(html_text)
     if len(parser.tables) < 7:
-        raise StockAnalysisError("Goodinfo 回傳內容沒有找到預期的財報表格，可能是暫時被擋或該標的沒有財報資料。")
+        raise StockAnalysisError("舊版財報 HTML 沒有找到預期的財報表格，可能是暫時被擋或該標的沒有財報資料。")
     rows = parser.tables[6]
     period_pattern = QUARTER_PERIOD_PATTERN if period_kind == "quarter" else YEAR_PERIOD_PATTERN
     header_index = next(
@@ -383,7 +358,7 @@ def parse_goodinfo_table(
     )
     if header_index is None:
         label = "季度" if period_kind == "quarter" else "年度"
-        raise StockAnalysisError(f"無法解析 Goodinfo 財報{label}欄位。")
+        raise StockAnalysisError(f"無法解析舊版財報 HTML 的{label}欄位。")
 
     header = rows[header_index]
     periods = [
@@ -393,7 +368,7 @@ def parse_goodinfo_table(
     ]
     if not periods:
         label = "季度" if period_kind == "quarter" else "年度"
-        raise StockAnalysisError(f"Goodinfo 財報表格沒有{label}資料。")
+        raise StockAnalysisError(f"舊版財報 HTML 沒有{label}資料。")
 
     marker_row = rows[header_index + 1] if header_index + 1 < len(rows) else []
     paired_amount_percent = len(marker_row) >= len(periods) * 2 and any(
@@ -437,45 +412,555 @@ def select_latest_quarter(periods_by_report: list[list[str]]) -> tuple[str, str 
     return latest, comparison, valid_periods
 
 
-def fetch_financials(stock_id: str) -> dict[str, Any]:
-    reports: dict[str, Any] = {}
-    company_name = ""
-    for key, category in (
-        ("income_statement", "IS_YEAR"),
-        ("balance_sheet", "BS_YEAR"),
-        ("cash_flow", "CF_YEAR"),
-    ):
-        html_text = fetch_goodinfo_html(stock_id, category)
-        if not company_name:
-            company_name = extract_goodinfo_name(html_text, stock_id)
-        table, years = parse_goodinfo_table(html_text)
-        reports[key] = table
-        reports.setdefault("years", years)
-        time.sleep(0.4)
+FINMIND_DATASETS = {
+    "income_statement": "TaiwanStockFinancialStatements",
+    "balance_sheet": "TaiwanStockBalanceSheet",
+    "cash_flow": "TaiwanStockCashFlowsStatement",
+}
 
-    quarterly: dict[str, Any] = {}
-    quarterly_periods: list[list[str]] = []
-    for key, category in (
-        ("income_statement", "IS_QUAR"),
-        ("balance_sheet", "BS_QUAR"),
-        ("cash_flow", "CF_QUAR"),
-    ):
-        html_text = fetch_goodinfo_html(stock_id, category)
-        table, periods = parse_goodinfo_table(html_text, period_kind="quarter")
-        quarterly[key] = table
-        quarterly_periods.append(periods)
-        time.sleep(0.4)
+FINMIND_FIELD_MAPPINGS = {
+    "income_statement": {
+        "Revenue": "營業收入",
+        "GrossProfit": "營業毛利",
+        "OperatingExpenses": "營業費用",
+        "OperatingIncome": "營業利益",
+        "IncomeAfterTaxes": "本期淨利",
+        "TotalConsolidatedProfitForThePeriod": "本期淨利",
+        "EquityAttributableToOwnersOfParent": "歸屬於母公司業主之本期淨利",
+        "EPS": "EPS",
+        "SellingExpenses": "推銷費用",
+        "SalesAndMarketingExpenses": "推銷費用",
+        "AdministrativeExpenses": "管理費用",
+        "GeneralAndAdministrativeExpenses": "管理費用",
+        "ResearchAndDevelopmentExpenses": "研究發展費用",
+    },
+    "balance_sheet": {
+        "CashAndCashEquivalents": "現金及約當現金",
+        "Inventories": "存貨",
+        "CurrentAssets": "流動資產合計",
+        "CurrentLiabilities": "流動負債合計",
+        "Liabilities": "負債總額",
+        "TotalAssets": "資產總額",
+        "Equity": "權益總額",
+        "EquityAttributableToOwnersOfParent": "股東權益總額",
+    },
+    "cash_flow": {
+        "CashFlowsFromOperatingActivities": "營業活動之淨現金流入(出)",
+        "NetCashInflowFromOperatingActivities": "營業活動之淨現金流入(出)",
+        "CashProvidedByInvestingActivities": "投資活動之淨現金流入(出)",
+        "CashFlowsProvidedFromFinancingActivities": "融資活動之淨現金流入(出)",
+        "PropertyAndPlantAndEquipment": "不動產、廠房及設備",
+        "CashDividendsPaid": "發放現金股利",
+        "DividendsPaid": "發放現金股利",
+    },
+}
 
-    latest_quarter, comparison_quarter, available_quarters = select_latest_quarter(quarterly_periods)
+FINMIND_FIELD_PRIORITIES = {
+    "cash_flow": {
+        "CashFlowsFromOperatingActivities": 1,
+        "NetCashInflowFromOperatingActivities": 2,
+    }
+}
+
+FINMIND_MONEY_FIELDS = {
+    "營業收入",
+    "營業毛利",
+    "營業費用",
+    "推銷費用",
+    "管理費用",
+    "研究發展費用",
+    "營業利益",
+    "本期淨利",
+    "歸屬於母公司業主之本期淨利",
+    "現金及約當現金",
+    "存貨",
+    "流動資產合計",
+    "流動負債合計",
+    "負債總額",
+    "資產總額",
+    "權益總額",
+    "股東權益總額",
+    "營業活動之淨現金流入(出)",
+    "投資活動之淨現金流入(出)",
+    "融資活動之淨現金流入(出)",
+    "不動產、廠房及設備",
+    "發放現金股利",
+}
+
+
+def finmind_headers() -> dict[str, str]:
+    headers = {
+        "Accept": "application/json",
+        "User-Agent": "daily-news-stock-analysis/1.0",
+    }
+    token = os.environ.get("FINMIND_TOKEN") or os.environ.get("FINMIND_API_TOKEN")
+    if token:
+        headers["Authorization"] = f"Bearer {token}"
+    return headers
+
+
+def finmind_dataset_url(dataset_key: str, stock_id: str, start_date: str) -> str:
+    query = urllib.parse.urlencode(
+        {
+            "dataset": FINMIND_DATASETS[dataset_key],
+            "data_id": stock_id,
+            "start_date": start_date,
+        }
+    )
+    return f"{FINMIND_API_URL}?{query}"
+
+
+def fetch_finmind_dataset(dataset_key: str, stock_id: str, start_date: str) -> list[dict[str, Any]]:
+    url = finmind_dataset_url(dataset_key, stock_id, start_date)
+    payload = read_json(url, headers=finmind_headers())
+    status = str(payload.get("status", ""))
+    if status != "200":
+        message = payload.get("msg") or payload.get("message") or "unknown error"
+        raise StockAnalysisError(f"FinMind {FINMIND_DATASETS[dataset_key]} 取得失敗：{message}")
+    rows = payload.get("data") or []
+    if not rows:
+        raise StockAnalysisError(f"FinMind {FINMIND_DATASETS[dataset_key]} 沒有 {stock_id} 的可用資料。")
+    return rows
+
+
+def period_from_date(value: Any) -> str | None:
+    if not value:
+        return None
+    try:
+        date_value = dt.date.fromisoformat(str(value)[:10])
+    except ValueError:
+        return None
+    quarter = (date_value.month - 1) // 3 + 1
+    if quarter < 1 or quarter > 4:
+        return None
+    return f"{date_value.year}Q{quarter}"
+
+
+def quarter_number(period: str) -> int:
+    normalized = normalize_financial_period(period)
+    if not QUARTER_PERIOD_PATTERN.fullmatch(normalized):
+        return 0
+    return int(normalized[-1])
+
+
+def field_from_finmind_row(dataset_key: str, row: dict[str, Any]) -> str | None:
+    row_type = str(row.get("type") or "")
+    if row_type.endswith("_per"):
+        return None
+
+    mapped = FINMIND_FIELD_MAPPINGS.get(dataset_key, {}).get(row_type)
+    if mapped:
+        return mapped
+
+    origin = str(row.get("origin_name") or "")
+    if dataset_key == "income_statement":
+        if "營業收入" in origin:
+            return "營業收入"
+        if "營業毛利" in origin:
+            return "營業毛利"
+        if "推銷費用" in origin or "銷售費用" in origin:
+            return "推銷費用"
+        if "管理費用" in origin:
+            return "管理費用"
+        if "研究發展費用" in origin or "研發費用" in origin:
+            return "研究發展費用"
+        if "營業費用" in origin:
+            return "營業費用"
+        if "營業利益" in origin:
+            return "營業利益"
+        if "歸屬於母公司業主" in origin and "淨利" in origin:
+            return "歸屬於母公司業主之本期淨利"
+        if "本期淨利" in origin:
+            return "本期淨利"
+        if "每股盈餘" in origin or "EPS" in row_type.upper():
+            return "EPS"
+    elif dataset_key == "balance_sheet":
+        if "現金及約當現金" in origin:
+            return "現金及約當現金"
+        if "存貨" in origin:
+            return "存貨"
+        if "流動資產" in origin and "非流動" not in origin:
+            return "流動資產合計"
+        if "流動負債" in origin and "非流動" not in origin:
+            return "流動負債合計"
+        if "負債總" in origin:
+            return "負債總額"
+        if "資產總" in origin:
+            return "資產總額"
+        if "權益總" in origin:
+            return "權益總額"
+        if "股東權益" in origin or "母公司業主之權益" in origin:
+            return "股東權益總額"
+    elif dataset_key == "cash_flow":
+        if "營業活動" in origin and ("現金流入" in origin or "現金流量" in origin):
+            return "營業活動之淨現金流入(出)"
+        if "投資活動" in origin and ("現金流入" in origin or "現金流量" in origin):
+            return "投資活動之淨現金流入(出)"
+        if ("籌資活動" in origin or "融資活動" in origin) and ("現金流入" in origin or "現金流量" in origin):
+            return "融資活動之淨現金流入(出)"
+        if "取得不動產" in origin or "不動產、廠房及設備" in origin or "固定資產" in origin:
+            return "不動產、廠房及設備"
+        if "現金股利" in origin:
+            return "發放現金股利"
+    return None
+
+
+def finmind_value_to_table_value(field: str, value: Any) -> float | None:
+    parsed = parse_number(value)
+    if parsed is None:
+        return None
+    if field == "EPS":
+        return parsed
+    if field in FINMIND_MONEY_FIELDS:
+        return parsed / 100_000_000
+    return parsed
+
+
+def finmind_rows_to_table(dataset_key: str, rows: list[dict[str, Any]]) -> dict[str, dict[str, float | None]]:
+    table: dict[str, dict[str, float | None]] = {}
+    priorities: dict[str, dict[str, int]] = {}
+    for row in rows:
+        period = period_from_date(row.get("date"))
+        field = field_from_finmind_row(dataset_key, row)
+        if not period or not field:
+            continue
+        value = finmind_value_to_table_value(field, row.get("value"))
+        if value is None:
+            continue
+
+        row_type = str(row.get("type") or "")
+        priority = FINMIND_FIELD_PRIORITIES.get(dataset_key, {}).get(row_type, 100)
+        previous_priority = priorities.setdefault(field, {}).get(period, 999)
+        if priority <= previous_priority:
+            table.setdefault(field, {})[period] = value
+            priorities[field][period] = priority
+    return table
+
+
+def table_periods(table: dict[str, dict[str, float | None]]) -> list[str]:
+    periods = {
+        normalize_financial_period(period)
+        for values in table.values()
+        for period in values
+        if QUARTER_PERIOD_PATTERN.fullmatch(normalize_financial_period(period))
+    }
+    return sorted(periods, key=financial_period_sort_key, reverse=True)
+
+
+def cash_flow_quarterly_from_cumulative(
+    cumulative: dict[str, dict[str, float | None]],
+) -> dict[str, dict[str, float | None]]:
+    quarterly: dict[str, dict[str, float | None]] = {}
+    for field, values in cumulative.items():
+        converted: dict[str, float | None] = {}
+        for period in sorted(values, key=financial_period_sort_key):
+            quarter = quarter_number(period)
+            current = values.get(period)
+            if current is None:
+                converted[period] = None
+                continue
+            if quarter <= 1:
+                converted[period] = current
+                continue
+            previous_period = f"{period[:4]}Q{quarter - 1}"
+            previous = values.get(previous_period)
+            converted[period] = current - previous if previous is not None else current
+        quarterly[field] = converted
+    return quarterly
+
+
+def aggregate_annual_table(
+    dataset_key: str,
+    quarterly: dict[str, dict[str, float | None]],
+    cumulative: dict[str, dict[str, float | None]] | None = None,
+) -> dict[str, dict[str, float | None]]:
+    annual: dict[str, dict[str, float | None]] = {}
+    source = cumulative if dataset_key == "cash_flow" and cumulative is not None else quarterly
+    years = sorted(
+        {
+            period[:4]
+            for values in source.values()
+            for period in values
+            if QUARTER_PERIOD_PATTERN.fullmatch(normalize_financial_period(period))
+        },
+        reverse=True,
+    )
+    for field, values in source.items():
+        for year in years:
+            if dataset_key == "balance_sheet" or dataset_key == "cash_flow":
+                value = values.get(f"{year}Q4")
+                if value is not None:
+                    annual.setdefault(field, {})[year] = value
+                continue
+
+            quarter_values = [values.get(f"{year}Q{quarter}") for quarter in range(1, 5)]
+            if all(value is not None for value in quarter_values):
+                annual.setdefault(field, {})[year] = sum(value for value in quarter_values if value is not None)
+    return annual
+
+
+def annual_years(*tables: dict[str, dict[str, float | None]]) -> list[str]:
+    year_sets: list[set[str]] = []
+    for table in tables:
+        years = {
+            period
+            for values in table.values()
+            for period, value in values.items()
+            if YEAR_PERIOD_PATTERN.fullmatch(period) and value is not None
+        }
+        year_sets.append(years)
+    if not year_sets:
+        return []
+    common = set.intersection(*year_sets)
+    return sorted(common, key=lambda item: int(item), reverse=True)
+
+
+def official_financial_urls(market: str, report: str) -> list[str]:
+    market_key = (market or "").upper()
+    if market_key == "TWSE":
+        prefix = f"{TWSE_OFFICIAL_BASE_URL}/t187ap06_L" if report == "income" else f"{TWSE_OFFICIAL_BASE_URL}/t187ap07_L"
+        return [f"{prefix}_{variant}" for variant in OFFICIAL_REPORT_VARIANTS]
+    if market_key == "TPEX":
+        prefix = f"{TPEX_OFFICIAL_BASE_URL}/mopsfin_t187ap06_O" if report == "income" else f"{TPEX_OFFICIAL_BASE_URL}/mopsfin_t187ap07_O"
+        return [f"{prefix}_{variant}" for variant in OFFICIAL_REPORT_VARIANTS]
+    return []
+
+
+def official_stock_code(row: dict[str, Any]) -> str:
+    return str(row.get("公司代號") or row.get("SecuritiesCompanyCode") or "").strip()
+
+
+def official_period(row: dict[str, Any]) -> str | None:
+    raw_year = parse_number(row.get("年度") or row.get("Year"))
+    raw_quarter = parse_number(row.get("季別") or row.get("Season"))
+    if raw_year is None or raw_quarter is None:
+        return None
+    year = int(raw_year)
+    if year < 1911:
+        year += 1911
+    quarter = int(raw_quarter)
+    if quarter < 1 or quarter > 4:
+        return None
+    return f"{year}Q{quarter}"
+
+
+def official_amount_to_billion(value: Any) -> float | None:
+    parsed = parse_number(value)
+    return parsed / 100_000 if parsed is not None else None
+
+
+def official_find_row(stock_id: str, urls: list[str]) -> tuple[dict[str, Any] | None, str]:
+    for url in urls:
+        try:
+            rows = read_json(url)
+        except Exception:
+            continue
+        if not isinstance(rows, list):
+            continue
+        row = next((item for item in rows if official_stock_code(item) == stock_id), None)
+        if row:
+            return row, url
+    return None, ""
+
+
+def official_snapshot_from_row(kind: str, row: dict[str, Any], url: str) -> dict[str, Any]:
+    period = official_period(row)
+    values: dict[str, float | None] = {}
+    if kind == "income":
+        values = {
+            "revenue": official_amount_to_billion(row.get("營業收入")),
+            "gross_profit": official_amount_to_billion(row.get("營業毛利（毛損）") or row.get("營業毛利")),
+            "operating_income": official_amount_to_billion(row.get("營業利益（損失）") or row.get("營業利益")),
+            "net_income": official_amount_to_billion(
+                row.get("淨利（淨損）歸屬於母公司業主")
+                or row.get("歸屬於母公司業主之淨利（淨損）")
+                or row.get("本期淨利（淨損）")
+            ),
+            "eps": parse_number(row.get("基本每股盈餘（元）") or row.get("基本每股盈餘")),
+        }
+    elif kind == "balance":
+        values = {
+            "current_assets": official_amount_to_billion(row.get("流動資產") or row.get("流動資產合計")),
+            "current_liabilities": official_amount_to_billion(row.get("流動負債") or row.get("流動負債合計")),
+            "assets": official_amount_to_billion(row.get("資產總計") or row.get("資產總額")),
+            "liabilities": official_amount_to_billion(row.get("負債總計") or row.get("負債總額")),
+            "equity": official_amount_to_billion(
+                row.get("歸屬於母公司業主之權益合計") or row.get("權益總計") or row.get("權益總額")
+            ),
+        }
+    return {
+        "period": period,
+        "url": url,
+        "values": {key: value for key, value in values.items() if value is not None},
+    }
+
+
+def fetch_official_financial_snapshot(stock: dict[str, Any]) -> dict[str, Any]:
+    stock_id = stock["code"]
+    market = stock.get("market") or ""
+    income_row, income_url = official_find_row(stock_id, official_financial_urls(market, "income"))
+    balance_row, balance_url = official_find_row(stock_id, official_financial_urls(market, "balance"))
+    market_key = market.upper()
+    source_name = "TWSE OpenAPI" if market_key == "TWSE" else "TPEx OpenAPI" if market_key == "TPEX" else "TWSE/TPEx OpenAPI"
+    snapshot: dict[str, Any] = {
+        "source": source_name,
+        "income": official_snapshot_from_row("income", income_row, income_url) if income_row else None,
+        "balance": official_snapshot_from_row("balance", balance_row, balance_url) if balance_row else None,
+    }
+    periods = [
+        item.get("period")
+        for item in (snapshot.get("income"), snapshot.get("balance"))
+        if item and item.get("period")
+    ]
+    snapshot["period"] = sorted(periods, key=financial_period_sort_key, reverse=True)[0] if periods else None
+    snapshot["available"] = bool(periods)
+    return snapshot
+
+
+def cumulative_metric(metrics: dict[str, dict[str, float | None]], period: str, key: str) -> float | None:
+    quarter = quarter_number(period)
+    if quarter <= 0:
+        return None
+    values = [metric(metrics, f"{period[:4]}Q{item}", key) for item in range(1, quarter + 1)]
+    if any(value is None for value in values):
+        return None
+    return sum(value for value in values if value is not None)
+
+
+def verify_official_financials(
+    stock: dict[str, Any],
+    quarterly_metrics: dict[str, dict[str, float | None]],
+    available_periods: list[str],
+    official_snapshot: dict[str, Any] | None,
+) -> dict[str, Any]:
+    if not official_snapshot or not official_snapshot.get("available"):
+        return {
+            "status": "unavailable",
+            "message": "尚未從 TWSE/TPEX 官方 OpenAPI 找到可比對的最新財報資料。",
+            "checks": [],
+        }
+
+    checks: list[dict[str, Any]] = []
+    labels = {
+        "revenue": "營業收入",
+        "gross_profit": "營業毛利",
+        "operating_income": "營業利益",
+        "net_income": "母公司淨利",
+        "eps": "EPS",
+        "current_assets": "流動資產",
+        "current_liabilities": "流動負債",
+        "assets": "資產總額",
+        "liabilities": "負債總額",
+        "equity": "權益總額",
+    }
+
+    for group, cumulative in (("income", True), ("balance", False)):
+        official_group = official_snapshot.get(group) or {}
+        official_period = official_group.get("period")
+        if not official_period or official_period not in available_periods:
+            continue
+        for key, official_value in (official_group.get("values") or {}).items():
+            finmind_value = (
+                cumulative_metric(quarterly_metrics, official_period, key)
+                if cumulative
+                else metric(quarterly_metrics, official_period, key)
+            )
+            if official_value is None or finmind_value is None:
+                continue
+            diff = finmind_value - official_value
+            diff_pct = diff / abs(official_value) * 100 if official_value else 0.0
+            checks.append(
+                {
+                    "field": labels.get(key, key),
+                    "period": official_period,
+                    "finmind": finmind_value,
+                    "official": official_value,
+                    "diff": diff,
+                    "diff_pct": diff_pct,
+                    "pass": abs(diff_pct) <= 2 or abs(diff) <= 0.05,
+                    "source_url": official_group.get("url") or "",
+                }
+            )
+
+    failed = [item for item in checks if not item["pass"]]
+    if failed:
+        fields = "、".join(item["field"] for item in failed[:5])
+        return {
+            "status": "warn",
+            "message": f"FinMind 與官方 OpenAPI 有 {len(failed)} 個欄位差異超過 2%：{fields}。",
+            "checks": checks,
+        }
+    if checks:
+        return {
+            "status": "pass",
+            "message": f"已用 {official_snapshot.get('source')} 核對 {len(checks)} 個最新累計/季末欄位，差異在容許範圍內。",
+            "checks": checks,
+        }
+    return {
+        "status": "partial",
+        "message": "已找到官方財報端點，但沒有與 FinMind 共同期間或共同欄位可自動比對。",
+        "checks": [],
+    }
+
+
+def fetch_financials(stock_id: str, stock: dict[str, Any] | None = None) -> dict[str, Any]:
+    start_date = (now_taipei().date() - dt.timedelta(days=FINMIND_LOOKBACK_YEARS * 366)).isoformat()
+    income_rows = fetch_finmind_dataset("income_statement", stock_id, start_date)
+    balance_rows = fetch_finmind_dataset("balance_sheet", stock_id, start_date)
+    cash_flow_rows = fetch_finmind_dataset("cash_flow", stock_id, start_date)
+
+    quarterly_income = finmind_rows_to_table("income_statement", income_rows)
+    quarterly_balance = finmind_rows_to_table("balance_sheet", balance_rows)
+    cash_flow_cumulative = finmind_rows_to_table("cash_flow", cash_flow_rows)
+    quarterly_cash_flow = cash_flow_quarterly_from_cumulative(cash_flow_cumulative)
+
+    annual_income = aggregate_annual_table("income_statement", quarterly_income)
+    annual_balance = aggregate_annual_table("balance_sheet", quarterly_balance)
+    annual_cash_flow = aggregate_annual_table("cash_flow", quarterly_cash_flow, cumulative=cash_flow_cumulative)
+    years = annual_years(annual_income, annual_balance, annual_cash_flow)
+    if not years:
+        raise StockAnalysisError("FinMind 財報資料不足，無法組成共同年度的損益表、資產負債表與現金流量表。")
+
+    quarterly_periods_by_report = [
+        table_periods(quarterly_income),
+        table_periods(quarterly_balance),
+        table_periods(quarterly_cash_flow),
+    ]
+    latest_quarter, comparison_quarter, available_quarters = select_latest_quarter(quarterly_periods_by_report)
     selected_quarters = [latest_quarter]
     if comparison_quarter:
         selected_quarters.append(comparison_quarter)
-    quarterly["periods"] = selected_quarters
-    quarterly["available_periods"] = available_quarters
-    quarterly["latest_period"] = latest_quarter
-    quarterly["comparison_period"] = comparison_quarter
-    reports["quarterly"] = quarterly
-    reports["company_name"] = company_name
+
+    quarterly = {
+        "income_statement": quarterly_income,
+        "balance_sheet": quarterly_balance,
+        "cash_flow": quarterly_cash_flow,
+        "periods": selected_quarters,
+        "available_periods": available_quarters,
+        "latest_period": latest_quarter,
+        "comparison_period": comparison_quarter,
+        "notes": [
+            "FinMind 損益表採單季值；年度損益由四季相加。",
+            "FinMind 現金流量表採年初至該季累計值；本工具已轉為單季差額，年度現金流採 Q4 累計值。",
+            "EPS 年度值由四季 EPS 加總，遇除權、股本變動時仍需以公司公告核對。",
+        ],
+    }
+
+    reports: dict[str, Any] = {
+        "income_statement": annual_income,
+        "balance_sheet": annual_balance,
+        "cash_flow": annual_cash_flow,
+        "years": years,
+        "quarterly": quarterly,
+        "company_name": "",
+        "data_source": "FinMind API",
+        "source_notes": quarterly["notes"],
+        "finmind_urls": {
+            key: finmind_dataset_url(key, stock_id, start_date) for key in FINMIND_DATASETS
+        },
+    }
+    if stock:
+        reports["official_snapshot"] = fetch_official_financial_snapshot(stock)
     return reports
 
 
@@ -541,7 +1026,7 @@ def compute_metrics(
         operating_expenses = (
             sum(value for value in expense_values if value is not None)
             if any(value is not None for value in expense_values)
-            else None
+            else table_value(income, period, ["營業費用"], ["率"])
         )
 
         metrics[period] = {
@@ -625,18 +1110,22 @@ def build_metadata(
     years: list[str],
     quarterly_periods: list[str],
     fetched_at: str,
+    financials: dict[str, Any] | None = None,
 ) -> dict[str, Any]:
     stock_id = stock["code"]
+    finmind_urls = (financials or {}).get("finmind_urls", {})
     return {
         "fetched_at": fetched_at,
-        "source": "Goodinfo.tw, TWSE OpenAPI, TPEx OpenAPI",
+        "source": "FinMind API, TWSE OpenAPI, TPEx OpenAPI, 公開資訊觀測站",
         "source_urls": {
-            "income_statement": f"{GOODINFO_URL}?RPT_CAT=IS_YEAR&STOCK_ID={stock_id}",
-            "balance_sheet": f"{GOODINFO_URL}?RPT_CAT=BS_YEAR&STOCK_ID={stock_id}",
-            "cash_flow": f"{GOODINFO_URL}?RPT_CAT=CF_YEAR&STOCK_ID={stock_id}",
-            "quarterly_income_statement": f"{GOODINFO_URL}?RPT_CAT=IS_QUAR&STOCK_ID={stock_id}",
-            "quarterly_balance_sheet": f"{GOODINFO_URL}?RPT_CAT=BS_QUAR&STOCK_ID={stock_id}",
-            "quarterly_cash_flow": f"{GOODINFO_URL}?RPT_CAT=CF_QUAR&STOCK_ID={stock_id}",
+            "finmind_fundamental": FINMIND_FUNDAMENTAL_URL,
+            "finmind_income_statement": finmind_urls.get("income_statement") or finmind_dataset_url("income_statement", stock_id, "2018-01-01"),
+            "finmind_balance_sheet": finmind_urls.get("balance_sheet") or finmind_dataset_url("balance_sheet", stock_id, "2018-01-01"),
+            "finmind_cash_flow": finmind_urls.get("cash_flow") or finmind_dataset_url("cash_flow", stock_id, "2018-01-01"),
+            "twse_income_statement": f"{TWSE_OFFICIAL_BASE_URL}/t187ap06_L_ci",
+            "twse_balance_sheet": f"{TWSE_OFFICIAL_BASE_URL}/t187ap07_L_ci",
+            "tpex_income_statement": f"{TPEX_OFFICIAL_BASE_URL}/mopsfin_t187ap06_O_ci",
+            "tpex_balance_sheet": f"{TPEX_OFFICIAL_BASE_URL}/mopsfin_t187ap07_O_ci",
             "quote": stock.get("source_url") or "",
             "mops_listed": f"https://mops.twse.com.tw/mops/web/t05st01?step=1&co_id={stock_id}&TYPEK=sii",
             "mops_otc": f"https://mops.twse.com.tw/mops/web/t05st01?step=1&co_id={stock_id}&TYPEK=otc",
@@ -644,6 +1133,7 @@ def build_metadata(
         "years_covered": years,
         "quarters_covered": quarterly_periods,
         "currency": "TWD 億元；股價為 TWD",
+        "source_notes": (financials or {}).get("source_notes", []),
         "disclaimer": "僅供財務研究與學習參考，不構成投資建議。",
     }
 
@@ -707,7 +1197,7 @@ def build_insights(stock: dict[str, Any], metrics: dict[str, dict[str, float | N
         "financial": [
             f"流動比率 {fmt_number(latest_metrics.get('current_ratio'), 1, '%')}，負債比率 {fmt_number(latest_metrics.get('debt_ratio'), 1, '%')}。",
             f"營業現金流 {fmt_number(latest_metrics.get('operating_cf'), 0)} 億元，年增率 {fmt_delta(op_cf_growth)}。",
-            f"自由現金流估算 {fmt_number(latest_metrics.get('free_cash_flow'), 0)} 億元；資本支出使用 Goodinfo 固定資產增加減少欄位作代理。",
+            f"自由現金流估算 {fmt_number(latest_metrics.get('free_cash_flow'), 0)} 億元；資本支出使用 FinMind 現金流量表「取得不動產、廠房及設備」欄位作代理。",
         ],
     }
 
@@ -995,12 +1485,14 @@ def render_html(analysis: dict[str, Any]) -> str:
       年度財報：{html_lib.escape(' / '.join(years))}。本頁使用公開資料自動產生，請以公司公告與公開資訊觀測站核對。
     </div>
     <div class="source-row">
-      <a href="{html_lib.escape(source_urls['quarterly_income_statement'])}">Goodinfo 季損益表</a>
-      <a href="{html_lib.escape(source_urls['quarterly_balance_sheet'])}">Goodinfo 季資產負債表</a>
-      <a href="{html_lib.escape(source_urls['quarterly_cash_flow'])}">Goodinfo 季現金流量表</a>
-      <a href="{html_lib.escape(source_urls['income_statement'])}">Goodinfo 損益表</a>
-      <a href="{html_lib.escape(source_urls['balance_sheet'])}">Goodinfo 資產負債表</a>
-      <a href="{html_lib.escape(source_urls['cash_flow'])}">Goodinfo 現金流量表</a>
+      <a href="{html_lib.escape(source_urls['finmind_fundamental'])}">FinMind 財報文件</a>
+      <a href="{html_lib.escape(source_urls['finmind_income_statement'])}">FinMind 損益表 API</a>
+      <a href="{html_lib.escape(source_urls['finmind_balance_sheet'])}">FinMind 資產負債表 API</a>
+      <a href="{html_lib.escape(source_urls['finmind_cash_flow'])}">FinMind 現金流量表 API</a>
+      <a href="{html_lib.escape(source_urls['twse_income_statement'])}">TWSE 官方損益</a>
+      <a href="{html_lib.escape(source_urls['twse_balance_sheet'])}">TWSE 官方資產負債</a>
+      <a href="{html_lib.escape(source_urls['tpex_income_statement'])}">TPEX 官方損益</a>
+      <a href="{html_lib.escape(source_urls['tpex_balance_sheet'])}">TPEX 官方資產負債</a>
       <a href="{html_lib.escape(source_urls['mops_listed'])}">MOPS 上市公告</a>
       <a href="{html_lib.escape(source_urls['mops_otc'])}">MOPS 上櫃公告</a>
     </div>
@@ -1120,7 +1612,7 @@ def render_html(analysis: dict[str, Any]) -> str:
     </section>
 
     <p class="footer-note">
-      來源：Goodinfo.tw、TWSE OpenAPI、TPEx OpenAPI、公開資訊觀測站。金額單位若未特別標示均為新台幣億元。
+      來源：FinMind API、TWSE OpenAPI、TPEx OpenAPI、公開資訊觀測站。金額單位若未特別標示均為新台幣億元。
       本分析由程式自動整理，僅供財務研究與學習參考，不構成買賣建議或投資招攬。
       背景圖來源：Unsplash。
     </p>
@@ -1289,9 +1781,10 @@ updated: {today}
 status: active
 tags: [stocks, taiwan-stocks]
 sources:
-  - Goodinfo.tw
+  - FinMind API
   - TWSE OpenAPI
   - TPEx OpenAPI
+  - 公開資訊觀測站
 ---
 
 # {stock['name']} ({stock['code']}) 股票分析
@@ -1309,12 +1802,14 @@ sources:
 
 ## 來源
 
-- [Goodinfo 損益表]({sources['income_statement']})
-- [Goodinfo 資產負債表]({sources['balance_sheet']})
-- [Goodinfo 現金流量表]({sources['cash_flow']})
-- [Goodinfo 季損益表]({sources['quarterly_income_statement']})
-- [Goodinfo 季資產負債表]({sources['quarterly_balance_sheet']})
-- [Goodinfo 季現金流量表]({sources['quarterly_cash_flow']})
+- [FinMind 財報文件]({sources['finmind_fundamental']})
+- [FinMind 損益表 API]({sources['finmind_income_statement']})
+- [FinMind 資產負債表 API]({sources['finmind_balance_sheet']})
+- [FinMind 現金流量表 API]({sources['finmind_cash_flow']})
+- [TWSE 官方損益表]({sources['twse_income_statement']})
+- [TWSE 官方資產負債表]({sources['twse_balance_sheet']})
+- [TPEX 官方損益表]({sources['tpex_income_statement']})
+- [TPEX 官方資產負債表]({sources['tpex_balance_sheet']})
 - [公開資訊觀測站 上市]({sources['mops_listed']})
 - [公開資訊觀測站 上櫃]({sources['mops_otc']})
 
@@ -1402,7 +1897,7 @@ LINE webhook 收到股票代碼或名稱後，會產生 HTML 分析頁並回傳�
 
 def generate_analysis(query: str, output_root: Path = DEFAULT_OUTPUT_ROOT, public_base_url: str | None = None) -> dict[str, Any]:
     stock = resolve_stock(query)
-    financials = fetch_financials(stock["code"])
+    financials = fetch_financials(stock["code"], stock)
     if not stock.get("name"):
         stock["name"] = financials.get("company_name") or stock["code"]
     years = financials["years"][:3]
@@ -1413,12 +1908,28 @@ def generate_analysis(query: str, output_root: Path = DEFAULT_OUTPUT_ROOT, publi
     quarterly_financials = financials["quarterly"]
     quarterly_periods = quarterly_financials["periods"]
     quarterly_metrics = compute_metrics(quarterly_financials, quarterly_periods)
+    all_quarterly_metrics = compute_metrics(quarterly_financials, quarterly_financials["available_periods"])
     fetched_at = now_taipei().replace(microsecond=0).isoformat()
-    metadata = build_metadata(stock, years, quarterly_periods, fetched_at)
+    metadata = build_metadata(stock, years, quarterly_periods, fetched_at, financials)
+    official_verification = verify_official_financials(
+        stock,
+        all_quarterly_metrics,
+        quarterly_financials["available_periods"],
+        financials.get("official_snapshot"),
+    )
     sanity = sanity_check(quarterly_metrics, quarterly_periods) + sanity_check(metrics, years)
+    if official_verification["status"] != "pass":
+        sanity.append(
+            {
+                "level": "warn",
+                "field": "TWSE/TPEX 官方驗證",
+                "message": official_verification["message"],
+            }
+        )
     verification = {
         "sanity": sanity,
         "sanity_pass": True,
+        "official": official_verification,
     }
     verification["sanity_pass"] = all(item["level"] != "error" for item in verification["sanity"])
 
