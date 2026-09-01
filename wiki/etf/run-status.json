@@ -1,0 +1,12 @@
+{
+  "run_at": "2026-08-31T16:40:13+08:00",
+  "prices": {
+    "0056": "OK 2026-08-31 13:30:00 price=54.6"
+  },
+  "holdings": {
+    "0056": "OK Yuanta PCF 2026-08-31 rows=50"
+  },
+  "errors": {},
+  "latest_html": "wiki/etf/latest.html",
+  "report_regenerated_at": "2026-08-31T16:41:46+08:00"
+}

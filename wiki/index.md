@@ -26,6 +26,12 @@ sources: []
 
 - [每日全球與科技 AI 新聞產製規則](daily/README.md) - 包含研究截點前 24 小時限制、跨日去重、重大續報判定、來源紀錄與發布驗證規則。
 
+## ETF Monitor
+
+ETF 追蹤報表會放在 `wiki/etf/`。追蹤清單由 [`wiki/etf/config/tracked-etfs.json`](etf/config/tracked-etfs.json) 控制；每日程式會抓取可取得的 ETF 持股 / PCF 資料與盤中價格快照，並產生 HTML 線圖報表。
+
+- [ETF 持股與盤中價格追蹤](etf/latest.html) - 最新 ETF 報表固定入口。
+
 - [2026-09-01 Daily News](daily/2026/09/2026-09-01/daily-news-2026-09-01.md) - 今日主軸是「區域安全結盟、災害基礎設施與 AI 主權同時制度化」：UAE 攔截 Iranian drone、Saudi-Turkey-Pakistan 防務秘書處、Nepal／Tibet 洪災死亡破 950、Grand Canyon 供水管線約四成受損、Russia jet-powered drones、SCO 峰會、White House ballroom order、U.S. Army leadership change、UN reparations guidance and FSB frontier-AI warning。科技／AI 聚焦 HUMAIN M3、Horizon Ultra AI PC、AMD／Cisco and AWS Saudi compute、VMware Tanzu agent sandboxes、Google Search controls、Cloudflare Adaptive Intelligence and CrowdStrike Falcon IQ。
 - [2026-09-01 Slides](daily/2026/09/2026-09-01/slides-2026-09-01.html) - 今日新聞網頁版投影片。
 

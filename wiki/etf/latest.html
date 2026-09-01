@@ -1,0 +1,401 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ETF 持股與盤中價格追蹤</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.5.0/dist/chart.umd.min.js"></script>
+<style>
+:root {
+  color-scheme: light;
+  --bg: #f6f7fb;
+  --card: #ffffff;
+  --text: #162033;
+  --muted: #65758b;
+  --line: #dde5ef;
+  --blue: #2563eb;
+  --green: #059669;
+  --red: #dc2626;
+  --amber: #b45309;
+  --shadow: 0 16px 45px rgba(15, 23, 42, .08);
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+a { color: var(--blue); text-decoration: none; }
+.hero {
+  padding: 42px 20px 28px;
+  background:
+    radial-gradient(circle at 15% 20%, rgba(37, 99, 235, .32), transparent 35%),
+    linear-gradient(135deg, #111827, #1e3a8a 55%, #0f766e);
+  color: white;
+}
+.wrap { max-width: 1180px; margin: 0 auto; }
+h1 { margin: 0; font-size: clamp(30px, 5vw, 54px); line-height: 1.05; }
+.subtitle { margin-top: 14px; color: rgba(255,255,255,.82); max-width: 860px; line-height: 1.65; }
+.stamp { margin-top: 18px; color: rgba(255,255,255,.68); font-size: 13px; }
+main { padding: 22px 20px 48px; }
+.grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 16px; }
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  padding: 18px;
+  box-shadow: var(--shadow);
+}
+.span-12 { grid-column: span 12; }
+.span-8 { grid-column: span 8; }
+.span-6 { grid-column: span 6; }
+.span-4 { grid-column: span 4; }
+.kpi {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin-bottom: 16px;
+}
+.kpi .card { box-shadow: none; }
+.label { color: var(--muted); font-size: 13px; }
+.value { font-size: 28px; font-weight: 760; margin-top: 6px; }
+.tabs { display: flex; gap: 8px; flex-wrap: wrap; margin: 6px 0 18px; }
+.tab {
+  border: 1px solid var(--line);
+  background: white;
+  color: var(--text);
+  padding: 10px 14px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: 650;
+}
+.tab.active { background: var(--blue); color: white; border-color: var(--blue); }
+.section-title { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 10px; }
+.section-title h2 { margin: 0; font-size: 21px; }
+.small { color: var(--muted); font-size: 13px; line-height: 1.55; }
+table { border-collapse: collapse; width: 100%; font-size: 14px; }
+th, td { padding: 10px 9px; border-bottom: 1px solid var(--line); text-align: right; white-space: nowrap; }
+th:first-child, td:first-child, th:nth-child(2), td:nth-child(2) { text-align: left; }
+th { color: var(--muted); font-weight: 700; background: #f8fafc; position: sticky; top: 0; }
+.table-wrap { overflow: auto; max-height: 430px; border: 1px solid var(--line); border-radius: 14px; }
+.up { color: var(--red); font-weight: 700; }
+.down { color: var(--green); font-weight: 700; }
+.flat { color: var(--muted); }
+.pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 8px;
+  border-radius: 999px;
+  background: #eef2ff;
+  color: #3730a3;
+  font-size: 12px;
+  font-weight: 700;
+}
+.controls { display: grid; grid-template-columns: 1fr auto; gap: 10px; margin-top: 12px; }
+input, textarea, select {
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 10px 12px;
+  font: inherit;
+}
+textarea { min-height: 150px; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12px; }
+button, .button {
+  border: 0;
+  background: var(--blue);
+  color: white;
+  padding: 10px 14px;
+  border-radius: 12px;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.button.secondary { background: #e2e8f0; color: #172033; }
+.chart-box { min-height: 320px; }
+.empty { color: var(--muted); padding: 18px; border: 1px dashed var(--line); border-radius: 14px; background: #f8fafc; }
+@media (max-width: 900px) {
+  .span-8, .span-6, .span-4 { grid-column: span 12; }
+  .kpi { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 560px) {
+  .kpi { grid-template-columns: 1fr; }
+  .controls { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <h1>ETF 持股與盤中價格追蹤</h1>
+    <div class="subtitle">每天讀取追蹤清單，抓取 ETF 盤中價格快照與可取得的官方 PCF / 持股資料，保存成 CSV，再產生這份 HTML 線圖報表。GitHub Pages 負責展示，資料抓取由本機或排程執行。</div>
+    <div class="stamp">產生時間：2026-08-31T16:41:46+08:00</div>
+  </div>
+</header>
+<main class="wrap">
+  <section class="kpi" id="kpi"></section>
+  <section class="card span-12">
+    <div class="section-title">
+      <h2>追蹤清單</h2>
+      <span class="small" id="configInfo"></span>
+    </div>
+    <div id="tabs" class="tabs"></div>
+    <div class="grid">
+      <div class="span-8">
+        <div class="card">
+          <div class="section-title">
+            <h2 id="priceTitle">盤中價格線圖</h2>
+            <span class="small">交易時段 09:00–13:30 可定時抓取；非交易時段通常顯示最後揭示價。</span>
+          </div>
+          <div class="chart-box"><canvas id="priceChart"></canvas></div>
+        </div>
+      </div>
+      <div class="span-4">
+        <div class="card">
+          <div class="section-title"><h2>最新 ETF 摘要</h2></div>
+          <div id="summaryBox" class="small"></div>
+        </div>
+      </div>
+      <div class="span-6">
+        <div class="card">
+          <div class="section-title"><h2>持股張數線圖</h2></div>
+          <select id="holdingSelect"></select>
+          <div class="chart-box"><canvas id="holdingChart"></canvas></div>
+        </div>
+      </div>
+      <div class="span-6">
+        <div class="card">
+          <div class="section-title"><h2>最新持股權重 Top 10</h2></div>
+          <div class="chart-box"><canvas id="weightChart"></canvas></div>
+        </div>
+      </div>
+      <div class="span-12">
+        <div class="card">
+          <div class="section-title">
+            <h2>今日持股變動</h2>
+            <span class="small" id="changeDate"></span>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>股票</th><th>狀態</th><th>目前張數</th><th>變動張數</th><th>目前權重</th><th>權重變動</th></tr></thead>
+              <tbody id="changeTable"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="span-12">
+        <div class="card">
+          <div class="section-title"><h2>管理追蹤 ETF</h2></div>
+          <p class="small">這個頁面是靜態 GitHub Pages，不能安全地直接寫入 GitHub。你可以在下面輸入 ETF 代號產生新版 JSON，然後按「到 GitHub 編輯設定檔」貼上。若之後要做到真正網頁一按就新增，需要加一個安全後端或 GitHub App。</p>
+          <div class="controls">
+            <input id="newEtfCode" placeholder="輸入 ETF 代號，例如 0056、00878">
+            <button id="addEtf">產生設定</button>
+          </div>
+          <textarea id="configJson" spellcheck="false"></textarea>
+          <p><a class="button" id="editConfig" target="_blank" rel="noopener">到 GitHub 編輯設定檔</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<script id="dashboard-data" type="application/json">{"generated_at": "2026-08-31T16:41:46+08:00", "config_updated_at": "2026-08-31", "config_path": "wiki/etf/config/tracked-etfs.json", "config_edit_url": "https://github.com/Lucaskk/daily-news/edit/main/wiki/etf/config/tracked-etfs.json", "etfs": [{"code": "0056", "name": "元大高股息", "market": "twse", "provider": "yuanta", "enabled": true, "track_intraday": true, "track_holdings": true}], "statuses": {"run_at": "2026-08-31T16:40:13+08:00", "prices": {"0056": "OK 2026-08-31 13:30:00 price=54.6"}, "holdings": {"0056": "OK Yuanta PCF 2026-08-31 rows=50"}, "errors": {}, "latest_html": "wiki/etf/latest.html", "report_regenerated_at": "2026-08-31T16:41:46+08:00"}, "intraday": {"0056": [{"timestamp": "2026-08-31 13:30:00", "date": "2026-08-31", "price": 54.6, "volume": 54947.0, "change_pct": 1.3928, "market": "tse", "source": "TWSE MIS"}]}, "holdings": {"0056": {"latest_date": "2026-08-31", "previous_date": "", "latest": [{"stock_code": "1303", "stock_name": "南亞", "lots": 262590.459, "weight": 8.23}, {"stock_code": "2408", "stock_name": "南亞科", "lots": 67353.599, "weight": 4.73}, {"stock_code": "2357", "stock_name": "華碩", "lots": 34867.226, "weight": 4.5}, {"stock_code": "2344", "stock_name": "華邦電", "lots": 171192.412, "weight": 4.04}, {"stock_code": "2890", "stock_name": "永豐金", "lots": 727879.862, "weight": 3.87}, {"stock_code": "2880", "stock_name": "華南金", "lots": 696486.84, "weight": 3.72}, {"stock_code": "2382", "stock_name": "廣達", "lots": 84602.01, "weight": 3.7}, {"stock_code": "2891", "stock_name": "中信金", "lots": 436715.731, "weight": 3.65}, {"stock_code": "3231", "stock_name": "緯創", "lots": 156018.683, "weight": 3.59}, {"stock_code": "2886", "stock_name": "兆豐金", "lots": 541687.686, "weight": 3.4}, {"stock_code": "2603", "stock_name": "長榮", "lots": 97835.546, "weight": 2.95}, {"stock_code": "2301", "stock_name": "光寶科", "lots": 69958.62, "weight": 2.76}, {"stock_code": "2883", "stock_name": "凱基金", "lots": 601541.363, "weight": 2.63}, {"stock_code": "1216", "stock_name": "統一", "lots": 254565.323, "weight": 2.51}, {"stock_code": "2887", "stock_name": "台新新光金", "lots": 498893.08, "weight": 2.48}, {"stock_code": "2885", "stock_name": "元大金", "lots": 291052.921, "weight": 2.46}, {"stock_code": "2884", "stock_name": "玉山金", "lots": 439546.065, "weight": 2.26}, {"stock_code": "2379", "stock_name": "瑞昱", "lots": 23524.77, "weight": 2.19}, {"stock_code": "2317", "stock_name": "鴻海", "lots": 66680.042, "weight": 2.15}, {"stock_code": "3045", "stock_name": "台灣大", "lots": 139806.395, "weight": 2.1}, {"stock_code": "4904", "stock_name": "遠傳", "lots": 159562.433, "weight": 2.08}, {"stock_code": "2303", "stock_name": "聯電", "lots": 118284.716, "weight": 1.97}, {"stock_code": "3034", "stock_name": "聯詠", "lots": 27768.158, "weight": 1.94}, {"stock_code": "3044", "stock_name": "健鼎", "lots": 24830.756, "weight": 1.59}, {"stock_code": "3036", "stock_name": "文曄", "lots": 57755.076, "weight": 1.46}, {"stock_code": "4938", "stock_name": "和碩", "lots": 122325.57, "weight": 1.44}, {"stock_code": "2376", "stock_name": "技嘉", "lots": 30569.445, "weight": 1.41}, {"stock_code": "2356", "stock_name": "英業達", "lots": 157819.039, "weight": 1.36}, {"stock_code": "2618", "stock_name": "長榮航", "lots": 246251.746, "weight": 1.34}, {"stock_code": "3711", "stock_name": "日月光投控", "lots": 16762.341, "weight": 1.26}, {"stock_code": "6239", "stock_name": "力成", "lots": 33714.666, "weight": 1.21}, {"stock_code": "2454", "stock_name": "聯發科", "lots": 2372.255, "weight": 1.2}, {"stock_code": "5876", "stock_name": "上海商銀", "lots": 215839.174, "weight": 1.2}, {"stock_code": "2449", "stock_name": "京元電子", "lots": 32427.745, "weight": 1.08}, {"stock_code": "2324", "stock_name": "仁寶", "lots": 198678.066, "weight": 1.04}, {"stock_code": "3702", "stock_name": "大聯大", "lots": 74711.897, "weight": 0.96}, {"stock_code": "2347", "stock_name": "聯強", "lots": 78531.597, "weight": 0.88}, {"stock_code": "2377", "stock_name": "微星", "lots": 38521.556, "weight": 0.77}, {"stock_code": "6285", "stock_name": "啟碁", "lots": 22500.552, "weight": 0.71}, {"stock_code": "2027", "stock_name": "大成鋼", "lots": 107708.35, "weight": 0.68}, {"stock_code": "2474", "stock_name": "可成", "lots": 25406.762, "weight": 0.68}, {"stock_code": "1102", "stock_name": "亞泥", "lots": 147490.249, "weight": 0.66}, {"stock_code": "2105", "stock_name": "正新", "lots": 147847.899, "weight": 0.59}, {"stock_code": "2353", "stock_name": "宏碁", "lots": 137714.008, "weight": 0.56}, {"stock_code": "1513", "stock_name": "中興電", "lots": 22531.293, "weight": 0.48}, {"stock_code": "2385", "stock_name": "群光", "lots": 32540.658, "weight": 0.45}, {"stock_code": "3023", "stock_name": "信邦", "lots": 10952.985, "weight": 0.44}, {"stock_code": "3005", "stock_name": "神基", "lots": 28399.574, "weight": 0.43}, {"stock_code": "9904", "stock_name": "寶成", "lots": 109174.573, "weight": 0.35}, {"stock_code": "2645", "stock_name": "長榮航太", "lots": 13167.2, "weight": 0.29}], "changes": [{"stock_code": "1102", "stock_name": "亞泥", "status": "新增", "lots": 147490.249, "prev_lots": null, "lots_change": null, "weight": 0.66, "prev_weight": null, "weight_change": null}, {"stock_code": "1216", "stock_name": "統一", "status": "新增", "lots": 254565.323, "prev_lots": null, "lots_change": null, "weight": 2.51, "prev_weight": null, "weight_change": null}, {"stock_code": "1303", "stock_name": "南亞", "status": "新增", "lots": 262590.459, "prev_lots": null, "lots_change": null, "weight": 8.23, "prev_weight": null, "weight_change": null}, {"stock_code": "1513", "stock_name": "中興電", "status": "新增", "lots": 22531.293, "prev_lots": null, "lots_change": null, "weight": 0.48, "prev_weight": null, "weight_change": null}, {"stock_code": "2027", "stock_name": "大成鋼", "status": "新增", "lots": 107708.35, "prev_lots": null, "lots_change": null, "weight": 0.68, "prev_weight": null, "weight_change": null}, {"stock_code": "2105", "stock_name": "正新", "status": "新增", "lots": 147847.899, "prev_lots": null, "lots_change": null, "weight": 0.59, "prev_weight": null, "weight_change": null}, {"stock_code": "2301", "stock_name": "光寶科", "status": "新增", "lots": 69958.62, "prev_lots": null, "lots_change": null, "weight": 2.76, "prev_weight": null, "weight_change": null}, {"stock_code": "2303", "stock_name": "聯電", "status": "新增", "lots": 118284.716, "prev_lots": null, "lots_change": null, "weight": 1.97, "prev_weight": null, "weight_change": null}, {"stock_code": "2317", "stock_name": "鴻海", "status": "新增", "lots": 66680.042, "prev_lots": null, "lots_change": null, "weight": 2.15, "prev_weight": null, "weight_change": null}, {"stock_code": "2324", "stock_name": "仁寶", "status": "新增", "lots": 198678.066, "prev_lots": null, "lots_change": null, "weight": 1.04, "prev_weight": null, "weight_change": null}, {"stock_code": "2344", "stock_name": "華邦電", "status": "新增", "lots": 171192.412, "prev_lots": null, "lots_change": null, "weight": 4.04, "prev_weight": null, "weight_change": null}, {"stock_code": "2347", "stock_name": "聯強", "status": "新增", "lots": 78531.597, "prev_lots": null, "lots_change": null, "weight": 0.88, "prev_weight": null, "weight_change": null}, {"stock_code": "2353", "stock_name": "宏碁", "status": "新增", "lots": 137714.008, "prev_lots": null, "lots_change": null, "weight": 0.56, "prev_weight": null, "weight_change": null}, {"stock_code": "2356", "stock_name": "英業達", "status": "新增", "lots": 157819.039, "prev_lots": null, "lots_change": null, "weight": 1.36, "prev_weight": null, "weight_change": null}, {"stock_code": "2357", "stock_name": "華碩", "status": "新增", "lots": 34867.226, "prev_lots": null, "lots_change": null, "weight": 4.5, "prev_weight": null, "weight_change": null}, {"stock_code": "2376", "stock_name": "技嘉", "status": "新增", "lots": 30569.445, "prev_lots": null, "lots_change": null, "weight": 1.41, "prev_weight": null, "weight_change": null}, {"stock_code": "2377", "stock_name": "微星", "status": "新增", "lots": 38521.556, "prev_lots": null, "lots_change": null, "weight": 0.77, "prev_weight": null, "weight_change": null}, {"stock_code": "2379", "stock_name": "瑞昱", "status": "新增", "lots": 23524.77, "prev_lots": null, "lots_change": null, "weight": 2.19, "prev_weight": null, "weight_change": null}, {"stock_code": "2382", "stock_name": "廣達", "status": "新增", "lots": 84602.01, "prev_lots": null, "lots_change": null, "weight": 3.7, "prev_weight": null, "weight_change": null}, {"stock_code": "2385", "stock_name": "群光", "status": "新增", "lots": 32540.658, "prev_lots": null, "lots_change": null, "weight": 0.45, "prev_weight": null, "weight_change": null}, {"stock_code": "2408", "stock_name": "南亞科", "status": "新增", "lots": 67353.599, "prev_lots": null, "lots_change": null, "weight": 4.73, "prev_weight": null, "weight_change": null}, {"stock_code": "2449", "stock_name": "京元電子", "status": "新增", "lots": 32427.745, "prev_lots": null, "lots_change": null, "weight": 1.08, "prev_weight": null, "weight_change": null}, {"stock_code": "2454", "stock_name": "聯發科", "status": "新增", "lots": 2372.255, "prev_lots": null, "lots_change": null, "weight": 1.2, "prev_weight": null, "weight_change": null}, {"stock_code": "2474", "stock_name": "可成", "status": "新增", "lots": 25406.762, "prev_lots": null, "lots_change": null, "weight": 0.68, "prev_weight": null, "weight_change": null}, {"stock_code": "2603", "stock_name": "長榮", "status": "新增", "lots": 97835.546, "prev_lots": null, "lots_change": null, "weight": 2.95, "prev_weight": null, "weight_change": null}, {"stock_code": "2618", "stock_name": "長榮航", "status": "新增", "lots": 246251.746, "prev_lots": null, "lots_change": null, "weight": 1.34, "prev_weight": null, "weight_change": null}, {"stock_code": "2645", "stock_name": "長榮航太", "status": "新增", "lots": 13167.2, "prev_lots": null, "lots_change": null, "weight": 0.29, "prev_weight": null, "weight_change": null}, {"stock_code": "2880", "stock_name": "華南金", "status": "新增", "lots": 696486.84, "prev_lots": null, "lots_change": null, "weight": 3.72, "prev_weight": null, "weight_change": null}, {"stock_code": "2883", "stock_name": "凱基金", "status": "新增", "lots": 601541.363, "prev_lots": null, "lots_change": null, "weight": 2.63, "prev_weight": null, "weight_change": null}, {"stock_code": "2884", "stock_name": "玉山金", "status": "新增", "lots": 439546.065, "prev_lots": null, "lots_change": null, "weight": 2.26, "prev_weight": null, "weight_change": null}, {"stock_code": "2885", "stock_name": "元大金", "status": "新增", "lots": 291052.921, "prev_lots": null, "lots_change": null, "weight": 2.46, "prev_weight": null, "weight_change": null}, {"stock_code": "2886", "stock_name": "兆豐金", "status": "新增", "lots": 541687.686, "prev_lots": null, "lots_change": null, "weight": 3.4, "prev_weight": null, "weight_change": null}, {"stock_code": "2887", "stock_name": "台新新光金", "status": "新增", "lots": 498893.08, "prev_lots": null, "lots_change": null, "weight": 2.48, "prev_weight": null, "weight_change": null}, {"stock_code": "2890", "stock_name": "永豐金", "status": "新增", "lots": 727879.862, "prev_lots": null, "lots_change": null, "weight": 3.87, "prev_weight": null, "weight_change": null}, {"stock_code": "2891", "stock_name": "中信金", "status": "新增", "lots": 436715.731, "prev_lots": null, "lots_change": null, "weight": 3.65, "prev_weight": null, "weight_change": null}, {"stock_code": "3005", "stock_name": "神基", "status": "新增", "lots": 28399.574, "prev_lots": null, "lots_change": null, "weight": 0.43, "prev_weight": null, "weight_change": null}, {"stock_code": "3023", "stock_name": "信邦", "status": "新增", "lots": 10952.985, "prev_lots": null, "lots_change": null, "weight": 0.44, "prev_weight": null, "weight_change": null}, {"stock_code": "3034", "stock_name": "聯詠", "status": "新增", "lots": 27768.158, "prev_lots": null, "lots_change": null, "weight": 1.94, "prev_weight": null, "weight_change": null}, {"stock_code": "3036", "stock_name": "文曄", "status": "新增", "lots": 57755.076, "prev_lots": null, "lots_change": null, "weight": 1.46, "prev_weight": null, "weight_change": null}, {"stock_code": "3044", "stock_name": "健鼎", "status": "新增", "lots": 24830.756, "prev_lots": null, "lots_change": null, "weight": 1.59, "prev_weight": null, "weight_change": null}, {"stock_code": "3045", "stock_name": "台灣大", "status": "新增", "lots": 139806.395, "prev_lots": null, "lots_change": null, "weight": 2.1, "prev_weight": null, "weight_change": null}, {"stock_code": "3231", "stock_name": "緯創", "status": "新增", "lots": 156018.683, "prev_lots": null, "lots_change": null, "weight": 3.59, "prev_weight": null, "weight_change": null}, {"stock_code": "3702", "stock_name": "大聯大", "status": "新增", "lots": 74711.897, "prev_lots": null, "lots_change": null, "weight": 0.96, "prev_weight": null, "weight_change": null}, {"stock_code": "3711", "stock_name": "日月光投控", "status": "新增", "lots": 16762.341, "prev_lots": null, "lots_change": null, "weight": 1.26, "prev_weight": null, "weight_change": null}, {"stock_code": "4904", "stock_name": "遠傳", "status": "新增", "lots": 159562.433, "prev_lots": null, "lots_change": null, "weight": 2.08, "prev_weight": null, "weight_change": null}, {"stock_code": "4938", "stock_name": "和碩", "status": "新增", "lots": 122325.57, "prev_lots": null, "lots_change": null, "weight": 1.44, "prev_weight": null, "weight_change": null}, {"stock_code": "5876", "stock_name": "上海商銀", "status": "新增", "lots": 215839.174, "prev_lots": null, "lots_change": null, "weight": 1.2, "prev_weight": null, "weight_change": null}, {"stock_code": "6239", "stock_name": "力成", "status": "新增", "lots": 33714.666, "prev_lots": null, "lots_change": null, "weight": 1.21, "prev_weight": null, "weight_change": null}, {"stock_code": "6285", "stock_name": "啟碁", "status": "新增", "lots": 22500.552, "prev_lots": null, "lots_change": null, "weight": 0.71, "prev_weight": null, "weight_change": null}, {"stock_code": "9904", "stock_name": "寶成", "status": "新增", "lots": 109174.573, "prev_lots": null, "lots_change": null, "weight": 0.35, "prev_weight": null, "weight_change": null}], "history": {"1102": [{"date": "2026-08-31", "lots": 147490.249, "weight": 0.66, "stock_name": "亞泥"}], "1216": [{"date": "2026-08-31", "lots": 254565.323, "weight": 2.51, "stock_name": "統一"}], "1303": [{"date": "2026-08-31", "lots": 262590.459, "weight": 8.23, "stock_name": "南亞"}], "1513": [{"date": "2026-08-31", "lots": 22531.293, "weight": 0.48, "stock_name": "中興電"}], "2027": [{"date": "2026-08-31", "lots": 107708.35, "weight": 0.68, "stock_name": "大成鋼"}], "2105": [{"date": "2026-08-31", "lots": 147847.899, "weight": 0.59, "stock_name": "正新"}], "2301": [{"date": "2026-08-31", "lots": 69958.62, "weight": 2.76, "stock_name": "光寶科"}], "2303": [{"date": "2026-08-31", "lots": 118284.716, "weight": 1.97, "stock_name": "聯電"}], "2317": [{"date": "2026-08-31", "lots": 66680.042, "weight": 2.15, "stock_name": "鴻海"}], "2324": [{"date": "2026-08-31", "lots": 198678.066, "weight": 1.04, "stock_name": "仁寶"}], "2344": [{"date": "2026-08-31", "lots": 171192.412, "weight": 4.04, "stock_name": "華邦電"}], "2357": [{"date": "2026-08-31", "lots": 34867.226, "weight": 4.5, "stock_name": "華碩"}], "2382": [{"date": "2026-08-31", "lots": 84602.01, "weight": 3.7, "stock_name": "廣達"}], "2408": [{"date": "2026-08-31", "lots": 67353.599, "weight": 4.73, "stock_name": "南亞科"}], "2880": [{"date": "2026-08-31", "lots": 696486.84, "weight": 3.72, "stock_name": "華南金"}], "2886": [{"date": "2026-08-31", "lots": 541687.686, "weight": 3.4, "stock_name": "兆豐金"}], "2890": [{"date": "2026-08-31", "lots": 727879.862, "weight": 3.87, "stock_name": "永豐金"}], "2891": [{"date": "2026-08-31", "lots": 436715.731, "weight": 3.65, "stock_name": "中信金"}], "3231": [{"date": "2026-08-31", "lots": 156018.683, "weight": 3.59, "stock_name": "緯創"}]}}}, "summaries": {"0056": {"date": "2026-08-31", "etf_code": "0056", "etf_name": "元大高股息", "fund_size": "773996147534", "nav": "54.77", "total_assets": "771832545778", "outstanding_units": "14091034000", "stock_value": "761746857793", "futures_value": "11466663800", "etf_value": "", "bond_value": "", "update_time": "2026-08-31 16:32:19", "source": "Yuanta PCF", "fetched_at": "2026-08-31T16:40:16+08:00"}}}</script>
+<script>
+const dashboard = JSON.parse(document.getElementById('dashboard-data').textContent);
+let activeCode = dashboard.etfs[0]?.code || '';
+let charts = {};
+
+const nf0 = new Intl.NumberFormat('zh-TW', { maximumFractionDigits: 0 });
+const nf2 = new Intl.NumberFormat('zh-TW', { maximumFractionDigits: 2 });
+
+function byId(id) { return document.getElementById(id); }
+function fmt(value, digits = 2) {
+  if (value === null || value === undefined || Number.isNaN(Number(value))) return '—';
+  return Number(value).toLocaleString('zh-TW', { maximumFractionDigits: digits });
+}
+function signed(value, digits = 2) {
+  if (value === null || value === undefined || Number.isNaN(Number(value))) return '—';
+  const n = Number(value);
+  const sign = n > 0 ? '+' : '';
+  return sign + n.toLocaleString('zh-TW', { maximumFractionDigits: digits });
+}
+function cls(value) {
+  const n = Number(value || 0);
+  if (n > 0) return 'up';
+  if (n < 0) return 'down';
+  return 'flat';
+}
+function destroyChart(id) {
+  if (charts[id]) charts[id].destroy();
+  charts[id] = null;
+}
+function renderKpi() {
+  const priceCount = Object.values(dashboard.intraday).reduce((sum, rows) => sum + rows.length, 0);
+  const holdingCount = Object.values(dashboard.holdings).filter(item => item.latest_date).length;
+  byId('kpi').innerHTML = [
+    ['追蹤 ETF', dashboard.etfs.length],
+    ['盤中價資料點', priceCount],
+    ['有持股資料 ETF', holdingCount],
+    ['設定更新', dashboard.config_updated_at || '—'],
+  ].map(([label, value]) => `<div class="card"><div class="label">${label}</div><div class="value">${value}</div></div>`).join('');
+}
+function renderTabs() {
+  byId('tabs').innerHTML = dashboard.etfs.map(etf => (
+    `<button class="tab ${etf.code === activeCode ? 'active' : ''}" data-code="${etf.code}">${etf.code} ${etf.name || ''}</button>`
+  )).join('');
+  document.querySelectorAll('.tab').forEach(tab => tab.addEventListener('click', () => {
+    activeCode = tab.dataset.code;
+    renderAll();
+  }));
+}
+function renderPriceChart() {
+  const etf = dashboard.etfs.find(item => item.code === activeCode) || {};
+  const rows = dashboard.intraday[activeCode] || [];
+  byId('priceTitle').textContent = `${activeCode} ${etf.name || ''} 盤中價格線圖`;
+  destroyChart('priceChart');
+  if (!rows.length) {
+    byId('priceChart').replaceWith(Object.assign(document.createElement('canvas'), { id: 'priceChart' }));
+    return;
+  }
+  charts.priceChart = new Chart(byId('priceChart'), {
+    type: 'line',
+    data: {
+      labels: rows.map(row => row.timestamp.slice(5, 16)),
+      datasets: [{
+        label: '成交價',
+        data: rows.map(row => row.price),
+        borderColor: '#2563eb',
+        backgroundColor: 'rgba(37,99,235,.12)',
+        tension: .25,
+        pointRadius: rows.length > 80 ? 0 : 3,
+        fill: true,
+      }]
+    },
+    options: { responsive: true, maintainAspectRatio: false, scales: { y: { ticks: { callback: v => fmt(v, 2) } } } }
+  });
+}
+function renderSummary() {
+  const etf = dashboard.etfs.find(item => item.code === activeCode) || {};
+  const summary = dashboard.summaries[activeCode] || {};
+  const prices = dashboard.intraday[activeCode] || [];
+  const lastPrice = prices[prices.length - 1] || {};
+  const status = dashboard.statuses?.holdings?.[activeCode] || dashboard.statuses?.prices?.[activeCode] || '';
+  byId('summaryBox').innerHTML = `
+    <p><span class="pill">${activeCode}</span> ${etf.name || ''}</p>
+    <p>最新成交價：<strong>${fmt(lastPrice.price, 2)}</strong>，漲跌幅：<span class="${cls(lastPrice.change_pct)}">${signed(lastPrice.change_pct, 2)}%</span></p>
+    <p>價格時間：${lastPrice.timestamp || '—'}</p>
+    <p>持股資料日：${dashboard.holdings[activeCode]?.latest_date || '—'}</p>
+    <p>淨值 NAV：${summary.nav || '—'}；基金規模：${summary.fund_size ? nf0.format(Number(summary.fund_size) / 100000000) + ' 億' : '—'}</p>
+    <p>資料來源：${summary.source || lastPrice.source || '—'}</p>
+    ${status ? `<p>狀態：${status}</p>` : ''}
+  `;
+}
+function renderHoldingSelect() {
+  const holding = dashboard.holdings[activeCode] || {};
+  const history = holding.history || {};
+  const options = Object.entries(history).map(([code, rows]) => {
+    const name = rows[rows.length - 1]?.stock_name || code;
+    return `<option value="${code}">${code} ${name}</option>`;
+  }).join('');
+  byId('holdingSelect').innerHTML = options || '<option>無持股歷史資料</option>';
+  byId('holdingSelect').onchange = renderHoldingChart;
+}
+function renderHoldingChart() {
+  const holding = dashboard.holdings[activeCode] || {};
+  const history = holding.history || {};
+  const code = byId('holdingSelect').value;
+  const rows = history[code] || [];
+  destroyChart('holdingChart');
+  charts.holdingChart = new Chart(byId('holdingChart'), {
+    type: 'line',
+    data: {
+      labels: rows.map(row => row.date),
+      datasets: [{
+        label: `${code} 持股張數`,
+        data: rows.map(row => row.lots),
+        borderColor: '#059669',
+        backgroundColor: 'rgba(5,150,105,.12)',
+        tension: .25,
+        pointRadius: 4,
+        fill: true,
+      }]
+    },
+    options: { responsive: true, maintainAspectRatio: false }
+  });
+}
+function renderWeightChart() {
+  const rows = (dashboard.holdings[activeCode]?.latest || []).slice(0, 10);
+  destroyChart('weightChart');
+  charts.weightChart = new Chart(byId('weightChart'), {
+    type: 'bar',
+    data: {
+      labels: rows.map(row => `${row.stock_code} ${row.stock_name}`),
+      datasets: [{
+        label: '權重 %',
+        data: rows.map(row => row.weight),
+        backgroundColor: '#2563eb',
+      }]
+    },
+    options: { responsive: true, maintainAspectRatio: false, indexAxis: 'y' }
+  });
+}
+function renderChangeTable() {
+  const holding = dashboard.holdings[activeCode] || {};
+  const changes = holding.changes || [];
+  byId('changeDate').textContent = holding.previous_date ? `${holding.previous_date} → ${holding.latest_date}` : `${holding.latest_date || '尚無資料'}`;
+  byId('changeTable').innerHTML = changes.slice(0, 80).map(row => `
+    <tr>
+      <td>${row.stock_code} ${row.stock_name}</td>
+      <td><span class="pill">${row.status}</span></td>
+      <td>${fmt(row.lots, 3)}</td>
+      <td class="${cls(row.lots_change)}">${signed(row.lots_change, 3)}</td>
+      <td>${fmt(row.weight, 2)}%</td>
+      <td class="${cls(row.weight_change)}">${signed(row.weight_change, 2)}%</td>
+    </tr>
+  `).join('') || '<tr><td colspan="6" class="flat">尚無可比較的持股變動；第一次抓取後需要等下一個交易日才會有變動。</td></tr>';
+}
+function renderConfigHelper() {
+  byId('configInfo').textContent = `設定檔：${dashboard.config_path}`;
+  byId('editConfig').href = dashboard.config_edit_url;
+  const config = {
+    updated_at: new Date().toISOString().slice(0, 10),
+    etfs: dashboard.etfs.map(etf => ({
+      code: etf.code,
+      name: etf.name || '',
+      market: etf.market || 'twse',
+      provider: etf.provider || 'auto',
+      enabled: etf.enabled !== false,
+      track_intraday: etf.track_intraday !== false,
+      track_holdings: etf.track_holdings !== false,
+    }))
+  };
+  const render = () => byId('configJson').value = JSON.stringify(config, null, 2);
+  render();
+  byId('addEtf').onclick = () => {
+    const raw = byId('newEtfCode').value.toUpperCase().replace(/[^0-9A-Z]/g, '');
+    const match = raw.match(/^(\d{1,6})([A-Z]?)$/);
+    if (!match) return alert('請輸入有效 ETF 代號');
+    const code = match[1].padStart(4, '0') + match[2];
+    if (!config.etfs.some(item => item.code === code)) {
+      config.etfs.push({ code, name: '', market: 'twse', provider: 'auto', enabled: true, track_intraday: true, track_holdings: true });
+      render();
+    }
+  };
+}
+function renderAll() {
+  renderTabs();
+  renderPriceChart();
+  renderSummary();
+  renderHoldingSelect();
+  renderHoldingChart();
+  renderWeightChart();
+  renderChangeTable();
+}
+renderKpi();
+renderConfigHelper();
+renderAll();
+</script>
+</body>
+</html>

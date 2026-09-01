@@ -1,0 +1,2 @@
+timestamp,date,etf_code,etf_name,market,price,open,high,low,previous_close,change,change_pct,volume,latest_volume,trade_time,source,fetched_at
+2026-08-31 13:30:00,2026-08-31,0056,元大高股息,tse,54.6,53.5,54.65,53.5,53.85,0.75,1.3928,54947,1158,13:30:00,TWSE MIS,2026-08-31T16:40:15+08:00

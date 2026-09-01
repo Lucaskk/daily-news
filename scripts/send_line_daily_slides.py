@@ -9,6 +9,7 @@ Required environment variables:
 Optional:
 - DAILY_SLIDES_PATH, defaults to /wiki/daily/latest-slides.html
 - DAILY_REPORT_PATH, used to derive date and subject for the LINE message
+- ETF_REPORT_PATH, defaults to /wiki/etf/latest.html when the file exists
 """
 
 from __future__ import annotations
@@ -108,6 +109,18 @@ def resolve_public_slides_path(slides_path: str) -> str:
     return resolved + (separator + query if separator else "")
 
 
+def resolve_optional_etf_url(base_url: str) -> str | None:
+    etf_path = os.environ.get("ETF_REPORT_PATH", "/wiki/etf/latest.html").strip()
+    if not etf_path:
+        return None
+    if etf_path.startswith(("https://", "http://")):
+        return etf_path
+    local_path = Path(etf_path.lstrip("/"))
+    if not local_path.exists():
+        return None
+    return join_url(os.environ.get("PUBLIC_ETF_BASE_URL", base_url), etf_path)
+
+
 def extract_subject(report_path: Path | None) -> tuple[str, str]:
     if not report_path or not report_path.exists():
         return "今日 Daily News", "每日全球與科技 AI 新聞投影片"
@@ -146,8 +159,10 @@ def main() -> int:
         if public_slides_path.startswith(("https://", "http://"))
         else join_url(base_url, public_slides_path)
     )
+    etf_url = resolve_optional_etf_url(base_url)
     report_path = infer_report_path(slides_path)
     date, subject = extract_subject(report_path)
+    etf_line = f"\nETF 持股/盤中股價：{etf_url}" if etf_url else ""
 
     payload = {
         "to": to_id,
@@ -158,7 +173,8 @@ def main() -> int:
                     f"Daily News 投影片已完成\n"
                     f"日期：{date}\n"
                     f"主旨：{subject}\n"
-                    f"連結：{slides_url}"
+                    f"新聞連結：{slides_url}"
+                    f"{etf_line}"
                 ),
             }
         ],

@@ -1,0 +1,15 @@
+{
+  "updated_at": "2026-08-31",
+  "notes": "This file controls which ETFs are tracked by scripts/update_etf_monitor.py. GitHub Pages is static, so the public HTML page can display this list but cannot safely write back to it without a backend.",
+  "etfs": [
+    {
+      "code": "0056",
+      "name": "元大高股息",
+      "market": "twse",
+      "provider": "yuanta",
+      "enabled": true,
+      "track_intraday": true,
+      "track_holdings": true
+    }
+  ]
+}
