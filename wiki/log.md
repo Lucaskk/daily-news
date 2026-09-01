@@ -1,5 +1,14 @@
 # Knowledge Base Log
 
+## [2026-09-01] ingest | Daily global and tech AI news
+
+- Created `wiki/daily/2026/09/2026-09-01/daily-news-2026-09-01.md` with exactly 10 global items and eight technology / AI model, device, infrastructure, data-control or cybersecurity items.
+- Recorded the exact Asia/Taipei 24-hour window, per-item event or publication-time basis, material continuations, prior capture dates, duplicate checks, conflict notes and exclusion rationale in `source-notes-2026-09-01.md`.
+- Created `slides-2026-09-01.html` as a standalone HTML deck with remote themed background images, browser / keyboard / touch navigation, expandable cards and per-card complete source URLs.
+- Updated `wiki/daily/latest-slides.html`, `wiki/index.md`, `wiki/overview.md`, `.nojekyll`, and the root Pages entry for the 2026-09-01 daily-news package.
+- Local scoped validation passed: global item count, tech item count, deck source blocks, slide background binding, rank order and extracted JavaScript syntax all checked cleanly.
+- Publishing, GitHub Pages verification, LINE watchdog delivery and localhost preview status will be updated after execution.
+
 ## [2026-08-31] ingest | Daily global and tech AI news
 
 - Created `wiki/daily/2026/08/2026-08-31/daily-news-2026-08-31.md` with exactly 10 global items and five technology / AI product, infrastructure, platform or accounting items.

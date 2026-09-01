@@ -2,7 +2,7 @@
 title: "Overview"
 type: overview
 created: 2026-05-24
-updated: 2026-08-31
+updated: 2026-09-01
 status: seed
 tags: [overview]
 sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
@@ -19,6 +19,12 @@ sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
 - 抽出持續出現的人物、組織、事件、政策、技術與市場概念。
 - 維護跨來源的矛盾、時間線、趨勢與待查問題。
 - 將重要查詢結果回寫成可累積的 wiki 頁面。
+
+## 2026-09-01 Daily News Synthesis
+
+- 全球安全主軸轉為「危機協調制度化」：Iran-UAE drone spillover、Saudi-Turkey-Pakistan defence secretariat and Bishkek SCO summit 顯示，各國正把即時軍事壓力轉成常設秘書處、多邊峰會與新的區域平衡。
+- 災害與公共治理的焦點落在第二波系統失效：Nepal hydropower tunnels and Grand Canyon Transcanyon Waterline 把救援、電力、供水與長期維修能力放在同一張風險表；U.S. ballroom order、Army leadership change、UN reparations guidance and FSB AI warning 則推進司法、軍政與跨境治理程序。
+- 科技／AI 今日聚焦「主權算力與控制面」：HUMAIN M3、Horizon Ultra、AMD／Cisco production compute and AWS Saudi region 回答模型在哪裡跑；Tanzu、Google Search controls、Cloudflare Adaptive Intelligence and CrowdStrike Falcon IQ 回答誰能授權、如何稽核與如何自動防禦。
 
 ## 2026-08-31 Daily News Synthesis
 
