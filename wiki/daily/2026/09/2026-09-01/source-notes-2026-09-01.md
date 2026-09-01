@@ -92,10 +92,15 @@ tags: [daily-news, source-notes, provenance]
 
 ## Publishing and Delivery Record
 
-- Local structural validation, publishing, GitHub Pages verification, LINE watchdog and localhost preview status are appended after execution.
+- Local structural validation passed: exactly 10 global items, eight technology / AI items, global DOM ranks 1-10, 18 news timestamps, 14 slide backgrounds, 37 expandable cards and 37 per-card source blocks; extracted JavaScript compiled successfully.
+- Published to `Lucaskk/daily-news` `main` through a clean local clone at commit `16d50fd`.
+- GitHub Pages verification passed after deployment delay: the dated deck, latest redirect, daily report, source notes, root index and public log all returned HTTP 200 and exposed the 2026-09-01 version markers.
+- LINE delivery used `/Users/lucas/.codex/automations/ai/line_watchdog.py` as the only delivery path. The sandboxed run could not write its private dedupe state; the authorized rerun exited 0 at 2026-09-01T09:30:19+08:00 and emitted `LINE daily slides already sent for 2026-09-01`, which satisfies the strict `already sent` success rule.
+- Localhost preview succeeded at `http://localhost:4176/wiki/daily/latest-slides.html?v=20260901-080106-ai-news-r1`; ports 4173-4175 were already in use.
 
 ## Public Links Planned
 
 - Dated deck: https://lucaskk.github.io/daily-news/wiki/daily/2026/09/2026-09-01/slides-2026-09-01.html?v=20260901-080106-ai-news-r1
 - Latest redirect: https://lucaskk.github.io/daily-news/wiki/daily/latest-slides.html?v=20260901-080106-ai-news-r1
 - Local preview target: http://localhost:4173/wiki/daily/latest-slides.html?v=20260901-080106-ai-news-r1
+- Verified local preview: http://localhost:4176/wiki/daily/latest-slides.html?v=20260901-080106-ai-news-r1

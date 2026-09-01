@@ -7,7 +7,10 @@
 - Created `slides-2026-09-01.html` as a standalone HTML deck with remote themed background images, browser / keyboard / touch navigation, expandable cards and per-card complete source URLs.
 - Updated `wiki/daily/latest-slides.html`, `wiki/index.md`, `wiki/overview.md`, `.nojekyll`, and the root Pages entry for the 2026-09-01 daily-news package.
 - Local scoped validation passed: global item count, tech item count, deck source blocks, slide background binding, rank order and extracted JavaScript syntax all checked cleanly.
-- Publishing, GitHub Pages verification, LINE watchdog delivery and localhost preview status will be updated after execution.
+- Published through a clean local clone: commit `16d50fd`.
+- GitHub Pages verification passed after deployment delay for the dated deck, latest redirect, daily report, source notes, root index and public log.
+- LINE watchdog ran as the only LINE delivery path; the sandboxed run failed writing its private dedupe state, while the authorized rerun exited 0 and emitted `LINE daily slides already sent for 2026-09-01`, so delivery is successful under the strict `already sent` rule. Persistent approval for this exact watchdog command is now saved.
+- Localhost preview verified at `http://localhost:4176/wiki/daily/latest-slides.html?v=20260901-080106-ai-news-r1`; ports 4173-4175 were already in use.
 
 ## [2026-08-31] ingest | Daily global and tech AI news
 
