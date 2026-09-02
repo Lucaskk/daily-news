@@ -2,7 +2,7 @@
 title: "Overview"
 type: overview
 created: 2026-05-24
-updated: 2026-09-01
+updated: 2026-09-02
 status: seed
 tags: [overview]
 sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
@@ -19,6 +19,12 @@ sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
 - 抽出持續出現的人物、組織、事件、政策、技術與市場概念。
 - 維護跨來源的矛盾、時間線、趨勢與待查問題。
 - 將重要查詢結果回寫成可累積的 wiki 頁面。
+
+## 2026-09-02 Daily News Synthesis
+
+- 全球安全主軸轉為「攻擊、歸因與復原的重複成本」：美伊第二波互擊、Kyiv 逾 12 小時空襲、Nepal／Tibet 死亡破千與 Germany 對 Leipzig 事件的正式 Russia attribution，分別把防空、救援、外交報復與關鍵物流保護變成可持續追蹤的執行議題。
+- 經濟、外交與氣候責任集中在制度文字的下一步：G20 對低價出口的分歧、Pacific Islands Forum 的 Taiwan 出席壓力、New York climate superfund 判決、Cuba 觀光崩跌、Turkey-Russia 核電意向與 Canada 補選都需後續以公報、上訴、融資、清單和實際投票資料驗證。
+- 科技／AI 今日聚焦「高能力產品的權限與部署條件」：Claude Fable／Mythos 5.1、ChatGPT healthcare／Epic、OpenAI Astra 與 CrowdStrike SafeMind 讓資格、敏感資料、模型隔離、評測與人類核准成為產品本身；Waymo、Qualcomm、Reducto 與 LogicGate 將此邏輯延伸到道路、edge device、文件與 GRC 流程。
 
 ## 2026-09-01 Daily News Synthesis
 

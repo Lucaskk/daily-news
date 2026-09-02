@@ -1,5 +1,13 @@
 # Knowledge Base Log
 
+## [2026-09-02] ingest | Daily global and tech AI news
+
+- Created `wiki/daily/2026/09/2026-09-02/daily-news-2026-09-02.md` with exactly 10 global items and eight technology / AI product, model, healthcare, cybersecurity, mobility, edge-device, document or governance items.
+- Recorded the exact Asia/Taipei 24-hour window, per-item event or publication-time basis, material continuations, prior capture dates, duplicate checks, exclusions and conflict notes in `source-notes-2026-09-02.md`.
+- Created `slides-2026-09-02.html` as a standalone HTML deck with remote theme backgrounds, browser / keyboard / touch navigation, expandable cards and per-card complete source URLs.
+- Updated `wiki/daily/latest-slides.html`, `wiki/index.md`, `wiki/overview.md` and the root Pages entry for the 2026-09-02 package.
+- Validation, GitHub publication, Pages verification, LINE watchdog delivery and localhost preview status will be appended after execution.
+
 ## [2026-09-01] ingest | Daily global and tech AI news
 
 - Created `wiki/daily/2026/09/2026-09-01/daily-news-2026-09-01.md` with exactly 10 global items and eight technology / AI model, device, infrastructure, data-control or cybersecurity items.

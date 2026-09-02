@@ -2,7 +2,7 @@
 title: "Knowledge Base Index"
 type: overview
 created: 2026-05-24
-updated: 2026-09-01
+updated: 2026-09-02
 status: seed
 tags: [index]
 sources: []
@@ -25,6 +25,9 @@ sources: []
 每日新聞報告會放在 `wiki/daily/YYYY/MM/YYYY-MM-DD/`。
 
 - [每日全球與科技 AI 新聞產製規則](daily/README.md) - 包含研究截點前 24 小時限制、跨日去重、重大續報判定、來源紀錄與發布驗證規則。
+
+- [2026-09-02 Daily News](daily/2026/09/2026-09-02/daily-news-2026-09-02.md) - 今日主軸是「安全風險進入可重複攻防循環，AI 產品把能力與存取條件綁得更緊」：美伊第二波互擊、Kyiv 長時空襲、Nepal／Tibet 死亡破千、G20 貿易失衡表述、PIF Taiwan 壓力、Germany 正式歸因 Leipzig 無人機、New York climate superfund 判決、Cuba 觀光數據、Turkey 核電與 Canada 補選。科技／AI 聚焦 Claude Fable／Mythos 5.1、ChatGPT healthcare／Epic、OpenAI Astra、CrowdStrike SafeMind、Waymo 三城、Qualcomm Dragonwing、Reducto r-1 和 LogicGate GRC Agents。
+- [2026-09-02 Slides](daily/2026/09/2026-09-02/slides-2026-09-02.html) - 今日新聞網頁版投影片。
 
 ## ETF Monitor
 
