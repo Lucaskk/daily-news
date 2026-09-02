@@ -4,15 +4,15 @@
     "name": "欣興",
     "market": "TWSE",
     "market_label": "上市",
-    "date": "2026-09-01",
-    "close": 971.0,
-    "change": -28.0,
-    "open": 921.0,
-    "high": 994.0,
-    "low": 911.0,
-    "volume": 94479548.0,
+    "date": "2026-09-02",
+    "close": 963.5,
+    "change": -7.5,
+    "open": 955.0,
+    "high": 988.0,
+    "low": 948.0,
+    "volume": 22368000.0,
     "transactions": 178512.0,
-    "source_url": "https://openapi.twse.com.tw/v1/exchangeReport/STOCK_DAY_ALL",
+    "source_url": "https://mis.twse.com.tw/stock/",
     "daily_quote": {
       "date": "2026-09-01",
       "close": 971.0,
@@ -23,24 +23,20 @@
       "volume": 94479548.0,
       "source_url": "https://openapi.twse.com.tw/v1/exchangeReport/STOCK_DAY_ALL"
     },
-    "quote_kind": "最新收盤價",
-    "quote_time": "2026-09-01",
-    "previous_close": 999.0,
-    "change_percent": -2.8028028028028027,
-    "is_intraday": false,
-    "quote_warning": "TWSE MIS 暫無可用盤中成交資料，已改用每日行情。"
+    "quote_kind": "盤中參考價（買賣中間）",
+    "quote_time": "2026-09-02 13:16:36",
+    "previous_close": 971.0,
+    "change_percent": -0.772399588053553,
+    "is_intraday": true,
+    "volume_lots": 22368.0,
+    "best_bid": 963.0,
+    "best_ask": 964.0,
+    "price_basis": "bid_ask_midpoint",
+    "quote_source": "TWSE MIS 盤中資訊",
+    "quote_api_url": "https://mis.twse.com.tw/stock/api/getStockInfo.jsp?ex_ch=tse_3037.tw&json=1&delay=0"
   },
   "market_data": {
     "bars": [
-      {
-        "time": "2024-05-15",
-        "open": 184.0,
-        "high": 185.0,
-        "low": 182.0,
-        "close": 182.5,
-        "volume": 8164974.0,
-        "turnover": 5452.0
-      },
       {
         "time": "2024-05-16",
         "open": 186.0,
@@ -5070,15 +5066,24 @@
         "low": 911.0,
         "close": 971.0,
         "volume": 94479548.0,
-        "turnover": 178512.0,
-        "intraday": false
+        "turnover": 178512.0
+      },
+      {
+        "time": "2026-09-02",
+        "open": 955.0,
+        "high": 988.0,
+        "low": 948.0,
+        "close": 963.5,
+        "volume": 22368000.0,
+        "turnover": null,
+        "intraday": true
       }
     ],
     "source": "FinMind 日成交資料、TWSE MIS 盤中資訊",
     "history_url": "https://api.finmindtrade.com/api/v4/data?dataset=TaiwanStockPrice&data_id=3037&start_date=2024-03-16",
-    "intraday_url": "https://openapi.twse.com.tw/v1/exchangeReport/STOCK_DAY_ALL",
-    "intraday_api_url": "",
-    "updated_at": "2026-09-01"
+    "intraday_url": "https://mis.twse.com.tw/stock/",
+    "intraday_api_url": "https://mis.twse.com.tw/stock/api/getStockInfo.jsp?ex_ch=tse_3037.tw&json=1&delay=0",
+    "updated_at": "2026-09-02 13:16:36"
   },
   "years": [
     "2025",
@@ -5315,7 +5320,7 @@
     ]
   },
   "metadata": {
-    "fetched_at": "2026-09-02T13:11:45+08:00",
+    "fetched_at": "2026-09-02T13:17:26+08:00",
     "source": "FinMind API, TWSE MIS, TWSE OpenAPI, TPEx OpenAPI, 公開資訊觀測站",
     "source_urls": {
       "finmind_fundamental": "https://finmind.github.io/tutor/TaiwanMarket/Fundamental/",
@@ -5326,8 +5331,8 @@
       "twse_balance_sheet": "https://openapi.twse.com.tw/v1/opendata/t187ap07_L_ci",
       "tpex_income_statement": "https://www.tpex.org.tw/openapi/v1/mopsfin_t187ap06_O_ci",
       "tpex_balance_sheet": "https://www.tpex.org.tw/openapi/v1/mopsfin_t187ap07_O_ci",
-      "quote": "https://openapi.twse.com.tw/v1/exchangeReport/STOCK_DAY_ALL",
-      "quote_api": "",
+      "quote": "https://mis.twse.com.tw/stock/",
+      "quote_api": "https://mis.twse.com.tw/stock/api/getStockInfo.jsp?ex_ch=tse_3037.tw&json=1&delay=0",
       "price_history": "https://api.finmindtrade.com/api/v4/data?dataset=TaiwanStockPrice&data_id=3037&start_date=2024-03-16",
       "mops_listed": "https://mops.twse.com.tw/mops/web/t05st01?step=1&co_id=3037&TYPEK=sii",
       "mops_otc": "https://mops.twse.com.tw/mops/web/t05st01?step=1&co_id=3037&TYPEK=otc"
@@ -5467,7 +5472,7 @@
   },
   "insights": {
     "snapshot": [
-      "最新收盤價為 971.00 元，時間 2026-09-01，較昨收 -28.00 元（-2.80%）。",
+      "盤中參考價（買賣中間）為 963.50 元，時間 2026-09-02 13:16:36，較昨收 -7.50 元（-0.77%）。",
       "最近財報年度 2025 年營收 1,312 億元，較 2024 年 +13.8%。",
       "2025 年EPS 為 4.38 元，ROE 為 6.6%。"
     ],
