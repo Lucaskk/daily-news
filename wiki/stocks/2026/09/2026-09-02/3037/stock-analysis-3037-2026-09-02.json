@@ -4,14 +4,14 @@
     "name": "欣興",
     "market": "TWSE",
     "market_label": "上市",
-    "date": "2026-08-31",
-    "close": 999.0,
-    "change": -111.0,
-    "open": 999.0,
-    "high": 999.0,
-    "low": 999.0,
-    "volume": 5892091.0,
-    "transactions": 15866.0,
+    "date": "2026-09-01",
+    "close": 971.0,
+    "change": -28.0,
+    "open": 921.0,
+    "high": 994.0,
+    "low": 911.0,
+    "volume": 94479548.0,
+    "transactions": 178512.0,
     "source_url": "https://openapi.twse.com.tw/v1/exchangeReport/STOCK_DAY_ALL"
   },
   "years": [
@@ -249,7 +249,7 @@
     ]
   },
   "metadata": {
-    "fetched_at": "2026-09-02T00:12:28+08:00",
+    "fetched_at": "2026-09-02T12:34:05+08:00",
     "source": "FinMind API, TWSE OpenAPI, TPEx OpenAPI, 公開資訊觀測站",
     "source_urls": {
       "finmind_fundamental": "https://finmind.github.io/tutor/TaiwanMarket/Fundamental/",
@@ -399,7 +399,7 @@
   },
   "insights": {
     "snapshot": [
-      "最新公開報價日期為 2026-08-31，收盤價 999.00 元，單日變動 -111.00 元。",
+      "最新公開報價日期為 2026-09-01，收盤價 971.00 元，單日變動 -28.00 元。",
       "最近財報年度 2025 年營收 1,312 億元，較 2024 年 +13.8%。",
       "2025 年EPS 為 4.38 元，ROE 為 6.6%。"
     ],
