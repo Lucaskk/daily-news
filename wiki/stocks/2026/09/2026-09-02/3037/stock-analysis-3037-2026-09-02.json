@@ -5,12 +5,12 @@
     "market": "TWSE",
     "market_label": "上市",
     "date": "2026-09-02",
-    "close": 963.5,
-    "change": -7.5,
+    "close": 970.0,
+    "change": -1.0,
     "open": 955.0,
     "high": 988.0,
     "low": 948.0,
-    "volume": 22368000.0,
+    "volume": 23252000.0,
     "transactions": 178512.0,
     "source_url": "https://mis.twse.com.tw/stock/",
     "daily_quote": {
@@ -23,15 +23,15 @@
       "volume": 94479548.0,
       "source_url": "https://openapi.twse.com.tw/v1/exchangeReport/STOCK_DAY_ALL"
     },
-    "quote_kind": "盤中參考價（買賣中間）",
-    "quote_time": "2026-09-02 13:16:36",
+    "quote_kind": "盤中最新成交價",
+    "quote_time": "2026-09-02 13:28:11",
     "previous_close": 971.0,
-    "change_percent": -0.772399588053553,
+    "change_percent": -0.10298661174047373,
     "is_intraday": true,
-    "volume_lots": 22368.0,
-    "best_bid": 963.0,
-    "best_ask": 964.0,
-    "price_basis": "bid_ask_midpoint",
+    "volume_lots": 23252.0,
+    "best_bid": 968.0,
+    "best_ask": 969.0,
+    "price_basis": "latest_trade",
     "quote_source": "TWSE MIS 盤中資訊",
     "quote_api_url": "https://mis.twse.com.tw/stock/api/getStockInfo.jsp?ex_ch=tse_3037.tw&json=1&delay=0"
   },
@@ -5073,8 +5073,8 @@
         "open": 955.0,
         "high": 988.0,
         "low": 948.0,
-        "close": 963.5,
-        "volume": 22368000.0,
+        "close": 970.0,
+        "volume": 23252000.0,
         "turnover": null,
         "intraday": true
       }
@@ -5083,7 +5083,7 @@
     "history_url": "https://api.finmindtrade.com/api/v4/data?dataset=TaiwanStockPrice&data_id=3037&start_date=2024-03-16",
     "intraday_url": "https://mis.twse.com.tw/stock/",
     "intraday_api_url": "https://mis.twse.com.tw/stock/api/getStockInfo.jsp?ex_ch=tse_3037.tw&json=1&delay=0",
-    "updated_at": "2026-09-02 13:16:36"
+    "updated_at": "2026-09-02 13:28:11"
   },
   "years": [
     "2025",
@@ -5320,7 +5320,7 @@
     ]
   },
   "metadata": {
-    "fetched_at": "2026-09-02T13:17:26+08:00",
+    "fetched_at": "2026-09-02T13:28:21+08:00",
     "source": "FinMind API, TWSE MIS, TWSE OpenAPI, TPEx OpenAPI, 公開資訊觀測站",
     "source_urls": {
       "finmind_fundamental": "https://finmind.github.io/tutor/TaiwanMarket/Fundamental/",
@@ -5472,7 +5472,7 @@
   },
   "insights": {
     "snapshot": [
-      "盤中參考價（買賣中間）為 963.50 元，時間 2026-09-02 13:16:36，較昨收 -7.50 元（-0.77%）。",
+      "盤中最新成交價為 970.00 元，時間 2026-09-02 13:28:11，較昨收 -1.00 元（-0.10%）。",
       "最近財報年度 2025 年營收 1,312 億元，較 2024 年 +13.8%。",
       "2025 年EPS 為 4.38 元，ROE 為 6.6%。"
     ],
