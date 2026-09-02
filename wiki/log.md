@@ -6,6 +6,8 @@
 - The model must not load the complete historical ledger or all prior reports. Only when the historical search has no match may it read the compact recent-seven-day table in full.
 - Reduced each ledger row to one product change with exactly eight fields: company, product, update content, publication time, capture date, status, source URLs and comparison key. Multiple reports for the same change remain in one row.
 - Added `wiki/daily/product-news-recent-7d.md` as the only product table intended for full-file fallback reading.
+- Validation produced 538 historical rows and 37 recent-seven-day rows; the narrow OpenAI/Astra example returned one ledger row before targeted historical context matches.
+- Published commit `6488e66`; GitHub Pages verified the rules, query-only historical ledger and compact seven-day ledger. LINE watchdog exited 0 with `already sent` at `2026-09-02T12:21:49+08:00`.
 
 ## [2026-09-02] config | Product-news window and deduplication ledger
 
