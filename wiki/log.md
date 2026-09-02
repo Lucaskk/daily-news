@@ -6,7 +6,11 @@
 - Recorded the exact Asia/Taipei 24-hour window, per-item event or publication-time basis, material continuations, prior capture dates, duplicate checks, exclusions and conflict notes in `source-notes-2026-09-02.md`.
 - Created `slides-2026-09-02.html` as a standalone HTML deck with remote theme backgrounds, browser / keyboard / touch navigation, expandable cards and per-card complete source URLs.
 - Updated `wiki/daily/latest-slides.html`, `wiki/index.md`, `wiki/overview.md` and the root Pages entry for the 2026-09-02 package.
-- Validation, GitHub publication, Pages verification, LINE watchdog delivery and localhost preview status will be appended after execution.
+- Local scoped validation passed: global ranks 1-10, eight tech items, 18 news timestamps, 38 expandable cards with per-card source blocks, 10 background-bound slides, no prohibited visual filter tokens and valid extracted JavaScript.
+- Published through a clean local clone: content commit `42cc971`.
+- GitHub Pages verification passed for the dated deck, latest redirect, daily report, source notes, root index and public log.
+- LINE watchdog ran as the only LINE delivery path and exited 0 with `Sent LINE message` at `2026-09-02T11:29:59+08:00`.
+- Localhost preview verified at `http://localhost:4176/wiki/daily/latest-slides.html?v=20260902-080111-ai-news-r1`; ports 4173-4175 were already occupied.
 
 ## [2026-09-01] ingest | Daily global and tech AI news
 

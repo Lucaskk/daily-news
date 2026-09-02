@@ -72,4 +72,7 @@ tags: [daily-news, provenance, deduplication]
 
 - 產製版本：20260902-080111-ai-news-r1。
 - 預定公開 dated deck：https://lucaskk.github.io/daily-news/wiki/daily/2026/09/2026-09-02/slides-2026-09-02.html?v=20260902-080111-ai-news-r1
-- 發布、GitHub Pages、LINE watchdog 與 localhost 預覽結果會在執行完成後補入 wiki/log.md 與 automation memory。
+- 已由乾淨 `main` clone 發布：commit `42cc971`。
+- GitHub Pages 已驗證 dated deck、latest redirect、daily report、source notes、`wiki/index.md` 與 `wiki/log.md` 均為 HTTP 200。
+- LINE watchdog 僅執行 `/Users/lucas/.codex/automations/ai/line_watchdog.py`，於 2026-09-02T11:29:59+08:00 回傳 `Sent LINE message`，依嚴格規則為成功。
+- Localhost 最後預覽已驗證：`http://localhost:4176/wiki/daily/latest-slides.html?v=20260902-080111-ai-news-r1`；4173–4175 當時已有其他 listener。
