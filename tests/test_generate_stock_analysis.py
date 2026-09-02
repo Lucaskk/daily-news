@@ -167,6 +167,35 @@ class MarketDataTests(unittest.TestCase):
         self.assertAlmostEqual(quote["change_percent"], -100 / 971)
         self.assertEqual(quote["volume"], 20_494_000)
 
+    def test_uses_labeled_bid_ask_midpoint_when_trade_price_is_missing(self) -> None:
+        quote = stock_analysis.parse_intraday_quote(
+            {
+                "c": "3037",
+                "n": "欣興",
+                "d": "20260902",
+                "t": "13:14:36",
+                "z": "-",
+                "pz": "-",
+                "y": "971.0000",
+                "o": "955.0000",
+                "h": "988.0000",
+                "l": "948.0000",
+                "v": "22184",
+                "b": "964.0000_963.0000_",
+                "a": "965.0000_966.0000_",
+            },
+            {"code": "3037", "name": "欣興"},
+            current_time=stock_analysis.dt.datetime(2026, 9, 2, 13, 15, tzinfo=stock_analysis.TAIPEI_TZ),
+        )
+
+        self.assertIsNotNone(quote)
+        assert quote is not None
+        self.assertEqual(quote["quote_kind"], "盤中參考價（買賣中間）")
+        self.assertEqual(quote["price_basis"], "bid_ask_midpoint")
+        self.assertEqual(quote["price"], 964.5)
+        self.assertEqual(quote["best_bid"], 964.0)
+        self.assertEqual(quote["best_ask"], 965.0)
+
     def test_normalizes_daily_bars_and_merges_current_intraday_candle(self) -> None:
         bars = stock_analysis.normalize_price_history(
             [

@@ -31,7 +31,7 @@ import urllib.request
 TWSE_QUOTES_URL = "https://openapi.twse.com.tw/v1/exchangeReport/STOCK_DAY_ALL"
 TPEX_QUOTES_URL = "https://www.tpex.org.tw/openapi/v1/tpex_mainboard_quotes"
 TWSE_MIS_QUOTE_URL = "https://mis.twse.com.tw/stock/api/getStockInfo.jsp"
-TWSE_MIS_PAGE_URL = "https://mis.twse.com.tw/stock/fibest.jsp"
+TWSE_MIS_PAGE_URL = "https://mis.twse.com.tw/stock/"
 FINMIND_API_URL = "https://api.finmindtrade.com/api/v4/data"
 FINMIND_FUNDAMENTAL_URL = "https://finmind.github.io/tutor/TaiwanMarket/Fundamental/"
 FINMIND_LOOKBACK_YEARS = 7
@@ -309,6 +309,10 @@ def intraday_quote_url(stock_code: str, channel: str) -> str:
     return f"{TWSE_MIS_QUOTE_URL}?{query}"
 
 
+def first_order_book_price(value: Any) -> float | None:
+    return parse_number(str(value or "").split("_")[0])
+
+
 def parse_intraday_quote(
     row: dict[str, Any],
     stock: dict[str, Any],
@@ -320,15 +324,7 @@ def parse_intraday_quote(
 
     quote_date = roc_date_to_iso(str(row.get("d") or ""))
     quote_clock = str(row.get("t") or "").strip()
-    price = parse_number(row.get("z"))
     previous_close = parse_number(row.get("y"))
-    if price is None:
-        price = parse_number(row.get("pz"))
-    if price is None:
-        return None
-
-    change = price - previous_close if previous_close is not None else None
-    change_percent = safe_ratio(change, previous_close)
     now = current_time or now_taipei()
     is_today = quote_date == now.date().isoformat()
     market_open = (
@@ -336,8 +332,27 @@ def parse_intraday_quote(
         and now.weekday() < 5
         and dt.time(9, 0) <= now.timetz().replace(tzinfo=None) <= dt.time(13, 35)
     )
-    if market_open:
+    best_bid = first_order_book_price(row.get("b"))
+    best_ask = first_order_book_price(row.get("a"))
+    price = parse_number(row.get("z"))
+    if price is None:
+        price = parse_number(row.get("pz"))
+    price_basis = "latest_trade"
+    if price is None and market_open and (best_bid is not None or best_ask is not None):
+        if best_bid is not None and best_ask is not None:
+            price = (best_bid + best_ask) / 2
+        else:
+            price = best_bid if best_bid is not None else best_ask
+        price_basis = "bid_ask_midpoint"
+    if price is None:
+        return None
+
+    change = price - previous_close if previous_close is not None else None
+    change_percent = safe_ratio(change, previous_close)
+    if market_open and price_basis == "latest_trade":
         quote_kind = "盤中最新成交價"
+    elif market_open:
+        quote_kind = "盤中參考價（買賣中間）"
     elif is_today:
         quote_kind = "今日最新成交價"
     else:
@@ -359,10 +374,13 @@ def parse_intraday_quote(
         "low": parse_number(row.get("l")),
         "volume_lots": volume_lots,
         "volume": volume_lots * 1000 if volume_lots is not None else None,
+        "best_bid": best_bid,
+        "best_ask": best_ask,
+        "price_basis": price_basis,
         "quote_kind": quote_kind,
         "is_intraday": market_open,
         "source": "TWSE MIS 盤中資訊",
-        "source_url": f"{TWSE_MIS_PAGE_URL}?{urllib.parse.urlencode({'stock': code})}",
+        "source_url": TWSE_MIS_PAGE_URL,
     }
 
 
@@ -439,6 +457,9 @@ def enrich_stock_quote(stock: dict[str, Any]) -> dict[str, Any]:
             "volume": quote["volume"],
             "volume_lots": quote["volume_lots"],
             "previous_close": quote["previous_close"],
+            "best_bid": quote["best_bid"],
+            "best_ask": quote["best_ask"],
+            "price_basis": quote["price_basis"],
             "quote_kind": quote["quote_kind"],
             "quote_time": quote["quote_time"],
             "is_intraday": quote["is_intraday"],
@@ -1557,6 +1578,8 @@ def render_market_overview(stock: dict[str, Any]) -> str:
           <div><dt>最高</dt><dd>{fmt_number(stock.get('high'), 2)}</dd></div>
           <div><dt>最低</dt><dd>{fmt_number(stock.get('low'), 2)}</dd></div>
           <div><dt>昨收</dt><dd>{fmt_number(stock.get('previous_close'), 2)}</dd></div>
+          <div><dt>最佳買價</dt><dd>{fmt_number(stock.get('best_bid'), 2)}</dd></div>
+          <div><dt>最佳賣價</dt><dd>{fmt_number(stock.get('best_ask'), 2)}</dd></div>
           <div><dt>成交量</dt><dd>{html_lib.escape(volume_text)}</dd></div>
         </dl>
       </section>
@@ -2087,7 +2110,7 @@ def render_html(analysis: dict[str, Any]) -> str:
     .market-time {{ margin-top: 8px; color: var(--muted); font-size: 12px; }}
     .market-stats {{
       display: grid;
-      grid-template-columns: repeat(5, minmax(0, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(96px, 1fr));
       gap: 8px;
       margin: 0;
       align-content: center;
