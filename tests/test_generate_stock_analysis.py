@@ -1,6 +1,7 @@
 import importlib.util
 from pathlib import Path
 import unittest
+from unittest import mock
 
 
 MODULE_PATH = Path(__file__).parents[1] / "scripts" / "generate_stock_analysis.py"
@@ -114,6 +115,100 @@ class FinMindConversionTests(unittest.TestCase):
 
     def test_official_openapi_amounts_are_thousand_twd(self) -> None:
         self.assertEqual(stock_analysis.official_amount_to_billion("2404483690.00"), 24044.8369)
+
+
+class MarketDataTests(unittest.TestCase):
+    def test_daily_quote_sources_fail_independently(self) -> None:
+        twse_rows = [
+            {
+                "Code": "3037",
+                "Name": "欣興",
+                "Date": "20260901",
+                "ClosingPrice": "971",
+                "Change": "-28",
+            }
+        ]
+
+        def fake_read_json(url: str, headers=None):
+            if url == stock_analysis.TWSE_QUOTES_URL:
+                return twse_rows
+            raise stock_analysis.StockAnalysisError("TPEx temporarily unavailable")
+
+        with mock.patch.object(stock_analysis, "read_json", side_effect=fake_read_json):
+            quotes = stock_analysis.fetch_quotes()
+
+        self.assertEqual(len(quotes), 1)
+        self.assertEqual(quotes[0]["code"], "3037")
+
+    def test_parses_twse_mis_intraday_quote_with_taiwan_timestamp(self) -> None:
+        quote = stock_analysis.parse_intraday_quote(
+            {
+                "c": "3037",
+                "n": "欣興",
+                "d": "20260902",
+                "t": "12:39:56",
+                "z": "970.0000",
+                "y": "971.0000",
+                "o": "955.0000",
+                "h": "988.0000",
+                "l": "948.0000",
+                "v": "20494",
+            },
+            {"code": "3037", "name": "欣興"},
+            current_time=stock_analysis.dt.datetime(2026, 9, 2, 12, 40, tzinfo=stock_analysis.TAIPEI_TZ),
+        )
+
+        self.assertIsNotNone(quote)
+        assert quote is not None
+        self.assertEqual(quote["quote_kind"], "盤中最新成交價")
+        self.assertEqual(quote["quote_time"], "2026-09-02 12:39:56")
+        self.assertEqual(quote["price"], 970.0)
+        self.assertEqual(quote["change"], -1.0)
+        self.assertAlmostEqual(quote["change_percent"], -100 / 971)
+        self.assertEqual(quote["volume"], 20_494_000)
+
+    def test_normalizes_daily_bars_and_merges_current_intraday_candle(self) -> None:
+        bars = stock_analysis.normalize_price_history(
+            [
+                {
+                    "date": "2026-09-01",
+                    "open": 921,
+                    "max": 994,
+                    "min": 911,
+                    "close": 971,
+                    "Trading_Volume": 94_479_548,
+                    "Trading_turnover": 178_512,
+                }
+            ]
+        )
+        merged = stock_analysis.merge_current_quote_bar(
+            bars,
+            {
+                "date": "2026-09-02",
+                "quote_time": "2026-09-02 12:39:56",
+                "close": 970,
+                "open": 955,
+                "high": 988,
+                "low": 948,
+                "volume": 20_494_000,
+                "is_intraday": True,
+            },
+        )
+
+        self.assertEqual(len(merged), 2)
+        self.assertEqual(merged[-1]["time"], "2026-09-02")
+        self.assertEqual(merged[-1]["close"], 970)
+        self.assertEqual(merged[-1]["volume"], 20_494_000)
+        self.assertTrue(merged[-1]["intraday"])
+
+    def test_technical_chart_script_includes_requested_indicators(self) -> None:
+        script = stock_analysis.technical_chart_script()
+
+        self.assertIn("addCandlestickSeries", script)
+        self.assertIn("MACD", script.upper())
+        self.assertIn("function rsi", script)
+        self.assertIn("function stochastic", script)
+        self.assertIn('timeframe === "month"', script)
 
 
 if __name__ == "__main__":

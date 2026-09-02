@@ -37,7 +37,7 @@ cat > "$PLIST" <<EOF
   <key>WorkingDirectory</key>
   <string>$INSTALL_DIR</string>
   <key>StartInterval</key>
-  <integer>900</integer>
+  <integer>60</integer>
   <key>RunAtLoad</key>
   <true/>
   <key>StandardOutPath</key>
@@ -52,4 +52,4 @@ chmod +x "$REPO_ROOT/scripts/run_stock_analysis_queue.sh"
 launchctl bootout "gui/$(id -u)/$LABEL" 2>/dev/null || true
 launchctl bootstrap "gui/$(id -u)" "$PLIST"
 launchctl kickstart -k "gui/$(id -u)/$LABEL"
-echo "Installed $LABEL (runs every 15 minutes)"
+echo "Installed $LABEL (runs every minute)"

@@ -22,7 +22,7 @@
     <h1>股票分析準備中</h1>
     <div id="code" class="code">----</div>
     <p id="name"></p>
-    <p id="status" class="status">正在確認最新分析頁，通常會在 15 分鐘內完成。</p>
+    <p id="status" class="status">正在確認最新分析頁，通常會在 1 到 3 分鐘內完成。</p>
     <p>可保留此頁，完成後會自動前往分析結果。僅供研究參考，不構成投資建議。</p>
   </main>
   <script>
@@ -33,6 +33,8 @@
     const codeNode = document.getElementById("code");
     const nameNode = document.getElementById("name");
     const statusNode = document.getElementById("status");
+    let checkTimer = null;
+    let checking = false;
     codeNode.textContent = /^\d{4}$/.test(code) ? code : "代碼錯誤";
     nameNode.textContent = name ? name : "";
 
@@ -52,10 +54,12 @@
     }
 
     async function check() {
+      if (checking) return;
       if (!/^\d{4}$/.test(code)) {
         statusNode.textContent = "請回到 LINE，重新輸入 4 位數台股代碼。";
         return;
       }
+      checking = true;
       const { date, directory } = taipeiDatePath();
       const jsonTarget = `${directory}/stock-analysis-${code}-${date}.json`;
       const htmlTarget = `${directory}/stock-analysis-${code}-${date}.html`;
@@ -72,9 +76,20 @@
         }
       } catch (error) {
         statusNode.textContent = "目前無法連線，稍後會自動重試。";
+      } finally {
+        checking = false;
       }
-      setTimeout(check, 15000);
+      checkTimer = setTimeout(check, 5000);
     }
+
+    window.addEventListener("pageshow", check);
+    window.addEventListener("focus", check);
+    document.addEventListener("visibilitychange", () => {
+      if (document.visibilityState === "visible") {
+        clearTimeout(checkTimer);
+        check();
+      }
+    });
     check();
   </script>
 </body>

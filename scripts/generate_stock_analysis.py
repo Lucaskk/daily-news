@@ -30,9 +30,14 @@ import urllib.request
 
 TWSE_QUOTES_URL = "https://openapi.twse.com.tw/v1/exchangeReport/STOCK_DAY_ALL"
 TPEX_QUOTES_URL = "https://www.tpex.org.tw/openapi/v1/tpex_mainboard_quotes"
+TWSE_MIS_QUOTE_URL = "https://mis.twse.com.tw/stock/api/getStockInfo.jsp"
+TWSE_MIS_PAGE_URL = "https://mis.twse.com.tw/stock/fibest.jsp"
 FINMIND_API_URL = "https://api.finmindtrade.com/api/v4/data"
 FINMIND_FUNDAMENTAL_URL = "https://finmind.github.io/tutor/TaiwanMarket/Fundamental/"
 FINMIND_LOOKBACK_YEARS = 7
+FINMIND_PRICE_DATASET = "TaiwanStockPrice"
+PRICE_LOOKBACK_DAYS = 900
+MAX_PRICE_BARS = 560
 TWSE_OFFICIAL_BASE_URL = "https://openapi.twse.com.tw/v1/opendata"
 TPEX_OFFICIAL_BASE_URL = "https://www.tpex.org.tw/openapi/v1"
 OFFICIAL_REPORT_VARIANTS = ("ci", "bd", "fh", "ins", "mim", "basi")
@@ -264,15 +269,275 @@ def quote_from_tpex(row: dict[str, Any]) -> dict[str, Any]:
 
 def fetch_quotes() -> list[dict[str, Any]]:
     quotes: list[dict[str, Any]] = []
-    for row in read_json(TWSE_QUOTES_URL):
-        quote = quote_from_twse(row)
-        if quote["code"]:
-            quotes.append(quote)
-    for row in read_json(TPEX_QUOTES_URL):
-        quote = quote_from_tpex(row)
-        if quote["code"]:
-            quotes.append(quote)
+    errors: list[str] = []
+    for url, parser in (
+        (TWSE_QUOTES_URL, quote_from_twse),
+        (TPEX_QUOTES_URL, quote_from_tpex),
+    ):
+        try:
+            rows = read_json(url)
+        except StockAnalysisError as exc:
+            errors.append(str(exc))
+            continue
+        for row in rows:
+            quote = parser(row)
+            if quote["code"]:
+                quotes.append(quote)
+    if not quotes:
+        detail = "；".join(errors) if errors else "來源沒有回傳資料"
+        raise StockAnalysisError(f"TWSE/TPEx 每日行情目前無法取得：{detail}")
     return quotes
+
+
+def intraday_market_channels(stock: dict[str, Any]) -> list[str]:
+    market = str(stock.get("market") or "").upper()
+    if market == "TWSE":
+        return ["tse"]
+    if market == "TPEX":
+        return ["otc"]
+    return ["tse", "otc"]
+
+
+def intraday_quote_url(stock_code: str, channel: str) -> str:
+    query = urllib.parse.urlencode(
+        {
+            "ex_ch": f"{channel}_{stock_code}.tw",
+            "json": "1",
+            "delay": "0",
+        }
+    )
+    return f"{TWSE_MIS_QUOTE_URL}?{query}"
+
+
+def parse_intraday_quote(
+    row: dict[str, Any],
+    stock: dict[str, Any],
+    current_time: dt.datetime | None = None,
+) -> dict[str, Any] | None:
+    code = str(row.get("c") or "").strip()
+    if not code or code != str(stock.get("code") or ""):
+        return None
+
+    quote_date = roc_date_to_iso(str(row.get("d") or ""))
+    quote_clock = str(row.get("t") or "").strip()
+    price = parse_number(row.get("z"))
+    previous_close = parse_number(row.get("y"))
+    if price is None:
+        price = parse_number(row.get("pz"))
+    if price is None:
+        return None
+
+    change = price - previous_close if previous_close is not None else None
+    change_percent = safe_ratio(change, previous_close)
+    now = current_time or now_taipei()
+    is_today = quote_date == now.date().isoformat()
+    market_open = (
+        is_today
+        and now.weekday() < 5
+        and dt.time(9, 0) <= now.timetz().replace(tzinfo=None) <= dt.time(13, 35)
+    )
+    if market_open:
+        quote_kind = "盤中最新成交價"
+    elif is_today:
+        quote_kind = "今日最新成交價"
+    else:
+        quote_kind = "最新成交價"
+
+    volume_lots = parse_number(row.get("v"))
+    quote_time = f"{quote_date} {quote_clock}".strip()
+    return {
+        "code": code,
+        "name": str(row.get("n") or stock.get("name") or "").strip(),
+        "date": quote_date,
+        "quote_time": quote_time,
+        "price": price,
+        "previous_close": previous_close,
+        "change": change,
+        "change_percent": change_percent,
+        "open": parse_number(row.get("o")),
+        "high": parse_number(row.get("h")),
+        "low": parse_number(row.get("l")),
+        "volume_lots": volume_lots,
+        "volume": volume_lots * 1000 if volume_lots is not None else None,
+        "quote_kind": quote_kind,
+        "is_intraday": market_open,
+        "source": "TWSE MIS 盤中資訊",
+        "source_url": f"{TWSE_MIS_PAGE_URL}?{urllib.parse.urlencode({'stock': code})}",
+    }
+
+
+def fetch_intraday_quote(stock: dict[str, Any]) -> dict[str, Any] | None:
+    last_error: StockAnalysisError | None = None
+    for channel in intraday_market_channels(stock):
+        url = intraday_quote_url(stock["code"], channel)
+        try:
+            payload = read_json(
+                url,
+                headers={
+                    "Referer": "https://mis.twse.com.tw/stock/index.jsp",
+                    "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+                },
+            )
+        except StockAnalysisError as exc:
+            last_error = exc
+            continue
+        for row in payload.get("msgArray") or []:
+            parsed = parse_intraday_quote(row, stock)
+            if parsed:
+                parsed["api_url"] = url
+                parsed["market"] = "TWSE" if channel == "tse" else "TPEX"
+                parsed["market_label"] = "上市" if channel == "tse" else "上櫃"
+                return parsed
+    if last_error and len(intraday_market_channels(stock)) == 1:
+        raise last_error
+    return None
+
+
+def enrich_stock_quote(stock: dict[str, Any]) -> dict[str, Any]:
+    enriched = dict(stock)
+    daily_close = parse_number(stock.get("close"))
+    daily_change = parse_number(stock.get("change"))
+    daily_previous_close = (
+        daily_close - daily_change if daily_close is not None and daily_change is not None else None
+    )
+    enriched["daily_quote"] = {
+        "date": stock.get("date"),
+        "close": stock.get("close"),
+        "change": stock.get("change"),
+        "open": stock.get("open"),
+        "high": stock.get("high"),
+        "low": stock.get("low"),
+        "volume": stock.get("volume"),
+        "source_url": stock.get("source_url"),
+    }
+    enriched.setdefault("quote_kind", "最新收盤價")
+    enriched.setdefault("quote_time", str(stock.get("date") or ""))
+    enriched.setdefault("previous_close", daily_previous_close)
+    enriched.setdefault("change_percent", safe_ratio(daily_change, daily_previous_close))
+    enriched.setdefault("is_intraday", False)
+    try:
+        quote = fetch_intraday_quote(stock)
+    except StockAnalysisError as exc:
+        enriched["quote_warning"] = str(exc)
+        return enriched
+    if not quote:
+        enriched["quote_warning"] = "TWSE MIS 暫無可用盤中成交資料，已改用每日行情。"
+        return enriched
+
+    enriched.update(
+        {
+            "name": quote.get("name") or enriched.get("name"),
+            "market": quote.get("market") or enriched.get("market"),
+            "market_label": quote.get("market_label") or enriched.get("market_label"),
+            "date": quote["date"],
+            "close": quote["price"],
+            "change": quote["change"],
+            "change_percent": quote["change_percent"],
+            "open": quote["open"],
+            "high": quote["high"],
+            "low": quote["low"],
+            "volume": quote["volume"],
+            "volume_lots": quote["volume_lots"],
+            "previous_close": quote["previous_close"],
+            "quote_kind": quote["quote_kind"],
+            "quote_time": quote["quote_time"],
+            "is_intraday": quote["is_intraday"],
+            "quote_source": quote["source"],
+            "source_url": quote["source_url"],
+            "quote_api_url": quote["api_url"],
+        }
+    )
+    return enriched
+
+
+def finmind_price_url(stock_id: str, start_date: str) -> str:
+    query = urllib.parse.urlencode(
+        {
+            "dataset": FINMIND_PRICE_DATASET,
+            "data_id": stock_id,
+            "start_date": start_date,
+        }
+    )
+    return f"{FINMIND_API_URL}?{query}"
+
+
+def normalize_price_history(rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    bars: dict[str, dict[str, Any]] = {}
+    for row in rows:
+        date_text = str(row.get("date") or "")[:10]
+        try:
+            dt.date.fromisoformat(date_text)
+        except ValueError:
+            continue
+        open_price = parse_number(row.get("open"))
+        high = parse_number(row.get("max"))
+        low = parse_number(row.get("min"))
+        close = parse_number(row.get("close"))
+        if None in {open_price, high, low, close}:
+            continue
+        bars[date_text] = {
+            "time": date_text,
+            "open": open_price,
+            "high": high,
+            "low": low,
+            "close": close,
+            "volume": parse_number(row.get("Trading_Volume")) or 0,
+            "turnover": parse_number(row.get("Trading_turnover")),
+        }
+    return [bars[key] for key in sorted(bars)][-MAX_PRICE_BARS:]
+
+
+def merge_current_quote_bar(
+    bars: list[dict[str, Any]],
+    stock: dict[str, Any],
+) -> list[dict[str, Any]]:
+    quote_date = str(stock.get("date") or "")
+    close = parse_number(stock.get("close"))
+    if not quote_date or close is None or not stock.get("quote_time"):
+        return bars
+    try:
+        dt.date.fromisoformat(quote_date)
+    except ValueError:
+        return bars
+
+    existing = next((dict(item) for item in bars if item["time"] == quote_date), {})
+    open_price = parse_number(stock.get("open"))
+    high = parse_number(stock.get("high"))
+    low = parse_number(stock.get("low"))
+    current_bar = {
+        "time": quote_date,
+        "open": open_price if open_price is not None else existing.get("open", close),
+        "high": high if high is not None else existing.get("high", close),
+        "low": low if low is not None else existing.get("low", close),
+        "close": close,
+        "volume": parse_number(stock.get("volume")) or existing.get("volume", 0),
+        "turnover": existing.get("turnover"),
+        "intraday": bool(stock.get("is_intraday")),
+    }
+    merged = [dict(item) for item in bars if item["time"] != quote_date]
+    merged.append(current_bar)
+    return sorted(merged, key=lambda item: item["time"])[-MAX_PRICE_BARS:]
+
+
+def fetch_market_history(stock: dict[str, Any]) -> dict[str, Any]:
+    start_date = (now_taipei().date() - dt.timedelta(days=PRICE_LOOKBACK_DAYS)).isoformat()
+    url = finmind_price_url(stock["code"], start_date)
+    payload = read_json(url, headers=finmind_headers())
+    if str(payload.get("status", "")) != "200":
+        message = payload.get("msg") or payload.get("message") or "unknown error"
+        raise StockAnalysisError(f"FinMind {FINMIND_PRICE_DATASET} 取得失敗：{message}")
+    bars = normalize_price_history(payload.get("data") or [])
+    if not bars:
+        raise StockAnalysisError(f"FinMind {FINMIND_PRICE_DATASET} 沒有 {stock['code']} 的可用資料。")
+    bars = merge_current_quote_bar(bars, stock)
+    return {
+        "bars": bars,
+        "source": "FinMind 日成交資料、TWSE MIS 盤中資訊",
+        "history_url": url,
+        "intraday_url": stock.get("source_url") or "",
+        "intraday_api_url": stock.get("quote_api_url") or "",
+        "updated_at": stock.get("quote_time") or stock.get("date") or "",
+    }
 
 
 def resolve_stock(query: str, quotes: list[dict[str, Any]] | None = None) -> dict[str, Any]:
@@ -1111,12 +1376,13 @@ def build_metadata(
     quarterly_periods: list[str],
     fetched_at: str,
     financials: dict[str, Any] | None = None,
+    market_data: dict[str, Any] | None = None,
 ) -> dict[str, Any]:
     stock_id = stock["code"]
     finmind_urls = (financials or {}).get("finmind_urls", {})
     return {
         "fetched_at": fetched_at,
-        "source": "FinMind API, TWSE OpenAPI, TPEx OpenAPI, 公開資訊觀測站",
+        "source": "FinMind API, TWSE MIS, TWSE OpenAPI, TPEx OpenAPI, 公開資訊觀測站",
         "source_urls": {
             "finmind_fundamental": FINMIND_FUNDAMENTAL_URL,
             "finmind_income_statement": finmind_urls.get("income_statement") or finmind_dataset_url("income_statement", stock_id, "2018-01-01"),
@@ -1127,6 +1393,8 @@ def build_metadata(
             "tpex_income_statement": f"{TPEX_OFFICIAL_BASE_URL}/mopsfin_t187ap06_O_ci",
             "tpex_balance_sheet": f"{TPEX_OFFICIAL_BASE_URL}/mopsfin_t187ap07_O_ci",
             "quote": stock.get("source_url") or "",
+            "quote_api": stock.get("quote_api_url") or "",
+            "price_history": (market_data or {}).get("history_url") or "",
             "mops_listed": f"https://mops.twse.com.tw/mops/web/t05st01?step=1&co_id={stock_id}&TYPEK=sii",
             "mops_otc": f"https://mops.twse.com.tw/mops/web/t05st01?step=1&co_id={stock_id}&TYPEK=otc",
         },
@@ -1174,8 +1442,9 @@ def build_insights(stock: dict[str, Any], metrics: dict[str, dict[str, float | N
     quote_line = "尚未取得今日市場報價。"
     if stock.get("close") is not None:
         quote_line = (
-            f"最新公開報價日期為 {stock.get('date') or '未標示'}，收盤價 "
-            f"{fmt_number(stock.get('close'), 2)} 元，單日變動 {fmt_delta(stock.get('change'), 2, ' 元')}。"
+            f"{stock.get('quote_kind') or '最新公開報價'}為 {fmt_number(stock.get('close'), 2)} 元，"
+            f"時間 {stock.get('quote_time') or stock.get('date') or '未標示'}，"
+            f"較昨收 {fmt_delta(stock.get('change'), 2, ' 元')}（{fmt_delta(stock.get('change_percent'), 2)}）。"
         )
 
     return {
@@ -1263,6 +1532,402 @@ def metric_table(metrics: dict[str, dict[str, float | None]], years: list[str], 
           <tbody>{''.join(body)}</tbody>
         </table>
       </div>
+    """
+
+
+def render_market_overview(stock: dict[str, Any]) -> str:
+    change = parse_number(stock.get("change"))
+    direction = "up" if change is not None and change > 0 else "down" if change is not None and change < 0 else "flat"
+    direction_mark = "▲" if direction == "up" else "▼" if direction == "down" else "■"
+    quote_time = stock.get("quote_time") or stock.get("date") or "未標示"
+    volume_lots = parse_number(stock.get("volume_lots"))
+    volume_text = f"{fmt_number(volume_lots, 0)} 張" if volume_lots is not None else "n/a"
+    return f"""
+      <section class="market-overview" aria-label="最新市場行情">
+        <div class="market-price-block">
+          <div class="market-price-label">{html_lib.escape(stock.get('quote_kind') or '最新公開報價')}</div>
+          <div class="market-price {direction}">{fmt_number(stock.get('close'), 2)}</div>
+          <div class="market-change {direction}">
+            {direction_mark} {fmt_delta(change, 2, ' 元')}（{fmt_delta(stock.get('change_percent'), 2)}）
+          </div>
+          <div class="market-time">成交時間 {html_lib.escape(str(quote_time))}</div>
+        </div>
+        <dl class="market-stats">
+          <div><dt>開盤</dt><dd>{fmt_number(stock.get('open'), 2)}</dd></div>
+          <div><dt>最高</dt><dd>{fmt_number(stock.get('high'), 2)}</dd></div>
+          <div><dt>最低</dt><dd>{fmt_number(stock.get('low'), 2)}</dd></div>
+          <div><dt>昨收</dt><dd>{fmt_number(stock.get('previous_close'), 2)}</dd></div>
+          <div><dt>成交量</dt><dd>{html_lib.escape(volume_text)}</dd></div>
+        </dl>
+      </section>
+    """
+
+
+def render_technical_panel(market_data: dict[str, Any]) -> str:
+    warning = market_data.get("warning")
+    warning_html = (
+        f'<div class="technical-warning">{html_lib.escape(str(warning))}</div>' if warning else ""
+    )
+    return f"""
+      <section class="technical-tool" aria-label="K 線與技術指標">
+        <div class="technical-toolbar">
+          <div class="timeframe-control" role="group" aria-label="K 線週期">
+            <button class="timeframe active" type="button" data-timeframe="day">日</button>
+            <button class="timeframe" type="button" data-timeframe="week">週</button>
+            <button class="timeframe" type="button" data-timeframe="month">月</button>
+          </div>
+          <div class="indicator-controls" aria-label="技術指標">
+            <label><input type="checkbox" data-indicator="ma" checked> 均線</label>
+            <label><input type="checkbox" data-indicator="bollinger" checked> 布林</label>
+            <label><input type="checkbox" data-indicator="volume" checked> 成交量</label>
+            <label><input type="checkbox" data-indicator="macd" checked> MACD</label>
+            <label><input type="checkbox" data-indicator="rsi"> RSI</label>
+            <label><input type="checkbox" data-indicator="kd"> KD</label>
+          </div>
+        </div>
+        <div id="technical-empty" class="technical-empty" hidden>目前沒有足夠的日成交資料可繪製 K 線。</div>
+        {warning_html}
+        <div id="technical-charts">
+          <div id="ohlc-summary" class="ohlc-summary" aria-live="polite"></div>
+          <div id="kline-chart" class="kline-chart" aria-label="股價 K 線圖"></div>
+          <div id="indicator-legend" class="indicator-legend"></div>
+          <section id="macd-panel" class="indicator-panel">
+            <h3>MACD（12, 26, 9）</h3>
+            <div id="macd-chart" class="indicator-chart"></div>
+          </section>
+          <section id="rsi-panel" class="indicator-panel" hidden>
+            <h3>RSI（6, 12）</h3>
+            <div id="rsi-chart" class="indicator-chart"></div>
+          </section>
+          <section id="kd-panel" class="indicator-panel" hidden>
+            <h3>KD（9, 3, 3）</h3>
+            <div id="kd-chart" class="indicator-chart"></div>
+          </section>
+        </div>
+        <p class="technical-source">
+          日線來源為 FinMind TaiwanStockPrice；當日 OHLC 與最新成交價使用 TWSE MIS 公開資訊補入。
+          盤中資料可能有傳輸延遲，技術指標僅供研究參考。
+        </p>
+      </section>
+    """
+
+
+def technical_chart_script() -> str:
+    return r"""
+    const technicalState = {
+      timeframe: "day",
+      charts: [],
+      observers: []
+    };
+
+    function aggregatePriceBars(rows, timeframe) {
+      if (timeframe === "day") return rows.map(item => ({ ...item }));
+      const groups = new Map();
+      rows.forEach(item => {
+        const date = new Date(item.time + "T00:00:00Z");
+        let key;
+        if (timeframe === "month") {
+          key = item.time.slice(0, 7);
+        } else {
+          const day = date.getUTCDay() || 7;
+          date.setUTCDate(date.getUTCDate() - day + 1);
+          key = date.toISOString().slice(0, 10);
+        }
+        const group = groups.get(key);
+        if (!group) {
+          groups.set(key, { ...item });
+          return;
+        }
+        group.time = item.time;
+        group.high = Math.max(group.high, item.high);
+        group.low = Math.min(group.low, item.low);
+        group.close = item.close;
+        group.volume = (group.volume || 0) + (item.volume || 0);
+        group.intraday = Boolean(item.intraday);
+      });
+      return [...groups.values()].sort((a, b) => a.time.localeCompare(b.time));
+    }
+
+    function sma(values, period) {
+      let total = 0;
+      return values.map((value, index) => {
+        total += value;
+        if (index >= period) total -= values[index - period];
+        return index >= period - 1 ? total / period : null;
+      });
+    }
+
+    function ema(values, period) {
+      const multiplier = 2 / (period + 1);
+      let previous = null;
+      return values.map(value => {
+        previous = previous === null ? value : value * multiplier + previous * (1 - multiplier);
+        return previous;
+      });
+    }
+
+    function bollinger(values, period = 20, multiplier = 2) {
+      const middle = sma(values, period);
+      return values.map((value, index) => {
+        if (index < period - 1) return { middle: null, upper: null, lower: null };
+        const window = values.slice(index - period + 1, index + 1);
+        const mean = middle[index];
+        const variance = window.reduce((sum, item) => sum + Math.pow(item - mean, 2), 0) / period;
+        const deviation = Math.sqrt(variance) * multiplier;
+        return { middle: mean, upper: mean + deviation, lower: mean - deviation };
+      });
+    }
+
+    function macd(values) {
+      const fast = ema(values, 12);
+      const slow = ema(values, 26);
+      const dif = values.map((_, index) => fast[index] - slow[index]);
+      const signal = ema(dif, 9);
+      return dif.map((value, index) => ({ dif: value, signal: signal[index], histogram: value - signal[index] }));
+    }
+
+    function rsi(values, period) {
+      const output = Array(values.length).fill(null);
+      if (values.length <= period) return output;
+      let gain = 0;
+      let loss = 0;
+      for (let index = 1; index <= period; index += 1) {
+        const delta = values[index] - values[index - 1];
+        gain += Math.max(delta, 0);
+        loss += Math.max(-delta, 0);
+      }
+      let averageGain = gain / period;
+      let averageLoss = loss / period;
+      output[period] = averageLoss === 0 ? 100 : 100 - 100 / (1 + averageGain / averageLoss);
+      for (let index = period + 1; index < values.length; index += 1) {
+        const delta = values[index] - values[index - 1];
+        averageGain = (averageGain * (period - 1) + Math.max(delta, 0)) / period;
+        averageLoss = (averageLoss * (period - 1) + Math.max(-delta, 0)) / period;
+        output[index] = averageLoss === 0 ? 100 : 100 - 100 / (1 + averageGain / averageLoss);
+      }
+      return output;
+    }
+
+    function stochastic(bars, period = 9) {
+      let k = 50;
+      let d = 50;
+      return bars.map((bar, index) => {
+        if (index < period - 1) return { k: null, d: null, j: null };
+        const window = bars.slice(index - period + 1, index + 1);
+        const high = Math.max(...window.map(item => item.high));
+        const low = Math.min(...window.map(item => item.low));
+        const rsv = high === low ? 50 : (bar.close - low) / (high - low) * 100;
+        k = (2 * k + rsv) / 3;
+        d = (2 * d + k) / 3;
+        return { k, d, j: 3 * k - 2 * d };
+      });
+    }
+
+    function lineData(bars, values) {
+      return bars.flatMap((bar, index) => Number.isFinite(values[index]) ? [{ time: bar.time, value: values[index] }] : []);
+    }
+
+    function checkedIndicator(name) {
+      return Boolean(document.querySelector(`[data-indicator="${name}"]`)?.checked);
+    }
+
+    function disposeTechnicalCharts() {
+      technicalState.observers.forEach(observer => observer.disconnect());
+      technicalState.charts.forEach(chartItem => chartItem.remove());
+      technicalState.observers = [];
+      technicalState.charts = [];
+      ["kline-chart", "macd-chart", "rsi-chart", "kd-chart"].forEach(id => {
+        const element = document.getElementById(id);
+        if (element) element.replaceChildren();
+      });
+    }
+
+    function createTechnicalChart(containerId, height, priceScaleMargins = undefined) {
+      const container = document.getElementById(containerId);
+      if (!container || typeof LightweightCharts === "undefined") return null;
+      const chartItem = LightweightCharts.createChart(container, {
+        width: Math.max(container.clientWidth, 280),
+        height,
+        layout: { background: { color: "#ffffff" }, textColor: "#475569" },
+        grid: { vertLines: { color: "#eef2f7" }, horzLines: { color: "#e2e8f0" } },
+        rightPriceScale: { borderColor: "#cbd5e1", scaleMargins: priceScaleMargins },
+        timeScale: { borderColor: "#cbd5e1", timeVisible: false, rightOffset: 5 },
+        crosshair: { mode: LightweightCharts.CrosshairMode.Normal },
+        localization: { locale: "zh-TW" }
+      });
+      const observer = new ResizeObserver(entries => {
+        const width = entries[0]?.contentRect.width;
+        if (width) chartItem.applyOptions({ width });
+      });
+      observer.observe(container);
+      technicalState.charts.push(chartItem);
+      technicalState.observers.push(observer);
+      return chartItem;
+    }
+
+    function addIndicatorLine(chartItem, bars, values, options) {
+      const series = chartItem.addLineSeries({
+        lineWidth: 2,
+        priceLineVisible: false,
+        lastValueVisible: false,
+        crosshairMarkerVisible: false,
+        ...options
+      });
+      series.setData(lineData(bars, values));
+      return series;
+    }
+
+    function setRecentRange(chartItem, count, preferred) {
+      chartItem.timeScale().setVisibleLogicalRange({
+        from: Math.max(0, count - preferred),
+        to: count + 4
+      });
+    }
+
+    function renderTechnicalCharts() {
+      const sourceBars = analysis.market_data?.bars || [];
+      const empty = document.getElementById("technical-empty");
+      const chartRoot = document.getElementById("technical-charts");
+      if (!sourceBars.length || typeof LightweightCharts === "undefined") {
+        if (empty) {
+          empty.hidden = false;
+          empty.textContent = typeof LightweightCharts === "undefined"
+            ? "線圖元件載入失敗，請確認網路後重新開啟頁面。"
+            : "目前沒有足夠的日成交資料可繪製 K 線。";
+        }
+        if (chartRoot) chartRoot.hidden = true;
+        return;
+      }
+      if (empty) empty.hidden = true;
+      if (chartRoot) chartRoot.hidden = false;
+      disposeTechnicalCharts();
+
+      const bars = aggregatePriceBars(sourceBars, technicalState.timeframe);
+      const closes = bars.map(item => item.close);
+      const latest = bars[bars.length - 1];
+      const previous = bars[bars.length - 2];
+      const delta = previous ? latest.close - previous.close : null;
+      const deltaPercent = previous && previous.close ? delta / previous.close * 100 : null;
+      const summary = document.getElementById("ohlc-summary");
+      if (summary) {
+        const sign = delta > 0 ? "+" : "";
+        summary.innerHTML = `<strong>${latest.time}</strong><span>開 ${latest.open.toFixed(2)}</span><span>高 ${latest.high.toFixed(2)}</span><span>低 ${latest.low.toFixed(2)}</span><span>收 ${latest.close.toFixed(2)}</span><span>量 ${Math.round((latest.volume || 0) / 1000).toLocaleString()} 張</span><span class="${delta > 0 ? "price-up" : delta < 0 ? "price-down" : ""}">${Number.isFinite(delta) ? sign + delta.toFixed(2) : "n/a"}（${Number.isFinite(deltaPercent) ? sign + deltaPercent.toFixed(2) + "%" : "n/a"}）</span>`;
+      }
+
+      const mainHeight = window.matchMedia("(max-width: 820px)").matches ? 360 : 480;
+      const mainChart = createTechnicalChart("kline-chart", mainHeight, { top: 0.08, bottom: 0.24 });
+      if (!mainChart) return;
+      const candleSeries = mainChart.addCandlestickSeries({
+        upColor: "#ef4444",
+        downColor: "#16a34a",
+        borderUpColor: "#ef4444",
+        borderDownColor: "#16a34a",
+        wickUpColor: "#ef4444",
+        wickDownColor: "#16a34a",
+        priceLineVisible: true
+      });
+      candleSeries.setData(bars.map(({ time, open, high, low, close }) => ({ time, open, high, low, close })));
+
+      if (checkedIndicator("volume")) {
+        const volumeSeries = mainChart.addHistogramSeries({
+          priceFormat: { type: "volume" },
+          priceScaleId: "volume",
+          priceLineVisible: false,
+          lastValueVisible: false
+        });
+        mainChart.priceScale("volume").applyOptions({ scaleMargins: { top: 0.80, bottom: 0 } });
+        volumeSeries.setData(bars.map(item => ({
+          time: item.time,
+          value: item.volume || 0,
+          color: item.close >= item.open ? "rgba(239,68,68,.55)" : "rgba(22,163,74,.55)"
+        })));
+      }
+
+      const averages = { 5: sma(closes, 5), 20: sma(closes, 20), 60: sma(closes, 60), 240: sma(closes, 240) };
+      if (checkedIndicator("ma")) {
+        addIndicatorLine(mainChart, bars, averages[5], { color: "#eab308", lineWidth: 2 });
+        addIndicatorLine(mainChart, bars, averages[20], { color: "#d946ef", lineWidth: 2 });
+        addIndicatorLine(mainChart, bars, averages[60], { color: "#06b6d4", lineWidth: 2 });
+        addIndicatorLine(mainChart, bars, averages[240], { color: "#2563eb", lineWidth: 2 });
+      }
+      const bands = bollinger(closes);
+      if (checkedIndicator("bollinger")) {
+        addIndicatorLine(mainChart, bars, bands.map(item => item.upper), { color: "#0f766e", lineWidth: 1 });
+        addIndicatorLine(mainChart, bars, bands.map(item => item.lower), { color: "#0f766e", lineWidth: 1 });
+      }
+      setRecentRange(mainChart, bars.length, technicalState.timeframe === "day" ? 90 : 70);
+
+      const latestIndex = bars.length - 1;
+      const legend = document.getElementById("indicator-legend");
+      if (legend) {
+        const parts = [];
+        if (checkedIndicator("ma")) {
+          [5, 20, 60, 240].forEach(period => {
+            const value = averages[period][latestIndex];
+            if (Number.isFinite(value)) parts.push(`<span>MA${period} <strong>${value.toFixed(2)}</strong></span>`);
+          });
+        }
+        if (checkedIndicator("bollinger") && Number.isFinite(bands[latestIndex]?.upper)) {
+          parts.push(`<span>布林上 ${bands[latestIndex].upper.toFixed(2)}</span>`);
+          parts.push(`<span>中 ${bands[latestIndex].middle.toFixed(2)}</span>`);
+          parts.push(`<span>下 ${bands[latestIndex].lower.toFixed(2)}</span>`);
+        }
+        legend.innerHTML = parts.join("");
+      }
+
+      const panelVisibility = {
+        macd: checkedIndicator("macd"),
+        rsi: checkedIndicator("rsi"),
+        kd: checkedIndicator("kd")
+      };
+      Object.entries(panelVisibility).forEach(([name, visible]) => {
+        const panel = document.getElementById(`${name}-panel`);
+        if (panel) panel.hidden = !visible;
+      });
+
+      if (panelVisibility.macd) {
+        const values = macd(closes);
+        const chartItem = createTechnicalChart("macd-chart", 190, { top: 0.12, bottom: 0.12 });
+        const histogram = chartItem.addHistogramSeries({ priceLineVisible: false, lastValueVisible: false });
+        histogram.setData(bars.map((bar, index) => ({
+          time: bar.time,
+          value: values[index].histogram,
+          color: values[index].histogram >= 0 ? "rgba(239,68,68,.68)" : "rgba(22,163,74,.68)"
+        })));
+        addIndicatorLine(chartItem, bars, values.map(item => item.dif), { color: "#ea580c" });
+        addIndicatorLine(chartItem, bars, values.map(item => item.signal), { color: "#eab308" });
+        setRecentRange(chartItem, bars.length, technicalState.timeframe === "day" ? 90 : 70);
+      }
+
+      if (panelVisibility.rsi) {
+        const chartItem = createTechnicalChart("rsi-chart", 180, { top: 0.12, bottom: 0.12 });
+        const rsi6 = addIndicatorLine(chartItem, bars, rsi(closes, 6), { color: "#7c3aed" });
+        addIndicatorLine(chartItem, bars, rsi(closes, 12), { color: "#0ea5e9" });
+        rsi6.createPriceLine({ price: 70, color: "#dc2626", lineStyle: 2, axisLabelVisible: true, title: "70" });
+        rsi6.createPriceLine({ price: 30, color: "#16a34a", lineStyle: 2, axisLabelVisible: true, title: "30" });
+        setRecentRange(chartItem, bars.length, technicalState.timeframe === "day" ? 90 : 70);
+      }
+
+      if (panelVisibility.kd) {
+        const values = stochastic(bars);
+        const chartItem = createTechnicalChart("kd-chart", 180, { top: 0.12, bottom: 0.12 });
+        const kSeries = addIndicatorLine(chartItem, bars, values.map(item => item.k), { color: "#eab308" });
+        addIndicatorLine(chartItem, bars, values.map(item => item.d), { color: "#d946ef" });
+        addIndicatorLine(chartItem, bars, values.map(item => item.j), { color: "#06b6d4" });
+        kSeries.createPriceLine({ price: 80, color: "#dc2626", lineStyle: 2, axisLabelVisible: true, title: "80" });
+        kSeries.createPriceLine({ price: 20, color: "#16a34a", lineStyle: 2, axisLabelVisible: true, title: "20" });
+        setRecentRange(chartItem, bars.length, technicalState.timeframe === "day" ? 90 : 70);
+      }
+    }
+
+    document.querySelectorAll(".timeframe").forEach(button => {
+      button.addEventListener("click", () => {
+        technicalState.timeframe = button.dataset.timeframe;
+        document.querySelectorAll(".timeframe").forEach(item => item.classList.toggle("active", item === button));
+        renderTechnicalCharts();
+      });
+    });
+    document.querySelectorAll("[data-indicator]").forEach(input => input.addEventListener("change", renderTechnicalCharts));
     """
 
 
@@ -1356,6 +2021,7 @@ def render_html(analysis: dict[str, Any]) -> str:
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{html_lib.escape(title)}</title>
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.5.0/dist/chart.umd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lightweight-charts@4.2.2/dist/lightweight-charts.standalone.production.js"></script>
   <style>
     :root {{
       --ink: #18202f;
@@ -1400,6 +2066,35 @@ def render_html(analysis: dict[str, Any]) -> str:
       text-decoration: none;
       background: rgba(255,255,255,.08);
     }}
+    .market-overview {{
+      max-width: 1180px;
+      margin: 18px auto 0;
+      display: grid;
+      grid-template-columns: minmax(220px, .8fr) minmax(0, 1.5fr);
+      gap: 18px;
+      padding: 18px;
+      color: var(--ink);
+      background: rgba(255,255,255,.96);
+      border: 1px solid rgba(255,255,255,.48);
+      border-radius: 8px;
+    }}
+    .market-price-label {{ color: var(--muted); font-size: 13px; font-weight: 760; }}
+    .market-price {{ margin-top: 4px; font-size: clamp(38px, 6vw, 58px); font-weight: 800; line-height: 1; }}
+    .market-change {{ margin-top: 8px; font-weight: 760; }}
+    .market-price.up, .market-change.up, .price-up {{ color: #dc2626; }}
+    .market-price.down, .market-change.down, .price-down {{ color: #15803d; }}
+    .market-price.flat, .market-change.flat {{ color: #475569; }}
+    .market-time {{ margin-top: 8px; color: var(--muted); font-size: 12px; }}
+    .market-stats {{
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 8px;
+      margin: 0;
+      align-content: center;
+    }}
+    .market-stats div {{ padding: 10px; border-left: 1px solid var(--line); }}
+    .market-stats dt {{ color: var(--muted); font-size: 12px; }}
+    .market-stats dd {{ margin: 4px 0 0; font-size: 18px; font-weight: 760; white-space: nowrap; }}
     .layout {{ max-width: 1180px; margin: 0 auto; padding: 18px; }}
     .snapshot-grid, .kpi-row {{
       display: grid;
@@ -1461,6 +2156,42 @@ def render_html(analysis: dict[str, Any]) -> str:
     .chart-card {{ padding: 16px; }}
     .chart-title {{ font-weight: 760; margin-bottom: 12px; color: #334155; }}
     .chart-container {{ position: relative; height: 280px; }}
+    .technical-tool {{
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+      margin-bottom: 18px;
+    }}
+    .technical-toolbar {{ padding: 12px 14px; border-bottom: 1px solid var(--line); background: #f8fafc; }}
+    .timeframe-control {{ display: inline-flex; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }}
+    .timeframe {{
+      min-width: 58px;
+      height: 40px;
+      border: 0;
+      border-right: 1px solid var(--line);
+      background: white;
+      color: var(--muted);
+      font-weight: 760;
+      cursor: pointer;
+    }}
+    .timeframe:last-child {{ border-right: 0; }}
+    .timeframe.active {{ background: var(--ink); color: white; }}
+    .indicator-controls {{ display: flex; flex-wrap: wrap; gap: 8px 14px; margin-top: 12px; }}
+    .indicator-controls label {{ display: inline-flex; align-items: center; gap: 5px; font-size: 13px; font-weight: 700; color: #334155; }}
+    .indicator-controls input {{ width: 17px; height: 17px; accent-color: var(--blue); }}
+    .ohlc-summary, .indicator-legend {{ display: flex; flex-wrap: wrap; gap: 8px 14px; padding: 10px 14px; font-size: 13px; }}
+    .ohlc-summary {{ border-bottom: 1px solid var(--line); background: #fff; }}
+    .indicator-legend {{ color: var(--muted); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }}
+    .indicator-legend strong {{ color: var(--ink); }}
+    .kline-chart {{ width: 100%; height: 480px; }}
+    .indicator-panel {{ padding-top: 8px; border-top: 1px solid var(--line); }}
+    .indicator-panel h3 {{ margin: 0; padding: 8px 14px 2px; font-size: 13px; color: #334155; }}
+    .indicator-panel[hidden] {{ display: none; }}
+    .indicator-chart {{ width: 100%; height: 190px; }}
+    .technical-source {{ margin: 0; padding: 12px 14px; color: var(--muted); font-size: 12px; line-height: 1.55; border-top: 1px solid var(--line); }}
+    .technical-empty, .technical-warning {{ padding: 18px; color: var(--muted); }}
+    .technical-warning {{ background: #fff7ed; color: #9a3412; border-bottom: 1px solid #fed7aa; }}
     .table-wrap {{ overflow-x: auto; margin-bottom: 18px; }}
     .data-table {{ width: 100%; border-collapse: collapse; font-size: 14px; min-width: 620px; }}
     .data-table th {{ background: #263245; color: white; text-align: right; padding: 10px; }}
@@ -1472,6 +2203,11 @@ def render_html(analysis: dict[str, Any]) -> str:
       .snapshot-grid, .kpi-row, .charts-grid {{ grid-template-columns: 1fr; }}
       .hero {{ padding-top: 26px; }}
       .chart-container {{ height: 240px; }}
+      .market-overview {{ grid-template-columns: 1fr; }}
+      .market-stats {{ grid-template-columns: repeat(3, minmax(0, 1fr)); }}
+      .market-stats div {{ border-left: 0; border-top: 1px solid var(--line); padding-left: 0; }}
+      .market-stats dd {{ font-size: 16px; }}
+      .kline-chart {{ height: 360px; }}
     }}
   </style>
 </head>
@@ -1493,13 +2229,17 @@ def render_html(analysis: dict[str, Any]) -> str:
       <a href="{html_lib.escape(source_urls['twse_balance_sheet'])}">TWSE 官方資產負債</a>
       <a href="{html_lib.escape(source_urls['tpex_income_statement'])}">TPEX 官方損益</a>
       <a href="{html_lib.escape(source_urls['tpex_balance_sheet'])}">TPEX 官方資產負債</a>
+      <a href="{html_lib.escape(source_urls['quote'])}">TWSE 盤中行情</a>
+      <a href="{html_lib.escape(source_urls['price_history'])}">FinMind 日成交資料</a>
       <a href="{html_lib.escape(source_urls['mops_listed'])}">MOPS 上市公告</a>
       <a href="{html_lib.escape(source_urls['mops_otc'])}">MOPS 上櫃公告</a>
     </div>
+    {render_market_overview(stock)}
   </header>
 
   <nav class="tabs" aria-label="股票分析分頁">
     <button class="tab active" type="button" data-tab="snapshot">總覽</button>
+    <button class="tab" type="button" data-tab="technical">技術線圖</button>
     <button class="tab" type="button" data-tab="quarterly">最新季報</button>
     <button class="tab" type="button" data-tab="operations">經營分析</button>
     <button class="tab" type="button" data-tab="profit">獲利分析</button>
@@ -1510,13 +2250,18 @@ def render_html(analysis: dict[str, Any]) -> str:
     <section id="snapshot" class="tab-content active">
       <h2 class="section-title">總覽</h2>
       <div class="snapshot-grid">
-        {kpi_card("最新收盤價", f"{fmt_number(stock.get('close'), 2)} 元", f"日期 {stock.get('date') or 'n/a'}；變動 {fmt_delta(stock.get('change'), 2, ' 元')}", "blue")}
+        {kpi_card(stock.get('quote_kind') or "最新收盤價", f"{fmt_number(stock.get('close'), 2)} 元", f"時間 {stock.get('quote_time') or stock.get('date') or 'n/a'}；變動 {fmt_delta(stock.get('change'), 2, ' 元')}（{fmt_delta(stock.get('change_percent'), 2)}）", "blue")}
         {kpi_card(f"{latest_quarter_label} 營收", f"{fmt_number(metric(quarterly_metrics, latest_quarter, 'revenue'), 0)} 億", compare_text(quarterly_metrics, quarterly_periods, "revenue"), "green")}
         {kpi_card("最近營收年度", f"{fmt_number(metric(metrics, latest, 'revenue'), 0)} 億", compare_text(metrics, years, "revenue"), "orange")}
         {kpi_card("合理性檢查", "通過" if not sanity else f"{len(sanity)} 項提醒", "有提醒不代表資料錯誤，需人工核對", "purple")}
       </div>
       {insight_box("今日摘要", insights["snapshot"])}
       {warning_block}
+    </section>
+
+    <section id="technical" class="tab-content">
+      <h2 class="section-title">K 線與技術指標</h2>
+      {render_technical_panel(analysis.get('market_data') or {})}
     </section>
 
     <section id="quarterly" class="tab-content">
@@ -1612,7 +2357,7 @@ def render_html(analysis: dict[str, Any]) -> str:
     </section>
 
     <p class="footer-note">
-      來源：FinMind API、TWSE OpenAPI、TPEx OpenAPI、公開資訊觀測站。金額單位若未特別標示均為新台幣億元。
+      來源：FinMind API、TWSE MIS、TWSE OpenAPI、TPEx OpenAPI、公開資訊觀測站。金額單位若未特別標示均為新台幣億元。
       本分析由程式自動整理，僅供財務研究與學習參考，不構成買賣建議或投資招攬。
       背景圖來源：Unsplash。
     </p>
@@ -1632,6 +2377,7 @@ def render_html(analysis: dict[str, Any]) -> str:
       red: "#b42318",
       gray: "#64748b"
     }};
+    {technical_chart_script()}
     const value = key => years.map(year => metrics[year]?.[key] ?? null);
     const quarterValue = key => quarterPeriods.map(period => quarterMetrics[period]?.[key] ?? null);
     const moneyAxis = {{ ticks: {{ callback: v => v.toLocaleString() }} }};
@@ -1643,6 +2389,9 @@ def render_html(analysis: dict[str, Any]) -> str:
         document.querySelectorAll(".tab-content").forEach(item => item.classList.remove("active"));
         button.classList.add("active");
         document.getElementById(button.dataset.tab).classList.add("active");
+        if (button.dataset.tab === "technical") {{
+          window.setTimeout(renderTechnicalCharts, 0);
+        }}
       }});
     }});
 
@@ -1896,7 +2645,22 @@ LINE webhook 收到股票代碼或名稱後，會產生 HTML 分析頁並回傳�
 
 
 def generate_analysis(query: str, output_root: Path = DEFAULT_OUTPUT_ROOT, public_base_url: str | None = None) -> dict[str, Any]:
-    stock = resolve_stock(query)
+    stock = enrich_stock_quote(resolve_stock(query))
+    try:
+        market_data = fetch_market_history(stock)
+    except StockAnalysisError as exc:
+        market_data = {
+            "bars": [],
+            "source": "盤中與歷史行情暫時無法完整取得",
+            "history_url": finmind_price_url(
+                stock["code"],
+                (now_taipei().date() - dt.timedelta(days=PRICE_LOOKBACK_DAYS)).isoformat(),
+            ),
+            "intraday_url": stock.get("source_url") or "",
+            "intraday_api_url": stock.get("quote_api_url") or "",
+            "updated_at": stock.get("quote_time") or stock.get("date") or "",
+            "warning": str(exc),
+        }
     financials = fetch_financials(stock["code"], stock)
     if not stock.get("name"):
         stock["name"] = financials.get("company_name") or stock["code"]
@@ -1910,7 +2674,7 @@ def generate_analysis(query: str, output_root: Path = DEFAULT_OUTPUT_ROOT, publi
     quarterly_metrics = compute_metrics(quarterly_financials, quarterly_periods)
     all_quarterly_metrics = compute_metrics(quarterly_financials, quarterly_financials["available_periods"])
     fetched_at = now_taipei().replace(microsecond=0).isoformat()
-    metadata = build_metadata(stock, years, quarterly_periods, fetched_at, financials)
+    metadata = build_metadata(stock, years, quarterly_periods, fetched_at, financials, market_data)
     official_verification = verify_official_financials(
         stock,
         all_quarterly_metrics,
@@ -1935,6 +2699,7 @@ def generate_analysis(query: str, output_root: Path = DEFAULT_OUTPUT_ROOT, publi
 
     analysis = {
         "stock": stock,
+        "market_data": market_data,
         "years": years,
         "metrics": metrics,
         "quarterly": {
