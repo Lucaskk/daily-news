@@ -25,7 +25,8 @@ sources: []
 每日新聞報告會放在 `wiki/daily/YYYY/MM/YYYY-MM-DD/`。
 
 - [每日全球與科技 AI 新聞產製規則](daily/README.md) - 全球新聞採 24 小時窗，科技／AI 產品採 7 天窗，並包含跨日去重、重大續報、來源紀錄與發布驗證規則。
-- [科技產品跨日去重比對表](daily/product-news-ledger.md) - 由歷史日報自動彙整公司、產品／更新、時間、續報狀態、來源網址與比對鍵，供每日選題前快速核對。
+- [科技產品新聞歷史比對表](daily/product-news-ledger.md) - 完整歷史索引，只能以公司、產品、更新內容或比對鍵執行 `rg` 並讀取命中列。
+- [科技產品最近 7 天比對表](daily/product-news-recent-7d.md) - 歷史 `rg` 無命中時才完整讀取的精簡二次確認清單。
 
 - [2026-09-02 Daily News](daily/2026/09/2026-09-02/daily-news-2026-09-02.md) - 今日主軸是「安全風險進入可重複攻防循環，AI 產品把能力與存取條件綁得更緊」：美伊第二波互擊、Kyiv 長時空襲、Nepal／Tibet 死亡破千、G20 貿易失衡表述、PIF Taiwan 壓力、Germany 正式歸因 Leipzig 無人機、New York climate superfund 判決、Cuba 觀光數據、Turkey 核電與 Canada 補選。科技／AI 聚焦 Claude Fable／Mythos 5.1、ChatGPT healthcare／Epic、OpenAI Astra、CrowdStrike SafeMind、Waymo 三城、Qualcomm Dragonwing、Reducto r-1 和 LogicGate GRC Agents。
 - [2026-09-02 Slides](daily/2026/09/2026-09-02/slides-2026-09-02.html) - 今日新聞網頁版投影片。

@@ -1,5 +1,12 @@
 # Knowledge Base Log
 
+## [2026-09-02] config | Token-efficient product deduplication
+
+- Changed product deduplication to a candidate-first workflow: use `rg` across the complete historical ledger, daily reports and source notes with company, product, update-action and comparison-key terms, then read only matching lines or necessary context.
+- The model must not load the complete historical ledger or all prior reports. Only when the historical search has no match may it read the compact recent-seven-day table in full.
+- Reduced each ledger row to one product change with exactly eight fields: company, product, update content, publication time, capture date, status, source URLs and comparison key. Multiple reports for the same change remain in one row.
+- Added `wiki/daily/product-news-recent-7d.md` as the only product table intended for full-file fallback reading.
+
 ## [2026-09-02] config | Product-news window and deduplication ledger
 
 - Kept global / world news on the strict 24-hour window and widened only technology / AI product events to a separate 7-day (168-hour) window.

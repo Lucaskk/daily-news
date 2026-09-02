@@ -1,17 +1,20 @@
 #!/usr/bin/env python3
-"""Build a searchable product-news ledger from all historical daily reports."""
+"""Build query-only historical and compact seven-day product-news ledgers."""
 
 from __future__ import annotations
 
 import hashlib
 import re
+import sys
 from dataclasses import dataclass
+from datetime import date, timedelta
 from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
 DAILY_ROOT = ROOT / "wiki" / "daily"
 OUTPUT = DAILY_ROOT / "product-news-ledger.md"
+RECENT_OUTPUT = DAILY_ROOT / "product-news-recent-7d.md"
 
 TECH_HEADING = re.compile(
     r"^##\s+.*(?:科技.*(?:AI|人工智慧)|(?:Technology|Tech).*AI|AI.*(?:Product|產品))",
@@ -66,12 +69,12 @@ COMPANY_PATTERNS = [
 
 @dataclass(frozen=True)
 class Item:
-    capture_date: str
     company: str
-    title: str
+    product: str
+    update: str
     published_at: str
+    capture_date: str
     status: str
-    prior_date: str
     urls: tuple[str, ...]
     key: str
 
@@ -120,15 +123,42 @@ def publication_time(block: str, capture_date: str) -> str:
     return f"{capture_date}（當日報告未單列時間）"
 
 
-def prior_capture(block: str, capture_date: str, continuation: bool) -> str:
-    if not continuation:
-        return capture_date
-    candidates = [d for d in DATE_RE.findall(block) if d < capture_date]
-    return min(candidates) if candidates else "續報；前次日期未能由區塊自動解析"
+def update_content(title: str) -> str:
+    return re.sub(r"^續報[｜|]\s*", "", title).strip()
 
 
-def comparison_key(company: str, title: str) -> str:
-    normalized = re.sub(r"[^0-9a-z\u4e00-\u9fff]+", "", f"{company}|{title}".lower())
+def product_for(company: str, title: str) -> str:
+    candidate = update_content(title)
+    company_aliases = {company}
+    company_aliases.update(part.strip() for part in re.split(r"[/／]", company))
+    for alias in sorted(company_aliases, key=len, reverse=True):
+        candidate = re.sub(
+            rf"^{re.escape(alias)}(?:\s*[｜|:：-]\s*|\s+)",
+            "",
+            candidate,
+            count=1,
+            flags=re.IGNORECASE,
+        )
+
+    candidate = re.sub(
+        r"^(?:正式)?(?:預告|推出|發表|發布|宣布|上線|開放|新增|更新|擴大|導入|完成|收購)\s*",
+        "",
+        candidate,
+    )
+    product = re.split(
+        r"[，。；;]|\s+(?:將|主打|結合|提供|支援|加入|帶來|進入|擴至|開放|成為)\s*",
+        candidate,
+        maxsplit=1,
+    )[0].strip(" -—:：")
+    if product.startswith(("在 ", "於 ")) or len(product) > 80:
+        return company
+    return product or company
+
+
+def comparison_key(company: str, product: str, update: str) -> str:
+    normalized = re.sub(
+        r"[^0-9a-z\u4e00-\u9fff]+", "", f"{company}|{product}|{update}".lower()
+    )
     return hashlib.sha256(normalized.encode("utf-8")).hexdigest()[:12]
 
 
@@ -141,17 +171,19 @@ def from_heading_section(section: str, capture_date: str) -> list[Item]:
         title = match.group(2).strip()
         continuation = title.startswith("續報｜")
         company = company_for(title)
+        product = product_for(company, title)
+        update = update_content(title)
         urls = tuple(dict.fromkeys(clean_url(url) for url in URL_RE.findall(block)))
         items.append(
             Item(
-                capture_date=capture_date,
                 company=company,
-                title=title,
+                product=product,
+                update=update,
                 published_at=publication_time(block, capture_date),
+                capture_date=capture_date,
                 status="續報" if continuation else "首次收錄",
-                prior_date=prior_capture(block, capture_date, continuation),
                 urls=urls,
-                key=comparison_key(company, title),
+                key=comparison_key(company, product, update),
             )
         )
     return items
@@ -174,17 +206,19 @@ def from_table_section(section: str, capture_date: str) -> list[Item]:
             continue
         continuation = title.startswith("續報｜")
         company = company_for(title)
+        product = product_for(company, title)
+        update = update_content(title)
         urls = tuple(dict.fromkeys(clean_url(url) for url in URL_RE.findall(line)))
         items.append(
             Item(
-                capture_date=capture_date,
                 company=company,
-                title=title,
+                product=product,
+                update=update,
                 published_at=f"{capture_date}（當日報告未單列時間）",
+                capture_date=capture_date,
                 status="續報" if continuation else "首次收錄",
-                prior_date="續報；請查來源筆記" if continuation else capture_date,
                 urls=urls,
-                key=comparison_key(company, title),
+                key=comparison_key(company, product, update),
             )
         )
     return items
@@ -204,27 +238,31 @@ def table_escape(value: str) -> str:
     return value.replace("|", "\\|").replace("\n", " ").strip()
 
 
-def render(items: list[Item], report_count: int) -> str:
+def render_rows(items: list[Item]) -> str:
     rows = []
-    for item in sorted(items, key=lambda x: (x.capture_date, x.title), reverse=True):
+    for item in sorted(items, key=lambda x: (x.capture_date, x.update), reverse=True):
         source_links = "<br>".join(item.urls) if item.urls else "當日報告未保留可解析網址"
         rows.append(
             "| "
             + " | ".join(
                 table_escape(value)
                 for value in (
-                    item.capture_date,
                     item.company,
-                    item.title,
+                    item.product,
+                    item.update,
                     item.published_at,
+                    item.capture_date,
                     item.status,
-                    item.prior_date,
                     source_links,
                     item.key,
                 )
             )
             + " |"
         )
+    return "\n".join(rows)
+
+
+def render_full(items: list[Item], report_count: int) -> str:
     return f"""---
 title: "科技產品新聞歷史比對表"
 type: product-news-ledger
@@ -235,26 +273,68 @@ tags: [daily-news, tech-products, deduplication, provenance]
 
 # 科技產品新聞歷史比對表
 
-此表由 `scripts/build_product_news_ledger.py` 掃描所有歷史日報的科技／AI 區段自動產生，用於每日選題前快速去重。它是輔助索引，不取代對 `daily-news-*.md`、`source-notes-*.md` 與原始來源的全文搜尋及人工事件判讀。
+此表由 `scripts/build_product_news_ledger.py` 掃描所有歷史日報的科技／AI 區段自動產生。**模型不得整份讀取本檔**；每個候選只用公司名、產品名、更新動作與比對鍵執行 `rg`，並只讀命中列。
 
 - 掃描日報：{report_count} 份。
 - 擷取科技／AI 項目：{len(items)} 則。
 - 更新方式：`python3 scripts/build_product_news_ledger.py`
-- 時間限制：全球新聞仍採 24 小時；科技產品候選可採 7 天，但已收錄的同一產品變更不得重複。
+- 查詢方式：使用窄化組合 pattern，例如 `rg -n -i '公司.*產品|產品.*公司|比對鍵' wiki/daily/product-news-ledger.md`，不要用公司名單獨匹配大量列。
+- 無命中時：完整讀取 `wiki/daily/product-news-recent-7d.md` 做最後確認，不讀取本檔全文。
 
-| 收錄日期 | 公司／組織 | 產品／更新內容 | 事件／發佈時間 | 狀態 | 首次或前次相關日期 | 參考網址 | 比對鍵 |
+| 公司 | 產品 | 更新內容 | 發佈時間 | 收錄日期 | 狀態 | 來源網址 | 比對鍵 |
 |---|---|---|---|---|---|---|---|
-{chr(10).join(rows)}
+{render_rows(items)}
+"""
+
+
+def render_recent(items: list[Item], report_count: int) -> str:
+    known_dates = [date.fromisoformat(item.capture_date) for item in items if item.capture_date != "unknown"]
+    latest = max(known_dates, default=date.today())
+    start = latest - timedelta(days=6)
+    recent = [
+        item
+        for item in items
+        if item.capture_date != "unknown" and date.fromisoformat(item.capture_date) >= start
+    ]
+    return f"""---
+title: "科技產品新聞最近 7 天比對表"
+type: product-news-ledger-recent
+updated: {latest.isoformat()}
+status: generated
+tags: [daily-news, tech-products, deduplication, recent]
+---
+
+# 科技產品新聞最近 7 天比對表
+
+本檔是歷史 `rg` 搜尋沒有命中時的二次確認清單，可以完整讀取。涵蓋收錄日期 `{start.isoformat()}` 至 `{latest.isoformat()}`；產品是否符合精確 168 小時發布窗，仍以當日來源筆記判定。
+
+- 掃描日報：{report_count} 份。
+- 最近 7 天項目：{len(recent)} 則。
+- 完整歷史只按需 `rg`：`wiki/daily/product-news-ledger.md`
+
+| 公司 | 產品 | 更新內容 | 發佈時間 | 收錄日期 | 狀態 | 來源網址 | 比對鍵 |
+|---|---|---|---|---|---|---|---|
+{render_rows(recent)}
 """
 
 
 def main() -> None:
+    if len(sys.argv) > 1:
+        if sys.argv[1] == "--key" and len(sys.argv) == 5:
+            print(comparison_key(sys.argv[2], sys.argv[3], sys.argv[4]))
+            return
+        raise SystemExit("Usage: build_product_news_ledger.py [--key COMPANY PRODUCT UPDATE]")
+
     reports = sorted(DAILY_ROOT.glob("**/daily-news-*.md"))
     items: list[Item] = []
     for report in reports:
         items.extend(extract_items(report))
-    OUTPUT.write_text(render(items, len(reports)), encoding="utf-8")
-    print(f"Wrote {len(items)} product records from {len(reports)} reports to {OUTPUT}")
+    OUTPUT.write_text(render_full(items, len(reports)), encoding="utf-8")
+    RECENT_OUTPUT.write_text(render_recent(items, len(reports)), encoding="utf-8")
+    print(
+        f"Wrote {len(items)} product records from {len(reports)} reports to "
+        f"{OUTPUT} and {RECENT_OUTPUT}"
+    )
 
 
 if __name__ == "__main__":
