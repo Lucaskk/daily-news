@@ -7,6 +7,9 @@
 - Added `scripts/build_product_news_ledger.py` and generated `wiki/daily/product-news-ledger.md` with 538 historical product records from 77 daily reports. The ledger is a comparison aid; full historical report and source-note search remains mandatory.
 - Added the rule that 1-3 qualified, non-duplicate technology products appear as expandable cards on the first slide, while the complete technology section precedes the global Top 10. Product cards are omitted when no qualified item exists.
 - Updated the 2026-09-02 first slide with three independently sourced product highlights and cache version `20260902-080111-ai-news-r2`.
+- Published the scoped configuration and presentation update through a clean clone in commit `3fd5c96`; GitHub Pages verification passed for the dated deck, latest redirect, product ledger and production rules.
+- LINE watchdog remained the only delivery path and exited 0 with `already sent` at `2026-09-02T12:01:16+08:00`, so no duplicate message was sent.
+- Localhost preview verified on port 4175 for the latest redirect and the dated deck with the technology-product first slide.
 
 ## [2026-09-02] ingest | Daily global and tech AI news
 
