@@ -1,5 +1,13 @@
 # Knowledge Base Log
 
+## [2026-09-02] config | Product-news window and deduplication ledger
+
+- Kept global / world news on the strict 24-hour window and widened only technology / AI product events to a separate 7-day (168-hour) window.
+- Added Cool3c and Engadget to the required product-discovery sweep, with official product pages, release notes and company announcements preferred for factual verification.
+- Added `scripts/build_product_news_ledger.py` and generated `wiki/daily/product-news-ledger.md` with 538 historical product records from 77 daily reports. The ledger is a comparison aid; full historical report and source-note search remains mandatory.
+- Added the rule that 1-3 qualified, non-duplicate technology products appear as expandable cards on the first slide, while the complete technology section precedes the global Top 10. Product cards are omitted when no qualified item exists.
+- Updated the 2026-09-02 first slide with three independently sourced product highlights and cache version `20260902-080111-ai-news-r2`.
+
 ## [2026-09-02] ingest | Daily global and tech AI news
 
 - Created `wiki/daily/2026/09/2026-09-02/daily-news-2026-09-02.md` with exactly 10 global items and eight technology / AI product, model, healthcare, cybersecurity, mobility, edge-device, document or governance items.
