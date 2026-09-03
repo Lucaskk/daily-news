@@ -7,6 +7,8 @@
 - Rebuilt the product ledger, then used candidate-first narrow `rg` history checks for Huawei, Acer, iRobot, Dell, Miele and Genesys before the recent-seven-day fallback confirmation; the full historical table was not loaded into the report workflow.
 - Created `slides-2026-09-03.html` as a standalone deck with three product focus cards on the first slide, technology before global news, themed remote backgrounds, keyboard / touch navigation and per-card expandable source blocks.
 - Updated the latest redirect, root entry, knowledge-base index and overview for the latest package.
+- Published scoped commit `6833d29` to `main`; GitHub Pages verified the dated deck and the latest redirect at HTTP 200.
+- LINE watchdog was the only delivery path and exited 0 with `Sent LINE message` at `2026-09-03T08:16:35+08:00`.
 
 ## [2026-09-02] config | Token-efficient product deduplication
 
