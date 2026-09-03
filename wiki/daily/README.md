@@ -122,7 +122,21 @@ tags: [daily-news, rules, deduplication, provenance]
 - 日報、來源筆記與簡報的選題、標題及續報標記必須一致。
 - 若發現不合規的歷史重複，應修正新聞清單並在來源筆記保留稽核原因，不可直接抹除來源紀錄。
 
-## 十、2026-06-14 跨日稽核紀錄
+## 十、可靠性、執行環境與發布順序
+
+每日排程必須依下列順序執行，避免非必要的本機預覽或工具依賴阻擋手機發布與 LINE 通知：
+
+1. 先重建完整歷史與最近 7 天科技產品比對表；對每個候選先用 `rg` 查全部歷史，只讀命中內容，無命中時才整份讀最近 7 天表。不得把完整歷史表或數十份歷史日報載入模型。
+2. 使用 Python 標準函式庫完成必要的結構驗證；不要安裝或載入 workspace dependencies。
+3. 若既有生成器或 JavaScript 語法檢查確實需要 Node，先使用 `command -v node`；若找不到，固定改用 `/Applications/ChatGPT.app/Contents/Resources/cua_node/bin/node`。不得因 PATH 沒有 `node` 而呼叫 dependency loader、建立套件環境或中止發布。
+4. 發布到 GitHub `main`，確認當日 dated deck 與 `latest-slides.html` 在 GitHub Pages 均回應 HTTP 200。
+5. 發布驗證成功後，執行 `/Users/lucas/.codex/automations/ai/line_watchdog.py`。這是自動化唯一的 LINE 發送入口；不得再依專案 `.env` 判斷或直接呼叫其他 LINE sender，以免設定分岔、重複發送或日誌誤報。
+6. LINE 程式結束碼為 0 且輸出包含 `Sent LINE message` 或 `already sent` 時，才可把 LINE 狀態記為成功；任何其他結果都要在 `wiki/log.md` 與 automation memory 記錄實際錯誤。
+7. localhost 預覽是最後的 best-effort 步驟。Port、背景 server、瀏覽器渲染或 Playwright 問題不得阻擋 GitHub 發布、LINE 發送或最終摘要。
+
+若當日檔案已產生但排程即將中斷，優先完成「發布 → LINE → 狀態紀錄」，不要把剩餘時間花在可選的本機 server 或視覺檢查。
+
+## 十一、2026-06-14 跨日稽核紀錄
 
 - 稽核範圍：2026-05-29 至 2026-06-14，共 16 份日報。
 - 近期 2026-06-10 至 2026-06-14 未發現未標示的同事件重複；美伊、烏克蘭、Apple、OpenAI 與 Anthropic 等重複主線均有不同事件節點或具體產品更新。

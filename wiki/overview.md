@@ -2,7 +2,7 @@
 title: "Overview"
 type: overview
 created: 2026-05-24
-updated: 2026-09-02
+updated: 2026-09-03
 status: seed
 tags: [overview]
 sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
@@ -19,6 +19,12 @@ sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
 - 抽出持續出現的人物、組織、事件、政策、技術與市場概念。
 - 維護跨來源的矛盾、時間線、趨勢與待查問題。
 - 將重要查詢結果回寫成可累積的 wiki 頁面。
+
+## 2026-09-03 Daily News Synthesis
+
+- 全球安全主軸轉為「衝突、災害與公共衛生的跨境成本」：海灣攻防波及美國盟國與荷姆茲航運、俄軍再壓迫 Ukraine 的食品物流與住宅、Congo Ebola 死亡破 3,000、Nepal 洪災改為跨國失聯名單核對，而 EU 對 Leipzig 無人機案仍在尋找非軍事共同回應。
+- 制度與問責節點集中在法律程序：Joshua Wong 的第二宗國安案認罪、Nicaragua 初步修憲延長任期並限制反對派、Malta 記者命案的無罪判決，都必須後續追蹤量刑、二讀／複決與其他究責程序。
+- 科技／AI 今日聚焦「AI 具體化為終端與可治理流程」：Huawei、Acer、iRobot、Dell 與 Miele 分別推進跨裝置、本地 AI、家用機器人、輕量電腦和家電感知；Genesys 則把 APT-2、MCP、A2A 與語音代理放到企業權限和稽核條件下。
 
 ## 2026-09-02 Daily News Synthesis
 

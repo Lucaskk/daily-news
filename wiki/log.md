@@ -1,5 +1,13 @@
 # Knowledge Base Log
 
+## [2026-09-03] ingest | Daily global and tech AI news
+
+- Created `wiki/daily/2026/09/2026-09-03/` with exactly 10 global news items and six non-duplicated technology / AI product items.
+- Recorded the Asia/Taipei 24-hour global window, separate seven-day product window, every item’s first-publication or event basis, material continuations, source URLs and uncertainty in the source notes.
+- Rebuilt the product ledger, then used candidate-first narrow `rg` history checks for Huawei, Acer, iRobot, Dell, Miele and Genesys before the recent-seven-day fallback confirmation; the full historical table was not loaded into the report workflow.
+- Created `slides-2026-09-03.html` as a standalone deck with three product focus cards on the first slide, technology before global news, themed remote backgrounds, keyboard / touch navigation and per-card expandable source blocks.
+- Updated the latest redirect, root entry, knowledge-base index and overview for the latest package.
+
 ## [2026-09-02] config | Token-efficient product deduplication
 
 - Changed product deduplication to a candidate-first workflow: use `rg` across the complete historical ledger, daily reports and source notes with company, product, update-action and comparison-key terms, then read only matching lines or necessary context.
@@ -11,10 +19,10 @@
 
 ## [2026-09-02] config | Product-news window and deduplication ledger
 
-- Kept global / world news on the strict 24-hour window and widened only technology / AI product events to a separate 7-day (168-hour) window.
-- Added Cool3c and Engadget to the required product-discovery sweep, with official product pages, release notes and company announcements preferred for factual verification.
-- Added `scripts/build_product_news_ledger.py` and generated `wiki/daily/product-news-ledger.md` with 538 historical product records from 77 daily reports. The ledger is a comparison aid; full historical report and source-note search remains mandatory.
-- Added the rule that 1-3 qualified, non-duplicate technology products appear as expandable cards on the first slide, while the complete technology section precedes the global Top 10. Product cards are omitted when no qualified item exists.
+- Kept global/world news on the exact 24-hour cutoff window and expanded only technology / AI product candidates to a separate seven-day window; product entries remain optional and cannot be padded with repeats, deals, old reviews or rumors.
+- Added Cool3c and Engadget as mandatory product-discovery sources while preserving official company/product announcements as the preferred verification source for specifications, pricing, availability and release timing.
+- Added `scripts/build_product_news_ledger.py` and generated `wiki/daily/product-news-ledger.md` with 538 historical product records from 77 daily reports, including company, product/update, time basis, continuation status, prior date, complete source URLs and comparison key.
+- Updated presentation rules so the first slide shows up to three expandable technology-product highlights when qualified items exist, and the complete technology-product section appears before the global Top 10.
 - Updated the 2026-09-02 first slide with three independently sourced product highlights and cache version `20260902-080111-ai-news-r2`.
 - Published the scoped configuration and presentation update through a clean clone in commit `3fd5c96`; GitHub Pages verification passed for the dated deck, latest redirect, product ledger and production rules.
 - LINE watchdog remained the only delivery path and exited 0 with `already sent` at `2026-09-02T12:01:16+08:00`, so no duplicate message was sent.

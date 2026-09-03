@@ -1,21 +1,27 @@
 ---
 title: "科技產品新聞最近 7 天比對表"
 type: product-news-ledger-recent
-updated: 2026-09-02
+updated: 2026-09-03
 status: generated
 tags: [daily-news, tech-products, deduplication, recent]
 ---
 
 # 科技產品新聞最近 7 天比對表
 
-本檔是歷史 `rg` 搜尋沒有命中時的二次確認清單，可以完整讀取。涵蓋收錄日期 `2026-08-27` 至 `2026-09-02`；產品是否符合精確 168 小時發布窗，仍以當日來源筆記判定。
+本檔是歷史 `rg` 搜尋沒有命中時的二次確認清單，可以完整讀取。涵蓋收錄日期 `2026-08-28` 至 `2026-09-03`；產品是否符合精確 168 小時發布窗，仍以當日來源筆記判定。
 
-- 掃描日報：77 份。
-- 最近 7 天項目：37 則。
+- 掃描日報：78 份。
+- 最近 7 天項目：33 則。
 - 完整歷史只按需 `rg`：`wiki/daily/product-news-ledger.md`
 
 | 公司 | 產品 | 更新內容 | 發佈時間 | 收錄日期 | 狀態 | 來源網址 | 比對鍵 |
 |---|---|---|---|---|---|---|---|
+| iRobot | Roomba Max 875 Combo 與 Plus 678 Combo | iRobot 推出 Roomba Max 875 Combo 與 Plus 678 Combo，導入 SealForce 與 AI 拖地 | 2026-09-02 00:00:00（官方僅列日期）（Asia/Taipei） | 2026-09-03 | 首次收錄 | https://media.irobot.com/2026-09-02-iRobot-Redefines-Hands-Free-Cleaning-with-its-Most-Powerful-Robot-Ever,-the-Roomba-R-Max-875-Combo | 944ed97e0d5e |
+| Miele IFA 展示 G8 | Diamond 洗碗機與 AI CulinaryCoach 烹飪助理 | Miele IFA 展示 G8 Diamond 洗碗機與 AI CulinaryCoach 烹飪助理 | 2026-09-02 00:00:00（官方僅列日期）（Asia/Taipei） | 2026-09-03 | 首次收錄 | https://www.miele.de/en/m/miele-points-the-way-to-the-end-of-housework-at-ifa-2026-8470.htm<br>https://www.ifa-berlin.com/press-releases/ifa2026-media-days1 | ae6d9128ed19 |
+| Huawei | Huawei | Huawei 在 Munich 發布 WATCH GT 7 Pro、WATCH 6 Pro、MatePad Pro 12 等九項新品 | 2026-09-02 00:00:00（官方僅列日期）（Asia/Taipei） | 2026-09-03 | 首次收錄 | https://consumer.huawei.com/en/press/events/2026/huawei-innovative-product-launch-september-02/ | 6750ead88432 |
+| Genesys 強化 Agentic Virtual | Agent：APT-2、Deepgram、MCP 與 A2A 路線圖 | Genesys 強化 Agentic Virtual Agent：APT-2、Deepgram、MCP 與 A2A 路線圖 | 2026-09-02 00:00:00（官方僅列日期）（Asia/Taipei） | 2026-09-03 | 首次收錄 | https://www.genesys.com/company/newsroom/announcements/genesys-enhances-agentic-virtual-agent-amid-growing-enterprise-adoption | 25646a3f71b6 |
+| Dell 14S 主打 1.15 | 公斤、選配 21 小時續航與 Wildcat Lake | Dell 14S 主打 1.15 公斤、選配 21 小時續航與 Wildcat Lake | 2026-09-02 18:48:00（Asia/Taipei） | 2026-09-03 | 首次收錄 | https://www.cool3c.com/article/251596 | 6d84e3411164 |
+| NVIDIA | Acer 發表 SFF RTX Spark 與 Veriton RI110 | Acer 發表 SFF RTX Spark 與 Veriton RI110，主打本地／混合 agentic AI | 2026-09-02 00:00:00（官方僅列日期）（Asia/Taipei） | 2026-09-03 | 首次收錄 | https://news.acer.com/<br>https://www.ifa-berlin.com/press-releases/ifa2026-media-days1 | 3e7318b75b13 |
 | Waymo | Waymo | Waymo 在 Denver、San Diego 與 Tampa 開放一般乘客搭乘，自駕車服務擴至 14 城 | 2026-09-01 22:00:05（Asia/Taipei） | 2026-09-02 | 首次收錄 | https://waymo.com/blog/2026/09/ride-in-denver-san-diego-tampa/<br>https://www.axios.com/local/denver/2026/09/01/waymo-launches-denver<br>https://www.axios.com/local/tampa-bay/2026/09/01/waymo-launches-tampa-robotaxis | 24d0218b27cd |
 | Reducto | r-1 文件解析模型 | Reducto 預告 r-1 文件解析模型，主打每頁 1 美分的複雜文件 AI 前處理 | 2026-09-02 00:00:00（Asia/Taipei） | 2026-09-02 | 首次收錄 | https://www.prnewswire.com/news-releases/reducto-unveils-a-frontier-parsing-model-that-makes-the-worlds-hardest-documents-ai-ready-for-1-a-page-302866077.html | a3ca2f1f4056 |
 | Qualcomm | Dragonwing Q-2390 與 IQ-2390 | Qualcomm 發表 Dragonwing Q-2390 與 IQ-2390，將邊緣 AI 下放至零售與工業裝置 | 2026-09-01 21:19:00（Asia/Taipei） | 2026-09-02 | 首次收錄 | https://www.qualcomm.com/news/releases/2026/09/-qualcomm-introduces-dragonwing-q-2390-and-iq-2390-processors--e<br>https://www.newsquawk.com/headlines/qualcomm-qcom-introduces-dragonwing-q-2390-and-iq-2390-processors-expanding-access-to-intelligent-connected-devices<br>https://www.cnx-software.com/2026/09/01/qualcomm-introduces-dragonwing-q-2390-and-iq-2390-for-consumer-and-industrial-aiot-applications/?amp=1 | 0a0dc7121d3d |
@@ -43,13 +49,3 @@ tags: [daily-news, tech-products, deduplication, recent]
 | Sony | Music 與 Warner Chappell 起訴 Anthropic | Sony Music 與 Warner Chappell 起訴 Anthropic，稱 Claude 訓練涉大規模音樂著作權侵害 | 2026-08-30 02:41:59（Asia/Taipei） | 2026-08-30 | 首次收錄 | https://techcrunch.com/2026/08/29/sony-music-warner-sue-anthropic-alleging-a-brazen-campaign-of-intellectual-property-theft/ | 29f6e4db64fd |
 | NVIDIA | 的 AI 優勢從 GPU 擴大到 Vera CPU、Groq 3 LPX 與 rack-scale 資料流 | Nvidia 的 AI 優勢從 GPU 擴大到 Vera CPU、Groq 3 LPX 與 rack-scale 資料流 | 2026-08-29 21:00:00（Asia/Taipei） | 2026-08-30 | 首次收錄 | https://techcrunch.com/2026/08/29/nvidias-ai-advantage-is-moving-beyond-the-gpu/ | 7367bdbc30d8 |
 | Hollywood celebrities 轉向 microdrama | apps | Hollywood celebrities 轉向 microdrama apps，vertical short-form paid video 進入明星與平台競爭 | 2026-08-30 00:10:00（Asia/Taipei） | 2026-08-30 | 首次收錄 | https://techcrunch.com/2026/08/29/hollywood-celebs-are-getting-into-microdrama-apps/ | 36352ce5f21c |
-| Runable | 2100 萬美元 Series A | Runable 完成 2100 萬美元 Series A，從 vibe coding 轉向替小企業「找客戶」的 AI agents | 2026-08-26 19:00:00（Asia/Taipei） | 2026-08-27 | 首次收錄 | https://techcrunch.com/2026/08/26/runable-hits-21m-to-bet-ai-agents-can-go-from-building-businesses-to-growing-them/ | 9f51da26ec9e |
-| Radar 將 13 萬個 | podcasts 轉成可搜尋、可供 AI agents 使用的音訊情報 API 與 MCP | Radar 將 13 萬個 podcasts 轉成可搜尋、可供 AI agents 使用的音訊情報 API 與 MCP | 2026-08-26 23:47:28（Asia/Taipei） | 2026-08-27 | 首次收錄 | https://techcrunch.com/2026/08/26/radar-makes-podcasts-searchable-and-usable-by-ai-agents/ | 8de60644dc19 |
-| Perceptron 推 open-weight Isaac | 0.5 | Perceptron 推 open-weight Isaac 0.5，瞄準倉儲與工廠的 visual AI / physical AI | 2026-08-26 23:00:00（Asia/Taipei） | 2026-08-27 | 首次收錄 | https://techcrunch.com/2026/08/26/ex-meta-scientists-want-to-bring-visual-ai-to-the-factory-floor/ | 16ad1ccae8c3 |
-| OpenAI | Hugging Face 事件報告 | OpenAI 發布 Hugging Face 事件報告，揭示 agent message board、reward hacking 與新 containment 措施 | 2026-08-27 03:05:22（Asia/Taipei） | 2026-08-27 | 續報 | https://openai.com/index/hugging-face-incident-and-the-road-ahead/<br>https://cdn.openai.com/pdf/67869394-cb91-4c12-888c-5cbd85c7814c/OpenAI-Hugging-Face%20Incident-Technical-Report.pdf<br>https://techcrunch.com/2026/08/26/openai-releases-its-official-report-on-the-hugging-face-breach/<br>https://lucaskk.github.io/daily-news/wiki/daily/2026/07/2026-07-22/daily-news-2026-07-22.md | 62a780c6cbe5 |
-| India voice AI startup | Ringg 獲 Peak XV 追加 1000 萬美元 | India voice AI startup Ringg 獲 Peak XV 追加 1000 萬美元，企業語音代理走向多通道 workflow | 2026-08-26 11:30:00（Asia/Taipei） | 2026-08-27 | 首次收錄 | https://techcrunch.com/2026/08/25/indias-ringg-gets-backing-from-peak-xv-as-it-pushes-voice-ai-past-the-phone-call/ | b71911e0210e |
-| CISA 稱 7 月逾 | 100 個 U.S. water systems 的 exposed PLCs 遭攻擊 | CISA 稱 7 月逾 100 個 U.S. water systems 的 exposed PLCs 遭攻擊，AI 輔助攻擊腳本成 OT 風險 | 2026-08-26 22:31:05（Asia/Taipei） | 2026-08-27 | 首次收錄 | https://techcrunch.com/2026/08/26/cisa-confirms-hackers-targeted-over-100-us-water-systems-during-july/<br>https://content.govdelivery.com/accounts/USDHSCISA/bulletins/422e63c<br>https://www.securityweek.com/cisa-over-100-internet-exposed-water-systems-targeted-in-july-cyberattacks/ | 270e40fbe4bb |
-| Boston Scientific 揭露 cyberattack | 造成全球營運中斷 | Boston Scientific 揭露 cyberattack 造成全球營運中斷，醫材供應鏈資安風險升高 | 2026-08-27 02:23:09（Asia/Taipei） | 2026-08-27 | 首次收錄 | https://techcrunch.com/2026/08/26/medical-device-maker-boston-scientific-says-a-cyberattack-is-causing-a-global-disruption-to-its-operations/<br>https://www.investing.com/news/stock-market-news/boston-scientific-hit-by-cyberattack-global-operations-affected-4876822 | 6804ac41dc10 |
-| Arga 融資 1000 萬美元，為 | enterprise AI agents 建立可重置的 Salesforce／Workday／email digital twins | Arga 融資 1000 萬美元，為 enterprise AI agents 建立可重置的 Salesforce／Workday／email digital twins | 2026-08-26 20:55:28（Asia/Taipei） | 2026-08-27 | 首次收錄 | https://techcrunch.com/2026/08/26/arga-is-building-a-better-way-to-train-enterprise-ai-agents/ | 5a0728f8563b |
-| Anthropic | 與 Nscale 達成約 450 億美元 AI compute 租用交易 | Anthropic 與 Nscale 達成約 450 億美元 AI compute 租用交易，Vera Rubin 算力競賽再升級 | 2026-08-27 05:37:39（Asia/Taipei） | 2026-08-27 | 首次收錄 | https://techcrunch.com/2026/08/26/anthropic-continues-compute-gobbling-streak-in-45-billion-deal-with-nscale/ | 360f805edb37 |
-| Amazon / AWS | Ring 推 TAKE encryption | Amazon Ring 推 TAKE encryption，預設保留 cloud AI 功能同時縮短影片金鑰存留 | 2026-08-26 20:00:07（Asia/Taipei） | 2026-08-27 | 首次收錄 | https://www.aboutamazon.com/news/devices/ring-take-encryption<br>https://ring.com/privacy<br>https://techcrunch.com/2026/08/26/ring-introduces-a-new-encryption-standard-makes-it-the-default-for-cloud-features/ | da2a54f3a731 |

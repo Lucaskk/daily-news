@@ -1,7 +1,7 @@
 ---
 title: "科技產品新聞歷史比對表"
 type: product-news-ledger
-updated: 2026-09-02
+updated: 2026-09-03
 status: generated
 tags: [daily-news, tech-products, deduplication, provenance]
 ---
@@ -10,14 +10,20 @@ tags: [daily-news, tech-products, deduplication, provenance]
 
 此表由 `scripts/build_product_news_ledger.py` 掃描所有歷史日報的科技／AI 區段自動產生。**模型不得整份讀取本檔**；每個候選只用公司名、產品名、更新動作與比對鍵執行 `rg`，並只讀命中列。
 
-- 掃描日報：77 份。
-- 擷取科技／AI 項目：538 則。
+- 掃描日報：78 份。
+- 擷取科技／AI 項目：544 則。
 - 更新方式：`python3 scripts/build_product_news_ledger.py`
 - 查詢方式：使用窄化組合 pattern，例如 `rg -n -i '公司.*產品|產品.*公司|比對鍵' wiki/daily/product-news-ledger.md`，不要用公司名單獨匹配大量列。
 - 無命中時：完整讀取 `wiki/daily/product-news-recent-7d.md` 做最後確認，不讀取本檔全文。
 
 | 公司 | 產品 | 更新內容 | 發佈時間 | 收錄日期 | 狀態 | 來源網址 | 比對鍵 |
 |---|---|---|---|---|---|---|---|
+| iRobot | Roomba Max 875 Combo 與 Plus 678 Combo | iRobot 推出 Roomba Max 875 Combo 與 Plus 678 Combo，導入 SealForce 與 AI 拖地 | 2026-09-02 00:00:00（官方僅列日期）（Asia/Taipei） | 2026-09-03 | 首次收錄 | https://media.irobot.com/2026-09-02-iRobot-Redefines-Hands-Free-Cleaning-with-its-Most-Powerful-Robot-Ever,-the-Roomba-R-Max-875-Combo | 944ed97e0d5e |
+| Miele IFA 展示 G8 | Diamond 洗碗機與 AI CulinaryCoach 烹飪助理 | Miele IFA 展示 G8 Diamond 洗碗機與 AI CulinaryCoach 烹飪助理 | 2026-09-02 00:00:00（官方僅列日期）（Asia/Taipei） | 2026-09-03 | 首次收錄 | https://www.miele.de/en/m/miele-points-the-way-to-the-end-of-housework-at-ifa-2026-8470.htm<br>https://www.ifa-berlin.com/press-releases/ifa2026-media-days1 | ae6d9128ed19 |
+| Huawei | Huawei | Huawei 在 Munich 發布 WATCH GT 7 Pro、WATCH 6 Pro、MatePad Pro 12 等九項新品 | 2026-09-02 00:00:00（官方僅列日期）（Asia/Taipei） | 2026-09-03 | 首次收錄 | https://consumer.huawei.com/en/press/events/2026/huawei-innovative-product-launch-september-02/ | 6750ead88432 |
+| Genesys 強化 Agentic Virtual | Agent：APT-2、Deepgram、MCP 與 A2A 路線圖 | Genesys 強化 Agentic Virtual Agent：APT-2、Deepgram、MCP 與 A2A 路線圖 | 2026-09-02 00:00:00（官方僅列日期）（Asia/Taipei） | 2026-09-03 | 首次收錄 | https://www.genesys.com/company/newsroom/announcements/genesys-enhances-agentic-virtual-agent-amid-growing-enterprise-adoption | 25646a3f71b6 |
+| Dell 14S 主打 1.15 | 公斤、選配 21 小時續航與 Wildcat Lake | Dell 14S 主打 1.15 公斤、選配 21 小時續航與 Wildcat Lake | 2026-09-02 18:48:00（Asia/Taipei） | 2026-09-03 | 首次收錄 | https://www.cool3c.com/article/251596 | 6d84e3411164 |
+| NVIDIA | Acer 發表 SFF RTX Spark 與 Veriton RI110 | Acer 發表 SFF RTX Spark 與 Veriton RI110，主打本地／混合 agentic AI | 2026-09-02 00:00:00（官方僅列日期）（Asia/Taipei） | 2026-09-03 | 首次收錄 | https://news.acer.com/<br>https://www.ifa-berlin.com/press-releases/ifa2026-media-days1 | 3e7318b75b13 |
 | Waymo | Waymo | Waymo 在 Denver、San Diego 與 Tampa 開放一般乘客搭乘，自駕車服務擴至 14 城 | 2026-09-01 22:00:05（Asia/Taipei） | 2026-09-02 | 首次收錄 | https://waymo.com/blog/2026/09/ride-in-denver-san-diego-tampa/<br>https://www.axios.com/local/denver/2026/09/01/waymo-launches-denver<br>https://www.axios.com/local/tampa-bay/2026/09/01/waymo-launches-tampa-robotaxis | 24d0218b27cd |
 | Reducto | r-1 文件解析模型 | Reducto 預告 r-1 文件解析模型，主打每頁 1 美分的複雜文件 AI 前處理 | 2026-09-02 00:00:00（Asia/Taipei） | 2026-09-02 | 首次收錄 | https://www.prnewswire.com/news-releases/reducto-unveils-a-frontier-parsing-model-that-makes-the-worlds-hardest-documents-ai-ready-for-1-a-page-302866077.html | a3ca2f1f4056 |
 | Qualcomm | Dragonwing Q-2390 與 IQ-2390 | Qualcomm 發表 Dragonwing Q-2390 與 IQ-2390，將邊緣 AI 下放至零售與工業裝置 | 2026-09-01 21:19:00（Asia/Taipei） | 2026-09-02 | 首次收錄 | https://www.qualcomm.com/news/releases/2026/09/-qualcomm-introduces-dragonwing-q-2390-and-iq-2390-processors--e<br>https://www.newsquawk.com/headlines/qualcomm-qcom-introduces-dragonwing-q-2390-and-iq-2390-processors-expanding-access-to-intelligent-connected-devices<br>https://www.cnx-software.com/2026/09/01/qualcomm-introduces-dragonwing-q-2390-and-iq-2390-for-consumer-and-industrial-aiot-applications/?amp=1 | 0a0dc7121d3d |
