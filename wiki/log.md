@@ -877,3 +877,9 @@
 - Added four technology / AI items covering Google AI civic advertising, Midjourney discovery strategy, Alibaba reportedly banning Claude Code and a Claude Code session/cache leakage issue.
 - Built `slides-2026-07-05.html` as a standalone HTML deck with image-backed slides, keyboard / touch navigation, expandable cards and per-card complete source URLs.
 - Updated `wiki/daily/latest-slides.html`, `wiki/index.md`, `wiki/overview.md`, `wiki/log.md` and the root GitHub Pages entry timestamp.
+
+## [2026-09-04] ingest | Daily global and tech AI news
+
+- 建立 2026-09-04 日報、來源筆記與可展開簡報；全球新聞剛好 10 則，首頁先呈現 3 則產品更新。
+- 產品候選先窄搜完整歷史和既有日報，無命中才讀最近 7 天表；排除 2026-09-02 已收錄的 Qualcomm Q-2390／IQ-2390。
+- 更新最新投影片入口、根目錄 redirect、知識庫索引和總覽；來源筆記保存時間基準、續報與歧異。

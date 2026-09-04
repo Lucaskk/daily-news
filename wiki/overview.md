@@ -220,3 +220,8 @@ sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
 - [2026-08-30 Slides](daily/2026/08/2026-08-30/slides-2026-08-30.html) - 今日新聞網頁版投影片。
 - [2026-08-27 Daily News](daily/2026/08/2026-08-27/daily-news-2026-08-27.md) - 前次報告。
 - [2026-08-27 Slides](daily/2026/08/2026-08-27/slides-2026-08-27.html) - 前次網頁版投影片。
+
+
+## 2026-09-04：安全外溢與家庭 AI 協調層
+
+Kuwait 受擊、Svalbard 扣押俄船、Germany-Russia 文化反制與 Finland 民防顯示衝突成本跨越戰場、法律與日常基礎設施。Congo 與 Nepal 進入社區防疫與重建能力；產品以 Samsung 上市和 LG、Hisense 的 IFA 家庭 AI 架構為主，後兩者仍須追蹤一般可用性。

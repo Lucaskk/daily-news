@@ -1,7 +1,7 @@
 ---
 title: "科技產品新聞歷史比對表"
 type: product-news-ledger
-updated: 2026-09-03
+updated: 2026-09-04
 status: generated
 tags: [daily-news, tech-products, deduplication, provenance]
 ---
@@ -10,14 +10,17 @@ tags: [daily-news, tech-products, deduplication, provenance]
 
 此表由 `scripts/build_product_news_ledger.py` 掃描所有歷史日報的科技／AI 區段自動產生。**模型不得整份讀取本檔**；每個候選只用公司名、產品名、更新動作與比對鍵執行 `rg`，並只讀命中列。
 
-- 掃描日報：78 份。
-- 擷取科技／AI 項目：544 則。
+- 掃描日報：79 份。
+- 擷取科技／AI 項目：547 則。
 - 更新方式：`python3 scripts/build_product_news_ledger.py`
 - 查詢方式：使用窄化組合 pattern，例如 `rg -n -i '公司.*產品|產品.*公司|比對鍵' wiki/daily/product-news-ledger.md`，不要用公司名單獨匹配大量列。
 - 無命中時：完整讀取 `wiki/daily/product-news-recent-7d.md` 做最後確認，不讀取本檔全文。
 
 | 公司 | 產品 | 更新內容 | 發佈時間 | 收錄日期 | 狀態 | 來源網址 | 比對鍵 |
 |---|---|---|---|---|---|---|---|
+| Samsung | Galaxy S26 FE 於 South Korea 上市 | Samsung Galaxy S26 FE 於 South Korea 上市 | 2026-09-03 00:00:00（官方僅列日期）（Asia/Taipei） | 2026-09-04 | 首次收錄 | https://news.samsung.com/kr/%EC%82%BC%EC%84%B1%EC%A0%84%EC%9E%90-%EA%B0%A4%EB%9F%AD%EC%8B%9C-s26-fe-%EA%B5%AD%EB%82%B4-%EC%B6%9C%EC%8B%9C | 44cb92d438e5 |
+| LG 在 IFA 公開展示 | ThinQ Claw | LG 在 IFA 公開展示 ThinQ Claw，以文字對話代理連接 ThinQ ON 與家電 | 2026-09-03 00:00:00（官方僅列日期）（Asia/Taipei） | 2026-09-04 | 首次收錄 | https://www.lgcorp.com/media/release/30536 | a7009068448a |
+| Hisense | V AIOS 與 AI Companion Suite | Hisense 發表 V AIOS 與 AI Companion Suite，將 TV 與家電的 AI 控制拉進同一架構 | 2026-09-03 00:00:00（官方僅列日期）（Asia/Taipei） | 2026-09-04 | 首次收錄 | https://www.hisense.com/global/newsdetail/1708.html | e76cd6d5e6ee |
 | iRobot | Roomba Max 875 Combo 與 Plus 678 Combo | iRobot 推出 Roomba Max 875 Combo 與 Plus 678 Combo，導入 SealForce 與 AI 拖地 | 2026-09-02 00:00:00（官方僅列日期）（Asia/Taipei） | 2026-09-03 | 首次收錄 | https://media.irobot.com/2026-09-02-iRobot-Redefines-Hands-Free-Cleaning-with-its-Most-Powerful-Robot-Ever,-the-Roomba-R-Max-875-Combo | 944ed97e0d5e |
 | Miele IFA 展示 G8 | Diamond 洗碗機與 AI CulinaryCoach 烹飪助理 | Miele IFA 展示 G8 Diamond 洗碗機與 AI CulinaryCoach 烹飪助理 | 2026-09-02 00:00:00（官方僅列日期）（Asia/Taipei） | 2026-09-03 | 首次收錄 | https://www.miele.de/en/m/miele-points-the-way-to-the-end-of-housework-at-ifa-2026-8470.htm<br>https://www.ifa-berlin.com/press-releases/ifa2026-media-days1 | ae6d9128ed19 |
 | Huawei | Huawei | Huawei 在 Munich 發布 WATCH GT 7 Pro、WATCH 6 Pro、MatePad Pro 12 等九項新品 | 2026-09-02 00:00:00（官方僅列日期）（Asia/Taipei） | 2026-09-03 | 首次收錄 | https://consumer.huawei.com/en/press/events/2026/huawei-innovative-product-launch-september-02/ | 6750ead88432 |

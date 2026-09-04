@@ -2,7 +2,7 @@
 title: "Knowledge Base Index"
 type: overview
 created: 2026-05-24
-updated: 2026-09-03
+updated: 2026-09-04
 status: seed
 tags: [index]
 sources: []
@@ -21,6 +21,9 @@ sources: []
 - [[2026-04-04-llm-wiki]] - Karpathy 提出的 LLM-maintained personal wiki 模式，是本知識庫的設計來源。
 
 ## Daily News
+
+- [2026-09-04 Daily News](daily/2026/09/2026-09-04/daily-news-2026-09-04.md) - Kuwait、Arctic 仲裁、Europe 民防、Congo、Nepal 與家庭 AI 協調層。
+- [2026-09-04 Slides](daily/2026/09/2026-09-04/slides-2026-09-04.html) - 今日新聞網頁版投影片。
 
 每日新聞報告會放在 `wiki/daily/YYYY/MM/YYYY-MM-DD/`。
 
