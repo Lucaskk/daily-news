@@ -5,7 +5,8 @@
 - 建立 2026-09-05 日報、來源筆記與可展開簡報；全球新聞剛好 10 則，封面先呈現 NAVEE Fold P10。
 - 產品候選先以 NAVEE／Fold P10／三折發表／比對鍵窄搜完整歷史，無命中後才完整讀取最近 7 天比對表；排除既收錄 IFA 展示與非新產品變更。
 - 來源筆記保留 Asia/Taipei 與 UTC 視窗、每則事件時間、續報日期、衝突說法與排除理由。
-- 發布、GitHub Pages 驗證、LINE watchdog 與 localhost 預覽狀態待本次流程完成後補記。
+- 以乾淨 clone 發布 scoped commit `4e20733` 到 `main`；GitHub Pages 已確認版本化日期簡報、最新入口與根目錄入口皆為 HTTP 200。
+- LINE watchdog 是唯一配送路徑，於 `2026-09-05T08:15:44+08:00` 以 `Sent LINE message` 成功傳送版本化的公開簡報連結；localhost 預覽為最後 best-effort 步驟。
 
 ## [2026-09-03] ingest | Daily global and tech AI news
 
