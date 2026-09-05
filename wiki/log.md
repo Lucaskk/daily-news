@@ -1,5 +1,12 @@
 # Knowledge Base Log
 
+## [2026-09-05] ingest | Daily global and tech AI news
+
+- 建立 2026-09-05 日報、來源筆記與可展開簡報；全球新聞剛好 10 則，封面先呈現 NAVEE Fold P10。
+- 產品候選先以 NAVEE／Fold P10／三折發表／比對鍵窄搜完整歷史，無命中後才完整讀取最近 7 天比對表；排除既收錄 IFA 展示與非新產品變更。
+- 來源筆記保留 Asia/Taipei 與 UTC 視窗、每則事件時間、續報日期、衝突說法與排除理由。
+- 發布、GitHub Pages 驗證、LINE watchdog 與 localhost 預覽狀態待本次流程完成後補記。
+
 ## [2026-09-03] ingest | Daily global and tech AI news
 
 - Created `wiki/daily/2026/09/2026-09-03/` with exactly 10 global news items and six non-duplicated technology / AI product items.

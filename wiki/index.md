@@ -2,7 +2,7 @@
 title: "Knowledge Base Index"
 type: overview
 created: 2026-05-24
-updated: 2026-09-04
+updated: 2026-09-05
 status: seed
 tags: [index]
 sources: []
@@ -22,12 +22,15 @@ sources: []
 
 ## Daily News
 
+- [2026-09-05 Daily News](daily/2026/09/2026-09-05/daily-news-2026-09-05.md) - IAEA 核案草案、Kyiv SBU 總部遇襲、Turkey 銀行制裁、Sarawak 霾害緊急狀態，以及 NAVEE Fold P10 三折式電動滑板車。
+- [2026-09-05 Slides](daily/2026/09/2026-09-05/slides-2026-09-05.html) - 今日新聞網頁版投影片。
+
 - [2026-09-04 Daily News](daily/2026/09/2026-09-04/daily-news-2026-09-04.md) - Kuwait、Arctic 仲裁、Europe 民防、Congo、Nepal 與家庭 AI 協調層。
 - [2026-09-04 Slides](daily/2026/09/2026-09-04/slides-2026-09-04.html) - 今日新聞網頁版投影片。
 
 每日新聞報告會放在 `wiki/daily/YYYY/MM/YYYY-MM-DD/`。
 
-- [每日全球與科技 AI 新聞產製規則](daily/README.md) - 全球新聞採 24 小時窗；科技／AI 產品採 7 天窗、候選優先歷史 `rg` 去重、重大續報、來源紀錄與發布驗證規則。
+- [每日全球與科技 AI 新聞產製規則](daily/README.md) - 包含研究截點前 24 小時限制、跨日去重、重大續報判定、來源紀錄與發布驗證規則。
 - [科技產品新聞歷史比對表](daily/product-news-ledger.md) - 完整歷史索引，只能以公司、產品、更新內容或比對鍵執行 `rg` 並讀取命中列。
 - [科技產品最近 7 天比對表](daily/product-news-recent-7d.md) - 歷史 `rg` 無命中時才完整讀取的精簡二次確認清單。
 

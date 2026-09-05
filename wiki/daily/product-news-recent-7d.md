@@ -1,21 +1,22 @@
 ---
 title: "科技產品新聞最近 7 天比對表"
 type: product-news-ledger-recent
-updated: 2026-09-04
+updated: 2026-09-05
 status: generated
 tags: [daily-news, tech-products, deduplication, recent]
 ---
 
 # 科技產品新聞最近 7 天比對表
 
-本檔是歷史 `rg` 搜尋沒有命中時的二次確認清單，可以完整讀取。涵蓋收錄日期 `2026-08-29` 至 `2026-09-04`；產品是否符合精確 168 小時發布窗，仍以當日來源筆記判定。
+本檔是歷史 `rg` 搜尋沒有命中時的二次確認清單，可以完整讀取。涵蓋收錄日期 `2026-08-30` 至 `2026-09-05`；產品是否符合精確 168 小時發布窗，仍以當日來源筆記判定。
 
-- 掃描日報：79 份。
-- 最近 7 天項目：36 則。
+- 掃描日報：80 份。
+- 最近 7 天項目：37 則。
 - 完整歷史只按需 `rg`：`wiki/daily/product-news-ledger.md`
 
 | 公司 | 產品 | 更新內容 | 發佈時間 | 收錄日期 | 狀態 | 來源網址 | 比對鍵 |
 |---|---|---|---|---|---|---|---|
+| NAVEE | Fold P10 三折式電動滑板車（IFA） | NAVEE 發表 Fold P10 三折式電動滑板車（IFA） | 2026-09-04（官方活動頁僅列日期）（Asia/Taipei） | 2026-09-05 | 首次收錄 | https://www.ifa-berlin.com/de/programm/beyond-the-move-navee-global-product-launch<br>https://cadenaser.com/nacional/2026/09/04/asi-son-los-navee-fold-p10-el-primer-patinete-electrico-del-mundo-que-se-pliega-tres-veces-cadena-ser/ | 9ea76b5d90d3 |
 | Samsung | Galaxy S26 FE 於 South Korea 上市 | Samsung Galaxy S26 FE 於 South Korea 上市 | 2026-09-03 00:00:00（官方僅列日期）（Asia/Taipei） | 2026-09-04 | 首次收錄 | https://news.samsung.com/kr/%EC%82%BC%EC%84%B1%EC%A0%84%EC%9E%90-%EA%B0%A4%EB%9F%AD%EC%8B%9C-s26-fe-%EA%B5%AD%EB%82%B4-%EC%B6%9C%EC%8B%9C | 44cb92d438e5 |
 | LG 在 IFA 公開展示 | ThinQ Claw | LG 在 IFA 公開展示 ThinQ Claw，以文字對話代理連接 ThinQ ON 與家電 | 2026-09-03 00:00:00（官方僅列日期）（Asia/Taipei） | 2026-09-04 | 首次收錄 | https://www.lgcorp.com/media/release/30536 | a7009068448a |
 | Hisense | V AIOS 與 AI Companion Suite | Hisense 發表 V AIOS 與 AI Companion Suite，將 TV 與家電的 AI 控制拉進同一架構 | 2026-09-03 00:00:00（官方僅列日期）（Asia/Taipei） | 2026-09-04 | 首次收錄 | https://www.hisense.com/global/newsdetail/1708.html | e76cd6d5e6ee |

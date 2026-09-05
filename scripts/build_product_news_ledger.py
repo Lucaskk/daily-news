@@ -56,6 +56,7 @@ COMPANY_PATTERNS = [
     (r"Hugging Face", "Hugging Face"),
     (r"Sony", "Sony"),
     (r"Dyson", "Dyson"),
+    (r"NAVEE|Fold P10", "NAVEE"),
     (r"Netflix", "Netflix"),
     (r"Spotify", "Spotify"),
     (r"Uber", "Uber"),
