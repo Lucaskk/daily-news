@@ -2,7 +2,7 @@
 title: "Knowledge Base Index"
 type: overview
 created: 2026-05-24
-updated: 2026-09-05
+updated: 2026-09-06
 status: seed
 tags: [index]
 sources: []
@@ -21,6 +21,9 @@ sources: []
 - [[2026-04-04-llm-wiki]] - Karpathy 提出的 LLM-maintained personal wiki 模式，是本知識庫的設計來源。
 
 ## Daily News
+
+- [2026-09-06 Daily News](daily/2026/09/2026-09-06/daily-news-2026-09-06.md) - 伊朗油輪遭攻擊、俄烏特使會談、Yemen 西岸地面戰、Nepal 生還者、Ebola 半年計畫，以及 Tuya、WeatherNext 3、Android 更新。
+- [2026-09-06 Slides](daily/2026/09/2026-09-06/slides-2026-09-06.html) - 今日新聞網頁版投影片。
 
 - [2026-09-05 Daily News](daily/2026/09/2026-09-05/daily-news-2026-09-05.md) - IAEA 核案草案、Kyiv SBU 總部遇襲、Turkey 銀行制裁、Sarawak 霾害緊急狀態，以及 NAVEE Fold P10 三折式電動滑板車。
 - [2026-09-05 Slides](daily/2026/09/2026-09-05/slides-2026-09-05.html) - 今日新聞網頁版投影片。

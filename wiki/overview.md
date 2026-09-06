@@ -20,6 +20,12 @@ sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
 - 維護跨來源的矛盾、時間線、趨勢與待查問題。
 - 將重要查詢結果回寫成可累積的 wiki 頁面。
 
+## 2026-09-06 Daily News Synthesis
+
+- 全球焦點是衝突由宣示進入可觀察的資產與行動層：美軍打擊伊朗油輪、Putin 與美方特使會談期間的首都暫停攻擊、Yemen 西岸地面戰，讓能源航運、停火驗證與紅海安全在同一日交織。
+- 公共風險的核心是可驗證名冊與資金：Nepal 持續救出隧道生還者，DRC Ebola 進入 180 天、13 億美元需求的跨部門配置；數字必須按統計截點區分。
+- 科技／AI 產品從抽象展示轉為可用入口：Tuya 的 Doova 實體 AI、WeatherNext 3 的衛星資料與 Android 的 Gemini／無障礙功能，分別把家庭機器人、預報和日常裝置推進實際部署。
+
 ## 2026-09-05 Daily News Synthesis
 
 - 全球議程的共同特徵是「風險開始進入程序」：IAEA 對 Iran 的 Security Council 草案、U.S. 對 Turkish bank 的制裁與 Falklands 資源開發制裁，都讓戰事與主權爭端落到可追蹤的制度節點。

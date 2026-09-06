@@ -1,21 +1,24 @@
 ---
 title: "科技產品新聞最近 7 天比對表"
 type: product-news-ledger-recent
-updated: 2026-09-05
+updated: 2026-09-06
 status: generated
 tags: [daily-news, tech-products, deduplication, recent]
 ---
 
 # 科技產品新聞最近 7 天比對表
 
-本檔是歷史 `rg` 搜尋沒有命中時的二次確認清單，可以完整讀取。涵蓋收錄日期 `2026-08-30` 至 `2026-09-05`；產品是否符合精確 168 小時發布窗，仍以當日來源筆記判定。
+本檔是歷史 `rg` 搜尋沒有命中時的二次確認清單，可以完整讀取。涵蓋收錄日期 `2026-08-31` 至 `2026-09-06`；產品是否符合精確 168 小時發布窗，仍以當日來源筆記判定。
 
-- 掃描日報：80 份。
-- 最近 7 天項目：37 則。
+- 掃描日報：81 份。
+- 最近 7 天項目：34 則。
 - 完整歷史只按需 `rg`：`wiki/daily/product-news-ledger.md`
 
 | 公司 | 產品 | 更新內容 | 發佈時間 | 收錄日期 | 狀態 | 來源網址 | 比對鍵 |
 |---|---|---|---|---|---|---|---|
+| Tuya Smart | Tuya 在 IFA 全球首發 Doova AI companion robot 與 AI Home 生態系 | Tuya 在 IFA 全球首發 Doova AI companion robot 與 AI Home 生態系 | 2026-09-05 21:59:00（Asia/Taipei） | 2026-09-06 | 首次收錄 | https://www.prnewswire.com/news-releases/tuya-smart-brings-full-stack-ai-into-everyday-life-at-ifa-2026-302870665.html | baca80787363 |
+| Google | September Android Drop | Google 發布 September Android Drop，將 Gemini 物品記憶與輔助功能帶入 Android | 2026-09-01（官方僅列日期）（Asia/Taipei） | 2026-09-06 | 首次收錄 | https://blog.google/products-and-platforms/platforms/android/Android-Drop-September-2026/ | bd66186341aa |
+| Google | WeatherNext 3 | Google 推出 WeatherNext 3，將即時衛星資料與每小時更新帶入預報模型 | 2026-09-03（官方僅列日期）（Asia/Taipei） | 2026-09-06 | 首次收錄 | https://blog.google/innovation-and-ai/models-and-research/google-deepmind/introducing-weathernext-3/ | 034954364f73 |
 | NAVEE | Fold P10 三折式電動滑板車（IFA） | NAVEE 發表 Fold P10 三折式電動滑板車（IFA） | 2026-09-04（官方活動頁僅列日期）（Asia/Taipei） | 2026-09-05 | 首次收錄 | https://www.ifa-berlin.com/de/programm/beyond-the-move-navee-global-product-launch<br>https://cadenaser.com/nacional/2026/09/04/asi-son-los-navee-fold-p10-el-primer-patinete-electrico-del-mundo-que-se-pliega-tres-veces-cadena-ser/ | 9ea76b5d90d3 |
 | Samsung | Galaxy S26 FE 於 South Korea 上市 | Samsung Galaxy S26 FE 於 South Korea 上市 | 2026-09-03 00:00:00（官方僅列日期）（Asia/Taipei） | 2026-09-04 | 首次收錄 | https://news.samsung.com/kr/%EC%82%BC%EC%84%B1%EC%A0%84%EC%9E%90-%EA%B0%A4%EB%9F%AD%EC%8B%9C-s26-fe-%EA%B5%AD%EB%82%B4-%EC%B6%9C%EC%8B%9C | 44cb92d438e5 |
 | LG 在 IFA 公開展示 | ThinQ Claw | LG 在 IFA 公開展示 ThinQ Claw，以文字對話代理連接 ThinQ ON 與家電 | 2026-09-03 00:00:00（官方僅列日期）（Asia/Taipei） | 2026-09-04 | 首次收錄 | https://www.lgcorp.com/media/release/30536 | a7009068448a |
@@ -47,9 +50,3 @@ tags: [daily-news, tech-products, deduplication, recent]
 | Docsie | AI Content Comparison | Docsie 推出 AI Content Comparison，將文件、影片與知識庫差異轉成可稽核 findings | 2026-08-31 06:46:00（Asia/Taipei） | 2026-08-31 | 首次收錄 | https://natlawreview.com/press-releases/docsie-launches-ai-content-comparison-documents-videos-and-knowledge-bases | f1924813cd7a |
 | Caterpillar 將礦業自動化經驗帶入 AI 部署，Cat | AI Assistant 已供技師與客戶使用 | Caterpillar 將礦業自動化經驗帶入 AI 部署，Cat AI Assistant 已供技師與客戶使用 | 2026-08-30 23:00:00（Asia/Taipei） | 2026-08-31 | 首次收錄 | https://techcrunch.com/2026/08/30/caterpillar-is-bringing-to-ai-deployment-what-it-learned-from-automating-mining/ | 4caf277cecff |
 | Big Tech 上季因 AI | 公司持股帳上收益暴增逾 1,600 億美元 | Big Tech 上季因 AI 公司持股帳上收益暴增逾 1,600 億美元，AI boom 獲利品質受質疑 | 2026-08-31 03:00:05（Asia/Taipei） | 2026-08-31 | 首次收錄 | https://www.ft.com/content/a5a0081f-e998-4c80-b967-cc535cbc4933<br>https://www.ft.com/content/51c907e1-1177-4489-b4b8-fb044f5b257d | 29bceaeb5df9 |
-| Vijay Pande 離開 a16z | 後成立 VZVC | Vijay Pande 離開 a16z 後成立 VZVC，押注 AI health care 與 clinical-trial data 模型 | 2026-08-30 01:36:47（Asia/Taipei） | 2026-08-30 | 首次收錄 | https://techcrunch.com/2026/08/29/were-not-doing-30-bets-a-year-vijay-pande-on-betting-small-after-running-4-billion-at-a16z/ | de0339004d40 |
-| Theragun Sense 2nd Gen | 將 recovery routine、LCD guide 與 Coach AI 放進 US$299 massage gun | Theragun Sense 2nd Gen 將 recovery routine、LCD guide 與 Coach AI 放進 US$299 massage gun | 2026-08-29 22:00:00（Asia/Taipei） | 2026-08-30 | 首次收錄 | https://techcrunch.com/2026/08/29/the-theragun-sense-makes-everyday-recovery-surprisingly-easy/ | da41bccdaa11 |
-| TechBBQ 會場 AI 討論集中在 | agency 與 sovereignty：誰控制 assistant | TechBBQ 會場 AI 討論集中在 agency 與 sovereignty：誰控制 assistant，就控制資料流 | 2026-08-30 01:51:10（Asia/Taipei） | 2026-08-30 | 首次收錄 | https://techcrunch.com/2026/08/29/at-techbbq-europes-ai-conversations-kept-coming-back-to-whos-actually-in-control/ | dd88de6c55ee |
-| Sony | Music 與 Warner Chappell 起訴 Anthropic | Sony Music 與 Warner Chappell 起訴 Anthropic，稱 Claude 訓練涉大規模音樂著作權侵害 | 2026-08-30 02:41:59（Asia/Taipei） | 2026-08-30 | 首次收錄 | https://techcrunch.com/2026/08/29/sony-music-warner-sue-anthropic-alleging-a-brazen-campaign-of-intellectual-property-theft/ | 29f6e4db64fd |
-| NVIDIA | 的 AI 優勢從 GPU 擴大到 Vera CPU、Groq 3 LPX 與 rack-scale 資料流 | Nvidia 的 AI 優勢從 GPU 擴大到 Vera CPU、Groq 3 LPX 與 rack-scale 資料流 | 2026-08-29 21:00:00（Asia/Taipei） | 2026-08-30 | 首次收錄 | https://techcrunch.com/2026/08/29/nvidias-ai-advantage-is-moving-beyond-the-gpu/ | 7367bdbc30d8 |
-| Hollywood celebrities 轉向 microdrama | apps | Hollywood celebrities 轉向 microdrama apps，vertical short-form paid video 進入明星與平台競爭 | 2026-08-30 00:10:00（Asia/Taipei） | 2026-08-30 | 首次收錄 | https://techcrunch.com/2026/08/29/hollywood-celebs-are-getting-into-microdrama-apps/ | 36352ce5f21c |

@@ -1,5 +1,12 @@
 # Knowledge Base Log
 
+## [2026-09-06] ingest | Daily global and tech AI news
+
+- 建立 2026-09-06 日報、來源筆記與可展開簡報；全球新聞剛好 10 則，科技產品位於全球新聞之前，封面先呈現 Tuya Doova、WeatherNext 3 與 September Android Drop。
+- 產品去重先重建索引、再以窄範圍 rg 查歷史；Tuya 無命中才完整讀取最近 7 天表，WeatherNext 3 命中 8 月舊版後以明確新版本列為續報。
+- 來源筆記保留台北／UTC 視窗、每則時間基準、續報日期、矛盾數字與 Cool3c／Engadget 的必查結果。
+- GitHub Pages、LINE watchdog 與 localhost 預覽狀態將在發布後補記。
+
 ## [2026-09-05] ingest | Daily global and tech AI news
 
 - 建立 2026-09-05 日報、來源筆記與可展開簡報；全球新聞剛好 10 則，封面先呈現 NAVEE Fold P10。

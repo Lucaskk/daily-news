@@ -1,7 +1,7 @@
 ---
 title: "科技產品新聞歷史比對表"
 type: product-news-ledger
-updated: 2026-09-05
+updated: 2026-09-06
 status: generated
 tags: [daily-news, tech-products, deduplication, provenance]
 ---
@@ -10,14 +10,17 @@ tags: [daily-news, tech-products, deduplication, provenance]
 
 此表由 `scripts/build_product_news_ledger.py` 掃描所有歷史日報的科技／AI 區段自動產生。**模型不得整份讀取本檔**；每個候選只用公司名、產品名、更新動作與比對鍵執行 `rg`，並只讀命中列。
 
-- 掃描日報：80 份。
-- 擷取科技／AI 項目：548 則。
+- 掃描日報：81 份。
+- 擷取科技／AI 項目：551 則。
 - 更新方式：`python3 scripts/build_product_news_ledger.py`
 - 查詢方式：使用窄化組合 pattern，例如 `rg -n -i '公司.*產品|產品.*公司|比對鍵' wiki/daily/product-news-ledger.md`，不要用公司名單獨匹配大量列。
 - 無命中時：完整讀取 `wiki/daily/product-news-recent-7d.md` 做最後確認，不讀取本檔全文。
 
 | 公司 | 產品 | 更新內容 | 發佈時間 | 收錄日期 | 狀態 | 來源網址 | 比對鍵 |
 |---|---|---|---|---|---|---|---|
+| Tuya Smart | Tuya 在 IFA 全球首發 Doova AI companion robot 與 AI Home 生態系 | Tuya 在 IFA 全球首發 Doova AI companion robot 與 AI Home 生態系 | 2026-09-05 21:59:00（Asia/Taipei） | 2026-09-06 | 首次收錄 | https://www.prnewswire.com/news-releases/tuya-smart-brings-full-stack-ai-into-everyday-life-at-ifa-2026-302870665.html | baca80787363 |
+| Google | September Android Drop | Google 發布 September Android Drop，將 Gemini 物品記憶與輔助功能帶入 Android | 2026-09-01（官方僅列日期）（Asia/Taipei） | 2026-09-06 | 首次收錄 | https://blog.google/products-and-platforms/platforms/android/Android-Drop-September-2026/ | bd66186341aa |
+| Google | WeatherNext 3 | Google 推出 WeatherNext 3，將即時衛星資料與每小時更新帶入預報模型 | 2026-09-03（官方僅列日期）（Asia/Taipei） | 2026-09-06 | 首次收錄 | https://blog.google/innovation-and-ai/models-and-research/google-deepmind/introducing-weathernext-3/ | 034954364f73 |
 | NAVEE | Fold P10 三折式電動滑板車（IFA） | NAVEE 發表 Fold P10 三折式電動滑板車（IFA） | 2026-09-04（官方活動頁僅列日期）（Asia/Taipei） | 2026-09-05 | 首次收錄 | https://www.ifa-berlin.com/de/programm/beyond-the-move-navee-global-product-launch<br>https://cadenaser.com/nacional/2026/09/04/asi-son-los-navee-fold-p10-el-primer-patinete-electrico-del-mundo-que-se-pliega-tres-veces-cadena-ser/ | 9ea76b5d90d3 |
 | Samsung | Galaxy S26 FE 於 South Korea 上市 | Samsung Galaxy S26 FE 於 South Korea 上市 | 2026-09-03 00:00:00（官方僅列日期）（Asia/Taipei） | 2026-09-04 | 首次收錄 | https://news.samsung.com/kr/%EC%82%BC%EC%84%B1%EC%A0%84%EC%9E%90-%EA%B0%A4%EB%9F%AD%EC%8B%9C-s26-fe-%EA%B5%AD%EB%82%B4-%EC%B6%9C%EC%8B%9C | 44cb92d438e5 |
 | LG 在 IFA 公開展示 | ThinQ Claw | LG 在 IFA 公開展示 ThinQ Claw，以文字對話代理連接 ThinQ ON 與家電 | 2026-09-03 00:00:00（官方僅列日期）（Asia/Taipei） | 2026-09-04 | 首次收錄 | https://www.lgcorp.com/media/release/30536 | a7009068448a |
