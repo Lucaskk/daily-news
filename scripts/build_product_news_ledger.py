@@ -172,8 +172,13 @@ def from_heading_section(section: str, capture_date: str) -> list[Item]:
         block = section[match.start() : end]
         title = match.group(2).strip()
         continuation = title.startswith("續報｜")
-        company = company_for(title)
-        product = product_for(company, title)
+        metadata = re.search(r"公司／產品[｜:]\s*([^｜\n]+)｜([^\n]+)", block)
+        if metadata:
+            company = metadata.group(1).strip()
+            product = metadata.group(2).strip()
+        else:
+            company = company_for(title)
+            product = product_for(company, title)
         update = update_content(title)
         urls = tuple(dict.fromkeys(clean_url(url) for url in URL_RE.findall(block)))
         items.append(

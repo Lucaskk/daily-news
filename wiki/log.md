@@ -1,5 +1,12 @@
 # Knowledge Base Log
 
+## [2026-09-07] ingest | Daily global and tech AI news
+
+- 建立 2026-09-07 日報、來源筆記與可展開簡報；全球新聞剛好 10 則，封面先呈現 OpenAI 研究代理、Dyson CameraJet 與 Lenovo IdeaPad Vibe。
+- 產品去重先重建 551 列歷史索引、以候選導向窄範圍 `rg` 查完整歷史，三個候選均無命中才讀最近 7 天表；產製後索引為 554 列，並改進產生器優先讀取日報的公司／產品欄位。
+- 來源筆記記錄全球／產品時間窗、每則事件基準、四則續報、排除的窗口外事件及 Cool3c／Engadget 必查結果。
+- GitHub Pages、LINE watchdog 與 localhost 預覽狀態將在發布後補記。
+
 ## [2026-09-06] ingest | Daily global and tech AI news
 
 - 建立 2026-09-06 日報、來源筆記與可展開簡報；全球新聞剛好 10 則，科技產品位於全球新聞之前，封面先呈現 Tuya Doova、WeatherNext 3 與 September Android Drop。

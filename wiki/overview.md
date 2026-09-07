@@ -2,7 +2,7 @@
 title: "Overview"
 type: overview
 created: 2026-05-24
-updated: 2026-09-05
+updated: 2026-09-07
 status: seed
 tags: [overview]
 sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
@@ -19,6 +19,12 @@ sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
 - 抽出持續出現的人物、組織、事件、政策、技術與市場概念。
 - 維護跨來源的矛盾、時間線、趨勢與待查問題。
 - 將重要查詢結果回寫成可累積的 wiki 頁面。
+
+## 2026-09-07 Daily News Synthesis
+
+- 全球風險從一般政治表態進入具體系統壓力：Miami 貨機事故打斷航空節點，Iran 規畫 Hormuz 排除區，印尼火山灰影響多座機場；每一項都需要以官方運輸與調查紀錄校正。
+- 戰事與制度線同時升高：Kyiv 穿梭外交未突破、Israel-Lebanon 與 Yemen 的交戰持續；AfD 在 Saxony-Anhalt 的勝出及 China 對金融體系補資本，分別測試歐洲政治禁線與世界第二大經濟體的信用傳導。
+- 科技／AI 產品焦點是「能力說明與實體出貨要分開看」：OpenAI 的研究代理為內部能力與治理進展，Dyson CameraJet 和 Lenovo IdeaPad Vibe 則是展場發表、待零售規格驗證的消費硬體。
 
 ## 2026-09-06 Daily News Synthesis
 
