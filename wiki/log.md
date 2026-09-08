@@ -5,7 +5,9 @@
 - 建立 2026-09-08 日報、來源筆記與可展開簡報；全球新聞剛好 10 則，封面先呈現 Mate XT 2、Sony WH-1000XM4C 與 Uber／Wayve 倫敦受監督自駕服務。
 - 產品去重先重建 557 列歷史索引；只用候選導向窄式 `rg` 搜尋完整歷史，三個候選皆無命中後才讀取近 7 日表，沒有全量載入歷史產品表。
 - 來源筆記記錄全球 24 小時與產品 7 日視窗、每項事件／發布基準、三則續報、Cool3c／Engadget 查詢與排除原因。
-- 發布、Pages 驗證、LINE watchdog 與 localhost 預覽結果將在完成後補入本日執行紀錄。
+- 以乾淨 clone 發布 scoped commit `0bc005a` 到 `main`；GitHub Pages 已確認版本化日期簡報與最新入口皆為 HTTP 200。
+- LINE watchdog 是唯一配送路徑，於 `2026-09-08T08:10:27+08:00` 以 `Sent LINE message` 成功傳送公開簡報連結。
+- localhost 以暫時伺服器在 `http://localhost:4177/wiki/daily/latest-slides.html?v=20260908-080037-ai-news-r1` 與日期簡報驗證 HTTP 200，伺服器已停止。
 
 ## [2026-09-07] ingest | Daily global and tech AI news
 
