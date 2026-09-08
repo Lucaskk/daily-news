@@ -1,7 +1,7 @@
 ---
 title: "科技產品新聞歷史比對表"
 type: product-news-ledger
-updated: 2026-09-07
+updated: 2026-09-08
 status: generated
 tags: [daily-news, tech-products, deduplication, provenance]
 ---
@@ -10,14 +10,17 @@ tags: [daily-news, tech-products, deduplication, provenance]
 
 此表由 `scripts/build_product_news_ledger.py` 掃描所有歷史日報的科技／AI 區段自動產生。**模型不得整份讀取本檔**；每個候選只用公司名、產品名、更新動作與比對鍵執行 `rg`，並只讀命中列。
 
-- 掃描日報：82 份。
-- 擷取科技／AI 項目：554 則。
+- 掃描日報：83 份。
+- 擷取科技／AI 項目：557 則。
 - 更新方式：`python3 scripts/build_product_news_ledger.py`
 - 查詢方式：使用窄化組合 pattern，例如 `rg -n -i '公司.*產品|產品.*公司|比對鍵' wiki/daily/product-news-ledger.md`，不要用公司名單獨匹配大量列。
 - 無命中時：完整讀取 `wiki/daily/product-news-recent-7d.md` 做最後確認，不讀取本檔全文。
 
 | 公司 | 產品 | 更新內容 | 發佈時間 | 收錄日期 | 狀態 | 來源網址 | 比對鍵 |
 |---|---|---|---|---|---|---|---|
+| 華為 | HUAWEI Mate XT 2 非凡大師 | 華為發表三折疊 Mate XT 2，首搭 HarmonyOS 7 與麒麟 9050 Pro | 2026-09-07 14:30:00（中國標準時間；Asia/Taipei） | 2026-09-08 | 首次收錄 | https://consumer.huawei.com/cn/phones/mate-xt-2-ultimate-design/ | 01023a9c9af9 |
+| Uber／Wayve | Wayve AI Driver 乘車服務 | Uber 與 Wayve 在倫敦上線英國首批可叫車的受監督自駕行程 | 2026-09-03（Asia/Taipei；官方發布日期） | 2026-09-08 | 首次收錄 | https://investor.uber.com/news-events/news/press-release-details/2026/Wayve-and-Uber-Launch-First-Ever-Autonomous-Rides-in-the-UK-2026-VoFQI1WbQi/default.aspx | 9567d9190ac2 |
+| Sony | WH-1000XM4C | Sony 將 WH-1000XM4 以 WH-1000XM4C 重新推出，定價 299.99 美元並開放預購 | 2026-09-08 00:00:00（Asia/Taipei） | 2026-09-08 | 首次收錄 | https://electronics.sony.com/audio/headphones/headband/p/wh1000xm4c-v | c600729d79f7 |
 | OpenAI | 自動化研究代理進展 | OpenAI 公布已達「自動化研究實習生」目標，並列出 2028 年研究員方向 | 2026-09-07 04:00:00（Asia/Taipei） | 2026-09-07 | 首次收錄 | https://openai.com/index/research-acceleration-view-inside-openai/ | c18d42039007 |
 | Lenovo | IdeaPad Vibe | Lenovo 發表 700 美元起 IdeaPad Vibe，提供 Snapdragon X、Ryzen AI 400 與後續 Intel 選項 | 2026-09-04 04:00:00（Asia/Taipei） | 2026-09-07 | 首次收錄 | https://www.engadget.com/2250279/lenovo-ideapad-vibe-hands-on-ifa-2026-macbook-neo/ | db5f5bf7a07a |
 | Dyson | CameraJet | Dyson 在 IFA 展示 CameraJet 三合一含鏡頭牙刷／沖牙器，定價 500 美元 | 2026-09-04 20:56:00（Asia/Taipei） | 2026-09-07 | 首次收錄 | https://www.engadget.com/2248230/dyson-camerajet-is-a-500-three-in-one-toothbrush-that-scans-your-maw/ | 8da736899b56 |

@@ -1,21 +1,24 @@
 ---
 title: "科技產品新聞最近 7 天比對表"
 type: product-news-ledger-recent
-updated: 2026-09-07
+updated: 2026-09-08
 status: generated
 tags: [daily-news, tech-products, deduplication, recent]
 ---
 
 # 科技產品新聞最近 7 天比對表
 
-本檔是歷史 `rg` 搜尋沒有命中時的二次確認清單，可以完整讀取。涵蓋收錄日期 `2026-09-01` 至 `2026-09-07`；產品是否符合精確 168 小時發布窗，仍以當日來源筆記判定。
+本檔是歷史 `rg` 搜尋沒有命中時的二次確認清單，可以完整讀取。涵蓋收錄日期 `2026-09-02` 至 `2026-09-08`；產品是否符合精確 168 小時發布窗，仍以當日來源筆記判定。
 
-- 掃描日報：82 份。
-- 最近 7 天項目：32 則。
+- 掃描日報：83 份。
+- 最近 7 天項目：27 則。
 - 完整歷史只按需 `rg`：`wiki/daily/product-news-ledger.md`
 
 | 公司 | 產品 | 更新內容 | 發佈時間 | 收錄日期 | 狀態 | 來源網址 | 比對鍵 |
 |---|---|---|---|---|---|---|---|
+| 華為 | HUAWEI Mate XT 2 非凡大師 | 華為發表三折疊 Mate XT 2，首搭 HarmonyOS 7 與麒麟 9050 Pro | 2026-09-07 14:30:00（中國標準時間；Asia/Taipei） | 2026-09-08 | 首次收錄 | https://consumer.huawei.com/cn/phones/mate-xt-2-ultimate-design/ | 01023a9c9af9 |
+| Uber／Wayve | Wayve AI Driver 乘車服務 | Uber 與 Wayve 在倫敦上線英國首批可叫車的受監督自駕行程 | 2026-09-03（Asia/Taipei；官方發布日期） | 2026-09-08 | 首次收錄 | https://investor.uber.com/news-events/news/press-release-details/2026/Wayve-and-Uber-Launch-First-Ever-Autonomous-Rides-in-the-UK-2026-VoFQI1WbQi/default.aspx | 9567d9190ac2 |
+| Sony | WH-1000XM4C | Sony 將 WH-1000XM4 以 WH-1000XM4C 重新推出，定價 299.99 美元並開放預購 | 2026-09-08 00:00:00（Asia/Taipei） | 2026-09-08 | 首次收錄 | https://electronics.sony.com/audio/headphones/headband/p/wh1000xm4c-v | c600729d79f7 |
 | OpenAI | 自動化研究代理進展 | OpenAI 公布已達「自動化研究實習生」目標，並列出 2028 年研究員方向 | 2026-09-07 04:00:00（Asia/Taipei） | 2026-09-07 | 首次收錄 | https://openai.com/index/research-acceleration-view-inside-openai/ | c18d42039007 |
 | Lenovo | IdeaPad Vibe | Lenovo 發表 700 美元起 IdeaPad Vibe，提供 Snapdragon X、Ryzen AI 400 與後續 Intel 選項 | 2026-09-04 04:00:00（Asia/Taipei） | 2026-09-07 | 首次收錄 | https://www.engadget.com/2250279/lenovo-ideapad-vibe-hands-on-ifa-2026-macbook-neo/ | db5f5bf7a07a |
 | Dyson | CameraJet | Dyson 在 IFA 展示 CameraJet 三合一含鏡頭牙刷／沖牙器，定價 500 美元 | 2026-09-04 20:56:00（Asia/Taipei） | 2026-09-07 | 首次收錄 | https://www.engadget.com/2248230/dyson-camerajet-is-a-500-three-in-one-toothbrush-that-scans-your-maw/ | 8da736899b56 |
@@ -40,11 +43,3 @@ tags: [daily-news, tech-products, deduplication, recent]
 | CrowdStrike | SafeMind 資安模型家族 | CrowdStrike 發表 SafeMind 資安模型家族，結合 NVIDIA Nemotron 與 QuiltWorks | 2026-09-02 05:53:00（Asia/Taipei） | 2026-09-02 | 續報 | https://ir.crowdstrike.com/news-releases/news-release-details/crowdstrike-launches-frontier-models-cybersecurity-created/<br>https://blogs.nvidia.com/blog/nvidia-crowdstrike-fal-con-2026/<br>https://siliconangle.com/2026/09/01/frontier-ai-gap-drives-crowdstrike-safemind-security-models-falcon/ | e62dd34ca6fa |
 | OpenAI | ChatGPT 新增醫療公開資料插件 | ChatGPT 新增醫療公開資料插件，符合資格的 Enterprise 亦可唯讀連接 Epic | 2026-09-01 12:00:00（Asia/Taipei） | 2026-09-02 | 首次收錄 | https://help.openai.com/en/articles/6825453-chatgpt-release-notes<br>https://help.openai.com/en/articles/10128477-chatgpt-enterprise-edu-release-notes | 44943ee20a5e |
 | Anthropic | Claude Fable 5.1／Mythos 5.1 | Anthropic 推出 Claude Fable 5.1／Mythos 5.1，以更低價格分層開放高能力模型 | 2026-09-02 03:55:42（Asia/Taipei） | 2026-09-02 | 續報 | https://www.anthropic.com/claude/fable<br>https://www.anthropic.com/claude/mythos<br>https://www.axios.com/2026/09/01/anthropic-releases-new-models-cost-structures-and-safeguards<br>https://techcrunch.com/2026/09/01/anthropics-new-fable-release-is-cheaper-less-restrictive/ | 984fee02b77a |
-| Qualcomm | 與 HUMAIN 發表 Horizon Ultra AI PC | Qualcomm 與 HUMAIN 發表 Horizon Ultra AI PC，Microsoft bundle 鎖定百萬企業用戶 | 2026-09-01 00:42:00（Asia/Taipei） | 2026-09-01 | 首次收錄 | https://www.qualcomm.com/news/releases/2026/08/qualcomm-and-humain-unveil-horizon-ultra-ai-pc-at-leap-2026--bri<br>https://www.prnewswire.com/news-releases/microsoft-and-humain-expand-strategic-collaboration-at-leap-2026-with-new-enterprise-ai-offering-and-ai-pc-302865157.html | 8db364dd100e |
-| HUMAIN M3 | limited preview | HUMAIN M3 開放 limited preview，主打 428B MoE 與原生 Arabic multimodal agents | 2026-08-31 18:50:00（Asia/Taipei） | 2026-09-01 | 首次收錄 | https://node.humain.com/<br>https://connect.onegiantleap.com/event/leap2026/planning/UGxhbm5pbmdfNDU3NTcyOA%3D%3D<br>https://node.humain.com/legal/terms-of-use | ade1e02260ab |
-| Google | 將生成式搜尋內容控制與 Search Console insights | Google 將生成式搜尋內容控制與 Search Console insights 擴至全球網站 | 2026-08-31 15:00:00（Asia/Taipei） | 2026-09-01 | 首次收錄 | https://blog.google/products-and-platforms/products/search/new-controls-website-owners/<br>https://lucaskk.github.io/daily-news/wiki/daily/2026/08/2026-08-21/source-notes-2026-08-21.md | 5ffe09ead93a |
-| CrowdStrike | Falcon IQ | CrowdStrike 發表 Falcon IQ，以 50 多個 AI agents 自動化 AI 風險評估與修復 | 2026-08-31 20:04:10（Asia/Taipei） | 2026-09-01 | 首次收錄 | https://ir.crowdstrike.com/news-releases/news-release-details/crowdstrike-launches-falcon-iq-operationalize-project-quiltworks<br>https://www.tmcnet.com/usubmit/latest-news.aspx | 5fa14345631b |
-| Cloudflare | Adaptive Intelligence | Cloudflare 推出 Adaptive Intelligence，以短效規則持續改寫 Bot Management 防線 | 2026-08-31 21:00:00（Asia/Taipei） | 2026-09-01 | 首次收錄 | https://www.cloudflare.net/news/news-details/2026/Cloudflare-Introduces-Adaptive-Intelligence-Reverses-the-Economics-of-Automated-Cyber-Attacks/default.aspx<br>https://www.aol.com/articles/cloudflare-introduces-adaptive-intelligence-reverses-130000000.html | 5d12082b4ed2 |
-| Broadcom / VMware | 為 VMware Tanzu | Broadcom 為 VMware Tanzu 加入 AI-ready data foundations 與 deny-by-default agent sandboxes | 2026-08-31 21:02:00（Asia/Taipei） | 2026-09-01 | 首次收錄 | https://investors.broadcom.com/news-releases/news-release-details/broadcom-unveils-ai-ready-data-foundations-vmware-tanzu-platform<br>https://blogs.vmware.com/tanzu/introducing-ai-ready-data-foundations-in-tanzu-platform/ | 12207c467a47 |
-| Amazon / AWS | 確認 Saudi 首個 Region 12 月上線 | AWS 確認 Saudi 首個 Region 12 月上線，HUMAIN AI Zone 承諾 2028 年提供 50MW | 2026-08-31 19:15:39（Asia/Taipei） | 2026-09-01 | 首次收錄 | https://www.aboutamazon.com/news/aws/aws-cloud-region-saudi-arabia<br>https://menafn.com/1111601933/AWS-To-Launch-First-Cloud-Infrastructure-Region-In-The-Kingdom-Of-Saudi-Arabia-By-December-2026 | 8a514862324b |
-| AMD、Cisco、HUMAIN 的 Saudi AI | compute 正式上線 | AMD、Cisco、HUMAIN 的 Saudi AI compute 正式上線，長期目標 1GW | 2026-08-31 19:19:00（Asia/Taipei） | 2026-09-01 | 首次收錄 | https://newsroom.amd.com/news-events/press-releases/detail/1286/amd-cisco-and-humain-expand-saudi-arabias-ai-infrastructure-as-amd-instinct-systems-go-live<br>https://ebs.publicnow.com/view/DE71330D7E61CECE10BADBFBC35A4D3E1E32C984 | b8d0d3019435 |

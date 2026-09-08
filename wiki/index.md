@@ -2,7 +2,7 @@
 title: "Knowledge Base Index"
 type: overview
 created: 2026-05-24
-updated: 2026-09-07
+updated: 2026-09-08
 status: seed
 tags: [index]
 sources: []
@@ -21,6 +21,9 @@ sources: []
 - [[2026-04-04-llm-wiki]] - Karpathy 提出的 LLM-maintained personal wiki 模式，是本知識庫的設計來源。
 
 ## Daily News
+
+- [2026-09-08 Daily News](daily/2026/09/2026-09-08/daily-news-2026-09-08.md) - 伊朗飛彈先發準則、IAEA 敘利亞核設施、北韓驅逐艦與聯演、南黎巴嫩空襲、Delhi 倒塌、俄朝橋梁、WMO 空品、法國酒業及 JLR 裁員；科技先列 Mate XT 2、WH-1000XM4C 與 Uber／Wayve 倫敦受監督自駕服務。
+- [2026-09-08 Slides](daily/2026/09/2026-09-08/slides-2026-09-08.html) - 今日新聞網頁版投影片。
 
 - [2026-09-07 Daily News](daily/2026/09/2026-09-07/daily-news-2026-09-07.md) - Miami 貨機事故、Hormuz 排除區、Kyiv 特使會談、AfD 州選舉、印尼火山交通中斷與 China 金融補資本；科技先列 OpenAI 研究代理、Dyson CameraJet 與 Lenovo IdeaPad Vibe。
 - [2026-09-07 Slides](daily/2026/09/2026-09-07/slides-2026-09-07.html) - 今日新聞網頁版投影片。
