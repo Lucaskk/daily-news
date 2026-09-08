@@ -7,6 +7,9 @@
 - 新增固定產生器、獨立 HTML 範本、影像來源清單與測試；同步更新每日 README，僅套用最新與往後日期，不回溯覆寫歷史簡報。
 - 自動化 `ai` 已同步新版閱讀介面與 Safari 提問規則，排程、通知政策及既有去重流程保持不變。
 - Python 11 項測試及 320／390／768／1440px 瀏覽器情境檢查通過；涵蓋原頁展開、來源、逐篇導覽、單篇 ChatGPT 文字、超長內容、複製成功／失敗備援及深淺色。
+- 已由乾淨 clone 提交並推送 `6785736`；GitHub Pages 的日期頁、最新入口與根入口皆回應 200，內容雜湊與本機相符，三張圖片皆可載入。公開 390px 手機版再次確認 13 篇、原頁展開及無橫向溢出。
+- 版本化網址：`https://lucaskk.github.io/daily-news/wiki/daily/2026/09/2026-09-08/slides-2026-09-08.html?v=20260908-141857-reader`。
+- LINE watchdog 於 `2026-09-08T14:20:14+08:00` 以 exit 0 回報 `already sent`，沒有重複通知。原 4173 服務回傳空回覆；最後以暫時 4178 服務驗證 `http://localhost:4178/wiki/daily/latest-slides.html` 為 200，驗證後停止本次暫時服務，未更動原服務。
 
 ## [2026-09-08] ingest | Daily global and tech AI news
 
