@@ -64,3 +64,12 @@ tags: [daily-news, provenance, deduplication, product-ledger]
 - [x] 每則保留來源、Asia/Taipei 時間、事件／發布依據、實體與不確定性。
 - [x] 所有續報已列前次收錄日期與本日實質新增。
 - [x] 每張可展開簡報卡末尾都有來源標籤與完整原始 URL。
+
+## 2026-09-08 閱讀介面修訂
+
+- 本次依使用者參考截圖改版，不新增、重新收錄或改動本期 3 則產品與 10 則全球新聞；研究截點及事件／發佈時間依據保持不變。
+- 圖片、標題、時間、出處與重點摘要先顯示；「完整報告」在同一篇文章下方展開，保留背景、不確定性與原始來源。
+- 使用者明確表示從 iPhone Safari 開啟網址。ChatGPT 入口採一般、使用者點擊的 HTTPS 連結，使用 `prompt` 參數攜帶單篇內容與選填問題，不呼叫 API、不含私人設定。
+- 官方 iOS 關聯檔： https://chatgpt.com/.well-known/apple-app-site-association 。2026-09-08 讀取到 `/` 的非空 `prompt`、`q` 及 `#native` 匹配設定；這能證明連結關聯，不等於已驗證使用者手機的 App 接管、登入狀態或預填結果。App 開啟方式仍由 Safari／iOS 決定，頁面提供完整內容複製及選取備援。超長內容不截斷。
+- 圖片清單及原始網址：同目錄 `presentation-2026-09-08.json`。華為與 Uber／Wayve 圖片來自官方產品／新聞稿；全球配圖為 Unsplash 地球主題圖，明標不是事件照片。Sony 本期不使用無法確認的新型號圖片，也不以舊型號代替。
+- 可重用產生器：`scripts/render_daily_slides.py`；獨立 HTML 包含全部樣式、互動程式與本期資料，本地圖片隨同發布。精確時間保留 UTC ISO，日期級來源不新增午夜時間。

@@ -1,0 +1,30 @@
+{
+  "images": {
+    "t1": {
+      "src": "assets/mate-xt-2-hero.png",
+      "alt": "華為 Mate XT 2 三折疊手機官方產品圖",
+      "fit": "contain",
+      "caption": "Mate XT 2 官方產品圖。",
+      "credit": "Huawei",
+      "source_url": "https://consumer.huawei.com/cn/phones/mate-xt-2-ultimate-design/",
+      "original_url": "https://consumer.huawei.com/content/dam/huawei-cbg-site/cn/mkt/pdp/phones/mate-xt-2-ultimate-design/images/hero/huawei-mate-xt-2-ultimate-design-kv.png"
+    },
+    "t3": {
+      "src": "assets/wayve.png",
+      "alt": "Uber 與 Wayve 官方新聞稿中的倫敦 Ford Mustang Mach-E 測試車",
+      "caption": "倫敦 Wayve 車輛，官方新聞稿配圖。",
+      "credit": "Uber / Wayve",
+      "source_url": "https://investor.uber.com/news-events/news/press-release-details/2026/Wayve-and-Uber-Launch-First-Ever-Autonomous-Rides-in-the-UK-2026-VoFQI1WbQi/default.aspx",
+      "original_url": "https://s23.q4cdn.com/407969754/files/doc_news/2026/Sep/02/mediaFiles/Wayve-Vehicle%40lowres.png"
+    },
+    "1": {
+      "src": "assets/world.jpg",
+      "alt": "太空中俯瞰地球的衛星影像，全球新聞主題配圖",
+      "caption": "全球新聞主題配圖，並非本次事件照片。",
+      "credit": "Unsplash",
+      "source_url": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=85",
+      "original_url": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=85"
+    }
+  },
+  "image_notes": "僅使用已核對的產品、新聞稿及主題影像。Sony 官方頁阻擋圖片擷取，因此不以舊 WH-1000XM4 的照片冒充 WH-1000XM4C。圖片著作權歸原權利人；原始網址保留於每項 original_url。"
+}

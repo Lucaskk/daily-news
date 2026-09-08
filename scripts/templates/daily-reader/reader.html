@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="zh-Hant" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="color-scheme" content="dark light">
+  <meta name="referrer" content="no-referrer">
+  <meta name="reader-version" content="@@VERSION@@">
+  <title>每日全球與科技 AI 新聞 @@DATE@@</title>
+  <!-- Product/press images retain their owners' rights; each figure links to its source.
+       Other photographs are identified as thematic, not event evidence.
+       Icons: Lucide 0.468.0, ISC license, https://lucide.dev/license
+       Official iOS association checked 2026-09-08:
+       https://chatgpt.com/.well-known/apple-app-site-association
+       / with a nonempty prompt or q is an associated app link. Safari/iOS controls
+       the final handoff. No custom URL scheme, API key or automatic transmission. -->
+  <style>@@CSS@@</style>
+</head>
+<body>
+  <a class="skip-link" href="#content">跳至新聞</a>
+  <header class="masthead">
+    <div class="masthead-inner">
+      <div class="brand"><h1>每日新聞</h1><span>全球與科技 AI</span></div>
+      <div class="header-tools"><time datetime="@@DATE@@">@@DATE@@</time>
+        <button class="icon-button theme-toggle" id="theme-toggle" title="切換淺色" aria-label="切換淺色">@@ICON_SUN@@@@ICON_MOON@@</button>
+        <button class="icon-button" id="open-index" title="新聞目錄" aria-label="新聞目錄" aria-haspopup="dialog">@@ICON_LIST@@</button>
+      </div>
+    </div>
+    <nav class="sections" aria-label="新聞分類">
+      <a href="#@@FIRST_TECH@@" data-section="tech" @@TECH_DISABLED@@>科技產品 <span>@@TECH_COUNT@@</span></a>
+      <a href="#1" data-section="world">全球焦點 <span>10</span></a>
+      <a href="#notes" data-section="notes">研究備註</a>
+    </nav>
+  </header>
+  <main id="content">
+    @@ARTICLES@@
+    <section id="notes" class="research-notes" aria-labelledby="notes-title">
+      <p class="eyebrow">研究備註</p><h2 id="notes-title">時間、來源與後續追蹤</h2>
+      <p class="metadata">研究截點 @@CUTOFF@@</p>@@NOTES@@
+    </section>
+  </main>
+  <nav class="reader-nav" aria-label="逐篇導覽">
+    <button class="icon-button" id="prev" title="上一篇" aria-label="上一篇">@@ICON_PREV@@</button>
+    <span id="position" aria-live="polite"></span>
+    <button class="icon-button" id="next" title="下一篇" aria-label="下一篇">@@ICON_NEXT@@</button>
+  </nav>
+  <dialog id="index-dialog" aria-labelledby="index-title">
+    <div class="dialog-head"><h2 id="index-title">今日目錄</h2><button class="icon-button" data-close title="關閉目錄" aria-label="關閉目錄">@@ICON_X@@</button></div>
+    <nav class="toc" aria-label="所有新聞">@@TOC@@<a href="#notes">研究備註</a></nav>
+  </dialog>
+  <dialog id="ask-dialog" aria-labelledby="ask-title" aria-describedby="ask-story-title">
+    <div class="dialog-head"><h2 id="ask-title">詢問 ChatGPT</h2><button class="icon-button" data-close title="關閉" aria-label="關閉">@@ICON_X@@</button></div>
+    <p id="ask-story-title" class="ask-story-title"></p>
+    <label for="question">你的問題 <span>選填</span></label>
+    <textarea id="question" rows="3" maxlength="2000" placeholder="例如：這項消息對我有什麼影響？"></textarea>
+    <details class="context-details"><summary>隨附文章內容</summary><label class="sr-only" for="context-text">帶入 ChatGPT 的完整文字</label><textarea id="context-text" rows="8" readonly spellcheck="false"></textarea></details>
+    <p id="handoff-note" class="handoff-note">Safari 將依裝置設定開啟 ChatGPT App 或網頁。</p>
+    <div class="handoff-actions"><a id="chatgpt-link" class="primary-action" href="https://chatgpt.com/#native" rel="noreferrer">在 ChatGPT 詢問 @@ICON_OPEN@@</a><button id="copy-context" class="icon-button" title="複製完整內容" aria-label="複製完整內容">@@ICON_COPY@@</button></div>
+    <p id="copy-status" class="status" role="status" aria-live="polite"></p>
+  </dialog>
+  <noscript><p class="noscript">完整報告可直接展開；ChatGPT 提問與逐篇導覽需要 JavaScript。</p></noscript>
+  <script type="application/json" id="report-data">@@DATA@@</script>
+  <script>@@JS@@</script>
+</body>
+</html>
