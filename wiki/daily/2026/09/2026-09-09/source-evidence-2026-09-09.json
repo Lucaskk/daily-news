@@ -1,0 +1,214 @@
+{
+  "cutoff_utc": "2026-09-09T00:01:38Z",
+  "world_start_utc": "2026-09-08T00:01:38Z",
+  "product_start_utc": "2026-09-02T00:01:38Z",
+  "sources": [
+    {
+      "key": "canada",
+      "url": "https://apnews.com/article/canada-trump-carney-trade-war-tariffs-4620ffb5ecc029322217207fa6758431",
+      "retrieved_at": "2026-09-09T00:07:13.539244+00:00",
+      "status": 200,
+      "dates": [
+        {
+          "@type": "NewsArticle",
+          "headline": "What to know about Canada-US trade war",
+          "datePublished": "2026-09-08T04:07:02Z",
+          "dateModified": "2026-09-08T04:07:02Z"
+        }
+      ],
+      "article_published_time": "2026-09-08T04:07:02",
+      "article_modified_time": "2026-09-08T11:27:30.658"
+    },
+    {
+      "key": "tankers",
+      "url": "https://apnews.com/article/iran-tanker-navy-warship-dfc9a1d9c9a5b8bc7b47fcc004025e65",
+      "retrieved_at": "2026-09-09T00:07:13.539567+00:00",
+      "status": 200,
+      "dates": [
+        {
+          "@type": "NewsArticle",
+          "headline": "US military says it has destroyed 5 Iranian oil tankers",
+          "datePublished": "2026-09-08T20:45:57Z",
+          "dateModified": "2026-09-08T23:15:07Z"
+        }
+      ],
+      "article_published_time": "2026-09-08T20:45:57",
+      "article_modified_time": "2026-09-08T23:15:42.067"
+    },
+    {
+      "key": "houthi",
+      "url": "https://apnews.com/article/4ad9446f0bb8c096750c84b6e1ba86b8",
+      "retrieved_at": "2026-09-09T00:07:13.539718+00:00",
+      "status": 200,
+      "dates": [
+        {
+          "@type": "NewsArticle",
+          "headline": "Houthi attacks on Saudi Arabia set fires at oil facilities and wound 73 people",
+          "datePublished": "2026-09-08T04:02:15Z",
+          "dateModified": "2026-09-08T13:05:00Z"
+        }
+      ],
+      "article_published_time": "2026-09-08T04:02:15",
+      "article_modified_time": "2026-09-08T13:06:45.122"
+    },
+    {
+      "key": "uk-ban",
+      "url": "https://apnews.com/article/uk-west-bank-israel-settlement-sanctions-b4d7354221bfe0c48e4bfce7a3b7624b",
+      "retrieved_at": "2026-09-09T00:07:13.539815+00:00",
+      "status": 200,
+      "dates": [
+        {
+          "@type": "NewsArticle",
+          "headline": "UK bans goods from Israeli settlements in the West Bank",
+          "datePublished": "2026-09-08T09:09:24Z",
+          "dateModified": "2026-09-08T18:18:21Z"
+        }
+      ],
+      "article_published_time": "2026-09-08T09:09:24",
+      "article_modified_time": "2026-09-08T18:24:47.066"
+    },
+    {
+      "key": "ukraine",
+      "url": "https://apnews.com/article/russia-ukraine-war-kyiv-missiles-drones-attacks-fd634a6786462bc95b7dfefc97d2331e",
+      "retrieved_at": "2026-09-09T00:07:13.767296+00:00",
+      "status": 200,
+      "dates": [
+        {
+          "@type": "NewsArticle",
+          "headline": "Putin tells Trump that Moscow doesn’t have aggressive plans toward Europe, Kremlin says",
+          "datePublished": "2026-09-08T06:17:35Z",
+          "dateModified": "2026-09-08T16:58:48Z"
+        }
+      ],
+      "article_published_time": "2026-09-08T06:17:35",
+      "article_modified_time": "2026-09-08T16:59:10.795"
+    },
+    {
+      "key": "china",
+      "url": "https://apnews.com/article/china-japan-chips-chemical-dumping-ea58c95c47481c5c822a3a544e6b68cc",
+      "retrieved_at": "2026-09-09T00:07:13.803530+00:00",
+      "status": 200,
+      "dates": [
+        {
+          "@type": "NewsArticle",
+          "headline": "Chinese curbs on exports of key chipmaking material draw protests from Japan",
+          "datePublished": "2026-09-08T09:45:06Z",
+          "dateModified": "2026-09-08T09:45:06Z"
+        }
+      ],
+      "article_published_time": "2026-09-08T09:45:06",
+      "article_modified_time": "2026-09-08T09:49:13.261"
+    },
+    {
+      "key": "brazil",
+      "url": "https://apnews.com/article/30cd3bab96065b3a076f4756294b09b4",
+      "retrieved_at": "2026-09-09T00:07:14.058459+00:00",
+      "status": 200,
+      "dates": [
+        {
+          "@type": "NewsArticle",
+          "headline": "Brazilian Supreme Court justice removes federal police and intelligence chief, deepening crisis",
+          "datePublished": "2026-09-08T16:13:49Z",
+          "dateModified": "2026-09-08T22:44:07Z"
+        }
+      ],
+      "article_published_time": "2026-09-08T16:13:49",
+      "article_modified_time": "2026-09-08T22:44:26.108"
+    },
+    {
+      "key": "hungary",
+      "url": "https://apnews.com/article/hungary-russia-diplomats-magyar-security-orban-leave-5e8d90957d8b990a8cb3dbd7185a4794",
+      "retrieved_at": "2026-09-09T00:07:14.099905+00:00",
+      "status": 200,
+      "dates": [
+        {
+          "@type": "NewsArticle",
+          "headline": "Hungary expels 10 Russian diplomats over unacceptable activities",
+          "datePublished": "2026-09-08T09:33:52Z",
+          "dateModified": "2026-09-08T15:22:12Z"
+        }
+      ],
+      "article_published_time": "2026-09-08T09:33:52",
+      "article_modified_time": "2026-09-08T15:22:33.687"
+    },
+    {
+      "key": "airports",
+      "url": "https://apnews.com/article/uk-airports-traffic-control-disruptions-408a8997d9fb39508e922e09d2523884",
+      "retrieved_at": "2026-09-09T00:07:14.180902+00:00",
+      "status": 200,
+      "dates": [
+        {
+          "@type": "NewsArticle",
+          "headline": "UK air traffic control glitch causes over 600 canceled flights, monitor says",
+          "datePublished": "2026-09-08T15:14:54Z",
+          "dateModified": "2026-09-08T21:48:57Z"
+        }
+      ],
+      "article_published_time": "2026-09-08T15:14:54",
+      "article_modified_time": "2026-09-08T21:49:22.483"
+    },
+    {
+      "key": "australia-ap",
+      "url": "https://apnews.com/article/australia-social-media-algorithms-digital-duty-care-1eee351b39f22b340ef289c792f7993b",
+      "retrieved_at": "2026-09-09T00:07:14.388199+00:00",
+      "status": 200,
+      "dates": [
+        {
+          "@type": "NewsArticle",
+          "headline": "Australian social media users offered choice to opt out of algorithms",
+          "datePublished": "2026-09-08T09:01:41Z",
+          "dateModified": "2026-09-08T09:17:06Z"
+        }
+      ],
+      "article_published_time": "2026-09-08T09:01:41",
+      "article_modified_time": "2026-09-08T16:17:53.414"
+    },
+    {
+      "key": "muse",
+      "url": "https://about.fb.com/news/2026/09/introducing-muse-personal-ai-agent/",
+      "retrieved_at": "2026-09-09T00:07:14.426743+00:00",
+      "status": 200,
+      "dates": [
+        {
+          "@type": "NewsArticle",
+          "headline": "Introducing Muse: The World’s First Personal AI Agent Built for Everyone",
+          "datePublished": "2026-09-08T19:00:51+00:00",
+          "dateModified": null
+        },
+        {
+          "@type": "WebPage",
+          "headline": null,
+          "datePublished": "2026-09-08T19:00:51+00:00",
+          "dateModified": null
+        }
+      ],
+      "article_published_time": "2026-09-08T19:00:51+00:00",
+      "article_modified_time": null
+    },
+    {
+      "key": "muse-ap",
+      "url": "https://apnews.com/article/meta-muse-ai-agent-3a4572eb4cf4e95d8a0dfdad6e6ca065",
+      "retrieved_at": "2026-09-09T00:07:14.696927+00:00",
+      "status": 200,
+      "dates": [
+        {
+          "@type": "NewsArticle",
+          "headline": "Meta launches personal AI agent, Muse",
+          "datePublished": "2026-09-08T19:05:56Z",
+          "dateModified": "2026-09-08T19:05:56Z"
+        }
+      ],
+      "article_published_time": "2026-09-08T19:05:56",
+      "article_modified_time": "2026-09-08T19:09:53.126"
+    },
+    {
+      "key": "sony",
+      "url": "https://www.sony.jp/CorporateCruise/Press/202609/26-0908B/",
+      "retrieved_at": "2026-09-09T00:07:15.081779+00:00",
+      "status": 200,
+      "dates": [],
+      "article_published_time": null,
+      "article_modified_time": null
+    }
+  ]
+}

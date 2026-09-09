@@ -2,7 +2,7 @@
 title: "Overview"
 type: overview
 created: 2026-05-24
-updated: 2026-09-08
+updated: 2026-09-09
 status: seed
 tags: [overview]
 sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
@@ -19,6 +19,12 @@ sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
 - 抽出持續出現的人物、組織、事件、政策、技術與市場概念。
 - 維護跨來源的矛盾、時間線、趨勢與待查問題。
 - 將重要查詢結果回寫成可累積的 wiki 頁面。
+
+## 2026-09-09 Daily News Synthesis
+
+- 能源壓力跨越不同運輸節點：伊朗油輪與沙烏地南部設施分別遇襲，需要將各方戰果、確認停運與實際產能損失分開，而非把所有消息累加成供應中斷。
+- 制度措施進入不同階段：加拿大反制已生效、中國 DCS 是臨時措施、英國屯墾區禁令待落實、澳洲仍是草案、巴西裁定待上訴。狀態差異是後續查詢與跨日去重的核心。
+- 產品由功能主張走向具體交付：Meta Muse 已在美國推出，安全與未來機密 VM 仍須分層核對；Sony SEL814G 已公告但日本預購、上市仍在未來。詳見 [當日日報](daily/2026/09/2026-09-09/daily-news-2026-09-09.md)。
 
 ## 2026-09-08 Daily News Synthesis
 

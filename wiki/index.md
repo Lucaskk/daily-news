@@ -2,7 +2,7 @@
 title: "Knowledge Base Index"
 type: overview
 created: 2026-05-24
-updated: 2026-09-08
+updated: 2026-09-09
 status: seed
 tags: [index]
 sources: []
@@ -21,6 +21,9 @@ sources: []
 - [[2026-04-04-llm-wiki]] - Karpathy 提出的 LLM-maintained personal wiki 模式，是本知識庫的設計來源。
 
 ## Daily News
+
+- [2026-09-09 Daily News](daily/2026/09/2026-09-09/daily-news-2026-09-09.md) - 加拿大反制生效、美伊油輪互擊、沙烏地設施遇襲、英國屯墾區禁令、基輔空襲、日本 DCS、澳洲草案、巴西裁定、匈牙利外交驅逐與英國航管；產品先列 Meta Muse 與 Sony SEL814G。
+- [2026-09-09 Slides](daily/2026/09/2026-09-09/slides-2026-09-09.html) - 手機閱讀版，原頁完整報告與單篇 ChatGPT 後續問題。
 
 - [2026-09-08 Daily News](daily/2026/09/2026-09-08/daily-news-2026-09-08.md) - 伊朗飛彈先發準則、IAEA 敘利亞核設施、北韓驅逐艦與聯演、南黎巴嫩空襲、Delhi 倒塌、俄朝橋梁、WMO 空品、法國酒業及 JLR 裁員；科技先列 Mate XT 2、WH-1000XM4C 與 Uber／Wayve 倫敦受監督自駕服務。
 - [2026-09-08 Slides](daily/2026/09/2026-09-08/slides-2026-09-08.html) - 手機閱讀版，含時間、出處、重點摘要、原頁完整報告與 ChatGPT 後續提問。

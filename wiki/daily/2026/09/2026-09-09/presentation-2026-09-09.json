@@ -1,0 +1,32 @@
+{
+  "images": {
+    "t1": {
+      "src": "assets/muse.jpg",
+      "alt": "Meta Muse 官方發布圖，包含產品標誌與代辦任務對話示例",
+      "fit": "contain",
+      "caption": "Muse 官方宣傳圖，非本地實測畫面。",
+      "credit": "Meta，權利歸原權利人",
+      "source_url": "https://about.fb.com/news/2026/09/introducing-muse-personal-ai-agent/",
+      "original_url": "https://about.fb.com/wp-content/uploads/2026/09/Introducing-Muse_-Personal-AI-Agent_SocialShare.jpg?w=1200"
+    },
+    "t2": {
+      "src": "assets/sony-sel814g.jpg",
+      "alt": "Sony SEL814G FE 8–14mm F3.5 Fisheye G 鏡頭官方產品照片",
+      "fit": "contain",
+      "caption": "FE 8–14mm F3.5 Fisheye G 官方產品圖。",
+      "credit": "Sony，權利歸原權利人",
+      "source_url": "https://www.sony.jp/CorporateCruise/Press/202609/26-0908B/",
+      "original_url": "https://www.sony.jp/sp-app/msa/img/20260908_SEL814G_600.jpg"
+    },
+    "1": {
+      "src": "assets/world.jpg",
+      "alt": "地球與全球連結主題配圖，非當日事件照片",
+      "fit": "cover",
+      "caption": "全球新聞主題配圖，非加拿大關稅事件照片。",
+      "credit": "Unsplash",
+      "source_url": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=85",
+      "original_url": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=85"
+    }
+  },
+  "image_notes": "官方圖僅用於對應新聞識別與評論，權利歸 Meta／Sony；地球圖沿用已核對來源的主題素材。圖片沒有模糊處理或文字遮罩。"
+}

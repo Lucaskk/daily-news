@@ -1,7 +1,7 @@
 ---
 title: "每日全球與科技 AI 新聞產製規則"
 type: guidelines
-updated: 2026-09-08
+updated: 2026-09-09
 status: active
 tags: [daily-news, rules, deduplication, provenance]
 ---
@@ -140,6 +140,13 @@ tags: [daily-news, rules, deduplication, provenance]
 7. localhost 預覽是最後的 best-effort 步驟。Port、背景 server、瀏覽器渲染或 Playwright 問題不得阻擋 GitHub 發布、LINE 發送或最終摘要。
 
 若當日檔案已產生但排程即將中斷，優先完成「發布 → LINE → 狀態紀錄」，不要把剩餘時間花在可選的本機 server 或視覺檢查。
+
+### 排程恢復與完成檢查
+
+- 中斷、上下文整理或恢復後，先確認當次執行日期、已凍結的研究截點與尚未完成的階段；不得把歷史上已回答的介面或 Safari 訊息誤當成本次排程的收尾。
+- 同日補跑優先沿用已驗證的研究截點與來源證據，不把後來才發生的新聞混入原本時間窗。使用者若明確要求暫停或改變工作，則以最新要求為準。
+- 排程結束前逐項確認：當日日報／來源筆記／HTML 已存在；公開日期頁與最新入口相符且 HTTP 200；watchdog 回報成功或已記錄實際錯誤。完成研究不等於完成發布，HTTP 200 也不等於 LINE 已送達。
+- 使用者詢問漏發時，先回報真實卡點，再續完可完成的產製／發布／配送；不得把前一天連結改稱今日新聞或強制重送舊日通知。
 
 ## 十一、2026-06-14 跨日稽核紀錄
 
