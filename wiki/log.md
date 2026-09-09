@@ -1,12 +1,22 @@
 # Knowledge Base Log
 
+## [2026-09-09] fix | Daily delivery reliability
+
+- 依使用者選擇維持每天 08:00 產製一次，未新增 09:00／10:00 補跑；既有 LINE 配送每 15 分鐘檢查與 10:00 後缺件告警保留。
+- 修正配送併發、逾時重試重複風險、公開頁驗證不足、讀取錯誤漏告警及告警成功誤當新聞成功；增加私人最近檢查狀態。
+- 19 項隔離測試通過，新版已安裝至唯一正式 watchdog。23:27:47 正式執行 exit 0 回報 `already sent`，LaunchAgent 再次執行 exit 0，未重送今日新聞。
+- 詳見 [配送機制與限制](daily/delivery-mechanism.md)；單次產製失敗仍需恢復，本機與外部服務不可用仍無法保證每日送達。沒有更動私人憑證或放寬權限。
+
 ## [2026-09-09] ingest | Daily global and tech AI news
 
 - 08:00 排程有啟動並完成部分研究，但回覆誤回到既有 Safari 話題，未產生本日文件、未發布、未送 LINE。09:52 檢查確認公開入口仍為 9/8、本日日期頁 404、LINE 最後成功日期為 9/8；沒有證據顯示本次是授權或 LINE API 故障。
 - 接續原 08:01:38 Asia/Taipei 截點補完：10 則全球新聞、2 則產品（Muse、SEL814G），全球 24 小時與產品 168 小時分開，五則重大續報均保留前次日期。
 - 原始來源日期 metadata 另存來源證據 JSON；沒有重新讀入完整歷史表，沿用候選導向搜尋並補查正式型號及全部文章 ID。
 - 沿用固定手機閱讀 renderer、官方產品圖與逐篇來源；新增中央規則的恢復與完成檢查，未改排程或 LINE 私人設定。
-- 發布與 LINE 結果：待本次公開驗證後補記，不先宣告成功。
+- 本機驗證通過：10 則全球、2 則產品、16 組來源、17 個展開區與 3 張圖片；來源 metadata 與 UTC 時間逐項一致，11 項 renderer 測試及 JavaScript 語法檢查通過。產品索引更新為 84 份日報、559 列。
+- 由乾淨 clone 推送內容 commit `1e116fe`，保留遠端既有股票更新；GitHub Pages 日期頁、最新入口及根入口皆 HTTP 200 且雜湊符合本次本機內容。
+- LINE watchdog 為唯一配送路徑，於 `2026-09-09T10:07:40+08:00` 以 exit 0 回報 `Sent LINE message`，已補送今日連結；未更動去重狀態以強制重送。
+- 公開網址：`https://lucaskk.github.io/daily-news/wiki/daily/2026/09/2026-09-09/slides-2026-09-09.html?v=20260909-100448-reader`。
 
 ## [2026-09-08] update | Mobile reader and ChatGPT follow-up
 
