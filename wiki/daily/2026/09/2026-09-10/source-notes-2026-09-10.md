@@ -39,7 +39,7 @@ Reuters 授權轉載頁明列原通訊社與報導日期。Reuters Connect 的�
 | 5 | Reuters／MarketScreener 9/9 00:36 EDT＝04:36 UTC＝台北 12:36，修改至 08:30 EDT 仍在截點前 | 續報 2026-09-09 基輔主線，新增 Starokozache 口岸襲擊／交通暫停 | https://www.marketscreener.com/news/russian-drones-kill-injure-people-at-ukraine-moldova-border-crossing-ce785bd9db8bf023 ; https://theprint.in/world/russian-drones-kill-two-at-ukraine-moldova-border-crossing-authorities-say/3037835/ |
 | 6 | Reuters／MarketScreener 首刊 9/9 03:52 EDT＝07:52 UTC＝台北 15:52；當日裁定 | 無同一案裁定命中；不把無管轄權寫成實體合法性判決 | https://www.marketscreener.com/news/hungary-loses-court-fight-over-frozen-russian-asset-profits-for-ukraine-ce785bd9da8ffe20 |
 | 7 | AOL JSON-LD `datePublished=2026-09-09T06:04:41+00:00`；`dateModified=2026-09-09T06:09:12+00:00`，首刊台北 14:04:41 | 無歷史同一統計報導。本窗新發布採訪與具體統計；疫情自 3 月起，不宣稱今日才爆發。999 包含疑似與確診，不全為確診死亡 | https://www.aol.com/articles/bangladesh-fights-worlds-worst-measles-060441000.html |
-| 8 | AOL JSON-LD `datePublished=2026-09-09T14:07:27+00:00`；`dateModified=2026-09-09T14:10:26+00:00`，首刊台北 22:07:27 | 續報 2026-09-06 隧道救援，新增軍方貨運無人機配送作業；沒有宣称 8 月洪災發生在本窗 | https://www.aol.com/articles/nepal-turns-drones-deliver-flood-140727000.html |
+| 8 | AOL JSON-LD `datePublished=2026-09-09T14:07:27+00:00`；`dateModified=2026-09-09T14:10:26+00:00`，首刊台北 22:07:27 | 續報 2026-09-06 隧道救援，新增軍方貨運無人機配送作業；沒有宣稱 8 月洪災發生在本窗 | https://www.aol.com/articles/nepal-turns-drones-deliver-flood-140727000.html |
 | 9 | Reuters 9/9 當地日間罷工現場報導，Te Ao 9/9 交叉確認。NZST 比台北快四小時，日間停工落在本窗；日期保留、不虛構時分 | 首次收錄實際停工，不重刊早先預告 | https://www.internazionale.it/ultime-notizie-reuters/2026/09/09/new-zealand-public-servants-walk-off-job-over-pay-offer ; https://www.teaonews.co.nz/2026/09/09/maori-public-servants-feeling-weight-of-cuts-as-thousands-strike-nationwide/ |
 | 10 | Reuters／StreetInsider 9/9 15:50 EDT＝19:50 UTC＝台北 9/10 03:50；當日 Quito 訪問 | 首次收錄本次資金要求與 Los Tiguerones 指定，不當成已完成撥款 | https://www.streetinsider.com/Reuters/Rubio%2Bsays%2Bhe%2Bwill%2Bseek%2B%2445%2Bmillion%2Bin%2Bsecurity%2Bfunding%2Bfor%2BEcuador/27042434.html |
 
@@ -54,7 +54,7 @@ Reuters 授權轉載頁明列原通訊社與報導日期。Reuters Connect 的�
 - 美國擬禁止加拿大商品：初次消息在本窗開始前，未以 9/9 轉載時間當新事件，排除。
 - 北韓 Yongbyon 新設施報導引用 8/28 IAEA 報告；無法確認原報告首次公開是否在 24 小時窗內，排除。
 - 英國首相為屯墾區禁令辯護：僅政治說明，不另占名額；只保留新增外交期限。
-- Engadget 的 Muse 社群帳號爭议不是 Muse 新產品變更；9/9 已收錄的 Meta Muse、Sony SEL814G 不再收錄。
+- Engadget 的 Muse 社群帳號爭議不是 Muse 新產品變更；9/9 已收錄的 Meta Muse、Sony SEL814G 不再收錄。
 - Cool3c 的購機贈演唱會購票資格屬促銷；Razer 鍵盤摘要價格出現 1,980／1,890 差異，未另取得官方查證，本次不採用。AirPods、Watch 為其他新品候選，本次聚焦最高價值的手機與 AI 推出時程，未聲稱已全面盤點所有新品。
 
 ## 圖像與驗證

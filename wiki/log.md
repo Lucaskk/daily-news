@@ -4,7 +4,12 @@
 
 - 研究截點 08:01:18 Asia/Taipei；全球 24 小時與科技產品 168 小時分開。3 則產品在前，全球恰好 10 則；Siri AI 與六則全球續報保留前次日期及具體新進展。
 - 選題前重建 559 筆產品索引，只讀候選導向歷史 rg 命中；兩款 iPhone 無命中後才讀 21 列近 7 天表。檢查 Cool3c、Engadget，規格與時程回查 Apple 官方。
-- 沿用固定 renderer、官方產品圖與逐篇來源；沒有變更每天 08:00 的產製排程。發布、驗證與 LINE 配送結果待實際完成後記錄。
+- 沿用固定 renderer、官方產品圖與逐篇來源；沒有變更每天 08:00 的產製排程。
+- 已由乾淨 clone 推送 `83a67d1`，保留原有遠端更新；Pages 當日頁、最新入口、根入口皆 HTTP 200 且 SHA256 符合本機內容。
+- 唯一 LINE watchdog 於 `2026-09-10T08:12:02+08:00` 回報 exit 0、`Sent LINE message`。未執行舊 sender 或強制重送。
+- 11 項 renderer 測試通過；公開頁 320／390／1440px 確認 13 篇、3 張圖片載入、無橫向溢出、完整報告原頁展開與單篇 ChatGPT 內容，未開啟或自動提交 ChatGPT。
+- 產品索引更新為 85 份日報、562 筆。公開網址：`https://lucaskk.github.io/daily-news/wiki/daily/2026/09/2026-09-10/slides-2026-09-10.html?v=20260910-081034-reader`。
+- 最後檢查 `http://localhost:4173/wiki/daily/latest-slides.html`，既有服務回傳 Empty reply（curl 52）；未干擾服務，亦未阻擋上述發布與 LINE 成功。
 
 ## [2026-09-09] fix | Daily delivery reliability
 
