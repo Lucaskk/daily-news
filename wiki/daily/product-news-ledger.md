@@ -1,7 +1,7 @@
 ---
 title: "科技產品新聞歷史比對表"
 type: product-news-ledger
-updated: 2026-09-09
+updated: 2026-09-10
 status: generated
 tags: [daily-news, tech-products, deduplication, provenance]
 ---
@@ -10,14 +10,17 @@ tags: [daily-news, tech-products, deduplication, provenance]
 
 此表由 `scripts/build_product_news_ledger.py` 掃描所有歷史日報的科技／AI 區段自動產生。**模型不得整份讀取本檔**；每個候選只用公司名、產品名、更新動作與比對鍵執行 `rg`，並只讀命中列。
 
-- 掃描日報：84 份。
-- 擷取科技／AI 項目：559 則。
+- 掃描日報：85 份。
+- 擷取科技／AI 項目：562 則。
 - 更新方式：`python3 scripts/build_product_news_ledger.py`
 - 查詢方式：使用窄化組合 pattern，例如 `rg -n -i '公司.*產品|產品.*公司|比對鍵' wiki/daily/product-news-ledger.md`，不要用公司名單獨匹配大量列。
 - 無命中時：完整讀取 `wiki/daily/product-news-recent-7d.md` 做最後確認，不讀取本檔全文。
 
 | 公司 | 產品 | 更新內容 | 發佈時間 | 收錄日期 | 狀態 | 來源網址 | 比對鍵 |
 |---|---|---|---|---|---|---|---|
+| Apple | iPhone 18 Pro／iPhone 18 Pro Max | Apple 發表 iPhone 18 Pro 系列，主相機加入可變光圈 | 2026-09-09（美國官方發布日期，未提供首次發布時分） | 2026-09-10 | 首次收錄 | https://www.apple.com/newsroom/2026/09/apple-debuts-iphone-18-pro-and-iphone-18-pro-max/<br>https://www.apple.com/iphone-18-pro/specs/ | c0ccf63ded2c |
+| Apple | iPhone Duo | Apple 正式發表 iPhone Duo，首款摺疊 iPhone 預定 10 月上市 | 2026-09-09（美國官方發布日期，未提供首次發布時分） | 2026-09-10 | 首次收錄 | https://www.apple.com/newsroom/2026/09/apple-unveils-iphone-duo/<br>https://www.apple.com/iphone-duo/ | f3305d81346b |
+| Apple | iOS 27／Siri AI 推出時程 | Apple 公布 iOS 27 與 Siri AI 的 9 月推出日期及後續語言時程 | 2026-09-09（官方時程公告日期，未提供首次發布時分） | 2026-09-10 | 續報 | https://www.apple.com/newsroom/2026/09/apple-debuts-iphone-18-pro-and-iphone-18-pro-max/ | 855d2d8ae27e |
 | Sony | FE 8–14mm F3.5 Fisheye G（SEL814G） | Sony 發表 FE 8–14mm F3.5 Fisheye G，日本預定 10 月上市 | 2026-09-08（日本官方發布日期，未提供精確時分） | 2026-09-09 | 首次收錄 | https://www.sony.jp/CorporateCruise/Press/202609/26-0908B/ | 3d7223227b70 |
 | Meta | Muse 個人 AI 代理 | Meta 推出 Muse 個人 AI 代理，在美國開放手機與網頁使用 | 2026-09-09 03:00:51（Asia/Taipei） | 2026-09-09 | 首次收錄 | https://about.fb.com/news/2026/09/introducing-muse-personal-ai-agent/<br>https://apnews.com/article/meta-muse-ai-agent-3a4572eb4cf4e95d8a0dfdad6e6ca065 | 126882497f32 |
 | 華為 | HUAWEI Mate XT 2 非凡大師 | 華為發表三折疊 Mate XT 2，首搭 HarmonyOS 7 與麒麟 9050 Pro | 2026-09-07 14:30:00（中國標準時間；Asia/Taipei） | 2026-09-08 | 首次收錄 | https://consumer.huawei.com/cn/phones/mate-xt-2-ultimate-design/ | 01023a9c9af9 |

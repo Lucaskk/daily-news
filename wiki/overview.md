@@ -2,7 +2,7 @@
 title: "Overview"
 type: overview
 created: 2026-05-24
-updated: 2026-09-09
+updated: 2026-09-10
 status: seed
 tags: [overview]
 sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
@@ -19,6 +19,12 @@ sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
 - 抽出持續出現的人物、組織、事件、政策、技術與市場概念。
 - 維護跨來源的矛盾、時間線、趨勢與待查問題。
 - 將重要查詢結果回寫成可累積的 wiki 頁面。
+
+## 2026-09-10 Daily News Synthesis
+
+- 核外交由草案進入 IAEA 正式表決；海運新事故與油價新收盤分別追蹤，不把軍方宣稱等同獨立確認的供應損失。
+- 產品主線轉向 Apple 摺疊手機與可變光圈硬體。Siri AI 的具體推出日期另列續報，區分系統版本、beta、語言與地域可用性。
+- [今日完整日報](daily/2026/09/2026-09-10/daily-news-2026-09-10.md) 保留司法程序、公共衛生統計口徑及救援配送限制，不以關注度代替時間與證據。
 
 ## 2026-09-09 Daily News Synthesis
 

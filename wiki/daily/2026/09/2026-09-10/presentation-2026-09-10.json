@@ -1,0 +1,32 @@
+{
+  "images": {
+    "t1": {
+      "src": "assets/iphone-duo.jpg",
+      "alt": "Apple iPhone Duo 官方產品發布圖",
+      "fit": "contain",
+      "caption": "iPhone Duo 官方發布素材，非本地實測。",
+      "credit": "Apple，權利歸原權利人",
+      "source_url": "https://www.apple.com/newsroom/2026/09/apple-unveils-iphone-duo/",
+      "original_url": "https://www.apple.com/newsroom/images/2026/09/apple-unveils-iphone-duo/tile/Apple-iPhone-Duo-opening-iPhone-Duo-260909-lp.jpg.og.jpg?202609091909"
+    },
+    "t2": {
+      "src": "assets/iphone-18-pro.jpg",
+      "alt": "Apple iPhone 18 Pro 與 Pro Max 官方產品發布圖",
+      "fit": "contain",
+      "caption": "iPhone 18 Pro 系列官方發布素材，非本地實測。",
+      "credit": "Apple，權利歸原權利人",
+      "source_url": "https://www.apple.com/newsroom/2026/09/apple-debuts-iphone-18-pro-and-iphone-18-pro-max/",
+      "original_url": "https://www.apple.com/newsroom/images/2026/09/apple-debuts-iphone-18-pro-and-iphone-18-pro-max/tile/Apple-iPhone-18-Pro-2up-260909-lp.jpg.og.jpg?202609091909"
+    },
+    "1": {
+      "src": "assets/world.jpg",
+      "alt": "地球主題配圖，非 IAEA 會議或當日事件照片",
+      "fit": "cover",
+      "caption": "全球新聞主題配圖，非當日事件照片。",
+      "credit": "Unsplash",
+      "source_url": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=85",
+      "original_url": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=85"
+    }
+  },
+  "image_notes": "Apple 圖用於對應新品新聞識別與評論，權利歸原權利人；全球素材為已保存來源的主題配圖。無模糊或文字遮罩。"
+}

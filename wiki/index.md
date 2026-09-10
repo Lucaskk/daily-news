@@ -2,7 +2,7 @@
 title: "Knowledge Base Index"
 type: overview
 created: 2026-05-24
-updated: 2026-09-09
+updated: 2026-09-10
 status: seed
 tags: [index]
 sources: []
@@ -21,6 +21,9 @@ sources: []
 - [[2026-04-04-llm-wiki]] - Karpathy 提出的 LLM-maintained personal wiki 模式，是本知識庫的設計來源。
 
 ## Daily News
+
+- [2026-09-10 Daily News](daily/2026/09/2026-09-10/daily-news-2026-09-10.md) - IAEA 正式移交、油價破百、伊拉克油輪、英以外交期限、邊境口岸、歐盟法院、孟加拉麻疹、尼泊爾配送、紐西蘭罷工與美厄安全合作；產品先列 iPhone Duo、18 Pro 與 Siri AI 時程。
+- [2026-09-10 Slides](daily/2026/09/2026-09-10/slides-2026-09-10.html) - 3 則科技產品、10 則全球新聞，原頁展開與單篇 ChatGPT 提問。
 
 - [2026-09-09 Daily News](daily/2026/09/2026-09-09/daily-news-2026-09-09.md) - 加拿大反制生效、美伊油輪互擊、沙烏地設施遇襲、英國屯墾區禁令、基輔空襲、日本 DCS、澳洲草案、巴西裁定、匈牙利外交驅逐與英國航管；產品先列 Meta Muse 與 Sony SEL814G。
 - [2026-09-09 Slides](daily/2026/09/2026-09-09/slides-2026-09-09.html) - 手機閱讀版，原頁完整報告與單篇 ChatGPT 後續問題。

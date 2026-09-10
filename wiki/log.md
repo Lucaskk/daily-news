@@ -1,5 +1,11 @@
 # Knowledge Base Log
 
+## [2026-09-10] ingest | Daily global and tech AI news
+
+- 研究截點 08:01:18 Asia/Taipei；全球 24 小時與科技產品 168 小時分開。3 則產品在前，全球恰好 10 則；Siri AI 與六則全球續報保留前次日期及具體新進展。
+- 選題前重建 559 筆產品索引，只讀候選導向歷史 rg 命中；兩款 iPhone 無命中後才讀 21 列近 7 天表。檢查 Cool3c、Engadget，規格與時程回查 Apple 官方。
+- 沿用固定 renderer、官方產品圖與逐篇來源；沒有變更每天 08:00 的產製排程。發布、驗證與 LINE 配送結果待實際完成後記錄。
+
 ## [2026-09-09] fix | Daily delivery reliability
 
 - 依使用者選擇維持每天 08:00 產製一次，未新增 09:00／10:00 補跑；既有 LINE 配送每 15 分鐘檢查與 10:00 後缺件告警保留。
