@@ -3,6 +3,7 @@ import fcntl
 import importlib.util
 import json
 import os
+import sqlite3
 from pathlib import Path
 import tempfile
 import unittest
@@ -42,7 +43,8 @@ class WatchdogTests(unittest.TestCase):
         self.addCleanup(self.temp.cleanup)
         self.root = Path(self.temp.name)
         changes = {'ROOT': self.root, 'STATE_PATH': self.root/'line-sent-key',
-                   'ALERT_STATE_PATH': self.root/'line-missing-alert-key'}
+                   'ALERT_STATE_PATH': self.root/'line-missing-alert-key',
+                   'HISTORY_DB': self.root/'history.sqlite'}
         for name, value in changes.items():
             p = patch.object(w, name, value); p.start(); self.addCleanup(p.stop)
         p = patch.object(w, 'load_env', return_value={'PUBLIC_SLIDES_BASE_URL': BASE,
@@ -204,6 +206,105 @@ class WatchdogTests(unittest.TestCase):
         self.fetch.side_effect = [latest('2026-09-10'), deck(day='2026-09-10'), b'{}']
         self.assertEqual(w.run_once(NOW + timedelta(days=1)), 0)
         self.assertEqual(w.STATE_PATH.read_text().strip(), '2026-09-10')
+
+    def add_execution(self, status='failed', info='usageLimitExceeded', message='private-token must never be sent',
+                      started=None, completed=None, thread=None):
+        with sqlite3.connect(w.HISTORY_DB) as db:
+            db.execute('CREATE TABLE IF NOT EXISTS thread_turns (thread_id TEXT, status TEXT, error_json TEXT, '
+                       'started_at INTEGER, completed_at INTEGER, rollout_ordinal INTEGER)')
+            start = int((started or NOW - timedelta(minutes=5)).timestamp())
+            end = int((completed or NOW - timedelta(minutes=4)).timestamp())
+            error = json.dumps({'message': message, 'codexErrorInfo': info}) if status == 'failed' else None
+            db.execute('INSERT INTO thread_turns VALUES (?,?,?,?,?,?)',
+                       (thread or w.NEWS_THREAD_ID, status, error, start, end, start))
+
+    def write_production(self, stage='research_pending', **extra):
+        value = {'date': DAY, 'stage': stage, 'checked_at': (NOW - timedelta(hours=2)).isoformat(), **extra}
+        (self.root/f'production-{DAY}.json').write_text(json.dumps(value))
+
+    def test_usage_limit_alert_uses_system_code_without_leaking_error(self):
+        self.add_execution()
+        self.write_production()
+        self.fetch.side_effect = [latest('2026-09-08'), b'{}']
+        self.assertEqual(w.run_once(NOW), 1)
+        post = self.fetch.call_args_list[-1]
+        text = json.loads(post.kwargs['data'])['messages'][0]['text']
+        self.assertIn('模型使用額度已達上限', text)
+        self.assertIn('恢復時間', text)
+        self.assertIn('10:11:00', text)
+        self.assertNotIn('private-token', text)
+        self.assertEqual(self.status()['diagnosis']['code'], 'model_quota')
+
+    def test_previous_day_other_thread_and_future_errors_ignored(self):
+        self.add_execution(started=NOW-timedelta(days=1), completed=NOW-timedelta(days=1))
+        self.add_execution(thread='another-thread')
+        self.add_execution(started=NOW+timedelta(hours=1), completed=NOW+timedelta(hours=1))
+        self.assertEqual(w.latest_execution(NOW), {})
+        self.assertEqual(w.alert_diagnosis(NOW, ValueError('stale'))['code'], 'unknown')
+
+    def test_newer_execution_supersedes_old_quota_error(self):
+        self.add_execution()
+        self.add_execution(status='completed', started=NOW-timedelta(minutes=2), completed=NOW-timedelta(minutes=1))
+        diagnosis = w.alert_diagnosis(NOW, ValueError('stale'))
+        self.assertEqual(diagnosis['code'], 'production_incomplete')
+        self.assertNotIn('額度已達', diagnosis['reason'])
+
+    def test_newer_checkpoint_supersedes_old_quota_error(self):
+        self.add_execution()
+        self.write_production(stage='publishing', checked_at=(NOW-timedelta(minutes=1)).isoformat(), last_error='git push exited 128')
+        self.assertEqual(w.alert_diagnosis(NOW, ValueError('stale'))['code'], 'git_publish_failed')
+
+    def test_legacy_usage_error_message_is_classified_but_not_forwarded(self):
+        self.add_execution(info=None, message="You've hit your usage limit. private-token try again at 1:01 PM")
+        text, diagnostic = w.missing_alert(NOW, ValueError('stale'))
+        self.assertEqual(diagnostic['code'], 'model_quota')
+        self.assertNotIn('private-token', text)
+        self.assertNotIn('1:01 PM', text)
+
+    def test_rate_limit_is_not_mislabeled_as_quota(self):
+        self.add_execution(info='rateLimitExceeded')
+        diagnostic = w.alert_diagnosis(NOW, ValueError('stale'))
+        self.assertEqual(diagnostic['code'], 'model_rate_limit')
+
+    def test_unknown_model_error_does_not_forward_sensitive_text(self):
+        self.add_execution(info='unknown')
+        text, diagnostic = w.missing_alert(NOW, ValueError('private-url'))
+        self.assertEqual(diagnostic['code'], 'model_execution_failed')
+        self.assertNotIn('private-token', text)
+        self.assertNotIn('private-url', text)
+
+    def test_schema_change_or_corrupt_database_falls_back_to_unknown(self):
+        w.HISTORY_DB.write_bytes(b'not a database')
+        self.assertEqual(w.alert_diagnosis(NOW, ValueError('stale'))['code'], 'unknown')
+
+    def test_malformed_checkpoint_is_ignored(self):
+        for value in ['[1]', '{', '{"checked_at":"bad"}', '{"stage":{},"date":"2026-09-09"}']:
+            (self.root/f'production-{DAY}.json').write_text(value)
+            self.assertEqual(w.production_state(NOW), {})
+
+    def test_pipeline_error_shows_safe_stage_only(self):
+        for stage, code in [('publishing', 'git_publish_failed'), ('verifying_pages', 'pages_verification_failed'),
+                            ('pages_verified', 'line_delivery_failed'), ('research_pending', 'production_failed')]:
+            self.write_production(stage=stage, last_error='secret-path secret-token')
+            text, diagnostic = w.missing_alert(NOW, ValueError('stale'))
+            self.assertEqual(diagnostic['code'], code)
+            self.assertNotIn('secret-', text)
+
+    def test_missing_history_does_not_blame_quota_for_http_error(self):
+        diagnostic = w.alert_diagnosis(NOW, HTTPError('secret-url', 503, 'error', {}, None))
+        self.assertEqual(diagnostic['code'], 'public_connection_failed')
+        self.assertIn('HTTP 503', diagnostic['reason'])
+        self.assertNotIn('secret-url', json.dumps(diagnostic))
+
+    def test_running_task_is_not_declared_failed(self):
+        self.add_execution(status='inProgress')
+        self.assertEqual(w.alert_diagnosis(NOW, ValueError('stale'))['code'], 'in_progress')
+
+    def test_diagnosis_failure_does_not_read_or_modify_other_history(self):
+        self.add_execution()
+        before = w.HISTORY_DB.read_bytes()
+        w.latest_execution(NOW)
+        self.assertEqual(w.HISTORY_DB.read_bytes(), before)
 
 
 if __name__ == '__main__':

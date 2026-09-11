@@ -1,5 +1,13 @@
 # Knowledge Base Log
 
+## [2026-09-11] fix | Actionable LINE failure diagnostics
+
+- 依使用者要求，把可確認的原因、最後進度、系統時間與處理方式加入 LINE 缺件告警，避免僅收到「發布異常」而需再次人工查詢。
+- 使用現有唯一 watchdog，唯讀本新聞任務當日最新執行狀態與 production checkpoint；辨識 `usageLimitExceeded`，不需要模型在額度耗盡後自行回報。一般頻率限制與額度耗盡分開。
+- 不掃描整段對話；排除前日、其他任務、較新執行前的舊錯誤。通知只輸出固定分類，不帶原始錯誤、私人路徑或憑證。資料庫版本／讀取失敗會降級為原因未知，保留正常告警。
+- 32 項 watchdog 與 15 項 pipeline 測試通過；未重送今日已完成的新聞，也未製造真實故障告警。
+- 新版正式入口已原子安裝；17:51:44 執行 exit 0、`already sent`，正式來源也通過相同 32 項測試。
+
 ## [2026-09-11] fix | Production recovery and completion gate
 
 - 根因：08:00 新聞研究已啟動，但回覆排程偏好後結束，當日文件未建立。10:13:51 LINE 缺件告警成功，不是本次已確認的配送 API 故障。

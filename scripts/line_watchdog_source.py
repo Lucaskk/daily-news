@@ -12,6 +12,7 @@ import fcntl
 import hashlib
 import os
 import re
+import sqlite3
 import sys
 import tempfile
 import time
@@ -31,6 +32,122 @@ STATE_PATH = ROOT / "line-sent-key"
 ALERT_STATE_PATH = ROOT / "line-missing-alert-key"
 LINE_PUSH_URL = "https://api.line.me/v2/bot/message/push"
 TAIPEI = ZoneInfo("Asia/Taipei")
+HISTORY_DB = Path.home() / ".codex/thread_history_1.sqlite"
+NEWS_THREAD_ID = "01a02beb-5305-7900-a265-7e06ad01ccbd"
+STAGES = {
+    "research_pending": "研究與日報產製", "ready_to_publish": "等待發布",
+    "publishing": "GitHub 推送", "verifying_pages": "GitHub Pages 部署驗證",
+    "pages_verified": "LINE 配送", "complete": "已完成",
+}
+
+
+def production_state(now: datetime) -> dict:
+    try:
+        state = json.loads((ROOT / f"production-{now.date().isoformat()}.json").read_text())
+        if not isinstance(state, dict) or not isinstance(state.get("stage"), str):
+            return {}
+        checked = datetime.fromisoformat(state["checked_at"])
+        if (state.get("date") != now.date().isoformat() or checked.tzinfo is None or checked > now
+                or checked.astimezone(TAIPEI).date() != now.date()):
+            return {}
+        return state
+    except (OSError, ValueError, KeyError, TypeError):
+        return {}
+
+
+def latest_execution(now: datetime) -> dict:
+    """Read one current-day system status, never prompts, tool output or secrets.
+
+    This optional local projection can change between app versions. Fail closed
+    to unknown rather than treating missing history as proof of a quota failure.
+    """
+    if not HISTORY_DB.is_file():
+        return {}
+    start = now.replace(hour=8, minute=0, second=0, microsecond=0).timestamp()
+    try:
+        connection = sqlite3.connect(HISTORY_DB.as_uri() + "?mode=ro", uri=True, timeout=1)
+        try:
+            row = connection.execute(
+                "SELECT status,error_json,started_at,completed_at FROM thread_turns "
+                "WHERE thread_id=? AND started_at>=? AND started_at<=? "
+                "ORDER BY started_at DESC,rollout_ordinal DESC LIMIT 1",
+                (NEWS_THREAD_ID, int(start), int(now.timestamp())),
+            ).fetchone()
+        finally:
+            connection.close()
+        if not row:
+            return {}
+        error = json.loads(row[1]) if row[1] else {}
+        return {"status": row[0], "error": error if isinstance(error, dict) else {},
+                "started_at": row[2], "completed_at": row[3]}
+    except (sqlite3.Error, OSError, ValueError, TypeError):
+        return {}
+
+
+def alert_diagnosis(now: datetime, public_error: Exception) -> dict:
+    state = production_state(now)
+    execution = latest_execution(now)
+    stage = STAGES.get(state.get("stage"), "尚未取得當日產製進度")
+    result = {"code": "unknown", "stage": stage,
+              "reason": "今日尚未完成發布；中斷原因尚未確認。",
+              "evidence": "未取得可確認原因的系統錯誤紀錄。",
+              "action": "需接續當日產製；完成發布後，配送檢查會補送。"}
+    finished = execution.get("completed_at")
+    checked = datetime.fromisoformat(state["checked_at"]).timestamp() if state else 0
+    # Do not revive an old failure after a newer run or a newer pipeline update.
+    if execution.get("status") == "failed" and isinstance(finished, (int, float)) and checked <= finished <= now.timestamp():
+        error = execution.get("error", {})
+        info = error.get("codexErrorInfo")
+        message = error.get("message", "")
+        stamp = datetime.fromtimestamp(finished, TAIPEI).strftime("%H:%M:%S")
+        result["evidence"] = f"Codex 當日執行於 {stamp} 回報失敗（台北時間）。"
+        if info == "usageLimitExceeded" or (isinstance(message, str) and "you've hit your usage limit" in message.lower()):
+            result.update(code="model_quota", reason="Codex 模型使用額度已達上限，當次執行無法繼續。",
+                          action="額度恢復或補充後，需接續當日產製；系統未提供可核對的恢復時間，不自動購買額度。")
+        elif info == "rateLimitExceeded":
+            result.update(code="model_rate_limit", reason="模型服務回報請求頻率限制，非已確認的帳戶額度耗盡。",
+                          action="等待服務限制解除後接續產製；不自動新增新聞排程。")
+        else:
+            result.update(code="model_execution_failed", reason="Codex 執行失敗；未取得可安全辨識的詳細分類。")
+    elif state.get("last_error"):
+        code = {"publishing": "git_publish_failed", "verifying_pages": "pages_verification_failed",
+                "pages_verified": "line_delivery_failed"}.get(state.get("stage"), "production_failed")
+        result.update(code=code, reason=f"{stage}階段的指令回報失敗，尚未完成。",
+                      evidence="依當日產製進度檔的失敗紀錄；未轉傳原始錯誤或私人設定。",
+                      action="接續失敗階段即可；公開頁驗證通過後再配送，不必重做已完成步驟。")
+    elif execution.get("status") == "inProgress":
+        result.update(code="in_progress", reason="當日執行仍在進行，公開頁尚未通過檢查；目前無確定失敗原因。",
+                      evidence="Codex 最新狀態為執行中；此狀態可能延遲，不代表模型一定仍有進展。",
+                      action="配送程式會持續檢查；若長時間無進展，需要恢復該次執行。")
+    elif execution.get("status") in {"completed", "interrupted"} and state.get("stage") not in {"verifying_pages", "pages_verified", "complete"}:
+        result.update(code="production_incomplete", reason="當日執行已結束或中斷，但新聞尚未完成發布；停止原因未確認。",
+                      evidence="Codex 已無進行中的當次執行，公開頁仍未通過檢查。")
+
+    if isinstance(public_error, urllib.error.HTTPError):
+        public = f"公開頁讀取失敗：HTTP {public_error.code}。"
+    elif isinstance(public_error, (OSError, urllib.error.URLError)):
+        public = "公開頁連線失敗或逾時，可能是網路或站台服務問題。"
+    elif "today's trusted dated deck" in str(public_error) or "date does not match today" in str(public_error):
+        public = "最新入口或網頁日期不符今天。"
+    else:
+        public = "公開頁的轉址、內容格式或新聞完整性驗證未通過。"
+    result["public_check"] = public
+    if result["code"] == "unknown" and isinstance(public_error, OSError):
+        result.update(code="public_connection_failed", reason=public,
+                      evidence="本次公開頁讀取回報錯誤；未取得模型失敗證據。",
+                      action="配送程式會持續重試連線；若尚未產製完成，仍需接續產製。")
+    return result
+
+
+def missing_alert(now: datetime, public_error: Exception) -> tuple[str, dict]:
+    diagnostic = alert_diagnosis(now, public_error)
+    text = ("Daily News 發布異常\n"
+            f"日期：{now.date().isoformat()}\n截至：{now:%H:%M}（Asia/Taipei）\n"
+            f"原因：{diagnostic['reason']}\n進度：{diagnostic['stage']}\n"
+            f"依據：{diagnostic['evidence']}\n網頁：{diagnostic['public_check']}\n"
+            f"處理：{diagnostic['action']}\n"
+            "配送檢查不會重新產製新聞；發布恢復後會補送。")
+    return text, diagnostic
 
 
 def write_atomic(path: Path, text: str) -> None:
@@ -238,18 +355,12 @@ def run_once(now: datetime) -> int:
     except (urllib.error.URLError, OSError, ValueError) as exc:
         reason = f"{type(exc).__name__}: {exc}"
         if now.hour >= alert_hour:
-            alert_text = (
-                "Daily News 發布異常\n"
-                f"日期：{today}\n"
-                f"截至：{now:%H:%M}（Asia/Taipei）\n"
-                "今日公開新聞尚未通過日期、完整性或連線檢查。\n"
-                "請檢查 Codex 產製與 GitHub Pages。系統會持續檢查，恢復後補送。"
-            )
+            alert_text, diagnosis = missing_alert(now, exc)
             already_alerted = sent_date(ALERT_STATE_PATH) == today
             alerted = send_once(token, to_id, alert_text, "alert", now, ALERT_STATE_PATH)
             if alerted and not already_alerted:
                 log(f"Sent LINE missing-publish alert: {today}")
-            record_status("publish_unavailable", now, error=reason, alert_accepted=alerted)
+            record_status("publish_unavailable", now, error=reason, alert_accepted=alerted, diagnosis=diagnosis)
             return 1  # An accepted alert does not mean the news was delivered.
         record_status("waiting_for_publish", now, error=reason)
         return 0
