@@ -1,0 +1,32 @@
+{
+  "images": {
+    "t1": {
+      "src": "assets/deepseek-v41.webp",
+      "alt": "DeepSeek V4.1 官方版本發布識別圖",
+      "fit": "contain",
+      "caption": "V4.1 官方發布識別圖，非效能實測。",
+      "credit": "DeepSeek，權利歸原權利人",
+      "source_url": "https://www.deepseek.com/en/news/deepseek-v4-1-flash/",
+      "original_url": "https://www.deepseek.com/images/blog/deepseek-v4-1-flash/cover.webp"
+    },
+    "t2": {
+      "src": "assets/watch-series12.jpg",
+      "alt": "Apple Watch Series 12 官方產品圖，展示錶面與背部感測器",
+      "fit": "contain",
+      "caption": "Apple Watch Series 12 官方產品素材，非本地實測。",
+      "credit": "Apple，權利歸原權利人",
+      "source_url": "https://www.apple.com/newsroom/2026/09/introducing-apple-watch-series-12-with-the-all-new-health-sensing-system/",
+      "original_url": "https://www.apple.com/newsroom/images/2026/09/introducing-apple-watch-series-12-with-the-all-new-health-sensing-system/tile/Apple-Watch-Series-12-2up-260909-lp.jpg.og.jpg?202609101259"
+    },
+    "1": {
+      "src": "assets/world.jpg",
+      "alt": "地球主題配圖，不是摩卡港或當日事件照片",
+      "fit": "cover",
+      "caption": "全球新聞主題配圖，非當日事件照片。",
+      "credit": "Unsplash",
+      "source_url": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=85",
+      "original_url": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=85"
+    }
+  },
+  "image_notes": "官方素材僅用於對應產品的新聞識別與評論；權利歸原權利人。地球圖片沿用已保存且有出處的 Unsplash 主題素材，非事件現場照片。"
+}
