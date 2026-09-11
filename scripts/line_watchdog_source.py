@@ -180,8 +180,14 @@ def public_deck(base_url: str, latest_url: str, today: str) -> tuple[str, str]:
     target = urllib.parse.urlunsplit((parts.scheme, parts.netloc, parts.path, "", ""))
     if target != expected:
         raise ValueError("Latest entry does not point to today's trusted dated deck")
+    validate_deck(fetch(slide_url).decode("utf-8"), today)
+    return slide_url, today
+
+
+def validate_deck(html: str, today: str) -> None:
+    """Use the same structural gate before publishing and before delivery."""
     deck = Page()
-    deck.feed(fetch(slide_url).decode("utf-8"))
+    deck.feed(html)
     report = json.loads("".join(deck.report))
     if not isinstance(report, dict) or report.get("date") != today:
         raise ValueError("Public HTML report date does not match today")
@@ -206,7 +212,6 @@ def public_deck(base_url: str, latest_url: str, today: str) -> tuple[str, str]:
     tech = [s for s in stories if s["category"] == "tech"]
     if [s.get("rank") for s in tech] != [f"T{i}" for i in range(1, len(tech) + 1)] or stories != tech + [s for s in stories if s["category"] == "world"]:
         raise ValueError("Public report product order is invalid")
-    return slide_url, today
 
 
 def run_once(now: datetime) -> int:

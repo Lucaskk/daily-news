@@ -2,7 +2,7 @@
 title: "Knowledge Base Index"
 type: overview
 created: 2026-05-24
-updated: 2026-09-10
+updated: 2026-09-11
 status: seed
 tags: [index]
 sources: []
@@ -21,6 +21,9 @@ sources: []
 - [[2026-04-04-llm-wiki]] - Karpathy 提出的 LLM-maintained personal wiki 模式，是本知識庫的設計來源。
 
 ## Daily News
+
+- [2026-09-11 Daily News](daily/2026/09/2026-09-11/daily-news-2026-09-11.md) - 摩卡港城易手、ECB 升息、8 月氣溫新月報、菲律賓搜救、阿爾及利亞斷交、布卡武火災、香港裁決、印度食品標示、西班牙國籍法案及烏克蘭設施；產品先列 DeepSeek V4.1-Flash 與 Apple Watch Series 12。
+- [2026-09-11 Slides](daily/2026/09/2026-09-11/slides-2026-09-11.html) - 2 則產品、10 則全球新聞，逐篇時間、來源、原頁展開與 ChatGPT 提問。
 
 - [2026-09-10 Daily News](daily/2026/09/2026-09-10/daily-news-2026-09-10.md) - IAEA 正式移交、油價破百、伊拉克油輪、英以外交期限、邊境口岸、歐盟法院、孟加拉麻疹、尼泊爾配送、紐西蘭罷工與美厄安全合作；產品先列 iPhone Duo、18 Pro 與 Siri AI 時程。
 - [2026-09-10 Slides](daily/2026/09/2026-09-10/slides-2026-09-10.html) - 3 則科技產品、10 則全球新聞，原頁展開與單篇 ChatGPT 提問。

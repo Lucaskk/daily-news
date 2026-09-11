@@ -1,6 +1,22 @@
 # 每日新聞配送機制
 
-稽核日期：2026-09-09（Asia/Taipei）。
+稽核日期：2026-09-11（Asia/Taipei）。
+
+## 2026-09-11 產製中斷根因與修正
+
+- 已核對當日執行紀錄：08:00:53 開始新聞研究，最後卻回覆「維持 08:00 一次」的排程偏好並結束；沒有當日日報目錄。10:13:51 watchdog 成功發出缺件告警，公開入口仍指向 9/10。這是產製未完成，不是本次已觀察到的 LINE 或 GitHub 推送失敗。
+- 使用者再次確認保留同一對話、不新增獨立任務；每日產製仍一次。修正採持久化 checkpoint 與單一發布指令，不建立另一個排程。
+- `scripts/daily_news_pipeline.py begin/status` 保存並顯示當日截點與待辦階段；`finish` 串接渲染、驗證、乾淨 clone 推送、Pages 等待及既有 watchdog；`check` 是收尾驗證。詳見中央 README。
+- 新增跨程序鎖與發布 allowlist，排除私密設定及其他股票工作。Git push、Pages 部署與 LINE 短暫失敗在同一指令內有限重試；完成日期確認與 LINE 去重不能繞過。
+- 修改只降低「研究後漏接發布步驟」及「網路暫時失敗」風險。未完成的研究仍需模型接續；此腳本不是自動新聞產生器，也不能保證模型提前結束時自行復活。
+- 本次實機驗證：新流程發布 commit `edb7595`，Pages 三個入口雜湊符合，10:38:59 LINE 成功；45 項 Python 測試與公開頁手機／桌面檢查通過。
+
+```sh
+python3 scripts/daily_news_pipeline.py status
+python3 scripts/daily_news_pipeline.py finish
+python3 scripts/daily_news_pipeline.py check
+python3 -m unittest discover -s tests -p test_daily_news_pipeline.py
+```
 
 ## 排程與完成條件
 

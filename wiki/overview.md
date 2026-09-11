@@ -2,7 +2,7 @@
 title: "Overview"
 type: overview
 created: 2026-05-24
-updated: 2026-09-10
+updated: 2026-09-11
 status: seed
 tags: [overview]
 sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
@@ -19,6 +19,12 @@ sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
 - 抽出持續出現的人物、組織、事件、政策、技術與市場概念。
 - 維護跨來源的矛盾、時間線、趨勢與待查問題。
 - 將重要查詢結果回寫成可累積的 wiki 頁面。
+
+## 2026-09-11 Daily News Synthesis
+
+- 紅海港城的控制權變化與 ECB 新升息決策，將戰事影響連到航運與融資條件；不把航道風險寫成已全面封鎖。
+- 災害與司法消息應保存時間及口徑差異：菲律賓採新搜救通報，香港案件區分兩項裁決，食品標示與國籍立法不當成已全面實施。
+- 產品追蹤分開已上線 API、未來舊模型轉接、新手錶與尚未推出的聲音測試功能；產品窗為七天，不強迫新品與日報同日。
 
 ## 2026-09-10 Daily News Synthesis
 

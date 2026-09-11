@@ -1,7 +1,7 @@
 ---
 title: "每日全球與科技 AI 新聞產製規則"
 type: guidelines
-updated: 2026-09-09
+updated: 2026-09-11
 status: active
 tags: [daily-news, rules, deduplication, provenance]
 ---
@@ -142,6 +142,18 @@ tags: [daily-news, rules, deduplication, provenance]
 若當日檔案已產生但排程即將中斷，優先完成「發布 → LINE → 狀態紀錄」，不要把剩餘時間花在可選的本機 server 或視覺檢查。
 
 ### 排程恢復與完成檢查
+
+#### 2026-09-11：同一對話的持久化產製流程
+
+- 使用者確認保留同一對話、每日 08:00 一次，不新增獨立任務或 09:00／10:00 補跑。
+- 讀完本規則後，第一步執行 `python3 scripts/daily_news_pipeline.py begin --date YYYY-MM-DD --cutoff YYYY-MM-DDTHH:MM:SS+08:00`。既有當日 checkpoint 存在時改用 `status --date YYYY-MM-DD` 讀取其截點，禁止重設；私人檔案位於 `~/.codex/automations/ai/production-YYYY-MM-DD.json`。
+- 研究分批寫入當日來源筆記，不把唯一研究成果留在模型上下文。進度為 `research_pending` 時，下一步仍是完成日報與來源；不能用排程設定的答覆代替產製完成。
+- 收到偏好、排程確認或狀態詢問時，先簡短回應，將不衝突的變更套用後續完同一日工作。明確的停止、暫停或改變任務才停止原工作；本規則不凌駕使用者最新指示。
+- 新聞與來源筆記完成後，優先執行 `python3 scripts/daily_news_pipeline.py finish --date YYYY-MM-DD`，一次處理固定 renderer、結構驗證、產品表、乾淨 clone、限範圍 commit/push、Pages 當日頁／最新入口／根頁雜湊驗證及唯一 LINE watchdog。若改由 GitHub connector 發布相同檔案，執行 `verify-deliver --date YYYY-MM-DD` 接續驗證與配送，不再觸發 git push。
+- `finish` 具跨程序鎖、三次 Git push 嘗試、最多約五分鐘 Pages 部署等待、三次 watchdog 嘗試；LINE 仍由既有 retry key 去重。短暫服務失敗不重新研究；重啟指令從已推送後的驗證／配送階段接續。
+- 指令僅發布當日檔案與入口／產品表，維護規則、腳本與 `wiki/index.md`、`wiki/overview.md`、`wiki/log.md` 另以窄範圍提交，避免覆蓋其他工作。
+- 收尾必須執行 `python3 scripts/daily_news_pipeline.py check --date YYYY-MM-DD`。只有 `stage=complete` 且 LINE 日期成功紀錄吻合才回傳 0；非 0 時不得宣稱完成。若是可修復錯誤，在當次執行內修正並接續，不以診斷報告代替補完。
+- 這是可恢復的執行流程，不是應用程式的強制完成鉤子，也不會自行喚醒已結束的模型工作。保留每天一次及同一對話的前提下，無法保證模型用量耗盡、程式退出或電腦關機後無人介入恢復。不可宣稱已達到全年每天必定發送。
 
 - 依使用者 2026-09-09 確認，新聞產製維持每天 08:00 一次，不新增 09:00／10:00 補跑。LINE LaunchAgent 每 15 分鐘檢查配送，不負責重做新聞；10:00 後仍無合格當日頁面時發出每日一次告警。
 - 配送使用跨程序鎖、持久化 LINE retry key 與原始訊息、原子化成功紀錄。禁止用 `FORCE_LINE_PUSH` 繞過每日去重；逾時重試也必須保留相同訊息與 retry key。

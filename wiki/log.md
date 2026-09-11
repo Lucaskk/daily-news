@@ -1,5 +1,22 @@
 # Knowledge Base Log
 
+## [2026-09-11] fix | Production recovery and completion gate
+
+- 根因：08:00 新聞研究已啟動，但回覆排程偏好後結束，當日文件未建立。10:13:51 LINE 缺件告警成功，不是本次已確認的配送 API 故障。
+- 使用者明確選擇保留同一對話、每天 08:00 一次。未新增獨立任務、09:00／10:00 補跑，也未關閉告警或放寬私密權限。
+- 新增持久化截點／階段與單一 finish 指令，整合固定 renderer、結構驗證、乾淨 clone 限範圍發布、Pages 部署等待及唯一 watchdog；check 非完成即失敗。15 項新增測試、原 19 項 watchdog 與 11 項 renderer 測試通過。
+- 此修正並非系統強制完成鉤子；模型停止或額度用盡後，仍不會靠配送輪詢自動重做研究。
+
+## [2026-09-11] ingest | Daily global and tech AI news
+
+- 恢復原 08:00:53 Asia/Taipei 截點，全球 24 小時與產品 168 小時分開。2 則科技產品在前，全球恰好 10 則，3 則全球續報有前次日期。
+- 歷史產品 562 筆先以窄化 rg 比對，無命中後才讀 18 列近七日表；補查全球全部歷史，無讀取完整歷史表。
+- 報告與來源筆記保留事故時間、官方發布、生效日及新通報的區別；固定 renderer 與三張具出處的圖片。
+- 新 finish 指令實際完成乾淨 clone 推送 `edb7595`，保留先前股票 commit；公開日期頁、最新入口與根入口均通過 HTTP 與 SHA256 比對。
+- 唯一正式 watchdog 於 `2026-09-11T10:38:59+08:00` 回報 exit 0、`Sent LINE message`；production checkpoint 為 complete，check exit 0。未強制重送或使用其他 sender。
+- 公開頁 Playwright 320／390／1440px 通過：12 篇、圖片載入、原頁展開、單篇 ChatGPT 內容與鍵盤導覽；未傳送任何提問內容至 ChatGPT。產品表為 86 份日報、564 筆。
+- 公開網址：https://lucaskk.github.io/daily-news/wiki/daily/2026/09/2026-09-11/slides-2026-09-11.html?v=20260911-103816-reader 。最後 localhost:4173 仍回傳 Empty reply（curl 52），未阻擋發布或 LINE。
+
 ## [2026-09-10] ingest | Daily global and tech AI news
 
 - 研究截點 08:01:18 Asia/Taipei；全球 24 小時與科技產品 168 小時分開。3 則產品在前，全球恰好 10 則；Siri AI 與六則全球續報保留前次日期及具體新進展。
