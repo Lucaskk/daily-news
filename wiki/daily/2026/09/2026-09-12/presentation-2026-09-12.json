@@ -1,0 +1,7 @@
+{
+  "images": {
+    "t1": {"src": "assets/cursor-projects.png", "alt": "Cursor Projects 官方專案介面示意", "fit": "contain", "caption": "Projects 官方介面示意，非本站執行紀錄", "credit": "Cursor 官方公告圖片，權利屬原作者", "source_url": "https://cursor.com/blog/projects", "original_url": "https://ptht05hbb1ssoooe.public.blob.vercel-storage.com/assets/blog/og/projects-og-4-eYFsGoC01dE653MUPbfMcWZNX6eR8w.png"},
+    "t2": {"src": "assets/gemini-windows.png", "alt": "Google Gemini 桌面版官方標誌圖", "fit": "contain", "caption": "Gemini Windows 官方公告配圖，非操作畫面", "credit": "Source: Google；權利屬 Google", "source_url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-app-now-on-windows/", "original_url": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Gemini_for_Desktop_Thumbnail_2096x1182.width-1300.png"},
+    "1": {"src": "assets/world.jpg", "alt": "地球主題配圖，非當日事件照片", "fit": "contain", "caption": "全球新聞主題配圖，非事件照片", "credit": "NASA／Unsplash", "source_url": "https://unsplash.com/photos/Q1p7bh3SHj8", "original_url": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=85"}
+  }
+}

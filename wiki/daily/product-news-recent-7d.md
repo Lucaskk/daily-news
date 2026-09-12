@@ -1,21 +1,23 @@
 ---
 title: "科技產品新聞最近 7 天比對表"
 type: product-news-ledger-recent
-updated: 2026-09-11
+updated: 2026-09-12
 status: generated
 tags: [daily-news, tech-products, deduplication, recent]
 ---
 
 # 科技產品新聞最近 7 天比對表
 
-本檔是歷史 `rg` 搜尋沒有命中時的二次確認清單，可以完整讀取。涵蓋收錄日期 `2026-09-05` 至 `2026-09-11`；產品是否符合精確 168 小時發布窗，仍以當日來源筆記判定。
+本檔是歷史 `rg` 搜尋沒有命中時的二次確認清單，可以完整讀取。涵蓋收錄日期 `2026-09-06` 至 `2026-09-12`；產品是否符合精確 168 小時發布窗，仍以當日來源筆記判定。
 
-- 掃描日報：86 份。
-- 最近 7 天項目：17 則。
+- 掃描日報：87 份。
+- 最近 7 天項目：18 則。
 - 完整歷史只按需 `rg`：`wiki/daily/product-news-ledger.md`
 
 | 公司 | 產品 | 更新內容 | 發佈時間 | 收錄日期 | 狀態 | 來源網址 | 比對鍵 |
 |---|---|---|---|---|---|---|---|
+| Google | Gemini Windows 桌面應用程式 | Google 正式推出 Windows 版 Gemini，支援桌面快捷入口 | 2026-09-10（官方發布日期） | 2026-09-12 | 首次收錄 | https://blog.google/innovation-and-ai/products/gemini-app/gemini-app-now-on-windows/<br>https://gemini.google/desktop | f9fd1762aff7 |
+| Cursor | Projects | Cursor 推出 Projects 測試版，讓協調代理持續管理大型開發工作 | 2026-09-10（官方發布日期） | 2026-09-12 | 首次收錄 | https://cursor.com/blog/projects | 848d9f83bb70 |
 | DeepSeek | DeepSeek V4.1-Flash | DeepSeek 正式推出 V4.1-Flash API，公布舊模型轉接時程 | 2026-09-10（官方發布日期） | 2026-09-11 | 首次收錄 | https://www.deepseek.com/en/news/deepseek-v4-1-flash/ | 14bc2a6869f3 |
 | Apple | Apple Watch Series 12 | Apple 發布 Watch Series 12，聲音摘要功能預計年底測試 | 2026-09-09（官方發布日期） | 2026-09-11 | 首次收錄 | https://www.apple.com/newsroom/2026/09/introducing-apple-watch-series-12-with-the-all-new-health-sensing-system/ | 4661af104b5f |
 | Apple | iPhone 18 Pro／iPhone 18 Pro Max | Apple 發表 iPhone 18 Pro 系列，主相機加入可變光圈 | 2026-09-09（美國官方發布日期，未提供首次發布時分） | 2026-09-10 | 首次收錄 | https://www.apple.com/newsroom/2026/09/apple-debuts-iphone-18-pro-and-iphone-18-pro-max/<br>https://www.apple.com/iphone-18-pro/specs/ | c0ccf63ded2c |
@@ -32,4 +34,3 @@ tags: [daily-news, tech-products, deduplication, recent]
 | Tuya Smart | Doova AI companion robot | Tuya 在 IFA 全球首發 Doova AI companion robot 與 AI Home 生態系 | 2026-09-05 21:59:00（Asia/Taipei） | 2026-09-06 | 首次收錄 | https://www.prnewswire.com/news-releases/tuya-smart-brings-full-stack-ai-into-everyday-life-at-ifa-2026-302870665.html | ca71ee0f665d |
 | Google | September Android Drop | Google 發布 September Android Drop，將 Gemini 物品記憶與輔助功能帶入 Android | 2026-09-01（官方僅列日期）（Asia/Taipei） | 2026-09-06 | 首次收錄 | https://blog.google/products-and-platforms/platforms/android/Android-Drop-September-2026/ | bd66186341aa |
 | Google DeepMind | WeatherNext 3 | Google 推出 WeatherNext 3，將即時衛星資料與每小時更新帶入預報模型 | 2026-09-03（官方僅列日期）（Asia/Taipei） | 2026-09-06 | 首次收錄 | https://blog.google/innovation-and-ai/models-and-research/google-deepmind/introducing-weathernext-3/ | 949e4713d972 |
-| NAVEE | Fold P10 | NAVEE 發表 Fold P10 三折式電動滑板車（IFA） | 2026-09-04（官方活動頁僅列日期）（Asia/Taipei） | 2026-09-05 | 首次收錄 | https://www.ifa-berlin.com/de/programm/beyond-the-move-navee-global-product-launch<br>https://cadenaser.com/nacional/2026/09/04/asi-son-los-navee-fold-p10-el-primer-patinete-electrico-del-mundo-que-se-pliega-tres-veces-cadena-ser/ | 710b893c8e49 |

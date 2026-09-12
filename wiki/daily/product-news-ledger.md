@@ -1,7 +1,7 @@
 ---
 title: "科技產品新聞歷史比對表"
 type: product-news-ledger
-updated: 2026-09-11
+updated: 2026-09-12
 status: generated
 tags: [daily-news, tech-products, deduplication, provenance]
 ---
@@ -10,14 +10,16 @@ tags: [daily-news, tech-products, deduplication, provenance]
 
 此表由 `scripts/build_product_news_ledger.py` 掃描所有歷史日報的科技／AI 區段自動產生。**模型不得整份讀取本檔**；每個候選只用公司名、產品名、更新動作與比對鍵執行 `rg`，並只讀命中列。
 
-- 掃描日報：86 份。
-- 擷取科技／AI 項目：564 則。
+- 掃描日報：87 份。
+- 擷取科技／AI 項目：566 則。
 - 更新方式：`python3 scripts/build_product_news_ledger.py`
 - 查詢方式：使用窄化組合 pattern，例如 `rg -n -i '公司.*產品|產品.*公司|比對鍵' wiki/daily/product-news-ledger.md`，不要用公司名單獨匹配大量列。
 - 無命中時：完整讀取 `wiki/daily/product-news-recent-7d.md` 做最後確認，不讀取本檔全文。
 
 | 公司 | 產品 | 更新內容 | 發佈時間 | 收錄日期 | 狀態 | 來源網址 | 比對鍵 |
 |---|---|---|---|---|---|---|---|
+| Google | Gemini Windows 桌面應用程式 | Google 正式推出 Windows 版 Gemini，支援桌面快捷入口 | 2026-09-10（官方發布日期） | 2026-09-12 | 首次收錄 | https://blog.google/innovation-and-ai/products/gemini-app/gemini-app-now-on-windows/<br>https://gemini.google/desktop | f9fd1762aff7 |
+| Cursor | Projects | Cursor 推出 Projects 測試版，讓協調代理持續管理大型開發工作 | 2026-09-10（官方發布日期） | 2026-09-12 | 首次收錄 | https://cursor.com/blog/projects | 848d9f83bb70 |
 | DeepSeek | DeepSeek V4.1-Flash | DeepSeek 正式推出 V4.1-Flash API，公布舊模型轉接時程 | 2026-09-10（官方發布日期） | 2026-09-11 | 首次收錄 | https://www.deepseek.com/en/news/deepseek-v4-1-flash/ | 14bc2a6869f3 |
 | Apple | Apple Watch Series 12 | Apple 發布 Watch Series 12，聲音摘要功能預計年底測試 | 2026-09-09（官方發布日期） | 2026-09-11 | 首次收錄 | https://www.apple.com/newsroom/2026/09/introducing-apple-watch-series-12-with-the-all-new-health-sensing-system/ | 4661af104b5f |
 | Apple | iPhone 18 Pro／iPhone 18 Pro Max | Apple 發表 iPhone 18 Pro 系列，主相機加入可變光圈 | 2026-09-09（美國官方發布日期，未提供首次發布時分） | 2026-09-10 | 首次收錄 | https://www.apple.com/newsroom/2026/09/apple-debuts-iphone-18-pro-and-iphone-18-pro-max/<br>https://www.apple.com/iphone-18-pro/specs/ | c0ccf63ded2c |
