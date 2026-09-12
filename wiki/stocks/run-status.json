@@ -1,7 +1,6 @@
 {
-  "run_at": "2026-09-12T00:02:01+08:00",
+  "run_at": "2026-09-13T01:03:46+08:00",
   "successful": [
-    "2330",
     "2303",
     "2317",
     "2327",
@@ -13,6 +12,8 @@
     "6175",
     "8299"
   ],
-  "failed": {},
+  "failed": {
+    "2330": "TWSE/TPEx 每日行情目前無法取得：Network error while fetching https://openapi.twse.com.tw/v1/exchangeReport/STOCK_DAY_ALL: <urlopen error [Errno 54] Connection reset by peer>；Network error while fetching https://www.tpex.org.tw/openapi/v1/tpex_mainboard_quotes: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1129)>"
+  },
   "skipped_fresh_today": []
 }
