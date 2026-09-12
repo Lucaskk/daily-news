@@ -2,7 +2,7 @@
 title: "Overview"
 type: overview
 created: 2026-05-24
-updated: 2026-09-11
+updated: 2026-09-12
 status: seed
 tags: [overview]
 sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
@@ -19,6 +19,12 @@ sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
 - 抽出持續出現的人物、組織、事件、政策、技術與市場概念。
 - 維護跨來源的矛盾、時間線、趨勢與待查問題。
 - 將重要查詢結果回寫成可累積的 wiki 頁面。
+
+## 2026-09-12 Daily News Synthesis
+
+- 紅海航運與替代輸油管線同受壓，連到 CPI 的能源價格壓力；不把潛在風險、已確認停運與實際供應損失混成同一數字。
+- 新資料的時間和口徑影響判讀：剛果疫情新增省份、英方戰損估計、九一一解密與 BoE 更換調查廠商，需分別保存發布日、歸因與可比性限制。
+- 產品由單次對話走向持久專案及桌面入口，Projects beta 和 Gemini Windows 各有正式發布節點與可用性條件。詳見 [本日日報](daily/2026/09/2026-09-12/daily-news-2026-09-12.md)。
 
 ## 2026-09-11 Daily News Synthesis
 

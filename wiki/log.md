@@ -1,5 +1,16 @@
 # Knowledge Base Log
 
+## [2026-09-12] ingest | Daily global and tech AI news
+
+- 09:54 檢查漏發：08:01 checkpoint 停於 research_pending，當日僅來源草稿；09:44 watchdog 為 waiting_for_publish。研究未完成，不是已確認的 LINE API 失敗或額度耗盡。
+- 沿用凍結截點 08:01:29 Asia/Taipei 補完，全球24小時、產品168小時；2則新產品在前、全球恰好10則。Perim／管線與剛果疫情為重大續報，附前次日期。
+- 歷史只以候選 rg 查詢；無有效命中的產品再讀17列近七日表。已查 Cool3c、Engadget，產品優先官方。更新後87份日報、566筆產品變更。
+- 記錄英國表決相反標題、香港刑期細分、剛果通報截止日差異、BoE調查廠商斷點；排除晚於截點的美國職缺禁令與Pemex消息，不把預告首發當結果時間。
+- pipeline finish 成功推送內容 commit `ee4fbbb`，公開日期頁、最新入口、根入口均通過HTTP與內容雜湊核對。
+- 唯一正式 watchdog 在 `2026-09-12T10:04:10+08:00` exit 0，回報 `Sent LINE message`；checkpoint complete、check exit 0。未強制重送、未使用其他sender、未改每天08:00同一對話設定。
+- 11項renderer測試通過；公開頁320／390／1440px測試通過，圖片、原頁展開、單篇ChatGPT內容與方向鍵正常。未自動提交提問，未宣稱實測iPhone App接管。
+- 公開：https://lucaskk.github.io/daily-news/wiki/daily/2026/09/2026-09-12/slides-2026-09-12.html?v=20260912-100327-reader 。最後本機 http://localhost:4173/wiki/daily/latest-slides.html 回傳curl52 Empty reply，不影響發布與LINE。
+
 ## [2026-09-11] fix | Actionable LINE failure diagnostics
 
 - 依使用者要求，把可確認的原因、最後進度、系統時間與處理方式加入 LINE 缺件告警，避免僅收到「發布異常」而需再次人工查詢。
