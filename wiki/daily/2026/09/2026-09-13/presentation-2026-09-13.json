@@ -1,0 +1,6 @@
+{
+  "images": {
+    "t1": {"src": "assets/blizzcon-diablo.png", "alt": "Blizzard 官方 BlizzCon Diablo 系列公告配圖", "fit": "contain", "caption": "官方系列公告配圖，非 Diablo V 最終遊戲畫面", "credit": "Blizzard Entertainment，權利屬原作者", "source_url": "https://news.blizzard.com/en-us/article/24301509/diablos-next-era-revealed-at-blizzcon-2026-opening-ceremonies-recap", "original_url": "https://bnetcmsus-a.akamaihd.net/cms/blog_header/s0/S0N3SQJMGBJ11789065106092.png"},
+    "1": {"src": "assets/world.jpg", "alt": "地球主題配圖，非當日事件照片", "fit": "contain", "caption": "全球新聞主題配圖，非事件照片", "credit": "NASA／Unsplash", "source_url": "https://unsplash.com/photos/Q1p7bh3SHj8", "original_url": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=85"}
+  }
+}
