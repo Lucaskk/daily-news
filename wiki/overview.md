@@ -2,7 +2,7 @@
 title: "Overview"
 type: overview
 created: 2026-05-24
-updated: 2026-09-12
+updated: 2026-09-13
 status: seed
 tags: [overview]
 sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
@@ -19,6 +19,12 @@ sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
 - 抽出持續出現的人物、組織、事件、政策、技術與市場概念。
 - 維護跨來源的矛盾、時間線、趨勢與待查問題。
 - 將重要查詢結果回寫成可累積的 wiki 頁面。
+
+## 2026-09-13 Daily News Synthesis
+
+- 管線攻擊進入伊拉克責任追查，金磚形成共同外交文本；分開政治訊號、制度程序與真正的停火或恢復供應。
+- 菲律賓搜救新數字、烏克蘭資產估值、Pemex漏量空白和Optus安危回訪，顯示統計更新與安全結果應逐次保存，不覆蓋早期口徑。
+- BlizzCon產品主線分為下一代Diablo V與既有Diablo IV新增Switch 2平台；正式公告不等於已上市。詳見[本日日報](daily/2026/09/2026-09-13/daily-news-2026-09-13.md)。
 
 ## 2026-09-12 Daily News Synthesis
 

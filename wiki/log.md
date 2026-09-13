@@ -1,5 +1,22 @@
 # Knowledge Base Log
 
+## [2026-09-13] ingest | Daily global and tech AI news
+
+- 截點08:01:34 Asia/Taipei；全球前24小時、產品前168小時。2則BlizzCon產品變更在前，全球恰好10則；伊拉克責任追查、金磚正式宣言與菲律賓新通報標明前次收錄。
+- 全歷史只以候選rg查詢；產品無命中後讀18列近7日表。完成後88份日報、568筆產品變更，近7日17列。Cool3c與Engadget已查；官方Blizzard HTML核對datePublished及Switch 2段落。
+- 不採舊胡塞分析、舊Congo數字、商品教學或論壇猜測補位；區分政治表態、暫時裁定、風險估值與實際結果。來源筆記保留Reuters/AP轉載、時間精度及直接開頁失敗限制。
+- pipeline finish 推送 `963d95c`；Pages當日頁、latest與root入口HTTP及雜湊驗證通過，唯一watchdog於2026-09-13T08:10:31+08:00回報Sent LINE message、exit0；check exit0。
+- 11項renderer測試及公開頁320/390/1440px檢查通過，圖片、原頁完整報告、單篇ChatGPT內容與鍵盤導覽正常，沒有自動提交ChatGPT提問。
+- 本日begin建立guard，接續次數0；本次自然完成，不把這次成功宣稱為已實測中斷／compaction自救。未增加排程、未更改模型或重送。
+- 公開：https://lucaskk.github.io/daily-news/wiki/daily/2026/09/2026-09-13/slides-2026-09-13.html?v=20260913-080946-reader 。本機 http://localhost:4173/wiki/daily/latest-slides.html 回傳curl52空回應，屬非阻擋預覽問題。
+
+## [2026-09-12] fix | Bounded daily-news lifecycle guard
+
+- 修正上下文整理後轉答舊問題並提前結束的風險：新增 SessionStart 恢復提示、Stop 完成檢查與有限接續，以及新指令／Interrupt 暫停。
+- 限本對話與工作目錄；最多3次、90分鐘或連續2次無進展。同日重新begin不重設預算；不新增排程、不重送今日新聞。
+- pipeline 保存 Pages 內容雜湊供收尾驗證。新增防護測試涵蓋錯誤收尾、整理上下文、暫停、跨日、去重與接續限制。
+- Codex 0.153.4 hooks/list 辨識四個事件、無解析錯誤，但全部untrusted；需使用者審閱信任，尚未宣稱正式排程生效。
+
 ## [2026-09-12] ingest | Daily global and tech AI news
 
 - 09:54 檢查漏發：08:01 checkpoint 停於 research_pending，當日僅來源草稿；09:44 watchdog 為 waiting_for_publish。研究未完成，不是已確認的 LINE API 失敗或額度耗盡。
