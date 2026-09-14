@@ -1,5 +1,13 @@
 # Knowledge Base Log
 
+## [2026-09-14] feature | LINE diagnosis command and Python AI division
+
+- 依使用者要求暫停當日新聞產製，先新增「重新產出」診斷指令；未重設08:01:40截點、未宣稱當日發布完成、未代送LINE測試。
+- 既有Vercel Webhook只接受新聞收件人私訊指令，驗證LINE簽章，將去識別的當日最新請求存GitHub；原watchdog每15分鐘診斷，不呼叫AI、不另設產製排程，保持唯一發送入口與事件／每日去重。
+- Bot本機git push遇403，改GitHub connector成功發布；最新Bot commit d2fba6d，Vercel success。正式能力端點HTTP200、queueConfigured=true；未簽章Webhook HTTP403。
+- Python99項測試、Bot6項測試通過；已安裝私人watchdog並啟用開關，完整真實LINE收送仍待使用者傳指令驗證。新聞程式及分工表已推送e626772。
+- 分工詳見 [Python與Codex分工](daily/python-ai-division.md)。研究不足仍需Codex接續；本次沒有實作AI喚醒或自動重寫新聞。
+
 ## [2026-09-13] ingest | Daily global and tech AI news
 
 - 截點08:01:34 Asia/Taipei；全球前24小時、產品前168小時。2則BlizzCon產品變更在前，全球恰好10則；伊拉克責任追查、金磚正式宣言與菲律賓新通報標明前次收錄。
