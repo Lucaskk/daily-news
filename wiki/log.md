@@ -1,5 +1,13 @@
 # Knowledge Base Log
 
+## [2026-09-15] fix | Reversible research helpers and September 14 incident
+
+- 已核對9/14當日系統回合：08:01啟動研究，08:02:24整理上下文，08:05:32以App／CLI舊問題答案收尾；無模型額度錯誤。10:00:39僅發缺件告警；12:47後使用者才明確暫停。當日日報／來源筆記未建立，未進入發布。
+- 新增news_workflow.py與兩個command捷徑；legacy/python切換僅改私人設定，預設legacy。新版提供指定URL快取與窄化歷史查詢；不改模板、新聞、配送或安全防護。
+- 修正Stop缺turn_id的略過路徑與同回合stop_hook_active未計入上限；保留精確scope、停止優先及原有次數／時間限制。新增最近64筆非內容Hook稽核；缺檔告警更明確。
+- 本機114項回歸測試通過；已安裝watchdog38項測試通過，實際HTTP快取首抓／再用驗證成功。hooks/list目前四事件皆trusted，但9/14缺少事件稽核，未宣稱已證實當時Hook未觸發的底層原因或已實測後續完整排程。
+- 9/14 check維持exit2/research_pending，未偽造成功、未補產舊新聞或重送LINE。詳見 [流程切換](daily/workflow-switch.md) 與 [事故紀錄](daily/incident-2026-09-14.md)。
+
 ## [2026-09-14] feature | LINE diagnosis command and Python AI division
 
 - 依使用者要求暫停當日新聞產製，先新增「重新產出」診斷指令；未重設08:01:40截點、未宣稱當日發布完成、未代送LINE測試。

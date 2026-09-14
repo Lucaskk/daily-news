@@ -125,11 +125,13 @@ def verify_public(state, attempts=20):
     for attempt in range(attempts):
         try:
             url, _ = watchdog.public_deck(BASE, latest, day)
+            verified_hashes = {}
             for relative, remote in [(dated, url), ("wiki/daily/latest-slides.html", latest), ("index.html", BASE + "/")]:
                 public = watchdog.fetch(remote, headers={"Cache-Control": "no-cache"})
                 if hashlib.sha256(public).digest() != hashlib.sha256((ROOT / relative).read_bytes()).digest():
                     raise ValueError("Pages has not deployed the current bytes yet")
-            save(state, "pages_verified", public_url=url)
+                verified_hashes[relative] = hashlib.sha256(public).hexdigest()
+            save(state, "pages_verified", public_url=url, verified_hashes=verified_hashes)
             return
         except (OSError, ValueError):
             if attempt == attempts - 1:
@@ -187,6 +189,9 @@ def main():
         state = None
         try:
             state = begin(args.date, args.cutoff)
+            if args.action == "begin" and args.date == now().date().isoformat():
+                import daily_news_guard
+                daily_news_guard.arm_from_pipeline()
             if args.action == "finish":
                 finish(state)
             elif args.action == "verify-deliver":
@@ -194,7 +199,8 @@ def main():
                     raise ValueError("Cannot deliver an old date")
                 verify_public(state)
                 deliver(state)
-            print(json.dumps(state, ensure_ascii=False, indent=2))
+            from news_workflow import instructions, profile
+            print(json.dumps({**state, "research_mode": profile(), "research_instructions": instructions()}, ensure_ascii=False, indent=2))
             if args.action == "check":
                 return 0 if state["stage"] == "complete" and watchdog.sent_date(PRIVATE / "line-sent-key") == args.date else 2
             return 0

@@ -10,6 +10,12 @@ tags: [daily-news, rules, deduplication, provenance]
 
 本檔是 `wiki/daily/` 每日新聞報告、來源筆記與網頁簡報的固定規則。每日自動化開始選題前必須先讀取本檔。
 
+### 可回退的研究模式（2026-09-15）
+
+- 每次產製先用 `python3 scripts/news_workflow.py status` 確認模式；pipeline也會輸出目前模式。legacy沿用原本搜尋／rg流程；python使用同程式的lookup與fetch輔助，仍需AI判讀。預設legacy，不因新功能已存在就自行切換。
+- 使用者可直接執行 `python3 scripts/news_workflow.py mode legacy` 切回，或 `mode python` 啟用。設定不改日報、公開頁、配送成功紀錄或防護；詳細操作見 [新舊流程切換](workflow-switch.md)。
+- 9/14事故稽核與修正限制見 [9/14未產製事故](incident-2026-09-14.md)。維持同一對話每天08:00，不新增補跑；新使用者指令與停止要求仍優先。
+
 ### LINE 指令與節省 token 分工（2026-09-14）
 
 - 「重新產出」目前定義為先自動診斷：既有 LINE Bot 接收授權的一對一指令，原有 watchdog 回報產製／公開頁／配送狀態；不自行啟動模型、不重設當日研究截點、不繞過配送去重。

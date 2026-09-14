@@ -124,6 +124,15 @@ def alert_diagnosis(now: datetime, public_error: Exception) -> dict:
         result.update(code="production_incomplete", reason="當日執行已結束或中斷，但新聞尚未完成發布；停止原因未確認。",
                       evidence="Codex 已無進行中的當次執行，公開頁仍未通過檢查。")
 
+    if result["code"] in {"unknown", "production_incomplete"} and state.get("stage") == "research_pending":
+        day = now.date().isoformat()
+        folder = NEWS_REPO / f"wiki/daily/{day[:4]}/{day[5:7]}/{day}"
+        if not any((folder / f"{prefix}-{day}.md").exists() for prefix in ("daily-news", "source-notes")):
+            result.update(code="research_not_persisted",
+                          reason="產製進度停在研究階段，當日日報與來源筆記尚未落檔；未進入發布。",
+                          evidence="當日 checkpoint 為 research_pending，且兩份必要檔案皆不存在；不是已確認的額度或 LINE API 錯誤。",
+                          action="需由 Codex 接續來源查證與日報，先分批落檔，再執行 finish；單獨重試配送無法補出新聞。")
+
     if isinstance(public_error, urllib.error.HTTPError):
         public = f"公開頁讀取失敗：HTTP {public_error.code}。"
     elif isinstance(public_error, (OSError, urllib.error.URLError)):

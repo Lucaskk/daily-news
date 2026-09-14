@@ -44,7 +44,7 @@ class WatchdogTests(unittest.TestCase):
         self.root = Path(self.temp.name)
         changes = {'ROOT': self.root, 'STATE_PATH': self.root/'line-sent-key',
                    'ALERT_STATE_PATH': self.root/'line-missing-alert-key',
-                   'HISTORY_DB': self.root/'history.sqlite'}
+                   'HISTORY_DB': self.root/'history.sqlite', 'NEWS_REPO': self.root/'repo'}
         for name, value in changes.items():
             p = patch.object(w, name, value); p.start(); self.addCleanup(p.stop)
         p = patch.object(w, 'load_env', return_value={'PUBLIC_SLIDES_BASE_URL': BASE,
@@ -268,6 +268,19 @@ class WatchdogTests(unittest.TestCase):
         self.assertIn('10:11:00', text)
         self.assertNotIn('private-token', text)
         self.assertEqual(self.status()['diagnosis']['code'], 'model_quota')
+
+    def test_missing_research_is_specific_not_guessed_quota(self):
+        self.write_production()
+        result = w.alert_diagnosis(NOW, ValueError('stale'))
+        self.assertEqual(result['code'], 'research_not_persisted')
+        self.assertIn('尚未落檔', result['reason'])
+
+    def test_existing_notes_not_mislabeled_as_no_persisted_research(self):
+        self.write_production()
+        folder = w.NEWS_REPO / f'wiki/daily/2026/09/{DAY}'
+        folder.mkdir(parents=True)
+        (folder/f'source-notes-{DAY}.md').write_text('partial findings')
+        self.assertNotEqual(w.alert_diagnosis(NOW, ValueError('stale'))['code'], 'research_not_persisted')
 
     def test_previous_day_other_thread_and_future_errors_ignored(self):
         self.add_execution(started=NOW-timedelta(days=1), completed=NOW-timedelta(days=1))
