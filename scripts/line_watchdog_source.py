@@ -34,6 +34,7 @@ LINE_PUSH_URL = "https://api.line.me/v2/bot/message/push"
 TAIPEI = ZoneInfo("Asia/Taipei")
 HISTORY_DB = Path.home() / ".codex/thread_history_1.sqlite"
 NEWS_THREAD_ID = "01a02beb-5305-7900-a265-7e06ad01ccbd"
+NEWS_REPO = Path.home() / "Documents/daily news"
 STAGES = {
     "research_pending": "研究與日報產製", "ready_to_publish": "等待發布",
     "publishing": "GitHub 推送", "verifying_pages": "GitHub Pages 部署驗證",
@@ -335,6 +336,12 @@ def run_once(now: datetime) -> int:
     today = now.date().isoformat()
     if os.environ.get("FORCE_LINE_PUSH") == "1":
         raise ValueError("Forced delivery is disabled; reconcile delivery state explicitly instead")
+    if (ROOT / "line-command-enabled").is_file():
+        try:
+            process_news_command(now)
+        except Exception as exc:
+            # Command service failure must not block normal daily delivery.
+            log(f"LINE command check failed: {type(exc).__name__}", error=True)
     if sent_date(STATE_PATH) == today:
         record_status("already_sent", now, delivered_date=today)
         if os.environ.get("LINE_WATCHDOG_QUIET") != "1":
@@ -377,6 +384,66 @@ def run_once(now: datetime) -> int:
     record_status("sent", now, delivered_date=today, slide_url=slide_url)
     log(f"Sent LINE message: {slide_date} | {slide_url}")
     return 0
+
+
+def process_news_command(now: datetime) -> bool:
+    """Diagnose an owner-authorized request; never launch AI or reset delivery."""
+    today = now.date().isoformat()
+    url = ("https://raw.githubusercontent.com/Lucaskk/daily-news/main/"
+           f"wiki/daily/commands/{today}.json?t={int(now.timestamp())}")
+    try:
+        request = json.loads(fetch(url, headers={"Cache-Control": "no-cache"}))
+    except urllib.error.HTTPError as exc:
+        if exc.code == 404:
+            return False
+        raise
+    if not isinstance(request, dict):
+        return False
+    key = request.get("event_key", "")
+    if (request.get("date") != today or request.get("action") != "diagnose"
+            or not isinstance(key, str) or not re.fullmatch(r"[0-9a-f]{64}", key)):
+        return False
+    try:
+        stamp = datetime.fromisoformat(request["requested_at"].replace("Z", "+00:00"))
+        if (stamp.tzinfo is None or stamp.astimezone(TAIPEI).date() != now.date()
+                or stamp > now + timedelta(minutes=1)):
+            return False
+    except (KeyError, ValueError, TypeError, AttributeError):
+        return False
+    done = ROOT / f"line-command-sent-{key}"
+    if sent_date(done) == today:
+        return True
+    env = load_env(ENV_PATH)
+    base = require(env, "PUBLIC_SLIDES_BASE_URL").rstrip("/")
+    latest = base + "/" + env.get("DAILY_SLIDES_PATH", "/wiki/daily/latest-slides.html").lstrip("/")
+    state = production_state(now)
+    try:
+        public_deck(base, latest, today)
+        diagnosis = {"code": "published", "reason": "當日公開頁內容檢查通過。",
+                     "stage": STAGES.get(state.get("stage"), "產製紀錄未知"),
+                     "evidence": "已核對當日頁面、新聞結構及逐篇來源。",
+                     "action": "若尚未配送，原有配送流程接續處理；已配送則不重送。"}
+    except (OSError, ValueError) as exc:
+        diagnosis = alert_diagnosis(now, exc)
+    delivered = sent_date(STATE_PATH) == today
+    folder = NEWS_REPO / f"wiki/daily/{today[:4]}/{today[5:7]}/{today}"
+    missing = [label for prefix, label in [("daily-news", "日報"), ("source-notes", "來源筆記")]
+               if not (folder / f"{prefix}-{today}.md").is_file()]
+    artifacts = "缺少" + "、".join(missing) if missing else "日報與來源筆記檔案存在（不代表內容已查證）"
+    text = ("Daily News 重新產出：診斷結果\n"
+            f"日期：{today}\n檢查時間：{now:%H:%M:%S}（Asia/Taipei）\n"
+            f"原因：{diagnosis['reason']}\n進度：{diagnosis['stage']}\n"
+            f"依據：{diagnosis['evidence']}\n"
+            f"本機檔案：{artifacts}\n"
+            f"新聞配送：{'已有當日成功紀錄，不重送' if delivered else '尚無當日成功紀錄'}\n"
+            f"下一步：{diagnosis['action']}\n"
+            "此指令先自動診斷，不會自行喚醒 Codex；研究未完成時仍需接續新聞產製。")
+    write_atomic(ROOT / "line-command-diagnosis.json", json.dumps({
+        "date": today, "event_key": key, "checked_at": now.isoformat(),
+        "diagnosis": diagnosis, "delivered": delivered,
+    }, ensure_ascii=False, indent=2) + "\n")
+    return send_once(require(env, "LINE_CHANNEL_ACCESS_TOKEN"), require(env, "LINE_TO_ID"),
+                     text, f"command-{key}", now, done)
 
 
 def main() -> int:

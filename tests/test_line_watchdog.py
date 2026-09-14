@@ -61,6 +61,40 @@ class WatchdogTests(unittest.TestCase):
     def status(self):
         return json.loads((self.root/'line-watchdog-status.json').read_text())
 
+    def command_request(self, **extra):
+        return json.dumps(dict(date=DAY, action='diagnose', event_key='a'*64,
+                              requested_at=NOW.isoformat(), **extra)).encode()
+
+    def test_command_diagnoses_missing_news_without_marking_delivery(self):
+        self.fetch.side_effect = [self.command_request(), latest('2026-09-08'), b'{}']
+        self.assertTrue(w.process_news_command(NOW))
+        self.assertFalse(w.STATE_PATH.exists())
+        self.assertTrue((self.root/('line-command-sent-'+'a'*64)).exists())
+        self.fetch.side_effect = [self.command_request()]
+        self.assertTrue(w.process_news_command(NOW))
+        self.assertEqual(self.fetch.call_count, 4)
+
+    def test_command_after_delivery_does_not_resend_news(self):
+        w.STATE_PATH.write_text(DAY)
+        self.fetch.side_effect = [self.command_request(), latest(), deck(), b'{}']
+        self.assertTrue(w.process_news_command(NOW))
+        self.assertEqual(w.STATE_PATH.read_text(), DAY)
+        posted = json.loads(self.fetch.call_args.kwargs['data'])
+        self.assertIn('不重送', posted['messages'][0]['text'])
+
+    def test_command_rejects_invalid_and_old_requests(self):
+        for request in [[], {'date': 'old'}, dict(date=DAY, action='diagnose', event_key='../bad'),
+                        dict(date=DAY, action='diagnose', event_key='b'*64, requested_at='2026-09-08T10:00:00+08:00')]:
+            self.fetch.side_effect = None
+            self.fetch.return_value = json.dumps(request).encode()
+            self.assertFalse(w.process_news_command(NOW))
+
+    def test_command_poll_failure_does_not_block_news(self):
+        (self.root/'line-command-enabled').touch()
+        with patch.object(w, 'process_news_command', side_effect=OSError):
+            self.fetch.side_effect = [latest(), deck(), b'{}']
+            self.assertEqual(w.run_once(NOW), 0)
+
     def test_success_and_daily_dedup(self):
         self.fetch.side_effect = [latest(), deck(), b'{}']
         self.assertEqual(w.run_once(NOW), 0)
