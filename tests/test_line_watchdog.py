@@ -61,6 +61,53 @@ class WatchdogTests(unittest.TestCase):
     def status(self):
         return json.loads((self.root/'line-watchdog-status.json').read_text())
 
+    def backfill_fixture(self):
+        day = '2026-09-08'
+        folder = w.NEWS_REPO / f'wiki/daily/2026/09/{day}'
+        folder.mkdir(parents=True)
+        body = deck(day).replace(b'"stories":', b'"cutoff": "2026-09-08 08:00 (Asia/Taipei)", "stories":')
+        (folder / f'slides-{day}.html').write_bytes(body)
+        return day, body
+
+    def test_backfill_isolated_and_deduplicated_across_days(self):
+        day, body = self.backfill_fixture()
+        with patch.object(w, 'load_env', return_value={
+                'PUBLIC_SLIDES_BASE_URL': 'https://lucaskk.github.io/daily-news',
+                'LINE_CHANNEL_ACCESS_TOKEN': 'fake', 'LINE_TO_ID': 'fake'}):
+            self.fetch.side_effect = [body, b'{}']
+            self.assertEqual(w.run_backfill(day, NOW), 0)
+            self.assertFalse(w.STATE_PATH.exists())
+            self.assertFalse((self.root/'line-watchdog-status.json').exists())
+            posted = json.loads(self.fetch.call_args.kwargs['data'])
+            self.assertIn('補發', posted['messages'][0]['text'])
+            self.assertEqual(w.run_backfill(day, NOW + timedelta(days=1)), 0)
+            self.assertEqual(self.fetch.call_count, 2)
+
+    def test_backfill_refuses_invalid_dates_and_pending_original(self):
+        for day in [DAY, '2026-09-10', '2026-08-30', '../bad']:
+            with self.assertRaises(ValueError):
+                w.run_backfill(day, NOW)
+        (self.root/'line-request-news-2026-09-08.json').write_text('{}')
+        with self.assertRaisesRegex(ValueError, 'Original news request'):
+            w.run_backfill('2026-09-08', NOW)
+        self.fetch.assert_not_called()
+
+    def test_backfill_refuses_public_mismatch_without_sending(self):
+        day, body = self.backfill_fixture()
+        with patch.object(w, 'load_env', return_value={
+                'PUBLIC_SLIDES_BASE_URL': 'https://lucaskk.github.io/daily-news'}):
+            self.fetch.side_effect = [body + b'changed']
+            with self.assertRaisesRegex(ValueError, 'does not match'):
+                w.run_backfill(day, NOW)
+        self.assertEqual(self.fetch.call_count, 1)
+        self.assertFalse((self.root/f'line-backfill-sent-{day}').exists())
+
+    def test_backfill_refuses_pending_request_from_previous_day(self):
+        (self.root/'line-request-backfill-news-2026-09-08-2026-09-08.json').write_text('{}')
+        with self.assertRaisesRegex(ValueError, 'Older uncertain'):
+            w.run_backfill('2026-09-08', NOW)
+        self.fetch.assert_not_called()
+
     def command_request(self, **extra):
         return json.dumps(dict(date=DAY, action='diagnose', event_key='a'*64,
                               requested_at=NOW.isoformat(), **extra)).encode()
@@ -213,7 +260,7 @@ class WatchdogTests(unittest.TestCase):
         with (self.root/'line-watchdog.lock').open('a+') as lock:
             fcntl.flock(lock, fcntl.LOCK_EX | fcntl.LOCK_NB)
             with patch.object(w, 'run_once') as run:
-                self.assertEqual(w.main(), 0)
+                self.assertEqual(w.main([]), 0)
                 run.assert_not_called()
 
     def test_forced_duplicate_disabled(self):

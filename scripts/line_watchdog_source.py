@@ -8,6 +8,7 @@ state stay beside the installed file and must never be copied into the repo.
 from __future__ import annotations
 
 import json
+import argparse
 import fcntl
 import hashlib
 import os
@@ -455,7 +456,63 @@ def process_news_command(now: datetime) -> bool:
                      text, f"command-{key}", now, done)
 
 
-def main() -> int:
+def run_backfill(day: str, now: datetime) -> int:
+    """Explicit archive delivery, isolated from today's entry and receipt."""
+    if os.environ.get("FORCE_LINE_PUSH") == "1":
+        raise ValueError("Forced delivery is disabled")
+    target = datetime.strptime(day, "%Y-%m-%d").date()
+    if target.isoformat() != day or not 0 < (now.date() - target).days <= 7:
+        raise ValueError("Backfill requires a past ISO date within seven days")
+    receipt = ROOT / f"line-backfill-sent-{day}"
+    if sent_date(receipt):
+        log(f"LINE backfill already sent for {day}")
+        return 0
+    if sent_date(STATE_PATH) == day:
+        log(f"LINE daily slides already sent for {day}; no backfill")
+        return 0
+    if (ROOT / f"line-request-news-{day}.json").exists():
+        raise ValueError("Original news request exists; reconcile before backfill")
+    kind = f"backfill-news-{day}"
+    current_request = ROOT / f"line-request-{kind}-{now.date().isoformat()}.json"
+    if any(p != current_request for p in ROOT.glob(f"line-request-{kind}-*.json")):
+        raise ValueError("Older uncertain backfill request requires reconciliation")
+    folder = NEWS_REPO / f"wiki/daily/{day[:4]}/{day[5:7]}/{day}"
+    local = (folder / f"slides-{day}.html").read_bytes()
+    validate_deck(local.decode("utf-8"), day)
+    page = Page()
+    page.feed(local.decode("utf-8"))
+    cutoff = json.loads("".join(page.report)).get("cutoff", "")
+    if not isinstance(cutoff, str) or not cutoff.startswith(day):
+        raise ValueError("Backfill is missing its original research cutoff")
+    env = load_env(ENV_PATH)
+    base = require(env, "PUBLIC_SLIDES_BASE_URL").rstrip("/")
+    if base != "https://lucaskk.github.io/daily-news":
+        raise ValueError("Backfill requires the trusted public repository")
+    digest = hashlib.sha256(local).hexdigest()
+    url = f"{base}/wiki/daily/{day[:4]}/{day[5:7]}/{day}/slides-{day}.html?v={digest[:16]}"
+    public = fetch(url, headers={"Cache-Control": "no-cache"})
+    if public != local:
+        raise ValueError("Published backfill does not match the local verified deck")
+    validate_deck(public.decode("utf-8"), day)
+    message = (f"Daily News 補發\n原新聞日期：{day}\n"
+               f"研究截點：{cutoff}\n全球10則＋科技產品消息\n"
+               "這是原日期未完成日報的補製版，不混入截點後新聞。\n"
+               f"連結：{url}")
+    if not send_once(require(env, "LINE_CHANNEL_ACCESS_TOKEN"), require(env, "LINE_TO_ID"),
+                     message, kind, now, receipt):
+        return 1
+    write_atomic(ROOT / f"backfill-{day}.json", json.dumps({
+        "date": day, "stage": "complete", "delivered_at": now.isoformat(),
+        "slide_url": url, "sha256": digest, "cutoff": cutoff,
+    }, ensure_ascii=False, indent=2) + "\n")
+    log(f"Sent LINE message: {day} backfill | {url}")
+    return 0
+
+
+def main(argv=None) -> int:
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--backfill-date", help="Explicitly send a verified past-day archive")
+    args = parser.parse_args(argv)
     now = datetime.now(TAIPEI)
     with (ROOT / "line-watchdog.lock").open("a+") as lock:
         try:
@@ -464,10 +521,11 @@ def main() -> int:
             log("Another LINE watchdog is running; no duplicate execution")
             return 0
         try:
-            return run_once(now)
+            return run_backfill(args.backfill_date, now) if args.backfill_date else run_once(now)
         except Exception as exc:
             log(f"LINE watchdog failed: {type(exc).__name__}: {exc}", error=True)
-            record_status("error", now, error=f"{type(exc).__name__}: {exc}")
+            if not args.backfill_date:
+                record_status("error", now, error=f"{type(exc).__name__}: {exc}")
             return 1
 
 

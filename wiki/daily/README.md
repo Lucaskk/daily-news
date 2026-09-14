@@ -18,6 +18,8 @@ tags: [daily-news, rules, deduplication, provenance]
 
 ### LINE 指令與節省 token 分工（2026-09-14）
 
+- 使用者明確要求補發歷史日期時，可於核對原截點、完成日期網頁並驗證 Pages 後，使用唯一私人 watchdog 的 `--backfill-date YYYY-MM-DD`。只接受過去7天；獨立補發紀錄，不修改今天入口、正常配送成功日期或舊失敗 checkpoint。一般每日排程不得自行使用此入口。若原日期已有不確定的配送請求，須先核對，不繞過去重。
+
 - 「重新產出」目前定義為先自動診斷：既有 LINE Bot 接收授權的一對一指令，原有 watchdog 回報產製／公開頁／配送狀態；不自行啟動模型、不重設當日研究截點、不繞過配送去重。
 - Python 處理索引、固定檢查、渲染、發布、配送與已知錯誤分類；Codex 處理來源查證、事件語意去重、選題與摘要。完整分工及限制見 [Python 與 Codex 分工](python-ai-division.md)。
 
@@ -164,7 +166,15 @@ tags: [daily-news, rules, deduplication, provenance]
 - `finish` 具跨程序鎖、三次 Git push 嘗試、最多約五分鐘 Pages 部署等待、三次 watchdog 嘗試；LINE 仍由既有 retry key 去重。短暫服務失敗不重新研究；重啟指令從已推送後的驗證／配送階段接續。
 - 指令僅發布當日檔案與入口／產品表，維護規則、腳本與 `wiki/index.md`、`wiki/overview.md`、`wiki/log.md` 另以窄範圍提交，避免覆蓋其他工作。
 - 收尾必須執行 `python3 scripts/daily_news_pipeline.py check --date YYYY-MM-DD`。只有 `stage=complete` 且 LINE 日期成功紀錄吻合才回傳 0；非 0 時不得宣稱完成。若是可修復錯誤，在當次執行內修正並接續，不以診斷報告代替補完。
-- 這是可恢復的執行流程，不是應用程式的強制完成鉤子，也不會自行喚醒已結束的模型工作。保留每天一次及同一對話的前提下，無法保證模型用量耗盡、程式退出或電腦關機後無人介入恢復。不可宣稱已達到全年每天必定發送。
+- pipeline 本身不會自行喚醒模型。2026-09-12 新增下述有限接續 Hook，但需信任後才執行；模型額度耗盡、程式退出或電腦關機仍無法保證無人介入恢復，不可宣稱全年每天必定發送。
+
+#### 2026-09-12：上下文恢復與收尾防護
+
+- `scripts/daily_news_guard.py` 僅作用於本新聞對話及工作目錄；真正的 ai heartbeat 或 pipeline begin 啟用當日防護。一般聊天不因存在未完 checkpoint 就被強制拉回新聞。
+- SessionStart 的 compact/resume/startup 補回當日截點、階段與下一步；Stop 檢查當日完成紀錄、LINE 成功日期、報告及已驗證檔案雜湊，未完成時有限接續，不接受模型口頭宣稱成功。
+- 接續最多 3 次、啟動後 90 分鐘或連續 2 次無檔案／階段進展即停止；同日 begin 不重設上限。防護不自行搜尋、不發 LINE、不另建排程。
+- 為避免誤判自然語言，任何新的非產製使用者訊息都暫停自動收尾防護；模型仍按最新指示處理。Interrupt 不自動恢復。明確輸入 `繼續今日新聞產製` 可恢復未耗盡的當日防護，但不重設預算。
+- 使用者層 `~/.codex/hooks.json` 已配置四個事件。2026-09-12 以 Codex 0.153.4 `hooks/list` 驗證：4 個事件可辨識、無解析錯誤，全部 `untrusted`，尚未正式生效。需使用者在 Codex CLI 的 `/hooks` 審閱並信任；禁止繞過 Hook trust。信任後仍需核對下一次真正排程的 guard 狀態與完成紀錄，不能以單元測試代替實機排程驗證。
 
 - 依使用者 2026-09-09 確認，新聞產製維持每天 08:00 一次，不新增 09:00／10:00 補跑。LINE LaunchAgent 每 15 分鐘檢查配送，不負責重做新聞；10:00 後仍無合格當日頁面時發出每日一次告警。
 - 配送使用跨程序鎖、持久化 LINE retry key 與原始訊息、原子化成功紀錄。禁止用 `FORCE_LINE_PUSH` 繞過每日去重；逾時重試也必須保留相同訊息與 retry key。

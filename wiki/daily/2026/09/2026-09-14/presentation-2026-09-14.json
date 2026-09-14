@@ -1,0 +1,6 @@
+{
+  "images": {
+    "t1": {"src": "https://developer-blogs.nvidia.com/wp-content/uploads/2026/06/cuda-python-1024x576.png", "alt": "NVIDIA CUDA 官方技術文章配圖", "fit": "contain", "caption": "CUDA 系列官方配圖，非新版硬體實物照片", "credit": "NVIDIA，權利屬原作者", "source_url": "https://developer.nvidia.com/blog/?p=121255", "original_url": "https://developer-blogs.nvidia.com/wp-content/uploads/2026/06/cuda-python-1024x576.png"},
+    "1": {"src": "assets/world.jpg", "alt": "地球主題配圖，非瑞典投票現場", "fit": "contain", "caption": "全球新聞主題配圖，非事件照片", "credit": "NASA／Unsplash", "source_url": "https://unsplash.com/photos/Q1p7bh3SHj8", "original_url": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=85"}
+  }
+}
