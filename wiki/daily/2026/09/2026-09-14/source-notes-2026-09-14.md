@@ -96,4 +96,6 @@
 - 沿用現有單欄閱讀器：產品在前、標題時間出處、摘要、原頁展開與 ChatGPT 後續問題。
 - 補發只公開此日期目錄，LINE 使用帶版本的日期網址；不拿舊頁替換今天入口或修改今天成功紀錄。
 - 圖像權利與原圖網址記錄於 presentation-2026-09-14.json；主題圖明標非事件照片。
-- 公開驗證與 LINE 配送結果待實際執行後補記；不預先宣稱成功。
+- 公開日期頁2026-09-15驗證HTTP200、完整位元組及文章結構一致；commit 5ffd5b4。唯一私人watchdog於01:42:53 Asia/Taipei回報Sent LINE message、exit0，使用獨立補發receipt，未變更正常每日成功日期。
+- 版本網址：https://lucaskk.github.io/daily-news/wiki/daily/2026/09/2026-09-14/slides-2026-09-14.html?v=28b5f8c351f4d138
+- 立陶宛原始Reuters連結另核對：https://www.reuters.com/business/aerospace-defense/lithuania-closes-vilnius-airport-nato-summons-jets-response-possible-drone-2026-09-13/ ，直接讀取受限，事實採可讀Reuters轉載，不使用社群留言作證據。

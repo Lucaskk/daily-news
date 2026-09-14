@@ -5,7 +5,10 @@
 - 2026-09-15依使用者要求補製；保留原9/14 08:01:40截點，全球24小時、產品168小時。2則產品與10則全球新聞，未混入9/14截點後結果。
 - 昨日無完成草稿，屬補製後補發，不是已有完整稿重送。來源筆記分批落檔，保留時間、去重、消息分歧與原始URL。
 - 新增唯一watchdog的明確backfill-date入口；僅接受過去7天日期，核對公開頁與本機位元組、完整文章與日期。補發使用獨立retry key／成功紀錄，不修改今天入口、daily receipt或原checkpoint。
-- 發布及配送實際結果待完成後補記。
+- 推送5ffd5b4，Pages日期頁HTTP200且與本機完整位元組相符；唯一私人watchdog於2026-09-15 01:42:53 Asia/Taipei回報Sent LINE message、exit0。補發成功紀錄與每日正常紀錄分開。
+- 本機及已安裝watchdog各42項測試通過；renderer11項、pipeline15項通過。localhost4173未開啟（curl7），不影響已完成公開發布與LINE補送。
+- 公開頁320／390／1440px版面與圖片、原頁展開、單篇ChatGPT內容、方向鍵導覽檢查通過；未代送ChatGPT問題，也未宣稱實測使用者iPhone接管。
+- 公開：https://lucaskk.github.io/daily-news/wiki/daily/2026/09/2026-09-14/slides-2026-09-14.html?v=28b5f8c351f4d138
 
 ## [2026-09-15] fix | Reversible research helpers and September 14 incident
 
