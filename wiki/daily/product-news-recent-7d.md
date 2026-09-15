@@ -1,21 +1,22 @@
 ---
 title: "科技產品新聞最近 7 天比對表"
 type: product-news-ledger-recent
-updated: 2026-09-14
+updated: 2026-09-15
 status: generated
 tags: [daily-news, tech-products, deduplication, recent]
 ---
 
 # 科技產品新聞最近 7 天比對表
 
-本檔是歷史 `rg` 搜尋沒有命中時的二次確認清單，可以完整讀取。涵蓋收錄日期 `2026-09-08` 至 `2026-09-14`；產品是否符合精確 168 小時發布窗，仍以當日來源筆記判定。
+本檔是歷史 `rg` 搜尋沒有命中時的二次確認清單，可以完整讀取。涵蓋收錄日期 `2026-09-09` 至 `2026-09-15`；產品是否符合精確 168 小時發布窗，仍以當日來源筆記判定。
 
-- 掃描日報：89 份。
-- 最近 7 天項目：16 則。
+- 掃描日報：90 份。
+- 最近 7 天項目：14 則。
 - 完整歷史只按需 `rg`：`wiki/daily/product-news-ledger.md`
 
 | 公司 | 產品 | 更新內容 | 發佈時間 | 收錄日期 | 狀態 | 來源網址 | 比對鍵 |
 |---|---|---|---|---|---|---|---|
+| Microsoft | Excel =COPILOT 函數 | Microsoft 停用 Excel 的 =COPILOT 儲存格函數，改由側邊欄承接 AI 工作 | 2026-09-14（官方更新日期） | 2026-09-15 | 首次收錄 | https://techcommunity.microsoft.com/blog/microsoft365insiderblog/bring-ai-to-your-formulas-with-the-copilot-function-in-excel/4443487/replies/4467621 | ad434b2c2e40 |
 | NVIDIA | CUDA Toolkit 13.4 | NVIDIA CUDA 13.4 新增 Windows on Arm 支援與共享 GPU 管理功能 | 2026-09-09（官方發布日期） | 2026-09-14 | 首次收錄 | https://developer.nvidia.com/blog/?p=121255 | e56c62d8b03e |
 | Blizzard Entertainment | STARCRAFT 開放世界射擊新作 | Blizzard 公布 STARCRAFT 開放世界射擊新作，目標 2030 年春季推出 | 2026-09-12（BlizzCon 官方公告事件日） | 2026-09-14 | 首次收錄 | https://news.blizzard.com/en-gb/article/24301453/everything-announced-at-blizzcon-2026-opening-ceremony<br>https://www.pcgamer.com/games/fps/new-starcraft-game-is-an-open-world-shooter-coming-in-2030/ | db58f63c8e23 |
 | Blizzard Entertainment | Diablo IV: Age of Hatred Collection（Nintendo Switch 2） | Diablo IV 宣布登上 Nintendo Switch 2，合輯預定 9 月 15 日推出 | 2026-09-13 02:21:25（Asia/Taipei） | 2026-09-13 | 首次收錄 | https://news.blizzard.com/en-us/article/24301509/diablos-next-era-revealed-at-blizzcon-2026-opening-ceremonies-recap | c7cf6d0338c1 |
@@ -29,6 +30,3 @@ tags: [daily-news, tech-products, deduplication, recent]
 | Apple | iOS 27／Siri AI 推出時程 | Apple 公布 iOS 27 與 Siri AI 的 9 月推出日期及後續語言時程 | 2026-09-09（官方時程公告日期，未提供首次發布時分） | 2026-09-10 | 續報 | https://www.apple.com/newsroom/2026/09/apple-debuts-iphone-18-pro-and-iphone-18-pro-max/ | 855d2d8ae27e |
 | Sony | FE 8–14mm F3.5 Fisheye G（SEL814G） | Sony 發表 FE 8–14mm F3.5 Fisheye G，日本預定 10 月上市 | 2026-09-08（日本官方發布日期，未提供精確時分） | 2026-09-09 | 首次收錄 | https://www.sony.jp/CorporateCruise/Press/202609/26-0908B/ | 3d7223227b70 |
 | Meta | Muse 個人 AI 代理 | Meta 推出 Muse 個人 AI 代理，在美國開放手機與網頁使用 | 2026-09-09 03:00:51（Asia/Taipei） | 2026-09-09 | 首次收錄 | https://about.fb.com/news/2026/09/introducing-muse-personal-ai-agent/<br>https://apnews.com/article/meta-muse-ai-agent-3a4572eb4cf4e95d8a0dfdad6e6ca065 | 126882497f32 |
-| 華為 | HUAWEI Mate XT 2 非凡大師 | 華為發表三折疊 Mate XT 2，首搭 HarmonyOS 7 與麒麟 9050 Pro | 2026-09-07 14:30:00（中國標準時間；Asia/Taipei） | 2026-09-08 | 首次收錄 | https://consumer.huawei.com/cn/phones/mate-xt-2-ultimate-design/ | 01023a9c9af9 |
-| Uber／Wayve | Wayve AI Driver 乘車服務 | Uber 與 Wayve 在倫敦上線英國首批可叫車的受監督自駕行程 | 2026-09-03（Asia/Taipei；官方發布日期） | 2026-09-08 | 首次收錄 | https://investor.uber.com/news-events/news/press-release-details/2026/Wayve-and-Uber-Launch-First-Ever-Autonomous-Rides-in-the-UK-2026-VoFQI1WbQi/default.aspx | 9567d9190ac2 |
-| Sony | WH-1000XM4C | Sony 將 WH-1000XM4 以 WH-1000XM4C 重新推出，定價 299.99 美元並開放預購 | 2026-09-08 00:00:00（Asia/Taipei） | 2026-09-08 | 首次收錄 | https://electronics.sony.com/audio/headphones/headband/p/wh1000xm4c-v | c600729d79f7 |
