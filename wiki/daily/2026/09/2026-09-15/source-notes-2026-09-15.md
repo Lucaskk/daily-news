@@ -93,4 +93,7 @@
 
 - 沿用單欄手機閱讀頁：產品在第一頁最前方，每則顯示時間、出處與摘要，完整報告在原頁展開，並提供單篇 ChatGPT 後續問題。
 - 圖片來源寫入 `presentation-2026-09-15.json`；地球圖為全球新聞主題圖，非事件照片。
-
+- 內容發布 commit：`201b2b134bd2c4dcdbadbdae945d0ab714e97ed6`。GitHub Pages 日期頁、最新入口與根入口通過 HTTP 與內容雜湊驗證。
+- 唯一私人 watchdog 於 2026-09-15 08:10:27 Asia/Taipei 回報 `Sent LINE message`、exit 0；`daily_news_pipeline.py check` 隨後 exit 0。
+- 公開網址：https://lucaskk.github.io/daily-news/wiki/daily/2026/09/2026-09-15/slides-2026-09-15.html?v=20260915-080942-reader
+- 公開頁 320／390／1440px、圖片、原頁展開、單篇 ChatGPT 內容及鍵盤導覽檢查通過。localhost 4173 已啟動並確認 latest 入口 HTTP 200。

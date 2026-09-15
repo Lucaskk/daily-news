@@ -6,6 +6,9 @@
 - 完整歷史只以候選 `rg` 查詢；產品無命中後讀最近 7 天 16 列。產製前共 89 份日報、570 筆產品變更；Cool3c 與 Engadget 已查看但未用舊聞、評測或折扣補位。
 - 哈尼什群島、英國三地備忘錄、瑞典初步結果及 Virgo Transport 8 擴大搜救均明標續報與前次日期；俄艦敘利亞補給以窗口內首次可靠發布為基準，不改寫 9/7 到港日期。
 - 保留川普與烏克蘭對能源設施停打說法落差、EPA 成本主張與反對意見、B'Tselem 報告定性及未取得完整政府回應等歧異。
+- pipeline finish 推送內容 commit `201b2b1`，Pages 三入口與內容雜湊驗證通過；唯一 watchdog 於 08:10:27 回報 `Sent LINE message`、exit 0，check exit 0。知識索引另由乾淨 clone 推送 `1652a62`。
+- 公開頁 320／390／1440px、圖片、原頁完整報告、單篇 ChatGPT 內容與鍵盤導覽檢查通過；localhost 4173 latest 入口 HTTP 200。
+- 公開：https://lucaskk.github.io/daily-news/wiki/daily/2026/09/2026-09-15/slides-2026-09-15.html?v=20260915-080942-reader
 
 ## [2026-09-14] ingest | Daily global and tech AI news
 
