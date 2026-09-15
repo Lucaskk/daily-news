@@ -2,7 +2,7 @@
 title: "Overview"
 type: overview
 created: 2026-05-24
-updated: 2026-09-13
+updated: 2026-09-15
 status: seed
 tags: [overview]
 sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
@@ -19,6 +19,12 @@ sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
 - 抽出持續出現的人物、組織、事件、政策、技術與市場概念。
 - 維護跨來源的矛盾、時間線、趨勢與待查問題。
 - 將重要查詢結果回寫成可累積的 wiki 頁面。
+
+## 2026-09-15 Daily News Synthesis
+
+- 俄烏能源設施停打仍是相互矛盾的政治表述，尚無共同文本；美國郵寄投票限制與 EPA 電廠規則則已進入可辨識的司法命令及最終行政行動。
+- 紅海島嶼、瑞典初步席次、印尼擴大搜救與英國三地共同備忘錄皆為既有議題的實質新節點，續報只保存新地理、席次、部署或共同文件。
+- Excel =COPILOT 是功能撤下而非整個 Copilot 退出 Excel；側邊欄仍在，但舊活頁簿相容行為待 Microsoft 補充。詳見 [本日日報](daily/2026/09/2026-09-15/daily-news-2026-09-15.md)。
 
 ## 2026-09-14 Daily News Synthesis（9/15 補製）
 
