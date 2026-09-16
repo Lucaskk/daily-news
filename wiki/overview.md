@@ -2,7 +2,7 @@
 title: "Overview"
 type: overview
 created: 2026-05-24
-updated: 2026-09-15
+updated: 2026-09-16
 status: seed
 tags: [overview]
 sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
@@ -19,6 +19,12 @@ sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
 - 抽出持續出現的人物、組織、事件、政策、技術與市場概念。
 - 維護跨來源的矛盾、時間線、趨勢與待查問題。
 - 將重要查詢結果回寫成可累積的 wiki 頁面。
+
+## 2026-09-16 Daily News Synthesis
+
+- 沙烏地管線停運風險從燕布庫存估計進入部分歐洲貨單實際取消與暫停裝船；沙埃領袖會談是另一個外交節點，不等於航道或軍援已落實。
+- 立陶宛此次擊落真實無人機與 9/14 鳥群誤報分屬不同事件；美伊 Saildrone 小艇衝突則有軍艇與漁船相反敘述，須等待獨立鑑定。美國在軌武器的官方承認也缺技術細節。
+- Cloudflare 將 7 月預告推進新 Disallow AI Training 設定與舊控制遷移；OpenAI Data agent 和 Agents API 分別進入企業資料分析與公開測試的開發者託管入口。詳見 [本日日報](daily/2026/09/2026-09-16/daily-news-2026-09-16.md)。
 
 ## 2026-09-15 Daily News Synthesis
 

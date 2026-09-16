@@ -1,5 +1,13 @@
 # Knowledge Base Log
 
+## [2026-09-16] ingest | Daily global and tech AI news
+
+- 截點 08:01:48 Asia/Taipei；全球前 24 小時、科技產品前 168 小時。3 則科技產品在前、全球恰好 10 則；來源筆記逐項保留首發／官方事件基準及歧異。
+- 選題前產品索引為 571 筆、90 份日報。完整歷史只用窄化 `rg` 查候選；Cloudflare 命中 7/2 預告並標明 9/15 新設定與遷移，OpenAI Data agent／Agents API 無命中後才讀最近 7 天 14 列表。
+- 沙烏地貨單由 9/14 庫存估計轉為實際交貨變更；立陶宛真無人機與舊鳥群誤報分開，保留美伊小艇性質、UN 法律疑慮及在軌武器技術不明等限制。
+- pipeline finish 內容 commit `85f5cd9`，Pages 日期頁、最新入口與根入口 HTTP／雜湊驗證通過；唯一私人 watchdog 於 08:08:48 回報 `Sent LINE message`、exit 0；check exit 0。
+- 公開：https://lucaskk.github.io/daily-news/wiki/daily/2026/09/2026-09-16/slides-2026-09-16.html?v=20260916-080801-reader
+
 ## [2026-09-15] ingest | Daily global and tech AI news
 
 - 截點 08:02:14 Asia/Taipei；世界 24 小時、產品 168 小時。產品先列 Excel =COPILOT 停用狀態，全球恰好 10 則。

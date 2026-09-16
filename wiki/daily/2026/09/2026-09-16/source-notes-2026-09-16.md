@@ -99,3 +99,5 @@
 - Cloudflare 官方 9/15 文章 OG 圖下載為 `assets/cloudflare.png`，權利歸 Cloudflare；圖說為官方文章配圖，非實際儀表板截圖。原圖：https://blog.cloudflare.com/_emdash/api/media/file/01M2JFGHWHDDM5TY9NKS0TY8B3.01M2JFGJS6SBSH4SX8FC56CVPD.png
 - `assets/world.jpg` 為 NASA／Unsplash 全球新聞主題配圖，非立陶宛、沙烏地或其他事件照片；來源：https://unsplash.com/photos/Q1p7bh3SHj8 ，原圖：https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=85
 - 使用固定手機閱讀器；每篇原頁展開、完整來源 URL 及單篇 ChatGPT 可選擇提問。
+- 內容發布 commit `85f5cd9aa00077b525f27b1a3b71927b3bc0b38b`；GitHub Pages 日期頁、最新入口及根入口均通過 HTTP 與完整位元組雜湊驗證。唯一私人 watchdog 於 2026-09-16 08:08:48 Asia/Taipei 回報 `Sent LINE message`、exit 0；pipeline check 隨後 exit 0。
+- 公開網址：https://lucaskk.github.io/daily-news/wiki/daily/2026/09/2026-09-16/slides-2026-09-16.html?v=20260916-080801-reader
