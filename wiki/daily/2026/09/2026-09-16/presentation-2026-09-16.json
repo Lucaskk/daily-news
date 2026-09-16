@@ -1,0 +1,22 @@
+{
+  "images": {
+    "t1": {
+      "src": "assets/cloudflare.png",
+      "alt": "Cloudflare 9 月 15 日官方 AI 爬蟲設定文章配圖",
+      "fit": "contain",
+      "caption": "Cloudflare 官方文章配圖，非實際儀表板截圖",
+      "credit": "Cloudflare；權利屬原作者",
+      "source_url": "https://blog.cloudflare.com/accountable-mixed-use-ai-crawlers/",
+      "original_url": "https://blog.cloudflare.com/_emdash/api/media/file/01M2JFGHWHDDM5TY9NKS0TY8B3.01M2JFGJS6SBSH4SX8FC56CVPD.png"
+    },
+    "1": {
+      "src": "assets/world.jpg",
+      "alt": "地球主題配圖，非沙烏地原油裝船現場",
+      "fit": "contain",
+      "caption": "全球新聞主題配圖，非事件照片",
+      "credit": "NASA／Unsplash",
+      "source_url": "https://unsplash.com/photos/Q1p7bh3SHj8",
+      "original_url": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=85"
+    }
+  }
+}

@@ -1,7 +1,7 @@
 ---
 title: "科技產品新聞歷史比對表"
 type: product-news-ledger
-updated: 2026-09-15
+updated: 2026-09-16
 status: generated
 tags: [daily-news, tech-products, deduplication, provenance]
 ---
@@ -10,14 +10,17 @@ tags: [daily-news, tech-products, deduplication, provenance]
 
 此表由 `scripts/build_product_news_ledger.py` 掃描所有歷史日報的科技／AI 區段自動產生。**模型不得整份讀取本檔**；每個候選只用公司名、產品名、更新動作與比對鍵執行 `rg`，並只讀命中列。
 
-- 掃描日報：90 份。
-- 擷取科技／AI 項目：571 則。
+- 掃描日報：91 份。
+- 擷取科技／AI 項目：574 則。
 - 更新方式：`python3 scripts/build_product_news_ledger.py`
 - 查詢方式：使用窄化組合 pattern，例如 `rg -n -i '公司.*產品|產品.*公司|比對鍵' wiki/daily/product-news-ledger.md`，不要用公司名單獨匹配大量列。
 - 無命中時：完整讀取 `wiki/daily/product-news-recent-7d.md` 做最後確認，不讀取本檔全文。
 
 | 公司 | 產品 | 更新內容 | 發佈時間 | 收錄日期 | 狀態 | 來源網址 | 比對鍵 |
 |---|---|---|---|---|---|---|---|
+| OpenAI | ChatGPT Work Data agent | OpenAI 推出 ChatGPT Work Data agent，讓企業資料分析與互動儀表板在對話中完成 | 2026-09-10（官方產品發布日期） | 2026-09-16 | 首次收錄 | https://openai.com/index/put-data-to-work/ | 7a0a62707ed3 |
+| OpenAI | Agents API | OpenAI Agents API 開放公開測試，開發者可託管 Codex 式雲端代理 | 2026-09-10（官方產品 API 發布日期） | 2026-09-16 | 首次收錄 | https://openai.com/index/introducing-the-agents-api/ | 1b63d6e43338 |
+| Cloudflare | AI Crawl Control／Disallow AI Training | Cloudflare 推出「禁止 AI 訓練」設定，網站可保留搜尋索引並遷移舊爬蟲控制 | 2026-09-15（官方產品公告日期） | 2026-09-16 | 續報 | https://blog.cloudflare.com/accountable-mixed-use-ai-crawlers/<br>https://blog.cloudflare.com/content-independence-day-ai-options/ | 716d54520b0b |
 | Microsoft | Excel =COPILOT 函數 | Microsoft 停用 Excel 的 =COPILOT 儲存格函數，改由側邊欄承接 AI 工作 | 2026-09-14（官方更新日期） | 2026-09-15 | 首次收錄 | https://techcommunity.microsoft.com/blog/microsoft365insiderblog/bring-ai-to-your-formulas-with-the-copilot-function-in-excel/4443487/replies/4467621 | ad434b2c2e40 |
 | NVIDIA | CUDA Toolkit 13.4 | NVIDIA CUDA 13.4 新增 Windows on Arm 支援與共享 GPU 管理功能 | 2026-09-09（官方發布日期） | 2026-09-14 | 首次收錄 | https://developer.nvidia.com/blog/?p=121255 | e56c62d8b03e |
 | Blizzard Entertainment | STARCRAFT 開放世界射擊新作 | Blizzard 公布 STARCRAFT 開放世界射擊新作，目標 2030 年春季推出 | 2026-09-12（BlizzCon 官方公告事件日） | 2026-09-14 | 首次收錄 | https://news.blizzard.com/en-gb/article/24301453/everything-announced-at-blizzcon-2026-opening-ceremony<br>https://www.pcgamer.com/games/fps/new-starcraft-game-is-an-open-world-shooter-coming-in-2030/ | db58f63c8e23 |
