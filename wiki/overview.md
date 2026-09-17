@@ -2,7 +2,7 @@
 title: "Overview"
 type: overview
 created: 2026-05-24
-updated: 2026-09-16
+updated: 2026-09-17
 status: seed
 tags: [overview]
 sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
@@ -19,6 +19,12 @@ sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
 - 抽出持續出現的人物、組織、事件、政策、技術與市場概念。
 - 維護跨來源的矛盾、時間線、趨勢與待查問題。
 - 將重要查詢結果回寫成可累積的 wiki 頁面。
+
+## 2026-09-17 Daily News Synthesis
+
+- Fed 由先前升息預期進入正式 25 基點決議；沙國能源供應危機又延伸出攔截器求援，但匿名消息尚不能證實盟軍已部署。印度與巴基斯坦軍艦碰撞後互召外交官，雙方對海域定位相反。
+- 科索沃前總統戰爭罪判決仍可上訴；蘇丹礦災 82 死是 9/16 新救援數字，不把早前坍塌改寫成當日事故。加薩建築倒塌原因未明；剛果疫情在 Ituri 與 North Kivu 呈現相反走勢。
+- 科技產品由 ChatGPT 廣告轉向贊助代理對話與商家整合，Meta One 將 AI 用量納入訂閱層，Apple 開放訂閱 Bundles／Suites 申請。測試、申請、逐步推出與已全面供應的狀態不可混同。詳見 [本日日報](daily/2026/09/2026-09-17/daily-news-2026-09-17.md)。
 
 ## 2026-09-16 Daily News Synthesis
 

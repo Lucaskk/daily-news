@@ -39,4 +39,5 @@
 ## 發布與圖像紀錄
 
 - 圖像如採用，須標示為主題配圖或官方產品圖，不將舊型號、戰場或災害示意照片當作本次事件現場。圖源與權利記在 `presentation-2026-09-17.json`。
-- 發布、Pages 驗證與 LINE watchdog 的實際結果於流程完成後補記；未完成前不預寫成功。
+- 內容發布 commit `fde1a64a87551fe3db456781063201409f4a981d`；Pages 日期頁、最新入口及根入口均通過 HTTP 與完整位元組雜湊驗證。唯一私人 watchdog 於 2026-09-17 08:09:32 Asia/Taipei 回報 `Sent LINE message`、exit 0；pipeline check 隨後 exit 0。
+- 公開網址：https://lucaskk.github.io/daily-news/wiki/daily/2026/09/2026-09-17/slides-2026-09-17.html?v=20260917-080846-reader

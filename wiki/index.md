@@ -2,7 +2,7 @@
 title: "Knowledge Base Index"
 type: overview
 created: 2026-05-24
-updated: 2026-09-16
+updated: 2026-09-17
 status: seed
 tags: [index]
 sources: []
@@ -21,6 +21,9 @@ sources: []
 - [[2026-04-04-llm-wiki]] - Karpathy 提出的 LLM-maintained personal wiki 模式，是本知識庫的設計來源。
 
 ## Daily News
+
+- [2026-09-17 Daily News](daily/2026/09/2026-09-17/daily-news-2026-09-17.md) - ChatGPT 贊助代理、Meta One、Apple 訂閱組合先列；全球涵蓋 Fed 實際升息、沙國防空求援、科索沃判決與蘇丹礦災等 10 則。
+- [2026-09-17 Slides](daily/2026/09/2026-09-17/slides-2026-09-17.html) - 手機閱讀版，逐篇時間與來源、原頁完整報告及單篇 ChatGPT 後續提問。
 
 - [2026-09-16 Daily News](daily/2026/09/2026-09-16/daily-news-2026-09-16.md) - Cloudflare 新 AI 訓練拒絕設定與 OpenAI Data agent／Agents API 先列；全球涵蓋沙烏地實際取消貨單、立陶宛擊落無人機及美國在軌武器等 10 則。
 - [2026-09-16 Slides](daily/2026/09/2026-09-16/slides-2026-09-16.html) - 手機閱讀版，逐篇時間出處、原頁完整報告及單篇 ChatGPT 後續提問。

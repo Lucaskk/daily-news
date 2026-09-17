@@ -1,5 +1,12 @@
 # Knowledge Base Log
 
+## [2026-09-17] ingest | Daily global and tech AI news
+
+- 截點 08:02:33 Asia/Taipei；世界前 24 小時、產品前 168 小時。3 則科技產品先列、全球恰好 10 則；來源筆記保留每項事件／首次可靠發布時間與歧異。
+- 選題前產品索引為 574 筆、91 份日報；完整歷史只用窄化 `rg`，產品無同一變更命中後讀最近 7 天 15 列表。ChatGPT Ads 及剛果 Ebola 明標續報，未重列 9/16 已收錄的油管、無人機、在軌武器等事件。
+- pipeline finish 推送內容 commit `fde1a64`，Pages 日期頁、最新入口和根入口通過 HTTP／完整位元組雜湊驗證；唯一私人 watchdog 於 08:09:32 回報 `Sent LINE message`、exit 0；pipeline check exit 0。研究模式仍是 `legacy`，Python 負責既有渲染、驗證、發布與配送。
+- 公開：https://lucaskk.github.io/daily-news/wiki/daily/2026/09/2026-09-17/slides-2026-09-17.html?v=20260917-080846-reader
+
 ## [2026-09-16] ingest | Daily global and tech AI news
 
 - 截點 08:01:48 Asia/Taipei；全球前 24 小時、科技產品前 168 小時。3 則科技產品在前、全球恰好 10 則；來源筆記逐項保留首發／官方事件基準及歧異。
