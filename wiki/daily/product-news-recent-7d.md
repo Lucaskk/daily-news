@@ -1,21 +1,24 @@
 ---
 title: "科技產品新聞最近 7 天比對表"
 type: product-news-ledger-recent
-updated: 2026-09-16
+updated: 2026-09-17
 status: generated
 tags: [daily-news, tech-products, deduplication, recent]
 ---
 
 # 科技產品新聞最近 7 天比對表
 
-本檔是歷史 `rg` 搜尋沒有命中時的二次確認清單，可以完整讀取。涵蓋收錄日期 `2026-09-10` 至 `2026-09-16`；產品是否符合精確 168 小時發布窗，仍以當日來源筆記判定。
+本檔是歷史 `rg` 搜尋沒有命中時的二次確認清單，可以完整讀取。涵蓋收錄日期 `2026-09-11` 至 `2026-09-17`；產品是否符合精確 168 小時發布窗，仍以當日來源筆記判定。
 
-- 掃描日報：91 份。
+- 掃描日報：92 份。
 - 最近 7 天項目：15 則。
 - 完整歷史只按需 `rg`：`wiki/daily/product-news-ledger.md`
 
 | 公司 | 產品 | 更新內容 | 發佈時間 | 收錄日期 | 狀態 | 來源網址 | 比對鍵 |
 |---|---|---|---|---|---|---|---|
+| OpenAI | ChatGPT Ads／Sponsored Agents | OpenAI 測試 ChatGPT Sponsored Agents，並開放廣告製作與商務整合 | 2026-09-16（官方產品公告日期；未提供時分） | 2026-09-17 | 續報 | https://openai.com/index/reimagining-advertising-with-ai/<br>https://openai.com/index/testing-ads-in-chatgpt/ | 167d45c4203f |
+| Meta | Meta One | Meta One 正式推出跨 Facebook、Instagram、WhatsApp 的 AI 訂閱方案 | 2026-09-15（美國官方公告日期；未提供時分） | 2026-09-17 | 首次收錄 | https://about.fb.com/news/2026/09/introducing-meta-one-subscription-service-more-features-ai/<br>https://www.engadget.com/2258403/meta-adds-new-subscription-tiers-for-businesses-creators-and-ai-power-users/ | a9828179f599 |
+| Apple | StoreKit 2／App Store 訂閱 Bundles、Suites | Apple 開放申請 App Store 訂閱 Bundles／Suites，並啟用多席位購買 | 2026-09-16（Apple Developer 官方公告日期；未提供時分） | 2026-09-17 | 首次收錄 | https://developer.apple.com/news/?id=likeohx4 | fc96debc0a15 |
 | OpenAI | ChatGPT Work Data agent | OpenAI 推出 ChatGPT Work Data agent，讓企業資料分析與互動儀表板在對話中完成 | 2026-09-10（官方產品發布日期） | 2026-09-16 | 首次收錄 | https://openai.com/index/put-data-to-work/ | 7a0a62707ed3 |
 | OpenAI | Agents API | OpenAI Agents API 開放公開測試，開發者可託管 Codex 式雲端代理 | 2026-09-10（官方產品 API 發布日期） | 2026-09-16 | 首次收錄 | https://openai.com/index/introducing-the-agents-api/ | 1b63d6e43338 |
 | Cloudflare | AI Crawl Control／Disallow AI Training | Cloudflare 推出「禁止 AI 訓練」設定，網站可保留搜尋索引並遷移舊爬蟲控制 | 2026-09-15（官方產品公告日期） | 2026-09-16 | 續報 | https://blog.cloudflare.com/accountable-mixed-use-ai-crawlers/<br>https://blog.cloudflare.com/content-independence-day-ai-options/ | 716d54520b0b |
@@ -28,6 +31,3 @@ tags: [daily-news, tech-products, deduplication, recent]
 | Cursor | Projects | Cursor 推出 Projects 測試版，讓協調代理持續管理大型開發工作 | 2026-09-10（官方發布日期） | 2026-09-12 | 首次收錄 | https://cursor.com/blog/projects | 848d9f83bb70 |
 | DeepSeek | DeepSeek V4.1-Flash | DeepSeek 正式推出 V4.1-Flash API，公布舊模型轉接時程 | 2026-09-10（官方發布日期） | 2026-09-11 | 首次收錄 | https://www.deepseek.com/en/news/deepseek-v4-1-flash/ | 14bc2a6869f3 |
 | Apple | Apple Watch Series 12 | Apple 發布 Watch Series 12，聲音摘要功能預計年底測試 | 2026-09-09（官方發布日期） | 2026-09-11 | 首次收錄 | https://www.apple.com/newsroom/2026/09/introducing-apple-watch-series-12-with-the-all-new-health-sensing-system/ | 4661af104b5f |
-| Apple | iPhone 18 Pro／iPhone 18 Pro Max | Apple 發表 iPhone 18 Pro 系列，主相機加入可變光圈 | 2026-09-09（美國官方發布日期，未提供首次發布時分） | 2026-09-10 | 首次收錄 | https://www.apple.com/newsroom/2026/09/apple-debuts-iphone-18-pro-and-iphone-18-pro-max/<br>https://www.apple.com/iphone-18-pro/specs/ | c0ccf63ded2c |
-| Apple | iPhone Duo | Apple 正式發表 iPhone Duo，首款摺疊 iPhone 預定 10 月上市 | 2026-09-09（美國官方發布日期，未提供首次發布時分） | 2026-09-10 | 首次收錄 | https://www.apple.com/newsroom/2026/09/apple-unveils-iphone-duo/<br>https://www.apple.com/iphone-duo/ | f3305d81346b |
-| Apple | iOS 27／Siri AI 推出時程 | Apple 公布 iOS 27 與 Siri AI 的 9 月推出日期及後續語言時程 | 2026-09-09（官方時程公告日期，未提供首次發布時分） | 2026-09-10 | 續報 | https://www.apple.com/newsroom/2026/09/apple-debuts-iphone-18-pro-and-iphone-18-pro-max/ | 855d2d8ae27e |
