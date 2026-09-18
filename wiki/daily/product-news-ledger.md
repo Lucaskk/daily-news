@@ -1,7 +1,7 @@
 ---
 title: "科技產品新聞歷史比對表"
 type: product-news-ledger
-updated: 2026-09-17
+updated: 2026-09-18
 status: generated
 tags: [daily-news, tech-products, deduplication, provenance]
 ---
@@ -10,14 +10,17 @@ tags: [daily-news, tech-products, deduplication, provenance]
 
 此表由 `scripts/build_product_news_ledger.py` 掃描所有歷史日報的科技／AI 區段自動產生。**模型不得整份讀取本檔**；每個候選只用公司名、產品名、更新動作與比對鍵執行 `rg`，並只讀命中列。
 
-- 掃描日報：92 份。
-- 擷取科技／AI 項目：577 則。
+- 掃描日報：93 份。
+- 擷取科技／AI 項目：580 則。
 - 更新方式：`python3 scripts/build_product_news_ledger.py`
 - 查詢方式：使用窄化組合 pattern，例如 `rg -n -i '公司.*產品|產品.*公司|比對鍵' wiki/daily/product-news-ledger.md`，不要用公司名單獨匹配大量列。
 - 無命中時：完整讀取 `wiki/daily/product-news-recent-7d.md` 做最後確認，不讀取本檔全文。
 
 | 公司 | 產品 | 更新內容 | 發佈時間 | 收錄日期 | 狀態 | 來源網址 | 比對鍵 |
 |---|---|---|---|---|---|---|---|
+| UN system／Google | UN System Data Commons | 聯合國與 Google 推出 UN System Data Commons，整合全球統計與 AI 查詢 | 2026-09-17（Google 官方產品公告日期；未提供時分） | 2026-09-18 | 首次收錄 | https://blog.google/innovation-and-ai/technology/ai/google-un-data-commons-platform/ | 99750797433b |
+| OpenAI | ChatGPT for Word | OpenAI 正式推出 ChatGPT for Word，免費方案也可使用 | 2026-09-17（官方 release notes 日期；未提供時分） | 2026-09-18 | 首次收錄 | https://help.openai.com/en/articles/6825453-chatgpt-release-notes | fda9d419d69c |
+| Google Labs | CC 家庭／群組代理 | Google Labs 擴大 CC 為家庭共用 AI 代理，最多六人協作 | 2026-09-17（Google 官方公告日期；未提供時分） | 2026-09-18 | 首次收錄 | https://blog.google/innovation-and-ai/models-and-research/google-labs/cc-expanding-to-groups/ | f037909720b6 |
 | OpenAI | ChatGPT Ads／Sponsored Agents | OpenAI 測試 ChatGPT Sponsored Agents，並開放廣告製作與商務整合 | 2026-09-16（官方產品公告日期；未提供時分） | 2026-09-17 | 續報 | https://openai.com/index/reimagining-advertising-with-ai/<br>https://openai.com/index/testing-ads-in-chatgpt/ | 167d45c4203f |
 | Meta | Meta One | Meta One 正式推出跨 Facebook、Instagram、WhatsApp 的 AI 訂閱方案 | 2026-09-15（美國官方公告日期；未提供時分） | 2026-09-17 | 首次收錄 | https://about.fb.com/news/2026/09/introducing-meta-one-subscription-service-more-features-ai/<br>https://www.engadget.com/2258403/meta-adds-new-subscription-tiers-for-businesses-creators-and-ai-power-users/ | a9828179f599 |
 | Apple | StoreKit 2／App Store 訂閱 Bundles、Suites | Apple 開放申請 App Store 訂閱 Bundles／Suites，並啟用多席位購買 | 2026-09-16（Apple Developer 官方公告日期；未提供時分） | 2026-09-17 | 首次收錄 | https://developer.apple.com/news/?id=likeohx4 | fc96debc0a15 |

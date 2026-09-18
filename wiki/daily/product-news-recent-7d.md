@@ -1,21 +1,24 @@
 ---
 title: "科技產品新聞最近 7 天比對表"
 type: product-news-ledger-recent
-updated: 2026-09-17
+updated: 2026-09-18
 status: generated
 tags: [daily-news, tech-products, deduplication, recent]
 ---
 
 # 科技產品新聞最近 7 天比對表
 
-本檔是歷史 `rg` 搜尋沒有命中時的二次確認清單，可以完整讀取。涵蓋收錄日期 `2026-09-11` 至 `2026-09-17`；產品是否符合精確 168 小時發布窗，仍以當日來源筆記判定。
+本檔是歷史 `rg` 搜尋沒有命中時的二次確認清單，可以完整讀取。涵蓋收錄日期 `2026-09-12` 至 `2026-09-18`；產品是否符合精確 168 小時發布窗，仍以當日來源筆記判定。
 
-- 掃描日報：92 份。
-- 最近 7 天項目：15 則。
+- 掃描日報：93 份。
+- 最近 7 天項目：16 則。
 - 完整歷史只按需 `rg`：`wiki/daily/product-news-ledger.md`
 
 | 公司 | 產品 | 更新內容 | 發佈時間 | 收錄日期 | 狀態 | 來源網址 | 比對鍵 |
 |---|---|---|---|---|---|---|---|
+| UN system／Google | UN System Data Commons | 聯合國與 Google 推出 UN System Data Commons，整合全球統計與 AI 查詢 | 2026-09-17（Google 官方產品公告日期；未提供時分） | 2026-09-18 | 首次收錄 | https://blog.google/innovation-and-ai/technology/ai/google-un-data-commons-platform/ | 99750797433b |
+| OpenAI | ChatGPT for Word | OpenAI 正式推出 ChatGPT for Word，免費方案也可使用 | 2026-09-17（官方 release notes 日期；未提供時分） | 2026-09-18 | 首次收錄 | https://help.openai.com/en/articles/6825453-chatgpt-release-notes | fda9d419d69c |
+| Google Labs | CC 家庭／群組代理 | Google Labs 擴大 CC 為家庭共用 AI 代理，最多六人協作 | 2026-09-17（Google 官方公告日期；未提供時分） | 2026-09-18 | 首次收錄 | https://blog.google/innovation-and-ai/models-and-research/google-labs/cc-expanding-to-groups/ | f037909720b6 |
 | OpenAI | ChatGPT Ads／Sponsored Agents | OpenAI 測試 ChatGPT Sponsored Agents，並開放廣告製作與商務整合 | 2026-09-16（官方產品公告日期；未提供時分） | 2026-09-17 | 續報 | https://openai.com/index/reimagining-advertising-with-ai/<br>https://openai.com/index/testing-ads-in-chatgpt/ | 167d45c4203f |
 | Meta | Meta One | Meta One 正式推出跨 Facebook、Instagram、WhatsApp 的 AI 訂閱方案 | 2026-09-15（美國官方公告日期；未提供時分） | 2026-09-17 | 首次收錄 | https://about.fb.com/news/2026/09/introducing-meta-one-subscription-service-more-features-ai/<br>https://www.engadget.com/2258403/meta-adds-new-subscription-tiers-for-businesses-creators-and-ai-power-users/ | a9828179f599 |
 | Apple | StoreKit 2／App Store 訂閱 Bundles、Suites | Apple 開放申請 App Store 訂閱 Bundles／Suites，並啟用多席位購買 | 2026-09-16（Apple Developer 官方公告日期；未提供時分） | 2026-09-17 | 首次收錄 | https://developer.apple.com/news/?id=likeohx4 | fc96debc0a15 |
@@ -29,5 +32,3 @@ tags: [daily-news, tech-products, deduplication, recent]
 | Blizzard Entertainment | Diablo V | Blizzard 宣布 Diablo V 開發計畫，目標 2029 年春季推出 | 2026-09-13 02:21:25（Asia/Taipei） | 2026-09-13 | 首次收錄 | https://news.blizzard.com/en-us/article/24301509/diablos-next-era-revealed-at-blizzcon-2026-opening-ceremonies-recap | 9b9db94e814f |
 | Google | Gemini Windows 桌面應用程式 | Google 正式推出 Windows 版 Gemini，支援桌面快捷入口 | 2026-09-10（官方發布日期） | 2026-09-12 | 首次收錄 | https://blog.google/innovation-and-ai/products/gemini-app/gemini-app-now-on-windows/<br>https://gemini.google/desktop | f9fd1762aff7 |
 | Cursor | Projects | Cursor 推出 Projects 測試版，讓協調代理持續管理大型開發工作 | 2026-09-10（官方發布日期） | 2026-09-12 | 首次收錄 | https://cursor.com/blog/projects | 848d9f83bb70 |
-| DeepSeek | DeepSeek V4.1-Flash | DeepSeek 正式推出 V4.1-Flash API，公布舊模型轉接時程 | 2026-09-10（官方發布日期） | 2026-09-11 | 首次收錄 | https://www.deepseek.com/en/news/deepseek-v4-1-flash/ | 14bc2a6869f3 |
-| Apple | Apple Watch Series 12 | Apple 發布 Watch Series 12，聲音摘要功能預計年底測試 | 2026-09-09（官方發布日期） | 2026-09-11 | 首次收錄 | https://www.apple.com/newsroom/2026/09/introducing-apple-watch-series-12-with-the-all-new-health-sensing-system/ | 4661af104b5f |
