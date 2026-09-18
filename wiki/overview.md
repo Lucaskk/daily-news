@@ -2,7 +2,7 @@
 title: "Overview"
 type: overview
 created: 2026-05-24
-updated: 2026-09-17
+updated: 2026-09-18
 status: seed
 tags: [overview]
 sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
@@ -19,6 +19,12 @@ sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
 - 抽出持續出現的人物、組織、事件、政策、技術與市場概念。
 - 維護跨來源的矛盾、時間線、趨勢與待查問題。
 - 將重要查詢結果回寫成可累積的 wiki 頁面。
+
+## 2026-09-18 Daily News Synthesis
+
+- 戰時問責與制度監督成為兩個不同的新節點：聯合國調查團首次公布對伊朗空襲及國內鎮壓的結論，但不是法院判決；俄中否決的是制裁專家監督小組續期，而非撤銷既有制裁。
+- 瑞典由初步席次進入最終計票及首相辭職；沙國由防空求援進入塔伊夫實際平民傷亡。兩項均保留前次收錄日期。奈及利亞官方新累計死亡數不代表中毒事件今日才開始，甲醇成分仍待證實。
+- 產品主線是 AI 進入既有工作與家庭協作場景：ChatGPT for Word 含免費方案但有額度，Google CC 家庭代理限美國早期實驗；UN System Data Commons 已推出，2027 年統計覆蓋目標不能當現況。詳見 [本日日報](daily/2026/09/2026-09-18/daily-news-2026-09-18.md)。
 
 ## 2026-09-17 Daily News Synthesis
 

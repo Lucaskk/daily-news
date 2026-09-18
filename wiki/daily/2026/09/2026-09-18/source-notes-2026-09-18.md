@@ -52,4 +52,6 @@ status: research-complete
 
 ## 發布紀錄
 
-待 `scripts/daily_news_pipeline.py finish` 回填公開頁、LINE watchdog 與本機預覽結果。
+`scripts/daily_news_pipeline.py finish` 內容 commit `8c25128a436d14250cfb1961c16d8cb7b83a4bb5`；公開日期頁、最新入口、根入口均通過 HTTP 與完整位元組雜湊比對。私人 LINE watchdog 於 2026-09-18 08:09:56 Asia/Taipei 回報 `Sent LINE message`，exit 0；pipeline `check` exit 0。研究模式仍為 `legacy`。
+
+公開網頁：https://lucaskk.github.io/daily-news/wiki/daily/2026/09/2026-09-18/slides-2026-09-18.html?v=20260918-080912-reader

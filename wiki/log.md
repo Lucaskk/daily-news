@@ -1,5 +1,12 @@
 # Knowledge Base Log
 
+## [2026-09-18] ingest | Daily global and tech AI news
+
+- 固定截點 08:02:22 Asia/Taipei；全球前 24 小時、產品前 168 小時。3 則官方產品變更在前、全球恰好 10 則；來源筆記逐項保留事件或首個可靠發布時間及排除理由。
+- 選題前重建產品索引：577 筆／92 份日報。完整歷史只用窄 `rg`；產品候選未命中後才讀最近 7 天 15 列。已檢查 Engadget 與 Cool3c；瑞典、塔伊夫明標續報。
+- `legacy` 研究模式維持不變；Python 固定處理渲染、驗證、推送及 LINE。pipeline 內容 commit `8c25128`；Pages 日期頁、最新與根入口通過完整位元組雜湊驗證。私人 LINE watchdog 於 08:09:56 回報 `Sent LINE message`、exit 0；`check` exit 0。未重複傳送。
+- 公開：https://lucaskk.github.io/daily-news/wiki/daily/2026/09/2026-09-18/slides-2026-09-18.html?v=20260918-080912-reader
+
 ## [2026-09-17] ingest | Daily global and tech AI news
 
 - 截點 08:02:33 Asia/Taipei；世界前 24 小時、產品前 168 小時。3 則科技產品先列、全球恰好 10 則；來源筆記保留每項事件／首次可靠發布時間與歧異。
