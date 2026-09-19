@@ -2,7 +2,7 @@
 title: "Overview"
 type: overview
 created: 2026-05-24
-updated: 2026-09-18
+updated: 2026-09-19
 status: seed
 tags: [overview]
 sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
@@ -19,6 +19,12 @@ sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
 - 抽出持續出現的人物、組織、事件、政策、技術與市場概念。
 - 維護跨來源的矛盾、時間線、趨勢與待查問題。
 - 將重要查詢結果回寫成可累積的 wiki 頁面。
+
+## 2026-09-19 Daily News Synthesis
+
+- 安全風險同時表現在協同攻擊、航運與選舉：巴基斯坦 Kohat 遭汽車炸彈與槍手攻擊；伊朗對 Trend 油輪的說法未獲獨立證實；俄羅斯戰時國會投票開始，但競爭性與占領區合法性受質疑。
+- 區域防衛轉入制度與能力節點：台灣首度整合多型攻擊無人機聯演，法國要求擬定關鍵基礎設施防護計畫，烏克蘭召開首屆 Carpathian Eight 峰會。越南洪災則由 2,000 戶擴至 16,000 戶並出現死亡，明標續報。
+- 產品焦點是代理工具與敏感能力的權限治理：GitLab MCP 工具以讀寫預設分級核准，Gemini Notebook 導入授權書籍，Anthropic LSVP 由 9/2 的模型分層推進正式申請與 Standard／High-risk grants。詳見 [本日日報](daily/2026/09/2026-09-19/daily-news-2026-09-19.md)。
 
 ## 2026-09-18 Daily News Synthesis
 
