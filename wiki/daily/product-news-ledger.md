@@ -1,7 +1,7 @@
 ---
 title: "科技產品新聞歷史比對表"
 type: product-news-ledger
-updated: 2026-09-18
+updated: 2026-09-19
 status: generated
 tags: [daily-news, tech-products, deduplication, provenance]
 ---
@@ -10,14 +10,17 @@ tags: [daily-news, tech-products, deduplication, provenance]
 
 此表由 `scripts/build_product_news_ledger.py` 掃描所有歷史日報的科技／AI 區段自動產生。**模型不得整份讀取本檔**；每個候選只用公司名、產品名、更新動作與比對鍵執行 `rg`，並只讀命中列。
 
-- 掃描日報：93 份。
-- 擷取科技／AI 項目：580 則。
+- 掃描日報：94 份。
+- 擷取科技／AI 項目：583 則。
 - 更新方式：`python3 scripts/build_product_news_ledger.py`
 - 查詢方式：使用窄化組合 pattern，例如 `rg -n -i '公司.*產品|產品.*公司|比對鍵' wiki/daily/product-news-ledger.md`，不要用公司名單獨匹配大量列。
 - 無命中時：完整讀取 `wiki/daily/product-news-recent-7d.md` 做最後確認，不讀取本檔全文。
 
 | 公司 | 產品 | 更新內容 | 發佈時間 | 收錄日期 | 狀態 | 來源網址 | 比對鍵 |
 |---|---|---|---|---|---|---|---|
+| Google | Gemini Notebook Expert Intelligence | Google 在 Gemini Notebook 推出 Expert Intelligence，導入逾十萬本授權書籍 | 2026-09-17（Google Workspace 官方更新日期；未提供時分） | 2026-09-19 | 首次收錄 | https://workspaceupdates.googleblog.com/2026/09/introducing-expert-intelligence-in-Gemini-Notebook.html | a28d9f60535b |
+| GitLab | GitLab 19.4／Duo Agent Platform | GitLab 19.4 推出受治理的 MCP 工具與 Duo CLI 目標執行功能 | 2026-09-17（GitLab 官方發布日期；未提供時分） | 2026-09-19 | 首次收錄 | https://about.gitlab.com/press/releases/2026-09-17-gitlab-19-4-brings-new-agentic-automation-at-a-lower-cost/<br>https://about.gitlab.com/whats-new/19-4/ | bf6f7a9872d9 |
+| Anthropic | Life Sciences Verification Program（LSVP） | Anthropic 開放 Life Sciences Verification Program 申請，以分級審核放寬生物研究限制 | 2026-09-17（Anthropic 官方公告日期；未提供時分） | 2026-09-19 | 續報 | https://www.anthropic.com/news/life-sciences-verification-program | efc0f3ba35c8 |
 | UN system／Google | UN System Data Commons | 聯合國與 Google 推出 UN System Data Commons，整合全球統計與 AI 查詢 | 2026-09-17（Google 官方產品公告日期；未提供時分） | 2026-09-18 | 首次收錄 | https://blog.google/innovation-and-ai/technology/ai/google-un-data-commons-platform/ | 99750797433b |
 | OpenAI | ChatGPT for Word | OpenAI 正式推出 ChatGPT for Word，免費方案也可使用 | 2026-09-17（官方 release notes 日期；未提供時分） | 2026-09-18 | 首次收錄 | https://help.openai.com/en/articles/6825453-chatgpt-release-notes | fda9d419d69c |
 | Google Labs | CC 家庭／群組代理 | Google Labs 擴大 CC 為家庭共用 AI 代理，最多六人協作 | 2026-09-17（Google 官方公告日期；未提供時分） | 2026-09-18 | 首次收錄 | https://blog.google/innovation-and-ai/models-and-research/google-labs/cc-expanding-to-groups/ | f037909720b6 |
