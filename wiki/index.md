@@ -2,7 +2,7 @@
 title: "Knowledge Base Index"
 type: overview
 created: 2026-05-24
-updated: 2026-09-19
+updated: 2026-09-20
 status: seed
 tags: [index]
 sources: []
@@ -21,6 +21,9 @@ sources: []
 - [[2026-04-04-llm-wiki]] - Karpathy 提出的 LLM-maintained personal wiki 模式，是本知識庫的設計來源。
 
 ## Daily News
+
+- [2026-09-20 Daily News](daily/2026/09/2026-09-20/daily-news-2026-09-20.md) - Gemini 資安測試揭露、Starship Flight 14、Waymo 新加坡與 Bose 新品先列；全球涵蓋伊朗停戰條件、利雅德飛彈、格陵蘭協議與剛果伊波拉接種等 10 則。
+- [2026-09-20 Slides](daily/2026/09/2026-09-20/slides-2026-09-20.html) - 手機閱讀版，含逐篇時間來源、原頁完整報告及單篇 ChatGPT 後續提問。
 
 - [2026-09-19 Daily News](daily/2026/09/2026-09-19/daily-news-2026-09-19.md) - GitLab 19.4、Gemini Notebook Expert Intelligence 與 Anthropic LSVP 先列；全球涵蓋巴基斯坦協同攻擊、俄羅斯投票、Trend 油輪與台灣無人機聯演等 10 則。
 - [2026-09-19 Slides](daily/2026/09/2026-09-19/slides-2026-09-19.html) - 手機閱讀版，含逐篇時間來源、原頁完整報告及單篇 ChatGPT 後續提問。

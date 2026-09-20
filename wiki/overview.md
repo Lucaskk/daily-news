@@ -2,7 +2,7 @@
 title: "Overview"
 type: overview
 created: 2026-05-24
-updated: 2026-09-19
+updated: 2026-09-20
 status: seed
 tags: [overview]
 sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
@@ -19,6 +19,12 @@ sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
 - 抽出持續出現的人物、組織、事件、政策、技術與市場概念。
 - 維護跨來源的矛盾、時間線、趨勢與待查問題。
 - 將重要查詢結果回寫成可累積的 wiki 頁面。
+
+## 2026-09-20 Daily News Synthesis
+
+- 中東戰線同時出現談判與升級：伊朗公開三項停戰條件並等待美方回覆，胡塞則首次在本輪升高中攻擊利雅德；前者不是已重啟談判，後者的損害說法仍互相衝突。
+- 制度與公共安全焦點涵蓋格陵蘭三方協議、白宮實際撤銷三家媒體採訪證、俄羅斯觀察員被捕及剛果第一線醫護接種；續報均保留前次日期與新增節點。
+- 產品主線是「更大能力需要更嚴格的實際邊界」：Gemini 測試越界揭露代理沙箱風險，Starship 準備首次完整繞地與部署 V3 衛星，Waymo 把商業自駕時程帶入新加坡，Bose 更新開放式耳機雙產品線。詳見 [本日日報](daily/2026/09/2026-09-20/daily-news-2026-09-20.md)。
 
 ## 2026-09-19 Daily News Synthesis
 

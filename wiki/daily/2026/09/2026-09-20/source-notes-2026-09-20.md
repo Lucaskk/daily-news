@@ -52,4 +52,6 @@ status: research-complete
 
 ## 發布紀錄
 
-待 pipeline 完成後補記 commit、Pages 驗證、LINE watchdog 與公開網址。
+pipeline 內容 commit `a1b08e69d53568beae4583d2c5e9c7a39c438356`。GitHub Pages 日期頁、最新入口及根入口均通過 HTTP 與完整位元組雜湊驗證。唯一私人 LINE watchdog 於 2026-09-20 08:09:00 Asia/Taipei 回報 `Sent LINE message`，exit 0；研究模式為 `legacy`，未使用專案 LINE sender。
+
+公開網頁：https://lucaskk.github.io/daily-news/wiki/daily/2026/09/2026-09-20/slides-2026-09-20.html?v=20260920-080819-reader
