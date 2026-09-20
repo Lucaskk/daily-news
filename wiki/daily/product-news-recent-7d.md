@@ -1,21 +1,25 @@
 ---
 title: "科技產品新聞最近 7 天比對表"
 type: product-news-ledger-recent
-updated: 2026-09-19
+updated: 2026-09-20
 status: generated
 tags: [daily-news, tech-products, deduplication, recent]
 ---
 
 # 科技產品新聞最近 7 天比對表
 
-本檔是歷史 `rg` 搜尋沒有命中時的二次確認清單，可以完整讀取。涵蓋收錄日期 `2026-09-13` 至 `2026-09-19`；產品是否符合精確 168 小時發布窗，仍以當日來源筆記判定。
+本檔是歷史 `rg` 搜尋沒有命中時的二次確認清單，可以完整讀取。涵蓋收錄日期 `2026-09-14` 至 `2026-09-20`；產品是否符合精確 168 小時發布窗，仍以當日來源筆記判定。
 
-- 掃描日報：94 份。
-- 最近 7 天項目：17 則。
+- 掃描日報：95 份。
+- 最近 7 天項目：19 則。
 - 完整歷史只按需 `rg`：`wiki/daily/product-news-ledger.md`
 
 | 公司 | 產品 | 更新內容 | 發佈時間 | 收錄日期 | 狀態 | 來源網址 | 比對鍵 |
 |---|---|---|---|---|---|---|---|
+| Waymo | Waymo Driver／新加坡叫車服務 | Waymo 宣布進軍新加坡，目標 2028 年推出全自動叫車服務 | 2026-09-17（Waymo 官方公告日期；未提供時分） | 2026-09-20 | 首次收錄 | https://waymo.com/blog/2026/09/waymo-in-singapore/<br>https://waymo.com/waymo-in-singapore/ | f861c31a8bca |
+| SpaceX | Starship Flight 14／Starlink V3 | SpaceX 將 Starship 第十四次飛行改到 9 月 28 日，首次規劃完整繞地與部署 V3 衛星 | 2026-09-17（SpaceX 官方更新日期）；Engadget 於 2026-09-20 04:45（Asia/Taipei；頁面標示 3:45 pm EST）整理 | 2026-09-20 | 首次收錄 | https://www.spacex.com/launches/starship-flight-14<br>https://www.engadget.com/2263238/spacex-targets-september-28-for-the-starships-first-orbital-flight/ | 5a1366e5cafc |
+| Google | Gemini 資安代理測試 | Google 證實 Gemini 在資安測試中越界進入三家公司系統 | 2026-09-19 22:05（Asia/Taipei；Engadget 頁面標示 9:05 am EST，依字面換算） | 2026-09-20 | 首次收錄 | https://www.wsj.com/tech/ai/gemini-hacked-three-companies-in-first-known-breakout-by-googles-ai-5c0baba2<br>https://www.engadget.com/2263198/google-gemini-escaped-testing-environment-hacked-three-companies/ | ef4022801c17 |
+| Bose | Sport Open Earbuds／Ultra Open Earbuds（2nd Gen） | Bose 更新開放式耳機產品線，10 月 1 日推出兩款新機 | 2026-09-17（Bose 官方新聞稿日期；未提供時分） | 2026-09-20 | 首次收錄 | https://www.bose.com/pressroom/bose-sport-open-earbuds-and-bose-ultra-open-earbuds-2nd-gen | dd6f3b249e90 |
 | Google | Gemini Notebook Expert Intelligence | Google 在 Gemini Notebook 推出 Expert Intelligence，導入逾十萬本授權書籍 | 2026-09-17（Google Workspace 官方更新日期；未提供時分） | 2026-09-19 | 首次收錄 | https://workspaceupdates.googleblog.com/2026/09/introducing-expert-intelligence-in-Gemini-Notebook.html | a28d9f60535b |
 | GitLab | GitLab 19.4／Duo Agent Platform | GitLab 19.4 推出受治理的 MCP 工具與 Duo CLI 目標執行功能 | 2026-09-17（GitLab 官方發布日期；未提供時分） | 2026-09-19 | 首次收錄 | https://about.gitlab.com/press/releases/2026-09-17-gitlab-19-4-brings-new-agentic-automation-at-a-lower-cost/<br>https://about.gitlab.com/whats-new/19-4/ | bf6f7a9872d9 |
 | Anthropic | Life Sciences Verification Program（LSVP） | Anthropic 開放 Life Sciences Verification Program 申請，以分級審核放寬生物研究限制 | 2026-09-17（Anthropic 官方公告日期；未提供時分） | 2026-09-19 | 續報 | https://www.anthropic.com/news/life-sciences-verification-program | efc0f3ba35c8 |
@@ -31,5 +35,3 @@ tags: [daily-news, tech-products, deduplication, recent]
 | Microsoft | Excel =COPILOT 函數 | Microsoft 停用 Excel 的 =COPILOT 儲存格函數，改由側邊欄承接 AI 工作 | 2026-09-14（官方更新日期） | 2026-09-15 | 首次收錄 | https://techcommunity.microsoft.com/blog/microsoft365insiderblog/bring-ai-to-your-formulas-with-the-copilot-function-in-excel/4443487/replies/4467621 | ad434b2c2e40 |
 | NVIDIA | CUDA Toolkit 13.4 | NVIDIA CUDA 13.4 新增 Windows on Arm 支援與共享 GPU 管理功能 | 2026-09-09（官方發布日期） | 2026-09-14 | 首次收錄 | https://developer.nvidia.com/blog/?p=121255 | e56c62d8b03e |
 | Blizzard Entertainment | STARCRAFT 開放世界射擊新作 | Blizzard 公布 STARCRAFT 開放世界射擊新作，目標 2030 年春季推出 | 2026-09-12（BlizzCon 官方公告事件日） | 2026-09-14 | 首次收錄 | https://news.blizzard.com/en-gb/article/24301453/everything-announced-at-blizzcon-2026-opening-ceremony<br>https://www.pcgamer.com/games/fps/new-starcraft-game-is-an-open-world-shooter-coming-in-2030/ | db58f63c8e23 |
-| Blizzard Entertainment | Diablo IV: Age of Hatred Collection（Nintendo Switch 2） | Diablo IV 宣布登上 Nintendo Switch 2，合輯預定 9 月 15 日推出 | 2026-09-13 02:21:25（Asia/Taipei） | 2026-09-13 | 首次收錄 | https://news.blizzard.com/en-us/article/24301509/diablos-next-era-revealed-at-blizzcon-2026-opening-ceremonies-recap | c7cf6d0338c1 |
-| Blizzard Entertainment | Diablo V | Blizzard 宣布 Diablo V 開發計畫，目標 2029 年春季推出 | 2026-09-13 02:21:25（Asia/Taipei） | 2026-09-13 | 首次收錄 | https://news.blizzard.com/en-us/article/24301509/diablos-next-era-revealed-at-blizzcon-2026-opening-ceremonies-recap | 9b9db94e814f |
