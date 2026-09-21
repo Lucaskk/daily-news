@@ -2,7 +2,7 @@
 title: "Overview"
 type: overview
 created: 2026-05-24
-updated: 2026-09-20
+updated: 2026-09-21
 status: seed
 tags: [overview]
 sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
@@ -19,6 +19,12 @@ sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
 - 抽出持續出現的人物、組織、事件、政策、技術與市場概念。
 - 維護跨來源的矛盾、時間線、趨勢與待查問題。
 - 將重要查詢結果回寫成可累積的 wiki 頁面。
+
+## 2026-09-21 Daily News Synthesis
+
+- 俄烏戰場與兩場選舉互相交疊：烏克蘭對俄發動逾千架級無人機攻擊，俄方初步計票仍由統一俄羅斯大幅領先；德國 CDU 在另一輪邦選舉跌到歷史低點，兩者的軍方與選委會數字都需等待獨立或最終確認。
+- 制度與安全主線包括美中把 AI、關稅和關鍵礦產放入同一高層會談、北韓連射兩枚短程飛彈、美軍第 69 次加勒比海船隻攻擊，以及巴切萊退出聯合國秘書長競逐；公開表態與正式協議、初步結果與終局程序明確分開。
+- 產品主線由可直接使用的 API、長程自主系統與消費硬體組成：Grok Voice Transcribe 2.0 保持原價升級，Joby J208 完成跨美自動飛行，Retroid 臨時加入 Duo Lite Plus。詳見 [本日日報](daily/2026/09/2026-09-21/daily-news-2026-09-21.md)。
 
 ## 2026-09-20 Daily News Synthesis
 
