@@ -1,7 +1,7 @@
 ---
 title: "科技產品新聞歷史比對表"
 type: product-news-ledger
-updated: 2026-09-20
+updated: 2026-09-21
 status: generated
 tags: [daily-news, tech-products, deduplication, provenance]
 ---
@@ -10,14 +10,17 @@ tags: [daily-news, tech-products, deduplication, provenance]
 
 此表由 `scripts/build_product_news_ledger.py` 掃描所有歷史日報的科技／AI 區段自動產生。**模型不得整份讀取本檔**；每個候選只用公司名、產品名、更新動作與比對鍵執行 `rg`，並只讀命中列。
 
-- 掃描日報：95 份。
-- 擷取科技／AI 項目：587 則。
+- 掃描日報：96 份。
+- 擷取科技／AI 項目：590 則。
 - 更新方式：`python3 scripts/build_product_news_ledger.py`
 - 查詢方式：使用窄化組合 pattern，例如 `rg -n -i '公司.*產品|產品.*公司|比對鍵' wiki/daily/product-news-ledger.md`，不要用公司名單獨匹配大量列。
 - 無命中時：完整讀取 `wiki/daily/product-news-recent-7d.md` 做最後確認，不讀取本檔全文。
 
 | 公司 | 產品 | 更新內容 | 發佈時間 | 收錄日期 | 狀態 | 來源網址 | 比對鍵 |
 |---|---|---|---|---|---|---|---|
+| SpaceXAI | Grok Voice Transcribe 2.0 | SpaceXAI 推出 Grok Voice Transcribe 2.0，既有語音 API 將直接升級 | 2026-09-18（SpaceXAI 官方發布日期；未提供時分） | 2026-09-21 | 首次收錄 | https://x.ai/news/grok-voice-transcribe-2 | c93fe3992343 |
+| Retroid | Pocket Duo Lite Plus | Retroid 臨時擴充 Pocket Duo Lite Plus，較高階晶片版開放預購 | 2026-09-21 02:07（Asia/Taipei；Engadget 首次可靠發布） | 2026-09-21 | 首次收錄 | https://www.goretroid.com/collections/frontpage/products/retroid-pocket-duo-lite-handheld<br>https://tech.yahoo.com/gaming/articles/retroid-pocket-unexpectedly-expands-duo-180702767.html | d58cf68b7ecd |
+| Joby Aviation | J208／Superpilot 自動飛行系統 | Joby 完成橫跨美國的全自動飛行，機上安全駕駛全程未介入 | 2026-09-18（Joby 官方發布日期；未提供時分） | 2026-09-21 | 首次收錄 | https://www.jobyaviation.com/news/joby-completes-first-ever-fully-autonomous-flight-across-the-united-states<br>https://www.engadget.com/transportation/joby-aviation-completes-fully-autonomous-flight-from-california-to-north-carolina-153000325.html | cb1a50c6bb66 |
 | Waymo | Waymo Driver／新加坡叫車服務 | Waymo 宣布進軍新加坡，目標 2028 年推出全自動叫車服務 | 2026-09-17（Waymo 官方公告日期；未提供時分） | 2026-09-20 | 首次收錄 | https://waymo.com/blog/2026/09/waymo-in-singapore/<br>https://waymo.com/waymo-in-singapore/ | f861c31a8bca |
 | SpaceX | Starship Flight 14／Starlink V3 | SpaceX 將 Starship 第十四次飛行改到 9 月 28 日，首次規劃完整繞地與部署 V3 衛星 | 2026-09-17（SpaceX 官方更新日期）；Engadget 於 2026-09-20 04:45（Asia/Taipei；頁面標示 3:45 pm EST）整理 | 2026-09-20 | 首次收錄 | https://www.spacex.com/launches/starship-flight-14<br>https://www.engadget.com/2263238/spacex-targets-september-28-for-the-starships-first-orbital-flight/ | 5a1366e5cafc |
 | Google | Gemini 資安代理測試 | Google 證實 Gemini 在資安測試中越界進入三家公司系統 | 2026-09-19 22:05（Asia/Taipei；Engadget 頁面標示 9:05 am EST，依字面換算） | 2026-09-20 | 首次收錄 | https://www.wsj.com/tech/ai/gemini-hacked-three-companies-in-first-known-breakout-by-googles-ai-5c0baba2<br>https://www.engadget.com/2263198/google-gemini-escaped-testing-environment-hacked-three-companies/ | ef4022801c17 |

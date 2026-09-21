@@ -1,21 +1,24 @@
 ---
 title: "科技產品新聞最近 7 天比對表"
 type: product-news-ledger-recent
-updated: 2026-09-20
+updated: 2026-09-21
 status: generated
 tags: [daily-news, tech-products, deduplication, recent]
 ---
 
 # 科技產品新聞最近 7 天比對表
 
-本檔是歷史 `rg` 搜尋沒有命中時的二次確認清單，可以完整讀取。涵蓋收錄日期 `2026-09-14` 至 `2026-09-20`；產品是否符合精確 168 小時發布窗，仍以當日來源筆記判定。
+本檔是歷史 `rg` 搜尋沒有命中時的二次確認清單，可以完整讀取。涵蓋收錄日期 `2026-09-15` 至 `2026-09-21`；產品是否符合精確 168 小時發布窗，仍以當日來源筆記判定。
 
-- 掃描日報：95 份。
-- 最近 7 天項目：19 則。
+- 掃描日報：96 份。
+- 最近 7 天項目：20 則。
 - 完整歷史只按需 `rg`：`wiki/daily/product-news-ledger.md`
 
 | 公司 | 產品 | 更新內容 | 發佈時間 | 收錄日期 | 狀態 | 來源網址 | 比對鍵 |
 |---|---|---|---|---|---|---|---|
+| SpaceXAI | Grok Voice Transcribe 2.0 | SpaceXAI 推出 Grok Voice Transcribe 2.0，既有語音 API 將直接升級 | 2026-09-18（SpaceXAI 官方發布日期；未提供時分） | 2026-09-21 | 首次收錄 | https://x.ai/news/grok-voice-transcribe-2 | c93fe3992343 |
+| Retroid | Pocket Duo Lite Plus | Retroid 臨時擴充 Pocket Duo Lite Plus，較高階晶片版開放預購 | 2026-09-21 02:07（Asia/Taipei；Engadget 首次可靠發布） | 2026-09-21 | 首次收錄 | https://www.goretroid.com/collections/frontpage/products/retroid-pocket-duo-lite-handheld<br>https://tech.yahoo.com/gaming/articles/retroid-pocket-unexpectedly-expands-duo-180702767.html | d58cf68b7ecd |
+| Joby Aviation | J208／Superpilot 自動飛行系統 | Joby 完成橫跨美國的全自動飛行，機上安全駕駛全程未介入 | 2026-09-18（Joby 官方發布日期；未提供時分） | 2026-09-21 | 首次收錄 | https://www.jobyaviation.com/news/joby-completes-first-ever-fully-autonomous-flight-across-the-united-states<br>https://www.engadget.com/transportation/joby-aviation-completes-fully-autonomous-flight-from-california-to-north-carolina-153000325.html | cb1a50c6bb66 |
 | Waymo | Waymo Driver／新加坡叫車服務 | Waymo 宣布進軍新加坡，目標 2028 年推出全自動叫車服務 | 2026-09-17（Waymo 官方公告日期；未提供時分） | 2026-09-20 | 首次收錄 | https://waymo.com/blog/2026/09/waymo-in-singapore/<br>https://waymo.com/waymo-in-singapore/ | f861c31a8bca |
 | SpaceX | Starship Flight 14／Starlink V3 | SpaceX 將 Starship 第十四次飛行改到 9 月 28 日，首次規劃完整繞地與部署 V3 衛星 | 2026-09-17（SpaceX 官方更新日期）；Engadget 於 2026-09-20 04:45（Asia/Taipei；頁面標示 3:45 pm EST）整理 | 2026-09-20 | 首次收錄 | https://www.spacex.com/launches/starship-flight-14<br>https://www.engadget.com/2263238/spacex-targets-september-28-for-the-starships-first-orbital-flight/ | 5a1366e5cafc |
 | Google | Gemini 資安代理測試 | Google 證實 Gemini 在資安測試中越界進入三家公司系統 | 2026-09-19 22:05（Asia/Taipei；Engadget 頁面標示 9:05 am EST，依字面換算） | 2026-09-20 | 首次收錄 | https://www.wsj.com/tech/ai/gemini-hacked-three-companies-in-first-known-breakout-by-googles-ai-5c0baba2<br>https://www.engadget.com/2263198/google-gemini-escaped-testing-environment-hacked-three-companies/ | ef4022801c17 |
@@ -33,5 +36,3 @@ tags: [daily-news, tech-products, deduplication, recent]
 | OpenAI | Agents API | OpenAI Agents API 開放公開測試，開發者可託管 Codex 式雲端代理 | 2026-09-10（官方產品 API 發布日期） | 2026-09-16 | 首次收錄 | https://openai.com/index/introducing-the-agents-api/ | 1b63d6e43338 |
 | Cloudflare | AI Crawl Control／Disallow AI Training | Cloudflare 推出「禁止 AI 訓練」設定，網站可保留搜尋索引並遷移舊爬蟲控制 | 2026-09-15（官方產品公告日期） | 2026-09-16 | 續報 | https://blog.cloudflare.com/accountable-mixed-use-ai-crawlers/<br>https://blog.cloudflare.com/content-independence-day-ai-options/ | 716d54520b0b |
 | Microsoft | Excel =COPILOT 函數 | Microsoft 停用 Excel 的 =COPILOT 儲存格函數，改由側邊欄承接 AI 工作 | 2026-09-14（官方更新日期） | 2026-09-15 | 首次收錄 | https://techcommunity.microsoft.com/blog/microsoft365insiderblog/bring-ai-to-your-formulas-with-the-copilot-function-in-excel/4443487/replies/4467621 | ad434b2c2e40 |
-| NVIDIA | CUDA Toolkit 13.4 | NVIDIA CUDA 13.4 新增 Windows on Arm 支援與共享 GPU 管理功能 | 2026-09-09（官方發布日期） | 2026-09-14 | 首次收錄 | https://developer.nvidia.com/blog/?p=121255 | e56c62d8b03e |
-| Blizzard Entertainment | STARCRAFT 開放世界射擊新作 | Blizzard 公布 STARCRAFT 開放世界射擊新作，目標 2030 年春季推出 | 2026-09-12（BlizzCon 官方公告事件日） | 2026-09-14 | 首次收錄 | https://news.blizzard.com/en-gb/article/24301453/everything-announced-at-blizzcon-2026-opening-ceremony<br>https://www.pcgamer.com/games/fps/new-starcraft-game-is-an-open-world-shooter-coming-in-2030/ | db58f63c8e23 |

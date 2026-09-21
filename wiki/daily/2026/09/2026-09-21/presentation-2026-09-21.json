@@ -1,0 +1,31 @@
+{
+  "images": {
+    "t1": {
+      "src": "https://x.ai/images/news/og-grok-voice-transcribe-2-0.webp",
+      "alt": "Grok Voice Transcribe 2.0 官方產品視覺",
+      "caption": "Grok Voice Transcribe 2.0 官方發布圖",
+      "credit": "SpaceXAI",
+      "source_url": "https://x.ai/news/grok-voice-transcribe-2",
+      "original_url": "https://x.ai/images/news/og-grok-voice-transcribe-2-0.webp",
+      "fit": "contain"
+    },
+    "t2": {
+      "src": "https://cdn.sanity.io/images/h5mp19kq/production/3c55acecf100e45f24ff38525892038007e49608-2880x1622.jpg?rect=0%2C55%2C2880%2C1512&w=1200&h=630&fit=crop&v=2026-09-18T02%3A10%3A30Z",
+      "alt": "Joby J208 自動飛行測試飛機",
+      "caption": "完成跨美自動飛行的 Joby J208",
+      "credit": "Joby Aviation",
+      "source_url": "https://www.jobyaviation.com/news/joby-completes-first-ever-fully-autonomous-flight-across-the-united-states",
+      "original_url": "https://cdn.sanity.io/images/h5mp19kq/production/3c55acecf100e45f24ff38525892038007e49608-2880x1622.jpg",
+      "fit": "cover"
+    },
+    "t3": {
+      "src": "https://www.goretroid.com/cdn/shop/files/20260920143516_2284_153.jpg?v=1789887320",
+      "alt": "Retroid Pocket Duo Lite Plus 雙螢幕掌機",
+      "caption": "Retroid Pocket Duo Lite Plus 官方商品圖",
+      "credit": "Retroid",
+      "source_url": "https://www.goretroid.com/collections/frontpage/products/retroid-pocket-duo-lite-handheld",
+      "original_url": "https://www.goretroid.com/cdn/shop/files/20260920143516_2284_153.jpg?v=1789887320",
+      "fit": "contain"
+    }
+  }
+}
