@@ -60,4 +60,5 @@ status: research-complete
 - pipeline 內容 commit：`816e7dc9c0a72b2d5d4bef2ca2291344b8feaa22`。
 - GitHub Pages 的日期頁、`latest-slides.html` 與根入口均完成 HTTP 及完整位元組雜湊驗證。
 - 唯一私人 LINE watchdog 於 2026-09-22 08:18:19 Asia/Taipei 回報 `Sent LINE message`，exit 0；未執行專案內 LINE sender。
+- 發布後強制執行 `daily_news_pipeline.py check --date 2026-09-22`，exit 0、stage `complete`；localhost 4173 最新入口回應 HTTP 200 並指向本日版本。
 - 公開網址：https://lucaskk.github.io/daily-news/wiki/daily/2026/09/2026-09-22/slides-2026-09-22.html?v=20260922-081722-reader
