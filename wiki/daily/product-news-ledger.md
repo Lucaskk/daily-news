@@ -1,7 +1,7 @@
 ---
 title: "科技產品新聞歷史比對表"
 type: product-news-ledger
-updated: 2026-09-21
+updated: 2026-09-22
 status: generated
 tags: [daily-news, tech-products, deduplication, provenance]
 ---
@@ -10,14 +10,17 @@ tags: [daily-news, tech-products, deduplication, provenance]
 
 此表由 `scripts/build_product_news_ledger.py` 掃描所有歷史日報的科技／AI 區段自動產生。**模型不得整份讀取本檔**；每個候選只用公司名、產品名、更新動作與比對鍵執行 `rg`，並只讀命中列。
 
-- 掃描日報：96 份。
-- 擷取科技／AI 項目：590 則。
+- 掃描日報：97 份。
+- 擷取科技／AI 項目：593 則。
 - 更新方式：`python3 scripts/build_product_news_ledger.py`
 - 查詢方式：使用窄化組合 pattern，例如 `rg -n -i '公司.*產品|產品.*公司|比對鍵' wiki/daily/product-news-ledger.md`，不要用公司名單獨匹配大量列。
 - 無命中時：完整讀取 `wiki/daily/product-news-recent-7d.md` 做最後確認，不讀取本檔全文。
 
 | 公司 | 產品 | 更新內容 | 發佈時間 | 收錄日期 | 狀態 | 來源網址 | 比對鍵 |
 |---|---|---|---|---|---|---|---|
+| Faraday Future | FF EAI Robot World 2.0 | Faraday Future 推出九款 EAI 機器人配置，發表後立即銷售與交付 | 2026-09-20 08:00（Asia/Taipei；9 月 19 日 17:00 PDT 發表會） | 2026-09-22 | 首次收錄 | https://www.ff.com/us/919-ff-eai-robotics/ | eadc4b854e44 |
+| OpenAI | ChatGPT Finances／Credit scores | ChatGPT Finances 加入 Experian 信用分數與異動監控 | 2026-09-21（OpenAI 官方 release notes 日期；未提供時分） | 2026-09-22 | 首次收錄 | https://help.openai.com/en/articles/6825453-chatgpt-release-notes | ff38173b0889 |
+| Canon | EOS R8 Mark II | Canon 發表 EOS R8 Mark II，入門全片幅機身新增五軸防手震 | 2026-09-16（Canon 官方發布日期；未提供時分） | 2026-09-22 | 首次收錄 | https://corporate.jp.canon/newsroom/newsrelease/2026/pr-0916a<br>https://www.cool3c.com/category/product | 6b2c8ec1cd5b |
 | SpaceXAI | Grok Voice Transcribe 2.0 | SpaceXAI 推出 Grok Voice Transcribe 2.0，既有語音 API 將直接升級 | 2026-09-18（SpaceXAI 官方發布日期；未提供時分） | 2026-09-21 | 首次收錄 | https://x.ai/news/grok-voice-transcribe-2 | c93fe3992343 |
 | Retroid | Pocket Duo Lite Plus | Retroid 臨時擴充 Pocket Duo Lite Plus，較高階晶片版開放預購 | 2026-09-21 02:07（Asia/Taipei；Engadget 首次可靠發布） | 2026-09-21 | 首次收錄 | https://www.goretroid.com/collections/frontpage/products/retroid-pocket-duo-lite-handheld<br>https://tech.yahoo.com/gaming/articles/retroid-pocket-unexpectedly-expands-duo-180702767.html | d58cf68b7ecd |
 | Joby Aviation | J208／Superpilot 自動飛行系統 | Joby 完成橫跨美國的全自動飛行，機上安全駕駛全程未介入 | 2026-09-18（Joby 官方發布日期；未提供時分） | 2026-09-21 | 首次收錄 | https://www.jobyaviation.com/news/joby-completes-first-ever-fully-autonomous-flight-across-the-united-states<br>https://www.engadget.com/transportation/joby-aviation-completes-fully-autonomous-flight-from-california-to-north-carolina-153000325.html | cb1a50c6bb66 |

@@ -1,21 +1,24 @@
 ---
 title: "科技產品新聞最近 7 天比對表"
 type: product-news-ledger-recent
-updated: 2026-09-21
+updated: 2026-09-22
 status: generated
 tags: [daily-news, tech-products, deduplication, recent]
 ---
 
 # 科技產品新聞最近 7 天比對表
 
-本檔是歷史 `rg` 搜尋沒有命中時的二次確認清單，可以完整讀取。涵蓋收錄日期 `2026-09-15` 至 `2026-09-21`；產品是否符合精確 168 小時發布窗，仍以當日來源筆記判定。
+本檔是歷史 `rg` 搜尋沒有命中時的二次確認清單，可以完整讀取。涵蓋收錄日期 `2026-09-16` 至 `2026-09-22`；產品是否符合精確 168 小時發布窗，仍以當日來源筆記判定。
 
-- 掃描日報：96 份。
-- 最近 7 天項目：20 則。
+- 掃描日報：97 份。
+- 最近 7 天項目：22 則。
 - 完整歷史只按需 `rg`：`wiki/daily/product-news-ledger.md`
 
 | 公司 | 產品 | 更新內容 | 發佈時間 | 收錄日期 | 狀態 | 來源網址 | 比對鍵 |
 |---|---|---|---|---|---|---|---|
+| Faraday Future | FF EAI Robot World 2.0 | Faraday Future 推出九款 EAI 機器人配置，發表後立即銷售與交付 | 2026-09-20 08:00（Asia/Taipei；9 月 19 日 17:00 PDT 發表會） | 2026-09-22 | 首次收錄 | https://www.ff.com/us/919-ff-eai-robotics/ | eadc4b854e44 |
+| OpenAI | ChatGPT Finances／Credit scores | ChatGPT Finances 加入 Experian 信用分數與異動監控 | 2026-09-21（OpenAI 官方 release notes 日期；未提供時分） | 2026-09-22 | 首次收錄 | https://help.openai.com/en/articles/6825453-chatgpt-release-notes | ff38173b0889 |
+| Canon | EOS R8 Mark II | Canon 發表 EOS R8 Mark II，入門全片幅機身新增五軸防手震 | 2026-09-16（Canon 官方發布日期；未提供時分） | 2026-09-22 | 首次收錄 | https://corporate.jp.canon/newsroom/newsrelease/2026/pr-0916a<br>https://www.cool3c.com/category/product | 6b2c8ec1cd5b |
 | SpaceXAI | Grok Voice Transcribe 2.0 | SpaceXAI 推出 Grok Voice Transcribe 2.0，既有語音 API 將直接升級 | 2026-09-18（SpaceXAI 官方發布日期；未提供時分） | 2026-09-21 | 首次收錄 | https://x.ai/news/grok-voice-transcribe-2 | c93fe3992343 |
 | Retroid | Pocket Duo Lite Plus | Retroid 臨時擴充 Pocket Duo Lite Plus，較高階晶片版開放預購 | 2026-09-21 02:07（Asia/Taipei；Engadget 首次可靠發布） | 2026-09-21 | 首次收錄 | https://www.goretroid.com/collections/frontpage/products/retroid-pocket-duo-lite-handheld<br>https://tech.yahoo.com/gaming/articles/retroid-pocket-unexpectedly-expands-duo-180702767.html | d58cf68b7ecd |
 | Joby Aviation | J208／Superpilot 自動飛行系統 | Joby 完成橫跨美國的全自動飛行，機上安全駕駛全程未介入 | 2026-09-18（Joby 官方發布日期；未提供時分） | 2026-09-21 | 首次收錄 | https://www.jobyaviation.com/news/joby-completes-first-ever-fully-autonomous-flight-across-the-united-states<br>https://www.engadget.com/transportation/joby-aviation-completes-fully-autonomous-flight-from-california-to-north-carolina-153000325.html | cb1a50c6bb66 |
@@ -35,4 +38,3 @@ tags: [daily-news, tech-products, deduplication, recent]
 | OpenAI | ChatGPT Work Data agent | OpenAI 推出 ChatGPT Work Data agent，讓企業資料分析與互動儀表板在對話中完成 | 2026-09-10（官方產品發布日期） | 2026-09-16 | 首次收錄 | https://openai.com/index/put-data-to-work/ | 7a0a62707ed3 |
 | OpenAI | Agents API | OpenAI Agents API 開放公開測試，開發者可託管 Codex 式雲端代理 | 2026-09-10（官方產品 API 發布日期） | 2026-09-16 | 首次收錄 | https://openai.com/index/introducing-the-agents-api/ | 1b63d6e43338 |
 | Cloudflare | AI Crawl Control／Disallow AI Training | Cloudflare 推出「禁止 AI 訓練」設定，網站可保留搜尋索引並遷移舊爬蟲控制 | 2026-09-15（官方產品公告日期） | 2026-09-16 | 續報 | https://blog.cloudflare.com/accountable-mixed-use-ai-crawlers/<br>https://blog.cloudflare.com/content-independence-day-ai-options/ | 716d54520b0b |
-| Microsoft | Excel =COPILOT 函數 | Microsoft 停用 Excel 的 =COPILOT 儲存格函數，改由側邊欄承接 AI 工作 | 2026-09-14（官方更新日期） | 2026-09-15 | 首次收錄 | https://techcommunity.microsoft.com/blog/microsoft365insiderblog/bring-ai-to-your-formulas-with-the-copilot-function-in-excel/4443487/replies/4467621 | ad434b2c2e40 |

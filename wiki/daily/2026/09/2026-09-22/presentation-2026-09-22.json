@@ -1,0 +1,22 @@
+{
+  "images": {
+    "t2": {
+      "src": "https://genesis-cdn.ff.com/BruceLee/neweb/0918/635f6fbebf6ddf51757a33cb5c08ac43-default.jpg",
+      "alt": "Faraday Future 919 EAI 機器人產品陣容",
+      "caption": "FF EAI Robot World 2.0 官方發表視覺",
+      "credit": "Faraday Future",
+      "source_url": "https://www.ff.com/us/919-ff-eai-robotics/",
+      "original_url": "https://genesis-cdn.ff.com/BruceLee/neweb/0918/635f6fbebf6ddf51757a33cb5c08ac43-default.jpg",
+      "fit": "contain"
+    },
+    "t3": {
+      "src": "https://corporate.jp.canon/-/media/Project/Canon/CanonJP/Corporate/newsroom/newsrelease/2026/2026-09/photo-library/20260916a-1.jpg?hash=0C6E19399765664C1488284D310E6D1B&sc_lang=ja-JP",
+      "alt": "Canon EOS R8 Mark II 搭配 RF24-105mm 鏡頭",
+      "caption": "EOS R8 Mark II 官方產品圖",
+      "credit": "Canon",
+      "source_url": "https://corporate.jp.canon/newsroom/newsrelease/2026/pr-0916a",
+      "original_url": "https://corporate.jp.canon/-/media/Project/Canon/CanonJP/Corporate/newsroom/newsrelease/2026/2026-09/photo-library/20260916a-1.jpg?hash=0C6E19399765664C1488284D310E6D1B&sc_lang=ja-JP",
+      "fit": "contain"
+    }
+  }
+}
