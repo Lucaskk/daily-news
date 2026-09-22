@@ -2,7 +2,7 @@
 title: "Overview"
 type: overview
 created: 2026-05-24
-updated: 2026-09-21
+updated: 2026-09-22
 status: seed
 tags: [overview]
 sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
@@ -19,6 +19,12 @@ sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
 - 抽出持續出現的人物、組織、事件、政策、技術與市場概念。
 - 維護跨來源的矛盾、時間線、趨勢與待查問題。
 - 將重要查詢結果回寫成可累積的 wiki 頁面。
+
+## 2026-09-22 Daily News Synthesis
+
+- 中東戰線從胡塞攻占紅海沿岸推進到高地爭奪，英國同意為沙國戰機空中加油；Brent 暫跌破 100 美元，但供應改善與外交期待不等於戰事降溫。
+- 制度與科學主線包括三家媒體正式起訴白宮、Begoña Gómez 案進入陪審審判、聯合國 AI 科學小組首份代理安全簡報，以及行星健康檢查七項邊界持續惡化。
+- 產品主線從高敏感個資、實體 AI 到創作硬體：ChatGPT Finances 接入 Experian 信用資料，Faraday Future 九款機器人配置開賣，Canon EOS R8 Mark II 把五軸防手震下放。詳見 [本日日報](daily/2026/09/2026-09-22/daily-news-2026-09-22.md)。
 
 ## 2026-09-21 Daily News Synthesis
 
