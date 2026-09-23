@@ -1,7 +1,7 @@
 ---
 title: "科技產品新聞歷史比對表"
 type: product-news-ledger
-updated: 2026-09-22
+updated: 2026-09-23
 status: generated
 tags: [daily-news, tech-products, deduplication, provenance]
 ---
@@ -10,14 +10,19 @@ tags: [daily-news, tech-products, deduplication, provenance]
 
 此表由 `scripts/build_product_news_ledger.py` 掃描所有歷史日報的科技／AI 區段自動產生。**模型不得整份讀取本檔**；每個候選只用公司名、產品名、更新動作與比對鍵執行 `rg`，並只讀命中列。
 
-- 掃描日報：97 份。
-- 擷取科技／AI 項目：593 則。
+- 掃描日報：98 份。
+- 擷取科技／AI 項目：598 則。
 - 更新方式：`python3 scripts/build_product_news_ledger.py`
 - 查詢方式：使用窄化組合 pattern，例如 `rg -n -i '公司.*產品|產品.*公司|比對鍵' wiki/daily/product-news-ledger.md`，不要用公司名單獨匹配大量列。
 - 無命中時：完整讀取 `wiki/daily/product-news-recent-7d.md` 做最後確認，不讀取本檔全文。
 
 | 公司 | 產品 | 更新內容 | 發佈時間 | 收錄日期 | 狀態 | 來源網址 | 比對鍵 |
 |---|---|---|---|---|---|---|---|
+| Alibaba | Zhenwu V900、Qwen 4 路線圖 | 阿里巴巴公布鎮武 V900 AI 晶片，並預告 Qwen 4 將朝 5 至 10 兆參數訓練 | 2026-09-22 15:16:01（Asia/Taipei；AP 首次可靠發布） | 2026-09-23 | 首次收錄 | https://www.alibabacloud.com/en/press-room/alibaba-unveils-roadmap-on-full-stack-ai-strategy?_p_lc=1<br>https://apnews.com/article/b29908e516faff9f5a82b201ba954aab | f6a23a2d4e20 |
+| OpenAI | GPT-6 Sol、GPT-6 Luna | OpenAI 正式推出 GPT-6 Sol 與 Luna，API 價格較 GPT-5.6 促銷價降低一半 | 2026-09-22（OpenAI 官方發布日期；未提供時分） | 2026-09-23 | 首次收錄 | https://openai.com/index/introducing-gpt-6-sol-and-luna/<br>https://www.engadget.com/2265801/anthropic-and-openai-announce-more-powerful-and-cheaper-ai-models/ | ea6fbfb94301 |
+| Google 與 Acer、ASUS、Dell、HP、Lenovo | Googlebook | Googlebook 五款機型開放預購，價格與 10 月 4 日上市時程確定 | 2026-09-21 21:00:05（Asia/Taipei；Axios 首次可靠發布） | 2026-09-23 | 首次收錄 | https://blog.google/products-and-platforms/devices/googlebook/first-look-googlebook/<br>https://www.axios.com/2026/09/21/googlebook-899-google-laptop<br>https://www.engadget.com/2263649/googlebooks-a-laptop-that-works-better-with-your-android-phone/ | bfd56ccfc4ed |
+| Discord | Age Group、Age Assurance | Discord 開始推出新版年齡分組與驗證流程，多數帳號以裝置和帳戶訊號判定 | 2026-09-22（Discord 官方支援頁更新日期；頁面未提供可核實時區） | 2026-09-23 | 首次收錄 | https://support.discord.com/hc/en-us/articles/30326565624343-How-to-Confirm-Your-Age-Group-on-Discord<br>https://www.engadget.com/2265924/discord-rolls-out-its-revised-age-verification-policy/ | 5b49375ca664 |
+| Anthropic | Claude Opus 5.5 | Anthropic 推出 Claude Opus 5.5，降低定價並提高使用配額 | 2026-09-22（Anthropic 官方發布日期；未提供時分） | 2026-09-23 | 首次收錄 | https://www.anthropic.com/claude-opus-5-5<br>https://www.engadget.com/2265801/anthropic-and-openai-announce-more-powerful-and-cheaper-ai-models/ | bb89e7a504a4 |
 | Faraday Future | FF EAI Robot World 2.0 | Faraday Future 推出九款 EAI 機器人配置，發表後立即銷售與交付 | 2026-09-20 08:00（Asia/Taipei；9 月 19 日 17:00 PDT 發表會） | 2026-09-22 | 首次收錄 | https://www.ff.com/us/919-ff-eai-robotics/ | eadc4b854e44 |
 | OpenAI | ChatGPT Finances／Credit scores | ChatGPT Finances 加入 Experian 信用分數與異動監控 | 2026-09-21（OpenAI 官方 release notes 日期；未提供時分） | 2026-09-22 | 首次收錄 | https://help.openai.com/en/articles/6825453-chatgpt-release-notes | ff38173b0889 |
 | Canon | EOS R8 Mark II | Canon 發表 EOS R8 Mark II，入門全片幅機身新增五軸防手震 | 2026-09-16（Canon 官方發布日期；未提供時分） | 2026-09-22 | 首次收錄 | https://corporate.jp.canon/newsroom/newsrelease/2026/pr-0916a<br>https://www.cool3c.com/category/product | 6b2c8ec1cd5b |
