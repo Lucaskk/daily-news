@@ -63,4 +63,8 @@ sources: []
 
 ## 發布紀錄
 
-待 pipeline 完成後補記內容 commit、GitHub Pages 雜湊驗證、LINE watchdog、強制 `check` 與最終公開網址。
+- pipeline 內容 commit：`8b0fc9a178926ee2ce28160126fe097b7fc96046`。
+- GitHub Pages 已核對日期頁、`latest-slides.html` 與根入口，HTTP 成功且完整位元組 SHA-256 與本機一致。
+- 唯一私人 LINE watchdog 於 `2026-09-23T08:18:44+08:00` 回報 `Sent LINE message`，exit code 0；未使用其他 LINE sender。
+- 公開頁：https://lucaskk.github.io/daily-news/wiki/daily/2026/09/2026-09-23/slides-2026-09-23.html?v=20260923-081800-reader
+- 強制 pipeline `check` 與 localhost 最終狀態於收尾後補記；localhost 問題不影響已完成的公開發布與 LINE 配送。
