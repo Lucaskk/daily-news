@@ -1,7 +1,7 @@
 ---
 title: "科技產品新聞歷史比對表"
 type: product-news-ledger
-updated: 2026-09-23
+updated: 2026-09-24
 status: generated
 tags: [daily-news, tech-products, deduplication, provenance]
 ---
@@ -10,14 +10,19 @@ tags: [daily-news, tech-products, deduplication, provenance]
 
 此表由 `scripts/build_product_news_ledger.py` 掃描所有歷史日報的科技／AI 區段自動產生。**模型不得整份讀取本檔**；每個候選只用公司名、產品名、更新動作與比對鍵執行 `rg`，並只讀命中列。
 
-- 掃描日報：98 份。
-- 擷取科技／AI 項目：598 則。
+- 掃描日報：99 份。
+- 擷取科技／AI 項目：603 則。
 - 更新方式：`python3 scripts/build_product_news_ledger.py`
 - 查詢方式：使用窄化組合 pattern，例如 `rg -n -i '公司.*產品|產品.*公司|比對鍵' wiki/daily/product-news-ledger.md`，不要用公司名單獨匹配大量列。
 - 無命中時：完整讀取 `wiki/daily/product-news-recent-7d.md` 做最後確認，不讀取本檔全文。
 
 | 公司 | 產品 | 更新內容 | 發佈時間 | 收錄日期 | 狀態 | 來源網址 | 比對鍵 |
 |---|---|---|---|---|---|---|---|
+| Xiaomi | Xiaomi 18 Pro、Xiaomi 18 Pro Max | Xiaomi 發布 18 Pro 與 18 Pro Max，加入背面副螢幕並確認國際版本 | 2026-09-24 01:19（Asia/Taipei；El Español 報導換算） | 2026-09-24 | 首次收錄 | https://www.cool3c.com/<br>https://www.elespanol.com/elandroidelibre/20260923/xiaomi-confirma-llegada-moviles-pro-espana-bestia-pantallas-ultimo-chip-qualcomm/1003744394538_0.amp.html<br>https://new.c.mi.com/global/post/2137775 | 85d9c445bee7 |
+| Razer | Mako、Mako X | Razer 重啟 Mako 喇叭品牌，推出 2.1 聲道 Mako 與精簡版 Mako X | 2026-09-22（Razer 官方發布日期；未提供時分） | 2026-09-24 | 首次收錄 | https://www.razer.com/newsroom/product-news/mako-line<br>https://www.razer.com/eu-en/gaming-speakers/razer-mako-x<br>https://www.cool3c.com/ | 790a3ff3c736 |
+| Microsoft | Surface Pro 12、Surface Laptop 13 | Microsoft 推出搭載 Snapdragon X2 Plus 的 Surface Pro 12 與 Surface Laptop 13 | 2026-09-24 05:30（Asia/Taipei；依 Engadget 頁面標示 9/23 16:30 EST 字面換算） | 2026-09-24 | 首次收錄 | https://www.microsoft.com/en-us/surface/devices/surface-pro?icid=mscom_marcom_FH3a_SurfacePro12In_Fall27<br>https://www.engadget.com/2266680/microsofts-new-surface-pro-12-and-surface-laptop-13-feature-snapdragon-x2-plus-chips/ | fa04512e5098 |
+| Logitech | Yeti 2 | Logitech 推出 Yeti 2 USB 麥克風，加入距離感測與 AI 降噪 | 2026-09-24 01:01（Asia/Taipei；依 Engadget 頁面標示 9/23 12:01 EST 字面換算） | 2026-09-24 | 首次收錄 | https://www.engadget.com/2265713/logitechs-yeti-2-brings-the-17-year-old-usb-mic-into-the-modern-age/<br>https://www.logitechg.com/en-us | c289d52dd6f2 |
+| Eight Sleep | Pod 6 | Eight Sleep 發布 Pod 6，感測器增至 18 個並加快溫控 | 2026-09-23 20:00（Asia/Taipei；依 Engadget 頁面標示 9/23 07:00 EST 字面換算） | 2026-09-24 | 首次收錄 | https://www.eightsleep.com/de/<br>https://www.engadget.com/2264386/eight-sleep-announces-the-pod-6-its-newest-smart-mattress-cover/ | 7cbcf99ccaa2 |
 | Alibaba | Zhenwu V900、Qwen 4 路線圖 | 阿里巴巴公布鎮武 V900 AI 晶片，並預告 Qwen 4 將朝 5 至 10 兆參數訓練 | 2026-09-22 15:16:01（Asia/Taipei；AP 首次可靠發布） | 2026-09-23 | 首次收錄 | https://www.alibabacloud.com/en/press-room/alibaba-unveils-roadmap-on-full-stack-ai-strategy?_p_lc=1<br>https://apnews.com/article/b29908e516faff9f5a82b201ba954aab | f6a23a2d4e20 |
 | OpenAI | GPT-6 Sol、GPT-6 Luna | OpenAI 正式推出 GPT-6 Sol 與 Luna，API 價格較 GPT-5.6 促銷價降低一半 | 2026-09-22（OpenAI 官方發布日期；未提供時分） | 2026-09-23 | 首次收錄 | https://openai.com/index/introducing-gpt-6-sol-and-luna/<br>https://www.engadget.com/2265801/anthropic-and-openai-announce-more-powerful-and-cheaper-ai-models/ | ea6fbfb94301 |
 | Google 與 Acer、ASUS、Dell、HP、Lenovo | Googlebook | Googlebook 五款機型開放預購，價格與 10 月 4 日上市時程確定 | 2026-09-21 21:00:05（Asia/Taipei；Axios 首次可靠發布） | 2026-09-23 | 首次收錄 | https://blog.google/products-and-platforms/devices/googlebook/first-look-googlebook/<br>https://www.axios.com/2026/09/21/googlebook-899-google-laptop<br>https://www.engadget.com/2263649/googlebooks-a-laptop-that-works-better-with-your-android-phone/ | bfd56ccfc4ed |

@@ -1,21 +1,26 @@
 ---
 title: "科技產品新聞最近 7 天比對表"
 type: product-news-ledger-recent
-updated: 2026-09-23
+updated: 2026-09-24
 status: generated
 tags: [daily-news, tech-products, deduplication, recent]
 ---
 
 # 科技產品新聞最近 7 天比對表
 
-本檔是歷史 `rg` 搜尋沒有命中時的二次確認清單，可以完整讀取。涵蓋收錄日期 `2026-09-17` 至 `2026-09-23`；產品是否符合精確 168 小時發布窗，仍以當日來源筆記判定。
+本檔是歷史 `rg` 搜尋沒有命中時的二次確認清單，可以完整讀取。涵蓋收錄日期 `2026-09-18` 至 `2026-09-24`；產品是否符合精確 168 小時發布窗，仍以當日來源筆記判定。
 
-- 掃描日報：98 份。
-- 最近 7 天項目：24 則。
+- 掃描日報：99 份。
+- 最近 7 天項目：26 則。
 - 完整歷史只按需 `rg`：`wiki/daily/product-news-ledger.md`
 
 | 公司 | 產品 | 更新內容 | 發佈時間 | 收錄日期 | 狀態 | 來源網址 | 比對鍵 |
 |---|---|---|---|---|---|---|---|
+| Xiaomi | Xiaomi 18 Pro、Xiaomi 18 Pro Max | Xiaomi 發布 18 Pro 與 18 Pro Max，加入背面副螢幕並確認國際版本 | 2026-09-24 01:19（Asia/Taipei；El Español 報導換算） | 2026-09-24 | 首次收錄 | https://www.cool3c.com/<br>https://www.elespanol.com/elandroidelibre/20260923/xiaomi-confirma-llegada-moviles-pro-espana-bestia-pantallas-ultimo-chip-qualcomm/1003744394538_0.amp.html<br>https://new.c.mi.com/global/post/2137775 | 85d9c445bee7 |
+| Razer | Mako、Mako X | Razer 重啟 Mako 喇叭品牌，推出 2.1 聲道 Mako 與精簡版 Mako X | 2026-09-22（Razer 官方發布日期；未提供時分） | 2026-09-24 | 首次收錄 | https://www.razer.com/newsroom/product-news/mako-line<br>https://www.razer.com/eu-en/gaming-speakers/razer-mako-x<br>https://www.cool3c.com/ | 790a3ff3c736 |
+| Microsoft | Surface Pro 12、Surface Laptop 13 | Microsoft 推出搭載 Snapdragon X2 Plus 的 Surface Pro 12 與 Surface Laptop 13 | 2026-09-24 05:30（Asia/Taipei；依 Engadget 頁面標示 9/23 16:30 EST 字面換算） | 2026-09-24 | 首次收錄 | https://www.microsoft.com/en-us/surface/devices/surface-pro?icid=mscom_marcom_FH3a_SurfacePro12In_Fall27<br>https://www.engadget.com/2266680/microsofts-new-surface-pro-12-and-surface-laptop-13-feature-snapdragon-x2-plus-chips/ | fa04512e5098 |
+| Logitech | Yeti 2 | Logitech 推出 Yeti 2 USB 麥克風，加入距離感測與 AI 降噪 | 2026-09-24 01:01（Asia/Taipei；依 Engadget 頁面標示 9/23 12:01 EST 字面換算） | 2026-09-24 | 首次收錄 | https://www.engadget.com/2265713/logitechs-yeti-2-brings-the-17-year-old-usb-mic-into-the-modern-age/<br>https://www.logitechg.com/en-us | c289d52dd6f2 |
+| Eight Sleep | Pod 6 | Eight Sleep 發布 Pod 6，感測器增至 18 個並加快溫控 | 2026-09-23 20:00（Asia/Taipei；依 Engadget 頁面標示 9/23 07:00 EST 字面換算） | 2026-09-24 | 首次收錄 | https://www.eightsleep.com/de/<br>https://www.engadget.com/2264386/eight-sleep-announces-the-pod-6-its-newest-smart-mattress-cover/ | 7cbcf99ccaa2 |
 | Alibaba | Zhenwu V900、Qwen 4 路線圖 | 阿里巴巴公布鎮武 V900 AI 晶片，並預告 Qwen 4 將朝 5 至 10 兆參數訓練 | 2026-09-22 15:16:01（Asia/Taipei；AP 首次可靠發布） | 2026-09-23 | 首次收錄 | https://www.alibabacloud.com/en/press-room/alibaba-unveils-roadmap-on-full-stack-ai-strategy?_p_lc=1<br>https://apnews.com/article/b29908e516faff9f5a82b201ba954aab | f6a23a2d4e20 |
 | OpenAI | GPT-6 Sol、GPT-6 Luna | OpenAI 正式推出 GPT-6 Sol 與 Luna，API 價格較 GPT-5.6 促銷價降低一半 | 2026-09-22（OpenAI 官方發布日期；未提供時分） | 2026-09-23 | 首次收錄 | https://openai.com/index/introducing-gpt-6-sol-and-luna/<br>https://www.engadget.com/2265801/anthropic-and-openai-announce-more-powerful-and-cheaper-ai-models/ | ea6fbfb94301 |
 | Google 與 Acer、ASUS、Dell、HP、Lenovo | Googlebook | Googlebook 五款機型開放預購，價格與 10 月 4 日上市時程確定 | 2026-09-21 21:00:05（Asia/Taipei；Axios 首次可靠發布） | 2026-09-23 | 首次收錄 | https://blog.google/products-and-platforms/devices/googlebook/first-look-googlebook/<br>https://www.axios.com/2026/09/21/googlebook-899-google-laptop<br>https://www.engadget.com/2263649/googlebooks-a-laptop-that-works-better-with-your-android-phone/ | bfd56ccfc4ed |
@@ -37,6 +42,3 @@ tags: [daily-news, tech-products, deduplication, recent]
 | UN system／Google | UN System Data Commons | 聯合國與 Google 推出 UN System Data Commons，整合全球統計與 AI 查詢 | 2026-09-17（Google 官方產品公告日期；未提供時分） | 2026-09-18 | 首次收錄 | https://blog.google/innovation-and-ai/technology/ai/google-un-data-commons-platform/ | 99750797433b |
 | OpenAI | ChatGPT for Word | OpenAI 正式推出 ChatGPT for Word，免費方案也可使用 | 2026-09-17（官方 release notes 日期；未提供時分） | 2026-09-18 | 首次收錄 | https://help.openai.com/en/articles/6825453-chatgpt-release-notes | fda9d419d69c |
 | Google Labs | CC 家庭／群組代理 | Google Labs 擴大 CC 為家庭共用 AI 代理，最多六人協作 | 2026-09-17（Google 官方公告日期；未提供時分） | 2026-09-18 | 首次收錄 | https://blog.google/innovation-and-ai/models-and-research/google-labs/cc-expanding-to-groups/ | f037909720b6 |
-| OpenAI | ChatGPT Ads／Sponsored Agents | OpenAI 測試 ChatGPT Sponsored Agents，並開放廣告製作與商務整合 | 2026-09-16（官方產品公告日期；未提供時分） | 2026-09-17 | 續報 | https://openai.com/index/reimagining-advertising-with-ai/<br>https://openai.com/index/testing-ads-in-chatgpt/ | 167d45c4203f |
-| Meta | Meta One | Meta One 正式推出跨 Facebook、Instagram、WhatsApp 的 AI 訂閱方案 | 2026-09-15（美國官方公告日期；未提供時分） | 2026-09-17 | 首次收錄 | https://about.fb.com/news/2026/09/introducing-meta-one-subscription-service-more-features-ai/<br>https://www.engadget.com/2258403/meta-adds-new-subscription-tiers-for-businesses-creators-and-ai-power-users/ | a9828179f599 |
-| Apple | StoreKit 2／App Store 訂閱 Bundles、Suites | Apple 開放申請 App Store 訂閱 Bundles／Suites，並啟用多席位購買 | 2026-09-16（Apple Developer 官方公告日期；未提供時分） | 2026-09-17 | 首次收錄 | https://developer.apple.com/news/?id=likeohx4 | fc96debc0a15 |
