@@ -4,7 +4,7 @@
 
 - 固定截點 08:02:07 Asia/Taipei；全球前 24 小時、產品前 168 小時。5 則產品先列、全球恰好 10 則；重大續報均標示前次收錄與本次新進展。
 - 選題前重建產品表為 598 筆／98 份日報。完整歷史只用候選窄 `rg`；無相同產品變更後才讀最近 7 天 24 筆。Engadget、Cool3c 與官方產品來源均已檢查。
-- pipeline 內容 commit `943c1c1a0a2d91a00a145f253f17be886640abc2`；Pages 日期頁、最新與根入口通過完整位元組雜湊驗證。唯一私人 watchdog 於 08:13:55 回報 `Sent LINE message`、exit 0；強制 pipeline `check` exit 0，localhost 4173 回應 HTTP 200。研究模式維持 `legacy`，Python 固定處理渲染、驗證、發布與配送。
+- pipeline 內容 commit `943c1c1a0a2d91a00a145f253f17be886640abc2`；Pages 日期頁、最新與根入口通過完整位元組雜湊驗證。唯一私人 watchdog 於 08:13:55 回報 `Sent LINE message`、exit 0；強制 pipeline `check` exit 0，localhost 4173 回應 HTTP 200。Chrome／Playwright 320、390、1440px 的圖片、頁內展開、逐篇來源、單篇 ChatGPT context 與鍵盤導覽全部通過。研究模式維持 `legacy`。
 - 公開：https://lucaskk.github.io/daily-news/wiki/daily/2026/09/2026-09-24/slides-2026-09-24.html?v=20260924-081313-reader
 
 ## [2026-09-23] ingest | Daily global and tech AI news

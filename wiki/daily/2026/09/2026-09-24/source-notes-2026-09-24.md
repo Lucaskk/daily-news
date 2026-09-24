@@ -68,3 +68,4 @@ sources: []
 - 唯一私人 LINE watchdog 於 `2026-09-24T08:13:55+08:00` 回報 `Sent LINE message`，exit code 0；未使用 `scripts/send_line_daily_slides.py`。
 - 公開頁：https://lucaskk.github.io/daily-news/wiki/daily/2026/09/2026-09-24/slides-2026-09-24.html?v=20260924-081313-reader
 - pipeline checkpoint 已進入 `complete`；強制 `check --date 2026-09-24` exit 0，localhost 4173 最新入口回應 HTTP 200。
+- Chrome／Playwright 以 320、390、1440px 驗證圖片、頁內完整報告展開、逐篇來源、單篇 ChatGPT context 與鍵盤導覽，全部通過；測試攔截 ChatGPT 網址，沒有代送問題。
