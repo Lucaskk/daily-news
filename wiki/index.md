@@ -2,7 +2,7 @@
 title: "Knowledge Base Index"
 type: overview
 created: 2026-05-24
-updated: 2026-09-23
+updated: 2026-09-24
 status: seed
 tags: [index]
 sources: []
@@ -21,6 +21,9 @@ sources: []
 - [[2026-04-04-llm-wiki]] - Karpathy 提出的 LLM-maintained personal wiki 模式，是本知識庫的設計來源。
 
 ## Daily News
+
+- [2026-09-24 Daily News](daily/2026/09/2026-09-24/daily-news-2026-09-24.md) - Surface X2 Plus、Xiaomi 18 Pro、Yeti 2、Pod 6 與 Razer Mako 產品先列；全球涵蓋 Kyiv 空襲、UN AI 安理會簡報、Chagos 暫停與北韓 240mm 火箭炮等 10 則。
+- [2026-09-24 Slides](daily/2026/09/2026-09-24/slides-2026-09-24.html) - 手機閱讀版，含產品優先首頁、逐篇時間與原始來源、原頁完整報告及單篇 ChatGPT 後續提問。
 
 - [2026-09-23 Daily News](daily/2026/09/2026-09-23/daily-news-2026-09-23.md) - GPT-6 Sol／Luna、Claude Opus 5.5、Alibaba 鎮武 V900、Googlebook 與 Discord 年齡分組先列；全球涵蓋美伊直接會談、北極協議簽署、沙國管線重啟與北韓飛彈歧異等 10 則。
 - [2026-09-23 Slides](daily/2026/09/2026-09-23/slides-2026-09-23.html) - 手機閱讀版，含產品優先首頁、逐篇時間與原始來源、原頁完整報告及單篇 ChatGPT 後續提問。
