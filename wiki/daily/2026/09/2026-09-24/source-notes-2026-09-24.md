@@ -67,4 +67,4 @@ sources: []
 - GitHub Pages 日期頁、`latest-slides.html` 與根入口均通過 HTTP 與完整位元組 SHA-256 比對。
 - 唯一私人 LINE watchdog 於 `2026-09-24T08:13:55+08:00` 回報 `Sent LINE message`，exit code 0；未使用 `scripts/send_line_daily_slides.py`。
 - 公開頁：https://lucaskk.github.io/daily-news/wiki/daily/2026/09/2026-09-24/slides-2026-09-24.html?v=20260924-081313-reader
-- pipeline checkpoint 已進入 `complete`；強制 `check` 與 localhost 結果另於收尾後記入 wiki log。
+- pipeline checkpoint 已進入 `complete`；強制 `check --date 2026-09-24` exit 0，localhost 4173 最新入口回應 HTTP 200。
