@@ -1,0 +1,49 @@
+{
+  "images": {
+    "t1": {
+      "src": "https://about.fb.com/wp-content/uploads/2026/09/Introducing-Meta-VR-Glasses_-A-Cinema-Courtside-Seat-and-Workspace-in-Just-100-GramsIntroducing-Meta-VR-Glasses_-A-Cinema-Courtside-Seat-and-Workspace-in-Just-100-Grams_social.jpg?w=1200",
+      "alt": "Meta VR Glasses 官方產品視覺",
+      "caption": "Meta VR Glasses 採眼鏡與外接運算 puck 的分體設計",
+      "credit": "Meta",
+      "source_url": "https://about.fb.com/news/2026/09/introducing-meta-vr-glasses-3d-movies-immersive-live-sports-100-grams/",
+      "original_url": "https://about.fb.com/wp-content/uploads/2026/09/Introducing-Meta-VR-Glasses_-A-Cinema-Courtside-Seat-and-Workspace-in-Just-100-GramsIntroducing-Meta-VR-Glasses_-A-Cinema-Courtside-Seat-and-Workspace-in-Just-100-Grams_social.jpg?w=1200",
+      "fit": "contain"
+    },
+    "t2": {
+      "src": "https://about.fb.com/wp-content/uploads/2026/09/Introducing-Ray-Ban-Meta-Audio-and-More-AI-Glasses-Styles_Header.jpg?w=1200",
+      "alt": "Ray-Ban Meta Audio 與新款 AI 眼鏡官方產品視覺",
+      "caption": "Ray-Ban Meta Audio 與 Ray-Ban Meta Gen 3 產品陣容",
+      "credit": "Meta",
+      "source_url": "https://about.fb.com/news/2026/09/introducing-ray-ban-meta-audio-glasses-new-styles-plus-muse/",
+      "original_url": "https://about.fb.com/wp-content/uploads/2026/09/Introducing-Ray-Ban-Meta-Audio-and-More-AI-Glasses-Styles_Header.jpg?w=1200",
+      "fit": "contain"
+    },
+    "t3": {
+      "src": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/GoogleHealthUpdates_H22026_social.max-1440x810.png",
+      "alt": "Google Health Guardian 與 Pixel Watch 官方視覺",
+      "caption": "Health Guardian 健康趨勢功能開始在 Google Health app 上線",
+      "credit": "Google",
+      "source_url": "https://blog.google/products-and-platforms/products/google-health/health-guardian-features-live/",
+      "original_url": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/GoogleHealthUpdates_H22026_social.max-1440x810.png",
+      "fit": "contain"
+    },
+    "t4": {
+      "src": "https://press.razer.com/wp-content/uploads/2026/09/Kiyo-V2-Pro_KV.jpg",
+      "alt": "Razer Kiyo V2 Pro 官方產品圖",
+      "caption": "Kiyo V2 Pro 支援 4K 60 FPS 與 AI 自動構圖",
+      "credit": "Razer",
+      "source_url": "https://www.razer.com/newsroom/product-reviews/kiyo-v2-pro",
+      "original_url": "https://press.razer.com/wp-content/uploads/2026/09/Kiyo-V2-Pro_KV.jpg",
+      "fit": "contain"
+    },
+    "t5": {
+      "src": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/01_GooglePhotosDropsSept_HeroImage_v04.max-1440x810.png",
+      "alt": "Google Photos 九月功能更新官方視覺",
+      "caption": "Google Photos 新增 Redact、Moods、Wardrobe 與 Remix 功能",
+      "credit": "Google",
+      "source_url": "https://blog.google/products-and-platforms/products/photos/google-photos-updates/",
+      "original_url": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/01_GooglePhotosDropsSept_HeroImage_v04.max-1440x810.png",
+      "fit": "contain"
+    }
+  }
+}

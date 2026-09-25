@@ -1,21 +1,26 @@
 ---
 title: "科技產品新聞最近 7 天比對表"
 type: product-news-ledger-recent
-updated: 2026-09-24
+updated: 2026-09-25
 status: generated
 tags: [daily-news, tech-products, deduplication, recent]
 ---
 
 # 科技產品新聞最近 7 天比對表
 
-本檔是歷史 `rg` 搜尋沒有命中時的二次確認清單，可以完整讀取。涵蓋收錄日期 `2026-09-18` 至 `2026-09-24`；產品是否符合精確 168 小時發布窗，仍以當日來源筆記判定。
+本檔是歷史 `rg` 搜尋沒有命中時的二次確認清單，可以完整讀取。涵蓋收錄日期 `2026-09-19` 至 `2026-09-25`；產品是否符合精確 168 小時發布窗，仍以當日來源筆記判定。
 
-- 掃描日報：99 份。
-- 最近 7 天項目：26 則。
+- 掃描日報：100 份。
+- 最近 7 天項目：28 則。
 - 完整歷史只按需 `rg`：`wiki/daily/product-news-ledger.md`
 
 | 公司 | 產品 | 更新內容 | 發佈時間 | 收錄日期 | 狀態 | 來源網址 | 比對鍵 |
 |---|---|---|---|---|---|---|---|
+| Razer | Kiyo V2 Pro | Razer 發布 Kiyo V2 Pro，以 Sony STARVIS 2 提供 4K 60 FPS 與 AI 自動構圖 | 2026-09-24（Razer 官方發布日期；未提供時分） | 2026-09-25 | 首次收錄 | https://www.razer.com/newsroom/product-reviews/kiyo-v2-pro<br>https://www.razer.com/streaming-cameras/razer-kiyo-v2-pro/RZ19-05360100-R3U1 | bc9d260bd629 |
+| Meta | Meta VR Glasses | Meta 發布約 100 公克的 VR Glasses，採外接運算 puck 並預定 2027 年春季上市 | 2026-09-24（Meta 官方更新日期；未提供時分） | 2026-09-25 | 首次收錄 | https://about.fb.com/news/2026/09/introducing-meta-vr-glasses-3d-movies-immersive-live-sports-100-grams/<br>https://www.engadget.com/2267230/everything-announced-at-meta-connect-2026/ | b1766020825e |
+| Meta、EssilorLuxottica | Ray-Ban Meta Audio、Ray-Ban Meta Gen 3 | Meta 推出 Ray-Ban Meta Audio 並讓 Ray-Ban Meta Gen 3 正式開賣 | 2026-09-23（Meta 官方發布日期；未提供時分） | 2026-09-25 | 首次收錄 | https://about.fb.com/news/2026/09/introducing-ray-ban-meta-audio-glasses-new-styles-plus-muse/<br>https://www.engadget.com/2267213/ray-ban-meta-gen-3-hands-on-better-battery-life/ | 544a76f14411 |
+| Google | Google Photos | Google Photos 推出 Redact 遮蔽筆，並更新 Moods、Wardrobe 與 Remix 模板 | 2026-09-24（Google 官方發布日期；未提供時分） | 2026-09-25 | 首次收錄 | https://blog.google/products-and-platforms/products/photos/google-photos-updates/ | d65cac2d0ba5 |
+| Google | Google Health、Pixel Watch 3／4／5、Health Guardian | Google Health Guardian 開始向 Pixel Watch 推送血壓與胰島素阻抗趨勢 | 2026-09-24（Google 官方發布日期；未提供時分） | 2026-09-25 | 續報 | https://blog.google/products-and-platforms/products/google-health/health-guardian-features-live/<br>https://blog.google/products-and-platforms/products/google-health/pixel-watch-health-guardian/ | d23751fee131 |
 | Xiaomi | Xiaomi 18 Pro、Xiaomi 18 Pro Max | Xiaomi 發布 18 Pro 與 18 Pro Max，加入背面副螢幕並確認國際版本 | 2026-09-24 01:19（Asia/Taipei；El Español 報導換算） | 2026-09-24 | 首次收錄 | https://www.cool3c.com/<br>https://www.elespanol.com/elandroidelibre/20260923/xiaomi-confirma-llegada-moviles-pro-espana-bestia-pantallas-ultimo-chip-qualcomm/1003744394538_0.amp.html<br>https://new.c.mi.com/global/post/2137775 | 85d9c445bee7 |
 | Razer | Mako、Mako X | Razer 重啟 Mako 喇叭品牌，推出 2.1 聲道 Mako 與精簡版 Mako X | 2026-09-22（Razer 官方發布日期；未提供時分） | 2026-09-24 | 首次收錄 | https://www.razer.com/newsroom/product-news/mako-line<br>https://www.razer.com/eu-en/gaming-speakers/razer-mako-x<br>https://www.cool3c.com/ | 790a3ff3c736 |
 | Microsoft | Surface Pro 12、Surface Laptop 13 | Microsoft 推出搭載 Snapdragon X2 Plus 的 Surface Pro 12 與 Surface Laptop 13 | 2026-09-24 05:30（Asia/Taipei；依 Engadget 頁面標示 9/23 16:30 EST 字面換算） | 2026-09-24 | 首次收錄 | https://www.microsoft.com/en-us/surface/devices/surface-pro?icid=mscom_marcom_FH3a_SurfacePro12In_Fall27<br>https://www.engadget.com/2266680/microsofts-new-surface-pro-12-and-surface-laptop-13-feature-snapdragon-x2-plus-chips/ | fa04512e5098 |
@@ -39,6 +44,3 @@ tags: [daily-news, tech-products, deduplication, recent]
 | Google | Gemini Notebook Expert Intelligence | Google 在 Gemini Notebook 推出 Expert Intelligence，導入逾十萬本授權書籍 | 2026-09-17（Google Workspace 官方更新日期；未提供時分） | 2026-09-19 | 首次收錄 | https://workspaceupdates.googleblog.com/2026/09/introducing-expert-intelligence-in-Gemini-Notebook.html | a28d9f60535b |
 | GitLab | GitLab 19.4／Duo Agent Platform | GitLab 19.4 推出受治理的 MCP 工具與 Duo CLI 目標執行功能 | 2026-09-17（GitLab 官方發布日期；未提供時分） | 2026-09-19 | 首次收錄 | https://about.gitlab.com/press/releases/2026-09-17-gitlab-19-4-brings-new-agentic-automation-at-a-lower-cost/<br>https://about.gitlab.com/whats-new/19-4/ | bf6f7a9872d9 |
 | Anthropic | Life Sciences Verification Program（LSVP） | Anthropic 開放 Life Sciences Verification Program 申請，以分級審核放寬生物研究限制 | 2026-09-17（Anthropic 官方公告日期；未提供時分） | 2026-09-19 | 續報 | https://www.anthropic.com/news/life-sciences-verification-program | efc0f3ba35c8 |
-| UN system／Google | UN System Data Commons | 聯合國與 Google 推出 UN System Data Commons，整合全球統計與 AI 查詢 | 2026-09-17（Google 官方產品公告日期；未提供時分） | 2026-09-18 | 首次收錄 | https://blog.google/innovation-and-ai/technology/ai/google-un-data-commons-platform/ | 99750797433b |
-| OpenAI | ChatGPT for Word | OpenAI 正式推出 ChatGPT for Word，免費方案也可使用 | 2026-09-17（官方 release notes 日期；未提供時分） | 2026-09-18 | 首次收錄 | https://help.openai.com/en/articles/6825453-chatgpt-release-notes | fda9d419d69c |
-| Google Labs | CC 家庭／群組代理 | Google Labs 擴大 CC 為家庭共用 AI 代理，最多六人協作 | 2026-09-17（Google 官方公告日期；未提供時分） | 2026-09-18 | 首次收錄 | https://blog.google/innovation-and-ai/models-and-research/google-labs/cc-expanding-to-groups/ | f037909720b6 |

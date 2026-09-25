@@ -1,7 +1,7 @@
 ---
 title: "科技產品新聞歷史比對表"
 type: product-news-ledger
-updated: 2026-09-24
+updated: 2026-09-25
 status: generated
 tags: [daily-news, tech-products, deduplication, provenance]
 ---
@@ -10,14 +10,19 @@ tags: [daily-news, tech-products, deduplication, provenance]
 
 此表由 `scripts/build_product_news_ledger.py` 掃描所有歷史日報的科技／AI 區段自動產生。**模型不得整份讀取本檔**；每個候選只用公司名、產品名、更新動作與比對鍵執行 `rg`，並只讀命中列。
 
-- 掃描日報：99 份。
-- 擷取科技／AI 項目：603 則。
+- 掃描日報：100 份。
+- 擷取科技／AI 項目：608 則。
 - 更新方式：`python3 scripts/build_product_news_ledger.py`
 - 查詢方式：使用窄化組合 pattern，例如 `rg -n -i '公司.*產品|產品.*公司|比對鍵' wiki/daily/product-news-ledger.md`，不要用公司名單獨匹配大量列。
 - 無命中時：完整讀取 `wiki/daily/product-news-recent-7d.md` 做最後確認，不讀取本檔全文。
 
 | 公司 | 產品 | 更新內容 | 發佈時間 | 收錄日期 | 狀態 | 來源網址 | 比對鍵 |
 |---|---|---|---|---|---|---|---|
+| Razer | Kiyo V2 Pro | Razer 發布 Kiyo V2 Pro，以 Sony STARVIS 2 提供 4K 60 FPS 與 AI 自動構圖 | 2026-09-24（Razer 官方發布日期；未提供時分） | 2026-09-25 | 首次收錄 | https://www.razer.com/newsroom/product-reviews/kiyo-v2-pro<br>https://www.razer.com/streaming-cameras/razer-kiyo-v2-pro/RZ19-05360100-R3U1 | bc9d260bd629 |
+| Meta | Meta VR Glasses | Meta 發布約 100 公克的 VR Glasses，採外接運算 puck 並預定 2027 年春季上市 | 2026-09-24（Meta 官方更新日期；未提供時分） | 2026-09-25 | 首次收錄 | https://about.fb.com/news/2026/09/introducing-meta-vr-glasses-3d-movies-immersive-live-sports-100-grams/<br>https://www.engadget.com/2267230/everything-announced-at-meta-connect-2026/ | b1766020825e |
+| Meta、EssilorLuxottica | Ray-Ban Meta Audio、Ray-Ban Meta Gen 3 | Meta 推出 Ray-Ban Meta Audio 並讓 Ray-Ban Meta Gen 3 正式開賣 | 2026-09-23（Meta 官方發布日期；未提供時分） | 2026-09-25 | 首次收錄 | https://about.fb.com/news/2026/09/introducing-ray-ban-meta-audio-glasses-new-styles-plus-muse/<br>https://www.engadget.com/2267213/ray-ban-meta-gen-3-hands-on-better-battery-life/ | 544a76f14411 |
+| Google | Google Photos | Google Photos 推出 Redact 遮蔽筆，並更新 Moods、Wardrobe 與 Remix 模板 | 2026-09-24（Google 官方發布日期；未提供時分） | 2026-09-25 | 首次收錄 | https://blog.google/products-and-platforms/products/photos/google-photos-updates/ | d65cac2d0ba5 |
+| Google | Google Health、Pixel Watch 3／4／5、Health Guardian | Google Health Guardian 開始向 Pixel Watch 推送血壓與胰島素阻抗趨勢 | 2026-09-24（Google 官方發布日期；未提供時分） | 2026-09-25 | 續報 | https://blog.google/products-and-platforms/products/google-health/health-guardian-features-live/<br>https://blog.google/products-and-platforms/products/google-health/pixel-watch-health-guardian/ | d23751fee131 |
 | Xiaomi | Xiaomi 18 Pro、Xiaomi 18 Pro Max | Xiaomi 發布 18 Pro 與 18 Pro Max，加入背面副螢幕並確認國際版本 | 2026-09-24 01:19（Asia/Taipei；El Español 報導換算） | 2026-09-24 | 首次收錄 | https://www.cool3c.com/<br>https://www.elespanol.com/elandroidelibre/20260923/xiaomi-confirma-llegada-moviles-pro-espana-bestia-pantallas-ultimo-chip-qualcomm/1003744394538_0.amp.html<br>https://new.c.mi.com/global/post/2137775 | 85d9c445bee7 |
 | Razer | Mako、Mako X | Razer 重啟 Mako 喇叭品牌，推出 2.1 聲道 Mako 與精簡版 Mako X | 2026-09-22（Razer 官方發布日期；未提供時分） | 2026-09-24 | 首次收錄 | https://www.razer.com/newsroom/product-news/mako-line<br>https://www.razer.com/eu-en/gaming-speakers/razer-mako-x<br>https://www.cool3c.com/ | 790a3ff3c736 |
 | Microsoft | Surface Pro 12、Surface Laptop 13 | Microsoft 推出搭載 Snapdragon X2 Plus 的 Surface Pro 12 與 Surface Laptop 13 | 2026-09-24 05:30（Asia/Taipei；依 Engadget 頁面標示 9/23 16:30 EST 字面換算） | 2026-09-24 | 首次收錄 | https://www.microsoft.com/en-us/surface/devices/surface-pro?icid=mscom_marcom_FH3a_SurfacePro12In_Fall27<br>https://www.engadget.com/2266680/microsofts-new-surface-pro-12-and-surface-laptop-13-feature-snapdragon-x2-plus-chips/ | fa04512e5098 |
