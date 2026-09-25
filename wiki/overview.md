@@ -2,7 +2,7 @@
 title: "Overview"
 type: overview
 created: 2026-05-24
-updated: 2026-09-24
+updated: 2026-09-25
 status: seed
 tags: [overview]
 sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
@@ -19,6 +19,12 @@ sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
 - 抽出持續出現的人物、組織、事件、政策、技術與市場概念。
 - 維護跨來源的矛盾、時間線、趨勢與待查問題。
 - 將重要查詢結果回寫成可累積的 wiki 頁面。
+
+## 2026-09-25 Daily News Synthesis
+
+- 大國與中東外交同時設下短期時鐘：Trump–Xi 白宮會談先把美中貿易休戰延至 2027-01-10；Iran 則要求美國在四至五天內一次完成七項條件。前者不是全面協議，後者也不是已獲接受的 Hormuz 安排。
+- 戰事與制度都出現可驗證的新節點：Ethiopia 北部衝突擴至 Afar、Amhara；美國參議院再次否決 Iran war powers 案；California 最高法院與聯邦法官分別處理選票保管與 White House press access。雙方戰果、臨時命令與選舉承諾均保留不確定性。
+- 產品主線是輕量頭戴硬體、健康趨勢與創作者工具實際上線。Meta VR／Ray-Ban 新眼鏡、Google Health Guardian rollout、Razer Kiyo V2 Pro 與 Google Photos Redact 都有明確發布節點，但上市、醫療限制、相容性及地區供應仍需後續驗證。詳見 [本日日報](daily/2026/09/2026-09-25/daily-news-2026-09-25.md)。
 
 ## 2026-09-24 Daily News Synthesis
 

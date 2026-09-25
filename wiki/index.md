@@ -2,7 +2,7 @@
 title: "Knowledge Base Index"
 type: overview
 created: 2026-05-24
-updated: 2026-09-24
+updated: 2026-09-25
 status: seed
 tags: [index]
 sources: []
@@ -21,6 +21,9 @@ sources: []
 - [[2026-04-04-llm-wiki]] - Karpathy 提出的 LLM-maintained personal wiki 模式，是本知識庫的設計來源。
 
 ## Daily News
+
+- [2026-09-25 Daily News](daily/2026/09/2026-09-25/daily-news-2026-09-25.md) - Meta VR／Ray-Ban 新眼鏡、Google Health rollout、Razer Kiyo V2 Pro 與 Google Photos Redact 先列；全球涵蓋 Trump–Xi 會談、Hormuz 期限、Ethiopia 戰事與兩項法院裁決等 10 則。
+- [2026-09-25 Slides](daily/2026/09/2026-09-25/slides-2026-09-25.html) - 手機閱讀版，含官方產品圖、逐篇時間與來源、原頁完整報告及單篇 ChatGPT 後續提問。
 
 - [2026-09-24 Daily News](daily/2026/09/2026-09-24/daily-news-2026-09-24.md) - Surface X2 Plus、Xiaomi 18 Pro、Yeti 2、Pod 6 與 Razer Mako 產品先列；全球涵蓋 Kyiv 空襲、UN AI 安理會簡報、Chagos 暫停與北韓 240mm 火箭炮等 10 則。
 - [2026-09-24 Slides](daily/2026/09/2026-09-24/slides-2026-09-24.html) - 手機閱讀版，含產品優先首頁、逐篇時間與原始來源、原頁完整報告及單篇 ChatGPT 後續提問。

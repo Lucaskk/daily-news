@@ -67,4 +67,8 @@ sources: []
 
 ## 發布紀錄
 
-- 待 pipeline 完成後補記 commit、GitHub Pages 雜湊驗證、LINE watchdog 與強制 `check` 結果。
+- pipeline 內容 commit：`0334df35808814d6dc5282cff9d46b7456557d51`。
+- GitHub Pages 日期頁、`latest-slides.html` 與根入口均通過 HTTP 與完整位元組 SHA-256 比對。
+- 唯一私人 LINE watchdog 於 `2026-09-25T08:13:13+08:00` 回報 `Sent LINE message`，exit code 0；未使用 `scripts/send_line_daily_slides.py`。
+- 公開頁：https://lucaskk.github.io/daily-news/wiki/daily/2026/09/2026-09-25/slides-2026-09-25.html?v=20260925-081224-reader
+- pipeline checkpoint 已進入 `complete`；強制 `check --date 2026-09-25` exit 0。本機 Playwright 套件未安裝，視覺 QA 屬非阻擋項目。
