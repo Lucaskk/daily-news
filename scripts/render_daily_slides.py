@@ -75,7 +75,10 @@ def parse_report(text):
             collecting_facts = False
             followups = line == "## 後續追蹤"
         if followups and line.startswith("- "):
-            report["followups"].append(line[2:])
+            raw = line[2:]
+            item_sources = sources_in(raw)
+            text = re.sub(r"\s*來源：(?:\[[^\]]+\]\(https?://[^\s]+\)\s*)+$", "", raw).strip()
+            report["followups"].append({"text": text, "sources": item_sources})
         if not current:
             continue
         if line == "關鍵事實：":
@@ -201,9 +204,17 @@ def render(report_path, media_path=None):
     toc = "".join(f'<a href="#{s["id"]}" data-story-link="{s["id"]}"><span>{s["rank"]}</span>{escape(s["title"])}</a>' for s in stories)
     note_sources = [{"label": "每日報告", "url": report["url"].replace(f"slides-{date}.html", f"daily-news-{date}.md")},
                     {"label": "來源與時間筆記", "url": report["url"].replace(f"slides-{date}.html", f"source-notes-{date}.md")}]
-    notes = "".join(f'<details class="note"><summary>{escape(title)}{icon("chevron-down")}</summary><div class="note-body"><p>{escape(value)}</p>{source_block(note_sources)}</div></details>'
-                    for title, value in [("研究時間與範圍", f"研究截點：{report['cutoff']}。全球新聞：{report['world_window']}。科技產品：{report['tech_window']}。"),
-                                         *[(f"後續追蹤 {i + 1}", f) for i, f in enumerate(report["followups"])]])
+    research_text = f"研究截點：{report['cutoff']}。全球新聞：{report['world_window']}。科技產品：{report['tech_window']}。"
+    notes = (
+        f'<details class="note"><summary>研究時間與範圍{icon("chevron-down")}</summary>'
+        f'<div class="note-body"><p>{escape(research_text)}</p>{source_block(note_sources)}</div></details>'
+    )
+    for i, item in enumerate(report["followups"]):
+        notes += (
+            f'<details class="note"><summary>後續追蹤 {i + 1}{icon("chevron-down")}</summary>'
+            f'<div class="note-body"><p>{escape(item["text"])}</p>'
+            f'{source_block(item["sources"] or note_sources)}</div></details>'
+        )
     # Everything needed for navigation and context handoff is bundled into this file.
     replacements = {
         "DATE": date, "CUTOFF": escape(report["cutoff"]), "TECH_COUNT": str(len(tech)),
