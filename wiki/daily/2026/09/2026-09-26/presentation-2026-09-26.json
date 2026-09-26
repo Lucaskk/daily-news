@@ -1,0 +1,31 @@
+{
+  "images": {
+    "t1": {
+      "src": "https://www.engadget.com/img/gallery/microsofts-copilot-app-adds-office-natural-coding-and-automation/l-intro-1790274838.jpg",
+      "alt": "Microsoft Copilot Home、Code 與 Autopilot 介面視覺",
+      "caption": "新版 Copilot 將工作入口分為 Home、Code 與 Autopilot",
+      "credit": "Engadget / Microsoft",
+      "source_url": "https://www.engadget.com/2268096/microsofts-copilot-app-adds-office-natural-coding-and-automation/",
+      "original_url": "https://www.engadget.com/img/gallery/microsofts-copilot-app-adds-office-natural-coding-and-automation/l-intro-1790274838.jpg",
+      "fit": "contain"
+    },
+    "t2": {
+      "src": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Slide_16_9_-_37.width-1300.png",
+      "alt": "Gemini 3.8 Live with Live Avatar 官方視覺",
+      "caption": "Gemini 3.8 Live with Live Avatar 在 Gemini Enterprise 上線",
+      "credit": "Google",
+      "source_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-live-with-live-avatar/",
+      "original_url": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Slide_16_9_-_37.width-1300.png",
+      "fit": "contain"
+    },
+    "t3": {
+      "src": "https://cricut.com/blog/wp-content/uploads/2026/09/06_BlogPost-scaled.jpg",
+      "alt": "Cricut StickerPix Print 與 StickerPix Print + Cut 官方產品視覺",
+      "caption": "StickerPix 系列整合昇華列印、護膜與裁切流程",
+      "credit": "Cricut",
+      "source_url": "https://cricut.com/blog/introducing-cricut-stickerpix/",
+      "original_url": "https://cricut.com/blog/wp-content/uploads/2026/09/06_BlogPost-scaled.jpg",
+      "fit": "contain"
+    }
+  }
+}
