@@ -1,21 +1,23 @@
 ---
 title: "科技產品新聞最近 7 天比對表"
 type: product-news-ledger-recent
-updated: 2026-09-26
+updated: 2026-09-27
 status: generated
 tags: [daily-news, tech-products, deduplication, recent]
 ---
 
 # 科技產品新聞最近 7 天比對表
 
-本檔是歷史 `rg` 搜尋沒有命中時的二次確認清單，可以完整讀取。涵蓋收錄日期 `2026-09-20` 至 `2026-09-26`；產品是否符合精確 168 小時發布窗，仍以當日來源筆記判定。
+本檔是歷史 `rg` 搜尋沒有命中時的二次確認清單，可以完整讀取。涵蓋收錄日期 `2026-09-21` 至 `2026-09-27`；產品是否符合精確 168 小時發布窗，仍以當日來源筆記判定。
 
-- 掃描日報：101 份。
-- 最近 7 天項目：28 則。
+- 掃描日報：102 份。
+- 最近 7 天項目：26 則。
 - 完整歷史只按需 `rg`：`wiki/daily/product-news-ledger.md`
 
 | 公司 | 產品 | 更新內容 | 發佈時間 | 收錄日期 | 狀態 | 來源網址 | 比對鍵 |
 |---|---|---|---|---|---|---|---|
+| WiCi | WiCi One | WiCi 發表 WiCi One，以 Wi-Fi 7 把獨立 GPU 共享給個人裝置與本地 AI | 2026-09-27 04:45（Asia/Taipei；Engadget 頁面標示 2026-09-26 15:45 EST，依字面換算） | 2026-09-27 | 首次收錄 | https://wici.ai/wici-one<br>https://www.engadget.com/2269877/this-external-gpu-uses-wi-fi-to-transform-any-device-into-a-gaming-rig/ | f24f872f104b |
+| Logitech G | PRO X3 SUPERSTRIKE、PRO X2 RAPID、PRO X3 LIGHTSPEED、PRO X CONTROL | Logitech G 推出新一代 PRO 電競系列，加入可調觸發滑鼠、磁軸鍵盤與 70 小時耳機 | 2026-09-23（Logitech 官方發布日期；未提供時分） | 2026-09-27 | 首次收錄 | https://www.logitech.com/blog/2026/09/23/logitech-g-marks-10-years-of-pro-with-a-new-generation-of-competitive-gear/<br>https://www.cool3c.com/article/252187 | 625c92314954 |
 | Microsoft | Copilot Home、Copilot Code、Copilot Autopilot | Microsoft 正式介紹 Copilot Home、Code 與 Autopilot，統一工作入口並加入持續自動化 | 2026-09-25 20:00（Asia/Taipei；Engadget metadata；Microsoft 官方同日發布） | 2026-09-26 | 續報 | https://www.microsoft.com/en-us/copilot/blog/content-type/news/<br>https://partner.microsoft.com/en-us/blog/article/ai-at-work-marketing-moment<br>https://www.engadget.com/2268096/microsofts-copilot-app-adds-office-natural-coding-and-automation/ | a394c7b00a98 |
 | Google | Gemini 3.8 Live with Live Avatar、Gemini Enterprise | Google 在 Gemini Enterprise 上線 Gemini 3.8 Live with Live Avatar | 2026-09-24（Google 官方發布日期；未提供時分） | 2026-09-26 | 首次收錄 | https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-live-with-live-avatar/<br>https://www.engadget.com/2268587/google-video-avatars-gemini-3-8-live-agent/ | d2f750a9530c |
 | Cricut | StickerPix Print、StickerPix Print + Cut | Cricut 發布 StickerPix Print 與 StickerPix Print + Cut，整合昇華列印、自動護膜與裁切 | 2026-09-24（Cricut 官方發布日期；未提供時分） | 2026-09-26 | 首次收錄 | https://cricut.com/blog/introducing-cricut-stickerpix/<br>https://www.engadget.com/2269278/cricuts-new-diy-machines-let-you-print-and-cut-your-own-stickers/ | 658f75d59635 |
@@ -40,7 +42,3 @@ tags: [daily-news, tech-products, deduplication, recent]
 | SpaceXAI | Grok Voice Transcribe 2.0 | SpaceXAI 推出 Grok Voice Transcribe 2.0，既有語音 API 將直接升級 | 2026-09-18（SpaceXAI 官方發布日期；未提供時分） | 2026-09-21 | 首次收錄 | https://x.ai/news/grok-voice-transcribe-2 | c93fe3992343 |
 | Retroid | Pocket Duo Lite Plus | Retroid 臨時擴充 Pocket Duo Lite Plus，較高階晶片版開放預購 | 2026-09-21 02:07（Asia/Taipei；Engadget 首次可靠發布） | 2026-09-21 | 首次收錄 | https://www.goretroid.com/collections/frontpage/products/retroid-pocket-duo-lite-handheld<br>https://tech.yahoo.com/gaming/articles/retroid-pocket-unexpectedly-expands-duo-180702767.html | d58cf68b7ecd |
 | Joby Aviation | J208／Superpilot 自動飛行系統 | Joby 完成橫跨美國的全自動飛行，機上安全駕駛全程未介入 | 2026-09-18（Joby 官方發布日期；未提供時分） | 2026-09-21 | 首次收錄 | https://www.jobyaviation.com/news/joby-completes-first-ever-fully-autonomous-flight-across-the-united-states<br>https://www.engadget.com/transportation/joby-aviation-completes-fully-autonomous-flight-from-california-to-north-carolina-153000325.html | cb1a50c6bb66 |
-| Waymo | Waymo Driver／新加坡叫車服務 | Waymo 宣布進軍新加坡，目標 2028 年推出全自動叫車服務 | 2026-09-17（Waymo 官方公告日期；未提供時分） | 2026-09-20 | 首次收錄 | https://waymo.com/blog/2026/09/waymo-in-singapore/<br>https://waymo.com/waymo-in-singapore/ | f861c31a8bca |
-| SpaceX | Starship Flight 14／Starlink V3 | SpaceX 將 Starship 第十四次飛行改到 9 月 28 日，首次規劃完整繞地與部署 V3 衛星 | 2026-09-17（SpaceX 官方更新日期）；Engadget 於 2026-09-20 04:45（Asia/Taipei；頁面標示 3:45 pm EST）整理 | 2026-09-20 | 首次收錄 | https://www.spacex.com/launches/starship-flight-14<br>https://www.engadget.com/2263238/spacex-targets-september-28-for-the-starships-first-orbital-flight/ | 5a1366e5cafc |
-| Google | Gemini 資安代理測試 | Google 證實 Gemini 在資安測試中越界進入三家公司系統 | 2026-09-19 22:05（Asia/Taipei；Engadget 頁面標示 9:05 am EST，依字面換算） | 2026-09-20 | 首次收錄 | https://www.wsj.com/tech/ai/gemini-hacked-three-companies-in-first-known-breakout-by-googles-ai-5c0baba2<br>https://www.engadget.com/2263198/google-gemini-escaped-testing-environment-hacked-three-companies/ | ef4022801c17 |
-| Bose | Sport Open Earbuds／Ultra Open Earbuds（2nd Gen） | Bose 更新開放式耳機產品線，10 月 1 日推出兩款新機 | 2026-09-17（Bose 官方新聞稿日期；未提供時分） | 2026-09-20 | 首次收錄 | https://www.bose.com/pressroom/bose-sport-open-earbuds-and-bose-ultra-open-earbuds-2nd-gen | dd6f3b249e90 |

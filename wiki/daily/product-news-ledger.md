@@ -1,7 +1,7 @@
 ---
 title: "科技產品新聞歷史比對表"
 type: product-news-ledger
-updated: 2026-09-26
+updated: 2026-09-27
 status: generated
 tags: [daily-news, tech-products, deduplication, provenance]
 ---
@@ -10,14 +10,16 @@ tags: [daily-news, tech-products, deduplication, provenance]
 
 此表由 `scripts/build_product_news_ledger.py` 掃描所有歷史日報的科技／AI 區段自動產生。**模型不得整份讀取本檔**；每個候選只用公司名、產品名、更新動作與比對鍵執行 `rg`，並只讀命中列。
 
-- 掃描日報：101 份。
-- 擷取科技／AI 項目：611 則。
+- 掃描日報：102 份。
+- 擷取科技／AI 項目：613 則。
 - 更新方式：`python3 scripts/build_product_news_ledger.py`
 - 查詢方式：使用窄化組合 pattern，例如 `rg -n -i '公司.*產品|產品.*公司|比對鍵' wiki/daily/product-news-ledger.md`，不要用公司名單獨匹配大量列。
 - 無命中時：完整讀取 `wiki/daily/product-news-recent-7d.md` 做最後確認，不讀取本檔全文。
 
 | 公司 | 產品 | 更新內容 | 發佈時間 | 收錄日期 | 狀態 | 來源網址 | 比對鍵 |
 |---|---|---|---|---|---|---|---|
+| WiCi | WiCi One | WiCi 發表 WiCi One，以 Wi-Fi 7 把獨立 GPU 共享給個人裝置與本地 AI | 2026-09-27 04:45（Asia/Taipei；Engadget 頁面標示 2026-09-26 15:45 EST，依字面換算） | 2026-09-27 | 首次收錄 | https://wici.ai/wici-one<br>https://www.engadget.com/2269877/this-external-gpu-uses-wi-fi-to-transform-any-device-into-a-gaming-rig/ | f24f872f104b |
+| Logitech G | PRO X3 SUPERSTRIKE、PRO X2 RAPID、PRO X3 LIGHTSPEED、PRO X CONTROL | Logitech G 推出新一代 PRO 電競系列，加入可調觸發滑鼠、磁軸鍵盤與 70 小時耳機 | 2026-09-23（Logitech 官方發布日期；未提供時分） | 2026-09-27 | 首次收錄 | https://www.logitech.com/blog/2026/09/23/logitech-g-marks-10-years-of-pro-with-a-new-generation-of-competitive-gear/<br>https://www.cool3c.com/article/252187 | 625c92314954 |
 | Microsoft | Copilot Home、Copilot Code、Copilot Autopilot | Microsoft 正式介紹 Copilot Home、Code 與 Autopilot，統一工作入口並加入持續自動化 | 2026-09-25 20:00（Asia/Taipei；Engadget metadata；Microsoft 官方同日發布） | 2026-09-26 | 續報 | https://www.microsoft.com/en-us/copilot/blog/content-type/news/<br>https://partner.microsoft.com/en-us/blog/article/ai-at-work-marketing-moment<br>https://www.engadget.com/2268096/microsofts-copilot-app-adds-office-natural-coding-and-automation/ | a394c7b00a98 |
 | Google | Gemini 3.8 Live with Live Avatar、Gemini Enterprise | Google 在 Gemini Enterprise 上線 Gemini 3.8 Live with Live Avatar | 2026-09-24（Google 官方發布日期；未提供時分） | 2026-09-26 | 首次收錄 | https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-live-with-live-avatar/<br>https://www.engadget.com/2268587/google-video-avatars-gemini-3-8-live-agent/ | d2f750a9530c |
 | Cricut | StickerPix Print、StickerPix Print + Cut | Cricut 發布 StickerPix Print 與 StickerPix Print + Cut，整合昇華列印、自動護膜與裁切 | 2026-09-24（Cricut 官方發布日期；未提供時分） | 2026-09-26 | 首次收錄 | https://cricut.com/blog/introducing-cricut-stickerpix/<br>https://www.engadget.com/2269278/cricuts-new-diy-machines-let-you-print-and-cut-your-own-stickers/ | 658f75d59635 |

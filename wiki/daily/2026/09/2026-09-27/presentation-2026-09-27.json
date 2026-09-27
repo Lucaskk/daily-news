@@ -1,0 +1,22 @@
+{
+  "images": {
+    "t1": {
+      "src": "https://wici.ai/images/product/hero-device-ledge.webp",
+      "alt": "WiCi One 無線 GPU 運算裝置",
+      "caption": "WiCi One 產品外觀。",
+      "credit": "WiCi 官方產品頁",
+      "source_url": "https://wici.ai/wici-one",
+      "original_url": "https://wici.ai/images/product/hero-device-ledge.webp",
+      "fit": "contain"
+    },
+    "t2": {
+      "src": "https://www.logitech.com/blog/wp-content/uploads/2026/09/Low_Resolution_JPG-PRO-X3-SUPERSTRIKE-KV-Black-PRODUCT-IN-SITU-16x9-en.jpg",
+      "alt": "Logitech G PRO X3 SUPERSTRIKE 電競滑鼠",
+      "caption": "PRO X3 SUPERSTRIKE 為新一代 PRO 系列產品之一。",
+      "credit": "Logitech 官方公告",
+      "source_url": "https://www.logitech.com/blog/2026/09/23/logitech-g-marks-10-years-of-pro-with-a-new-generation-of-competitive-gear/",
+      "original_url": "https://www.logitech.com/blog/wp-content/uploads/2026/09/Low_Resolution_JPG-PRO-X3-SUPERSTRIKE-KV-Black-PRODUCT-IN-SITU-16x9-en.jpg",
+      "fit": "contain"
+    }
+  }
+}
