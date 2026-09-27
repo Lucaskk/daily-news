@@ -148,6 +148,49 @@
       openDialog(askDialog, button);
     });
   });
+  document.querySelectorAll('[data-share]').forEach(button => {
+    button.addEventListener('click', async () => {
+      const story = byId.get(button.dataset.share);
+      if (!story) return;
+      const shareData = {
+        title: story.title,
+        text: `每日新聞｜${story.title}`,
+        url: story.url,
+      };
+      if (navigator.share) {
+        try {
+          await navigator.share(shareData);
+          return;
+        } catch (error) {
+          if (error && error.name === 'AbortError') return;
+        }
+      }
+      const label = button.querySelector('span');
+      try {
+        await navigator.clipboard.writeText(story.url);
+        label.textContent = '已複製';
+        button.setAttribute('aria-label', '新聞連結已複製');
+      } catch (_) {
+        const helper = document.createElement('textarea');
+        helper.value = story.url;
+        helper.setAttribute('readonly', '');
+        helper.style.position = 'fixed';
+        helper.style.opacity = '0';
+        document.body.appendChild(helper);
+        helper.select();
+        let copied = false;
+        try { copied = document.execCommand('copy'); } catch (_) { /* Keep the normal label when copying is blocked. */ }
+        helper.remove();
+        if (!copied) return;
+        label.textContent = '已複製';
+        button.setAttribute('aria-label', '新聞連結已複製');
+      }
+      setTimeout(() => {
+        label.textContent = '分享';
+        button.setAttribute('aria-label', '分享這則新聞');
+      }, 1800);
+    });
+  });
   question.addEventListener('input', () => { status.textContent = ''; updateHandoff(); });
   chatLink.addEventListener('click', event => {
     if (chatLink.getAttribute('aria-disabled') === 'true') {

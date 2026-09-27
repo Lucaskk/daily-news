@@ -54,11 +54,12 @@ h2 { font-size: 32px; line-height: 1.45; font-weight: 650; margin: 0 0 18px; }
 .key-facts li { padding-left: 6px; margin-bottom: 14px; }
 .key-facts li::marker { color: var(--muted); }
 .article-actions { position: relative; }
-.ask-action, .full-report > summary { display: flex; align-items: center; justify-content: center; gap: 9px; min-height: 50px; padding: 10px 14px; font-size: 16px; line-height: 1.4; border: 1px solid var(--line); border-radius: 8px; }
-.ask-action { position: absolute; top: 0; left: 0; width: calc(50% - 6px); }
+.ask-action, .share-action, .full-report > summary { display: flex; align-items: center; justify-content: center; gap: 9px; min-height: 50px; padding: 10px 14px; font-size: 16px; line-height: 1.4; border: 1px solid var(--line); border-radius: 8px; }
+.ask-action { position: absolute; top: 0; left: 0; width: calc(33.333% - 8px); }
+.share-action { position: absolute; top: 0; right: 0; width: calc(33.333% - 8px); }
 summary { list-style: none; }
 summary::-webkit-details-marker { display: none; }
-.full-report > summary { width: calc(50% - 6px); margin-left: auto; }
+.full-report > summary { width: calc(33.333% - 8px); margin: 0 auto; }
 .full-report > summary svg:last-child { width: 16px; height: 16px; flex-basis: 16px; }
 .full-report[open] > summary svg:last-child { transform: rotate(180deg); }
 .when-open, .full-report[open] .when-closed { display: none; }
@@ -127,7 +128,7 @@ textarea::placeholder { color: var(--muted); }
   .lead { font-size: 18px; line-height: 1.9; margin-top: 22px; }
   .key-facts { padding-left: 21px; }
   .key-facts li { padding-left: 4px; margin-bottom: 16px; }
-  .ask-action, .full-report > summary { padding: 10px 6px; font-size: 15px; gap: 6px; min-height: 50px; }
+  .ask-action, .share-action, .full-report > summary { padding: 10px 5px; font-size: 14px; gap: 5px; min-height: 50px; }
   .full-report > summary svg:last-child { display: none; }
   .report-body { font-size: 16px; }
   dialog { padding: 20px; }
@@ -136,13 +137,13 @@ textarea::placeholder { color: var(--muted); }
   .header-tools > time { display: none; }
   .sections { gap: 20px; }
   h2 { font-size: 24px; }
-  .ask-action, .full-report > summary { font-size: 14px; gap: 5px; }
-  .ask-action svg, .full-report > summary svg { width: 18px; height: 18px; flex-basis: 18px; }
+  .ask-action, .share-action, .full-report > summary { font-size: 13px; gap: 4px; }
+  .ask-action svg, .share-action svg, .full-report > summary svg { width: 17px; height: 17px; flex-basis: 17px; }
 }
 @media print {
   body { display: block; height: auto; overflow: visible; }
   .masthead { position: static; }
-  .header-tools button, .reader-nav, .ask-action, dialog { display: none; }
+  .header-tools button, .reader-nav, .ask-action, .share-action, dialog { display: none; }
   main { max-width: none; padding-bottom: 0; overflow: visible; }
   body { color: #111; background: white; }
   .story { break-inside: avoid; }

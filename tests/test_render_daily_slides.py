@@ -63,6 +63,7 @@ class ReaderTests(unittest.TestCase):
             self.assertIn('<details class="full-report"', html)
             self.assertIn('完整報告', html)
             self.assertIn(f'data-ask="{story["id"]}"', html)
+            self.assertIn(f'data-share="{story["id"]}"', html)
             self.assertTrue(html.index('class="sources"') > html.index("尚待確認"))
             for source in story["sources"]:
                 self.assertIn(reader.escape(source["url"]), html)
@@ -75,6 +76,7 @@ class ReaderTests(unittest.TestCase):
             html = output.read_text()
             self.assertEqual(html.count('class="story"'), 13)
             self.assertEqual(html.count('class="full-report"'), 13)
+            self.assertEqual(html.count('class="share-action"'), 13)
             self.assertNotIn("@@", html)
             self.assertNotIn('<script src=', html)
             self.assertNotIn('<link rel="stylesheet"', html)

@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <meta name="color-scheme" content="dark light">
   <meta name="referrer" content="no-referrer">
-  <meta name="reader-version" content="20260927-145401-reader">
+  <meta name="reader-version" content="20260927-152101-reader">
   <title>每日全球與科技 AI 新聞 2026-09-27</title>
   <!-- Product/press images retain their owners' rights; each figure links to its source.
        Other photographs are identified as thematic, not event evidence.
@@ -70,11 +70,12 @@ h2 { font-size: 32px; line-height: 1.45; font-weight: 650; margin: 0 0 18px; }
 .key-facts li { padding-left: 6px; margin-bottom: 14px; }
 .key-facts li::marker { color: var(--muted); }
 .article-actions { position: relative; }
-.ask-action, .full-report > summary { display: flex; align-items: center; justify-content: center; gap: 9px; min-height: 50px; padding: 10px 14px; font-size: 16px; line-height: 1.4; border: 1px solid var(--line); border-radius: 8px; }
-.ask-action { position: absolute; top: 0; left: 0; width: calc(50% - 6px); }
+.ask-action, .share-action, .full-report > summary { display: flex; align-items: center; justify-content: center; gap: 9px; min-height: 50px; padding: 10px 14px; font-size: 16px; line-height: 1.4; border: 1px solid var(--line); border-radius: 8px; }
+.ask-action { position: absolute; top: 0; left: 0; width: calc(33.333% - 8px); }
+.share-action { position: absolute; top: 0; right: 0; width: calc(33.333% - 8px); }
 summary { list-style: none; }
 summary::-webkit-details-marker { display: none; }
-.full-report > summary { width: calc(50% - 6px); margin-left: auto; }
+.full-report > summary { width: calc(33.333% - 8px); margin: 0 auto; }
 .full-report > summary svg:last-child { width: 16px; height: 16px; flex-basis: 16px; }
 .full-report[open] > summary svg:last-child { transform: rotate(180deg); }
 .when-open, .full-report[open] .when-closed { display: none; }
@@ -143,7 +144,7 @@ textarea::placeholder { color: var(--muted); }
   .lead { font-size: 18px; line-height: 1.9; margin-top: 22px; }
   .key-facts { padding-left: 21px; }
   .key-facts li { padding-left: 4px; margin-bottom: 16px; }
-  .ask-action, .full-report > summary { padding: 10px 6px; font-size: 15px; gap: 6px; min-height: 50px; }
+  .ask-action, .share-action, .full-report > summary { padding: 10px 5px; font-size: 14px; gap: 5px; min-height: 50px; }
   .full-report > summary svg:last-child { display: none; }
   .report-body { font-size: 16px; }
   dialog { padding: 20px; }
@@ -152,13 +153,13 @@ textarea::placeholder { color: var(--muted); }
   .header-tools > time { display: none; }
   .sections { gap: 20px; }
   h2 { font-size: 24px; }
-  .ask-action, .full-report > summary { font-size: 14px; gap: 5px; }
-  .ask-action svg, .full-report > summary svg { width: 18px; height: 18px; flex-basis: 18px; }
+  .ask-action, .share-action, .full-report > summary { font-size: 13px; gap: 4px; }
+  .ask-action svg, .share-action svg, .full-report > summary svg { width: 17px; height: 17px; flex-basis: 17px; }
 }
 @media print {
   body { display: block; height: auto; overflow: visible; }
   .masthead { position: static; }
-  .header-tools button, .reader-nav, .ask-action, dialog { display: none; }
+  .header-tools button, .reader-nav, .ask-action, .share-action, dialog { display: none; }
   main { max-width: none; padding-bottom: 0; overflow: visible; }
   body { color: #111; background: white; }
   .story { break-inside: avoid; }
@@ -257,6 +258,7 @@ textarea::placeholder { color: var(--muted); }
 >
   <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" />
 </svg><span>詢問後續問題</span></button>
+        <button class="share-action" type="button" data-share="t1" aria-label="分享這則新聞"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-share-2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" x2="15.42" y1="13.51" y2="17.49"/><line x1="15.41" x2="8.59" y1="6.51" y2="10.49"/></svg><span>分享</span></button>
         <details class="full-report" id="report-t1">
           <summary aria-controls="full-t1"><svg aria-hidden="true" focusable="false"
   class="lucide lucide-file-text"
@@ -315,6 +317,7 @@ textarea::placeholder { color: var(--muted); }
 >
   <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" />
 </svg><span>詢問後續問題</span></button>
+        <button class="share-action" type="button" data-share="t2" aria-label="分享這則新聞"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-share-2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" x2="15.42" y1="13.51" y2="17.49"/><line x1="15.41" x2="8.59" y1="6.51" y2="10.49"/></svg><span>分享</span></button>
         <details class="full-report" id="report-t2">
           <summary aria-controls="full-t2"><svg aria-hidden="true" focusable="false"
   class="lucide lucide-file-text"
@@ -373,6 +376,7 @@ textarea::placeholder { color: var(--muted); }
 >
   <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" />
 </svg><span>詢問後續問題</span></button>
+        <button class="share-action" type="button" data-share="1" aria-label="分享這則新聞"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-share-2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" x2="15.42" y1="13.51" y2="17.49"/><line x1="15.41" x2="8.59" y1="6.51" y2="10.49"/></svg><span>分享</span></button>
         <details class="full-report" id="report-1">
           <summary aria-controls="full-1"><svg aria-hidden="true" focusable="false"
   class="lucide lucide-file-text"
@@ -431,6 +435,7 @@ textarea::placeholder { color: var(--muted); }
 >
   <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" />
 </svg><span>詢問後續問題</span></button>
+        <button class="share-action" type="button" data-share="2" aria-label="分享這則新聞"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-share-2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" x2="15.42" y1="13.51" y2="17.49"/><line x1="15.41" x2="8.59" y1="6.51" y2="10.49"/></svg><span>分享</span></button>
         <details class="full-report" id="report-2">
           <summary aria-controls="full-2"><svg aria-hidden="true" focusable="false"
   class="lucide lucide-file-text"
@@ -489,6 +494,7 @@ textarea::placeholder { color: var(--muted); }
 >
   <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" />
 </svg><span>詢問後續問題</span></button>
+        <button class="share-action" type="button" data-share="3" aria-label="分享這則新聞"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-share-2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" x2="15.42" y1="13.51" y2="17.49"/><line x1="15.41" x2="8.59" y1="6.51" y2="10.49"/></svg><span>分享</span></button>
         <details class="full-report" id="report-3">
           <summary aria-controls="full-3"><svg aria-hidden="true" focusable="false"
   class="lucide lucide-file-text"
@@ -547,6 +553,7 @@ textarea::placeholder { color: var(--muted); }
 >
   <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" />
 </svg><span>詢問後續問題</span></button>
+        <button class="share-action" type="button" data-share="4" aria-label="分享這則新聞"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-share-2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" x2="15.42" y1="13.51" y2="17.49"/><line x1="15.41" x2="8.59" y1="6.51" y2="10.49"/></svg><span>分享</span></button>
         <details class="full-report" id="report-4">
           <summary aria-controls="full-4"><svg aria-hidden="true" focusable="false"
   class="lucide lucide-file-text"
@@ -605,6 +612,7 @@ textarea::placeholder { color: var(--muted); }
 >
   <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" />
 </svg><span>詢問後續問題</span></button>
+        <button class="share-action" type="button" data-share="5" aria-label="分享這則新聞"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-share-2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" x2="15.42" y1="13.51" y2="17.49"/><line x1="15.41" x2="8.59" y1="6.51" y2="10.49"/></svg><span>分享</span></button>
         <details class="full-report" id="report-5">
           <summary aria-controls="full-5"><svg aria-hidden="true" focusable="false"
   class="lucide lucide-file-text"
@@ -663,6 +671,7 @@ textarea::placeholder { color: var(--muted); }
 >
   <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" />
 </svg><span>詢問後續問題</span></button>
+        <button class="share-action" type="button" data-share="6" aria-label="分享這則新聞"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-share-2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" x2="15.42" y1="13.51" y2="17.49"/><line x1="15.41" x2="8.59" y1="6.51" y2="10.49"/></svg><span>分享</span></button>
         <details class="full-report" id="report-6">
           <summary aria-controls="full-6"><svg aria-hidden="true" focusable="false"
   class="lucide lucide-file-text"
@@ -721,6 +730,7 @@ textarea::placeholder { color: var(--muted); }
 >
   <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" />
 </svg><span>詢問後續問題</span></button>
+        <button class="share-action" type="button" data-share="7" aria-label="分享這則新聞"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-share-2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" x2="15.42" y1="13.51" y2="17.49"/><line x1="15.41" x2="8.59" y1="6.51" y2="10.49"/></svg><span>分享</span></button>
         <details class="full-report" id="report-7">
           <summary aria-controls="full-7"><svg aria-hidden="true" focusable="false"
   class="lucide lucide-file-text"
@@ -779,6 +789,7 @@ textarea::placeholder { color: var(--muted); }
 >
   <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" />
 </svg><span>詢問後續問題</span></button>
+        <button class="share-action" type="button" data-share="8" aria-label="分享這則新聞"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-share-2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" x2="15.42" y1="13.51" y2="17.49"/><line x1="15.41" x2="8.59" y1="6.51" y2="10.49"/></svg><span>分享</span></button>
         <details class="full-report" id="report-8">
           <summary aria-controls="full-8"><svg aria-hidden="true" focusable="false"
   class="lucide lucide-file-text"
@@ -837,6 +848,7 @@ textarea::placeholder { color: var(--muted); }
 >
   <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" />
 </svg><span>詢問後續問題</span></button>
+        <button class="share-action" type="button" data-share="9" aria-label="分享這則新聞"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-share-2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" x2="15.42" y1="13.51" y2="17.49"/><line x1="15.41" x2="8.59" y1="6.51" y2="10.49"/></svg><span>分享</span></button>
         <details class="full-report" id="report-9">
           <summary aria-controls="full-9"><svg aria-hidden="true" focusable="false"
   class="lucide lucide-file-text"
@@ -895,6 +907,7 @@ textarea::placeholder { color: var(--muted); }
 >
   <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" />
 </svg><span>詢問後續問題</span></button>
+        <button class="share-action" type="button" data-share="10" aria-label="分享這則新聞"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-share-2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" x2="15.42" y1="13.51" y2="17.49"/><line x1="15.41" x2="8.59" y1="6.51" y2="10.49"/></svg><span>分享</span></button>
         <details class="full-report" id="report-10">
           <summary aria-controls="full-10"><svg aria-hidden="true" focusable="false"
   class="lucide lucide-file-text"
@@ -1265,6 +1278,49 @@ textarea::placeholder { color: var(--muted); }
       askDialog.querySelector('.context-details').open = false;
       updateHandoff();
       openDialog(askDialog, button);
+    });
+  });
+  document.querySelectorAll('[data-share]').forEach(button => {
+    button.addEventListener('click', async () => {
+      const story = byId.get(button.dataset.share);
+      if (!story) return;
+      const shareData = {
+        title: story.title,
+        text: `每日新聞｜${story.title}`,
+        url: story.url,
+      };
+      if (navigator.share) {
+        try {
+          await navigator.share(shareData);
+          return;
+        } catch (error) {
+          if (error && error.name === 'AbortError') return;
+        }
+      }
+      const label = button.querySelector('span');
+      try {
+        await navigator.clipboard.writeText(story.url);
+        label.textContent = '已複製';
+        button.setAttribute('aria-label', '新聞連結已複製');
+      } catch (_) {
+        const helper = document.createElement('textarea');
+        helper.value = story.url;
+        helper.setAttribute('readonly', '');
+        helper.style.position = 'fixed';
+        helper.style.opacity = '0';
+        document.body.appendChild(helper);
+        helper.select();
+        let copied = false;
+        try { copied = document.execCommand('copy'); } catch (_) { /* Keep the normal label when copying is blocked. */ }
+        helper.remove();
+        if (!copied) return;
+        label.textContent = '已複製';
+        button.setAttribute('aria-label', '新聞連結已複製');
+      }
+      setTimeout(() => {
+        label.textContent = '分享';
+        button.setAttribute('aria-label', '分享這則新聞');
+      }, 1800);
     });
   });
   question.addEventListener('input', () => { status.textContent = ''; updateHandoff(); });

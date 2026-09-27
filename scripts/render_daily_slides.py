@@ -173,6 +173,7 @@ def story_html(story, media, folder, first=False):
       <ul class="key-facts">{facts}</ul>
       <div class="article-actions">
         <button class="ask-action" type="button" data-ask="{sid}" aria-haspopup="dialog">{icon('message-circle')}<span>詢問後續問題</span></button>
+        <button class="share-action" type="button" data-share="{sid}" aria-label="分享這則新聞">{icon('share-2')}<span>分享</span></button>
         <details class="full-report" id="report-{sid}">
           <summary aria-controls="full-{sid}">{icon('file-text')}<span class="when-closed">完整報告</span><span class="when-open">收合報告</span>{icon('chevron-down')}</summary>
           <div class="report-body" id="full-{sid}">{full}{source_block(story['sources'])}</div>
