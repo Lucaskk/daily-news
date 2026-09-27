@@ -200,7 +200,7 @@ def render(report_path, media_path=None):
     dated_path = f"wiki/daily/{date[:4]}/{date[5:7]}/{date}/slides-{date}.html"
     report["url"] = f"{PUBLIC_BASE}/{dated_path}"
     for story in stories:
-        story["url"] = f"{report['url']}#{story['id']}"
+        story["url"] = f"{report['url']}?story={story['id']}#{story['id']}"
     articles = "".join(story_html(s, media.get("images", {}).get(s["id"]), folder, i == 0) for i, s in enumerate(stories))
     toc = "".join(f'<a href="#{s["id"]}" data-story-link="{s["id"]}"><span>{s["rank"]}</span>{escape(s["title"])}</a>' for s in stories)
     note_sources = [{"label": "每日報告", "url": report["url"].replace(f"slides-{date}.html", f"daily-news-{date}.md")},

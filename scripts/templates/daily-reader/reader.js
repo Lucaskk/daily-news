@@ -56,7 +56,13 @@
   function jump(id, push = true) {
     const target = sections.find(section => section.id === id);
     if (!target) return;
-    if (push && location.hash !== `#${id}`) history.pushState(null, '', `#${id}`);
+    if (push) {
+      const url = new URL(location.href);
+      if (byId.has(id)) url.searchParams.set('story', id);
+      else url.searchParams.delete('story');
+      url.hash = id;
+      if (url.href !== location.href) history.pushState(null, '', url);
+    }
     target.scrollIntoView({ behavior: 'instant', block: 'start' });
     const title = target.querySelector('h2');
     if (title) { title.tabIndex = -1; title.focus({ preventScroll: true }); }
@@ -80,7 +86,16 @@
     scrollPending = true;
   }, { passive: true });
   window.addEventListener('resize', updatePosition);
-  window.addEventListener('hashchange', () => jump(location.hash.slice(1), false));
+  function locationTarget() {
+    const hashId = location.hash.slice(1);
+    if (sections.some(section => section.id === hashId)) return hashId;
+    const queryId = new URLSearchParams(location.search).get('story');
+    return sections.some(section => section.id === queryId) ? queryId : '';
+  }
+  window.addEventListener('hashchange', () => {
+    const id = locationTarget();
+    if (id) jump(id, false);
+  });
   window.addEventListener('keydown', event => {
     if (askDialog.open || indexDialog.open || event.altKey || event.ctrlKey || event.metaKey || event.shiftKey ||
         event.target.closest('input, textarea, select, button, summary, [contenteditable]')) return;
@@ -234,7 +249,8 @@
     if (img.complete && !img.naturalWidth) failure();
   });
   window.addEventListener('load', () => {
-    if (location.hash) jump(location.hash.slice(1), false);
+    const id = locationTarget();
+    if (id) jump(id, false);
     updatePosition();
   });
   updatePosition();

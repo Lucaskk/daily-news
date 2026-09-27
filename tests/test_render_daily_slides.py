@@ -77,6 +77,8 @@ class ReaderTests(unittest.TestCase):
             self.assertEqual(html.count('class="story"'), 13)
             self.assertEqual(html.count('class="full-report"'), 13)
             self.assertEqual(html.count('class="share-action"'), 13)
+            self.assertIn('?story=t1#t1', html)
+            self.assertIn('?story=10#10', html)
             self.assertNotIn("@@", html)
             self.assertNotIn('<script src=', html)
             self.assertNotIn('<link rel="stylesheet"', html)
