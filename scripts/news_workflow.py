@@ -51,9 +51,9 @@ def set_profile(mode):
 def instructions():
     source_names = '、'.join(name for name, _ in TECH_DISCOVERY_SOURCES)
     source_policy = (
-        f'每日科技候選固定逐一檢查：{source_names}；並回查候選公司的官方 newsroom、產品頁或 release notes。'
-        '每天以至少5則合格科技／AI新聞為基本目標；找到2至4則不得提前停止，須完成全部固定來源檢查。'
-        '來源無法讀取時記錄原因並改用 RSS、其他可靠媒體或官方來源補查。保留7天窗與跨日去重，不以不合格內容湊數。'
+        f'每日科技候選來源池：{source_names}。先以批次搜尋或聚合頁做一次廣泛掃描；'
+        '只對有明確新品或重大變更線索的候選回查官方 newsroom、產品頁或 release notes，再做歷史去重。'
+        '不設最低則數，不為湊數反覆搜尋或深挖沒有候選的網站。保留7天窗與跨日去重。'
     )
     if profile() == 'legacy':
         return ('研究模式 legacy：沿用 AI 搜尋、按候選 rg 查歷史；無命中才讀近7天表。'

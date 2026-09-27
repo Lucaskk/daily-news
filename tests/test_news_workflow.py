@@ -48,8 +48,8 @@ class WorkflowTests(unittest.TestCase):
         for name in expected:
             self.assertIn(name, w.instructions())
         self.assertIn('官方 newsroom', w.instructions())
-        self.assertIn('至少5則', w.instructions())
-        self.assertIn('不得提前停止', w.instructions())
+        self.assertIn('不設最低則數', w.instructions())
+        self.assertIn('不為湊數反覆搜尋', w.instructions())
         self.assertIn('保留7天窗與跨日去重', w.instructions())
 
     def test_lookup_only_history_hits_no_recent_read(self):
