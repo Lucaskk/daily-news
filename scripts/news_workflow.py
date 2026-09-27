@@ -17,6 +17,18 @@ PRIVATE = Path.home() / '.codex/automations/ai'
 MAX_OUTPUT = 16000
 TTL = 900
 
+TECH_DISCOVERY_SOURCES = (
+    ('Engadget', 'https://www.engadget.com/'),
+    ('The Verge', 'https://www.theverge.com/'),
+    ('TechCrunch', 'https://techcrunch.com/'),
+    ('WIRED', 'https://www.wired.com/'),
+    ('Ars Technica', 'https://arstechnica.com/'),
+    ('Cool3c', 'https://www.cool3c.com/'),
+    ('Yahoo奇摩科技', 'https://tw.news.yahoo.com/tech-news/'),
+    ('TechOrange 科技報橘', 'https://techorange.com/'),
+    ('數位時代', 'https://www.bnext.com.tw/'),
+)
+
 
 def profile():
     try:
@@ -37,11 +49,18 @@ def set_profile(mode):
 
 
 def instructions():
+    source_names = '、'.join(name for name, _ in TECH_DISCOVERY_SOURCES)
+    source_policy = (
+        f'每日科技候選固定逐一檢查：{source_names}；並回查候選公司的官方 newsroom、產品頁或 release notes。'
+        '每天以至少5則合格科技／AI新聞為基本目標；找到2至4則不得提前停止，須完成全部固定來源檢查。'
+        '來源無法讀取時記錄原因並改用 RSS、其他可靠媒體或官方來源補查。保留7天窗與跨日去重，不以不合格內容湊數。'
+    )
     if profile() == 'legacy':
-        return '研究模式 legacy：沿用 AI 搜尋、按候選 rg 查歷史；無命中才讀近7天表。渲染與配送不變。'
+        return ('研究模式 legacy：沿用 AI 搜尋、按候選 rg 查歷史；無命中才讀近7天表。'
+                + source_policy + '渲染與配送不變。')
     return ('研究模式 python：使用 scripts/news_workflow.py lookup --pattern 查歷史；'
             'fetch URL 快取來源並保留取得時間。AI仍須補充搜尋、查證發布時間、語意去重與選題；'
-            '快取不是新發布證據。渲染與配送不變。')
+            '快取不是新發布證據。' + source_policy + '渲染與配送不變。')
 
 
 def save_evidence(name, text):
@@ -168,7 +187,14 @@ def main():
         if args.action == 'mode':
             set_profile(args.value)
         if args.action in {'mode', 'status'}:
-            result = {'mode': profile(), 'instructions': instructions(), 'publishing_changed': False}
+            result = {
+                'mode': profile(),
+                'instructions': instructions(),
+                'tech_discovery_sources': [
+                    {'name': name, 'url': url} for name, url in TECH_DISCOVERY_SOURCES
+                ],
+                'publishing_changed': False,
+            }
         elif args.action == 'lookup':
             result = lookup(args.pattern)
         else:

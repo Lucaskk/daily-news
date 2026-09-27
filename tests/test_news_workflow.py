@@ -32,6 +32,26 @@ class WorkflowTests(unittest.TestCase):
         w.set_profile('python'); (w.PRIVATE/'research-mode.json').write_text('broken')
         self.assertEqual(w.profile(), 'legacy')
 
+    def test_required_tech_sources_are_in_research_instructions(self):
+        expected = {
+            'Engadget': 'https://www.engadget.com/',
+            'The Verge': 'https://www.theverge.com/',
+            'TechCrunch': 'https://techcrunch.com/',
+            'WIRED': 'https://www.wired.com/',
+            'Ars Technica': 'https://arstechnica.com/',
+            'Cool3c': 'https://www.cool3c.com/',
+            'Yahoo奇摩科技': 'https://tw.news.yahoo.com/tech-news/',
+            'TechOrange 科技報橘': 'https://techorange.com/',
+            '數位時代': 'https://www.bnext.com.tw/',
+        }
+        self.assertEqual(dict(w.TECH_DISCOVERY_SOURCES), expected)
+        for name in expected:
+            self.assertIn(name, w.instructions())
+        self.assertIn('官方 newsroom', w.instructions())
+        self.assertIn('至少5則', w.instructions())
+        self.assertIn('不得提前停止', w.instructions())
+        self.assertIn('保留7天窗與跨日去重', w.instructions())
+
     def test_lookup_only_history_hits_no_recent_read(self):
         (self.daily/'product-news-ledger.md').write_text('Company Product update-key\n')
         (self.daily/'source-notes-2026-09-13.md').write_text('update-key already captured\n')
