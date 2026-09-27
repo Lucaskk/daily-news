@@ -62,4 +62,8 @@ tags: [daily-news, sources, provenance, deduplication]
 
 ## 發布紀錄
 
-- 尚待 pipeline 完成後補記 Git commit、Pages 位元組驗證、LINE watchdog 與 localhost 狀態。
+- Pipeline 內容 commit：`b541d0219bdef70bc8e2dff6dd0a164283d2246d`；reader 版本：`20260927-145401-reader`。
+- GitHub Pages 的日期頁、`latest-slides.html` 與根入口均通過 HTTP 及本機／遠端完整位元組雜湊驗證。
+- 唯一私人 LINE watchdog 於 `2026-09-27 14:54:48 +08:00` 回報 `Sent LINE message`，exit 0；強制 pipeline `check` exit 0。
+- 公開網址：https://lucaskk.github.io/daily-news/wiki/daily/2026/09/2026-09-27/slides-2026-09-27.html?v=20260927-145401-reader
+- 68 項 Python 測試與 JavaScript 語法檢查通過；Playwright 套件未安裝，因此未宣稱瀏覽器截圖測試，且未阻擋發布或配送。
