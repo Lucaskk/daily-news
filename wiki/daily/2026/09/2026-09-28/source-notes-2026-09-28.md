@@ -67,4 +67,4 @@ tags: [daily-news, sources, provenance, deduplication]
 - 固定 renderer 產生版本 `20260928-081337-reader`；pipeline 以乾淨 clone 限定檔案推送 content commit `a59f5b716f1fbcfd2b02c7f08e336473bf2ebee6`。
 - GitHub Pages 的日期頁、`latest-slides.html` 與根入口均通過 HTTP 200 及完整位元組雜湊核對。公開頁：https://lucaskk.github.io/daily-news/wiki/daily/2026/09/2026-09-28/slides-2026-09-28.html?v=20260928-081337-reader
 - 唯一私人 LINE watchdog 於 `2026-09-28 08:14:39 +08:00` 回報 `Sent LINE message`、exit 0；沒有執行其他 sender 或重送。
-- `python3 scripts/daily_news_pipeline.py check --date 2026-09-28` exit 0，checkpoint 為 `complete`。68 項 Python 測試與 JavaScript 語法檢查通過；本機 `http://localhost:4173/wiki/daily/latest-slides.html` 回應 HTTP 200。
+- `python3 scripts/daily_news_pipeline.py check --date 2026-09-28` exit 0，checkpoint 為 `complete`。68 項 Python 測試與 JavaScript 語法檢查通過；本機 `http://localhost:4173/wiki/daily/latest-slides.html` 回應 HTTP 200。Chrome／Playwright 在 320、390、1440px 驗證圖片、頁內完整報告、逐篇來源、分享定位、單篇 ChatGPT context 與鍵盤導覽，測試攔截 ChatGPT 網址而未送出提問。
