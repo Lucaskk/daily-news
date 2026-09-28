@@ -2,7 +2,7 @@
 title: "Knowledge Base Index"
 type: overview
 created: 2026-05-24
-updated: 2026-09-27
+updated: 2026-09-28
 status: seed
 tags: [index]
 sources: []
@@ -21,6 +21,9 @@ sources: []
 - [[2026-04-04-llm-wiki]] - Karpathy 提出的 LLM-maintained personal wiki 模式，是本知識庫的設計來源。
 
 ## Daily News
+
+- [2026-09-28 Daily News](daily/2026/09/2026-09-28/daily-news-2026-09-28.md) - Meta Muse Charm、F-Droid 2.0 與 Ando agent-native messaging 先列；全球涵蓋 RAF Fairford 反恐拘捕、South Africa 槍擊、俄烏空襲、Serbia 政權轉換與 Swiss neutrality 公投等 10 則。
+- [2026-09-28 Slides](daily/2026/09/2026-09-28/slides-2026-09-28.html) - 手機閱讀版，含官方產品圖、逐篇時間與來源、原頁完整報告及單篇 ChatGPT 後續提問。
 
 - [2026-09-27 Daily News](daily/2026/09/2026-09-27/daily-news-2026-09-27.md) - WiCi One 與 Logitech G PRO 新品先列；全球涵蓋 Hormuz 提案僵局、Ethiopia 軍方表態、德俄外長會談、Venezuela 釋放政治犯及 EU 人道援助等 10 則。
 - [2026-09-27 Slides](daily/2026/09/2026-09-27/slides-2026-09-27.html) - 手機閱讀版，含官方產品圖、逐篇時間與來源、原頁完整報告及單篇 ChatGPT 後續提問。

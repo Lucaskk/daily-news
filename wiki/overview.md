@@ -2,7 +2,7 @@
 title: "Overview"
 type: overview
 created: 2026-05-24
-updated: 2026-09-27
+updated: 2026-09-28
 status: seed
 tags: [overview]
 sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
@@ -19,6 +19,12 @@ sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
 - 抽出持續出現的人物、組織、事件、政策、技術與市場概念。
 - 維護跨來源的矛盾、時間線、趨勢與待查問題。
 - 將重要查詢結果回寫成可累積的 wiki 頁面。
+
+## 2026-09-28 Daily News Synthesis
+
+- 歐洲安全與政治制度同時承壓：RAF Fairford 周邊反恐拘捕仍缺乏動機與國家關聯證據；Serbia 總統辭職轉戰總理、Switzerland 否決緊縮中立原則，分別把政權延續與 European security cooperation 交由選舉程序檢驗。
+- 公共安全與災害主線跨越 South Africa 槍擊、Russia–Ukraine 新一輪空襲、Bangkok 洪水與 Nepal 雪崩；傷亡、動機、軍民目標和失蹤數多來自首輪官方通報，均保留後續修正空間。
+- 產品主線是把 AI 代理放入隨身裝置與團隊通訊，同時改善開源 Android 軟體配送。Meta Muse Charm、Ando 與 F-Droid 2.0 都有七日窗內的明確發布節點，但價格、普遍開放、分階段推送與實際效能仍待驗證。詳見 [本日日報](daily/2026/09/2026-09-28/daily-news-2026-09-28.md)。
 
 ## 2026-09-27 Daily News Synthesis
 

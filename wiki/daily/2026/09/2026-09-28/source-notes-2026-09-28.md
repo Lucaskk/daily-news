@@ -2,7 +2,7 @@
 title: "2026-09-28 每日新聞來源與時間筆記"
 date: 2026-09-28
 type: source-notes
-status: research-complete
+status: published
 tags: [daily-news, sources, provenance, deduplication]
 ---
 
@@ -64,4 +64,7 @@ tags: [daily-news, sources, provenance, deduplication]
 
 ## 發布紀錄
 
-- 待 pipeline 完成後補記 commit、GitHub Pages 驗證、LINE watchdog 與最終檢查結果。
+- 固定 renderer 產生版本 `20260928-081337-reader`；pipeline 以乾淨 clone 限定檔案推送 content commit `a59f5b716f1fbcfd2b02c7f08e336473bf2ebee6`。
+- GitHub Pages 的日期頁、`latest-slides.html` 與根入口均通過 HTTP 200 及完整位元組雜湊核對。公開頁：https://lucaskk.github.io/daily-news/wiki/daily/2026/09/2026-09-28/slides-2026-09-28.html?v=20260928-081337-reader
+- 唯一私人 LINE watchdog 於 `2026-09-28 08:14:39 +08:00` 回報 `Sent LINE message`、exit 0；沒有執行其他 sender 或重送。
+- `python3 scripts/daily_news_pipeline.py check --date 2026-09-28` exit 0，checkpoint 為 `complete`。68 項 Python 測試與 JavaScript 語法檢查通過；本機 `http://localhost:4173/wiki/daily/latest-slides.html` 回應 HTTP 200。
