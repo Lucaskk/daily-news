@@ -1,7 +1,7 @@
 ---
 title: "科技產品新聞歷史比對表"
 type: product-news-ledger
-updated: 2026-09-27
+updated: 2026-09-28
 status: generated
 tags: [daily-news, tech-products, deduplication, provenance]
 ---
@@ -10,14 +10,17 @@ tags: [daily-news, tech-products, deduplication, provenance]
 
 此表由 `scripts/build_product_news_ledger.py` 掃描所有歷史日報的科技／AI 區段自動產生。**模型不得整份讀取本檔**；每個候選只用公司名、產品名、更新動作與比對鍵執行 `rg`，並只讀命中列。
 
-- 掃描日報：102 份。
-- 擷取科技／AI 項目：613 則。
+- 掃描日報：103 份。
+- 擷取科技／AI 項目：616 則。
 - 更新方式：`python3 scripts/build_product_news_ledger.py`
 - 查詢方式：使用窄化組合 pattern，例如 `rg -n -i '公司.*產品|產品.*公司|比對鍵' wiki/daily/product-news-ledger.md`，不要用公司名單獨匹配大量列。
 - 無命中時：完整讀取 `wiki/daily/product-news-recent-7d.md` 做最後確認，不讀取本檔全文。
 
 | 公司 | 產品 | 更新內容 | 發佈時間 | 收錄日期 | 狀態 | 來源網址 | 比對鍵 |
 |---|---|---|---|---|---|---|---|
+| Meta | Muse Charm | Meta 揭露 Muse Charm，把個人 AI 代理與即時語音模型放進口袋型裝置 | 2026-09-24（Meta 官方發布日期；未提供時分） | 2026-09-28 | 首次收錄 | https://about.fb.com/news/2026/09/the-biggest-news-from-connect-2026/<br>https://arstechnica.com/ai/2026/09/meta-puts-its-ai-assistant-on-a-keychain/ | 2b7fbd600ce0 |
+| F-Droid | F-Droid 2.0 | F-Droid 發布 2.0，十年來最大改版重寫介面、搜尋與安裝更新流程 | 2026-09-24（F-Droid 官方發布日期；未提供時分） | 2026-09-28 | 首次收錄 | https://f-droid.org/en/2026/09/24/f-droid-2.0-a-new-chapter-for-android-freedom.html<br>https://arstechnica.com/gadgets/2026/09/f-droid-gets-its-biggest-update-in-a-decade-with-new-ui-and-smoother-app-installs/ | 8f05540f204f |
+| Ando | Ando team messaging | Ando 公開推出 agent-native 團隊通訊平台，讓 AI 代理以成員身分參與頻道與通話 | 2026-09-24 21:00:00（Asia/Taipei；公司新聞稿 09:00 EDT） | 2026-09-28 | 首次收錄 | https://www.ando.so/blog/introducing-ando<br>https://www.globenewswire.com/news-release/2026/09/24/3368344/0/en/Ando-Launches-Agent-Native-Messaging-Platform-Announces-20-Million-Seed.html<br>https://techcrunch.com/2026/09/24/ando-eyes-slack-as-it-builds-team-messaging-platform-for-humans-and-agents-to-work-together/ | 22f2a34824fa |
 | WiCi | WiCi One | WiCi 發表 WiCi One，以 Wi-Fi 7 把獨立 GPU 共享給個人裝置與本地 AI | 2026-09-27 04:45（Asia/Taipei；Engadget 頁面標示 2026-09-26 15:45 EST，依字面換算） | 2026-09-27 | 首次收錄 | https://wici.ai/wici-one<br>https://www.engadget.com/2269877/this-external-gpu-uses-wi-fi-to-transform-any-device-into-a-gaming-rig/ | f24f872f104b |
 | Logitech G | PRO X3 SUPERSTRIKE、PRO X2 RAPID、PRO X3 LIGHTSPEED、PRO X CONTROL | Logitech G 推出新一代 PRO 電競系列，加入可調觸發滑鼠、磁軸鍵盤與 70 小時耳機 | 2026-09-23（Logitech 官方發布日期；未提供時分） | 2026-09-27 | 首次收錄 | https://www.logitech.com/blog/2026/09/23/logitech-g-marks-10-years-of-pro-with-a-new-generation-of-competitive-gear/<br>https://www.cool3c.com/article/252187 | 625c92314954 |
 | Microsoft | Copilot Home、Copilot Code、Copilot Autopilot | Microsoft 正式介紹 Copilot Home、Code 與 Autopilot，統一工作入口並加入持續自動化 | 2026-09-25 20:00（Asia/Taipei；Engadget metadata；Microsoft 官方同日發布） | 2026-09-26 | 續報 | https://www.microsoft.com/en-us/copilot/blog/content-type/news/<br>https://partner.microsoft.com/en-us/blog/article/ai-at-work-marketing-moment<br>https://www.engadget.com/2268096/microsofts-copilot-app-adds-office-natural-coding-and-automation/ | a394c7b00a98 |

@@ -1,0 +1,31 @@
+{
+  "images": {
+    "t1": {
+      "src": "https://about.fb.com/wp-content/uploads/2026/09/The-Biggest-News-From-Connect-2026_Header-1.jpg?w=1200",
+      "alt": "Meta Connect 2026 官方產品發表主視覺",
+      "caption": "Meta Connect 2026 官方公告主視覺；Muse Charm 為該次發表的新裝置之一。",
+      "credit": "Meta 官方公告",
+      "source_url": "https://about.fb.com/news/2026/09/the-biggest-news-from-connect-2026/",
+      "original_url": "https://about.fb.com/wp-content/uploads/2026/09/The-Biggest-News-From-Connect-2026_Header-1.jpg?w=1200",
+      "fit": "cover"
+    },
+    "t2": {
+      "src": "https://f-droid.org/assets/fdroid-logo_bfHl7nsLHOUQxzdU8-rGIhn4bAgl6z7k2mA3fWoCyT4=.png",
+      "alt": "F-Droid 官方標誌",
+      "caption": "F-Droid 2.0 官方公告使用的專案標誌。",
+      "credit": "F-Droid 官方公告",
+      "source_url": "https://f-droid.org/en/2026/09/24/f-droid-2.0-a-new-chapter-for-android-freedom.html",
+      "original_url": "https://f-droid.org/assets/fdroid-logo_bfHl7nsLHOUQxzdU8-rGIhn4bAgl6z7k2mA3fWoCyT4=.png",
+      "fit": "contain"
+    },
+    "t3": {
+      "src": "https://www.ando.so/opengraph-image.png",
+      "alt": "Ando 團隊通訊平台官方主視覺",
+      "caption": "Ando 官方發布的 agent-native 團隊通訊平台主視覺。",
+      "credit": "Ando 官方公告",
+      "source_url": "https://www.ando.so/blog/introducing-ando",
+      "original_url": "https://www.ando.so/opengraph-image.png",
+      "fit": "contain"
+    }
+  }
+}
