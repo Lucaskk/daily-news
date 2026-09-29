@@ -1,6 +1,10 @@
 {
-  "run_at": "2026-09-30T00:01:36+08:00",
+  "run_at": "2026-09-30T00:03:42+08:00",
   "successful": [
+    "2330"
+  ],
+  "failed": {},
+  "skipped_fresh_today": [
     "2303",
     "2317",
     "2327",
@@ -12,9 +16,5 @@
     "3702",
     "6175",
     "8299"
-  ],
-  "failed": {
-    "2330": "[Errno 54] Connection reset by peer"
-  },
-  "skipped_fresh_today": []
+  ]
 }
