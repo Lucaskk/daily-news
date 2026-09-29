@@ -1,21 +1,27 @@
 ---
 title: "科技產品新聞最近 7 天比對表"
 type: product-news-ledger-recent
-updated: 2026-09-28
+updated: 2026-09-29
 status: generated
 tags: [daily-news, tech-products, deduplication, recent]
 ---
 
 # 科技產品新聞最近 7 天比對表
 
-本檔是歷史 `rg` 搜尋沒有命中時的二次確認清單，可以完整讀取。涵蓋收錄日期 `2026-09-22` 至 `2026-09-28`；產品是否符合精確 168 小時發布窗，仍以當日來源筆記判定。
+本檔是歷史 `rg` 搜尋沒有命中時的二次確認清單，可以完整讀取。涵蓋收錄日期 `2026-09-23` 至 `2026-09-29`；產品是否符合精確 168 小時發布窗，仍以當日來源筆記判定。
 
-- 掃描日報：103 份。
-- 最近 7 天項目：26 則。
+- 掃描日報：104 份。
+- 最近 7 天項目：29 則。
 - 完整歷史只按需 `rg`：`wiki/daily/product-news-ledger.md`
 
 | 公司 | 產品 | 更新內容 | 發佈時間 | 收錄日期 | 狀態 | 來源網址 | 比對鍵 |
 |---|---|---|---|---|---|---|---|
+| SpaceX | Starship Flight 14 | SpaceX Starship Flight 14 首次進入地球軌道並部署 26 顆 Starlink V3 | 2026-09-28 20:50:00（Asia/Taipei；AP 12:50 UTC） | 2026-09-29 | 續報 | https://www.spacex.com/launches/sl-17-50%3A1008<br>https://tech.yahoo.com/science/articles/spacexs-supersized-starship-launches-toward-125036831.html<br>https://www.washingtonpost.com/health/2026/09/28/spacex-starship-orbit/5033407a-bb3b-11f1-81fc-9b76f8343b6c_story.html | 46e6ad6ae7bc |
+| OpenAI | Health in ChatGPT | OpenAI 為 Health in ChatGPT 新增依個人健康資料產生的摘要與洞察 | 2026-09-28（OpenAI release notes 段落日期；未提供時分） | 2026-09-29 | 續報 | https://help.openai.com/en/articles/6825453-chatgpt-release-notes | 68377496dc1a |
+| GitHub | CodeQL 2.27.1 | GitHub 發布 CodeQL 2.27.1，新增 C／C++、C# 查詢與 Kotlin 2.4.20 支援 | 2026-09-25（GitHub 官方發布日期；未提供時分） | 2026-09-29 | 首次收錄 | https://github.blog/changelog/2026-09-25-codeql-2-27-1-adds-c-and-c-query-and-kotlin-2-4-20-support/ | 128c03d37968 |
+| GitHub | GitHub Copilot／Claude Sonnet 5.5 | GitHub Copilot 將 Claude Sonnet 5.5 推向一般可用，涵蓋 IDE、CLI 與 coding agent | 2026-09-28（GitHub 官方發布日期；未提供時分） | 2026-09-29 | 首次收錄 | https://github.blog/changelog/2026-09-28-claude-sonnet-5-5-in-github-copilot/ | 5f858fda29a7 |
+| Amazon Web Services | Amazon CloudWatch Omni | AWS 正式推出 Amazon CloudWatch Omni，以自然語言統整應用與 AI 代理遙測 | 2026-09-23（AWS 官方發布日期；未提供時分） | 2026-09-29 | 首次收錄 | https://aws.amazon.com/about-aws/whats-new/2026/09/amazon-cloudwatch-omni-ai/<br>https://aws.amazon.com/blogs/aws/introducing-amazon-cloudwatch-omni-ai-powered-observability-for-generative-ai-and-agentic-workloads/ | 9fdaf48f5817 |
+| Amazon Web Services | AWS End User Messaging Social | AWS End User Messaging 加入 WhatsApp 雙向即時語音通話 | 2026-09-25（AWS 官方發布日期；未提供時分） | 2026-09-29 | 首次收錄 | https://aws.amazon.com/about-aws/whats-new/2026/09/aws-end-user-messaging-voice-calling-whatsapp/ | e1e14a0e4e1a |
 | Meta | Muse Charm | Meta 揭露 Muse Charm，把個人 AI 代理與即時語音模型放進口袋型裝置 | 2026-09-24（Meta 官方發布日期；未提供時分） | 2026-09-28 | 首次收錄 | https://about.fb.com/news/2026/09/the-biggest-news-from-connect-2026/<br>https://arstechnica.com/ai/2026/09/meta-puts-its-ai-assistant-on-a-keychain/ | 2b7fbd600ce0 |
 | F-Droid | F-Droid 2.0 | F-Droid 發布 2.0，十年來最大改版重寫介面、搜尋與安裝更新流程 | 2026-09-24（F-Droid 官方發布日期；未提供時分） | 2026-09-28 | 首次收錄 | https://f-droid.org/en/2026/09/24/f-droid-2.0-a-new-chapter-for-android-freedom.html<br>https://arstechnica.com/gadgets/2026/09/f-droid-gets-its-biggest-update-in-a-decade-with-new-ui-and-smoother-app-installs/ | 8f05540f204f |
 | Ando | Ando team messaging | Ando 公開推出 agent-native 團隊通訊平台，讓 AI 代理以成員身分參與頻道與通話 | 2026-09-24 21:00:00（Asia/Taipei；公司新聞稿 09:00 EDT） | 2026-09-28 | 首次收錄 | https://www.ando.so/blog/introducing-ando<br>https://www.globenewswire.com/news-release/2026/09/24/3368344/0/en/Ando-Launches-Agent-Native-Messaging-Platform-Announces-20-Million-Seed.html<br>https://techcrunch.com/2026/09/24/ando-eyes-slack-as-it-builds-team-messaging-platform-for-humans-and-agents-to-work-together/ | 22f2a34824fa |
@@ -39,6 +45,3 @@ tags: [daily-news, tech-products, deduplication, recent]
 | Google 與 Acer、ASUS、Dell、HP、Lenovo | Googlebook | Googlebook 五款機型開放預購，價格與 10 月 4 日上市時程確定 | 2026-09-21 21:00:05（Asia/Taipei；Axios 首次可靠發布） | 2026-09-23 | 首次收錄 | https://blog.google/products-and-platforms/devices/googlebook/first-look-googlebook/<br>https://www.axios.com/2026/09/21/googlebook-899-google-laptop<br>https://www.engadget.com/2263649/googlebooks-a-laptop-that-works-better-with-your-android-phone/ | bfd56ccfc4ed |
 | Discord | Age Group、Age Assurance | Discord 開始推出新版年齡分組與驗證流程，多數帳號以裝置和帳戶訊號判定 | 2026-09-22（Discord 官方支援頁更新日期；頁面未提供可核實時區） | 2026-09-23 | 首次收錄 | https://support.discord.com/hc/en-us/articles/30326565624343-How-to-Confirm-Your-Age-Group-on-Discord<br>https://www.engadget.com/2265924/discord-rolls-out-its-revised-age-verification-policy/ | 5b49375ca664 |
 | Anthropic | Claude Opus 5.5 | Anthropic 推出 Claude Opus 5.5，降低定價並提高使用配額 | 2026-09-22（Anthropic 官方發布日期；未提供時分） | 2026-09-23 | 首次收錄 | https://www.anthropic.com/claude-opus-5-5<br>https://www.engadget.com/2265801/anthropic-and-openai-announce-more-powerful-and-cheaper-ai-models/ | bb89e7a504a4 |
-| Faraday Future | FF EAI Robot World 2.0 | Faraday Future 推出九款 EAI 機器人配置，發表後立即銷售與交付 | 2026-09-20 08:00（Asia/Taipei；9 月 19 日 17:00 PDT 發表會） | 2026-09-22 | 首次收錄 | https://www.ff.com/us/919-ff-eai-robotics/ | eadc4b854e44 |
-| OpenAI | ChatGPT Finances／Credit scores | ChatGPT Finances 加入 Experian 信用分數與異動監控 | 2026-09-21（OpenAI 官方 release notes 日期；未提供時分） | 2026-09-22 | 首次收錄 | https://help.openai.com/en/articles/6825453-chatgpt-release-notes | ff38173b0889 |
-| Canon | EOS R8 Mark II | Canon 發表 EOS R8 Mark II，入門全片幅機身新增五軸防手震 | 2026-09-16（Canon 官方發布日期；未提供時分） | 2026-09-22 | 首次收錄 | https://corporate.jp.canon/newsroom/newsrelease/2026/pr-0916a<br>https://www.cool3c.com/category/product | 6b2c8ec1cd5b |

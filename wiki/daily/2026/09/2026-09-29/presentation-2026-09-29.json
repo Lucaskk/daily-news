@@ -1,0 +1,40 @@
+{
+  "images": {
+    "t1": {
+      "src": "https://www.spacex.com/assets/images/share.jpg",
+      "alt": "SpaceX 官方品牌與太空任務主視覺",
+      "caption": "SpaceX Flight 14 官方任務頁的分享主視覺；本圖為官方主題圖，不是 Flight 14 現場照片。",
+      "credit": "SpaceX 官方任務頁",
+      "source_url": "https://www.spacex.com/launches/sl-17-50%3A1008",
+      "original_url": "https://www.spacex.com/assets/images/share.jpg",
+      "fit": "cover"
+    },
+    "t2": {
+      "src": "https://github.blog/wp-content/uploads/2026/09/659164683-16cc4c4e-74b2-4ea6-b922-474275b8c289.png",
+      "alt": "GitHub Copilot 中 Claude Sonnet 5.5 的官方更新主視覺",
+      "caption": "GitHub Changelog 為 Claude Sonnet 5.5 進入 Copilot 一般可用所發布的主視覺。",
+      "credit": "GitHub Changelog",
+      "source_url": "https://github.blog/changelog/2026-09-28-claude-sonnet-5-5-in-github-copilot/",
+      "original_url": "https://github.blog/wp-content/uploads/2026/09/659164683-16cc4c4e-74b2-4ea6-b922-474275b8c289.png",
+      "fit": "contain"
+    },
+    "t6": {
+      "src": "https://github.blog/wp-content/uploads/2026/09/658036625-ee8039c4-10e3-485f-96eb-ecc1e2181f05.jpg",
+      "alt": "GitHub CodeQL 2.27.1 官方更新主視覺",
+      "caption": "GitHub Changelog 為 CodeQL 2.27.1 發布的官方主視覺。",
+      "credit": "GitHub Changelog",
+      "source_url": "https://github.blog/changelog/2026-09-25-codeql-2-27-1-adds-c-and-c-query-and-kotlin-2-4-20-support/",
+      "original_url": "https://github.blog/wp-content/uploads/2026/09/658036625-ee8039c4-10e3-485f-96eb-ecc1e2181f05.jpg",
+      "fit": "cover"
+    },
+    "2": {
+      "src": "https://imengine.public.prod.dur.navigacloud.com/?uuid=67FBC14F-6920-5EB5-947D-0EC63BD3B195&function=cover&type=preview&source=false&width=1600&height=1067",
+      "alt": "Kyiv National Academy of Sciences 遭無人機攻擊後的救援現場",
+      "caption": "AP 現場照片：救援人員處理 Kyiv National Academy of Sciences 建築火勢。",
+      "credit": "Associated Press／The Journal",
+      "source_url": "https://www.the-journal.com/articles/associated-press/russian-drones-hammer-apartments-offices-and-a-cultural-landmark-in-ukraine-killing-7/",
+      "original_url": "https://imengine.public.prod.dur.navigacloud.com/?uuid=67FBC14F-6920-5EB5-947D-0EC63BD3B195&function=cover&type=preview&source=false&width=1600&height=1067",
+      "fit": "cover"
+    }
+  }
+}

@@ -1,7 +1,7 @@
 ---
 title: "科技產品新聞歷史比對表"
 type: product-news-ledger
-updated: 2026-09-28
+updated: 2026-09-29
 status: generated
 tags: [daily-news, tech-products, deduplication, provenance]
 ---
@@ -10,14 +10,20 @@ tags: [daily-news, tech-products, deduplication, provenance]
 
 此表由 `scripts/build_product_news_ledger.py` 掃描所有歷史日報的科技／AI 區段自動產生。**模型不得整份讀取本檔**；每個候選只用公司名、產品名、更新動作與比對鍵執行 `rg`，並只讀命中列。
 
-- 掃描日報：103 份。
-- 擷取科技／AI 項目：616 則。
+- 掃描日報：104 份。
+- 擷取科技／AI 項目：622 則。
 - 更新方式：`python3 scripts/build_product_news_ledger.py`
 - 查詢方式：使用窄化組合 pattern，例如 `rg -n -i '公司.*產品|產品.*公司|比對鍵' wiki/daily/product-news-ledger.md`，不要用公司名單獨匹配大量列。
 - 無命中時：完整讀取 `wiki/daily/product-news-recent-7d.md` 做最後確認，不讀取本檔全文。
 
 | 公司 | 產品 | 更新內容 | 發佈時間 | 收錄日期 | 狀態 | 來源網址 | 比對鍵 |
 |---|---|---|---|---|---|---|---|
+| SpaceX | Starship Flight 14 | SpaceX Starship Flight 14 首次進入地球軌道並部署 26 顆 Starlink V3 | 2026-09-28 20:50:00（Asia/Taipei；AP 12:50 UTC） | 2026-09-29 | 續報 | https://www.spacex.com/launches/sl-17-50%3A1008<br>https://tech.yahoo.com/science/articles/spacexs-supersized-starship-launches-toward-125036831.html<br>https://www.washingtonpost.com/health/2026/09/28/spacex-starship-orbit/5033407a-bb3b-11f1-81fc-9b76f8343b6c_story.html | 46e6ad6ae7bc |
+| OpenAI | Health in ChatGPT | OpenAI 為 Health in ChatGPT 新增依個人健康資料產生的摘要與洞察 | 2026-09-28（OpenAI release notes 段落日期；未提供時分） | 2026-09-29 | 續報 | https://help.openai.com/en/articles/6825453-chatgpt-release-notes | 68377496dc1a |
+| GitHub | CodeQL 2.27.1 | GitHub 發布 CodeQL 2.27.1，新增 C／C++、C# 查詢與 Kotlin 2.4.20 支援 | 2026-09-25（GitHub 官方發布日期；未提供時分） | 2026-09-29 | 首次收錄 | https://github.blog/changelog/2026-09-25-codeql-2-27-1-adds-c-and-c-query-and-kotlin-2-4-20-support/ | 128c03d37968 |
+| GitHub | GitHub Copilot／Claude Sonnet 5.5 | GitHub Copilot 將 Claude Sonnet 5.5 推向一般可用，涵蓋 IDE、CLI 與 coding agent | 2026-09-28（GitHub 官方發布日期；未提供時分） | 2026-09-29 | 首次收錄 | https://github.blog/changelog/2026-09-28-claude-sonnet-5-5-in-github-copilot/ | 5f858fda29a7 |
+| Amazon Web Services | Amazon CloudWatch Omni | AWS 正式推出 Amazon CloudWatch Omni，以自然語言統整應用與 AI 代理遙測 | 2026-09-23（AWS 官方發布日期；未提供時分） | 2026-09-29 | 首次收錄 | https://aws.amazon.com/about-aws/whats-new/2026/09/amazon-cloudwatch-omni-ai/<br>https://aws.amazon.com/blogs/aws/introducing-amazon-cloudwatch-omni-ai-powered-observability-for-generative-ai-and-agentic-workloads/ | 9fdaf48f5817 |
+| Amazon Web Services | AWS End User Messaging Social | AWS End User Messaging 加入 WhatsApp 雙向即時語音通話 | 2026-09-25（AWS 官方發布日期；未提供時分） | 2026-09-29 | 首次收錄 | https://aws.amazon.com/about-aws/whats-new/2026/09/aws-end-user-messaging-voice-calling-whatsapp/ | e1e14a0e4e1a |
 | Meta | Muse Charm | Meta 揭露 Muse Charm，把個人 AI 代理與即時語音模型放進口袋型裝置 | 2026-09-24（Meta 官方發布日期；未提供時分） | 2026-09-28 | 首次收錄 | https://about.fb.com/news/2026/09/the-biggest-news-from-connect-2026/<br>https://arstechnica.com/ai/2026/09/meta-puts-its-ai-assistant-on-a-keychain/ | 2b7fbd600ce0 |
 | F-Droid | F-Droid 2.0 | F-Droid 發布 2.0，十年來最大改版重寫介面、搜尋與安裝更新流程 | 2026-09-24（F-Droid 官方發布日期；未提供時分） | 2026-09-28 | 首次收錄 | https://f-droid.org/en/2026/09/24/f-droid-2.0-a-new-chapter-for-android-freedom.html<br>https://arstechnica.com/gadgets/2026/09/f-droid-gets-its-biggest-update-in-a-decade-with-new-ui-and-smoother-app-installs/ | 8f05540f204f |
 | Ando | Ando team messaging | Ando 公開推出 agent-native 團隊通訊平台，讓 AI 代理以成員身分參與頻道與通話 | 2026-09-24 21:00:00（Asia/Taipei；公司新聞稿 09:00 EDT） | 2026-09-28 | 首次收錄 | https://www.ando.so/blog/introducing-ando<br>https://www.globenewswire.com/news-release/2026/09/24/3368344/0/en/Ando-Launches-Agent-Native-Messaging-Platform-Announces-20-Million-Seed.html<br>https://techcrunch.com/2026/09/24/ando-eyes-slack-as-it-builds-team-messaging-platform-for-humans-and-agents-to-work-together/ | 22f2a34824fa |
