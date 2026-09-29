@@ -2,7 +2,7 @@
 title: "Knowledge Base Index"
 type: overview
 created: 2026-05-24
-updated: 2026-09-28
+updated: 2026-09-29
 status: seed
 tags: [index]
 sources: []
@@ -21,6 +21,9 @@ sources: []
 - [[2026-04-04-llm-wiki]] - Karpathy 提出的 LLM-maintained personal wiki 模式，是本知識庫的設計來源。
 
 ## Daily News
+
+- [2026-09-29 Daily News](daily/2026/09/2026-09-29/daily-news-2026-09-29.md) - Starship 首次入軌、Copilot Claude Sonnet 5.5、ChatGPT Health、CloudWatch Omni、WhatsApp voice calling 與 CodeQL 2.27.1 先列；全球涵蓋 Myanmar 市場空襲、Ukraine 無人機攻擊、Congo Ebola、Hormuz 斡旋與 France Senate 選舉等 10 則。
+- [2026-09-29 Slides](daily/2026/09/2026-09-29/slides-2026-09-29.html) - 手機閱讀版，含產品優先、逐篇時間與來源、原頁完整報告及單篇 ChatGPT 後續提問。
 
 - [2026-09-28 Daily News](daily/2026/09/2026-09-28/daily-news-2026-09-28.md) - Meta Muse Charm、F-Droid 2.0 與 Ando agent-native messaging 先列；全球涵蓋 RAF Fairford 反恐拘捕、South Africa 槍擊、俄烏空襲、Serbia 政權轉換與 Swiss neutrality 公投等 10 則。
 - [2026-09-28 Slides](daily/2026/09/2026-09-28/slides-2026-09-28.html) - 手機閱讀版，含官方產品圖、逐篇時間與來源、原頁完整報告及單篇 ChatGPT 後續提問。

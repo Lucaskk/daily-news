@@ -2,7 +2,7 @@
 title: "Overview"
 type: overview
 created: 2026-05-24
-updated: 2026-09-28
+updated: 2026-09-29
 status: seed
 tags: [overview]
 sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
@@ -19,6 +19,12 @@ sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
 - 抽出持續出現的人物、組織、事件、政策、技術與市場概念。
 - 維護跨來源的矛盾、時間線、趨勢與待查問題。
 - 將重要查詢結果回寫成可累積的 wiki 頁面。
+
+## 2026-09-29 Daily News Synthesis
+
+- 戰爭與安全風險集中在可驗證的新傷亡與調查節點：Myanmar 的 Kyauktaw 市場空襲、Ukraine 多城無人機攻擊及 South Korea 對 DMZ 地雷的初步歸因，均保留交戰方資料與法醫調查限制。
+- 持續危機只有在規模或制度狀態改變時重列：Congo Ebola 突破 8,000 例，美伊斡旋在公開拒絕後仍未正式終止，Ethiopia 指控擴及三鄰國，Polo 則由遠海強度進入 Baja 撤離與洪水威脅。
+- 產品主線從模型入口延伸到工程與基礎設施：Starship 首次完成軌道部署；Copilot Claude Sonnet 5.5、ChatGPT Health、CloudWatch Omni、AWS WhatsApp voice calling 與 CodeQL 2.27.1 都有七日窗內的明確發布節點。詳見 [本日日報](daily/2026/09/2026-09-29/daily-news-2026-09-29.md)。
 
 ## 2026-09-28 Daily News Synthesis
 

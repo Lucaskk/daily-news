@@ -1,5 +1,12 @@
 # Knowledge Base Log
 
+## [2026-09-29] ingest | Daily global and tech AI news
+
+- 固定截點 08:00:30 Asia/Taipei；全球前 24 小時、產品前 168 小時。6 則產品先列、全球恰好 10 則；所有續報均引用前次日期並說明新增節點。
+- 選題前重建產品表為 616 筆／103 份既有日報；完整歷史只用候選窄 `rg`，無相同變更後才讀最近 7 天 26 列。固定國際／台灣來源池與官方 release notes 均已檢查，研究模式維持 `legacy`。
+- pipeline content commit `1c790b733196ab0fd59ffa8babf2c7a080ea4bac`；Pages 日期頁、最新與根入口通過完整位元組雜湊驗證。唯一私人 watchdog 於 08:15:05 回報 `Sent LINE message`、exit 0；未執行其他 LINE sender。
+- 68 項 Python 測試與 JavaScript 語法檢查通過。公開：https://lucaskk.github.io/daily-news/wiki/daily/2026/09/2026-09-29/slides-2026-09-29.html?v=20260929-081416-reader
+
 ## [2026-09-28] ingest | Daily global and tech AI news
 
 - 固定截點 08:01:50 Asia/Taipei；全球前 24 小時、產品前 168 小時。Meta Muse Charm、F-Droid 2.0、Ando 先列，全球恰好 10 則；逐項時間、歧異與排除理由保留於來源筆記。
