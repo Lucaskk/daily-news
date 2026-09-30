@@ -2,7 +2,7 @@
 title: "Overview"
 type: overview
 created: 2026-05-24
-updated: 2026-09-29
+updated: 2026-09-30
 status: seed
 tags: [overview]
 sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
@@ -19,6 +19,12 @@ sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
 - 抽出持續出現的人物、組織、事件、政策、技術與市場概念。
 - 維護跨來源的矛盾、時間線、趨勢與待查問題。
 - 將重要查詢結果回寫成可累積的 wiki 頁面。
+
+## 2026-09-30 Daily News Synthesis
+
+- 代理系統的競爭開始進入「可執行邊界與真實交易」：NVIDIA 以 OpenShell／Sentry 建立模型外部控制，Shopify 讓 browser agents 在買家確認後完成 checkout，Google 則把 Gems 遷移為可堆疊、可自動套用的 Skills。
+- AI 服務同步走向實際分發與公共入口：GPT-6.1 Sol 進入 Work、Codex、API 與 Amazon Bedrock；America.gov 以自然語言整合聯邦資訊，但 launch-day 答案變動顯示 accuracy 與政治治理仍需獨立稽核。
+- 全球風險由 Russia–Ukraine 高速無人機、Pakistan 對 Saudi 的明確防務承諾、Yemen UN 會談與 Polo 實際登陸主導；RBA 升息則把能源衝擊與 AI 商品需求納入通膨判斷。詳見 [本日日報](daily/2026/09/2026-09-30/daily-news-2026-09-30.md)。
 
 ## 2026-09-29 Daily News Synthesis
 
