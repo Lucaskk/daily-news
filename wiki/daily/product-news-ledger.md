@@ -1,7 +1,7 @@
 ---
 title: "科技產品新聞歷史比對表"
 type: product-news-ledger
-updated: 2026-09-29
+updated: 2026-09-30
 status: generated
 tags: [daily-news, tech-products, deduplication, provenance]
 ---
@@ -10,14 +10,19 @@ tags: [daily-news, tech-products, deduplication, provenance]
 
 此表由 `scripts/build_product_news_ledger.py` 掃描所有歷史日報的科技／AI 區段自動產生。**模型不得整份讀取本檔**；每個候選只用公司名、產品名、更新動作與比對鍵執行 `rg`，並只讀命中列。
 
-- 掃描日報：104 份。
-- 擷取科技／AI 項目：622 則。
+- 掃描日報：105 份。
+- 擷取科技／AI 項目：627 則。
 - 更新方式：`python3 scripts/build_product_news_ledger.py`
 - 查詢方式：使用窄化組合 pattern，例如 `rg -n -i '公司.*產品|產品.*公司|比對鍵' wiki/daily/product-news-ledger.md`，不要用公司名單獨匹配大量列。
 - 無命中時：完整讀取 `wiki/daily/product-news-recent-7d.md` 做最後確認，不讀取本檔全文。
 
 | 公司 | 產品 | 更新內容 | 發佈時間 | 收錄日期 | 狀態 | 來源網址 | 比對鍵 |
 |---|---|---|---|---|---|---|---|
+| U.S. Government | America.gov | 美國政府正式啟用 America.gov，以 AI 問答整合聯邦服務入口 | 2026-09-29 23:18:33（Asia/Taipei；AP 15:18:33 UTC） | 2026-09-30 | 首次收錄 | https://www.whitehouse.gov/fact-sheets/2026/09/fact-sheet-president-donald-j-trump-streamlines-access-to-government-services-through-america-gov/<br>https://apnews.com/article/ff86fcb161c1fe89538d6ecb294ea353 | ab33d87ce2bc |
+| Shopify | WebMCP support for checkout | Shopify 將 WebMCP 延伸到 checkout，browser agents 可在買家確認後完成訂單 | 2026-09-29 03:33:00（Asia/Taipei；TechCrunch 2026-09-28 12:33 PDT） | 2026-09-30 | 首次收錄 | https://shopify.dev/changelog/posts/webmcp-support-for-checkout<br>https://techcrunch.com/2026/09/28/shopify-opens-checkout-to-browser-based-ai-agents/ | dcf83c71fd2f |
+| OpenAI、Amazon Web Services | GPT-6.1 Sol、Amazon Bedrock | OpenAI 推出 GPT-6.1 Sol，並在 Work、Codex、API 與 Amazon Bedrock 上線 | 2026-09-29（OpenAI 與 AWS 官方發布日期；未提供共同時分） | 2026-09-30 | 首次收錄 | https://deploymentsafety.openai.com/gpt-6-1-sol/respecting-auto-review<br>https://developers.openai.com/api/docs/models/gpt-6.1-sol<br>https://aws.amazon.com/about-aws/whats-new/2026/09/openai-gpt-6-1-sol-on-amazon-bedrock/ | f1e98b401713 |
+| NVIDIA | Open Agent Safety Platform、OpenShell、Sentry | NVIDIA 發布 Open Agent Safety Platform，以 OpenShell 與 Sentry 從軟體到 DPU 約束 AI 代理 | 2026-09-28（NVIDIA 官方發布日期；未提供時分） | 2026-09-30 | 首次收錄 | https://nvidianews.nvidia.com/news/open-agent-safety-platform<br>https://developer.nvidia.com/blog/nvidia-open-agent-safety-platform-a-reference-for-continuous-in-silicon-agent-monitoring/ | af712932b0f8 |
+| Google | Gemini Skills、Gems | Google 啟用 Gemini Skills 並公布 Gems 分階段退場與自動遷移時程 | 2026-09-29 01:29:00（Asia/Taipei；TechCrunch 2026-09-28 10:29 PDT） | 2026-09-30 | 首次收錄 | https://support.google.com/gemini/answer/18560919?hl=en<br>https://techcrunch.com/2026/09/28/google-is-killing-off-geminis-gems-in-favor-of-skills/ | 0cc448df679d |
 | SpaceX | Starship Flight 14 | SpaceX Starship Flight 14 首次進入地球軌道並部署 26 顆 Starlink V3 | 2026-09-28 20:50:00（Asia/Taipei；AP 12:50 UTC） | 2026-09-29 | 續報 | https://www.spacex.com/launches/sl-17-50%3A1008<br>https://tech.yahoo.com/science/articles/spacexs-supersized-starship-launches-toward-125036831.html<br>https://www.washingtonpost.com/health/2026/09/28/spacex-starship-orbit/5033407a-bb3b-11f1-81fc-9b76f8343b6c_story.html | 46e6ad6ae7bc |
 | OpenAI | Health in ChatGPT | OpenAI 為 Health in ChatGPT 新增依個人健康資料產生的摘要與洞察 | 2026-09-28（OpenAI release notes 段落日期；未提供時分） | 2026-09-29 | 續報 | https://help.openai.com/en/articles/6825453-chatgpt-release-notes | 68377496dc1a |
 | GitHub | CodeQL 2.27.1 | GitHub 發布 CodeQL 2.27.1，新增 C／C++、C# 查詢與 Kotlin 2.4.20 支援 | 2026-09-25（GitHub 官方發布日期；未提供時分） | 2026-09-29 | 首次收錄 | https://github.blog/changelog/2026-09-25-codeql-2-27-1-adds-c-and-c-query-and-kotlin-2-4-20-support/ | 128c03d37968 |

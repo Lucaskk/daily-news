@@ -1,0 +1,58 @@
+{
+  "images": {
+    "t1": {
+      "src": "https://iprsoftwaremedia.com/219/files/202609/c68dda94943a6e093074e9e88fd5ddef/6aba9c533d6332d60a0bb99a_nvidia-open-agent-safety-platform/nvidia-open-agent-safety-platform_f9cea0c6-00ad-4b7f-b0a0-6bc06b39af63-prv.png?v=f9cea0c6-00ad-4b7f-b0a0-6bc06b39af63",
+      "alt": "NVIDIA Open Agent Safety Platform 官方架構主視覺",
+      "caption": "NVIDIA 官方新聞稿的 Open Agent Safety Platform 主視覺。",
+      "credit": "NVIDIA Newsroom",
+      "source_url": "https://nvidianews.nvidia.com/news/open-agent-safety-platform",
+      "original_url": "https://iprsoftwaremedia.com/219/files/202609/c68dda94943a6e093074e9e88fd5ddef/6aba9c533d6332d60a0bb99a_nvidia-open-agent-safety-platform/nvidia-open-agent-safety-platform_f9cea0c6-00ad-4b7f-b0a0-6bc06b39af63-prv.png?v=f9cea0c6-00ad-4b7f-b0a0-6bc06b39af63",
+      "fit": "contain"
+    },
+    "t2": {
+      "src": "https://shopify.dev/images/social-share-24de3afa0326f705b84a0a98714acc192611e5a21ade3b7c8f2bd12ba7d1457f.jpg",
+      "alt": "Shopify Developer Platform 官方主視覺",
+      "caption": "Shopify Developer Changelog 官方分享圖；本圖代表 checkout developer surface。",
+      "credit": "Shopify Developer",
+      "source_url": "https://shopify.dev/changelog/posts/webmcp-support-for-checkout",
+      "original_url": "https://shopify.dev/images/social-share-24de3afa0326f705b84a0a98714acc192611e5a21ade3b7c8f2bd12ba7d1457f.jpg",
+      "fit": "cover"
+    },
+    "t3": {
+      "src": "https://techcrunch.com/wp-content/uploads/2026/06/gemini-app-GettyImages-2276204472-1.jpg?w=1024",
+      "alt": "Google Gemini 應用程式圖示",
+      "caption": "TechCrunch 報導所用的 Gemini 應用程式主題圖。",
+      "credit": "TechCrunch／Getty Images",
+      "source_url": "https://techcrunch.com/2026/09/28/google-is-killing-off-geminis-gems-in-favor-of-skills/",
+      "original_url": "https://techcrunch.com/wp-content/uploads/2026/06/gemini-app-GettyImages-2276204472-1.jpg?w=1024",
+      "fit": "cover"
+    },
+    "t4": {
+      "src": "https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/09/29/ML-22090-featured-image.png",
+      "alt": "AWS 官方 GPT-6.1 Sol on Amazon Bedrock 發布主視覺",
+      "caption": "AWS Machine Learning Blog 為 GPT-6.1 Sol 在 Amazon Bedrock 上線發布的官方主視覺。",
+      "credit": "Amazon Web Services",
+      "source_url": "https://aws.amazon.com/blogs/machine-learning/bring-near-astra-intelligence-to-everyday-work-with-gpt-6-1-sol-on-amazon-bedrock/",
+      "original_url": "https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/09/29/ML-22090-featured-image.png",
+      "fit": "contain"
+    },
+    "1": {
+      "src": "https://ca-times.brightspotcdn.com/dims4/default/137e298/2147483647/strip/true/crop/8252x4332+0+584/resize/1200x630!/quality/75/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F0d%2F28%2Fb37eb56a4eb384ffc7dc076600a3%2Fc013061e728c412f881b50cf1c12a8c1.jpg",
+      "alt": "Kyiv 遭俄羅斯無人機攻擊後的現場",
+      "caption": "Associated Press 現場照片，呈現 Kyiv 在連續飛彈與無人機攻擊下的情況。",
+      "credit": "Associated Press／Los Angeles Times",
+      "source_url": "https://www.latimes.com/world-nation/story/2026-09-29/russias-ballistic-missile-jet-propelled-drone-blitz-keeps-kyiv-on-edge",
+      "original_url": "https://ca-times.brightspotcdn.com/dims4/default/137e298/2147483647/strip/true/crop/8252x4332+0+584/resize/1200x630!/quality/75/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F0d%2F28%2Fb37eb56a4eb384ffc7dc076600a3%2Fc013061e728c412f881b50cf1c12a8c1.jpg",
+      "fit": "cover"
+    },
+    "7": {
+      "src": "https://live-production.wcms.abc-cdn.net.au/1725eef1f59b40239736d4da40ac325a?impolicy=wcms_watermark_news&cropH=805&cropW=1431&xPos=0&yPos=244&width=862&height=485&imformat=generic",
+      "alt": "被 Vietnam 拘留的 Tran Hiep 與 Nguyen Duc Thuan 合成照片",
+      "caption": "ABC Australia 報導使用的兩名被拘留活動人士照片。",
+      "credit": "ABC Australia／supplied",
+      "source_url": "https://www.abc.net.au/news/2026-09-29/missing-human-rights-activist-cambodia-charged-vietnam/107208750",
+      "original_url": "https://live-production.wcms.abc-cdn.net.au/1725eef1f59b40239736d4da40ac325a?impolicy=wcms_watermark_news&cropH=805&cropW=1431&xPos=0&yPos=244&width=862&height=485&imformat=generic",
+      "fit": "cover"
+    }
+  }
+}

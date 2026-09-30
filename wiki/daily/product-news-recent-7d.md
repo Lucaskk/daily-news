@@ -1,21 +1,26 @@
 ---
 title: "科技產品新聞最近 7 天比對表"
 type: product-news-ledger-recent
-updated: 2026-09-29
+updated: 2026-09-30
 status: generated
 tags: [daily-news, tech-products, deduplication, recent]
 ---
 
 # 科技產品新聞最近 7 天比對表
 
-本檔是歷史 `rg` 搜尋沒有命中時的二次確認清單，可以完整讀取。涵蓋收錄日期 `2026-09-23` 至 `2026-09-29`；產品是否符合精確 168 小時發布窗，仍以當日來源筆記判定。
+本檔是歷史 `rg` 搜尋沒有命中時的二次確認清單，可以完整讀取。涵蓋收錄日期 `2026-09-24` 至 `2026-09-30`；產品是否符合精確 168 小時發布窗，仍以當日來源筆記判定。
 
-- 掃描日報：104 份。
+- 掃描日報：105 份。
 - 最近 7 天項目：29 則。
 - 完整歷史只按需 `rg`：`wiki/daily/product-news-ledger.md`
 
 | 公司 | 產品 | 更新內容 | 發佈時間 | 收錄日期 | 狀態 | 來源網址 | 比對鍵 |
 |---|---|---|---|---|---|---|---|
+| U.S. Government | America.gov | 美國政府正式啟用 America.gov，以 AI 問答整合聯邦服務入口 | 2026-09-29 23:18:33（Asia/Taipei；AP 15:18:33 UTC） | 2026-09-30 | 首次收錄 | https://www.whitehouse.gov/fact-sheets/2026/09/fact-sheet-president-donald-j-trump-streamlines-access-to-government-services-through-america-gov/<br>https://apnews.com/article/ff86fcb161c1fe89538d6ecb294ea353 | ab33d87ce2bc |
+| Shopify | WebMCP support for checkout | Shopify 將 WebMCP 延伸到 checkout，browser agents 可在買家確認後完成訂單 | 2026-09-29 03:33:00（Asia/Taipei；TechCrunch 2026-09-28 12:33 PDT） | 2026-09-30 | 首次收錄 | https://shopify.dev/changelog/posts/webmcp-support-for-checkout<br>https://techcrunch.com/2026/09/28/shopify-opens-checkout-to-browser-based-ai-agents/ | dcf83c71fd2f |
+| OpenAI、Amazon Web Services | GPT-6.1 Sol、Amazon Bedrock | OpenAI 推出 GPT-6.1 Sol，並在 Work、Codex、API 與 Amazon Bedrock 上線 | 2026-09-29（OpenAI 與 AWS 官方發布日期；未提供共同時分） | 2026-09-30 | 首次收錄 | https://deploymentsafety.openai.com/gpt-6-1-sol/respecting-auto-review<br>https://developers.openai.com/api/docs/models/gpt-6.1-sol<br>https://aws.amazon.com/about-aws/whats-new/2026/09/openai-gpt-6-1-sol-on-amazon-bedrock/ | f1e98b401713 |
+| NVIDIA | Open Agent Safety Platform、OpenShell、Sentry | NVIDIA 發布 Open Agent Safety Platform，以 OpenShell 與 Sentry 從軟體到 DPU 約束 AI 代理 | 2026-09-28（NVIDIA 官方發布日期；未提供時分） | 2026-09-30 | 首次收錄 | https://nvidianews.nvidia.com/news/open-agent-safety-platform<br>https://developer.nvidia.com/blog/nvidia-open-agent-safety-platform-a-reference-for-continuous-in-silicon-agent-monitoring/ | af712932b0f8 |
+| Google | Gemini Skills、Gems | Google 啟用 Gemini Skills 並公布 Gems 分階段退場與自動遷移時程 | 2026-09-29 01:29:00（Asia/Taipei；TechCrunch 2026-09-28 10:29 PDT） | 2026-09-30 | 首次收錄 | https://support.google.com/gemini/answer/18560919?hl=en<br>https://techcrunch.com/2026/09/28/google-is-killing-off-geminis-gems-in-favor-of-skills/ | 0cc448df679d |
 | SpaceX | Starship Flight 14 | SpaceX Starship Flight 14 首次進入地球軌道並部署 26 顆 Starlink V3 | 2026-09-28 20:50:00（Asia/Taipei；AP 12:50 UTC） | 2026-09-29 | 續報 | https://www.spacex.com/launches/sl-17-50%3A1008<br>https://tech.yahoo.com/science/articles/spacexs-supersized-starship-launches-toward-125036831.html<br>https://www.washingtonpost.com/health/2026/09/28/spacex-starship-orbit/5033407a-bb3b-11f1-81fc-9b76f8343b6c_story.html | 46e6ad6ae7bc |
 | OpenAI | Health in ChatGPT | OpenAI 為 Health in ChatGPT 新增依個人健康資料產生的摘要與洞察 | 2026-09-28（OpenAI release notes 段落日期；未提供時分） | 2026-09-29 | 續報 | https://help.openai.com/en/articles/6825453-chatgpt-release-notes | 68377496dc1a |
 | GitHub | CodeQL 2.27.1 | GitHub 發布 CodeQL 2.27.1，新增 C／C++、C# 查詢與 Kotlin 2.4.20 支援 | 2026-09-25（GitHub 官方發布日期；未提供時分） | 2026-09-29 | 首次收錄 | https://github.blog/changelog/2026-09-25-codeql-2-27-1-adds-c-and-c-query-and-kotlin-2-4-20-support/ | 128c03d37968 |
@@ -40,8 +45,3 @@ tags: [daily-news, tech-products, deduplication, recent]
 | Microsoft | Surface Pro 12、Surface Laptop 13 | Microsoft 推出搭載 Snapdragon X2 Plus 的 Surface Pro 12 與 Surface Laptop 13 | 2026-09-24 05:30（Asia/Taipei；依 Engadget 頁面標示 9/23 16:30 EST 字面換算） | 2026-09-24 | 首次收錄 | https://www.microsoft.com/en-us/surface/devices/surface-pro?icid=mscom_marcom_FH3a_SurfacePro12In_Fall27<br>https://www.engadget.com/2266680/microsofts-new-surface-pro-12-and-surface-laptop-13-feature-snapdragon-x2-plus-chips/ | fa04512e5098 |
 | Logitech | Yeti 2 | Logitech 推出 Yeti 2 USB 麥克風，加入距離感測與 AI 降噪 | 2026-09-24 01:01（Asia/Taipei；依 Engadget 頁面標示 9/23 12:01 EST 字面換算） | 2026-09-24 | 首次收錄 | https://www.engadget.com/2265713/logitechs-yeti-2-brings-the-17-year-old-usb-mic-into-the-modern-age/<br>https://www.logitechg.com/en-us | c289d52dd6f2 |
 | Eight Sleep | Pod 6 | Eight Sleep 發布 Pod 6，感測器增至 18 個並加快溫控 | 2026-09-23 20:00（Asia/Taipei；依 Engadget 頁面標示 9/23 07:00 EST 字面換算） | 2026-09-24 | 首次收錄 | https://www.eightsleep.com/de/<br>https://www.engadget.com/2264386/eight-sleep-announces-the-pod-6-its-newest-smart-mattress-cover/ | 7cbcf99ccaa2 |
-| Alibaba | Zhenwu V900、Qwen 4 路線圖 | 阿里巴巴公布鎮武 V900 AI 晶片，並預告 Qwen 4 將朝 5 至 10 兆參數訓練 | 2026-09-22 15:16:01（Asia/Taipei；AP 首次可靠發布） | 2026-09-23 | 首次收錄 | https://www.alibabacloud.com/en/press-room/alibaba-unveils-roadmap-on-full-stack-ai-strategy?_p_lc=1<br>https://apnews.com/article/b29908e516faff9f5a82b201ba954aab | f6a23a2d4e20 |
-| OpenAI | GPT-6 Sol、GPT-6 Luna | OpenAI 正式推出 GPT-6 Sol 與 Luna，API 價格較 GPT-5.6 促銷價降低一半 | 2026-09-22（OpenAI 官方發布日期；未提供時分） | 2026-09-23 | 首次收錄 | https://openai.com/index/introducing-gpt-6-sol-and-luna/<br>https://www.engadget.com/2265801/anthropic-and-openai-announce-more-powerful-and-cheaper-ai-models/ | ea6fbfb94301 |
-| Google 與 Acer、ASUS、Dell、HP、Lenovo | Googlebook | Googlebook 五款機型開放預購，價格與 10 月 4 日上市時程確定 | 2026-09-21 21:00:05（Asia/Taipei；Axios 首次可靠發布） | 2026-09-23 | 首次收錄 | https://blog.google/products-and-platforms/devices/googlebook/first-look-googlebook/<br>https://www.axios.com/2026/09/21/googlebook-899-google-laptop<br>https://www.engadget.com/2263649/googlebooks-a-laptop-that-works-better-with-your-android-phone/ | bfd56ccfc4ed |
-| Discord | Age Group、Age Assurance | Discord 開始推出新版年齡分組與驗證流程，多數帳號以裝置和帳戶訊號判定 | 2026-09-22（Discord 官方支援頁更新日期；頁面未提供可核實時區） | 2026-09-23 | 首次收錄 | https://support.discord.com/hc/en-us/articles/30326565624343-How-to-Confirm-Your-Age-Group-on-Discord<br>https://www.engadget.com/2265924/discord-rolls-out-its-revised-age-verification-policy/ | 5b49375ca664 |
-| Anthropic | Claude Opus 5.5 | Anthropic 推出 Claude Opus 5.5，降低定價並提高使用配額 | 2026-09-22（Anthropic 官方發布日期；未提供時分） | 2026-09-23 | 首次收錄 | https://www.anthropic.com/claude-opus-5-5<br>https://www.engadget.com/2265801/anthropic-and-openai-announce-more-powerful-and-cheaper-ai-models/ | bb89e7a504a4 |
