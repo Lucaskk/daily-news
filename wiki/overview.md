@@ -2,7 +2,7 @@
 title: "Overview"
 type: overview
 created: 2026-05-24
-updated: 2026-09-30
+updated: 2026-10-01
 status: seed
 tags: [overview]
 sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
@@ -19,6 +19,12 @@ sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
 - 抽出持續出現的人物、組織、事件、政策、技術與市場概念。
 - 維護跨來源的矛盾、時間線、趨勢與待查問題。
 - 將重要查詢結果回寫成可累積的 wiki 頁面。
+
+## 2026-10-01 Daily News Synthesis
+
+- 代理產品競爭由模型能力轉向長時間執行與共享環境：OpenAI Dots、ChatGPT Space 與 Codex cloud 分別處理持續代理、團隊知識和跨裝置開發；Google Gemini 4 Argon 先向 trusted cyber defenders 開放，反映 frontier rollout 與安全測試綁得更緊。
+- Instinct Selections 把人類策展與使用者脈絡放進主動推薦，也暴露同意、推薦相關性與商業揭露問題。代理若能讀取 email、行程與交易資料，推薦產品的界線比一般廣告更需要可控設定。
+- 全球主線是 Russia 擴大打擊 Ukraine 電網、U.S. 正式撤出 Iraq 並放寬 Syria 武器出口限制；MI5 警報、Grenfell 案卷移交、兩韓地雷爭議與 Malaysia 遣返則把安全、人權與問責推進到可執行程序。詳見 [本日日報](daily/2026/10/2026-10-01/daily-news-2026-10-01.md)。
 
 ## 2026-09-30 Daily News Synthesis
 

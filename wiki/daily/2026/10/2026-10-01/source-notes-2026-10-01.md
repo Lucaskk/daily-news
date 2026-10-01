@@ -51,3 +51,9 @@ tags: [daily-news, sources, provenance, deduplication]
 - 9/29 UN Yemen envoy 會談、Hurricane Polo 登陸、RBA 升息、Estonia attribution、Vietnam detentions、Tu-95 crash 與 U.S. election cyber support 已在 9/30 日報收錄，不重複。
 - 全球候選均先以事件實體與動作窄搜歷史。相同戰爭或政策主線只有在窗內出現新的死亡、正式回覆、實施、移交或法律程序時才標示續報。
 
+## 發布紀錄
+
+- 固定 renderer 版本：`20261001-081059-reader`。pipeline 以乾淨 clone 發布 commit `413821e7942c2c3cc2afc8c24b3a3205c3d9a28e`；日期頁、latest 與根入口均通過 HTTP 200 與完整位元組 SHA-256 驗證。
+- 唯一私人 LINE watchdog 於 `2026-10-01 08:12:14 +08:00` 回報 `Sent LINE message`、exit 0；未執行其他 sender，也未重送。
+- 發布後產品表為 632 筆／106 份日報，最近七日仍為 29 筆。
+- 68 項 Python 測試、JavaScript／結構檢查與 15 篇 article／全球 1–10 順序通過；強制 pipeline `check --date 2026-10-01` 回傳 exit 0、`stage=complete`。
