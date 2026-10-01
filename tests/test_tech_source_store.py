@@ -40,6 +40,13 @@ class SourceStoreTests(unittest.TestCase):
         for url in ('http://example.com', 'https://user:pass@example.com', 'not-a-url'):
             with self.assertRaises(ValueError): store.add_source(url, path=self.path)
 
+    def test_local_symlink_edits_preserve_background_csv(self):
+        link = self.path.parent / 'local.csv'
+        link.symlink_to(self.path)
+        store.add_source('https://example.com/', path=link)
+        self.assertTrue(link.is_symlink())
+        self.assertEqual(store.read_sources(self.path)[0]['url'], 'https://example.com/')
+
 
 if __name__ == '__main__':
     unittest.main()

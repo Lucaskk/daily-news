@@ -18,6 +18,8 @@ tags: [daily-news, rules, deduplication, provenance]
 
 ### LINE 指令與節省 token 分工（2026-09-14）
 
+- 本機 LINE 背景程式使用 `~/.codex/automations/ai/tech_source_store.py` 與 `tech-sources.csv`，避免 macOS 限制背景程式讀取 Documents。工作目錄的 `wiki/daily/config/tech-sources.csv` 連到同一份實體 CSV；保留連結，編輯內容即可。CSV 程式以解析後的實體路徑做原子寫入，不覆蓋連結。
+
 - LINE 私訊 `查看網址` 可列出本機 CSV 的全部來源（包含停用），顯示網址、加入時間、網站名稱、類別、啟用狀態、加入來源與備註。使用既有每 15 分鐘 watchdog 回覆；長清單會分成多則訊息，不截斷欄位。電腦須開機並連網，內容以實際本機 CSV 為準。
 
 - 科技產品候選來源改由本機 [config/tech-sources.csv](config/tech-sources.csv) 管理；每日 `scripts/news_workflow.py status` 讀取 `enabled=true` 的列。CSV 欄位為 `url`、`added_at`（Asia/Taipei）、`website`、`category`、`enabled`、`origin`、`note`。舊有來源的實際加入時間不明，因此 `added_at` 留空，新增來源會自動填入。本機可直接新增或刪除整列；暫時停用可把 `enabled` 改成 `false`。也可執行 `python3 scripts/tech_source_store.py add https://example.com --website 名稱 --category 類別`。網址是候選發現來源，個別新聞仍須核對發布時間、原始來源與歷史去重。

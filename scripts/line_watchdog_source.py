@@ -355,8 +355,12 @@ def process_source_commands(now: datetime) -> None:
         raise
     if not isinstance(entries, list):
         raise ValueError("Source request listing is invalid")
-    sys.path.insert(0, str(NEWS_REPO / "scripts"))
+    sys.path.insert(0, str(ROOT if (ROOT / "tech_source_store.py").is_file() else NEWS_REPO / "scripts"))
     from tech_source_store import add_source, read_sources, source_list_messages
+    source_path = ROOT / "tech-sources.csv"
+    if not source_path.is_file():
+        source_path = NEWS_REPO / "wiki/daily/config/tech-sources.csv"
+    rows = read_sources(source_path)
     for entry in entries:
         name = entry.get("name", "") if isinstance(entry, dict) else ""
         if not re.fullmatch(r"[0-9a-f]{64}\.json", name):
@@ -378,7 +382,7 @@ def process_source_commands(now: datetime) -> None:
         if request["action"] == "list_sources":
             snapshot = ROOT / f"line-source-list-{key}.json"
             if not snapshot.is_file():
-                rows = read_sources(NEWS_REPO / "wiki/daily/config/tech-sources.csv")
+                rows = read_sources(source_path)
                 messages = source_list_messages(rows, now.isoformat(timespec="seconds"))
                 write_atomic(snapshot, json.dumps(messages, ensure_ascii=False) + "\n")
             messages = json.loads(snapshot.read_text())
@@ -394,7 +398,7 @@ def process_source_commands(now: datetime) -> None:
         url = request["url"]
         if not isinstance(url, str):
             continue
-        added = add_source(url, origin="line", path=NEWS_REPO / "wiki/daily/config/tech-sources.csv")
+        added = add_source(url, origin="line", path=source_path)
         env = load_env(ENV_PATH)
         message = f"網址{'已加入' if added else '已在清單中'}：{url}\n本機 CSV：wiki/daily/config/tech-sources.csv"
         send_once(require(env, "LINE_CHANNEL_ACCESS_TOKEN"), require(env, "LINE_TO_ID"),

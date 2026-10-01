@@ -25,6 +25,7 @@ def normalized_url(value):
 
 
 def read_sources(path=CSV_PATH):
+    path = path.resolve()
     with path.open('r', encoding='utf-8-sig', newline='') as stream:
         reader = csv.DictReader(stream)
         if tuple(reader.fieldnames or ()) != FIELDS:
@@ -47,6 +48,7 @@ def read_sources(path=CSV_PATH):
 
 
 def write_sources(rows, path=CSV_PATH):
+    path = path.resolve()
     path.parent.mkdir(parents=True, exist_ok=True)
     descriptor, temporary = tempfile.mkstemp(prefix='.tech-sources-', suffix='.csv', dir=path.parent)
     try:
