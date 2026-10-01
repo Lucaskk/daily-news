@@ -4,6 +4,7 @@ import importlib.util
 import json
 import os
 import sqlite3
+import sys
 from pathlib import Path
 import tempfile
 import unittest
@@ -11,11 +12,14 @@ from datetime import datetime, timedelta
 from unittest.mock import patch
 from urllib.error import HTTPError, URLError
 
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'scripts'))
+
 MODULE = Path(os.environ.get('LINE_WATCHDOG_MODULE_PATH',
                             str(Path(__file__).resolve().parents[1] / 'scripts/line_watchdog_source.py')))
 spec = importlib.util.spec_from_file_location('watchdog', MODULE)
 w = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(w)
+SOURCE_PROCESSOR = w.process_source_commands
 NOW = datetime(2026, 9, 9, 10, 15, tzinfo=w.TAIPEI)
 BASE = 'https://example.com/daily-news'
 DAY = '2026-09-09'
@@ -52,6 +56,7 @@ class WatchdogTests(unittest.TestCase):
         p.start(); self.addCleanup(p.stop)
         for name in ['log']:
             p = patch.object(w, name); p.start(); self.addCleanup(p.stop)
+        p = patch.object(w, 'process_source_commands'); p.start(); self.addCleanup(p.stop)
         p = patch.object(w.time, 'sleep'); p.start(); self.addCleanup(p.stop)
         p = patch.object(w, 'fetch', side_effect=AssertionError('Unexpected HTTP call'))
         self.fetch = p.start(); self.addCleanup(p.stop)
@@ -60,6 +65,20 @@ class WatchdogTests(unittest.TestCase):
 
     def status(self):
         return json.loads((self.root/'line-watchdog-status.json').read_text())
+
+    def test_source_command_adds_csv_and_acknowledges_once(self):
+        import tech_source_store as store
+        source = self.root/'repo/wiki/daily/config/tech-sources.csv'
+        store.write_sources([], source)
+        key = 'a' * 64
+        request = {'action': 'add_source', 'date': DAY, 'event_key': key,
+                   'requested_at': NOW.isoformat(), 'url': 'https://example.com/news'}
+        with patch.object(w, 'send_once', return_value=True) as sent:
+            self.fetch.side_effect = [json.dumps([{'name': key + '.json'}]).encode(),
+                                      json.dumps(request).encode()]
+            SOURCE_PROCESSOR(NOW)
+        self.assertEqual(store.read_sources(source)[0]['origin'], 'line')
+        self.assertEqual(sent.call_count, 1)
 
     def backfill_fixture(self):
         day = '2026-09-08'

@@ -44,7 +44,7 @@ class WorkflowTests(unittest.TestCase):
             'TechOrange 科技報橘': 'https://techorange.com/',
             '數位時代': 'https://www.bnext.com.tw/',
         }
-        self.assertEqual(dict(w.TECH_DISCOVERY_SOURCES), expected)
+        self.assertEqual(dict(w.discovery_sources()), expected)
         for name in expected:
             self.assertIn(name, w.instructions())
         self.assertIn('官方 newsroom', w.instructions())

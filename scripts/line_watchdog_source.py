@@ -342,6 +342,49 @@ def validate_deck(html: str, today: str) -> None:
         raise ValueError("Public report product order is invalid")
 
 
+def process_source_commands(now: datetime) -> None:
+    """Import owner-queued URLs into the editable local CSV; acknowledge each event once."""
+    today = now.date().isoformat()
+    listing_url = ("https://api.github.com/repos/Lucaskk/daily-news/contents/"
+                   f"wiki/daily/source-requests/{today}?ref=main")
+    try:
+        entries = json.loads(fetch(listing_url, headers={"Cache-Control": "no-cache"}))
+    except urllib.error.HTTPError as exc:
+        if exc.code == 404:
+            return
+        raise
+    if not isinstance(entries, list):
+        raise ValueError("Source request listing is invalid")
+    sys.path.insert(0, str(NEWS_REPO / "scripts"))
+    from tech_source_store import add_source
+    for entry in entries:
+        name = entry.get("name", "") if isinstance(entry, dict) else ""
+        if not re.fullmatch(r"[0-9a-f]{64}\.json", name):
+            continue
+        key = name[:-5]
+        done = ROOT / f"line-source-sent-{key}"
+        if done.is_file():
+            continue
+        request_url = ("https://raw.githubusercontent.com/Lucaskk/daily-news/main/"
+                       f"wiki/daily/source-requests/{today}/{name}?t={int(now.timestamp())}")
+        request = json.loads(fetch(request_url, headers={"Cache-Control": "no-cache"}))
+        if (not isinstance(request, dict) or request.get("action") != "add_source"
+                or request.get("date") != today or request.get("event_key") != key):
+            continue
+        stamp = datetime.fromisoformat(request["requested_at"].replace("Z", "+00:00"))
+        if (stamp.tzinfo is None or stamp.astimezone(TAIPEI).date() != now.date()
+                or stamp > now + timedelta(minutes=1)):
+            continue
+        url = request["url"]
+        if not isinstance(url, str):
+            continue
+        added = add_source(url, origin="line", path=NEWS_REPO / "wiki/daily/config/tech-sources.csv")
+        env = load_env(ENV_PATH)
+        message = f"網址{'已加入' if added else '已在清單中'}：{url}\n本機 CSV：wiki/daily/config/tech-sources.csv"
+        send_once(require(env, "LINE_CHANNEL_ACCESS_TOKEN"), require(env, "LINE_TO_ID"),
+                  message, f"source-{key}", now, done)
+
+
 def run_once(now: datetime) -> int:
     today = now.date().isoformat()
     if os.environ.get("FORCE_LINE_PUSH") == "1":
@@ -352,6 +395,11 @@ def run_once(now: datetime) -> int:
         except Exception as exc:
             # Command service failure must not block normal daily delivery.
             log(f"LINE command check failed: {type(exc).__name__}", error=True)
+    if (ROOT / "line-command-enabled").is_file():
+        try:
+            process_source_commands(now)
+        except Exception as exc:
+            log(f"LINE source command check failed: {type(exc).__name__}", error=True)
     if sent_date(STATE_PATH) == today:
         record_status("already_sent", now, delivered_date=today)
         if os.environ.get("LINE_WATCHDOG_QUIET") != "1":

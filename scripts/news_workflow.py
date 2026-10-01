@@ -11,24 +11,12 @@ import subprocess
 import sys
 import urllib.parse
 import urllib.request
+from tech_source_store import read_sources
 
 ROOT = Path(__file__).resolve().parents[1]
 PRIVATE = Path.home() / '.codex/automations/ai'
 MAX_OUTPUT = 16000
 TTL = 900
-
-TECH_DISCOVERY_SOURCES = (
-    ('Engadget', 'https://www.engadget.com/'),
-    ('The Verge', 'https://www.theverge.com/'),
-    ('TechCrunch', 'https://techcrunch.com/'),
-    ('WIRED', 'https://www.wired.com/'),
-    ('Ars Technica', 'https://arstechnica.com/'),
-    ('Cool3c', 'https://www.cool3c.com/'),
-    ('Yahoo奇摩科技', 'https://tw.news.yahoo.com/tech-news/'),
-    ('TechOrange 科技報橘', 'https://techorange.com/'),
-    ('數位時代', 'https://www.bnext.com.tw/'),
-)
-
 
 def profile():
     try:
@@ -49,11 +37,13 @@ def set_profile(mode):
 
 
 def instructions():
-    source_names = '、'.join(name for name, _ in TECH_DISCOVERY_SOURCES)
+    sources = discovery_sources()
+    source_names = '、'.join(name for name, _ in sources)
     source_policy = (
         f'每日科技候選來源池：{source_names}。先以批次搜尋或聚合頁做一次廣泛掃描；'
         '只對有明確新品或重大變更線索的候選回查官方 newsroom、產品頁或 release notes，再做歷史去重。'
-        '不設最低則數，不為湊數反覆搜尋或深挖沒有候選的網站。保留7天窗與跨日去重。'
+        '以5–8則合格產品為搜尋目標，不設最低則數。初選少於5則時，針對7天內官方newsroom、release notes、產品發布與公開測試做一輪定向補查，涵蓋硬體、消費軟體、開發工具與AI產品；記錄兩輪候選數及排除原因。'
+        '不為湊數反覆搜尋或深挖沒有候選的網站。保留7天窗與跨日去重。'
     )
     if profile() == 'legacy':
         return ('研究模式 legacy：沿用 AI 搜尋、按候選 rg 查歷史；無命中才讀近7天表。'
@@ -61,6 +51,11 @@ def instructions():
     return ('研究模式 python：使用 scripts/news_workflow.py lookup --pattern 查歷史；'
             'fetch URL 快取來源並保留取得時間。AI仍須補充搜尋、查證發布時間、語意去重與選題；'
             '快取不是新發布證據。' + source_policy + '渲染與配送不變。')
+
+
+def discovery_sources():
+    return [(row['website'], row['url']) for row in read_sources()
+            if row['enabled'] == 'true']
 
 
 def save_evidence(name, text):
@@ -191,7 +186,7 @@ def main():
                 'mode': profile(),
                 'instructions': instructions(),
                 'tech_discovery_sources': [
-                    {'name': name, 'url': url} for name, url in TECH_DISCOVERY_SOURCES
+                    {'name': name, 'url': url} for name, url in discovery_sources()
                 ],
                 'publishing_changed': False,
             }

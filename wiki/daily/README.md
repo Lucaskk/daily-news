@@ -18,6 +18,9 @@ tags: [daily-news, rules, deduplication, provenance]
 
 ### LINE 指令與節省 token 分工（2026-09-14）
 
+- 科技產品候選來源改由本機 [config/tech-sources.csv](config/tech-sources.csv) 管理；每日 `scripts/news_workflow.py status` 讀取 `enabled=true` 的列。CSV 欄位為 `url`、`added_at`（Asia/Taipei）、`website`、`category`、`enabled`、`origin`、`note`。舊有來源的實際加入時間不明，因此 `added_at` 留空，新增來源會自動填入。本機可直接新增或刪除整列；暫時停用可把 `enabled` 改成 `false`。也可執行 `python3 scripts/tech_source_store.py add https://example.com --website 名稱 --category 類別`。網址是候選發現來源，個別新聞仍須核對發布時間、原始來源與歷史去重。
+- LINE 私訊指令格式為 `加入網址 https://example.com`，限既有授權使用者的一對一訊息。Bot 先將事件寫入新聞庫的 `wiki/daily/source-requests/YYYY-MM-DD/`；本機每 15 分鐘由既有 watchdog 讀取，去重後寫入 CSV 並回覆結果。電腦關機或 Bot 尚未部署時不會立即入檔；收到「已加入」回覆後才代表本機 CSV 已更新。網站名稱預設為網域，可再於本機編輯。
+
 - 使用者明確要求補發歷史日期時，可於核對原截點、完成日期網頁並驗證 Pages 後，使用唯一私人 watchdog 的 `--backfill-date YYYY-MM-DD`。只接受過去7天；獨立補發紀錄，不修改今天入口、正常配送成功日期或舊失敗 checkpoint。一般每日排程不得自行使用此入口。若原日期已有不確定的配送請求，須先核對，不繞過去重。
 
 - 「重新產出」目前定義為先自動診斷：既有 LINE Bot 接收授權的一對一指令，原有 watchdog 回報產製／公開頁／配送狀態；不自行啟動模型、不重設當日研究截點、不繞過配送去重。
@@ -28,7 +31,7 @@ tags: [daily-news, rules, deduplication, provenance]
 1. 每日執行時先記錄 Asia/Taipei 研究截點，並建立兩個獨立時間窗：全球／世界新聞為截點前 24 小時；科技／AI 產品為截點前 7 天（168 小時）。
 2. 全球 Top 10 的事件、官方發布或重大新進展必須落在 24 小時窗內；不得因數量不足而放寬。
 3. 科技產品項目可從 7 天窗內挑選，但只限首次推出、正式發布、預購／上市、公開測試、重大功能更新、重大可用性／權限變更、停用或具體產品路線更新。純折扣、導購、舊開箱、重刊、評論、傳聞或沒有產品狀態變更的產業文章不得補位。
-4. 科技／AI 新聞不設最低則數。使用固定國際／台灣來源池做一次有效率的廣泛候選掃描，只對有明確新產品或重大變更跡象的候選深入查證官方來源與歷史去重；若合格項目較少就照實刊出，不為湊數反覆搜尋、重複舊產品或收錄不合格內容。
+4. 科技／AI 新聞以每日 5–8 則合格項目為搜尋目標，不設硬性最低則數。先掃描固定國際／台灣來源池；若初選少於 5 則，再針對過去 7 天的官方 newsroom、release notes、產品發布與公開測試做一輪定向補查，涵蓋硬體、消費軟體、開發工具及 AI 產品。逐一查證時間與跨日重複；仍不足時照實刊出，不以舊聞或不合格內容補數。
 5. 不以文章頁面的「更新時間」單獨判定。舊事件即使被重新整理、改標題、重發或仍在首頁熱門，也不得當成新事件或新產品。
 6. 續報可以沿用較早背景，但足以重新收錄的重大新進展本身必須落在對應視窗內：全球新聞 24 小時，科技產品 7 天。
 7. 滾動新聞頁、live blog、官方 release notes 與 changelog 必須定位到視窗內的確切貼文、版本日期或更新項目；不能只引用整個持續更新頁面。
@@ -88,8 +91,8 @@ tags: [daily-news, rules, deduplication, provenance]
 
 ## 六、科技產品來源與查證
 
-1. 每次科技候選搜尋固定檢查下列來源的最新產品、AI、裝置、軟體、運輸與重大功能消息：國際來源 [Engadget](https://www.engadget.com/)、[The Verge](https://www.theverge.com/)、[TechCrunch](https://techcrunch.com/)、[WIRED](https://www.wired.com/) 與 [Ars Technica](https://arstechnica.com/)；台灣來源 [Cool3c](https://www.cool3c.com/)、[Yahoo奇摩科技](https://tw.news.yahoo.com/tech-news/)、[TechOrange 科技報橘](https://techorange.com/) 與 [數位時代](https://www.bnext.com.tw/)。
-2. 上述媒體構成每日候選來源池，用於發現候選、交叉核對與補充國際／台灣市場脈絡。優先以批次搜尋或聚合頁一次掃描多個來源，不要求為了固定則數逐站深挖；只有出現合格候選線索時才開啟文章與官方來源。當日來源筆記需列出本次實際使用的搜尋範圍，以及有價值候選的保留或排除結果。
+1. 每次科技候選搜尋以 `scripts/news_workflow.py status` 輸出的 CSV 啟用來源為準，檢查最新產品、AI、裝置、軟體、運輸與重大功能消息。初始清單包含 [Engadget](https://www.engadget.com/)、[The Verge](https://www.theverge.com/)、[TechCrunch](https://techcrunch.com/)、[WIRED](https://www.wired.com/)、[Ars Technica](https://arstechnica.com/)、[Cool3c](https://www.cool3c.com/)、[Yahoo奇摩科技](https://tw.news.yahoo.com/tech-news/)、[TechOrange 科技報橘](https://techorange.com/) 與 [數位時代](https://www.bnext.com.tw/)；本機 CSV 新增或停用的來源會反映在清單中。
+2. 上述媒體構成每日候選來源池，用於發現候選、交叉核對與補充國際／台灣市場脈絡。先以批次搜尋或聚合頁掃描多個來源；初選少於 5 則時，按第 4 條再做一輪定向補查，不必逐站無限深挖。只有出現合格候選線索時才開啟文章與官方來源。當日來源筆記需列出兩輪實際搜尋範圍、候選數、去重與排除原因。
 3. 對每個候選涉及的公司或專案，優先回查官方 newsroom、產品頁、新聞稿、release notes、changelog、支援文件或監管文件。規格、價格、上市日、支援市場、效能與公司聲明，原則上以可定位日期的官方資料為準；官方資料不存在時，需由至少一個可靠媒體來源明確標示不確定性。
 4. 若來源因付費牆、robots、登入、地區限制或技術錯誤無法讀取，來源筆記需記錄失敗，並改用該站 RSS、搜尋結果中的原始文章、其他可靠媒體或官方來源補查；不可把「無法讀取」當成「沒有新聞」。
 5. 商品快報、Shopping guide、特價、業配、評論、觀點、傳聞與舊產品導購不得單獨構成產品新聞；只有其中指出可核實的新品、正式發布、預購／上市、公開測試、重大功能或可用性變更時才列為候選。
