@@ -1,21 +1,26 @@
 ---
 title: "科技產品新聞最近 7 天比對表"
 type: product-news-ledger-recent
-updated: 2026-09-30
+updated: 2026-10-01
 status: generated
 tags: [daily-news, tech-products, deduplication, recent]
 ---
 
 # 科技產品新聞最近 7 天比對表
 
-本檔是歷史 `rg` 搜尋沒有命中時的二次確認清單，可以完整讀取。涵蓋收錄日期 `2026-09-24` 至 `2026-09-30`；產品是否符合精確 168 小時發布窗，仍以當日來源筆記判定。
+本檔是歷史 `rg` 搜尋沒有命中時的二次確認清單，可以完整讀取。涵蓋收錄日期 `2026-09-25` 至 `2026-10-01`；產品是否符合精確 168 小時發布窗，仍以當日來源筆記判定。
 
-- 掃描日報：105 份。
+- 掃描日報：106 份。
 - 最近 7 天項目：29 則。
 - 完整歷史只按需 `rg`：`wiki/daily/product-news-ledger.md`
 
 | 公司 | 產品 | 更新內容 | 發佈時間 | 收錄日期 | 狀態 | 來源網址 | 比對鍵 |
 |---|---|---|---|---|---|---|---|
+| OpenAI | Codex in the cloud、reusable development environments | OpenAI 擴充 Codex cloud，以可重用環境支援手機與跨裝置接續程式任務 | 2026-09-29（OpenAI 官方發布日期；未提供獨立時分） | 2026-10-01 | 首次收錄 | https://openai.com/index/devday-2026-recap/<br>https://help.openai.com/en/articles/6825453-chatgpt-release-notes | 69c2fe103ce9 |
+| OpenAI | Dots | OpenAI 推出 Dots 常駐代理，讓 AI 在獨立雲端電腦持續執行工作 | 2026-09-30 02:51:35（Asia/Taipei；AP 2026-09-29 18:51:35 UTC） | 2026-10-01 | 首次收錄 | https://openai.com/index/introducing-dots/<br>https://apnews.com/article/77b6b8888145869206996d7509d24256 | fd0aa3fcdf82 |
+| OpenAI | ChatGPT Space、Pages | OpenAI 上線 ChatGPT Space，讓團隊、ChatGPT 與 Dots 共用知識和工作頁面 | 2026-09-29（OpenAI 官方發布日期；未提供獨立時分） | 2026-10-01 | 首次收錄 | https://openai.com/index/devday-2026-recap/ | dd0c7d8b17ed |
+| Instinct | Instinct Selections | Instinct 推出 Selections 主動推薦商品，引發未經要求推播與商業模式疑慮 | 2026-09-30 23:56:00（Asia/Taipei；TechCrunch 08:56 PDT） | 2026-10-01 | 首次收錄 | https://techcrunch.com/2026/09/30/instincts-new-product-recommendations-are-giving-some-users-the-ick/ | 4fcbb23c443c |
+| Google DeepMind | Gemini 4 Argon、Fairwind Program | Google 公布 Gemini 4 Argon，先向可信任資安團隊開放而非全面上市 | 2026-10-01 04:00:05（Asia/Taipei；Axios 2026-09-30 20:00:05 UTC） | 2026-10-01 | 首次收錄 | https://deepmind.google/models/gemini/<br>https://www.axios.com/2026/09/30/google-gemini-4<br>https://arstechnica.com/google/2026/09/google-announces-gemini-4-argon-ai-model-but-you-cant-use-it-yet/ | eb96660280a4 |
 | U.S. Government | America.gov | 美國政府正式啟用 America.gov，以 AI 問答整合聯邦服務入口 | 2026-09-29 23:18:33（Asia/Taipei；AP 15:18:33 UTC） | 2026-09-30 | 首次收錄 | https://www.whitehouse.gov/fact-sheets/2026/09/fact-sheet-president-donald-j-trump-streamlines-access-to-government-services-through-america-gov/<br>https://apnews.com/article/ff86fcb161c1fe89538d6ecb294ea353 | ab33d87ce2bc |
 | Shopify | WebMCP support for checkout | Shopify 將 WebMCP 延伸到 checkout，browser agents 可在買家確認後完成訂單 | 2026-09-29 03:33:00（Asia/Taipei；TechCrunch 2026-09-28 12:33 PDT） | 2026-09-30 | 首次收錄 | https://shopify.dev/changelog/posts/webmcp-support-for-checkout<br>https://techcrunch.com/2026/09/28/shopify-opens-checkout-to-browser-based-ai-agents/ | dcf83c71fd2f |
 | OpenAI、Amazon Web Services | GPT-6.1 Sol、Amazon Bedrock | OpenAI 推出 GPT-6.1 Sol，並在 Work、Codex、API 與 Amazon Bedrock 上線 | 2026-09-29（OpenAI 與 AWS 官方發布日期；未提供共同時分） | 2026-09-30 | 首次收錄 | https://deploymentsafety.openai.com/gpt-6-1-sol/respecting-auto-review<br>https://developers.openai.com/api/docs/models/gpt-6.1-sol<br>https://aws.amazon.com/about-aws/whats-new/2026/09/openai-gpt-6-1-sol-on-amazon-bedrock/ | f1e98b401713 |
@@ -40,8 +45,3 @@ tags: [daily-news, tech-products, deduplication, recent]
 | Meta、EssilorLuxottica | Ray-Ban Meta Audio、Ray-Ban Meta Gen 3 | Meta 推出 Ray-Ban Meta Audio 並讓 Ray-Ban Meta Gen 3 正式開賣 | 2026-09-23（Meta 官方發布日期；未提供時分） | 2026-09-25 | 首次收錄 | https://about.fb.com/news/2026/09/introducing-ray-ban-meta-audio-glasses-new-styles-plus-muse/<br>https://www.engadget.com/2267213/ray-ban-meta-gen-3-hands-on-better-battery-life/ | 544a76f14411 |
 | Google | Google Photos | Google Photos 推出 Redact 遮蔽筆，並更新 Moods、Wardrobe 與 Remix 模板 | 2026-09-24（Google 官方發布日期；未提供時分） | 2026-09-25 | 首次收錄 | https://blog.google/products-and-platforms/products/photos/google-photos-updates/ | d65cac2d0ba5 |
 | Google | Google Health、Pixel Watch 3／4／5、Health Guardian | Google Health Guardian 開始向 Pixel Watch 推送血壓與胰島素阻抗趨勢 | 2026-09-24（Google 官方發布日期；未提供時分） | 2026-09-25 | 續報 | https://blog.google/products-and-platforms/products/google-health/health-guardian-features-live/<br>https://blog.google/products-and-platforms/products/google-health/pixel-watch-health-guardian/ | d23751fee131 |
-| Xiaomi | Xiaomi 18 Pro、Xiaomi 18 Pro Max | Xiaomi 發布 18 Pro 與 18 Pro Max，加入背面副螢幕並確認國際版本 | 2026-09-24 01:19（Asia/Taipei；El Español 報導換算） | 2026-09-24 | 首次收錄 | https://www.cool3c.com/<br>https://www.elespanol.com/elandroidelibre/20260923/xiaomi-confirma-llegada-moviles-pro-espana-bestia-pantallas-ultimo-chip-qualcomm/1003744394538_0.amp.html<br>https://new.c.mi.com/global/post/2137775 | 85d9c445bee7 |
-| Razer | Mako、Mako X | Razer 重啟 Mako 喇叭品牌，推出 2.1 聲道 Mako 與精簡版 Mako X | 2026-09-22（Razer 官方發布日期；未提供時分） | 2026-09-24 | 首次收錄 | https://www.razer.com/newsroom/product-news/mako-line<br>https://www.razer.com/eu-en/gaming-speakers/razer-mako-x<br>https://www.cool3c.com/ | 790a3ff3c736 |
-| Microsoft | Surface Pro 12、Surface Laptop 13 | Microsoft 推出搭載 Snapdragon X2 Plus 的 Surface Pro 12 與 Surface Laptop 13 | 2026-09-24 05:30（Asia/Taipei；依 Engadget 頁面標示 9/23 16:30 EST 字面換算） | 2026-09-24 | 首次收錄 | https://www.microsoft.com/en-us/surface/devices/surface-pro?icid=mscom_marcom_FH3a_SurfacePro12In_Fall27<br>https://www.engadget.com/2266680/microsofts-new-surface-pro-12-and-surface-laptop-13-feature-snapdragon-x2-plus-chips/ | fa04512e5098 |
-| Logitech | Yeti 2 | Logitech 推出 Yeti 2 USB 麥克風，加入距離感測與 AI 降噪 | 2026-09-24 01:01（Asia/Taipei；依 Engadget 頁面標示 9/23 12:01 EST 字面換算） | 2026-09-24 | 首次收錄 | https://www.engadget.com/2265713/logitechs-yeti-2-brings-the-17-year-old-usb-mic-into-the-modern-age/<br>https://www.logitechg.com/en-us | c289d52dd6f2 |
-| Eight Sleep | Pod 6 | Eight Sleep 發布 Pod 6，感測器增至 18 個並加快溫控 | 2026-09-23 20:00（Asia/Taipei；依 Engadget 頁面標示 9/23 07:00 EST 字面換算） | 2026-09-24 | 首次收錄 | https://www.eightsleep.com/de/<br>https://www.engadget.com/2264386/eight-sleep-announces-the-pod-6-its-newest-smart-mattress-cover/ | 7cbcf99ccaa2 |

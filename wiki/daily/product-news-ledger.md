@@ -1,7 +1,7 @@
 ---
 title: "科技產品新聞歷史比對表"
 type: product-news-ledger
-updated: 2026-09-30
+updated: 2026-10-01
 status: generated
 tags: [daily-news, tech-products, deduplication, provenance]
 ---
@@ -10,14 +10,19 @@ tags: [daily-news, tech-products, deduplication, provenance]
 
 此表由 `scripts/build_product_news_ledger.py` 掃描所有歷史日報的科技／AI 區段自動產生。**模型不得整份讀取本檔**；每個候選只用公司名、產品名、更新動作與比對鍵執行 `rg`，並只讀命中列。
 
-- 掃描日報：105 份。
-- 擷取科技／AI 項目：627 則。
+- 掃描日報：106 份。
+- 擷取科技／AI 項目：632 則。
 - 更新方式：`python3 scripts/build_product_news_ledger.py`
 - 查詢方式：使用窄化組合 pattern，例如 `rg -n -i '公司.*產品|產品.*公司|比對鍵' wiki/daily/product-news-ledger.md`，不要用公司名單獨匹配大量列。
 - 無命中時：完整讀取 `wiki/daily/product-news-recent-7d.md` 做最後確認，不讀取本檔全文。
 
 | 公司 | 產品 | 更新內容 | 發佈時間 | 收錄日期 | 狀態 | 來源網址 | 比對鍵 |
 |---|---|---|---|---|---|---|---|
+| OpenAI | Codex in the cloud、reusable development environments | OpenAI 擴充 Codex cloud，以可重用環境支援手機與跨裝置接續程式任務 | 2026-09-29（OpenAI 官方發布日期；未提供獨立時分） | 2026-10-01 | 首次收錄 | https://openai.com/index/devday-2026-recap/<br>https://help.openai.com/en/articles/6825453-chatgpt-release-notes | 69c2fe103ce9 |
+| OpenAI | Dots | OpenAI 推出 Dots 常駐代理，讓 AI 在獨立雲端電腦持續執行工作 | 2026-09-30 02:51:35（Asia/Taipei；AP 2026-09-29 18:51:35 UTC） | 2026-10-01 | 首次收錄 | https://openai.com/index/introducing-dots/<br>https://apnews.com/article/77b6b8888145869206996d7509d24256 | fd0aa3fcdf82 |
+| OpenAI | ChatGPT Space、Pages | OpenAI 上線 ChatGPT Space，讓團隊、ChatGPT 與 Dots 共用知識和工作頁面 | 2026-09-29（OpenAI 官方發布日期；未提供獨立時分） | 2026-10-01 | 首次收錄 | https://openai.com/index/devday-2026-recap/ | dd0c7d8b17ed |
+| Instinct | Instinct Selections | Instinct 推出 Selections 主動推薦商品，引發未經要求推播與商業模式疑慮 | 2026-09-30 23:56:00（Asia/Taipei；TechCrunch 08:56 PDT） | 2026-10-01 | 首次收錄 | https://techcrunch.com/2026/09/30/instincts-new-product-recommendations-are-giving-some-users-the-ick/ | 4fcbb23c443c |
+| Google DeepMind | Gemini 4 Argon、Fairwind Program | Google 公布 Gemini 4 Argon，先向可信任資安團隊開放而非全面上市 | 2026-10-01 04:00:05（Asia/Taipei；Axios 2026-09-30 20:00:05 UTC） | 2026-10-01 | 首次收錄 | https://deepmind.google/models/gemini/<br>https://www.axios.com/2026/09/30/google-gemini-4<br>https://arstechnica.com/google/2026/09/google-announces-gemini-4-argon-ai-model-but-you-cant-use-it-yet/ | eb96660280a4 |
 | U.S. Government | America.gov | 美國政府正式啟用 America.gov，以 AI 問答整合聯邦服務入口 | 2026-09-29 23:18:33（Asia/Taipei；AP 15:18:33 UTC） | 2026-09-30 | 首次收錄 | https://www.whitehouse.gov/fact-sheets/2026/09/fact-sheet-president-donald-j-trump-streamlines-access-to-government-services-through-america-gov/<br>https://apnews.com/article/ff86fcb161c1fe89538d6ecb294ea353 | ab33d87ce2bc |
 | Shopify | WebMCP support for checkout | Shopify 將 WebMCP 延伸到 checkout，browser agents 可在買家確認後完成訂單 | 2026-09-29 03:33:00（Asia/Taipei；TechCrunch 2026-09-28 12:33 PDT） | 2026-09-30 | 首次收錄 | https://shopify.dev/changelog/posts/webmcp-support-for-checkout<br>https://techcrunch.com/2026/09/28/shopify-opens-checkout-to-browser-based-ai-agents/ | dcf83c71fd2f |
 | OpenAI、Amazon Web Services | GPT-6.1 Sol、Amazon Bedrock | OpenAI 推出 GPT-6.1 Sol，並在 Work、Codex、API 與 Amazon Bedrock 上線 | 2026-09-29（OpenAI 與 AWS 官方發布日期；未提供共同時分） | 2026-09-30 | 首次收錄 | https://deploymentsafety.openai.com/gpt-6-1-sol/respecting-auto-review<br>https://developers.openai.com/api/docs/models/gpt-6.1-sol<br>https://aws.amazon.com/about-aws/whats-new/2026/09/openai-gpt-6-1-sol-on-amazon-bedrock/ | f1e98b401713 |

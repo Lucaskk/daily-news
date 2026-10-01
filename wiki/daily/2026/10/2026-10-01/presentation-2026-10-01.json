@@ -1,0 +1,67 @@
+{
+  "images": {
+    "t4": {
+      "src": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/g4_30-09-26_key-art_blog.width-1300.png",
+      "alt": "Google Gemini 4 Argon 官方主視覺",
+      "caption": "Google 官方 Gemini 4 Argon 發布主視覺。",
+      "credit": "Google",
+      "source_url": "https://deepmind.google/models/gemini/",
+      "original_url": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/g4_30-09-26_key-art_blog.width-1300.png",
+      "fit": "contain"
+    },
+    "t5": {
+      "src": "https://techcrunch.com/wp-content/uploads/2023/11/GettyImages-1465545513.jpg?resize=1200,686",
+      "alt": "AI 助理與商品推薦概念圖",
+      "caption": "TechCrunch 報導使用的 AI assistant 主題圖；非 Instinct 介面截圖。",
+      "credit": "TechCrunch／Getty Images",
+      "source_url": "https://techcrunch.com/2026/09/30/instincts-new-product-recommendations-are-giving-some-users-the-ick/",
+      "original_url": "https://techcrunch.com/wp-content/uploads/2023/11/GettyImages-1465545513.jpg?resize=1200,686",
+      "fit": "cover"
+    },
+    "5": {
+      "src": "https://i.guim.co.uk/img/media/7ce1cdc2fc28979a647765972ecf7471ecf599a7/318_0_4380_3506/master/4380.jpg?width=1200&height=630&quality=85&auto=format&fit=crop&precrop=40:21,offset-x50,offset-y0",
+      "alt": "英國境內的中國國旗",
+      "caption": "MI5 對 UK 大學發布中國情報合作警報的報導配圖。",
+      "credit": "The Guardian／Kin Cheung／AP",
+      "source_url": "https://www.theguardian.com/uk-news/2026/sep/30/mi5-issues-spy-alert-over-body-linked-chinese-state-stealing-vital-uk-research-universities",
+      "original_url": "https://i.guim.co.uk/img/media/7ce1cdc2fc28979a647765972ecf7471ecf599a7/318_0_4380_3506/master/4380.jpg",
+      "fit": "cover"
+    },
+    "6": {
+      "src": "https://i.guim.co.uk/img/media/08fa0b35f5fbebc8400b2540d9fc370a9df1c1ff/270_0_4694_3755/master/4694.jpg?width=1200&height=630&quality=85&auto=format&fit=crop&precrop=40:21,offset-x50,offset-y0",
+      "alt": "Grenfell Tower Memorial Wall",
+      "caption": "Grenfell Tower Memorial Wall，紀念 2017 年火災罹難者。",
+      "credit": "The Guardian／Ben Bauer／PA",
+      "source_url": "https://www.theguardian.com/uk-news/2026/sep/30/grenfell-fire-police-investigators-files-prosecutors",
+      "original_url": "https://i.guim.co.uk/img/media/08fa0b35f5fbebc8400b2540d9fc370a9df1c1ff/270_0_4694_3755/master/4694.jpg",
+      "fit": "cover"
+    },
+    "7": {
+      "src": "https://i.guim.co.uk/img/media/0e1841eede76860d01739f1ecad4e092dd2275ab/780_147_3980_3186/master/3980.jpg?width=1200&height=630&quality=85&auto=format&fit=crop&precrop=40:21,offset-x50,offset-y0",
+      "alt": "兩韓邊境的軍事哨所與鐵絲網",
+      "caption": "South Korea 與 North Korea 邊境哨所；報導配圖。",
+      "credit": "The Guardian／Ahn Young-joon／AP",
+      "source_url": "https://www.theguardian.com/world/2026/sep/30/south-korea-apology-north-korea-mine-injures-soldiers",
+      "original_url": "https://i.guim.co.uk/img/media/0e1841eede76860d01739f1ecad4e092dd2275ab/780_147_3980_3186/master/3980.jpg",
+      "fit": "cover"
+    },
+    "8": {
+      "src": "https://i.guim.co.uk/img/media/d6322487e65959fb8cbf133843b8295362b0ce38/0_0_3825_3061/master/3825.jpg?width=1200&height=630&quality=85&auto=format&fit=crop&precrop=40:21,offset-x50,offset-y0",
+      "alt": "Malaysia 遣返 Myanmar 公民時的巴士與移民官員",
+      "caption": "Malaysia 遣返 Myanmar 公民行動的現場照片。",
+      "credit": "The Guardian／Arif Kartono／AFP／Getty Images",
+      "source_url": "https://www.theguardian.com/world/2026/sep/30/malaysia-begins-myanmar-repatriations-despite-warnings-from-un-and-rights-groups",
+      "original_url": "https://i.guim.co.uk/img/media/d6322487e65959fb8cbf133843b8295362b0ce38/0_0_3825_3061/master/3825.jpg",
+      "fit": "cover"
+    },
+    "9": {
+      "src": "https://i.guim.co.uk/img/media/8191733e961c4cf8ba128c7218b7128587cd5350/0_250_1510_1208/master/1510.jpg?width=1200&height=630&quality=85&auto=format&fit=crop&precrop=40:21,offset-x50,offset-y0",
+      "alt": "Indonesia Ombudsman 公布的疑似豪華監獄單位",
+      "caption": "Indonesia Ombudsman 公布的 Cibinong prison 住宅式單位。",
+      "credit": "The Guardian／Ombudsman Republik Indonesia",
+      "source_url": "https://www.theguardian.com/world/2026/sep/30/indonesia-prison-officials-suspended-luxury-apartments-prisoners",
+      "original_url": "https://i.guim.co.uk/img/media/8191733e961c4cf8ba128c7218b7128587cd5350/0_250_1510_1208/master/1510.jpg",
+      "fit": "cover"
+    }
+  }
+}
