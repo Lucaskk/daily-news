@@ -4,48 +4,39 @@
     "name": "南亞科",
     "market": "TWSE",
     "market_label": "上市",
-    "date": "2026-09-30",
+    "date": "2026-10-01",
     "close": 519.0,
-    "change": 13.0,
-    "open": 511.0,
-    "high": 520.0,
-    "low": 507.0,
-    "volume": 38720000.0,
-    "transactions": 30129.0,
+    "change": 0.0,
+    "open": 515.0,
+    "high": 522.0,
+    "low": 510.0,
+    "volume": 26212000.0,
+    "transactions": 44369.0,
     "source_url": "https://mis.twse.com.tw/stock/",
     "daily_quote": {
-      "date": "2026-09-29",
-      "close": 506.0,
-      "change": 3.0,
-      "open": 491.0,
-      "high": 507.0,
-      "low": 488.0,
-      "volume": 24966274.0,
+      "date": "2026-09-30",
+      "close": 519.0,
+      "change": 13.0,
+      "open": 511.0,
+      "high": 520.0,
+      "low": 507.0,
+      "volume": 40070207.0,
       "source_url": "https://openapi.twse.com.tw/v1/exchangeReport/STOCK_DAY_ALL"
     },
-    "quote_kind": "最新成交價",
-    "quote_time": "2026-09-30 13:30:00",
-    "previous_close": 506.0,
-    "change_percent": 2.5691699604743086,
+    "quote_kind": "今日最新成交價",
+    "quote_time": "2026-10-01 13:30:00",
+    "previous_close": 519.0,
+    "change_percent": 0.0,
     "is_intraday": false,
-    "volume_lots": 38720.0,
-    "best_bid": 518.0,
-    "best_ask": 519.0,
+    "volume_lots": 26212.0,
+    "best_bid": 519.0,
+    "best_ask": 520.0,
     "price_basis": "latest_trade",
     "quote_source": "TWSE MIS 盤中資訊",
     "quote_api_url": "https://mis.twse.com.tw/stock/api/getStockInfo.jsp?ex_ch=tse_2408.tw&json=1&delay=0"
   },
   "market_data": {
     "bars": [
-      {
-        "time": "2024-06-12",
-        "open": 64.6,
-        "high": 64.7,
-        "low": 63.7,
-        "close": 64.6,
-        "volume": 5571856.0,
-        "turnover": 2979.0
-      },
       {
         "time": "2024-06-13",
         "open": 65.1,
@@ -5074,8 +5065,17 @@
         "high": 520.0,
         "low": 507.0,
         "close": 519.0,
-        "volume": 38720000.0,
-        "turnover": 44369.0,
+        "volume": 40070207.0,
+        "turnover": 44369.0
+      },
+      {
+        "time": "2026-10-01",
+        "open": 515.0,
+        "high": 522.0,
+        "low": 510.0,
+        "close": 519.0,
+        "volume": 26212000.0,
+        "turnover": 31248.0,
         "intraday": false
       }
     ],
@@ -5083,7 +5083,7 @@
     "history_url": "https://api.finmindtrade.com/api/v4/data?dataset=TaiwanStockPrice&data_id=2408&start_date=2024-04-14",
     "intraday_url": "https://mis.twse.com.tw/stock/",
     "intraday_api_url": "https://mis.twse.com.tw/stock/api/getStockInfo.jsp?ex_ch=tse_2408.tw&json=1&delay=0",
-    "updated_at": "2026-09-30 13:30:00"
+    "updated_at": "2026-10-01 13:30:00"
   },
   "years": [
     "2025",
@@ -5320,7 +5320,7 @@
     ]
   },
   "metadata": {
-    "fetched_at": "2026-10-01T00:01:08+08:00",
+    "fetched_at": "2026-10-01T23:29:53+08:00",
     "source": "FinMind API, TWSE MIS, TWSE OpenAPI, TPEx OpenAPI, 公開資訊觀測站",
     "source_urls": {
       "finmind_fundamental": "https://finmind.github.io/tutor/TaiwanMarket/Fundamental/",
@@ -5472,7 +5472,7 @@
   },
   "insights": {
     "snapshot": [
-      "最新成交價為 519.00 元，時間 2026-09-30 13:30:00，較昨收 +13.00 元（+2.57%）。",
+      "今日最新成交價為 519.00 元，時間 2026-10-01 13:30:00，較昨收 0.00 元（0.00%）。",
       "最近財報年度 2025 年營收 666 億元，較 2024 年 +95.1%。",
       "2025 年EPS 為 2.13 元，ROE 為 3.9%。"
     ],
