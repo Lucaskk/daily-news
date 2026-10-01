@@ -57,3 +57,4 @@ tags: [daily-news, sources, provenance, deduplication]
 - 唯一私人 LINE watchdog 於 `2026-10-01 08:12:14 +08:00` 回報 `Sent LINE message`、exit 0；未執行其他 sender，也未重送。
 - 發布後產品表為 632 筆／106 份日報，最近七日仍為 29 筆。
 - 68 項 Python 測試、JavaScript／結構檢查與 15 篇 article／全球 1–10 順序通過；強制 pipeline `check --date 2026-10-01` 回傳 exit 0、`stage=complete`。
+- 索引、總覽、日誌與最終來源收據另以窄範圍 commit `3ba7b9a8aa499ee57b74ebeb6dc8a3c9688b9400` 發布。

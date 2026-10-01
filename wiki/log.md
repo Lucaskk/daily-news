@@ -6,6 +6,7 @@
 - 選題前重建產品表為 627 筆／105 份既有日報；完整歷史只用候選窄 `rg`，無同一變更後才讀最近 7 天 29 列。固定國際／台灣來源池與官方頁已檢查，研究模式維持 `legacy`。
 - pipeline content commit `413821e7942c2c3cc2afc8c24b3a3205c3d9a28e`；Pages 日期頁、最新與根入口通過完整位元組雜湊驗證。唯一私人 watchdog 於 08:12:14 回報 `Sent LINE message`、exit 0；未執行其他 LINE sender。
 - 68 項 Python 測試、JavaScript／結構檢查及 15 篇 article／全球 1–10 順序通過；強制 pipeline `check` exit 0、`stage=complete`。公開：https://lucaskk.github.io/daily-news/wiki/daily/2026/10/2026-10-01/slides-2026-10-01.html?v=20261001-081059-reader
+- 索引、總覽、日誌與最終來源收據另以窄範圍 commit `3ba7b9a8aa499ee57b74ebeb6dc8a3c9688b9400` 發布；localhost 4173 最新入口回應 HTTP 200。
 
 ## [2026-09-30] ingest | Daily global and tech AI news
 
