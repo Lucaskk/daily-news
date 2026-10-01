@@ -80,6 +80,24 @@ class WatchdogTests(unittest.TestCase):
         self.assertEqual(store.read_sources(source)[0]['origin'], 'line')
         self.assertEqual(sent.call_count, 1)
 
+    def test_list_command_reads_local_csv_and_records_completion_without_editing(self):
+        import tech_source_store as store
+        source = self.root/'repo/wiki/daily/config/tech-sources.csv'
+        store.write_sources([dict(zip(store.FIELDS, ['https://example.com/', '', 'Local site',
+                                                    '科技', 'false', 'local', '本地備註']))], source)
+        before = source.read_bytes()
+        key = 'b' * 64
+        request = {'action': 'list_sources', 'date': DAY, 'event_key': key,
+                   'requested_at': NOW.isoformat()}
+        with patch.object(w, 'send_once', return_value=True) as sent:
+            self.fetch.side_effect = [json.dumps([{'name': key + '.json'}]).encode(),
+                                      json.dumps(request).encode()]
+            SOURCE_PROCESSOR(NOW)
+        self.assertIn('本地備註', sent.call_args.args[2])
+        self.assertIn('停用', sent.call_args.args[2])
+        self.assertEqual(source.read_bytes(), before)
+        self.assertTrue((self.root/f'line-source-sent-{key}').is_file())
+
     def backfill_fixture(self):
         day = '2026-09-08'
         folder = w.NEWS_REPO / f'wiki/daily/2026/09/{day}'

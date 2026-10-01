@@ -76,6 +76,29 @@ def add_source(url, website='', category='其他', origin='local', note='', path
     return True
 
 
+def source_list_messages(rows, checked_at):
+    """Include every CSV field and split text below LINE's 5000 UTF-16 unit limit."""
+    labels = {'url': '網址', 'added_at': '加入時間', 'website': '網站名稱',
+              'category': '類別', 'enabled': '啟用狀態', 'origin': '加入來源', 'note': '備註'}
+    text = f'目前網址清單：共 {len(rows)} 筆（含停用）\n查詢時間：{checked_at}\n'
+    for index, row in enumerate(rows, 1):
+        text += f'\n[{index}]\n'
+        for field in FIELDS:
+            value = row[field] or ('未記錄' if field == 'added_at' else '未填寫')
+            if field == 'enabled':
+                value = '啟用' if value == 'true' else '停用'
+            text += f'{labels[field]}：{value}\n'
+    parts, current, units = [], [], 0
+    for char in text:
+        size = len(char.encode('utf-16-le')) // 2
+        if units + size > 4500:
+            parts.append(''.join(current)); current, units = [], 0
+        current.append(char); units += size
+    if current:
+        parts.append(''.join(current))
+    return [f'網址清單 {index}/{len(parts)}\n{part}' for index, part in enumerate(parts, 1)]
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     sub = parser.add_subparsers(dest='action', required=True)

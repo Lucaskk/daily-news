@@ -356,7 +356,7 @@ def process_source_commands(now: datetime) -> None:
     if not isinstance(entries, list):
         raise ValueError("Source request listing is invalid")
     sys.path.insert(0, str(NEWS_REPO / "scripts"))
-    from tech_source_store import add_source
+    from tech_source_store import add_source, read_sources, source_list_messages
     for entry in entries:
         name = entry.get("name", "") if isinstance(entry, dict) else ""
         if not re.fullmatch(r"[0-9a-f]{64}\.json", name):
@@ -368,12 +368,28 @@ def process_source_commands(now: datetime) -> None:
         request_url = ("https://raw.githubusercontent.com/Lucaskk/daily-news/main/"
                        f"wiki/daily/source-requests/{today}/{name}?t={int(now.timestamp())}")
         request = json.loads(fetch(request_url, headers={"Cache-Control": "no-cache"}))
-        if (not isinstance(request, dict) or request.get("action") != "add_source"
+        if (not isinstance(request, dict) or request.get("action") not in {"add_source", "list_sources"}
                 or request.get("date") != today or request.get("event_key") != key):
             continue
         stamp = datetime.fromisoformat(request["requested_at"].replace("Z", "+00:00"))
         if (stamp.tzinfo is None or stamp.astimezone(TAIPEI).date() != now.date()
                 or stamp > now + timedelta(minutes=1)):
+            continue
+        if request["action"] == "list_sources":
+            snapshot = ROOT / f"line-source-list-{key}.json"
+            if not snapshot.is_file():
+                rows = read_sources(NEWS_REPO / "wiki/daily/config/tech-sources.csv")
+                messages = source_list_messages(rows, now.isoformat(timespec="seconds"))
+                write_atomic(snapshot, json.dumps(messages, ensure_ascii=False) + "\n")
+            messages = json.loads(snapshot.read_text())
+            env = load_env(ENV_PATH)
+            for index, message in enumerate(messages):
+                if not send_once(require(env, "LINE_CHANNEL_ACCESS_TOKEN"), require(env, "LINE_TO_ID"),
+                                 message, f"source-list-{key}-{index}", now,
+                                 ROOT / f"line-source-list-sent-{key}-{index}"):
+                    break
+            else:
+                write_atomic(done, today + "\n")
             continue
         url = request["url"]
         if not isinstance(url, str):

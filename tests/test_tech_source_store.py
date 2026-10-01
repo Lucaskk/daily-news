@@ -43,3 +43,20 @@ class SourceStoreTests(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
+
+class SourceListingTests(unittest.TestCase):
+    def test_all_fields_and_disabled_sources_are_included(self):
+        row = dict(zip(store.FIELDS, ['https://example.com/', '', 'Example', '科技', 'false', 'local', '測試備註']))
+        messages = store.source_list_messages([row], '2026-10-01T12:00:00+08:00')
+        body = '\n'.join(messages)
+        for label in ('網址', '加入時間', '網站名稱', '類別', '啟用狀態', '加入來源', '備註'):
+            self.assertIn(label + '：', body)
+        self.assertIn('停用', body)
+        self.assertIn('未記錄', body)
+
+    def test_long_unicode_messages_are_split_without_losing_content(self):
+        row = dict(zip(store.FIELDS, ['https://example.com/', '', 'Example', '科技', 'true', 'local', '🚀' * 6000]))
+        messages = store.source_list_messages([row], 'now')
+        self.assertGreater(len(messages), 1)
+        self.assertEqual(sum(message.count('🚀') for message in messages), 6000)
+        self.assertTrue(all(len(message.encode('utf-16-le')) // 2 <= 5000 for message in messages))
