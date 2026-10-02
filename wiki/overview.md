@@ -2,7 +2,7 @@
 title: "Overview"
 type: overview
 created: 2026-05-24
-updated: 2026-10-01
+updated: 2026-10-02
 status: seed
 tags: [overview]
 sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
@@ -19,6 +19,11 @@ sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
 - 抽出持續出現的人物、組織、事件、政策、技術與市場概念。
 - 維護跨來源的矛盾、時間線、趨勢與待查問題。
 - 將重要查詢結果回寫成可累積的 wiki 頁面。
+
+## 2026-10-02 Daily News Synthesis
+
+- 產品更新同時涉及既有硬體能力、設備設計與使用權限：Sony 將 AI 升頻帶到一般 PS5，Kindle／HP 更新裝置；政府用 Claude 從 beta 轉正式供應，Reddit 則公布 RSS／API 退場時程。
+- 全球事件聚焦可驗證的新執行節點：加拿大加速 Pacific Link 審批、芬蘭啟動議員住宅侵入調查、Johal 實際保釋、Good 家屬提出訴訟及康乃爾調查權限移轉。基輔學校受擊標示為前一日電網攻擊後的新事件。詳見 [本日日報](daily/2026/10/2026-10-02/daily-news-2026-10-02.md)。
 
 ## 2026-10-01 Daily News Synthesis
 

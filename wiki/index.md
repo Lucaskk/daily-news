@@ -2,7 +2,7 @@
 title: "Knowledge Base Index"
 type: overview
 created: 2026-05-24
-updated: 2026-10-01
+updated: 2026-10-02
 status: seed
 tags: [index]
 sources: []
@@ -22,6 +22,7 @@ sources: []
 
 ## Daily News
 
+- [2026-10-02 Daily News](daily/2026/10/2026-10-02/daily-news-2026-10-02.md) - Sony QSSR、Kindle、HP 筆電、政府用 Claude 與 Reddit 介面退場；全球涵蓋加拿大管線、基輔學校、法國抗議及新的司法程序。
 - [2026-10-01 Daily News](daily/2026/10/2026-10-01/daily-news-2026-10-01.md) - OpenAI Dots、ChatGPT Space、Codex cloud、Gemini 4 Argon 與 Instinct Selections 先列；全球涵蓋 Ukraine 電網攻擊、U.S. 撤出 Iraq、Syria 武器出口政策與 MI5 警報等 10 則。
 - [2026-10-01 Slides](daily/2026/10/2026-10-01/slides-2026-10-01.html) - 手機閱讀版，含產品優先、逐篇時間與來源、原頁完整報告及單篇 ChatGPT 後續提問。
 

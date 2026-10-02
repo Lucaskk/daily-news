@@ -1,5 +1,12 @@
 # Knowledge Base Log
 
+## [2026-10-02] ingest | Daily global and tech AI news
+
+- 恢復 08:00 排程失敗：系統在 08:01:13 回報所選模型服務滿載（capacity），不是已確認的用量額度耗盡或 LINE 錯誤。
+- 保留原始研究截點 08:00:29，分批建立來源筆記、日報及證據；五則科技產品與十則全球新聞。
+- pipeline commit `96c8e8666504c3e0bb5a155a286ab0094f5d2442`；Pages 日期／latest／根入口 HTTP 200 與雜湊通過，11:25:48 唯一 watchdog 成功送出 LINE。check exit 0、stage=complete；手機與桌面瀏覽器驗證通過。
+- 公開：https://lucaskk.github.io/daily-news/wiki/daily/2026/10/2026-10-02/slides-2026-10-02.html?v=20261002-112441-reader
+
 ## [2026-10-01] ingest | Daily global and tech AI news
 
 - 固定截點 08:01:41 Asia/Taipei；全球前 24 小時、產品前 168 小時。5 則產品先列、全球恰好 10 則；續報引用前次日期並說明新增節點。

@@ -159,3 +159,11 @@ status: research-complete
 
 - 沿用 08:00:29 原截點完成分批研究；未重新 begin、未更改排程、未繞過 LINE 去重。
 - 固定 renderer 與 pipeline finish 負責日期頁、latest、Pages 雜湊與唯一私人 watchdog；最終收據待完成檢查記錄。
+
+## 發布與事故收據
+
+- 08:00 排程於 08:01:13 系統失敗，原始系統分類訊息為 Selected model is at capacity。這是模型服務容量不足，非已確認的帳號額度耗盡、LINE API 或 git 錯誤。已從原新聞對話的最新 turn 核對。
+- 沿用原截點完成五則產品與十則全球新聞，pipeline commit `96c8e8666504c3e0bb5a155a286ab0094f5d2442`，reader `20261002-112441-reader`。
+- 日期頁、latest 與根入口均通過 HTTP 200 及 SHA-256 位元組驗證。唯一私人 watchdog 於 11:25:48 回報 Sent LINE message，exit 0；沒有強制重送。
+- mandatory check exit 0、stage=complete。結構及 JS 語法通過；320／390／1440px 瀏覽器檢查通過圖片、報告展開、逐篇來源／ChatGPT 上下文、分享與導覽。
+- 公開：https://lucaskk.github.io/daily-news/wiki/daily/2026/10/2026-10-02/slides-2026-10-02.html?v=20261002-112441-reader
