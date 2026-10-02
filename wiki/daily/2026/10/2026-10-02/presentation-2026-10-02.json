@@ -1,0 +1,24 @@
+{
+  "images": {
+    "t1": {
+      "src": "assets/qssr.jpg",
+      "alt": "Sony QSSR 官方發表主視覺",
+      "caption": "Sony QSSR 官方發表主視覺。",
+      "credit": "Sony Interactive Entertainment",
+      "source_url": "https://blog.playstation.com/2026/10/01/ai-upscaling-is-coming-to-ps5/",
+      "original_url": "https://blog.playstation.com/tachyon/2026/10/5f2b04388e41b48507f4c8d57ce8f53bd059f03a.jpg?crop_strategy=smart&resize=1088%2C612",
+      "rights": "官方新聞發布圖片；著作權屬原權利人，非本站拍攝。",
+      "fit": "contain"
+    },
+    "t2": {
+      "src": "assets/kindle.jpg",
+      "alt": "2026 Kindle Paperwhite 官方產品圖",
+      "caption": "2026 Kindle Paperwhite 官方產品圖。",
+      "credit": "Amazon",
+      "source_url": "https://www.aboutamazon.com/news/devices/new-kindle-lineup-2026",
+      "original_url": "https://assets.aboutamazon.com/dims4/default/01689ff/2147483647/strip/true/crop/1600x900%2B0%2B0/resize/1320x743%21/quality/90/?url=https%3A%2F%2Fassets.aboutamazon.com%2Fa8%2F33%2F66b7046946668542348ff5419e91%2Funtitled-september-29-2026-at-10-20-04.png",
+      "rights": "官方新聞發布圖片；著作權屬原權利人，非本站拍攝。",
+      "fit": "contain"
+    }
+  }
+}

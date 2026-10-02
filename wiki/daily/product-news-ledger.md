@@ -1,7 +1,7 @@
 ---
 title: "科技產品新聞歷史比對表"
 type: product-news-ledger
-updated: 2026-10-01
+updated: 2026-10-02
 status: generated
 tags: [daily-news, tech-products, deduplication, provenance]
 ---
@@ -10,14 +10,19 @@ tags: [daily-news, tech-products, deduplication, provenance]
 
 此表由 `scripts/build_product_news_ledger.py` 掃描所有歷史日報的科技／AI 區段自動產生。**模型不得整份讀取本檔**；每個候選只用公司名、產品名、更新動作與比對鍵執行 `rg`，並只讀命中列。
 
-- 掃描日報：106 份。
-- 擷取科技／AI 項目：632 則。
+- 掃描日報：107 份。
+- 擷取科技／AI 項目：637 則。
 - 更新方式：`python3 scripts/build_product_news_ledger.py`
 - 查詢方式：使用窄化組合 pattern，例如 `rg -n -i '公司.*產品|產品.*公司|比對鍵' wiki/daily/product-news-ledger.md`，不要用公司名單獨匹配大量列。
 - 無命中時：完整讀取 `wiki/daily/product-news-recent-7d.md` 做最後確認，不讀取本檔全文。
 
 | 公司 | 產品 | 更新內容 | 發佈時間 | 收錄日期 | 狀態 | 來源網址 | 比對鍵 |
 |---|---|---|---|---|---|---|---|
+| Sony、AMD | PS5 Quick Spectral Super Resolution（QSSR） | Sony 把 QSSR 人工智慧升頻帶到一般 PS5，兩款遊戲率先更新 | 2026-10-02 00:53:00（Asia/Taipei） | 2026-10-02 | 首次收錄 | https://blog.playstation.com/2026/10/01/ai-upscaling-is-coming-to-ps5/<br>https://www.theverge.com/games/1003549/sony-ps5-quick-spectral-super-resolution-qssr | 413bdc139f05 |
+| Reddit | RSS、public Data API、Developer Platform | Reddit 公布 RSS 與公開 API 退場時程，要求應用遷移至 Developer Platform | 2026-10-01 01:45:00（Asia/Taipei） | 2026-10-02 | 首次收錄 | https://www.reddit.com/r/modnews/comments/1wubgvt/continuing_our_infrastructure_updates_whats/<br>https://www.reddit.com/r/redditdev/comments/1wubcvf/moving_data_api_apps_to_the_developer_platform/<br>https://techcrunch.com/2026/09/30/reddit-is-killing-rss-feeds-ending-public-api-access-because-of-ai-bots/ | 80baf7882026 |
+| HP | OmniBook 5 14 AI PC、ProBook 4 G2iS 14 AI PC | HP 推出 OmniBook 5 與 ProBook 4，以 OLED 螢幕和輕薄設計擴充筆電系列 | 2026-10-01（HP 官方發布日期；未提供時分） | 2026-10-02 | 首次收錄 | https://www.hp.com/us-en/newsroom/press-releases/2026/hp-brings-premium-pc-experiences-to-more-consumers.html | 6a6892ce62ce |
+| Anthropic | Claude for Government、Claude Code CLI、Claude for Microsoft 365 | Anthropic 將 Claude for Government 轉為正式供應，另開放 CLI 與 Microsoft 365 早期存取 | 2026-09-30（Anthropic 官方發布日期；未提供時分） | 2026-10-02 | 首次收錄 | https://claude.com/blog/claude-for-government-is-now-generally-available | 998178e0055d |
+| Amazon | Kindle、Kindle Paperwhite、Kindle Colorsoft 2026 | Amazon 更新 Kindle 全系列，採平整螢幕並新增鋁製機身選項 | 2026-10-01 21:00:00（Asia/Taipei） | 2026-10-02 | 首次收錄 | https://www.aboutamazon.com/news/devices/new-kindle-lineup-2026<br>https://www.theverge.com/tech/1002811/amazon-kindle-paperwhite-colorsoft-accessory-refresh | 7c8235152b46 |
 | OpenAI | Codex in the cloud、reusable development environments | OpenAI 擴充 Codex cloud，以可重用環境支援手機與跨裝置接續程式任務 | 2026-09-29（OpenAI 官方發布日期；未提供獨立時分） | 2026-10-01 | 首次收錄 | https://openai.com/index/devday-2026-recap/<br>https://help.openai.com/en/articles/6825453-chatgpt-release-notes | 69c2fe103ce9 |
 | OpenAI | Dots | OpenAI 推出 Dots 常駐代理，讓 AI 在獨立雲端電腦持續執行工作 | 2026-09-30 02:51:35（Asia/Taipei；AP 2026-09-29 18:51:35 UTC） | 2026-10-01 | 首次收錄 | https://openai.com/index/introducing-dots/<br>https://apnews.com/article/77b6b8888145869206996d7509d24256 | fd0aa3fcdf82 |
 | OpenAI | ChatGPT Space、Pages | OpenAI 上線 ChatGPT Space，讓團隊、ChatGPT 與 Dots 共用知識和工作頁面 | 2026-09-29（OpenAI 官方發布日期；未提供獨立時分） | 2026-10-01 | 首次收錄 | https://openai.com/index/devday-2026-recap/ | dd0c7d8b17ed |

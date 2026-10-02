@@ -1,21 +1,26 @@
 ---
 title: "科技產品新聞最近 7 天比對表"
 type: product-news-ledger-recent
-updated: 2026-10-01
+updated: 2026-10-02
 status: generated
 tags: [daily-news, tech-products, deduplication, recent]
 ---
 
 # 科技產品新聞最近 7 天比對表
 
-本檔是歷史 `rg` 搜尋沒有命中時的二次確認清單，可以完整讀取。涵蓋收錄日期 `2026-09-25` 至 `2026-10-01`；產品是否符合精確 168 小時發布窗，仍以當日來源筆記判定。
+本檔是歷史 `rg` 搜尋沒有命中時的二次確認清單，可以完整讀取。涵蓋收錄日期 `2026-09-26` 至 `2026-10-02`；產品是否符合精確 168 小時發布窗，仍以當日來源筆記判定。
 
-- 掃描日報：106 份。
+- 掃描日報：107 份。
 - 最近 7 天項目：29 則。
 - 完整歷史只按需 `rg`：`wiki/daily/product-news-ledger.md`
 
 | 公司 | 產品 | 更新內容 | 發佈時間 | 收錄日期 | 狀態 | 來源網址 | 比對鍵 |
 |---|---|---|---|---|---|---|---|
+| Sony、AMD | PS5 Quick Spectral Super Resolution（QSSR） | Sony 把 QSSR 人工智慧升頻帶到一般 PS5，兩款遊戲率先更新 | 2026-10-02 00:53:00（Asia/Taipei） | 2026-10-02 | 首次收錄 | https://blog.playstation.com/2026/10/01/ai-upscaling-is-coming-to-ps5/<br>https://www.theverge.com/games/1003549/sony-ps5-quick-spectral-super-resolution-qssr | 413bdc139f05 |
+| Reddit | RSS、public Data API、Developer Platform | Reddit 公布 RSS 與公開 API 退場時程，要求應用遷移至 Developer Platform | 2026-10-01 01:45:00（Asia/Taipei） | 2026-10-02 | 首次收錄 | https://www.reddit.com/r/modnews/comments/1wubgvt/continuing_our_infrastructure_updates_whats/<br>https://www.reddit.com/r/redditdev/comments/1wubcvf/moving_data_api_apps_to_the_developer_platform/<br>https://techcrunch.com/2026/09/30/reddit-is-killing-rss-feeds-ending-public-api-access-because-of-ai-bots/ | 80baf7882026 |
+| HP | OmniBook 5 14 AI PC、ProBook 4 G2iS 14 AI PC | HP 推出 OmniBook 5 與 ProBook 4，以 OLED 螢幕和輕薄設計擴充筆電系列 | 2026-10-01（HP 官方發布日期；未提供時分） | 2026-10-02 | 首次收錄 | https://www.hp.com/us-en/newsroom/press-releases/2026/hp-brings-premium-pc-experiences-to-more-consumers.html | 6a6892ce62ce |
+| Anthropic | Claude for Government、Claude Code CLI、Claude for Microsoft 365 | Anthropic 將 Claude for Government 轉為正式供應，另開放 CLI 與 Microsoft 365 早期存取 | 2026-09-30（Anthropic 官方發布日期；未提供時分） | 2026-10-02 | 首次收錄 | https://claude.com/blog/claude-for-government-is-now-generally-available | 998178e0055d |
+| Amazon | Kindle、Kindle Paperwhite、Kindle Colorsoft 2026 | Amazon 更新 Kindle 全系列，採平整螢幕並新增鋁製機身選項 | 2026-10-01 21:00:00（Asia/Taipei） | 2026-10-02 | 首次收錄 | https://www.aboutamazon.com/news/devices/new-kindle-lineup-2026<br>https://www.theverge.com/tech/1002811/amazon-kindle-paperwhite-colorsoft-accessory-refresh | 7c8235152b46 |
 | OpenAI | Codex in the cloud、reusable development environments | OpenAI 擴充 Codex cloud，以可重用環境支援手機與跨裝置接續程式任務 | 2026-09-29（OpenAI 官方發布日期；未提供獨立時分） | 2026-10-01 | 首次收錄 | https://openai.com/index/devday-2026-recap/<br>https://help.openai.com/en/articles/6825453-chatgpt-release-notes | 69c2fe103ce9 |
 | OpenAI | Dots | OpenAI 推出 Dots 常駐代理，讓 AI 在獨立雲端電腦持續執行工作 | 2026-09-30 02:51:35（Asia/Taipei；AP 2026-09-29 18:51:35 UTC） | 2026-10-01 | 首次收錄 | https://openai.com/index/introducing-dots/<br>https://apnews.com/article/77b6b8888145869206996d7509d24256 | fd0aa3fcdf82 |
 | OpenAI | ChatGPT Space、Pages | OpenAI 上線 ChatGPT Space，讓團隊、ChatGPT 與 Dots 共用知識和工作頁面 | 2026-09-29（OpenAI 官方發布日期；未提供獨立時分） | 2026-10-01 | 首次收錄 | https://openai.com/index/devday-2026-recap/ | dd0c7d8b17ed |
@@ -40,8 +45,3 @@ tags: [daily-news, tech-products, deduplication, recent]
 | Microsoft | Copilot Home、Copilot Code、Copilot Autopilot | Microsoft 正式介紹 Copilot Home、Code 與 Autopilot，統一工作入口並加入持續自動化 | 2026-09-25 20:00（Asia/Taipei；Engadget metadata；Microsoft 官方同日發布） | 2026-09-26 | 續報 | https://www.microsoft.com/en-us/copilot/blog/content-type/news/<br>https://partner.microsoft.com/en-us/blog/article/ai-at-work-marketing-moment<br>https://www.engadget.com/2268096/microsofts-copilot-app-adds-office-natural-coding-and-automation/ | a394c7b00a98 |
 | Google | Gemini 3.8 Live with Live Avatar、Gemini Enterprise | Google 在 Gemini Enterprise 上線 Gemini 3.8 Live with Live Avatar | 2026-09-24（Google 官方發布日期；未提供時分） | 2026-09-26 | 首次收錄 | https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-live-with-live-avatar/<br>https://www.engadget.com/2268587/google-video-avatars-gemini-3-8-live-agent/ | d2f750a9530c |
 | Cricut | StickerPix Print、StickerPix Print + Cut | Cricut 發布 StickerPix Print 與 StickerPix Print + Cut，整合昇華列印、自動護膜與裁切 | 2026-09-24（Cricut 官方發布日期；未提供時分） | 2026-09-26 | 首次收錄 | https://cricut.com/blog/introducing-cricut-stickerpix/<br>https://www.engadget.com/2269278/cricuts-new-diy-machines-let-you-print-and-cut-your-own-stickers/ | 658f75d59635 |
-| Razer | Kiyo V2 Pro | Razer 發布 Kiyo V2 Pro，以 Sony STARVIS 2 提供 4K 60 FPS 與 AI 自動構圖 | 2026-09-24（Razer 官方發布日期；未提供時分） | 2026-09-25 | 首次收錄 | https://www.razer.com/newsroom/product-reviews/kiyo-v2-pro<br>https://www.razer.com/streaming-cameras/razer-kiyo-v2-pro/RZ19-05360100-R3U1 | bc9d260bd629 |
-| Meta | Meta VR Glasses | Meta 發布約 100 公克的 VR Glasses，採外接運算 puck 並預定 2027 年春季上市 | 2026-09-24（Meta 官方更新日期；未提供時分） | 2026-09-25 | 首次收錄 | https://about.fb.com/news/2026/09/introducing-meta-vr-glasses-3d-movies-immersive-live-sports-100-grams/<br>https://www.engadget.com/2267230/everything-announced-at-meta-connect-2026/ | b1766020825e |
-| Meta、EssilorLuxottica | Ray-Ban Meta Audio、Ray-Ban Meta Gen 3 | Meta 推出 Ray-Ban Meta Audio 並讓 Ray-Ban Meta Gen 3 正式開賣 | 2026-09-23（Meta 官方發布日期；未提供時分） | 2026-09-25 | 首次收錄 | https://about.fb.com/news/2026/09/introducing-ray-ban-meta-audio-glasses-new-styles-plus-muse/<br>https://www.engadget.com/2267213/ray-ban-meta-gen-3-hands-on-better-battery-life/ | 544a76f14411 |
-| Google | Google Photos | Google Photos 推出 Redact 遮蔽筆，並更新 Moods、Wardrobe 與 Remix 模板 | 2026-09-24（Google 官方發布日期；未提供時分） | 2026-09-25 | 首次收錄 | https://blog.google/products-and-platforms/products/photos/google-photos-updates/ | d65cac2d0ba5 |
-| Google | Google Health、Pixel Watch 3／4／5、Health Guardian | Google Health Guardian 開始向 Pixel Watch 推送血壓與胰島素阻抗趨勢 | 2026-09-24（Google 官方發布日期；未提供時分） | 2026-09-25 | 續報 | https://blog.google/products-and-platforms/products/google-health/health-guardian-features-live/<br>https://blog.google/products-and-platforms/products/google-health/pixel-watch-health-guardian/ | d23751fee131 |
