@@ -44,13 +44,16 @@ class WorkflowTests(unittest.TestCase):
             'TechOrange 科技報橘': 'https://techorange.com/',
             '數位時代': 'https://www.bnext.com.tw/',
         }
+        source_mock = patch.object(w, 'read_sources', return_value=[
+            {'website': name, 'url': url, 'enabled': 'true'} for name, url in expected.items()])
+        source_mock.start(); self.addCleanup(source_mock.stop)
         self.assertEqual(dict(w.discovery_sources()), expected)
         for name in expected:
             self.assertIn(name, w.instructions())
         self.assertIn('官方 newsroom', w.instructions())
-        self.assertIn('不設最低則數', w.instructions())
-        self.assertIn('不為湊數反覆搜尋', w.instructions())
-        self.assertIn('保留7天窗與跨日去重', w.instructions())
+        self.assertIn('每日1–10則', w.instructions())
+        self.assertIn('全部歷史從未收錄', w.instructions())
+        self.assertIn('保留14天窗與完整跨日去重', w.instructions())
 
     def test_lookup_only_history_hits_no_recent_read(self):
         (self.daily/'product-news-ledger.md').write_text('Company Product update-key\n')

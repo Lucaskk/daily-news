@@ -60,9 +60,11 @@ def parse_report(text):
     followups = False
     for line in text.splitlines():
         line = line.strip()
-        for label, key in [("研究截點", "cutoff"), ("全球新聞 24 小時視窗", "world_window"), ("科技／AI 產品 7 日視窗", "tech_window")]:
+        for label, key in [("研究截點", "cutoff"), ("全球新聞 24 小時視窗", "world_window"), ("科技／AI 產品 7 日視窗", "tech_window"), ("科技／AI 產品 14 日視窗", "tech_window")]:
             if line.startswith(label + "｜"):
                 report[key] = line.split("｜", 1)[1]
+                if key == "tech_window":
+                    report["tech_window_days"] = 14 if "14 日" in label else 7
         heading = re.match(r"### (T?\d+)\. (.+)", line)
         if heading:
             current = {"id": heading[1].lower(), "rank": heading[1], "title": heading[2], "facts": []}
@@ -101,6 +103,13 @@ def parse_report(text):
     if world != [str(n) for n in range(1, 11)]:
         raise ValueError("World stories must be exactly 1 through 10, in order")
     tech = [s for s in report["stories"] if s["category"] == "tech"]
+    if report["date"] >= "2026-10-03":
+        if not 1 <= len(tech) <= 10:
+            raise ValueError("Technology stories must contain 1 to 10 items")
+        if report.get("tech_window_days") != 14:
+            raise ValueError("New reports require the 14-day technology window")
+        if any(story["title"].startswith("續報") for story in tech):
+            raise ValueError("Technology stories must be previously uncaptured independent events")
     if [s["rank"] for s in tech] != [f"T{n}" for n in range(1, len(tech) + 1)]:
         raise ValueError("Product IDs must be consecutive")
     if report["stories"] != tech + [s for s in report["stories"] if s["category"] == "world"]:

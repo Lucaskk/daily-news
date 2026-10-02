@@ -338,6 +338,8 @@ def validate_deck(html: str, today: str) -> None:
     if deck.article_ranks != [s.get("rank") for s in stories]:
         raise ValueError("Public HTML articles do not match embedded report data")
     tech = [s for s in stories if s["category"] == "tech"]
+    if today >= "2026-10-03" and not 1 <= len(tech) <= 10:
+        raise ValueError("Public report must contain 1 to 10 technology stories")
     if [s.get("rank") for s in tech] != [f"T{i}" for i in range(1, len(tech) + 1)] or stories != tech + [s for s in stories if s["category"] == "world"]:
         raise ValueError("Public report product order is invalid")
 

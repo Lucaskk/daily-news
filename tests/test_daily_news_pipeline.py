@@ -36,6 +36,15 @@ class PipelineTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             p.begin(DAY, "2026-09-11T09:00:00+08:00")
 
+    def test_new_technology_window_keeps_exact_frozen_fourteen_days(self):
+        data = {'date': '2026-10-03', 'tech_window':
+                '2026-09-19 08:00:53 至 2026-10-03 08:00:53（Asia/Taipei）'}
+        p.validate_tech_window(data, '2026-10-03T08:00:53+08:00')
+        for start in ('2026-09-26 08:00:53', '2026-09-19 09:00:53'):
+            with self.assertRaisesRegex(ValueError, 'exactly 14 days'):
+                p.validate_tech_window(dict(data, tech_window=data['tech_window'].replace(
+                    '2026-09-19 08:00:53', start)), '2026-10-03T08:00:53+08:00')
+
     def test_timezone_and_date_required(self):
         with self.assertRaises(ValueError):
             p.begin("2026-09-12", "2026-09-12T08:00:00")

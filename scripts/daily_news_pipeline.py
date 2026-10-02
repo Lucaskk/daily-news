@@ -2,11 +2,12 @@
 """Durable daily checkpoint and bounded render -> publish -> LINE completion."""
 
 import argparse
-from datetime import date, datetime
+from datetime import date, datetime, timedelta
 import fcntl
 import hashlib
 import json
 import os
+import re
 from pathlib import Path
 import shutil
 import subprocess
@@ -65,6 +66,16 @@ def command(args, cwd=ROOT):
     return result.stdout
 
 
+def validate_tech_window(data, cutoff):
+    if data["date"] < "2026-10-03":
+        return
+    stamp = datetime.fromisoformat(cutoff).astimezone(watchdog.TAIPEI)
+    expected = [(stamp - timedelta(days=14)).strftime("%Y-%m-%d %H:%M:%S"),
+                stamp.strftime("%Y-%m-%d %H:%M:%S")]
+    if re.findall(r"\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}", data["tech_window"]) != expected:
+        raise ValueError("Technology window must be exactly 14 days before the frozen cutoff")
+
+
 def prepare(state):
     day = state["date"]
     folder = ROOT / f"wiki/daily/{day[:4]}/{day[5:7]}/{day}"
@@ -76,6 +87,7 @@ def prepare(state):
     frozen = datetime.fromisoformat(state["cutoff"]).astimezone(watchdog.TAIPEI).strftime("%Y-%m-%d %H:%M:%S")
     if data["date"] != day or frozen not in data["cutoff"] or frozen not in notes.read_text():
         raise ValueError("Report/source notes do not retain the frozen date and cutoff")
+    validate_tech_window(data, state["cutoff"])
     output, version = reader.render(report)
     watchdog.validate_deck(output.read_text(), day)
     reader.update_entries(output, version)

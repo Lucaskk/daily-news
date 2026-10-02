@@ -313,7 +313,7 @@ tags: [daily-news, tech-products, deduplication, recent]
 
 # 科技產品新聞最近 7 天比對表
 
-本檔是歷史 `rg` 搜尋沒有命中時的二次確認清單，可以完整讀取。涵蓋收錄日期 `{start.isoformat()}` 至 `{latest.isoformat()}`；產品是否符合精確 168 小時發布窗，仍以當日來源筆記判定。
+本檔是歷史 `rg` 搜尋沒有命中時的二次確認清單，可以完整讀取。涵蓋收錄日期 `{start.isoformat()}` 至 `{latest.isoformat()}`；產品是否符合當日規則的發布窗（2026-10-03 起為 336 小時），仍以當日來源筆記判定。
 
 - 掃描日報：{report_count} 份。
 - 最近 7 天項目：{len(recent)} 則。

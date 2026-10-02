@@ -25,6 +25,26 @@ class ReaderTests(unittest.TestCase):
         self.assertEqual(len(report["stories"]), 10)
         self.assertEqual(report["stories"][0]["rank"], "1")
 
+    def test_new_policy_count_boundaries_and_window_label(self):
+        prefix = self.text[:self.text.index("### T1.")].replace("2026-09-08", "2026-10-03")
+        prefix = prefix.replace("科技／AI 產品 7 日視窗", "科技／AI 產品 14 日視窗")
+        product = self.text[self.text.index("### T1."):self.text.index("### T2.")]
+        world = self.text[self.text.index("## 全球 Top 10"):]
+        for count in (1, 10):
+            text = prefix + ''.join(product.replace('### T1.', f'### T{i}.')
+                                    for i in range(1, count + 1)) + world
+            report = reader.parse_report(text)
+            self.assertEqual(report['tech_window_days'], 14)
+        for count in (0, 11):
+            text = prefix + ''.join(product.replace('### T1.', f'### T{i}.')
+                                    for i in range(1, count + 1)) + world
+            with self.assertRaisesRegex(ValueError, '1 to 10'):
+                reader.parse_report(text)
+        with self.assertRaisesRegex(ValueError, '14-day'):
+            reader.parse_report((prefix + product + world).replace('14 日視窗', '7 日視窗'))
+        with self.assertRaisesRegex(ValueError, 'uncaptured'):
+            reader.parse_report((prefix + product + world).replace('### T1. ', '### T1. 續報｜'))
+
     def test_reject_missing_or_duplicate_world_rank(self):
         for text in [self.text.replace("### 10.", "### 9."), self.text.replace("### 10.", "## 10.")]:
             with self.assertRaises(ValueError):
