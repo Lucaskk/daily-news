@@ -12,6 +12,7 @@ import sys
 import urllib.parse
 import urllib.request
 from tech_source_store import read_sources
+from build_product_news_ledger import recent_report_paths
 
 ROOT = Path(__file__).resolve().parents[1]
 PRIVATE = Path.home() / '.codex/automations/ai'
@@ -42,13 +43,13 @@ def instructions():
     source_policy = (
         f'每日科技候選來源池：{source_names}。先以批次搜尋或聚合頁做一次廣泛掃描；'
         '只對有明確新品或重大變更線索的候選回查官方 newsroom、產品頁或 release notes，再做歷史去重。'
-        '科技新聞每日1–10則，最多10則、最少1則。搜尋14天（336小時）內且全部歷史從未收錄的獨立產品事件；不以同事件續報補位。先掃描CSV啟用來源，再做一輪官方newsroom、release notes、產品發布與公開測試定向補查，記錄候選與排除原因。'
-        '不足10則可直接採用合格數量；0則時繼續研究並回報未達最低數量，不用舊聞或不合格內容補數。保留14天窗與完整跨日去重。'
+        '科技新聞每日1–10則，最多10則、最少1則。搜尋14天（336小時）內且最近14天日報未曾收錄的獨立產品事件；不以同事件續報補位。先掃描CSV啟用來源，再做一輪官方newsroom、release notes、產品發布與公開測試定向補查，記錄候選與排除原因。'
+        '不足10則可直接採用合格數量；0則時繼續研究並回報未達最低數量，不用舊聞或不合格內容補數。保留14天窗與最近14天日報去重。'
     )
     if profile() == 'legacy':
-        return ('研究模式 legacy：沿用 AI 搜尋、按候選 rg 查歷史；無命中才讀近7天表。'
+        return ('研究模式 legacy：沿用 AI 搜尋、用 lookup 按候選只查產製日前14天日報；無命中再核對同範圍產品表。'
                 + source_policy + '渲染與配送不變。')
-    return ('研究模式 python：使用 scripts/news_workflow.py lookup --pattern 查歷史；'
+    return ('研究模式 python：使用 scripts/news_workflow.py lookup --pattern --cutoff 查最近14天日報；'
             'fetch URL 快取來源並保留取得時間。AI仍須補充搜尋、查證發布時間、語意去重與選題；'
             '快取不是新發布證據。' + source_policy + '渲染與配送不變。')
 
@@ -67,26 +68,26 @@ def save_evidence(name, text):
     return str(path)
 
 
-def lookup(pattern):
+def lookup(pattern, cutoff=None):
     if not pattern or len(pattern) > 1000:
         raise ValueError('Provide a narrow candidate pattern (1..1000 characters)')
-    result = subprocess.run(['rg', '-n', '-i', '--glob', 'daily-news-*.md',
-                             '--glob', 'source-notes-*.md', '--glob', 'product-news-ledger.md',
-                             '--', pattern, str(ROOT / 'wiki/daily')],
-                            capture_output=True, text=True, timeout=30)
+    reports = recent_report_paths(ROOT / 'wiki/daily', cutoff)
+    result = (subprocess.run(['rg', '-n', '-i', '--', pattern, *map(str, reports)],
+                            capture_output=True, text=True, timeout=30) if reports
+              else subprocess.CompletedProcess([], 1, '', ''))
     if result.returncode not in (0, 1):
         raise ValueError('rg search failed; check pattern and search paths')
     text = result.stdout
     fallback = False
     if result.returncode == 1 and profile() == 'python':
-        recent = ROOT / 'wiki/daily/product-news-recent-7d.md'
-        if not recent.is_file():
-            raise ValueError('No recent table; first run build_product_news_ledger.py')
-        text = recent.read_text()
+        from build_product_news_ledger import extract_items, render_recent
+        items = [item for report in reports for item in extract_items(report)]
+        text = render_recent(items, len(reports))
         fallback = True
     digest = hashlib.sha256((pattern + '\n' + text).encode()).hexdigest()
     evidence = save_evidence(f'lookup-{digest}.txt', text)
     return {'mode': profile(), 'pattern': pattern, 'historical_match': result.returncode == 0,
+            'comparison_scope': 'previous_14_daily_reports', 'reports_compared': len(reports),
             'recent_fallback': fallback, 'truncated': len(text) > MAX_OUTPUT,
             'result': text[:MAX_OUTPUT], 'full_result_path': evidence,
             'warning': '輸出截斷時需縮小候選或分段查詢，不能把未顯示內容當作無命中。'}
@@ -175,7 +176,7 @@ def main():
     sub = parser.add_subparsers(dest='action', required=True)
     sub.add_parser('status')
     mode = sub.add_parser('mode'); mode.add_argument('value', choices=['legacy', 'python'])
-    search = sub.add_parser('lookup'); search.add_argument('--pattern', required=True)
+    search = sub.add_parser('lookup'); search.add_argument('--pattern', required=True); search.add_argument('--cutoff')
     fetch = sub.add_parser('fetch'); fetch.add_argument('url'); fetch.add_argument('--refresh', action='store_true')
     args = parser.parse_args()
     try:
@@ -191,7 +192,7 @@ def main():
                 'publishing_changed': False,
             }
         elif args.action == 'lookup':
-            result = lookup(args.pattern)
+            result = lookup(args.pattern, args.cutoff)
         else:
             result = fetch_source(args.url, args.refresh)
         print(json.dumps(result, ensure_ascii=False, indent=2))

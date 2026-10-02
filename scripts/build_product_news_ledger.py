@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build query-only historical and compact seven-day product-news ledgers."""
+"""Build a product comparison ledger from the previous fourteen daily reports."""
 
 from __future__ import annotations
 
@@ -7,14 +7,30 @@ import hashlib
 import re
 import sys
 from dataclasses import dataclass
-from datetime import date, timedelta
+from datetime import date, datetime, timedelta
+from zoneinfo import ZoneInfo
+import argparse
 from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
 DAILY_ROOT = ROOT / "wiki" / "daily"
-OUTPUT = DAILY_ROOT / "product-news-ledger.md"
-RECENT_OUTPUT = DAILY_ROOT / "product-news-recent-7d.md"
+RECENT_OUTPUT = DAILY_ROOT / "product-news-recent-14d.md"
+
+
+def recent_report_paths(root=DAILY_ROOT, cutoff=None):
+    stamp = datetime.fromisoformat(cutoff.replace('Z', '+00:00')) if cutoff else datetime.now(ZoneInfo('Asia/Taipei'))
+    if stamp.tzinfo is None:
+        raise ValueError('Cutoff requires an explicit timezone')
+    day = stamp.astimezone(ZoneInfo('Asia/Taipei')).date()
+    paths = []
+    for offset in range(14, 0, -1):
+        report_day = day - timedelta(days=offset)
+        name = report_day.isoformat()
+        path = root / name[:4] / name[5:7] / name / f'daily-news-{name}.md'
+        if path.is_file():
+            paths.append(path)
+    return paths
 
 TECH_HEADING = re.compile(
     r"^##\s+.*(?:科技.*(?:AI|人工智慧)|(?:Technology|Tech).*AI|AI.*(?:Product|產品))",
@@ -269,55 +285,30 @@ def render_rows(items: list[Item]) -> str:
     return "\n".join(rows)
 
 
-def render_full(items: list[Item], report_count: int) -> str:
-    return f"""---
-title: "科技產品新聞歷史比對表"
-type: product-news-ledger
-updated: {max((item.capture_date for item in items), default='unknown')}
-status: generated
-tags: [daily-news, tech-products, deduplication, provenance]
----
-
-# 科技產品新聞歷史比對表
-
-此表由 `scripts/build_product_news_ledger.py` 掃描所有歷史日報的科技／AI 區段自動產生。**模型不得整份讀取本檔**；每個候選只用公司名、產品名、更新動作與比對鍵執行 `rg`，並只讀命中列。
-
-- 掃描日報：{report_count} 份。
-- 擷取科技／AI 項目：{len(items)} 則。
-- 更新方式：`python3 scripts/build_product_news_ledger.py`
-- 查詢方式：使用窄化組合 pattern，例如 `rg -n -i '公司.*產品|產品.*公司|比對鍵' wiki/daily/product-news-ledger.md`，不要用公司名單獨匹配大量列。
-- 無命中時：完整讀取 `wiki/daily/product-news-recent-7d.md` 做最後確認，不讀取本檔全文。
-
-| 公司 | 產品 | 更新內容 | 發佈時間 | 收錄日期 | 狀態 | 來源網址 | 比對鍵 |
-|---|---|---|---|---|---|---|---|
-{render_rows(items)}
-"""
-
-
 def render_recent(items: list[Item], report_count: int) -> str:
     known_dates = [date.fromisoformat(item.capture_date) for item in items if item.capture_date != "unknown"]
     latest = max(known_dates, default=date.today())
-    start = latest - timedelta(days=6)
+    start = latest - timedelta(days=13)
     recent = [
         item
         for item in items
         if item.capture_date != "unknown" and date.fromisoformat(item.capture_date) >= start
     ]
     return f"""---
-title: "科技產品新聞最近 7 天比對表"
+title: "科技產品新聞最近 14 天比對表"
 type: product-news-ledger-recent
 updated: {latest.isoformat()}
 status: generated
 tags: [daily-news, tech-products, deduplication, recent]
 ---
 
-# 科技產品新聞最近 7 天比對表
+# 科技產品新聞最近 14 天比對表
 
-本檔是歷史 `rg` 搜尋沒有命中時的二次確認清單，可以完整讀取。涵蓋收錄日期 `{start.isoformat()}` 至 `{latest.isoformat()}`；產品是否符合當日規則的發布窗（2026-10-03 起為 336 小時），仍以當日來源筆記判定。
+本檔只整理產製日前 14 天的日報，可完整讀取做去重確認；不搜尋更早日報、完整歷史表或來源筆記。實際發布窗仍以當日研究截點與來源筆記判定。
 
 - 掃描日報：{report_count} 份。
-- 最近 7 天項目：{len(recent)} 則。
-- 完整歷史只按需 `rg`：`wiki/daily/product-news-ledger.md`
+- 最近 14 天項目：{len(recent)} 則。
+- 日報日期範圍：{min(known_dates).isoformat() if known_dates else '無日報'} 至 {max(known_dates).isoformat() if known_dates else '無日報'}。
 
 | 公司 | 產品 | 更新內容 | 發佈時間 | 收錄日期 | 狀態 | 來源網址 | 比對鍵 |
 |---|---|---|---|---|---|---|---|
@@ -326,21 +317,21 @@ tags: [daily-news, tech-products, deduplication, recent]
 
 
 def main() -> None:
-    if len(sys.argv) > 1:
-        if sys.argv[1] == "--key" and len(sys.argv) == 5:
-            print(comparison_key(sys.argv[2], sys.argv[3], sys.argv[4]))
-            return
-        raise SystemExit("Usage: build_product_news_ledger.py [--key COMPANY PRODUCT UPDATE]")
-
-    reports = sorted(DAILY_ROOT.glob("**/daily-news-*.md"))
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--key', nargs=3)
+    parser.add_argument('--cutoff')
+    args = parser.parse_args()
+    if args.key:
+        print(comparison_key(*args.key))
+        return
+    reports = recent_report_paths(DAILY_ROOT, args.cutoff)
     items: list[Item] = []
     for report in reports:
         items.extend(extract_items(report))
-    OUTPUT.write_text(render_full(items, len(reports)), encoding="utf-8")
     RECENT_OUTPUT.write_text(render_recent(items, len(reports)), encoding="utf-8")
     print(
         f"Wrote {len(items)} product records from {len(reports)} reports to "
-        f"{OUTPUT} and {RECENT_OUTPUT}"
+        f"{RECENT_OUTPUT}"
     )
 
 

@@ -91,7 +91,7 @@ def prepare(state):
     output, version = reader.render(report)
     watchdog.validate_deck(output.read_text(), day)
     reader.update_entries(output, version)
-    command([sys.executable, "scripts/build_product_news_ledger.py"])
+    command([sys.executable, "scripts/build_product_news_ledger.py", "--cutoff", state["cutoff"]])
     allowed_names = {f"{prefix}-{day}.{extension}" for prefix, extension in [
         ("daily-news", "md"), ("source-notes", "md"), ("slides", "html"),
         ("presentation", "json"), ("source-evidence", "json")]}
@@ -99,7 +99,7 @@ def prepare(state):
              not p.is_symlink() and (p.parent == folder and p.name in allowed_names or
              p.parent == folder / "assets" and p.suffix.lower() in {".jpg", ".jpeg", ".png", ".webp"})]
     files += [Path(p) for p in ("index.html", ".nojekyll", "wiki/daily/latest-slides.html",
-                               "wiki/daily/product-news-ledger.md", "wiki/daily/product-news-recent-7d.md")]
+                               "wiki/daily/product-news-recent-14d.md")]
     save(state, "ready_to_publish", version=version)
     return files
 

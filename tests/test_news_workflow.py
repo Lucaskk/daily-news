@@ -18,6 +18,12 @@ class WorkflowTests(unittest.TestCase):
         for name, value in [('ROOT', self.root), ('PRIVATE', self.root/'private')]:
             p = patch.object(w, name, value); p.start(); self.addCleanup(p.stop)
         self.daily = self.root/'wiki/daily'; self.daily.mkdir(parents=True)
+        self.report = self.daily/'2026/09/2026-09-13/daily-news-2026-09-13.md'
+        self.report.parent.mkdir(parents=True); self.report.write_text('')
+        original = w.recent_report_paths
+        p = patch.object(w, 'recent_report_paths', side_effect=lambda root, cutoff=None:
+                         original(root, cutoff or '2026-09-14T08:00:00+08:00'))
+        p.start(); self.addCleanup(p.stop)
 
     def test_default_legacy_and_switch_back_leaves_artifacts_unchanged(self):
         report = self.daily/'daily-news-2026-09-14.md'; report.write_text('existing news')
@@ -52,12 +58,12 @@ class WorkflowTests(unittest.TestCase):
             self.assertIn(name, w.instructions())
         self.assertIn('官方 newsroom', w.instructions())
         self.assertIn('每日1–10則', w.instructions())
-        self.assertIn('全部歷史從未收錄', w.instructions())
-        self.assertIn('保留14天窗與完整跨日去重', w.instructions())
+        self.assertIn('最近14天日報未曾收錄', w.instructions())
+        self.assertIn('保留14天窗與最近14天日報去重', w.instructions())
 
     def test_lookup_only_history_hits_no_recent_read(self):
         (self.daily/'product-news-ledger.md').write_text('Company Product update-key\n')
-        (self.daily/'source-notes-2026-09-13.md').write_text('update-key already captured\n')
+        self.report.write_text('update-key already captured\n')
         (self.daily/'unrelated.md').write_text('update-key\n')
         w.set_profile('python')
         result = w.lookup('update-key')
@@ -70,7 +76,17 @@ class WorkflowTests(unittest.TestCase):
         (self.daily/'product-news-recent-7d.md').write_text('recent table')
         self.assertEqual(w.lookup('missing')['result'], '')
         w.set_profile('python')
-        self.assertEqual(w.lookup('missing')['result'], 'recent table')
+        self.assertIn('最近 14 天', w.lookup('missing')['result'])
+        self.assertNotIn('recent table', w.lookup('missing')['result'])
+
+    def test_only_previous_fourteen_reports_are_compared(self):
+        for day in ('2026-08-30', '2026-08-31', '2026-09-14'):
+            path = self.daily/day[:4]/day[5:7]/day/f'daily-news-{day}.md'
+            path.parent.mkdir(parents=True, exist_ok=True); path.write_text('boundary-key')
+        result = w.lookup('boundary-key')
+        self.assertIn('2026-08-31', result['result'])
+        self.assertNotIn('2026-08-30', result['result'])
+        self.assertNotIn('2026-09-14', result['result'])
 
     def test_failed_search_never_claims_no_hits(self):
         with patch.object(w.subprocess, 'run', return_value=subprocess.CompletedProcess([], 2, '', 'bad')):
