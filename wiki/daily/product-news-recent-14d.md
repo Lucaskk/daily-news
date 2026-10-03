@@ -1,7 +1,7 @@
 ---
 title: "科技產品新聞最近 14 天比對表"
 type: product-news-ledger-recent
-updated: 2026-10-01
+updated: 2026-10-02
 status: generated
 tags: [daily-news, tech-products, deduplication, recent]
 ---
@@ -11,11 +11,16 @@ tags: [daily-news, tech-products, deduplication, recent]
 本檔只整理產製日前 14 天的日報，可完整讀取做去重確認；不搜尋更早日報、完整歷史表或來源筆記。實際發布窗仍以當日研究截點與來源筆記判定。
 
 - 掃描日報：14 份。
-- 最近 14 天項目：55 則。
-- 日報日期範圍：2026-09-18 至 2026-10-01。
+- 最近 14 天項目：57 則。
+- 日報日期範圍：2026-09-19 至 2026-10-02。
 
 | 公司 | 產品 | 更新內容 | 發佈時間 | 收錄日期 | 狀態 | 來源網址 | 比對鍵 |
 |---|---|---|---|---|---|---|---|
+| Sony、AMD | PS5 Quick Spectral Super Resolution（QSSR） | Sony 把 QSSR 人工智慧升頻帶到一般 PS5，兩款遊戲率先更新 | 2026-10-02 00:53:00（Asia/Taipei） | 2026-10-02 | 首次收錄 | https://blog.playstation.com/2026/10/01/ai-upscaling-is-coming-to-ps5/<br>https://www.theverge.com/games/1003549/sony-ps5-quick-spectral-super-resolution-qssr | 413bdc139f05 |
+| Reddit | RSS、public Data API、Developer Platform | Reddit 公布 RSS 與公開 API 退場時程，要求應用遷移至 Developer Platform | 2026-10-01 01:45:00（Asia/Taipei） | 2026-10-02 | 首次收錄 | https://www.reddit.com/r/modnews/comments/1wubgvt/continuing_our_infrastructure_updates_whats/<br>https://www.reddit.com/r/redditdev/comments/1wubcvf/moving_data_api_apps_to_the_developer_platform/<br>https://techcrunch.com/2026/09/30/reddit-is-killing-rss-feeds-ending-public-api-access-because-of-ai-bots/ | 80baf7882026 |
+| HP | OmniBook 5 14 AI PC、ProBook 4 G2iS 14 AI PC | HP 推出 OmniBook 5 與 ProBook 4，以 OLED 螢幕和輕薄設計擴充筆電系列 | 2026-10-01（HP 官方發布日期；未提供時分） | 2026-10-02 | 首次收錄 | https://www.hp.com/us-en/newsroom/press-releases/2026/hp-brings-premium-pc-experiences-to-more-consumers.html | 6a6892ce62ce |
+| Anthropic | Claude for Government、Claude Code CLI、Claude for Microsoft 365 | Anthropic 將 Claude for Government 轉為正式供應，另開放 CLI 與 Microsoft 365 早期存取 | 2026-09-30（Anthropic 官方發布日期；未提供時分） | 2026-10-02 | 首次收錄 | https://claude.com/blog/claude-for-government-is-now-generally-available | 998178e0055d |
+| Amazon | Kindle、Kindle Paperwhite、Kindle Colorsoft 2026 | Amazon 更新 Kindle 全系列，採平整螢幕並新增鋁製機身選項 | 2026-10-01 21:00:00（Asia/Taipei） | 2026-10-02 | 首次收錄 | https://www.aboutamazon.com/news/devices/new-kindle-lineup-2026<br>https://www.theverge.com/tech/1002811/amazon-kindle-paperwhite-colorsoft-accessory-refresh | 7c8235152b46 |
 | OpenAI | Codex in the cloud、reusable development environments | OpenAI 擴充 Codex cloud，以可重用環境支援手機與跨裝置接續程式任務 | 2026-09-29（OpenAI 官方發布日期；未提供獨立時分） | 2026-10-01 | 首次收錄 | https://openai.com/index/devday-2026-recap/<br>https://help.openai.com/en/articles/6825453-chatgpt-release-notes | 69c2fe103ce9 |
 | OpenAI | Dots | OpenAI 推出 Dots 常駐代理，讓 AI 在獨立雲端電腦持續執行工作 | 2026-09-30 02:51:35（Asia/Taipei；AP 2026-09-29 18:51:35 UTC） | 2026-10-01 | 首次收錄 | https://openai.com/index/introducing-dots/<br>https://apnews.com/article/77b6b8888145869206996d7509d24256 | fd0aa3fcdf82 |
 | OpenAI | ChatGPT Space、Pages | OpenAI 上線 ChatGPT Space，讓團隊、ChatGPT 與 Dots 共用知識和工作頁面 | 2026-09-29（OpenAI 官方發布日期；未提供獨立時分） | 2026-10-01 | 首次收錄 | https://openai.com/index/devday-2026-recap/ | dd0c7d8b17ed |
@@ -68,6 +73,3 @@ tags: [daily-news, tech-products, deduplication, recent]
 | Google | Gemini Notebook Expert Intelligence | Google 在 Gemini Notebook 推出 Expert Intelligence，導入逾十萬本授權書籍 | 2026-09-17（Google Workspace 官方更新日期；未提供時分） | 2026-09-19 | 首次收錄 | https://workspaceupdates.googleblog.com/2026/09/introducing-expert-intelligence-in-Gemini-Notebook.html | a28d9f60535b |
 | GitLab | GitLab 19.4／Duo Agent Platform | GitLab 19.4 推出受治理的 MCP 工具與 Duo CLI 目標執行功能 | 2026-09-17（GitLab 官方發布日期；未提供時分） | 2026-09-19 | 首次收錄 | https://about.gitlab.com/press/releases/2026-09-17-gitlab-19-4-brings-new-agentic-automation-at-a-lower-cost/<br>https://about.gitlab.com/whats-new/19-4/ | bf6f7a9872d9 |
 | Anthropic | Life Sciences Verification Program（LSVP） | Anthropic 開放 Life Sciences Verification Program 申請，以分級審核放寬生物研究限制 | 2026-09-17（Anthropic 官方公告日期；未提供時分） | 2026-09-19 | 續報 | https://www.anthropic.com/news/life-sciences-verification-program | efc0f3ba35c8 |
-| UN system／Google | UN System Data Commons | 聯合國與 Google 推出 UN System Data Commons，整合全球統計與 AI 查詢 | 2026-09-17（Google 官方產品公告日期；未提供時分） | 2026-09-18 | 首次收錄 | https://blog.google/innovation-and-ai/technology/ai/google-un-data-commons-platform/ | 99750797433b |
-| OpenAI | ChatGPT for Word | OpenAI 正式推出 ChatGPT for Word，免費方案也可使用 | 2026-09-17（官方 release notes 日期；未提供時分） | 2026-09-18 | 首次收錄 | https://help.openai.com/en/articles/6825453-chatgpt-release-notes | fda9d419d69c |
-| Google Labs | CC 家庭／群組代理 | Google Labs 擴大 CC 為家庭共用 AI 代理，最多六人協作 | 2026-09-17（Google 官方公告日期；未提供時分） | 2026-09-18 | 首次收錄 | https://blog.google/innovation-and-ai/models-and-research/google-labs/cc-expanding-to-groups/ | f037909720b6 |
