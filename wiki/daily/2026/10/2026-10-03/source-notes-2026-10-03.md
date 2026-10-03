@@ -3,7 +3,7 @@ title: "2026-10-03 每日全球與科技 AI 新聞來源筆記"
 type: source-notes
 date: 2026-10-03
 cutoff: 2026-10-03T08:01:34+08:00
-status: research
+status: published
 tags: [daily-news, sources, provenance]
 ---
 
@@ -187,3 +187,11 @@ tags: [daily-news, sources, provenance]
 - U.S. 派出第三艘航空母艦的 AP 報導時間為 `2026-10-01T18:38:27Z`，早於全球窗口，不因後續轉載納入。
 - Ethiopia 與 Eritrea 斷交、Sikh 釋放、Tennessee 執行死刑中止及 Brazil 檢察長事件的原始事件或首次可靠發布時間皆早於窗口。
 - Brazil 選前領事服務暫停與 Argentina 投資入籍雖在窗口內，但在有限 Top 10 中，跨境能源、傳染病、就業、軍事與法院裁決的全球外溢性較高，列為備選而未收錄。
+
+## 發布收據
+
+- pipeline 內容 commit：`00ca56686c5db7b279156448fecd61781f1dd8b3`。
+- GitHub Pages 日期頁、latest 入口與根入口均通過 HTTP 及完整位元組雜湊驗證。
+- 公開網址：https://lucaskk.github.io/daily-news/wiki/daily/2026/10/2026-10-03/slides-2026-10-03.html?v=20261003-081500-reader
+- 唯一私人 LINE watchdog：`2026-10-03T08:15:48+08:00 Sent LINE message`。
+- `daily_news_pipeline.py check --date 2026-10-03`：exit 0，`stage=complete`。

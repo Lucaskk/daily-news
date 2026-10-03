@@ -2,7 +2,7 @@
 title: "Knowledge Base Index"
 type: overview
 created: 2026-05-24
-updated: 2026-10-02
+updated: 2026-10-03
 status: seed
 tags: [index]
 sources: []
@@ -21,6 +21,9 @@ sources: []
 - [[2026-04-04-llm-wiki]] - Karpathy 提出的 LLM-maintained personal wiki 模式，是本知識庫的設計來源。
 
 ## Daily News
+
+- [2026-10-03 Daily News](daily/2026/10/2026-10-03/daily-news-2026-10-03.md) - ChatGPT 試穿、Shopify Canvas、Strands Decider、Legato、Laytr、Audible 與 macOS 權限路線先列；全球涵蓋 Congo Ebola、G7 釋儲、美國就業、Hormuz 船舶安全與多個戰事／司法節點。
+- [2026-10-03 Slides](daily/2026/10/2026-10-03/slides-2026-10-03.html) - 手機閱讀版，產品優先、逐篇頁內展開、完整來源及單篇 ChatGPT 後續提問。
 
 - [2026-10-02 Daily News](daily/2026/10/2026-10-02/daily-news-2026-10-02.md) - Sony QSSR、Kindle、HP 筆電、政府用 Claude 與 Reddit 介面退場；全球涵蓋加拿大管線、基輔學校、法國抗議及新的司法程序。
 - [2026-10-01 Daily News](daily/2026/10/2026-10-01/daily-news-2026-10-01.md) - OpenAI Dots、ChatGPT Space、Codex cloud、Gemini 4 Argon 與 Instinct Selections 先列；全球涵蓋 Ukraine 電網攻擊、U.S. 撤出 Iraq、Syria 武器出口政策與 MI5 警報等 10 則。

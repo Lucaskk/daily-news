@@ -2,7 +2,7 @@
 title: "Overview"
 type: overview
 created: 2026-05-24
-updated: 2026-10-02
+updated: 2026-10-03
 status: seed
 tags: [overview]
 sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
@@ -19,6 +19,12 @@ sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
 - 抽出持續出現的人物、組織、事件、政策、技術與市場概念。
 - 維護跨來源的矛盾、時間線、趨勢與待查問題。
 - 將重要查詢結果回寫成可累積的 wiki 頁面。
+
+## 2026-10-03 Daily News Synthesis
+
+- 產品焦點由單一聊天功能延伸到完整工作流：ChatGPT 把虛擬試穿與收藏接進購物，Shopify Canvas 直接改真實 theme code，Strands Decider 將 agent 的選項評分拆成可本地執行的小模型；Legato、Laytr 與 Audible 則把 AI／雲端能力放進聽力穿戴、跨媒體收藏與互動敘事。
+- 權限治理也成為產品本身：Apple 預告提高 Full Disk Access 的明示授權門檻，直接把日益自主的 AI agents 列為風險。公告尚未給版本與日期，因此只記為路線更新，不當成已全面生效。
+- 全球主線是公共系統同時承受疫情、能源、就業與安全壓力：Congo Ebola 死亡突破 4,000、G7 共同釋儲、美國就業顯著放緩；Hormuz 油輪、Mekelle、Ukraine FP-7 與 North Korea 新發射均保留歸責、戰果或性能未確認狀態。詳見 [本日日報](daily/2026/10/2026-10-03/daily-news-2026-10-03.md)。
 
 ## 2026-10-02 Daily News Synthesis
 
