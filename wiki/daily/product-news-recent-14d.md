@@ -1,7 +1,7 @@
 ---
 title: "科技產品新聞最近 14 天比對表"
 type: product-news-ledger-recent
-updated: 2026-10-02
+updated: 2026-10-03
 status: generated
 tags: [daily-news, tech-products, deduplication, recent]
 ---
@@ -11,11 +11,18 @@ tags: [daily-news, tech-products, deduplication, recent]
 本檔只整理產製日前 14 天的日報，可完整讀取做去重確認；不搜尋更早日報、完整歷史表或來源筆記。實際發布窗仍以當日研究截點與來源筆記判定。
 
 - 掃描日報：14 份。
-- 最近 14 天項目：57 則。
-- 日報日期範圍：2026-09-19 至 2026-10-02。
+- 最近 14 天項目：61 則。
+- 日報日期範圍：2026-09-20 至 2026-10-03。
 
 | 公司 | 產品 | 更新內容 | 發佈時間 | 收錄日期 | 狀態 | 來源網址 | 比對鍵 |
 |---|---|---|---|---|---|---|---|
+| Amazon／Strands Labs | Strands Decider 2B | Strands Labs 釋出 1.9B 參數 Strands Decider，讓 agent 在本地做選項評分 | 2026-10-02 00:49（Asia/Taipei） | 2026-10-03 | 首次收錄 | https://github.com/strands-labs/strands-decider<br>https://techcrunch.com/2026/10/01/amazon-releases-its-own-jev-clone-as-decision-models-flood-the-web/ | bfd086fe7b0f |
+| Shopify | Canvas、Sidekick | Shopify 推出 Canvas，以 Sidekick 對真實 theme code 即時設計整間網店 | 2026-10-02 00:44（Asia/Taipei） | 2026-10-03 | 首次收錄 | https://www.shopify.com/news/introducing-canvas<br>https://changelog.shopify.com/posts/design-a-fully-bespoke-store-with-canvas<br>https://techcrunch.com/2026/10/01/shopify-debuts-canvas-a-way-to-build-online-stores-by-chatting-with-ai/ | b8f997b0a6ef |
+| Legato | Legato Frames | Legato Frames 在美國開賣，把 AI 聽力處理放進無相機眼鏡 | 2026-10-01 21:00（Asia/Taipei） | 2026-10-03 | 首次收錄 | https://www.globenewswire.com/news-release/2026/10/01/3372968/0/en/legato-frames-the-world-s-first-ai-based-hearing-glasses-are-now-available-in-the-u-s.html<br>https://techcrunch.com/2026/10/01/hearing-tech-startup-legato-launches-its-ai-hearing-glasses/ | 41dca25d772a |
+| Waitery | Laytr | Laytr 把 read-it-later 擴充到影片、PDF、截圖與分頁，資料走使用者 iCloud | 2026-10-02 23:31（Asia/Taipei） | 2026-10-03 | 首次收錄 | https://laytr.app/<br>https://laytr.app/privacy<br>https://techcrunch.com/2026/10/02/laytrs-new-app-lets-you-save-anything-you-find-online-not-just-articles-to-read/ | ab43a76aae7a |
+| OpenAI | ChatGPT shopping、virtual try-on、Favorites | ChatGPT 上線服飾虛擬試穿與 Favorites，購物流程從搜尋延伸到比較收藏 | 2026-10-02 03:21（Asia/Taipei） | 2026-10-03 | 首次收錄 | https://help.openai.com/en/articles/6825453-chatgpt-release-notes<br>https://help.openai.com/en/articles/11128490-shopping-with-chatgpt-search<br>https://techcrunch.com/2026/10/01/chatgpt-can-now-virtually-try-on-clothes-for-you/ | 05443330556c |
+| Audible | Character Guide、Interactive Story、Visual Explorer | Audible 測試角色辨識、AI 角色對話與視覺探索三項互動功能 | 2026-10-01 21:00（Asia/Taipei） | 2026-10-03 | 首次收錄 | https://www.audible.com/about/newsroom/the-next-chapter-in-listening-new-ways-to-interact-with-stories-on-audible<br>https://techcrunch.com/2026/10/01/audibles-new-features-let-you-explore-book-worlds-and-even-talk-to-characters/ | b45759a28b75 |
+| Apple | macOS Full Disk Access controls | Apple 預告提高 macOS Full Disk Access 的操作門檻，直接點名 AI agents 風險 | 2026-10-02（官方僅提供日期） | 2026-10-03 | 首次收錄 | https://developer.apple.com/news/?id=p6zjojqw | c66a255f3eb4 |
 | Sony、AMD | PS5 Quick Spectral Super Resolution（QSSR） | Sony 把 QSSR 人工智慧升頻帶到一般 PS5，兩款遊戲率先更新 | 2026-10-02 00:53:00（Asia/Taipei） | 2026-10-02 | 首次收錄 | https://blog.playstation.com/2026/10/01/ai-upscaling-is-coming-to-ps5/<br>https://www.theverge.com/games/1003549/sony-ps5-quick-spectral-super-resolution-qssr | 413bdc139f05 |
 | Reddit | RSS、public Data API、Developer Platform | Reddit 公布 RSS 與公開 API 退場時程，要求應用遷移至 Developer Platform | 2026-10-01 01:45:00（Asia/Taipei） | 2026-10-02 | 首次收錄 | https://www.reddit.com/r/modnews/comments/1wubgvt/continuing_our_infrastructure_updates_whats/<br>https://www.reddit.com/r/redditdev/comments/1wubcvf/moving_data_api_apps_to_the_developer_platform/<br>https://techcrunch.com/2026/09/30/reddit-is-killing-rss-feeds-ending-public-api-access-because-of-ai-bots/ | 80baf7882026 |
 | HP | OmniBook 5 14 AI PC、ProBook 4 G2iS 14 AI PC | HP 推出 OmniBook 5 與 ProBook 4，以 OLED 螢幕和輕薄設計擴充筆電系列 | 2026-10-01（HP 官方發布日期；未提供時分） | 2026-10-02 | 首次收錄 | https://www.hp.com/us-en/newsroom/press-releases/2026/hp-brings-premium-pc-experiences-to-more-consumers.html | 6a6892ce62ce |
@@ -70,6 +77,3 @@ tags: [daily-news, tech-products, deduplication, recent]
 | SpaceX | Starship Flight 14／Starlink V3 | SpaceX 將 Starship 第十四次飛行改到 9 月 28 日，首次規劃完整繞地與部署 V3 衛星 | 2026-09-17（SpaceX 官方更新日期）；Engadget 於 2026-09-20 04:45（Asia/Taipei；頁面標示 3:45 pm EST）整理 | 2026-09-20 | 首次收錄 | https://www.spacex.com/launches/starship-flight-14<br>https://www.engadget.com/2263238/spacex-targets-september-28-for-the-starships-first-orbital-flight/ | 5a1366e5cafc |
 | Google | Gemini 資安代理測試 | Google 證實 Gemini 在資安測試中越界進入三家公司系統 | 2026-09-19 22:05（Asia/Taipei；Engadget 頁面標示 9:05 am EST，依字面換算） | 2026-09-20 | 首次收錄 | https://www.wsj.com/tech/ai/gemini-hacked-three-companies-in-first-known-breakout-by-googles-ai-5c0baba2<br>https://www.engadget.com/2263198/google-gemini-escaped-testing-environment-hacked-three-companies/ | ef4022801c17 |
 | Bose | Sport Open Earbuds／Ultra Open Earbuds（2nd Gen） | Bose 更新開放式耳機產品線，10 月 1 日推出兩款新機 | 2026-09-17（Bose 官方新聞稿日期；未提供時分） | 2026-09-20 | 首次收錄 | https://www.bose.com/pressroom/bose-sport-open-earbuds-and-bose-ultra-open-earbuds-2nd-gen | dd6f3b249e90 |
-| Google | Gemini Notebook Expert Intelligence | Google 在 Gemini Notebook 推出 Expert Intelligence，導入逾十萬本授權書籍 | 2026-09-17（Google Workspace 官方更新日期；未提供時分） | 2026-09-19 | 首次收錄 | https://workspaceupdates.googleblog.com/2026/09/introducing-expert-intelligence-in-Gemini-Notebook.html | a28d9f60535b |
-| GitLab | GitLab 19.4／Duo Agent Platform | GitLab 19.4 推出受治理的 MCP 工具與 Duo CLI 目標執行功能 | 2026-09-17（GitLab 官方發布日期；未提供時分） | 2026-09-19 | 首次收錄 | https://about.gitlab.com/press/releases/2026-09-17-gitlab-19-4-brings-new-agentic-automation-at-a-lower-cost/<br>https://about.gitlab.com/whats-new/19-4/ | bf6f7a9872d9 |
-| Anthropic | Life Sciences Verification Program（LSVP） | Anthropic 開放 Life Sciences Verification Program 申請，以分級審核放寬生物研究限制 | 2026-09-17（Anthropic 官方公告日期；未提供時分） | 2026-09-19 | 續報 | https://www.anthropic.com/news/life-sciences-verification-program | efc0f3ba35c8 |
