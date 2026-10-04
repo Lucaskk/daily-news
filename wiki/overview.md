@@ -2,7 +2,7 @@
 title: "Overview"
 type: overview
 created: 2026-05-24
-updated: 2026-10-03
+updated: 2026-10-04
 status: seed
 tags: [overview]
 sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
@@ -19,6 +19,12 @@ sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
 - 抽出持續出現的人物、組織、事件、政策、技術與市場概念。
 - 維護跨來源的矛盾、時間線、趨勢與待查問題。
 - 將重要查詢結果回寫成可累積的 wiki 頁面。
+
+## 2026-10-04 Daily News Synthesis
+
+- 產品可用性與排序規則成為今天的共同主線：Bitchat 在印度跨商店與替代入口受限，YouTube Shorts 提高原創內容推薦；兩者都涉及平台執行邊界，但前者的法律命令範圍、後者的排序權重仍未公開。
+- 開發與維運端則出現可執行的新節點：Meta 以 Muse Gadgets firmware／Linux SDK 把 Muse 延伸到第三方硬體；Apple 與 AT&T 對 iPhone 18 Pro Max 明確分開更新預防和既有故障換機，避免把軟體更新誤寫成全面修復。
+- 全球主線由 Ukraine、Gaza、Yemen 與 North Korea 的新戰事節點，以及 Latvia 選舉、Spain 住房抗議和 Manchester 攻擊計畫構成。Houthis 命中、North Korea 性能、Libya 指控及 ShinyHunters 合作內容均保留單方或匿名來源限制。詳見 [本日日報](daily/2026/10/2026-10-04/daily-news-2026-10-04.md)。
 
 ## 2026-10-03 Daily News Synthesis
 

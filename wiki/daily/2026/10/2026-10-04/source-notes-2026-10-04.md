@@ -3,7 +3,7 @@ title: "2026-10-04 每日全球與科技 AI 新聞來源筆記"
 type: source-notes
 date: 2026-10-04
 cutoff: 2026-10-04T08:02:10+08:00
-status: research
+status: published
 tags: [daily-news, sources, provenance]
 ---
 
@@ -158,3 +158,11 @@ tags: [daily-news, sources, provenance]
 - Nigeria 另有 20 死交通事故候選；為避免同日兩則高度相似道路事故占用名額，保留有明確 Catholic pilgrims 群體與 Salama 黑點脈絡的 Kenya 事件。
 - Flydubai 事件本身發生較早，10/3 僅增加身分與極端主義背景；Brazil 選舉前瞻、Czar 遺骸與多篇政策分析屬預告、儀式或背景，均不作 24 小時新事件。
 - Libya 項目僅以 10/3 公開的談判受阻與新指控為新節點；August drone attacks 只作背景。North Korea 項目僅以視窗內官方辨識與能力宣稱為新節點，不重列視窗外的發射初報。
+
+## 發布與配送收據
+
+- pipeline 內容 commit：`1bdc7af1bf3dbe4619c20aea131b88cb8fed00ab`。
+- GitHub Pages 日期頁、`latest-slides.html` 與根入口已通過 HTTP／完整位元組雜湊驗證。
+- 公開版本：`20261004-080743-reader`。
+- 唯一私人 LINE watchdog：`2026-10-04 08:08:30 Asia/Taipei` 回報 `Sent LINE message`；未執行其他 LINE sender。
+- 公開網址：https://lucaskk.github.io/daily-news/wiki/daily/2026/10/2026-10-04/slides-2026-10-04.html?v=20261004-080743-reader

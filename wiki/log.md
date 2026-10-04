@@ -1,5 +1,12 @@
 # Knowledge Base Log
 
+## [2026-10-04] ingest | Daily global and tech AI news
+
+- 固定截點 08:02:10 Asia/Taipei；全球前 24 小時、科技產品前 336 小時。4 則前 14 份日報未收錄的產品事件先列，全球恰好 10 則；續報均列前次日期與今天新增節點。
+- 去重只查 D-14 至 D-1 的 14 份日報與同窗 61 列產品表，未讀更早日報、來源筆記或完整歷史表；CSV 啟用科技來源池與官方 newsroom／release notes 已分輪檢查。
+- pipeline 內容 commit `1bdc7af1bf3dbe4619c20aea131b88cb8fed00ab`；Pages 日期頁、latest 與根入口通過完整位元組雜湊驗證。唯一私人 watchdog 於 08:08:30 回報 `Sent LINE message`，未執行其他 LINE sender。
+- pipeline `stage=complete`。公開：https://lucaskk.github.io/daily-news/wiki/daily/2026/10/2026-10-04/slides-2026-10-04.html?v=20261004-080743-reader
+
 ## [2026-10-03] ingest | Daily global and tech AI news
 
 - 固定截點 08:01:34 Asia/Taipei；全球前 24 小時、科技產品前 336 小時。7 則未曾在前 14 份日報收錄的產品事件先列，全球恰好 10 則；續報均引用前次日期並說明新節點。
