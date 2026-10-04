@@ -166,3 +166,8 @@ tags: [daily-news, sources, provenance]
 - 公開版本：`20261004-080743-reader`。
 - 唯一私人 LINE watchdog：`2026-10-04 08:08:30 Asia/Taipei` 回報 `Sent LINE message`；未執行其他 LINE sender。
 - 公開網址：https://lucaskk.github.io/daily-news/wiki/daily/2026/10/2026-10-04/slides-2026-10-04.html?v=20261004-080743-reader
+
+
+## 圖片補正（2026-10-04）
+
+原產製遺漏 presentation 設定，造成整頁無圖。補入 T3 Muse Gadgets 官方裝置陣容；來源 https://gadgets.muse.ai/ ，原图 https://gadgets.muse.ai/gadgets/muse-gadgets-lineup.png 。圖片以 contain 完整呈現，權利屬原權利人；研究截點與新聞內容不變。

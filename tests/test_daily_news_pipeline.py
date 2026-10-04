@@ -45,6 +45,19 @@ class PipelineTests(unittest.TestCase):
                 p.validate_tech_window(dict(data, tech_window=data['tech_window'].replace(
                     '2026-09-19 08:00:53', start)), '2026-10-03T08:00:53+08:00')
 
+    def test_image_review_blocks_missing_or_silent_empty_manifest(self):
+        with self.assertRaisesRegex(ValueError, "manifest is required"):
+            p.validate_media(self.root, DAY)
+        manifest = self.root / f"presentation-{DAY}.json"
+        manifest.write_text('{"images": {}}')
+        with self.assertRaisesRegex(ValueError, "no_images_reason"):
+            p.validate_media(self.root, DAY)
+        manifest.write_text(json.dumps({"images": {}, "no_images_reason": "查證後無可信對應圖片"}))
+        p.validate_media(self.root, DAY)
+        manifest.write_text(json.dumps({"images": {"t1": {"src": "assets/a.png"}}}))
+        with self.assertRaisesRegex(ValueError, "provenance"):
+            p.validate_media(self.root, DAY)
+
     def test_timezone_and_date_required(self):
         with self.assertRaises(ValueError):
             p.begin("2026-09-12", "2026-09-12T08:00:00")

@@ -1,0 +1,14 @@
+{
+  "images": {
+    "t3": {
+      "src": "assets/muse-gadgets.png",
+      "alt": "Muse Gadgets 官方裝置陣容",
+      "caption": "Muse Gadgets 官方裝置陣容，包含 Muse Home Link 與開發板。",
+      "credit": "Muse Gadgets 官方網站",
+      "source_url": "https://gadgets.muse.ai/",
+      "original_url": "https://gadgets.muse.ai/gadgets/muse-gadgets-lineup.png",
+      "rights": "官方產品展示圖片；著作權屬原權利人。",
+      "fit": "contain"
+    }
+  }
+}

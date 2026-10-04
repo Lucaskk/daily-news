@@ -76,6 +76,23 @@ def validate_tech_window(data, cutoff):
         raise ValueError("Technology window must be exactly 14 days before the frozen cutoff")
 
 
+def validate_media(folder, day):
+    path = folder / f"presentation-{day}.json"
+    if not path.is_file():
+        raise ValueError("Image review missing: presentation manifest is required")
+    media = json.loads(path.read_text())
+    images = media.get("images")
+    if not isinstance(images, dict):
+        raise ValueError("Image manifest requires an images object")
+    if not images and not str(media.get("no_images_reason", "")).strip():
+        raise ValueError("No images: record a verified no_images_reason before publication")
+    for image in images.values():
+        for key in ("src", "alt", "caption", "credit", "source_url", "original_url", "rights"):
+            if not isinstance(image.get(key), str) or not image[key].strip():
+                raise ValueError(f"Image provenance missing {key}")
+    return media
+
+
 def prepare(state):
     day = state["date"]
     folder = ROOT / f"wiki/daily/{day[:4]}/{day[5:7]}/{day}"
@@ -88,6 +105,7 @@ def prepare(state):
     if data["date"] != day or frozen not in data["cutoff"] or frozen not in notes.read_text():
         raise ValueError("Report/source notes do not retain the frozen date and cutoff")
     validate_tech_window(data, state["cutoff"])
+    validate_media(folder, day)
     output, version = reader.render(report)
     watchdog.validate_deck(output.read_text(), day)
     reader.update_entries(output, version)
