@@ -21,6 +21,86 @@
       "rights": "官方產品新聞／技術發布配圖，著作權屬原權利人；附出處作相關新聞說明，非公共領域授權。",
       "fit": "contain"
     },
+    "t5": {
+      "src": "assets/amazon-accelerate.webp",
+      "alt": "Amazon Accelerate 活動現場的字樣裝置",
+      "caption": "Amazon 官方原文活動配圖，非 Seller Central 操作介面。",
+      "credit": "Amazon 官方 Accelerate 回顧",
+      "source_url": "https://sellingpartners.aboutamazon.com/accelerate-2026-recap",
+      "original_url": "https://amazon-k1-prod-ser.s3.us-west-2.amazonaws.com/brightspot/4c/35/49e64f3f45569ea4501962ab6064/accelerate-2026-sign.jpg",
+      "rights": "Amazon 官方發布影像，著作權屬原權利人；未宣稱公共領域或開放授權。",
+      "fit": "contain"
+    },
+    "1": {
+      "src": "https://bc.gmg.io/image/upload/c_thumb,q_auto,w_700,f_jpg/media/gmg/DM3N62YFCRFCBGZEOG42WUSMXE.jpg?api_key=clickorlando_488cff2bcc157b2e",
+      "alt": "巴西街頭民眾與國旗壁畫",
+      "caption": "原文新聞配圖；照片拍攝時間與細節請見原文圖說。",
+      "credit": "AP／ClickOrlando 原文圖片",
+      "source_url": "https://www.clickorlando.com/news/world/2026/10/04/brazil-presidential-vote-pits-trump-ally-against-lula-who-is-seeking-4th-nonconsecutive-term/",
+      "original_url": "https://bc.gmg.io/image/upload/c_thumb,q_auto,w_700,f_jpg/media/gmg/DM3N62YFCRFCBGZEOG42WUSMXE.jpg?api_key=clickorlando_488cff2bcc157b2e",
+      "rights": "原媒體提供的新聞圖片連結，著作權屬原權利人；未取得開放授權，未宣稱可任意轉載。",
+      "fit": "contain"
+    },
+    "2": {
+      "src": "https://bc.gmg.io/image/upload/c_thumb,q_auto,w_700,f_jpg/media/gmg/VW3WEZALHZCYDCAOGAVO3TIJYU.jpg?api_key=news4jax_3f10b25586458189",
+      "alt": "Merz 與 Zelenskyy 在受損建築前受訪",
+      "caption": "原文新聞配圖；照片拍攝時間與細節請見原文圖說。",
+      "credit": "AP／News4Jax 原文圖片",
+      "source_url": "https://www.news4jax.com/news/world/2026/10/04/germanys-merz-visits-kyiv-as-russia-steps-up-attacks-on-ukrainian-cities/",
+      "original_url": "https://bc.gmg.io/image/upload/c_thumb,q_auto,w_700,f_jpg/media/gmg/VW3WEZALHZCYDCAOGAVO3TIJYU.jpg?api_key=news4jax_3f10b25586458189",
+      "rights": "原媒體提供的新聞圖片連結，著作權屬原權利人；未取得開放授權，未宣稱可任意轉載。",
+      "fit": "contain"
+    },
+    "3": {
+      "src": "https://bc.gmg.io/image/upload/c_thumb,q_auto,w_700,f_jpg/media/gmg/4H42HXS7KFHH7HYEICNYKITJSI.jpg?api_key=news4jax_3f10b25586458189",
+      "alt": "攜帶步槍的衣索比亞戰士",
+      "caption": "原文背景配圖，不據此認定為今日進入 Mekelle 的現場照片。",
+      "credit": "AP／News4Jax 原文圖片",
+      "source_url": "https://www.news4jax.com/news/world/2026/10/04/opposition-fighters-in-northern-ethiopias-tigray-withdraw-from-regional-capital/",
+      "original_url": "https://bc.gmg.io/image/upload/c_thumb,q_auto,w_700,f_jpg/media/gmg/4H42HXS7KFHH7HYEICNYKITJSI.jpg?api_key=news4jax_3f10b25586458189",
+      "rights": "原媒體提供的新聞圖片連結，著作權屬原權利人；未取得開放授權，未宣稱可任意轉載。",
+      "fit": "contain"
+    },
+    "4": {
+      "src": "https://i.abcnewsfe.com/a/857f5cf2-b790-4b18-b201-de2787ca8125/wirestory_a37b24d446b3066d3b17441ac5bb0264_16x9.jpg?w=1600",
+      "alt": "男子站在受損設備與建築內",
+      "caption": "原文中東局勢背景配圖，非本次葉門軍事行動的現場確認。",
+      "credit": "AP／ABC News 原文圖片",
+      "source_url": "https://abcnews.com/International/wireStory/yemens-government-declares-major-operation-houthis-mideast-news-136983229",
+      "original_url": "https://i.abcnewsfe.com/a/857f5cf2-b790-4b18-b201-de2787ca8125/wirestory_a37b24d446b3066d3b17441ac5bb0264_16x9.jpg?w=1600",
+      "rights": "原媒體提供的新聞圖片連結，著作權屬原權利人；未取得開放授權，未宣稱可任意轉載。",
+      "fit": "contain"
+    },
+    "5": {
+      "src": "https://gray-wcsc-prod.gtv-cdn.com/resizer/v2/WAF7SWHBOFDVHMLOIRXF7BKYPA.jpg?auth=2341df791c051cef22ebdeba405fbc190155f88815980da52bec8a5c935fc735&width=1200&height=600&smart=true",
+      "alt": "停在機場的美軍轟炸機",
+      "caption": "原文轟炸機配圖；照片拍攝時間請見原文，不視為今日撤離畫面。",
+      "credit": "AP／Live5News 原文圖片",
+      "source_url": "https://www.live5news.com/2026/10/04/us-air-force-removes-all-bombers-british-air-base-targeted-by-suspected-terror-attack/",
+      "original_url": "https://gray-wcsc-prod.gtv-cdn.com/resizer/v2/WAF7SWHBOFDVHMLOIRXF7BKYPA.jpg?auth=2341df791c051cef22ebdeba405fbc190155f88815980da52bec8a5c935fc735&width=1200&height=600&smart=true",
+      "rights": "原媒體提供的新聞圖片連結，著作權屬原權利人；未取得開放授權，未宣稱可任意轉載。",
+      "fit": "contain"
+    },
+    "8": {
+      "src": "https://s7d2.scene7.com/is/image/TWCNews/Malaysia_Myanmar_68657",
+      "alt": "隔著巴士窗戶的男子",
+      "caption": "原文遣返新聞配圖；照片拍攝時間與細節請見原文圖說。",
+      "credit": "AP／NY1 原文圖片",
+      "source_url": "https://ny1.com/nyc/all-boroughs/ap-top-news/2026/10/04/nearly-1500-myanmar-nationals-repatriated-from-malaysia-as-un-warns-of-risks",
+      "original_url": "https://s7d2.scene7.com/is/image/TWCNews/Malaysia_Myanmar_68657",
+      "rights": "原媒體提供的新聞圖片連結，著作權屬原權利人；未取得開放授權，未宣稱可任意轉載。",
+      "fit": "contain"
+    },
+    "10": {
+      "src": "https://s.abcnews.com/images/US/wirestory_9dd1268f6aa70423e7a815fce33d9366_16x9_992.jpg",
+      "alt": "太平洋雲系的地球衛星影像",
+      "caption": "原文衛星配圖；影像時間與氣象機構出處請見原文圖說。",
+      "credit": "AP／ABC News 原文圖片",
+      "source_url": "https://abcnews.com/amp/US/wireStory/now-typhoon-nolo-after-pacific-hurricane-crosses-international-136991141",
+      "original_url": "https://s.abcnews.com/images/US/wirestory_9dd1268f6aa70423e7a815fce33d9366_16x9_992.jpg",
+      "rights": "原媒體提供的新聞圖片連結，著作權屬原權利人；未取得開放授權，未宣稱可任意轉載。",
+      "fit": "contain"
+    },
     "t4": {
       "src": "assets/clef-decision-workflow.png",
       "alt": "Cloudflare Clef 決策模型的輸入與機率輸出示意",
@@ -34,9 +114,10 @@
   },
   "omitted_images": {
     "t3": "官方新聞稿提供版本標誌，未取得可驗證的新版操作介面，不以標誌冒充介面。",
-    "t5": "官方回顧主要為會議照片，未取得新版多通路工具介面。",
-    "t6": "SDK release 無对应介面畫面。",
-    "t7": "release notes 無对应管理介面畫面。",
-    "world": "未取得可轉載的對應全球事件新聞照片，保留文字與逐篇來源。"
+    "t6": "官方 GitHub release 有社群預覽卡，未取得產品介面照片；並非原頁完全無圖。",
+    "t7": "本次官方頁請求回傳 HTTP 403，圖片狀態未能確認，不判定原文無圖。",
+    "6": "AP 原文 HTTP 403；尚未確認原文圖片，不判定無圖。",
+    "7": "AP 原文 HTTP 403；其他媒體同事件有選舉照片，原 AP 頁圖片仍未確認。",
+    "9": "AP 原文 HTTP 403；其他媒體有 Halden 地景背景圖，原 AP 頁圖片仍未確認。"
   }
 }
