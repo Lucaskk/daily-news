@@ -1,5 +1,42 @@
 {
   "date": "2026-10-05",
-  "images": {},
-  "no_images_reason": "已核對入選來源：兩項科技更新是 SDK／管理介面，官方 release 無可核實的對應畫面；全球 AP／Reuters 事件照片屬需授權素材，未取得公開轉載權。省略圖片，避免使用舊產品、舊事件照片或未授權圖像。"
+  "images": {
+    "t1": {
+      "src": "assets/bose-wired-earbuds.jpg",
+      "alt": "Bose 黑色 USB-C 有線降噪耳機",
+      "caption": "Bose 官方新品照片：Noise Cancelling Wired Earbuds。",
+      "credit": "Bose 官方 pressroom",
+      "source_url": "https://www.bose.com/pressroom/bose-unveils-new-noise-cancelling-wired-earbuds",
+      "original_url": "https://assets.bosecreative.com/transform/641a560e-58ba-4a0d-9156-8f9743a32480/Bose-Noise-Cancelling-Wired-Earbuds_Black_01",
+      "rights": "官方產品新聞／技術發布配圖，著作權屬原權利人；附出處作相關新聞說明，非公共領域授權。",
+      "fit": "contain"
+    },
+    "t2": {
+      "src": "assets/tatung-aidc-cube.jpg",
+      "alt": "大同 TTG AIDC CUBE AI 算力機櫃",
+      "caption": "大世科官方發布的 TTG AIDC CUBE 算力機櫃照片。",
+      "credit": "大世科官方新聞發布",
+      "source_url": "https://www.etatung.com/Home/ShowProductionInfoIdea?ID=da604df5-2fb3-413b-892c-3507a8bf32b5",
+      "original_url": "https://www.etatung.com/upload/07a7a09a-e976-4368-b4ce-7fd965ce4192.jpg",
+      "rights": "官方產品新聞／技術發布配圖，著作權屬原權利人；附出處作相關新聞說明，非公共領域授權。",
+      "fit": "contain"
+    },
+    "t4": {
+      "src": "assets/clef-decision-workflow.png",
+      "alt": "Cloudflare Clef 決策模型的輸入與機率輸出示意",
+      "caption": "Cloudflare 官方決策流程示意圖，非硬體或事件照片。",
+      "credit": "Cloudflare 官方發布文章",
+      "source_url": "https://blog.cloudflare.com/clef-decision-models/",
+      "original_url": "https://blog.cloudflare.com/_emdash/api/media/file/01M3TJPNG3PJHDJ88KJZJ7Q29T.png",
+      "rights": "官方產品新聞／技術發布配圖，著作權屬原權利人；附出處作相關新聞說明，非公共領域授權。",
+      "fit": "contain"
+    }
+  },
+  "omitted_images": {
+    "t3": "官方新聞稿提供版本標誌，未取得可驗證的新版操作介面，不以標誌冒充介面。",
+    "t5": "官方回顧主要為會議照片，未取得新版多通路工具介面。",
+    "t6": "SDK release 無对应介面畫面。",
+    "t7": "release notes 無对应管理介面畫面。",
+    "world": "未取得可轉載的對應全球事件新聞照片，保留文字與逐篇來源。"
+  }
 }

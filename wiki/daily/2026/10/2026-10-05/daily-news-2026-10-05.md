@@ -11,11 +11,81 @@ status: research-complete
 全球新聞 24 小時視窗｜2026-10-04 08:00:15 至 2026-10-05 08:00:15（Asia/Taipei）
 科技／AI 產品 14 日視窗｜2026-09-21 08:00:15 至 2026-10-05 08:00:15（Asia/Taipei）
 
-兩項未收錄的軟體更新先列；全球焦點為選舉、援助、安全部署與戰區的新執行節點。來源只有日期時保留日期，單方宣稱與初步數字均明示限制。
+修訂版重新掃描科技來源，收錄七項科技／AI 獨立產品事件；全球焦點為選舉、援助、安全部署與戰區的新執行節點。來源只有日期時保留日期，單方宣稱與初步數字均明示限制。
 
 ## 科技／AI 產品 14 日視窗
 
-### T1. OpenAI Node SDK 7.28.0 加入自訂語音建立與 agent session events 介面
+### T1. Bose 推出 USB-C 有線降噪耳機，開放預購並預定 10 月 15 日出貨
+公司／產品｜Bose｜Noise Cancelling Wired Earbuds
+發佈時間｜2026-09-28（官方發布日期）
+事件／發佈時間基準｜Bose 9/28 新品新聞稿，當日開始 My Bose 專屬預購；10/15 是預定出貨日，並非本次發布日。
+續報／去重｜僅比對 9/21 至 10/4 的 14 份日報，Bose／產品名称無命中；首次收錄。
+重點摘要｜Bose 發表 99 美元 USB-C 有線耳機，以連接裝置供電並提供主動降噪，省去藍牙配對與耳機電池充電。
+為何重要｜把即插即用與降噪結合，提供無線耳機之外的選擇；實際使用仍須確認裝置 USB 音訊相容性。
+關鍵事實：
+- 四個麥克風支援 Quiet、Aware 與關閉降噪三種模式。
+- 官方列出黑色、白色及限量薄荷綠，預定 10/15 出貨。
+來源｜[Bose 官方新聞稿](https://www.bose.com/pressroom/bose-unveils-new-noise-cancelling-wired-earbuds)
+相關實體／概念｜Bose、USB-C、ANC、有線耳機
+不確定性／歧異｜售價為美國公告價格；不推論台灣售價或到貨日，降噪表現仍待獨立測試。
+
+### T2. 大同發表 TTG AIDC CUBE，以預製模組整合電力、冷卻與 AI 算力
+公司／產品｜大同／大世科｜TTG AIDC CUBE
+發佈時間｜2026-09-30（官方確認的發表日期）
+事件／發佈時間基準｜大世科官方文章明示「今（30）日發表」，頁面活動起日為 9/30；未將活動欄 16:30 視為首次發布時刻。
+續報／去重｜14 份日報查 TTG AIDC CUBE／大同均無命中；首次收錄的獨立解決方案。
+重點摘要｜大同集團發表預製模組化 AI 機房方案，把供電、備援、散熱、監控與算力部署整合，以 180 天算力落地為交付目標。
+為何重要｜企業導入 AI 需要同步處理電力與散熱，整合方案可減少多套工程協調；交付期限仍依場地、規模與合約而異。
+關鍵事實：
+- 大同負責高壓電力、UPS 與液冷／氣冷工程，大世科負責算力與維運整合。
+- 採模組化架構，可依場域與後續需求擴充。
+來源｜[大世科官方發布](https://www.etatung.com/Home/ShowProductionInfoIdea?ID=da604df5-2fb3-413b-892c-3507a8bf32b5)
+相關實體／概念｜大同、大世科、AI 資料中心、UPS、液冷
+不確定性／歧異｜180 天為廠商提出的部署目標，不等於所有客戶已完成交付；可靠度與效能須核對實際驗證範圍。
+
+### T3. Acumatica 2026 R2 正式供應，新增內嵌 AI、資料倉儲與 MCP 連線
+公司／產品｜Acumatica｜2026 R2 Cloud ERP
+發佈時間｜2026-10-01（官方發布日期）
+事件／發佈時間基準｜官方 10/1 新聞稿明示 general availability，發布日位於凍結科技窗內。
+續報／去重｜14 份日報查 Acumatica／ERP MCP／Native Data Warehouse 無命中；首次收錄。
+重點摘要｜Acumatica 正式推出 2026 R2 雲端 ERP，加入日常流程中的 AI 功能、原生資料倉儲與 MCP 連線，讓企業工具使用受治理的 ERP 資料。
+為何重要｜獨立分析資料可減少報表與交易作業爭用資源；MCP 連線可沿用角色權限及欄位遮蔽，仍須做好存取設定。
+關鍵事實：
+- AI Assistant／AI Automation 支援問答、異常辨識與工作流程。
+- 新版將客戶轉至現代化使用介面，提供資料倉儲與 MCP 接入。
+來源｜[Acumatica 官方新聞稿](https://www.acumatica.com/corporate-newsroom/press-releases/acumatica-2026-r2-release-with-embedded-ai/)
+相關實體／概念｜Acumatica、ERP、MCP、資料治理
+不確定性／歧異｜公告不代表每個客戶已部署所有功能；權限、升級與模組適用範圍需依實際環境確認。
+
+### T4. Cloudflare 開源 Clef 與 Clef-flash，讓 AI 工作流程直接取得決策機率
+公司／產品｜Cloudflare｜Clef、Clef-flash、Workers AI
+發佈時間｜2026-10-01（官方發布日期）
+事件／發佈時間基準｜Cloudflare 10/1 changelog 明示兩款模型當日起在 Workers AI 可用，模型權重採 Apache 2.0 開源。
+續報／去重｜14 份日報查 Clef 無命中；10/3 收錄的 Strands Decider 是不同廠商的模型，不是同一發布事件。
+重點摘要｜Cloudflare 推出 Clef 與 Clef-flash 決策模型，讀取輸入及預先定義的答案，回傳各選項的機率，供工作流程分類、路由或升級處理。
+為何重要｜固定格式結果可減少自由文字解析，但決策機率仍需以實際資料校準，不代表自主執行必然安全或正確。
+關鍵事實：
+- 兩款模型已在 Workers AI 供應，亦公開可在本地執行的權重。
+- 官方同步宣布可依自有資料微調的強化學習平台。
+來源｜[Cloudflare 官方 changelog](https://developers.cloudflare.com/changelog/post/2026-10-01-clef-workers-ai/) [Cloudflare 官方發布文章](https://blog.cloudflare.com/clef-decision-models/)
+相關實體／概念｜Cloudflare、Clef、Workers AI、decision models
+不確定性／歧異｜效能比較屬廠商測試；敏感或高風險決策仍需設計驗證、人工介入及稽核。
+
+### T5. Amazon 將多通路銷售管理整合進 Seller Central，串接外部平台訂單
+公司／產品｜Amazon｜Seller Central Multichannel Selling
+發佈時間｜2026-09-29（官方回顧確認日期）
+事件／發佈時間基準｜Amazon 9/29 Accelerate 官方回顧確認當月會議推出新工具；未把 10/2 媒體介紹日期當成新品日期，也未虛構首次宣布時刻。
+續報／去重｜14 份日報查 Seller Central／Multichannel Selling／多通路無命中；首次收錄。
+重點摘要｜Amazon 新增 Multichannel Selling 工具，讓賣家在 Seller Central 管理 Walmart、eBay、TikTok Shop 與 Shopify 的目錄、訂單及庫存。
+為何重要｜集中管理可減少跨平台作業，但各平台連線條件與實際開放範圍仍須個別確認，不能推定全球商家同步可用。
+關鍵事實：
+- 官方回顧明確列出四個外部銷售通路及目錄、訂單、庫存管理。
+- 與既有單純代出貨的服務不同，本次新增的是 Seller Central 多通路管理工具。
+來源｜[Amazon 官方 Accelerate 回顧](https://sellingpartners.aboutamazon.com/accelerate-2026-recap)
+相關實體／概念｜Amazon、Seller Central、Walmart、TikTok Shop、Shopify
+不確定性／歧異｜官方回顧未列出所有市場及帳號的啟用時間；不推論台灣帳戶可立即使用。
+
+### T6. OpenAI Node SDK 7.28.0 加入自訂語音建立與 agent session events 介面
 公司／產品｜OpenAI｜openai-node 7.28.0
 發佈時間｜2026-10-02（官方版本日期）
 事件／發佈時間基準｜GitHub release notes 7.28.0 日期為 10/2；release 欄另顯示 10/4 18:22，兩者均在科技窗內，未猜時區。
@@ -29,7 +99,7 @@ status: research-complete
 相關實體／概念｜OpenAI、Node.js、TypeScript、custom voice、agent sessions
 不確定性／歧異｜版本日期與 GitHub 上架顯示日不同；權限與實際供應範圍需另核對。
 
-### T2. ChatGPT Enterprise 將外掛與 marketplace 管理加入 Admin console
+### T7. ChatGPT Enterprise 將外掛與 marketplace 管理加入 Admin console
 公司／產品｜OpenAI｜ChatGPT Enterprise Admin console
 發佈時間｜2026-10-01（官方發布日期）
 事件／發佈時間基準｜官方 Enterprise release notes 的 October 1 段落，定位 Manage plugins and marketplaces in Admin console。

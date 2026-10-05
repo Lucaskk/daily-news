@@ -48,3 +48,14 @@ status: published
 - G10 Nolo：AP 10/4 21:05:24 UTC＝10/5 05:05:24 TPE；前次9/29同頁風暴背景，新為跨換日線、185 km/h與新預報。不是僅因改標題收錄。
 - 補查 `Brazil.*vote|Brazil.*election|Bosnia.*vote|Dodik.*election|Norway.*hunting|Merz.*Kyiv|Nolo.*typhoon`，同14份日報無命中、未截斷；上述初查命中的背景則保留續報標示。
 - 每項完整原始網址與來源名稱保留於當日日報對應段落；不採未讀取的聚合站推測。圖片查證與不使用原因見 presentation-2026-10-05.json。
+
+
+## 使用者要求的重新研究與修訂
+
+- 保留原研究截點 2026-10-05 08:00:15 Asia/Taipei；不混入截點後發布，全球 10 則原選題保留。
+- 重新開啟 CSV 全部 11 個啟用網址：Engadget、The Verge、TechCrunch、WIRED、Ars Technica、Cool3c、Yahoo奇摩科技、TechOrange、數位時代、TechNews、OpenAI。The Verge、Yahoo、數位時代首頁讀取錯誤，使用 site 搜尋替代；TechNews 主首頁回應為較舊快取，改查 3C 分類與搜尋。不可把讀取失敗當成沒有新聞。
+- 定向官方補查 Bose pressroom、Acumatica newsroom、Cloudflare changelog/blog、Amazon Selling Partners、TSTI 大世科；覆蓋消費硬體、AI 基建、企業軟體、開發模型與商家工具。
+- 新增 5 個合格獨立事件：Bose 9/28 有線耳機預購、大同 9/30 TTG AIDC CUBE 發表、Acumatica 10/1 2026 R2 GA、Cloudflare 10/1 Clef／Clef-flash 供應與開源、Amazon 9/29 官方回顧确认 Multichannel Selling 新工具。原 SDK 與管理介面保留，總科技數 7，重新排序。
+- lookup cutoff 固定上述截點；查詢 `Bose|Clef|Multichannel Selling|Seller Central|AIDC CUBE|Acumatica|多通路|多渠道|大同` 僅搜尋 9/21～10/4 共14份日報，無命中且未截斷；並核對同窗61列產品表無相同事件。原T1/T2是當日既有內容，不當作歷史重複。
+- 排除候選：Strands Decider 10/3已收錄；Kindle、PS5 QSSR、HP筆電10/2已收錄；Apple Full Disk Access與ChatGPT試穿10/3已收錄；AOC AGP327KG初次公布在8月，超出14天；Biwin CL100官方7月已有指南，不能把10/2介紹當新品；Steam Deck 2與HomePad屬傳聞；PHILIPS 365保值換新屬促銷；Ars多篇政策、評論與舊Shield漲價無新品事件。
+- 圖片原因：初版 manifest 的 images 空白，故 renderer 正常省略所有圖，並非載入錯誤。原先只對兩項軟體更新及全球授權照片查證不足以支持全部無圖。修訂版改用 Bose 官方 pressroom 產品圖、大世科官方可下載 TTG AIDC CUBE 機櫃圖、Cloudflare 官方決策流程示意圖。圖像屬對應產品或官方流程，均保留來源與著作權資訊；其餘項目逐項記錄無圖理由。
