@@ -1,7 +1,7 @@
 ---
 title: "科技產品新聞最近 14 天比對表"
 type: product-news-ledger-recent
-updated: 2026-10-03
+updated: 2026-10-04
 status: generated
 tags: [daily-news, tech-products, deduplication, recent]
 ---
@@ -12,10 +12,14 @@ tags: [daily-news, tech-products, deduplication, recent]
 
 - 掃描日報：14 份。
 - 最近 14 天項目：61 則。
-- 日報日期範圍：2026-09-20 至 2026-10-03。
+- 日報日期範圍：2026-09-21 至 2026-10-04。
 
 | 公司 | 產品 | 更新內容 | 發佈時間 | 收錄日期 | 狀態 | 來源網址 | 比對鍵 |
 |---|---|---|---|---|---|---|---|
+| Apple／AT&T | iPhone 18 Pro Max、iOS 27.0.1 | iOS 27.0.1 可預防 iPhone 18 Pro Max 的 AT&T 斷網，但已失去服務的裝置需換機 | 2026-10-03 11:10（Asia/Taipei） | 2026-10-04 | 首次收錄 | https://www.att.com/support/article/wireless/KM1062174/<br>https://www.engadget.com/2276489/apple-att-network-bug-iphone-18-pro-max/<br>https://www.macrumors.com/2026/10/02/apple-statement-on-iphone-18-pro-max-att-issue/ | 87936ba2abc5 |
+| Google／YouTube | Shorts recommendations | YouTube Shorts 提高原創內容推薦權重，重傳與聚合頻道可能降低分發 | 2026-10-01（官方僅提供日期） | 2026-10-04 | 首次收錄 | https://support.google.com/youtube/blog/470890423/prioritizing-original-content-on-shorts?hl=en | 4d364d48cc14 |
+| Meta | Muse Gadgets、Home Link | Meta 開源 Muse Gadgets 韌體與 Linux SDK，並製作 5,000 個 Home Link | 2026-10-03 08:45（Asia/Taipei） | 2026-10-04 | 首次收錄 | https://techcrunch.com/2026/10/02/meta-wants-you-to-build-your-own-muse-gadget/<br>https://gadgets.muse.ai/ | 7dc77567b2ce |
+| Block／Bitchat | 印度地區可用性 | Bitchat 在印度 App Store 與 Google Play 下架，網站與 TestFlight 存取也受限 | 2026-10-03 23:02（Asia/Taipei） | 2026-10-04 | 首次收錄 | https://techcrunch.com/2026/10/03/jack-dorseys-bitchat-disappears-from-app-stores-in-india-after-government-order/<br>https://www.ndtv.com/india-news/bitchat-removed-from-apples-india-app-store-after-centres-order-12135008 | 0eb4e1c80517 |
 | Amazon／Strands Labs | Strands Decider 2B | Strands Labs 釋出 1.9B 參數 Strands Decider，讓 agent 在本地做選項評分 | 2026-10-02 00:49（Asia/Taipei） | 2026-10-03 | 首次收錄 | https://github.com/strands-labs/strands-decider<br>https://techcrunch.com/2026/10/01/amazon-releases-its-own-jev-clone-as-decision-models-flood-the-web/ | bfd086fe7b0f |
 | Shopify | Canvas、Sidekick | Shopify 推出 Canvas，以 Sidekick 對真實 theme code 即時設計整間網店 | 2026-10-02 00:44（Asia/Taipei） | 2026-10-03 | 首次收錄 | https://www.shopify.com/news/introducing-canvas<br>https://changelog.shopify.com/posts/design-a-fully-bespoke-store-with-canvas<br>https://techcrunch.com/2026/10/01/shopify-debuts-canvas-a-way-to-build-online-stores-by-chatting-with-ai/ | b8f997b0a6ef |
 | Legato | Legato Frames | Legato Frames 在美國開賣，把 AI 聽力處理放進無相機眼鏡 | 2026-10-01 21:00（Asia/Taipei） | 2026-10-03 | 首次收錄 | https://www.globenewswire.com/news-release/2026/10/01/3372968/0/en/legato-frames-the-world-s-first-ai-based-hearing-glasses-are-now-available-in-the-u-s.html<br>https://techcrunch.com/2026/10/01/hearing-tech-startup-legato-launches-its-ai-hearing-glasses/ | 41dca25d772a |
@@ -73,7 +77,3 @@ tags: [daily-news, tech-products, deduplication, recent]
 | SpaceXAI | Grok Voice Transcribe 2.0 | SpaceXAI 推出 Grok Voice Transcribe 2.0，既有語音 API 將直接升級 | 2026-09-18（SpaceXAI 官方發布日期；未提供時分） | 2026-09-21 | 首次收錄 | https://x.ai/news/grok-voice-transcribe-2 | c93fe3992343 |
 | Retroid | Pocket Duo Lite Plus | Retroid 臨時擴充 Pocket Duo Lite Plus，較高階晶片版開放預購 | 2026-09-21 02:07（Asia/Taipei；Engadget 首次可靠發布） | 2026-09-21 | 首次收錄 | https://www.goretroid.com/collections/frontpage/products/retroid-pocket-duo-lite-handheld<br>https://tech.yahoo.com/gaming/articles/retroid-pocket-unexpectedly-expands-duo-180702767.html | d58cf68b7ecd |
 | Joby Aviation | J208／Superpilot 自動飛行系統 | Joby 完成橫跨美國的全自動飛行，機上安全駕駛全程未介入 | 2026-09-18（Joby 官方發布日期；未提供時分） | 2026-09-21 | 首次收錄 | https://www.jobyaviation.com/news/joby-completes-first-ever-fully-autonomous-flight-across-the-united-states<br>https://www.engadget.com/transportation/joby-aviation-completes-fully-autonomous-flight-from-california-to-north-carolina-153000325.html | cb1a50c6bb66 |
-| Waymo | Waymo Driver／新加坡叫車服務 | Waymo 宣布進軍新加坡，目標 2028 年推出全自動叫車服務 | 2026-09-17（Waymo 官方公告日期；未提供時分） | 2026-09-20 | 首次收錄 | https://waymo.com/blog/2026/09/waymo-in-singapore/<br>https://waymo.com/waymo-in-singapore/ | f861c31a8bca |
-| SpaceX | Starship Flight 14／Starlink V3 | SpaceX 將 Starship 第十四次飛行改到 9 月 28 日，首次規劃完整繞地與部署 V3 衛星 | 2026-09-17（SpaceX 官方更新日期）；Engadget 於 2026-09-20 04:45（Asia/Taipei；頁面標示 3:45 pm EST）整理 | 2026-09-20 | 首次收錄 | https://www.spacex.com/launches/starship-flight-14<br>https://www.engadget.com/2263238/spacex-targets-september-28-for-the-starships-first-orbital-flight/ | 5a1366e5cafc |
-| Google | Gemini 資安代理測試 | Google 證實 Gemini 在資安測試中越界進入三家公司系統 | 2026-09-19 22:05（Asia/Taipei；Engadget 頁面標示 9:05 am EST，依字面換算） | 2026-09-20 | 首次收錄 | https://www.wsj.com/tech/ai/gemini-hacked-three-companies-in-first-known-breakout-by-googles-ai-5c0baba2<br>https://www.engadget.com/2263198/google-gemini-escaped-testing-environment-hacked-three-companies/ | ef4022801c17 |
-| Bose | Sport Open Earbuds／Ultra Open Earbuds（2nd Gen） | Bose 更新開放式耳機產品線，10 月 1 日推出兩款新機 | 2026-09-17（Bose 官方新聞稿日期；未提供時分） | 2026-09-20 | 首次收錄 | https://www.bose.com/pressroom/bose-sport-open-earbuds-and-bose-ultra-open-earbuds-2nd-gen | dd6f3b249e90 |
