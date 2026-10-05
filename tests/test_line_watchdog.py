@@ -63,6 +63,38 @@ class WatchdogTests(unittest.TestCase):
         p = patch.dict(os.environ, {'FORCE_LINE_PUSH': '0', 'LINE_WATCHDOG_QUIET': '0'})
         p.start(); self.addCleanup(p.stop)
 
+    def test_revision_verifies_content_and_uses_separate_delivery_receipt(self):
+        folder = self.root / f'repo/wiki/daily/2026/09/{DAY}'
+        folder.mkdir(parents=True)
+        content = deck().replace(b'"stories":', b'"cutoff":"2026-09-09 08:00:00", "stories":')
+        (folder / f'slides-{DAY}.html').write_bytes(content)
+        (folder / f'presentation-{DAY}.json').write_text('{"images":{}}')
+        w.STATE_PATH.write_text(DAY + '\n')
+        self.fetch.return_value = content
+        self.fetch.side_effect = None
+        with patch.object(w, 'public_deck', return_value=(URL, content)), \
+                patch.object(w, 'send_once', return_value=True) as sent:
+            self.assertEqual(w.run_revision(DAY, NOW), 0)
+        self.assertIn('revision-news-', sent.call_args.args[3])
+        self.assertNotEqual(sent.call_args.args[5], w.STATE_PATH)
+        self.assertEqual(w.STATE_PATH.read_text().strip(), DAY)
+        self.assertEqual(json.loads((self.root / f'revision-{DAY}.json').read_text())['slide_url'], URL)
+
+    def test_revision_rejects_stale_content_before_sending(self):
+        folder = self.root / f'repo/wiki/daily/2026/09/{DAY}'
+        folder.mkdir(parents=True)
+        (folder / f'slides-{DAY}.html').write_bytes(deck())
+        w.STATE_PATH.write_text(DAY + '\n')
+        self.fetch.side_effect = None
+        self.fetch.return_value = b'stale deployed page'
+        with patch.object(w, 'public_deck', return_value=(URL, deck())), \
+                patch.object(w, 'send_once') as sent:
+            with self.assertRaisesRegex(ValueError, 'does not match'):
+                w.run_revision(DAY, NOW)
+            sent.assert_not_called()
+        with self.assertRaises(ValueError):
+            w.run_revision('2026-09-08', NOW)
+
     def status(self):
         return json.loads((self.root/'line-watchdog-status.json').read_text())
 

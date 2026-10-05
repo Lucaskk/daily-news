@@ -579,9 +579,59 @@ def run_backfill(day: str, now: datetime) -> int:
     return 0
 
 
+def run_revision(day: str, now: datetime) -> int:
+    """Explicit user-requested update, with a separate receipt for each verified deck."""
+    if day != now.date().isoformat() or sent_date(STATE_PATH) != day:
+        raise ValueError("Revision requires today's previously delivered news")
+    env = load_env(ENV_PATH)
+    base = require(env, "PUBLIC_SLIDES_BASE_URL").rstrip("/")
+    latest = base + "/" + env.get("DAILY_SLIDES_PATH", "/wiki/daily/latest-slides.html").lstrip("/")
+    url, _ = public_deck(base, latest, day)
+    folder = NEWS_REPO / f"wiki/daily/{day[:4]}/{day[5:7]}/{day}"
+    local = (folder / f"slides-{day}.html").read_bytes()
+    if fetch(url, headers={"Cache-Control": "no-cache"}) != local:
+        raise ValueError("Published revision does not match local verified deck")
+    validate_deck(local.decode("utf-8"), day)
+    original_request = ROOT / f"line-request-news-{day}.json"
+    if original_request.exists() and url in json.loads(original_request.read_text()).get("text", ""):
+        raise ValueError("Revision still points to the original delivered version")
+    manifest = json.loads((folder / f"presentation-{day}.json").read_text())
+    for media in manifest.get("images", {}).values():
+        src = media["src"]
+        if not urllib.parse.urlsplit(src).scheme:
+            asset = (folder / src).resolve()
+            if not asset.is_relative_to(folder.resolve()) or not asset.is_file():
+                raise ValueError("Invalid revision image path")
+            if fetch(urllib.parse.urljoin(url, src), headers={"Cache-Control": "no-cache"}) != asset.read_bytes():
+                raise ValueError("Published revision image does not match local asset")
+    page = Page()
+    page.feed(local.decode("utf-8"))
+    report = json.loads("".join(page.report))
+    tech_count = sum(item.get("category") == "tech" for item in report["stories"])
+    digest = hashlib.sha256(local).hexdigest()
+    kind = f"revision-news-{day}-{digest[:16]}"
+    receipt = ROOT / f"line-{kind}-sent"
+    text = (f"Daily News 更新版\n日期：{day}\n"
+            f"重新掃描科技來源：科技 {tech_count} 則＋全球 10 則\n"
+            f"已加入 {len(manifest.get('images', {}))} 張官方圖片／示意圖\n"
+            f"研究截點：{report['cutoff']}\n連結：{url}")
+    if not send_once(require(env, "LINE_CHANNEL_ACCESS_TOKEN"), require(env, "LINE_TO_ID"),
+                     text, kind, now, receipt):
+        return 1
+    write_atomic(ROOT / f"revision-{day}.json", json.dumps({
+        "date": day, "delivered_at": now.isoformat(), "slide_url": url,
+        "sha256": digest, "tech_count": tech_count,
+        "image_count": len(manifest.get("images", {})),
+    }, ensure_ascii=False, indent=2) + "\n")
+    log(f"Sent LINE message: {day} revision | {url}")
+    return 0
+
+
 def main(argv=None) -> int:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--backfill-date", help="Explicitly send a verified past-day archive")
+    group = parser.add_mutually_exclusive_group()
+    group.add_argument("--revision-date", help="Explicitly send a verified updated edition of today")
+    group.add_argument("--backfill-date", help="Explicitly send a verified past-day archive")
     args = parser.parse_args(argv)
     now = datetime.now(TAIPEI)
     with (ROOT / "line-watchdog.lock").open("a+") as lock:
@@ -591,10 +641,12 @@ def main(argv=None) -> int:
             log("Another LINE watchdog is running; no duplicate execution")
             return 0
         try:
+            if args.revision_date:
+                return run_revision(args.revision_date, now)
             return run_backfill(args.backfill_date, now) if args.backfill_date else run_once(now)
         except Exception as exc:
             log(f"LINE watchdog failed: {type(exc).__name__}: {exc}", error=True)
-            if not args.backfill_date:
+            if not args.backfill_date and not args.revision_date:
                 record_status("error", now, error=f"{type(exc).__name__}: {exc}")
             return 1
 
