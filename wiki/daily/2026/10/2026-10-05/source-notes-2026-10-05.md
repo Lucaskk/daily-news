@@ -2,10 +2,17 @@
 title: "2026-10-05 來源筆記"
 date: 2026-10-05
 type: source-notes
-status: research
+status: published
 ---
 
 # 2026-10-05 來源筆記
+
+## 發布收據
+
+- 內容 commit：`98bad15b9a5d623df46825ba70a4c16316e0c572`；讀者版 `20261005-080618-reader`。
+- GitHub Pages 日期頁、latest 與根入口通過位元組驗證。
+- 私人 LINE watchdog 於 2026-10-05 08:07:03 Asia/Taipei 回報 `Sent LINE message`，exit 0；不重送。
+- `daily_news_pipeline.py check --date 2026-10-05` 通過，exit 0，stage complete；JavaScript 語法檢查通過。
 
 - 凍結截點：2026-10-05 08:00:15 Asia/Taipei，ISO 2026-10-05T08:00:15+08:00，即 2026-10-05T00:00:15Z。
 - 全球窗：2026-10-04 08:00:15 至 2026-10-05 08:00:15 Asia/Taipei；UTC 2026-10-04 00:00:15 至 2026-10-05 00:00:15。

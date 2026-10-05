@@ -2,7 +2,7 @@
 title: "Overview"
 type: overview
 created: 2026-05-24
-updated: 2026-10-04
+updated: 2026-10-05
 status: seed
 tags: [overview]
 sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
@@ -20,7 +20,13 @@ sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
 - 維護跨來源的矛盾、時間線、趨勢與待查問題。
 - 將重要查詢結果回寫成可累積的 wiki 頁面。
 
+## 2026-10-05 Daily News Synthesis
+
+- 軟體新增能力同時需要管理邊界：OpenAI SDK支援語音建立與agent session events，Enterprise將外掛／marketplace移入集中管理；介面存在與帳號授權仍須分開核對。
+- 全球新節點由投票、控制權與部署構成：巴西與Bosnia完成投票，Latvia進入組閣；Mekelle易手、Fairford轟炸機返美、Myanmar遣返者抵達均比政策表態更具體。葉門全面行動仍須核實實際執行。[本日日報](daily/2026/10/2026-10-05/daily-news-2026-10-05.md)保留初步數字與證據限制。
+
 ## 2026-10-04 Daily News Synthesis
+
 
 - 產品可用性與排序規則成為今天的共同主線：Bitchat 在印度跨商店與替代入口受限，YouTube Shorts 提高原創內容推薦；兩者都涉及平台執行邊界，但前者的法律命令範圍、後者的排序權重仍未公開。
 - 開發與維運端則出現可執行的新節點：Meta 以 Muse Gadgets firmware／Linux SDK 把 Muse 延伸到第三方硬體；Apple 與 AT&T 對 iPhone 18 Pro Max 明確分開更新預防和既有故障換機，避免把軟體更新誤寫成全面修復。

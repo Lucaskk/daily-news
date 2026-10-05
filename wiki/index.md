@@ -2,7 +2,7 @@
 title: "Knowledge Base Index"
 type: overview
 created: 2026-05-24
-updated: 2026-10-04
+updated: 2026-10-05
 status: seed
 tags: [index]
 sources: []
@@ -21,6 +21,9 @@ sources: []
 - [[2026-04-04-llm-wiki]] - Karpathy 提出的 LLM-maintained personal wiki 模式，是本知識庫的設計來源。
 
 ## Daily News
+
+- [2026-10-05 Daily News](daily/2026/10/2026-10-05/daily-news-2026-10-05.md) - OpenAI SDK與企業外掛管理先列；全球涵蓋巴西／Bosnia投票、德國援烏、Mekelle易手、葉門行動、Fairford撤機與Latvia組閣。
+- [2026-10-05 Slides](daily/2026/10/2026-10-05/slides-2026-10-05.html) - 產品優先、原頁完整報告、逐篇來源與ChatGPT後續提問。
 
 - [2026-10-04 Daily News](daily/2026/10/2026-10-04/daily-news-2026-10-04.md) - Bitchat 印度下架、YouTube Shorts 原創排序、Muse Gadgets 與 iPhone 斷網處置先列；全球涵蓋 Kyiv 橋梁攻擊、Manchester 攻擊計畫、Latvia 選舉、Spain 住房抗議與多個戰事／資安節點。
 - [2026-10-04 Slides](daily/2026/10/2026-10-04/slides-2026-10-04.html) - 手機閱讀版，產品優先、逐篇頁內展開、完整來源及單篇 ChatGPT 後續提問。
