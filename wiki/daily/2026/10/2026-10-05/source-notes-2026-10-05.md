@@ -59,3 +59,11 @@ status: published
 - lookup cutoff 固定上述截點；查詢 `Bose|Clef|Multichannel Selling|Seller Central|AIDC CUBE|Acumatica|多通路|多渠道|大同` 僅搜尋 9/21～10/4 共14份日報，無命中且未截斷；並核對同窗61列產品表無相同事件。原T1/T2是當日既有內容，不當作歷史重複。
 - 排除候選：Strands Decider 10/3已收錄；Kindle、PS5 QSSR、HP筆電10/2已收錄；Apple Full Disk Access與ChatGPT試穿10/3已收錄；AOC AGP327KG初次公布在8月，超出14天；Biwin CL100官方7月已有指南，不能把10/2介紹當新品；Steam Deck 2與HomePad屬傳聞；PHILIPS 365保值換新屬促銷；Ars多篇政策、評論與舊Shield漲價無新品事件。
 - 圖片原因：初版 manifest 的 images 空白，故 renderer 正常省略所有圖，並非載入錯誤。原先只對兩項軟體更新及全球授權照片查證不足以支持全部無圖。修訂版改用 Bose 官方 pressroom 產品圖、大世科官方可下載 TTG AIDC CUBE 機櫃圖、Cloudflare 官方決策流程示意圖。圖像屬對應產品或官方流程，均保留來源與著作權資訊；其餘項目逐項記錄無圖理由。
+
+### 修訂版發布與配送收據
+
+- 使用者明確要求更新並再發一次；原08:07初版配送紀錄保留，本次使用獨立revision receipt與LINE retry key。
+- 科技7則、全球10則、官方圖片3張；320/390/1440px圖片載入與閱讀互動檢查通過。
+- 修訂內容commit：`982e5744cb8e5b7c91c84cc4ea1f287e38a746c0`；版本：`20261005-081801-reader`。日期頁、latest及根頁位元組驗證通過，3張公開圖片與本機原檔比對相同。
+- 2026-10-05T08:19:17.685994+08:00 installed watchdog `--revision-date 2026-10-05`回報`Sent LINE message`，exit0。
+- 更新網址：https://lucaskk.github.io/daily-news/wiki/daily/2026/10/2026-10-05/slides-2026-10-05.html?v=20261005-081801-reader
