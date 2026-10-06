@@ -1,5 +1,12 @@
 # Knowledge Base Log
 
+## [2026-10-06] ingest | Daily global and tech AI news
+
+- 凍結08:01:21 Asia/Taipei；科技336小時窗收錄1則Beam官方預覽，全球24小時窗正好10則。前14份日報及65列同窗表去重，續報均記錄前次日期與新增事件。
+- 使用固定手機閱讀版、原頁完整報告与逐篇ChatGPT提問；逐篇圖片核對，官方Beam示意附原URL，存取失敗與未取得授權不誤寫為無图。
+- 內容commit `cfad4231d32fc970e9647bc0c48ffbb93c98a77d`；Pages日期頁／latest／根入口雜湊驗證成功，私人watchdog 08:08:02送出，check exit 0。
+- 更新索引、總覽與發布收據；JS和結構檢查通過，Playwright未安裝，未做手機實機驗證。
+
 ## [2026-10-04] ingest | Daily global and tech AI news
 
 - 固定截點 08:02:10 Asia/Taipei；全球前 24 小時、科技產品前 336 小時。4 則前 14 份日報未收錄的產品事件先列，全球恰好 10 則；續報均列前次日期與今天新增節點。
@@ -1190,3 +1197,10 @@
 - 產品候選先以 `rg` 搜尋完整歷史；無命中者才讀取 17 列最近七天表。已檢查 Engadget、Cool3c 與官方來源。
 - pipeline 產生可展開手機閱讀版、更新 latest 與根入口，以乾淨 clone 發布 commit `a1b08e69d53568beae4583d2c5e9c7a39c438356`；GitHub Pages 三入口通過完整位元組驗證。
 - 唯一私人 LINE watchdog 於 2026-09-20 08:09:00 Asia/Taipei 回報 `Sent LINE message`，未使用專案 LINE sender。
+
+## [2026-10-05] lint | Original article image audit
+
+- 逐篇檢查17則原文，確認全球7則有配圖；另3則AP原文HTTP403，不判定為無圖。科技品牌標誌、GitHub預覽卡與來源受阻均分別記錄。
+- 補入Amazon官方活動照片及7則全球原文圖片連結，圖說區分背景／資料照，保留出處及權利狀態。今日頁面科技4張、全球7張。
+- 乾淨clone限範圍發布commit `243fc9b`，日期頁、latest及Amazon素材HTTP200與雜湊一致；12項renderer測試通過。版本 `20261005-083228-reader`，未重送LINE。
+- 更新每日規則為逐則查核圖片，不再以整組world理由省略。

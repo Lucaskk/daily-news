@@ -2,7 +2,7 @@
 title: "Overview"
 type: overview
 created: 2026-05-24
-updated: 2026-10-05
+updated: 2026-10-06
 status: seed
 tags: [overview]
 sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
@@ -19,6 +19,11 @@ sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
 - 抽出持續出現的人物、組織、事件、政策、技術與市場概念。
 - 維護跨來源的矛盾、時間線、趨勢與待查問題。
 - 將重要查詢結果回寫成可累積的 wiki 頁面。
+
+## 2026-10-06 Daily News Synthesis
+
+- Beam先公布預覽及候補存取，權重承諾與正式供應須分開；廠商運算量估計不是服務成本實測。
+- 政治與安全從表態進入程序：巴西計票確定決選、西班牙宣布提前選舉、葉門出現實際推進宣稱、南韓進入排雷；戰果與歸因仍須保留歧異。紐約麻疹行政命令則新增疫苗及檢測權限。[本日日報](daily/2026/10/2026-10-06/daily-news-2026-10-06.md)
 
 ## 2026-10-05 Daily News Synthesis
 

@@ -2,10 +2,17 @@
 title: "2026-10-06 來源筆記"
 date: 2026-10-06
 type: source-notes
-status: research
+status: published
 ---
 
 # 2026-10-06 來源筆記
+
+## 發布收據
+
+- 內容commit `cfad4231d32fc970e9647bc0c48ffbb93c98a77d`，版本 `20261006-080715-reader`；日期頁、latest與根入口均通過Pages位元組雜湊驗證。
+- 唯一私人LINE watchdog於2026-10-06 08:08:02 Asia/Taipei回報 `Sent LINE message`，exit 0；不重送。
+- 強制 `daily_news_pipeline.py check --date 2026-10-06` exit 0、stage complete。11篇、全球1至10連續順序、逐篇非空來源與JS語法檢查通過。
+- 發布前首次格式驗證拒絕時間窗簡寫；已改為固定標籤再執行finish，沒有改動防護或成功狀態。Playwright未安裝，未宣稱瀏覽器或實機iPhone測試。
 
 - 凍結截點：2026-10-06T08:01:21+08:00，即 2026-10-06T00:01:21Z。
 - 全球24小時窗：2026-10-05 08:01:21 至 2026-10-06 08:01:21 Asia/Taipei；UTC 2026-10-05 00:01:21 至 2026-10-06 00:01:21。
