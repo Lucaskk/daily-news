@@ -1,7 +1,7 @@
 ---
 title: "科技產品新聞最近 14 天比對表"
 type: product-news-ledger-recent
-updated: 2026-10-04
+updated: 2026-10-05
 status: generated
 tags: [daily-news, tech-products, deduplication, recent]
 ---
@@ -11,11 +11,18 @@ tags: [daily-news, tech-products, deduplication, recent]
 本檔只整理產製日前 14 天的日報，可完整讀取做去重確認；不搜尋更早日報、完整歷史表或來源筆記。實際發布窗仍以當日研究截點與來源筆記判定。
 
 - 掃描日報：14 份。
-- 最近 14 天項目：61 則。
-- 日報日期範圍：2026-09-21 至 2026-10-04。
+- 最近 14 天項目：65 則。
+- 日報日期範圍：2026-09-22 至 2026-10-05。
 
 | 公司 | 產品 | 更新內容 | 發佈時間 | 收錄日期 | 狀態 | 來源網址 | 比對鍵 |
 |---|---|---|---|---|---|---|---|
+| 大同／大世科 | TTG AIDC CUBE | 大同發表 TTG AIDC CUBE，以預製模組整合電力、冷卻與 AI 算力 | 2026-09-30（官方確認的發表日期） | 2026-10-05 | 首次收錄 | https://www.etatung.com/Home/ShowProductionInfoIdea?ID=da604df5-2fb3-413b-892c-3507a8bf32b5 | 442bb54ebe98 |
+| OpenAI | openai-node 7.28.0 | OpenAI Node SDK 7.28.0 加入自訂語音建立與 agent session events 介面 | 2026-10-02（官方版本日期） | 2026-10-05 | 首次收錄 | https://github.com/openai/openai-node/releases/tag/v7.28.0 | 01da34afcf82 |
+| Cloudflare | Clef、Clef-flash、Workers AI | Cloudflare 開源 Clef 與 Clef-flash，讓 AI 工作流程直接取得決策機率 | 2026-10-01（官方發布日期） | 2026-10-05 | 首次收錄 | https://developers.cloudflare.com/changelog/post/2026-10-01-clef-workers-ai/<br>https://blog.cloudflare.com/clef-decision-models/ | 28cacc9c7a1a |
+| OpenAI | ChatGPT Enterprise Admin console | ChatGPT Enterprise 將外掛與 marketplace 管理加入 Admin console | 2026-10-01（官方發布日期） | 2026-10-05 | 首次收錄 | https://help.openai.com/en/articles/10128477-chatgpt-enterprise-and-edu-release-notes | 362081bd55ee |
+| Bose | Noise Cancelling Wired Earbuds | Bose 推出 USB-C 有線降噪耳機，開放預購並預定 10 月 15 日出貨 | 2026-09-28（官方發布日期） | 2026-10-05 | 首次收錄 | https://www.bose.com/pressroom/bose-unveils-new-noise-cancelling-wired-earbuds | 2b89675b8599 |
+| Amazon | Seller Central Multichannel Selling | Amazon 將多通路銷售管理整合進 Seller Central，串接外部平台訂單 | 2026-09-29（官方回顧確認日期） | 2026-10-05 | 首次收錄 | https://sellingpartners.aboutamazon.com/accelerate-2026-recap | c0b322c2164b |
+| Acumatica | 2026 R2 Cloud ERP | Acumatica 2026 R2 正式供應，新增內嵌 AI、資料倉儲與 MCP 連線 | 2026-10-01（官方發布日期） | 2026-10-05 | 首次收錄 | https://www.acumatica.com/corporate-newsroom/press-releases/acumatica-2026-r2-release-with-embedded-ai/ | cd91a943fc2b |
 | Apple／AT&T | iPhone 18 Pro Max、iOS 27.0.1 | iOS 27.0.1 可預防 iPhone 18 Pro Max 的 AT&T 斷網，但已失去服務的裝置需換機 | 2026-10-03 11:10（Asia/Taipei） | 2026-10-04 | 首次收錄 | https://www.att.com/support/article/wireless/KM1062174/<br>https://www.engadget.com/2276489/apple-att-network-bug-iphone-18-pro-max/<br>https://www.macrumors.com/2026/10/02/apple-statement-on-iphone-18-pro-max-att-issue/ | 87936ba2abc5 |
 | Google／YouTube | Shorts recommendations | YouTube Shorts 提高原創內容推薦權重，重傳與聚合頻道可能降低分發 | 2026-10-01（官方僅提供日期） | 2026-10-04 | 首次收錄 | https://support.google.com/youtube/blog/470890423/prioritizing-original-content-on-shorts?hl=en | 4d364d48cc14 |
 | Meta | Muse Gadgets、Home Link | Meta 開源 Muse Gadgets 韌體與 Linux SDK，並製作 5,000 個 Home Link | 2026-10-03 08:45（Asia/Taipei） | 2026-10-04 | 首次收錄 | https://techcrunch.com/2026/10/02/meta-wants-you-to-build-your-own-muse-gadget/<br>https://gadgets.muse.ai/ | 7dc77567b2ce |
@@ -74,6 +81,3 @@ tags: [daily-news, tech-products, deduplication, recent]
 | Faraday Future | FF EAI Robot World 2.0 | Faraday Future 推出九款 EAI 機器人配置，發表後立即銷售與交付 | 2026-09-20 08:00（Asia/Taipei；9 月 19 日 17:00 PDT 發表會） | 2026-09-22 | 首次收錄 | https://www.ff.com/us/919-ff-eai-robotics/ | eadc4b854e44 |
 | OpenAI | ChatGPT Finances／Credit scores | ChatGPT Finances 加入 Experian 信用分數與異動監控 | 2026-09-21（OpenAI 官方 release notes 日期；未提供時分） | 2026-09-22 | 首次收錄 | https://help.openai.com/en/articles/6825453-chatgpt-release-notes | ff38173b0889 |
 | Canon | EOS R8 Mark II | Canon 發表 EOS R8 Mark II，入門全片幅機身新增五軸防手震 | 2026-09-16（Canon 官方發布日期；未提供時分） | 2026-09-22 | 首次收錄 | https://corporate.jp.canon/newsroom/newsrelease/2026/pr-0916a<br>https://www.cool3c.com/category/product | 6b2c8ec1cd5b |
-| SpaceXAI | Grok Voice Transcribe 2.0 | SpaceXAI 推出 Grok Voice Transcribe 2.0，既有語音 API 將直接升級 | 2026-09-18（SpaceXAI 官方發布日期；未提供時分） | 2026-09-21 | 首次收錄 | https://x.ai/news/grok-voice-transcribe-2 | c93fe3992343 |
-| Retroid | Pocket Duo Lite Plus | Retroid 臨時擴充 Pocket Duo Lite Plus，較高階晶片版開放預購 | 2026-09-21 02:07（Asia/Taipei；Engadget 首次可靠發布） | 2026-09-21 | 首次收錄 | https://www.goretroid.com/collections/frontpage/products/retroid-pocket-duo-lite-handheld<br>https://tech.yahoo.com/gaming/articles/retroid-pocket-unexpectedly-expands-duo-180702767.html | d58cf68b7ecd |
-| Joby Aviation | J208／Superpilot 自動飛行系統 | Joby 完成橫跨美國的全自動飛行，機上安全駕駛全程未介入 | 2026-09-18（Joby 官方發布日期；未提供時分） | 2026-09-21 | 首次收錄 | https://www.jobyaviation.com/news/joby-completes-first-ever-fully-autonomous-flight-across-the-united-states<br>https://www.engadget.com/transportation/joby-aviation-completes-fully-autonomous-flight-from-california-to-north-carolina-153000325.html | cb1a50c6bb66 |

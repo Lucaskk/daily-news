@@ -1,0 +1,14 @@
+{
+  "images": {
+    "t1": {
+      "src": "https://cdn.sanity.io/images/sp40emik/production/771cfe201a3d24d7a340c3372e6a1654ec1a6e42-1800x1013.png",
+      "original_url": "https://cdn.sanity.io/images/sp40emik/production/771cfe201a3d24d7a340c3372e6a1654ec1a6e42-1800x1013.png",
+      "source_url": "https://reflection.ai/blog/introducing-beam",
+      "alt": "Reflection Beam官方產品名稱示意圖，非模型操作介面",
+      "caption": "Beam官方發布示意圖，非實測或操作介面。",
+      "credit": "Reflection AI官方原圖",
+      "rights": "Reflection AI官方公開發布素材；著作權歸Reflection，未宣稱開放圖像授權。以原站網址呈現並附來源，模型Apache 2.0承諾不代表圖片同授權。",
+      "fit": "contain"
+    }
+  }
+}
