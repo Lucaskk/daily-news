@@ -126,5 +126,27 @@ class WorkflowTests(unittest.TestCase):
         for url in ['file:///etc/passwd', 'http://example.com', 'https://user:password@example.com']:
             with self.assertRaises(ValueError): w.fetch_source(url)
 
+    def test_scan_records_every_source_and_failure_without_claiming_review(self):
+        sources = [('Good', 'https://good.example/'), ('Blocked', 'https://blocked.example/')]
+        def fetch(url, refresh=False):
+            self.assertTrue(refresh)
+            if 'blocked' in url:
+                raise OSError('private diagnostic must not be exposed')
+            return {'url': url, 'content': 'Latest headline', 'sha256': 'abc'}
+        with patch.object(w, 'discovery_sources', return_value=sources), patch.object(w, 'fetch_source', side_effect=fetch):
+            result = w.scan_sources()
+        self.assertEqual(result['source_count'], 2)
+        self.assertEqual([r['status'] for r in result['sources']], ['retrieved', 'failed'])
+        self.assertTrue(result['sources'][1]['fallback_required'])
+        self.assertTrue(all(r['editorial_review'] == 'pending' for r in result['sources']))
+        self.assertNotIn('private diagnostic', json.dumps(result))
+        self.assertEqual(json.loads(Path(result['evidence_path']).read_text())['sources'], result['sources'])
+
+    def test_scan_empty_source_requires_fallback(self):
+        with patch.object(w, 'discovery_sources', return_value=[('Empty', 'https://empty.example/')]), patch.object(w, 'fetch_source', return_value={'content': '  '}):
+            result = w.scan_sources()
+        self.assertEqual(result['sources'][0]['status'], 'empty')
+        self.assertTrue(result['sources'][0]['fallback_required'])
+
 
 if __name__ == '__main__': unittest.main()

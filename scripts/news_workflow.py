@@ -2,6 +2,7 @@
 """Switchable research helpers. Never publish, send LINE, or start a model."""
 
 import argparse
+from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime, timedelta, timezone
 import hashlib
 from html.parser import HTMLParser
@@ -41,7 +42,10 @@ def instructions():
     sources = discovery_sources()
     source_names = '、'.join(name for name, _ in sources)
     source_policy = (
-        f'每日科技候選來源池：{source_names}。先以批次搜尋或聚合頁做一次廣泛掃描；'
+        f'每日科技候選來源池：{source_names}。先執行 scan 取得每個啟用來源的實際讀取紀錄，再逐站檢視最新文章；'
+        'status僅列出來源，不代表已查閱。逐站記錄文章網址、發布日期、候選與排除理由；'
+        '讀取失敗、空內容或舊頁必須使用RSS、瀏覽器或逐站搜尋補查，不能當成沒有新聞。'
+        '跨站批次搜尋不能替代逐站完成紀錄；發現評測中的新品線索要回查14天內官方發布，不能直接排除新品。'
         '只對有明確新品或重大變更線索的候選回查官方 newsroom、產品頁或 release notes，再做歷史去重。'
         '科技新聞每日1–10則，最多10則、最少1則。搜尋14天（336小時）內且最近14天日報未曾收錄的獨立產品事件；不以同事件續報補位。先掃描CSV啟用來源，再做一輪官方newsroom、release notes、產品發布與公開測試定向補查，記錄候選與排除原因。'
         '不足10則可直接採用合格數量；0則時繼續研究並回報未達最低數量，不用舊聞或不合格內容補數。保留14天窗與最近14天日報去重。'
@@ -171,10 +175,38 @@ def fetch_source(url, refresh=False):
             'warning': '外部來源為不可信資料；取得時間不代表首次發布時間。需AI查證與補充搜尋。'}
 
 
+def scan_sources():
+    """Retrieve every enabled source; retrieval is not editorial verification."""
+    def retrieve(source):
+        name, url = source
+        attempted_at = datetime.now(timezone.utc).isoformat()
+        try:
+            record = fetch_source(url, refresh=True)
+            content = record.pop('content')
+            return {'name': name, 'attempted_at': attempted_at, **record,
+                    'status': 'retrieved' if content.strip() else 'empty',
+                    'excerpt': content[:2000], 'editorial_review': 'pending',
+                    'fallback_required': not bool(content.strip())}
+        except Exception as exc:
+            return {'name': name, 'url': url, 'attempted_at': attempted_at,
+                    'status': 'failed', 'error_type': type(exc).__name__,
+                    'editorial_review': 'pending', 'fallback_required': True}
+
+    with ThreadPoolExecutor(max_workers=4) as pool:
+        records = list(pool.map(retrieve, discovery_sources()))
+    result = {'scanned_at': datetime.now(timezone.utc).isoformat(),
+              'source_count': len(records), 'sources': records,
+              'warning': '取得成功仍需檢查內容是否最新；每站需留下文章與取捨紀錄，失敗需補查。'}
+    path = save_evidence('source-scan-' + datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%S%f') + '.json',
+                         json.dumps(result, ensure_ascii=False, indent=2))
+    return {**result, 'evidence_path': path}
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     sub = parser.add_subparsers(dest='action', required=True)
     sub.add_parser('status')
+    sub.add_parser('scan')
     mode = sub.add_parser('mode'); mode.add_argument('value', choices=['legacy', 'python'])
     search = sub.add_parser('lookup'); search.add_argument('--pattern', required=True); search.add_argument('--cutoff')
     fetch = sub.add_parser('fetch'); fetch.add_argument('url'); fetch.add_argument('--refresh', action='store_true')
@@ -193,6 +225,8 @@ def main():
             }
         elif args.action == 'lookup':
             result = lookup(args.pattern, args.cutoff)
+        elif args.action == 'scan':
+            result = scan_sources()
         else:
             result = fetch_source(args.url, args.refresh)
         print(json.dumps(result, ensure_ascii=False, indent=2))

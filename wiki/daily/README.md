@@ -95,6 +95,13 @@ tags: [daily-news, rules, deduplication, provenance]
 
 ## 六、科技產品來源與查證
 
+### 逐站查閱紀錄（2026-10-06 起）
+
+- 每日先執行 `python3 scripts/news_workflow.py scan`，保留每個啟用來源的取得時間、成功／失敗、內容雜湊與私人原始內容路徑。`status` 只列出設定，不代表已查閱；`scan` 成功也不代表完成選題。
+- 下列第 2 條的批次搜尋須搭配逐站確認：每站檢視最新文章、RSS 或逐站搜尋，來源筆記列出實際文章網址、可核實發布日期、候選及採用／排除理由。找不到候選須記錄實際檢查範圍。第一輪廣泛搜尋不可限縮至已選定的單一產品。
+- 空內容、舊頁或失敗必須依第 4 條補查；未完成補查標示待查，不得宣稱全站已查或只有目前則數合格。私人快取路徑不得加入 Git。
+- 評測與導購若提及新品線索，先回查其官方首次發布日期再判斷。仍維持 14 天時間窗、最近 14 天日報去重與每日 1–10 則。
+
 1. 每次科技候選搜尋以 `scripts/news_workflow.py status` 輸出的 CSV 啟用來源為準，檢查最新產品、AI、裝置、軟體、運輸與重大功能消息。初始清單包含 [Engadget](https://www.engadget.com/)、[The Verge](https://www.theverge.com/)、[TechCrunch](https://techcrunch.com/)、[WIRED](https://www.wired.com/)、[Ars Technica](https://arstechnica.com/)、[Cool3c](https://www.cool3c.com/)、[Yahoo奇摩科技](https://tw.news.yahoo.com/tech-news/)、[TechOrange 科技報橘](https://techorange.com/) 與 [數位時代](https://www.bnext.com.tw/)；本機 CSV 新增或停用的來源會反映在清單中。
 2. 上述媒體構成每日候選來源池，用於發現候選、交叉核對與補充國際／台灣市場脈絡。先以批次搜尋或聚合頁掃描多個來源；第一輪未取得足夠合格候選時，按第 4 條再做一輪定向補查，不必逐站無限深挖。只有出現合格候選線索時才開啟文章與官方來源。當日來源筆記需列出兩輪實際搜尋範圍、候選數、去重與排除原因。
 3. 對每個候選涉及的公司或專案，優先回查官方 newsroom、產品頁、新聞稿、release notes、changelog、支援文件或監管文件。規格、價格、上市日、支援市場、效能與公司聲明，原則上以可定位日期的官方資料為準；官方資料不存在時，需由至少一個可靠媒體來源明確標示不確定性。
