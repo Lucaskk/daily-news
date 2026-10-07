@@ -1,0 +1,24 @@
+{
+  "images": {
+    "t5": {
+      "src": "https://cdn.shopify.com/s/files/1/0201/1744/files/SL_1_Tile_Image.jpg?v=1790611946",
+      "original_url": "https://cdn.shopify.com/s/files/1/0201/1744/files/SL_1_Tile_Image.jpg?v=1790611946",
+      "source_url": "https://qalo.com/products/qalo-sl-1-smart-band",
+      "alt": "QALO SL-1黑色智慧手環官方產品圖，非SR系列戒指",
+      "caption": "SL-1官方產品圖，非獨立測試。",
+      "credit": "QALO官方產品頁",
+      "rights": "QALO公開產品素材，著作權歸原權利人；以原站連結及出處呈現，未宣稱自由授權。",
+      "fit": "contain"
+    },
+    "t6": {
+      "src": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/06_nA2Poi5.width-1200.format-webp.webp",
+      "original_url": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/06_nA2Poi5.width-1200.format-webp.webp",
+      "source_url": "https://blog.google/intl/ja-jp/products/android-chrome-play/gboard-2026/",
+      "alt": "Google Gboard輸送帶鍵盤藍色DIY原型實物",
+      "caption": "Google日本公開的DIY原型；官方沒有量產販售計畫。",
+      "credit": "Google Japan／Gboard團隊",
+      "rights": "Google公開發布的產品照片；以原站連結附來源，不宣稱照片與開源設計採相同授權。",
+      "fit": "contain"
+    }
+  }
+}

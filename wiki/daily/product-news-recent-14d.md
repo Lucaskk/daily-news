@@ -1,7 +1,7 @@
 ---
 title: "科技產品新聞最近 14 天比對表"
 type: product-news-ledger-recent
-updated: 2026-10-05
+updated: 2026-10-06
 status: generated
 tags: [daily-news, tech-products, deduplication, recent]
 ---
@@ -11,11 +11,12 @@ tags: [daily-news, tech-products, deduplication, recent]
 本檔只整理產製日前 14 天的日報，可完整讀取做去重確認；不搜尋更早日報、完整歷史表或來源筆記。實際發布窗仍以當日研究截點與來源筆記判定。
 
 - 掃描日報：14 份。
-- 最近 14 天項目：65 則。
-- 日報日期範圍：2026-09-22 至 2026-10-05。
+- 最近 14 天項目：63 則。
+- 日報日期範圍：2026-09-23 至 2026-10-06。
 
 | 公司 | 產品 | 更新內容 | 發佈時間 | 收錄日期 | 狀態 | 來源網址 | 比對鍵 |
 |---|---|---|---|---|---|---|---|
+| Reflection AI | Beam | Reflection 公布 Beam 模型預覽，開放早期存取登記並預告本月釋出權重 | 2026-10-05（官方發布日期） | 2026-10-06 | 首次收錄 | https://reflection.ai/blog/introducing-beam<br>https://techcrunch.com/2026/10/05/reflection-debuts-beam-a-open-weight-ai-model-to-rival-chinese-models-at-lower-compute-cost/ | 8765635a63bf |
 | 大同／大世科 | TTG AIDC CUBE | 大同發表 TTG AIDC CUBE，以預製模組整合電力、冷卻與 AI 算力 | 2026-09-30（官方確認的發表日期） | 2026-10-05 | 首次收錄 | https://www.etatung.com/Home/ShowProductionInfoIdea?ID=da604df5-2fb3-413b-892c-3507a8bf32b5 | 442bb54ebe98 |
 | OpenAI | openai-node 7.28.0 | OpenAI Node SDK 7.28.0 加入自訂語音建立與 agent session events 介面 | 2026-10-02（官方版本日期） | 2026-10-05 | 首次收錄 | https://github.com/openai/openai-node/releases/tag/v7.28.0 | 01da34afcf82 |
 | Cloudflare | Clef、Clef-flash、Workers AI | Cloudflare 開源 Clef 與 Clef-flash，讓 AI 工作流程直接取得決策機率 | 2026-10-01（官方發布日期） | 2026-10-05 | 首次收錄 | https://developers.cloudflare.com/changelog/post/2026-10-01-clef-workers-ai/<br>https://blog.cloudflare.com/clef-decision-models/ | 28cacc9c7a1a |
@@ -78,6 +79,3 @@ tags: [daily-news, tech-products, deduplication, recent]
 | Google 與 Acer、ASUS、Dell、HP、Lenovo | Googlebook | Googlebook 五款機型開放預購，價格與 10 月 4 日上市時程確定 | 2026-09-21 21:00:05（Asia/Taipei；Axios 首次可靠發布） | 2026-09-23 | 首次收錄 | https://blog.google/products-and-platforms/devices/googlebook/first-look-googlebook/<br>https://www.axios.com/2026/09/21/googlebook-899-google-laptop<br>https://www.engadget.com/2263649/googlebooks-a-laptop-that-works-better-with-your-android-phone/ | bfd56ccfc4ed |
 | Discord | Age Group、Age Assurance | Discord 開始推出新版年齡分組與驗證流程，多數帳號以裝置和帳戶訊號判定 | 2026-09-22（Discord 官方支援頁更新日期；頁面未提供可核實時區） | 2026-09-23 | 首次收錄 | https://support.discord.com/hc/en-us/articles/30326565624343-How-to-Confirm-Your-Age-Group-on-Discord<br>https://www.engadget.com/2265924/discord-rolls-out-its-revised-age-verification-policy/ | 5b49375ca664 |
 | Anthropic | Claude Opus 5.5 | Anthropic 推出 Claude Opus 5.5，降低定價並提高使用配額 | 2026-09-22（Anthropic 官方發布日期；未提供時分） | 2026-09-23 | 首次收錄 | https://www.anthropic.com/claude-opus-5-5<br>https://www.engadget.com/2265801/anthropic-and-openai-announce-more-powerful-and-cheaper-ai-models/ | bb89e7a504a4 |
-| Faraday Future | FF EAI Robot World 2.0 | Faraday Future 推出九款 EAI 機器人配置，發表後立即銷售與交付 | 2026-09-20 08:00（Asia/Taipei；9 月 19 日 17:00 PDT 發表會） | 2026-09-22 | 首次收錄 | https://www.ff.com/us/919-ff-eai-robotics/ | eadc4b854e44 |
-| OpenAI | ChatGPT Finances／Credit scores | ChatGPT Finances 加入 Experian 信用分數與異動監控 | 2026-09-21（OpenAI 官方 release notes 日期；未提供時分） | 2026-09-22 | 首次收錄 | https://help.openai.com/en/articles/6825453-chatgpt-release-notes | ff38173b0889 |
-| Canon | EOS R8 Mark II | Canon 發表 EOS R8 Mark II，入門全片幅機身新增五軸防手震 | 2026-09-16（Canon 官方發布日期；未提供時分） | 2026-09-22 | 首次收錄 | https://corporate.jp.canon/newsroom/newsrelease/2026/pr-0916a<br>https://www.cool3c.com/category/product | 6b2c8ec1cd5b |
