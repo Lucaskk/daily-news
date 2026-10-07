@@ -2,7 +2,7 @@
 title: "Overview"
 type: overview
 created: 2026-05-24
-updated: 2026-10-06
+updated: 2026-10-07
 status: seed
 tags: [overview]
 sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
@@ -19,6 +19,13 @@ sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
 - 抽出持續出現的人物、組織、事件、政策、技術與市場概念。
 - 維護跨來源的矛盾、時間線、趨勢與待查問題。
 - 將重要查詢結果回寫成可累積的 wiki 頁面。
+
+## 2026-10-07 Daily News Synthesis
+
+- AI 產品的能力與存取邊界分開看：ChatGPT 音訊上傳、Cowork 雲端執行、textGrain 選用及 Gemini 方案調整，各有權限、地域或未來推出限制。
+- Mistral Large 4 API 預覽不等於權重已公開；公告與文件的啟用參數數字不一致，保留矛盾。QALO SL-1 是商用穿戴產品，Gboard 傳送帶則是開源 DIY，不能混寫成上市鍵盤。
+- 全球新節點涵蓋物理獎、肯亞首宗確認伊波拉、魁北克少數政府與司法程序；戰事傷亡及黑海救援分別保留當事方歸屬，調查與逮捕不等於定罪。
+- [[daily/2026/10/2026-10-07/daily-news-2026-10-07]]；時窗、查重與來源差異見 [[daily/2026/10/2026-10-07/source-notes-2026-10-07]]。
 
 ## 2026-10-06 Daily News Synthesis
 

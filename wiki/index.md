@@ -2,7 +2,7 @@
 title: "Knowledge Base Index"
 type: overview
 created: 2026-05-24
-updated: 2026-10-06
+updated: 2026-10-07
 status: seed
 tags: [index]
 sources: []
@@ -21,6 +21,9 @@ sources: []
 - [[2026-04-04-llm-wiki]] - Karpathy 提出的 LLM-maintained personal wiki 模式，是本知識庫的設計來源。
 
 ## Daily News
+
+- [2026-10-07 Daily News](daily/2026/10/2026-10-07/daily-news-2026-10-07.md) - 7 則科技產品先列；全球涵蓋諾貝爾物理獎、肯亞伊波拉、魁北克選舉、司法與戰事新進展。
+- [2026-10-07 Slides](daily/2026/10/2026-10-07/slides-2026-10-07.html) - 手機閱讀、原頁展開、逐篇來源與 ChatGPT 後續提問。
 
 - [2026-10-06 Daily News](daily/2026/10/2026-10-06/daily-news-2026-10-06.md) - Beam預覽先列；諾貝爾光遺傳學、巴西決選、西班牙提前大選、葉門反攻與公共衛生／邊境／抗議新進展。
 - [2026-10-06 Slides](daily/2026/10/2026-10-06/slides-2026-10-06.html) - 逐篇原頁展開、完整來源、官方產品示意與ChatGPT後續提問。

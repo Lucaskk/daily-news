@@ -118,3 +118,11 @@ lookup實際範圍均為前14份日報2026-09-23..10-06。先查候選，無命�
 |TechNews 科技新報|2026-10-07T00:01:44.443393+00:00|retrieved|a1c57c5c2b566d59fcb0e3e12de02d4660abc5b03595b205f9a3207df3795df5|
 |openai.com|2026-10-07T00:01:44.613202+00:00|failed / HTTPError|未取得內容，無雜湊|
 |www.inside.com.tw|2026-10-07T00:01:44.653494+00:00|failed / HTTPError|未取得內容，無雜湊|
+
+## 發布與配送收據
+
+- 內容 commit：`df9e829d9a742050406196cdf0359eb7b84533ec`；版本 `20261007-081057-reader`。
+- GitHub Pages 日期頁、latest 與根入口通過完整位元組雜湊驗證。
+- 唯一私人 LINE watchdog：2026-10-07 08:12:00 Asia/Taipei，exit 0，`Sent LINE message`。
+- `daily_news_pipeline.py check --date 2026-10-07`：exit 0，`stage=complete`。不重複傳送。
+- 公開閱讀：https://lucaskk.github.io/daily-news/wiki/daily/2026/10/2026-10-07/slides-2026-10-07.html?v=20261007-081057-reader

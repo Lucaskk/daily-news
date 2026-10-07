@@ -1,5 +1,12 @@
 # Knowledge Base Log
 
+## [2026-10-07] ingest | Daily global and tech AI news
+
+- 凍結 08:01:26 Asia/Taipei；科技 336 小時窗收錄 7 則，全球 24 小時窗正好 10 則。僅查前 14 份日報及同窗 63 列產品表。
+- 12 個啟用來源逐站記錄與失敗補查；保留 Mistral 參數及 Gemini 權限來源差異。圖片附官方出處，未驗證或未確認授權者不冒充現場圖。
+- 內容 commit `df9e829d9a742050406196cdf0359eb7b84533ec`；Pages 日期頁、latest、根入口雜湊驗證成功，唯一私人 watchdog 08:12:00 回報 `Sent LINE message`。
+- 強制 `check` exit 0、stage complete；更新索引、總覽與來源發布收據，沒有重複配送。
+
 ## [2026-10-06] ingest | Daily global and tech AI news
 
 - 凍結08:01:21 Asia/Taipei；科技336小時窗收錄1則Beam官方預覽，全球24小時窗正好10則。前14份日報及65列同窗表去重，續報均記錄前次日期與新增事件。
