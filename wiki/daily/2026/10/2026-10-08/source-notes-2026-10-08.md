@@ -89,7 +89,7 @@
 |T7|XREAL AURA產品頁有當代實物圖；採 assets/xreal-aura.webp，完整眼鏡contain不裁切。|
 |T8|Cisco og 為 `/assets/a/y2023/m09/Wx126.jpg` 舊通用配圖，不冒充Dialog新介面，省略。|
 |T9|Google有embeddinggemma2-banner_169圖與圖表，是模型主題圖而非實物；本次省略。|
-|T10|官方模型卡為模型資料而非新硬體照片；未取得已核對的對應原圖，省略，不宣稱頁面無圖。|
+|T10|官方API模型頁HTTP200，og為 `https://ai.google.dev/static/site-assets/images/share-gemini-api-2026-07.png` 七月通用社群圖，img為Gemini API標誌，不冒充2.1新產品圖，省略。|
 |全球1|News4Jax有AP當日救援照與og；AP保留權利，未取得授權，省略。|
 |全球2|KVA有手性鏡像示意圖及新聞使用條款；採 assets/nobel-chemistry.jpg，© Johan Jarnestad／The Royal Swedish Academy of Sciences；非實驗現場，維持原圖。|
 |全球3|KSAT有AP胡塞集會／周年照及og，不是機場現場；AP保留權利，省略。|
@@ -102,3 +102,9 @@
 |全球10|Ars og是2020年misinfoTOP資料圖，不冒充今日疫情；PA為官方統計頁，省略配圖。|
 
 三張實際原始網址、來源、用途與權利逐張保留於 presentation-2026-10-08.json；不宣稱Google／XREAL圖片採自由授權。研究原始快取與私人配送設定不發布。
+
+## 發布收據
+
+- 內容commit：`b21e926115b52786ae126c88cbf391928c1a03aa`；日期頁、latest與根入口HTTP成功且內容雜湊吻合。
+- 唯一私人watchdog於2026-10-08 08:19:32 Asia/Taipei回報 `Sent LINE message`，exit0。
+- 公開網址：https://lucaskk.github.io/daily-news/wiki/daily/2026/10/2026-10-08/slides-2026-10-08.html?v=20261008-081831-reader 。本機4173未運行，不阻擋已完成配送。

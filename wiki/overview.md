@@ -2,7 +2,7 @@
 title: "Overview"
 type: overview
 created: 2026-05-24
-updated: 2026-10-07
+updated: 2026-10-08
 status: seed
 tags: [overview]
 sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
@@ -19,6 +19,13 @@ sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
 - 抽出持續出現的人物、組織、事件、政策、技術與市場概念。
 - 維護跨來源的矛盾、時間線、趨勢與待查問題。
 - 將重要查詢結果回寫成可累積的 wiki 頁面。
+
+## 2026-10-08 Daily News Synthesis
+
+- AI 介面、端側嵌入、圖片生成與企業代理分別進入新的推出或路線階段；正式可用、分批推出與明年測試不可混稱已上市。
+- SynthID 只檢查支援水印；未檢出不能證明真人製作。Nano Banana 舊版停用日第三方與官方資料不同，保留矛盾。
+- 全球新節點涵蓋化學獎、沖繩會面、土耳其轉黨與司法拘留；戰時傷亡保留當事方說法，麻疹新增登錄與新增感染分開。
+- [[daily/2026/10/2026-10-08/daily-news-2026-10-08]]；來源與時間見 [[daily/2026/10/2026-10-08/source-notes-2026-10-08]]。
 
 ## 2026-10-07 Daily News Synthesis
 
