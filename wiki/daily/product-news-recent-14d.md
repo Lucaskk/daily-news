@@ -1,7 +1,7 @@
 ---
 title: "科技產品新聞最近 14 天比對表"
 type: product-news-ledger-recent
-updated: 2026-10-06
+updated: 2026-10-07
 status: generated
 tags: [daily-news, tech-products, deduplication, recent]
 ---
@@ -11,11 +11,18 @@ tags: [daily-news, tech-products, deduplication, recent]
 本檔只整理產製日前 14 天的日報，可完整讀取做去重確認；不搜尋更早日報、完整歷史表或來源筆記。實際發布窗仍以當日研究截點與來源筆記判定。
 
 - 掃描日報：14 份。
-- 最近 14 天項目：63 則。
-- 日報日期範圍：2026-09-23 至 2026-10-06。
+- 最近 14 天項目：65 則。
+- 日報日期範圍：2026-09-24 至 2026-10-07。
 
 | 公司 | 產品 | 更新內容 | 發佈時間 | 收錄日期 | 狀態 | 來源網址 | 比對鍵 |
 |---|---|---|---|---|---|---|---|
+| QALO | SL-1 Smart Band | QALO 推出 SL-1 無螢幕智慧手環，與智慧戒指共用免訂閱健康資料平台 | 2026-09-29 21:00（Asia/Taipei） | 2026-10-07 | 首次收錄 | https://qalo.com/products/qalo-sl-1-smart-band<br>https://markets.financialcontent.com/thepilotnews/article/bizwire-2026-9-29-qalo-launches-the-sl-1-smart-band-a-next-generation-wearable-to-expand-its-health-tech-platform<br>https://www.businesswire.com/news/home/20260929697373/en/ | 5cae8686825f |
+| OpenAI | textGrain、ChatGPT、Codex、API | OpenAI 啟用 textGrain API 自願水印，預告歐盟 ChatGPT 與 Codex 後續導入 | 2026-10-05（官方發布日期） | 2026-10-07 | 首次收錄 | https://openai.com/index/eu-text-provenance/ | a80a349b79f1 |
+| Mistral AI | Mistral Large 4、Le Chonk | Mistral Large 4 開放公開 API 預覽，模型權重預計月底釋出 | 2026-10-06（官方發布日期） | 2026-10-07 | 首次收錄 | https://mistral.ai/news/mistral-large-4/<br>https://docs.mistral.ai/models/mistral-large-4-0 | 6a5e3b70150c |
+| Google | Gemini Apps模型存取 | Google 預告 10 月 9 日調整 Gemini 模型權限，免費方案將僅提供 Flash-Lite | 2026-10-06（首次可靠報導日期） | 2026-10-07 | 首次收錄 | https://support.google.com/gemini/answer/17004136<br>https://www.bnext.com.tw/article/92519/gemini-free-plan-flash-lite-ai-plus-pro-changes | 06d179a9c728 |
+| Google Japan | Gboard くるくるバージョン | Google 日本公開 Gboard 輸送帶鍵盤設計，讓按鍵移向手指而非量產販售 | 2026-10-01（官方發布日期） | 2026-10-07 | 首次收錄 | https://blog.google/intl/ja-jp/products/android-chrome-play/gboard-2026/<br>https://www.cool3c.com/article/252573 | dadee3418444 |
+| Anthropic | Claude Cowork | Claude Cowork 將 Pro 與 Max 新任務改在雲端執行，移除本機限定選項 | 2026-10-06（官方變更日期） | 2026-10-07 | 首次收錄 | https://support.claude.com/en/articles/15520349-use-claude-cowork-on-web-desktop-and-mobile<br>https://www.inside.com.tw/article/42576-claude-cowork-cloud-only-pro-max-anthropic-server-october-2026 | d480714aad8c |
+| OpenAI | ChatGPT Audio uploads | ChatGPT 開放音訊檔上傳，將錄音轉成逐字稿、摘要與後續工作 | 2026-10-06（官方發布日期） | 2026-10-07 | 首次收錄 | https://help.openai.com/en/articles/6825453-chatgpt-release-notes | 55a4973c9a51 |
 | Reflection AI | Beam | Reflection 公布 Beam 模型預覽，開放早期存取登記並預告本月釋出權重 | 2026-10-05（官方發布日期） | 2026-10-06 | 首次收錄 | https://reflection.ai/blog/introducing-beam<br>https://techcrunch.com/2026/10/05/reflection-debuts-beam-a-open-weight-ai-model-to-rival-chinese-models-at-lower-compute-cost/ | 8765635a63bf |
 | 大同／大世科 | TTG AIDC CUBE | 大同發表 TTG AIDC CUBE，以預製模組整合電力、冷卻與 AI 算力 | 2026-09-30（官方確認的發表日期） | 2026-10-05 | 首次收錄 | https://www.etatung.com/Home/ShowProductionInfoIdea?ID=da604df5-2fb3-413b-892c-3507a8bf32b5 | 442bb54ebe98 |
 | OpenAI | openai-node 7.28.0 | OpenAI Node SDK 7.28.0 加入自訂語音建立與 agent session events 介面 | 2026-10-02（官方版本日期） | 2026-10-05 | 首次收錄 | https://github.com/openai/openai-node/releases/tag/v7.28.0 | 01da34afcf82 |
@@ -74,8 +81,3 @@ tags: [daily-news, tech-products, deduplication, recent]
 | Microsoft | Surface Pro 12、Surface Laptop 13 | Microsoft 推出搭載 Snapdragon X2 Plus 的 Surface Pro 12 與 Surface Laptop 13 | 2026-09-24 05:30（Asia/Taipei；依 Engadget 頁面標示 9/23 16:30 EST 字面換算） | 2026-09-24 | 首次收錄 | https://www.microsoft.com/en-us/surface/devices/surface-pro?icid=mscom_marcom_FH3a_SurfacePro12In_Fall27<br>https://www.engadget.com/2266680/microsofts-new-surface-pro-12-and-surface-laptop-13-feature-snapdragon-x2-plus-chips/ | fa04512e5098 |
 | Logitech | Yeti 2 | Logitech 推出 Yeti 2 USB 麥克風，加入距離感測與 AI 降噪 | 2026-09-24 01:01（Asia/Taipei；依 Engadget 頁面標示 9/23 12:01 EST 字面換算） | 2026-09-24 | 首次收錄 | https://www.engadget.com/2265713/logitechs-yeti-2-brings-the-17-year-old-usb-mic-into-the-modern-age/<br>https://www.logitechg.com/en-us | c289d52dd6f2 |
 | Eight Sleep | Pod 6 | Eight Sleep 發布 Pod 6，感測器增至 18 個並加快溫控 | 2026-09-23 20:00（Asia/Taipei；依 Engadget 頁面標示 9/23 07:00 EST 字面換算） | 2026-09-24 | 首次收錄 | https://www.eightsleep.com/de/<br>https://www.engadget.com/2264386/eight-sleep-announces-the-pod-6-its-newest-smart-mattress-cover/ | 7cbcf99ccaa2 |
-| Alibaba | Zhenwu V900、Qwen 4 路線圖 | 阿里巴巴公布鎮武 V900 AI 晶片，並預告 Qwen 4 將朝 5 至 10 兆參數訓練 | 2026-09-22 15:16:01（Asia/Taipei；AP 首次可靠發布） | 2026-09-23 | 首次收錄 | https://www.alibabacloud.com/en/press-room/alibaba-unveils-roadmap-on-full-stack-ai-strategy?_p_lc=1<br>https://apnews.com/article/b29908e516faff9f5a82b201ba954aab | f6a23a2d4e20 |
-| OpenAI | GPT-6 Sol、GPT-6 Luna | OpenAI 正式推出 GPT-6 Sol 與 Luna，API 價格較 GPT-5.6 促銷價降低一半 | 2026-09-22（OpenAI 官方發布日期；未提供時分） | 2026-09-23 | 首次收錄 | https://openai.com/index/introducing-gpt-6-sol-and-luna/<br>https://www.engadget.com/2265801/anthropic-and-openai-announce-more-powerful-and-cheaper-ai-models/ | ea6fbfb94301 |
-| Google 與 Acer、ASUS、Dell、HP、Lenovo | Googlebook | Googlebook 五款機型開放預購，價格與 10 月 4 日上市時程確定 | 2026-09-21 21:00:05（Asia/Taipei；Axios 首次可靠發布） | 2026-09-23 | 首次收錄 | https://blog.google/products-and-platforms/devices/googlebook/first-look-googlebook/<br>https://www.axios.com/2026/09/21/googlebook-899-google-laptop<br>https://www.engadget.com/2263649/googlebooks-a-laptop-that-works-better-with-your-android-phone/ | bfd56ccfc4ed |
-| Discord | Age Group、Age Assurance | Discord 開始推出新版年齡分組與驗證流程，多數帳號以裝置和帳戶訊號判定 | 2026-09-22（Discord 官方支援頁更新日期；頁面未提供可核實時區） | 2026-09-23 | 首次收錄 | https://support.discord.com/hc/en-us/articles/30326565624343-How-to-Confirm-Your-Age-Group-on-Discord<br>https://www.engadget.com/2265924/discord-rolls-out-its-revised-age-verification-policy/ | 5b49375ca664 |
-| Anthropic | Claude Opus 5.5 | Anthropic 推出 Claude Opus 5.5，降低定價並提高使用配額 | 2026-09-22（Anthropic 官方發布日期；未提供時分） | 2026-09-23 | 首次收錄 | https://www.anthropic.com/claude-opus-5-5<br>https://www.engadget.com/2265801/anthropic-and-openai-announce-more-powerful-and-cheaper-ai-models/ | bb89e7a504a4 |

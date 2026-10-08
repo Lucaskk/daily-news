@@ -1,0 +1,34 @@
+{
+  "images": {
+    "t5": {
+      "src": "assets/synthid-detector.webp",
+      "original_url": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Raccoon_Video_SynthIDDetector.width-1200.format-webp.webp",
+      "source_url": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/synth-id-ai-content/",
+      "alt": "Google SynthID Detector 官方查驗介面示意",
+      "caption": "官方介面示意，非本站效能測試。",
+      "credit": "Google DeepMind",
+      "rights": "Google公開公告素材，權利歸原權利人；附原始來源，不宣稱自由授權。",
+      "fit": "contain"
+    },
+    "t7": {
+      "src": "assets/xreal-aura.webp",
+      "original_url": "https://resource.xreal.com/www-xreal-com/images/aura/AuraPic_Mobile.webp",
+      "source_url": "https://www.xreal.com/us/aura",
+      "alt": "XREAL AURA 官方眼鏡產品圖",
+      "caption": "AURA 官方產品圖，非獨立實測。",
+      "credit": "XREAL",
+      "rights": "XREAL公開產品素材，權利歸原權利人；附原始来源，不宣稱自由授權。",
+      "fit": "contain"
+    },
+    "2": {
+      "src": "assets/nobel-chemistry.jpg",
+      "original_url": "https://www.kva.se/app/uploads/2026/10/fig_ke_26_wysiwyg_9ne6vguk83-1024x533.jpg",
+      "source_url": "https://www.kva.se/en/news/the-nobel-prize-in-chemistry-2026/",
+      "alt": "皇家科學院手性與鏡像關係示意圖，非實驗現場",
+      "caption": "手性鏡像概念示意，非事件現場照片。",
+      "credit": "© Johan Jarnestad / The Royal Swedish Academy of Sciences",
+      "rights": "皇家科學院條款允許附出處的新聞報導及非商業教學使用，不修改原圖或作廣告。",
+      "fit": "contain"
+    }
+  }
+}
