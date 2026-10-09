@@ -2,7 +2,7 @@
 title: "Knowledge Base Index"
 type: overview
 created: 2026-05-24
-updated: 2026-10-08
+updated: 2026-10-09
 status: seed
 tags: [index]
 sources: []
@@ -22,6 +22,8 @@ sources: []
 
 ## Daily News
 
+- [2026-10-09 Daily News](daily/2026/10/2026-10-09/daily-news-2026-10-09.md) - 5則科技先列：Alexa平板、Gemini工作代理、Markdown原生協作、Sigma鏡頭與Codex跟進更新；全球正好10則。
+- [2026-10-09 Slides](daily/2026/10/2026-10-09/slides-2026-10-09.html) - 原頁完整報告、逐篇來源與後續提問；Pages及LINE已驗證。
 - [2026-10-08 Daily News](daily/2026/10/2026-10-08/daily-news-2026-10-08.md) - 10 則科技產品先列；全球10則包含化學獎、外交司法與戰事新事件。
 - [2026-10-08 Slides](daily/2026/10/2026-10-08/slides-2026-10-08.html) - 手機閱讀、原頁展開及逐篇後續提問；Pages與LINE已驗證。
 - [2026-10-07 Daily News](daily/2026/10/2026-10-07/daily-news-2026-10-07.md) - 7 則科技產品先列；全球涵蓋諾貝爾物理獎、肯亞伊波拉、魁北克選舉、司法與戰事新進展。

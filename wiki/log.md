@@ -1,10 +1,18 @@
 # Knowledge Base Log
 
+## [2026-10-09] ingest | Daily global and tech AI news
+
+- 凍結08:00:37 Asia/Taipei；科技336小時窗5則、全球24小時窗正好10則。僅比對9/25–10/8日報與同窗70列產品表。
+- 12來源scan與逐站補查；保留存取、官方日期與傷亡歧異，三張官方產品／事件圖附出處，不把403寫成無圖。
+- 內容commit `b57d781d2f77d4d1071ae6a0672927b540a331d2`；Pages日期頁、latest與根入口完整位元組雜湊驗證成功；唯一私人watchdog08:12:20回報 `Sent LINE message`，未重送。
+- 強制 `check --date 2026-10-09` exit0；JS語法、15篇及世界排名1–10通過。本機4173未運行、Playwright未安裝，未宣稱手機實機測試。
+
 ## [2026-10-08] ingest | Daily global and tech AI news
 
 - 凍結08:02:01 Asia/Taipei；科技336小時窗10則、全球24小時窗正好10則。僅比對9/24–10/7日報與同窗65列產品表。
 - 12站scan與逐站補查，保留權限、路線、停用日期及傷亡／統計口徑限制；三張官方圖附來源與權利，存取失敗不寫成無圖。
 - 內容commit `b21e926115b52786ae126c88cbf391928c1a03aa`；Pages日期頁、latest與根入口雜湊驗證成功；唯一私人watchdog 08:19:32回報 `Sent LINE message`。未重送。
+- 強制完成檢查 `check --date 2026-10-08` exit0；本機4173未運行，不影響公開頁或配送。
 
 ## [2026-10-07] ingest | Daily global and tech AI news
 

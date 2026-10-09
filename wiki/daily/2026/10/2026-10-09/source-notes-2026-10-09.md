@@ -86,3 +86,11 @@ scan成功8站、HTTPError4站；失敗不代表沒有新聞。成功站完整SH
 |8|Euronews200，正文及og https://images.euronews.com/articles/stories/09/94/39/14/1200x675_cmsv2_a17f5f2c-c642-5a7b-b73c-7cd9fbb425d4-9943914.jpg |有訪問圖，第三方新聞照片權利未取得，不使用|
 |9|AP原文/og403；web有Abdullah Tepeli／DIA via AP救援圖|未取得原始圖網址及權利，不使用|
 |10|NASA200，正文及og https://www.nasa.gov/wp-content/uploads/2026/10/crew12splashdown1.jpg ，NASA/Keegan Barber|採10/8當日濺落圖，NASA媒體使用指引 https://www.nasa.gov/nasa-brand-center/images-and-media/ ，非替NASA代言|
+
+## 發布與配送收據
+
+- 內容commit `b57d781d2f77d4d1071ae6a0672927b540a331d2`，乾淨暫存checkout只提交日報相關白名單，不改本機股票及其他未提交工作。
+- Pages dated、latest與根入口HTTP及完整位元組SHA256驗證成功；公開 https://lucaskk.github.io/daily-news/wiki/daily/2026/10/2026-10-09/slides-2026-10-09.html?v=20261009-081046-reader 。
+- 唯一私人LINE watchdog exit0，08:12:20 Asia/Taipei回報 `Sent LINE message`，未呼叫其他sender或強制重送。
+- `daily_news_pipeline.py check --date 2026-10-09` exit0；JS語法、15篇與全球排名1–10連續通過。本機4173未啟動、Playwright未安裝，沒有宣稱Safari/iPhone實機接管驗證。
+- 本機預覽目標 http://localhost:4173/wiki/daily/latest-slides.html ，目前未運行，不影響公開發布。
