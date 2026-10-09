@@ -1,7 +1,7 @@
 ---
 title: "科技產品新聞最近 14 天比對表"
 type: product-news-ledger-recent
-updated: 2026-10-07
+updated: 2026-10-08
 status: generated
 tags: [daily-news, tech-products, deduplication, recent]
 ---
@@ -11,11 +11,21 @@ tags: [daily-news, tech-products, deduplication, recent]
 本檔只整理產製日前 14 天的日報，可完整讀取做去重確認；不搜尋更早日報、完整歷史表或來源筆記。實際發布窗仍以當日研究截點與來源筆記判定。
 
 - 掃描日報：14 份。
-- 最近 14 天項目：65 則。
-- 日報日期範圍：2026-09-24 至 2026-10-07。
+- 最近 14 天項目：70 則。
+- 日報日期範圍：2026-09-25 至 2026-10-08。
 
 | 公司 | 產品 | 更新內容 | 發佈時間 | 收錄日期 | 狀態 | 來源網址 | 比對鍵 |
 |---|---|---|---|---|---|---|---|
+| NVIDIA | 微軟開放 Surface Laptop Ultra 與 RTX Spark Dev Box 預購 | 微軟開放 Surface Laptop Ultra 與 RTX Spark Dev Box 預購，分別安排十月與十一月供貨 | 2026-10-07（官方發布日期） | 2026-10-08 | 首次收錄 | https://blogs.windows.com/devices/2026/10/07/pre-order-our-most-powerful-surface-devices-ever/ | 1ae5c73c8492 |
+| XREAL AURA 公布 US$1,279 | 起價 | XREAL AURA 公布 US$1,279 起價，先讓預約者在四個市場購買 | 2026-10-07 20:00:00（Asia/Taipei） | 2026-10-08 | 首次收錄 | https://www.prnewswire.com/news-releases/xreal-aura-starts-at-1-279--bringing-wired-xr-glasses-with-android-xr-to-customers-this-year-302900445.html<br>https://www.xreal.com/us/aura | e493b2e36c58 |
+| Microsoft | Windows MXC 正式可用 | Windows MXC 正式可用，為本機 AI 代理提供受控執行環境 | 2026-10-07（官方發布日期） | 2026-10-08 | 首次收錄 | https://blogs.windows.com/windowsexperience/2026/10/07/building-windows-for-hybrid-intelligence/ | b9168016064e |
+| Google | 釋出 EmbeddingGemma 2 | Google 釋出 EmbeddingGemma 2，讓文字、圖片及影音在裝置端共用搜尋向量 | 2026-10-06（官方發布日期） | 2026-10-08 | 首次收錄 | https://blog.google/innovation-and-ai/technology/developers-tools/embeddinggemma-2/<br>https://ai.google.dev/gemma/docs/embeddinggemma/model_card_2<br>https://developers.googleblog.com/embeddinggemma-2-the-developer-guide/ | f16a9024c5d1 |
+| Google | Playground 實驗平台 | Google 推出 Playground 實驗平台，讓美國成年使用者以提示建立與分享遊戲 | 2026-10-07（官方發布日期） | 2026-10-08 | 首次收錄 | https://blog.google/innovation-and-ai/technology/ai/playground-experimental-gaming-platform/ | 810b62f46e73 |
+| Google | 向全球開放 SynthID Detector 英文網站 | Google 向全球開放 SynthID Detector 英文網站，讓一般使用者查驗支援的 AI 水印 | 2026-10-07（官方發布日期） | 2026-10-08 | 首次收錄 | https://blog.google/innovation-and-ai/models-and-research/google-deepmind/synth-id-ai-content/<br>https://deepmind.google/models/synthid/ | 177c98a0c25d |
+| Google | Gemini API 正式提供 Nano Banana 2.1 | Gemini API 正式提供 Nano Banana 2.1，改善圖片編輯與全景比例生成 | 2026-10-06（官方發布日期） | 2026-10-08 | 首次收錄 | https://ai.google.dev/gemini-api/docs/changelog<br>https://deepmind.google/models/model-cards/nano-banana-2-1/ | 21fc9d7ebafe |
+| Cisco 公布 Webex Dialog | 路線 | Cisco 公布 Webex Dialog 路線，預計明年第一季測試長期客服代理 | 2026-10-07 22:00:00（Asia/Taipei） | 2026-10-08 | 首次收錄 | https://newsroom.cisco.com/c/r/newsroom/en/us/a/y2026/m10/cisco-unveils-new-agentic-collaboration-experiences.html<br>https://blog.webex.com/customer-experience/webexone-2026-disconnected-customer-interactions-one-continuous-relationship/ | 32af2304b81a |
+| OpenAI | ChatGPT 開始推出互動式回覆 | ChatGPT 開始推出互動式回覆，圖表與操作元件不再只是靜態附圖 | 2026-10-07（官方發布日期） | 2026-10-08 | 首次收錄 | https://openai.com/index/gpt-6-for-everyone/<br>https://help.openai.com/en/articles/6825453-chatgpt-release-notes | 5f241ed16823 |
+| Anthropic | Claude Haiku 5.5 | Anthropic 發布 Claude Haiku 5.5，擴充低成本模型的長上下文與推理控制 | 2026-10-07（官方發布日期） | 2026-10-08 | 首次收錄 | https://www.anthropic.com/claude/haiku<br>https://platform.claude.com/docs/en/models/haiku-5-5/overview<br>https://support.claude.com/en/articles/12138966-release-notes | 14ff33dd4469 |
 | QALO | SL-1 Smart Band | QALO 推出 SL-1 無螢幕智慧手環，與智慧戒指共用免訂閱健康資料平台 | 2026-09-29 21:00（Asia/Taipei） | 2026-10-07 | 首次收錄 | https://qalo.com/products/qalo-sl-1-smart-band<br>https://markets.financialcontent.com/thepilotnews/article/bizwire-2026-9-29-qalo-launches-the-sl-1-smart-band-a-next-generation-wearable-to-expand-its-health-tech-platform<br>https://www.businesswire.com/news/home/20260929697373/en/ | 5cae8686825f |
 | OpenAI | textGrain、ChatGPT、Codex、API | OpenAI 啟用 textGrain API 自願水印，預告歐盟 ChatGPT 與 Codex 後續導入 | 2026-10-05（官方發布日期） | 2026-10-07 | 首次收錄 | https://openai.com/index/eu-text-provenance/ | a80a349b79f1 |
 | Mistral AI | Mistral Large 4、Le Chonk | Mistral Large 4 開放公開 API 預覽，模型權重預計月底釋出 | 2026-10-06（官方發布日期） | 2026-10-07 | 首次收錄 | https://mistral.ai/news/mistral-large-4/<br>https://docs.mistral.ai/models/mistral-large-4-0 | 6a5e3b70150c |
@@ -76,8 +86,3 @@ tags: [daily-news, tech-products, deduplication, recent]
 | Meta、EssilorLuxottica | Ray-Ban Meta Audio、Ray-Ban Meta Gen 3 | Meta 推出 Ray-Ban Meta Audio 並讓 Ray-Ban Meta Gen 3 正式開賣 | 2026-09-23（Meta 官方發布日期；未提供時分） | 2026-09-25 | 首次收錄 | https://about.fb.com/news/2026/09/introducing-ray-ban-meta-audio-glasses-new-styles-plus-muse/<br>https://www.engadget.com/2267213/ray-ban-meta-gen-3-hands-on-better-battery-life/ | 544a76f14411 |
 | Google | Google Photos | Google Photos 推出 Redact 遮蔽筆，並更新 Moods、Wardrobe 與 Remix 模板 | 2026-09-24（Google 官方發布日期；未提供時分） | 2026-09-25 | 首次收錄 | https://blog.google/products-and-platforms/products/photos/google-photos-updates/ | d65cac2d0ba5 |
 | Google | Google Health、Pixel Watch 3／4／5、Health Guardian | Google Health Guardian 開始向 Pixel Watch 推送血壓與胰島素阻抗趨勢 | 2026-09-24（Google 官方發布日期；未提供時分） | 2026-09-25 | 續報 | https://blog.google/products-and-platforms/products/google-health/health-guardian-features-live/<br>https://blog.google/products-and-platforms/products/google-health/pixel-watch-health-guardian/ | d23751fee131 |
-| Xiaomi | Xiaomi 18 Pro、Xiaomi 18 Pro Max | Xiaomi 發布 18 Pro 與 18 Pro Max，加入背面副螢幕並確認國際版本 | 2026-09-24 01:19（Asia/Taipei；El Español 報導換算） | 2026-09-24 | 首次收錄 | https://www.cool3c.com/<br>https://www.elespanol.com/elandroidelibre/20260923/xiaomi-confirma-llegada-moviles-pro-espana-bestia-pantallas-ultimo-chip-qualcomm/1003744394538_0.amp.html<br>https://new.c.mi.com/global/post/2137775 | 85d9c445bee7 |
-| Razer | Mako、Mako X | Razer 重啟 Mako 喇叭品牌，推出 2.1 聲道 Mako 與精簡版 Mako X | 2026-09-22（Razer 官方發布日期；未提供時分） | 2026-09-24 | 首次收錄 | https://www.razer.com/newsroom/product-news/mako-line<br>https://www.razer.com/eu-en/gaming-speakers/razer-mako-x<br>https://www.cool3c.com/ | 790a3ff3c736 |
-| Microsoft | Surface Pro 12、Surface Laptop 13 | Microsoft 推出搭載 Snapdragon X2 Plus 的 Surface Pro 12 與 Surface Laptop 13 | 2026-09-24 05:30（Asia/Taipei；依 Engadget 頁面標示 9/23 16:30 EST 字面換算） | 2026-09-24 | 首次收錄 | https://www.microsoft.com/en-us/surface/devices/surface-pro?icid=mscom_marcom_FH3a_SurfacePro12In_Fall27<br>https://www.engadget.com/2266680/microsofts-new-surface-pro-12-and-surface-laptop-13-feature-snapdragon-x2-plus-chips/ | fa04512e5098 |
-| Logitech | Yeti 2 | Logitech 推出 Yeti 2 USB 麥克風，加入距離感測與 AI 降噪 | 2026-09-24 01:01（Asia/Taipei；依 Engadget 頁面標示 9/23 12:01 EST 字面換算） | 2026-09-24 | 首次收錄 | https://www.engadget.com/2265713/logitechs-yeti-2-brings-the-17-year-old-usb-mic-into-the-modern-age/<br>https://www.logitechg.com/en-us | c289d52dd6f2 |
-| Eight Sleep | Pod 6 | Eight Sleep 發布 Pod 6，感測器增至 18 個並加快溫控 | 2026-09-23 20:00（Asia/Taipei；依 Engadget 頁面標示 9/23 07:00 EST 字面換算） | 2026-09-24 | 首次收錄 | https://www.eightsleep.com/de/<br>https://www.engadget.com/2264386/eight-sleep-announces-the-pod-6-its-newest-smart-mattress-cover/ | 7cbcf99ccaa2 |

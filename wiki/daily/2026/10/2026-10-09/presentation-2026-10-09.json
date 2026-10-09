@@ -1,0 +1,34 @@
+{
+  "images": {
+    "t1": {
+      "src": "assets/alexa-tablets.png",
+      "original_url": "https://assets.aboutamazon.com/ad/13/d5df01dc4dc7916815e964d079f1/amazonalexatablets-inline-amazonnews-ck10726.png",
+      "source_url": "https://www.aboutamazon.com/news/devices/new-amazon-alexa-tablets-alexa-plus",
+      "alt": "Alexa Tablet 三種尺寸官方產品圖",
+      "caption": "官方產品素材，非本站實測。",
+      "credit": "Amazon",
+      "rights": "Amazon公開新聞素材，權利歸原權利人；附完整來源，不宣稱自由授權。",
+      "fit": "contain"
+    },
+    "t4": {
+      "src": "assets/sigma-50-120.jpg",
+      "original_url": "https://www.sigma-global.com/jp/news/images/01_PPhoto_50_120_28_dc_os_026_Emt_representative.jpg",
+      "source_url": "https://www.sigma-global.com/jp/news/2026/10/08/012334/",
+      "alt": "Sigma 50-120mm F2.8 DC OS 新鏡頭官方產品圖",
+      "caption": "官方產品素材，非光學效能實測。",
+      "credit": "Sigma",
+      "rights": "Sigma公開新聞素材，權利歸原權利人；附完整來源，不宣稱自由授權。",
+      "fit": "contain"
+    },
+    "10": {
+      "src": "assets/crew12-splashdown.jpg",
+      "original_url": "https://www.nasa.gov/wp-content/uploads/2026/10/crew12splashdown1.jpg",
+      "source_url": "https://www.nasa.gov/news-release/nasas-spacex-crew-12-splashes-down-sets-briefing-to-discuss-mission/",
+      "alt": "2026年10月8日Crew-12太空船在太平洋濺落",
+      "caption": "10/8當日濺落照片。",
+      "credit": "NASA / Keegan Barber",
+      "rights": "NASA公開媒體素材，依NASA媒體使用指引附出處，不暗示NASA背書：https://www.nasa.gov/nasa-brand-center/images-and-media/",
+      "fit": "contain"
+    }
+  }
+}
