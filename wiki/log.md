@@ -1,5 +1,12 @@
 # Knowledge Base Log
 
+## [2026-10-10] ingest | Daily global and tech AI news
+
+- 凍結08:01:42 Asia/Taipei；科技336小時窗3則、全球24小時窗正好10則。只比對9/26–10/9的14份日報與70列同窗產品表。
+- 12來源scan與逐站補查；官方日期排除舊評測與重刊。兩張官方主題／介面圖附來源與權利，AP403與圖片未授權不誤寫成無圖。
+- 內容commit `1781e53d4d53a2726afd9d2857d138d32f9cc7c8`；Pages日期頁、latest、根入口完整雜湊驗證成功；唯一私人watchdog於08:11:21回報 `Sent LINE message`，沒有重送。
+- 強制check exit0；13篇、世界排名1–10、內嵌JSON與JS語法通過。Playwright未安裝，本機4173未運行，未宣稱手機實機或版面測試。
+
 ## [2026-10-09] ingest | Daily global and tech AI news
 
 - 凍結08:00:37 Asia/Taipei；科技336小時窗5則、全球24小時窗正好10則。僅比對9/25–10/8日報與同窗70列產品表。

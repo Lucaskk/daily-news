@@ -2,7 +2,7 @@
 title: "Overview"
 type: overview
 created: 2026-05-24
-updated: 2026-10-09
+updated: 2026-10-10
 status: seed
 tags: [overview]
 sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
@@ -19,6 +19,13 @@ sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
 - 抽出持續出現的人物、組織、事件、政策、技術與市場概念。
 - 維護跨來源的矛盾、時間線、趨勢與待查問題。
 - 將重要查詢結果回寫成可累積的 wiki 頁面。
+
+## 2026-10-10 Daily News Synthesis
+
+- AI工具擴充也需要確認邊界：OSS Scanner未經人工審查、Codex預測不會自行送出；產品預告不等於上市，Fitbit規格仍待正式公布。
+- 國際法的象徵性肯定與制度運作壓力同日並存：Pillay獲和平獎，美方對ICC推出機構層級制裁；兩者為不同事件，不相互替代查證。
+- 能源交易、歐中初步貿易安排與馬來西亞預算仍須區分聲明、提出與落實；颶風升級不等於已登陸，戰時傷亡不跨事件重複累加。
+- [[daily/2026/10/2026-10-10/daily-news-2026-10-10]]；來源與圖片存取限制見 [[daily/2026/10/2026-10-10/source-notes-2026-10-10]]。
 
 ## 2026-10-09 Daily News Synthesis
 
