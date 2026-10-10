@@ -1,0 +1,24 @@
+{
+  "images": {
+    "t1": {
+      "src": "assets/anthropic-cyber.jpg",
+      "original_url": "https://www-cdn.anthropic.com/images/4zrzovbb/website/e6614df689675126bb32ceb5cfcaaae016050c36-2000x1125.jpg",
+      "source_url": "https://www.anthropic.com/news/anthropic-cyber-mission",
+      "alt": "Anthropic Cyber Mission 官方主題圖",
+      "caption": "官方主題示意圖，非 OSS Scanner 操作介面或事件照片。",
+      "credit": "Anthropic",
+      "rights": "公開新聞素材，權利歸 Anthropic；附原始來源，不宣稱自由授權。",
+      "fit": "contain"
+    },
+    "t2": {
+      "src": "assets/codex-predictions.png",
+      "original_url": "https://images.ctfassets.net/j22is2dtoxu1/7H6QpzVRmwrExprzJnCNkd/40871e820a72741b3df368c986567a66/composer-predictions-overview.png",
+      "source_url": "https://help.openai.com/en/articles/20001601-composer-predictions-in-codex",
+      "alt": "Codex Composer predictions 官方介面示例",
+      "caption": "OpenAI 支援文件介面示例，非本站實機測試。",
+      "credit": "OpenAI",
+      "rights": "公開產品說明素材，權利歸 OpenAI；附原始來源，不宣稱自由授權。",
+      "fit": "contain"
+    }
+  }
+}

@@ -1,7 +1,7 @@
 ---
 title: "科技產品新聞最近 14 天比對表"
 type: product-news-ledger-recent
-updated: 2026-10-08
+updated: 2026-10-09
 status: generated
 tags: [daily-news, tech-products, deduplication, recent]
 ---
@@ -12,10 +12,15 @@ tags: [daily-news, tech-products, deduplication, recent]
 
 - 掃描日報：14 份。
 - 最近 14 天項目：70 則。
-- 日報日期範圍：2026-09-25 至 2026-10-08。
+- 日報日期範圍：2026-09-26 至 2026-10-09。
 
 | 公司 | 產品 | 更新內容 | 發佈時間 | 收錄日期 | 狀態 | 來源網址 | 比對鍵 |
 |---|---|---|---|---|---|---|---|
+| Sigma | 50–120mm F2.8 APS-C 望遠變焦鏡 | Sigma 發布 50–120mm F2.8 APS-C 望遠變焦鏡，預定十月下旬上市 | 2026-10-08（官方發布日期） | 2026-10-09 | 首次收錄 | https://www.sigma-global.com/jp/news/2026/10/08/012334/<br>https://www.cool3c.com/article/252801 | 12c3a99c3cfa |
+| Google | 公布 Gemini 通用工作代理 | Google 公布 Gemini 通用工作代理，整合企業工具與多種工作任務 | 2026-10-08（官方發布日期） | 2026-10-09 | 首次收錄 | https://blog.google/innovation-and-ai/infrastructure-and-cloud/google-cloud/gemini-at-work/<br>https://cloud.google.com/blog/products/ai-machine-learning/welcome-to-gemini-at-work-2026 | 8eefbbaaba30 |
+| Google | Drive 與 Docs 開始原生預覽、編輯及協作 Markdown 檔案 | Google Drive 與 Docs 開始原生預覽、編輯及協作 Markdown 檔案 | 2026-10-05（官方發布日期） | 2026-10-09 | 首次收錄 | https://workspaceupdates.googleblog.com/2026/10/preview-edit-and-collaborate-on-Markdown-files-natively-across-Drive-and-Docs.html<br>https://www.inside.com.tw/article/42582-google-drive-docs-native-markdown-files-preview-edit-collaborate | ef5e3fcf354a |
+| OpenAI | Codex 桌面版開始推出更快的跟進指令回應 | Codex 桌面版開始推出更快的跟進指令回應，讓執行中的任務更快轉向 | 2026-10-08（官方發布日期） | 2026-10-09 | 首次收錄 | https://help.openai.com/en/articles/6825453-chatgpt-release-notes | 5c8ea3bb9990 |
+| Amazon / AWS | Alexa Tablet 新系列 | Amazon 推出 Alexa Tablet 新系列，首次完整支援 Google Play 並開放訂購 | 2026-10-08 20:55:12（Asia/Taipei） | 2026-10-09 | 首次收錄 | https://www.aboutamazon.com/news/devices/new-amazon-alexa-tablets-alexa-plus<br>https://www.engadget.com/2280917/amazon-alexa-tablets-october-2026/ | 85c029d1b846 |
 | NVIDIA | 微軟開放 Surface Laptop Ultra 與 RTX Spark Dev Box 預購 | 微軟開放 Surface Laptop Ultra 與 RTX Spark Dev Box 預購，分別安排十月與十一月供貨 | 2026-10-07（官方發布日期） | 2026-10-08 | 首次收錄 | https://blogs.windows.com/devices/2026/10/07/pre-order-our-most-powerful-surface-devices-ever/ | 1ae5c73c8492 |
 | XREAL AURA 公布 US$1,279 | 起價 | XREAL AURA 公布 US$1,279 起價，先讓預約者在四個市場購買 | 2026-10-07 20:00:00（Asia/Taipei） | 2026-10-08 | 首次收錄 | https://www.prnewswire.com/news-releases/xreal-aura-starts-at-1-279--bringing-wired-xr-glasses-with-android-xr-to-customers-this-year-302900445.html<br>https://www.xreal.com/us/aura | e493b2e36c58 |
 | Microsoft | Windows MXC 正式可用 | Windows MXC 正式可用，為本機 AI 代理提供受控執行環境 | 2026-10-07（官方發布日期） | 2026-10-08 | 首次收錄 | https://blogs.windows.com/windowsexperience/2026/10/07/building-windows-for-hybrid-intelligence/ | b9168016064e |
@@ -81,8 +86,3 @@ tags: [daily-news, tech-products, deduplication, recent]
 | Microsoft | Copilot Home、Copilot Code、Copilot Autopilot | Microsoft 正式介紹 Copilot Home、Code 與 Autopilot，統一工作入口並加入持續自動化 | 2026-09-25 20:00（Asia/Taipei；Engadget metadata；Microsoft 官方同日發布） | 2026-09-26 | 續報 | https://www.microsoft.com/en-us/copilot/blog/content-type/news/<br>https://partner.microsoft.com/en-us/blog/article/ai-at-work-marketing-moment<br>https://www.engadget.com/2268096/microsofts-copilot-app-adds-office-natural-coding-and-automation/ | a394c7b00a98 |
 | Google | Gemini 3.8 Live with Live Avatar、Gemini Enterprise | Google 在 Gemini Enterprise 上線 Gemini 3.8 Live with Live Avatar | 2026-09-24（Google 官方發布日期；未提供時分） | 2026-09-26 | 首次收錄 | https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-live-with-live-avatar/<br>https://www.engadget.com/2268587/google-video-avatars-gemini-3-8-live-agent/ | d2f750a9530c |
 | Cricut | StickerPix Print、StickerPix Print + Cut | Cricut 發布 StickerPix Print 與 StickerPix Print + Cut，整合昇華列印、自動護膜與裁切 | 2026-09-24（Cricut 官方發布日期；未提供時分） | 2026-09-26 | 首次收錄 | https://cricut.com/blog/introducing-cricut-stickerpix/<br>https://www.engadget.com/2269278/cricuts-new-diy-machines-let-you-print-and-cut-your-own-stickers/ | 658f75d59635 |
-| Razer | Kiyo V2 Pro | Razer 發布 Kiyo V2 Pro，以 Sony STARVIS 2 提供 4K 60 FPS 與 AI 自動構圖 | 2026-09-24（Razer 官方發布日期；未提供時分） | 2026-09-25 | 首次收錄 | https://www.razer.com/newsroom/product-reviews/kiyo-v2-pro<br>https://www.razer.com/streaming-cameras/razer-kiyo-v2-pro/RZ19-05360100-R3U1 | bc9d260bd629 |
-| Meta | Meta VR Glasses | Meta 發布約 100 公克的 VR Glasses，採外接運算 puck 並預定 2027 年春季上市 | 2026-09-24（Meta 官方更新日期；未提供時分） | 2026-09-25 | 首次收錄 | https://about.fb.com/news/2026/09/introducing-meta-vr-glasses-3d-movies-immersive-live-sports-100-grams/<br>https://www.engadget.com/2267230/everything-announced-at-meta-connect-2026/ | b1766020825e |
-| Meta、EssilorLuxottica | Ray-Ban Meta Audio、Ray-Ban Meta Gen 3 | Meta 推出 Ray-Ban Meta Audio 並讓 Ray-Ban Meta Gen 3 正式開賣 | 2026-09-23（Meta 官方發布日期；未提供時分） | 2026-09-25 | 首次收錄 | https://about.fb.com/news/2026/09/introducing-ray-ban-meta-audio-glasses-new-styles-plus-muse/<br>https://www.engadget.com/2267213/ray-ban-meta-gen-3-hands-on-better-battery-life/ | 544a76f14411 |
-| Google | Google Photos | Google Photos 推出 Redact 遮蔽筆，並更新 Moods、Wardrobe 與 Remix 模板 | 2026-09-24（Google 官方發布日期；未提供時分） | 2026-09-25 | 首次收錄 | https://blog.google/products-and-platforms/products/photos/google-photos-updates/ | d65cac2d0ba5 |
-| Google | Google Health、Pixel Watch 3／4／5、Health Guardian | Google Health Guardian 開始向 Pixel Watch 推送血壓與胰島素阻抗趨勢 | 2026-09-24（Google 官方發布日期；未提供時分） | 2026-09-25 | 續報 | https://blog.google/products-and-platforms/products/google-health/health-guardian-features-live/<br>https://blog.google/products-and-platforms/products/google-health/pixel-watch-health-guardian/ | d23751fee131 |

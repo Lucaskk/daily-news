@@ -1,0 +1,1386 @@
+<!doctype html>
+<html lang="zh-Hant" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="color-scheme" content="dark light">
+  <meta name="referrer" content="no-referrer">
+  <meta name="reader-version" content="20261010-081033-reader">
+  <title>每日全球與科技 AI 新聞 2026-10-10</title>
+  <!-- Product/press images retain their owners' rights; each figure links to its source.
+       Other photographs are identified as thematic, not event evidence.
+       Icons: Lucide 0.468.0, ISC license, https://lucide.dev/license
+       Official iOS association checked 2026-09-08:
+       https://chatgpt.com/.well-known/apple-app-site-association
+       / with a nonempty prompt or q is an associated app link. Safari/iOS controls
+       the final handoff. No custom URL scheme, API key or automatic transmission. -->
+  <style>* { box-sizing: border-box; }
+:root { color-scheme: dark; --paper: #171717; --surface: #222222; --ink: #efeeeb; --muted: #aaa9a5; --line: #383838; --accent: #91cec5; --warm: #e6bd8a; }
+:root[data-theme="light"] { color-scheme: light; --paper: #fafafa; --surface: #eeeeec; --ink: #202221; --muted: #606660; --line: #d5d8d4; --accent: #216d64; --warm: #85571f; }
+html { height: 100%; }
+body { margin: 0; background: var(--paper); color: var(--ink); font-family: -apple-system, BlinkMacSystemFont, "PingFang TC", "Noto Sans TC", "Microsoft JhengHei", sans-serif; font-size: 18px; line-height: 1.8; letter-spacing: 0; -webkit-text-size-adjust: 100%; height: 100vh; height: 100dvh; display: flex; flex-direction: column; overflow: hidden; }
+body.modal-open { overflow: hidden; }
+button, textarea, a { -webkit-tap-highlight-color: transparent; }
+button, textarea { font: inherit; color: inherit; }
+button, summary, a { touch-action: manipulation; }
+a { color: var(--accent); text-underline-offset: 4px; }
+a, p, h1, h2, h3, li, time { overflow-wrap: anywhere; }
+button, summary { cursor: pointer; }
+button { border: 1px solid var(--line); background: transparent; border-radius: 8px; }
+button:disabled { opacity: .3; cursor: default; }
+button:hover:not(:disabled), summary:hover { background: var(--surface); }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 5px; }
+[tabindex="-1"]:focus { outline: none; }
+svg { width: 21px; height: 21px; flex: 0 0 21px; stroke-width: 1.7; }
+.icon-button { display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; flex: 0 0 44px; }
+.masthead { position: relative; flex: 0 0 auto; z-index: 5; background: var(--paper); border-bottom: 1px solid var(--line); padding-top: env(safe-area-inset-top); }
+.masthead-inner { max-width: 1056px; margin: auto; min-height: 74px; display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 12px 28px; }
+.brand { display: flex; align-items: baseline; gap: 14px; }
+h1 { font-size: 22px; line-height: 1.25; margin: 0; }
+.brand > span { font-size: 14px; color: var(--muted); }
+.header-tools { display: flex; gap: 8px; align-items: center; }
+.header-tools > time { font-size: 14px; color: var(--muted); margin-right: 10px; font-variant-numeric: tabular-nums; }
+.header-tools button { border: 0; }
+.sections { max-width: 760px; display: flex; gap: 32px; margin: auto; min-height: 44px; font-size: 15px; }
+.sections a { display: inline-flex; gap: 7px; align-items: center; padding: 6px 0 10px; color: var(--muted); text-decoration: none; border-bottom: 2px solid transparent; }
+.sections a[aria-current="true"] { color: var(--ink); border-color: var(--accent); }
+.sections a[aria-disabled="true"] { display: none; }
+.sections span { font-size: 13px; color: var(--accent); }
+main { width: 100%; flex: 1; min-height: 0; padding: 0 max(28px, calc((100% - 760px) / 2)) 42px; margin: 0 auto; overflow-y: auto; scroll-padding-top: 12px; scrollbar-width: thin; }
+.story { padding: 30px 0 52px; border-bottom: 1px solid var(--line); scroll-margin-top: 6px; }
+.story + .story { padding-top: 46px; }
+.eyebrow { color: var(--accent); font-size: 14px; font-weight: 600; margin: 0 0 16px; display: flex; align-items: center; gap: 12px; }
+.eyebrow span { color: var(--muted); font-weight: 400; }
+.story-media { margin: 0 0 24px; }
+.story-media img { display: block; width: 100%; height: auto; aspect-ratio: 5 / 3; object-fit: cover; background: #eee; border-radius: 8px; }
+.story-media.contain img { object-fit: contain; }
+.story-media figcaption { color: var(--muted); font-size: 12px; line-height: 1.5; margin-top: 8px; }
+.story-media figcaption a { color: inherit; }
+.story-media.image-failed img { display: none; }
+h2 { font-size: 32px; line-height: 1.45; font-weight: 650; margin: 0 0 18px; }
+.metadata { display: flex; flex-wrap: wrap; gap: 4px 10px; color: var(--muted); font-size: 14px; line-height: 1.6; }
+.metadata time { font-variant-numeric: tabular-nums; }
+.byline { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 10px; font-size: 14px; line-height: 1.6; margin-top: 7px; }
+.byline > span { color: var(--muted); }
+.source-label { color: var(--accent); text-decoration: none; }
+.source-label:hover { text-decoration: underline; }
+.product { color: var(--warm); font-size: 14px; margin: 18px 0 -10px; }
+.lead { font-size: 20px; line-height: 1.85; margin: 24px 0 20px; }
+.key-facts { padding-left: 24px; margin: 0 0 30px; }
+.key-facts li { padding-left: 6px; margin-bottom: 14px; }
+.key-facts li::marker { color: var(--muted); }
+.article-actions { position: relative; }
+.ask-action, .share-action, .full-report > summary { display: flex; align-items: center; justify-content: center; gap: 9px; min-height: 50px; padding: 10px 14px; font-size: 16px; line-height: 1.4; border: 1px solid var(--line); border-radius: 8px; }
+.ask-action { position: absolute; top: 0; left: 0; width: calc(33.333% - 8px); }
+.share-action { position: absolute; top: 0; right: 0; width: calc(33.333% - 8px); }
+summary { list-style: none; }
+summary::-webkit-details-marker { display: none; }
+.full-report > summary { width: calc(33.333% - 8px); margin: 0 auto; }
+.full-report > summary svg:last-child { width: 16px; height: 16px; flex-basis: 16px; }
+.full-report[open] > summary svg:last-child { transform: rotate(180deg); }
+.when-open, .full-report[open] .when-closed { display: none; }
+.full-report[open] .when-open { display: inline; }
+.report-body { margin-top: 28px; padding-top: 4px; border-top: 1px solid var(--line); font-size: 17px; }
+.report-body h3 { font-size: 17px; font-weight: 650; margin: 24px 0 8px; color: var(--warm); }
+.report-body p { margin: 0; }
+.sources { padding-top: 20px; margin-top: 28px; border-top: 1px solid var(--line); font-size: 14px; }
+.sources h4 { margin: 0 0 12px; font-size: 14px; font-weight: 600; color: var(--muted); }
+.sources a { display: block; margin-top: 14px; text-decoration: none; overflow-wrap: anywhere; }
+.sources a:hover span { text-decoration: underline; }
+.sources strong { display: block; font-weight: 600; }
+.sources span { display: block; color: var(--muted); line-height: 1.7; margin-top: 3px; }
+.research-notes { padding-top: 44px; }
+.research-notes h2 { font-size: 26px; }
+.note { border-bottom: 1px solid var(--line); }
+.note > summary { display: flex; align-items: center; justify-content: space-between; gap: 18px; padding: 18px 0; font-size: 17px; }
+.note[open] > summary svg { transform: rotate(180deg); }
+.note-body { padding-bottom: 24px; font-size: 16px; }
+.reader-nav { position: relative; flex: 0 0 auto; align-self: center; display: flex; align-items: center; gap: 8px; background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 4px; margin: 8px auto max(8px, env(safe-area-inset-bottom)); }
+.reader-nav button { border: 0; }
+#position { min-width: 112px; font-size: 14px; text-align: center; font-variant-numeric: tabular-nums; }
+dialog { border: 1px solid var(--line); border-radius: 8px; background: var(--paper); color: var(--ink); width: min(560px, calc(100% - 32px)); max-height: calc(100dvh - 48px); padding: 24px; overflow-y: auto; overscroll-behavior: contain; }
+dialog::backdrop { background: #0009; }
+.dialog-head { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 16px; }
+.dialog-head h2 { font-size: 23px; margin: 0; }
+.dialog-head button { border: 0; }
+.ask-story-title { font-size: 17px; line-height: 1.7; margin: 0 0 20px; }
+label { display: block; font-size: 15px; margin: 10px 0 8px; }
+label > span { color: var(--muted); font-size: 13px; margin-left: 6px; }
+textarea { display: block; width: 100%; resize: vertical; border: 1px solid var(--line); border-radius: 8px; background: var(--surface); padding: 12px; font-size: 16px; line-height: 1.7; }
+textarea::placeholder { color: var(--muted); }
+.context-details { margin-top: 16px; font-size: 14px; color: var(--muted); }
+.context-details > summary { padding: 8px 0; text-decoration: underline; text-underline-offset: 4px; }
+.context-details textarea { font-size: 14px; color: var(--ink); }
+.handoff-note { font-size: 13px; color: var(--muted); margin: 14px 0; line-height: 1.7; }
+.handoff-actions { display: flex; gap: 12px; align-items: center; }
+.primary-action { display: flex; align-items: center; justify-content: center; gap: 12px; flex: 1; min-height: 48px; padding: 10px 12px; border-radius: 8px; text-decoration: none; font-size: 16px; background: var(--accent); color: var(--paper); font-weight: 600; }
+.primary-action[aria-disabled="true"] { opacity: .45; cursor: not-allowed; }
+.status { color: var(--accent); min-height: 24px; margin: 12px 0 0; font-size: 14px; }
+.toc a { display: flex; gap: 14px; border-bottom: 1px solid var(--line); padding: 14px 0; text-decoration: none; font-size: 15px; line-height: 1.7; color: var(--ink); }
+.toc a span { color: var(--accent); flex: 0 0 26px; }
+.theme-toggle svg:last-child, [data-theme="light"] .theme-toggle svg:first-child { display: none; }
+[data-theme="light"] .theme-toggle svg:last-child { display: block; }
+.skip-link { position: fixed; left: 8px; top: -80px; z-index: 10; padding: 8px; background: var(--paper); }
+.skip-link:focus { top: 8px; }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.noscript { padding: 16px 24px 100px; font-size: 14px; }
+@media (max-width: 850px) { .sections { padding: 0 28px; } }
+@media (max-width: 600px) {
+  body { font-size: 17px; }
+  .masthead-inner { padding: 10px 18px; min-height: 66px; gap: 6px; }
+  .brand { display: block; }
+  .brand h1 { font-size: 20px; }
+  .brand > span { font-size: 12px; line-height: 1.3; display: block; margin-top: 3px; }
+  .header-tools { gap: 2px; }
+  .header-tools > time { font-size: 12px; margin-right: 4px; }
+  .header-tools .icon-button { width: 38px; height: 44px; flex-basis: 38px; }
+  .sections { padding: 0 18px; gap: 26px; font-size: 14px; }
+  main { padding: 0 18px 36px; }
+  .story { padding-top: 22px; }
+  .story + .story { padding-top: 36px; }
+  .eyebrow { margin-bottom: 12px; }
+  .story-media { margin-bottom: 20px; }
+  h2 { font-size: 26px; line-height: 1.5; margin-bottom: 14px; }
+  .lead { font-size: 18px; line-height: 1.9; margin-top: 22px; }
+  .key-facts { padding-left: 21px; }
+  .key-facts li { padding-left: 4px; margin-bottom: 16px; }
+  .ask-action, .share-action, .full-report > summary { padding: 10px 5px; font-size: 14px; gap: 5px; min-height: 50px; }
+  .full-report > summary svg:last-child { display: none; }
+  .report-body { font-size: 16px; }
+  dialog { padding: 20px; }
+}
+@media (max-width: 350px) {
+  .header-tools > time { display: none; }
+  .sections { gap: 20px; }
+  h2 { font-size: 24px; }
+  .ask-action, .share-action, .full-report > summary { font-size: 13px; gap: 4px; }
+  .ask-action svg, .share-action svg, .full-report > summary svg { width: 17px; height: 17px; flex-basis: 17px; }
+}
+@media print {
+  body { display: block; height: auto; overflow: visible; }
+  .masthead { position: static; }
+  .header-tools button, .reader-nav, .ask-action, .share-action, dialog { display: none; }
+  main { max-width: none; padding-bottom: 0; overflow: visible; }
+  body { color: #111; background: white; }
+  .story { break-inside: avoid; }
+}
+</style>
+</head>
+<body>
+  <a class="skip-link" href="#content">跳至新聞</a>
+  <header class="masthead">
+    <div class="masthead-inner">
+      <div class="brand"><h1>每日新聞</h1><span>全球與科技 AI</span></div>
+      <div class="header-tools"><time datetime="2026-10-10">2026-10-10</time>
+        <button class="icon-button theme-toggle" id="theme-toggle" title="切換淺色" aria-label="切換淺色"><svg aria-hidden="true" focusable="false"
+  class="lucide lucide-sun"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <circle cx="12" cy="12" r="4" />
+  <path d="M12 2v2" />
+  <path d="M12 20v2" />
+  <path d="m4.93 4.93 1.41 1.41" />
+  <path d="m17.66 17.66 1.41 1.41" />
+  <path d="M2 12h2" />
+  <path d="M20 12h2" />
+  <path d="m6.34 17.66-1.41 1.41" />
+  <path d="m19.07 4.93-1.41 1.41" />
+</svg><svg aria-hidden="true" focusable="false"
+  class="lucide lucide-moon"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
+</svg></button>
+        <button class="icon-button" id="open-index" title="新聞目錄" aria-label="新聞目錄" aria-haspopup="dialog"><svg aria-hidden="true" focusable="false"
+  class="lucide lucide-list"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M3 12h.01" />
+  <path d="M3 18h.01" />
+  <path d="M3 6h.01" />
+  <path d="M8 12h13" />
+  <path d="M8 18h13" />
+  <path d="M8 6h13" />
+</svg></button>
+      </div>
+    </div>
+    <nav class="sections" aria-label="新聞分類">
+      <a href="#t1" data-section="tech" >科技產品 <span>3</span></a>
+      <a href="#1" data-section="world">全球焦點 <span>10</span></a>
+      <a href="#notes" data-section="notes">研究備註</a>
+    </nav>
+  </header>
+  <main id="content">
+    <article id="t1" class="story" data-category="tech" data-rank="T1" aria-labelledby="title-t1">
+      <p class="eyebrow">科技產品 <span>T1</span></p>
+      <!-- Image original: https://www-cdn.anthropic.com/images/4zrzovbb/website/e6614df689675126bb32ceb5cfcaaae016050c36-2000x1125.jpg --><figure class="story-media contain"><img src="assets/anthropic-cyber.jpg" alt="Anthropic Cyber Mission 官方主題圖" width="1200" height="720" loading="eager" decoding="async"><figcaption>官方主題示意圖，非 OSS Scanner 操作介面或事件照片。 <a href="https://www.anthropic.com/news/anthropic-cyber-mission" target="_blank" rel="noopener noreferrer">Anthropic</a></figcaption></figure>
+      <h2 id="title-t1" tabindex="-1">Anthropic 推出免費 OSS Scanner，讓開源專案主動申請定期漏洞掃描</h2>
+      <div class="metadata"><span>發佈時間</span><time datetime="2026-10-08T09:04:16Z">2026-10-08 17:04:16（Asia/Taipei）</time></div>
+      <div class="byline"><span>出處</span><a class="source-label" href="https://www.anthropic.com/news/anthropic-cyber-mission" target="_blank" rel="noopener noreferrer">Anthropic：Cyber Mission 與 OSS Scanner 公告</a><a class="source-label" href="https://www.anthropic.com/research/launching-opt-in-vuln-finding-service-for-open-source" target="_blank" rel="noopener noreferrer">Anthropic：自願加入掃描服務技術說明</a></div>
+      <p class="product">Anthropic／OSS Scanner</p><p class="lead">開源維護者可選擇加入免費掃描服務，取得漏洞說明、利用概念驗證與可提供的修補建議。</p>
+      <ul class="key-facts"><li>報告由模型產生，傳送前未經人工審查，適合有能力處理大量發現的團隊。</li><li>官方預期真陽性率超過九成，這是廠商預期，不是本站驗證結果；服務採主動加入，不代表所有開源專案已被納入。</li></ul>
+      <div class="article-actions">
+        <button class="ask-action" type="button" data-ask="t1" aria-haspopup="dialog"><svg aria-hidden="true" focusable="false"
+  class="lucide lucide-message-circle"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" />
+</svg><span>詢問後續問題</span></button>
+        <button class="share-action" type="button" data-share="t1" aria-label="分享這則新聞"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-share-2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" x2="15.42" y1="13.51" y2="17.49"/><line x1="15.41" x2="8.59" y1="6.51" y2="10.49"/></svg><span>分享</span></button>
+        <details class="full-report" id="report-t1">
+          <summary aria-controls="full-t1"><svg aria-hidden="true" focusable="false"
+  class="lucide lucide-file-text"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" />
+  <path d="M14 2v4a2 2 0 0 0 2 2h4" />
+  <path d="M10 9H8" />
+  <path d="M16 13H8" />
+  <path d="M16 17H8" />
+</svg><span class="when-closed">完整報告</span><span class="when-open">收合報告</span><svg aria-hidden="true" focusable="false"
+  class="lucide lucide-chevron-down"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="m6 9 6 6 6-6" />
+</svg></summary>
+          <div class="report-body" id="full-t1"><h3>事件背景與影響</h3><p>漏洞發現成本下降不等於修補完成；新服務把發現能力交給維護者，但也把驗證與排序工作帶進原本就人力有限的專案。</p><h3>事件與發佈依據</h3><p>官方 Cyber Mission 公告首次發布 metadata 為 2026-10-08T09:04:16.632Z；採首次發布，不採修改時間。</p><h3>收錄紀錄</h3><p>9/26–10/9 日報以 Anthropic、OSS Scanner、Cyber Mission 窄查無命中；同窗產品表亦無此服務推出事件。</p><h3>尚待確認</h3><p>嚴重程度與修補建議可能出錯；免費不等於維護成本為零，也不保證找出所有漏洞。</p><h3>相關實體與概念</h3><p>Anthropic、Claude、OSS Scanner、開源維護、漏洞揭露、人工驗證</p><div class="sources"><h4>原始來源</h4><a href="https://www.anthropic.com/news/anthropic-cyber-mission" target="_blank" rel="noopener noreferrer"><strong>Anthropic：Cyber Mission 與 OSS Scanner 公告</strong><span>https://www.anthropic.com/news/anthropic-cyber-mission</span></a><a href="https://www.anthropic.com/research/launching-opt-in-vuln-finding-service-for-open-source" target="_blank" rel="noopener noreferrer"><strong>Anthropic：自願加入掃描服務技術說明</strong><span>https://www.anthropic.com/research/launching-opt-in-vuln-finding-service-for-open-source</span></a></div></div>
+        </details>
+      </div>
+    </article><article id="t2" class="story" data-category="tech" data-rank="T2" aria-labelledby="title-t2">
+      <p class="eyebrow">科技產品 <span>T2</span></p>
+      <!-- Image original: https://images.ctfassets.net/j22is2dtoxu1/7H6QpzVRmwrExprzJnCNkd/40871e820a72741b3df368c986567a66/composer-predictions-overview.png --><figure class="story-media contain"><img src="assets/codex-predictions.png" alt="Codex Composer predictions 官方介面示例" width="1200" height="720" loading="lazy" decoding="async"><figcaption>OpenAI 支援文件介面示例，非本站實機測試。 <a href="https://help.openai.com/en/articles/20001601-composer-predictions-in-codex" target="_blank" rel="noopener noreferrer">OpenAI</a></figcaption></figure>
+      <h2 id="title-t2" tabindex="-1">OpenAI 開放 Codex 訊息預測測試，先向成年個人 Pro 用戶提供下一則指令建議</h2>
+      <div class="metadata"><span>發佈時間</span><time datetime="2026-10-09">2026-10-09（官方發布日期）</time></div>
+      <div class="byline"><span>出處</span><a class="source-label" href="https://help.openai.com/en/articles/6825453-chatgpt-release-notes" target="_blank" rel="noopener noreferrer">OpenAI：10/9 release notes</a><a class="source-label" href="https://help.openai.com/en/articles/20001601-composer-predictions-in-codex" target="_blank" rel="noopener noreferrer">OpenAI：Composer predictions 支援說明</a></div>
+      <p class="product">OpenAI／Codex Composer predictions</p><p class="lead">Codex 回覆後可在輸入框建議下一則訊息，使用者接受、編輯並自行送出，不會自動延續工作。</p>
+      <ul class="key-facts"><li>測試限18歲以上個人 Pro、最新桌面版的 local／SSH threads，支援 GPT-6 Astra 與 GPT-6.1 Sol。</li><li>測試期間生成預測不計 Codex 額度或 credits；真正送出的訊息仍按一般規則計費與計量。可在設定關閉。</li></ul>
+      <div class="article-actions">
+        <button class="ask-action" type="button" data-ask="t2" aria-haspopup="dialog"><svg aria-hidden="true" focusable="false"
+  class="lucide lucide-message-circle"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" />
+</svg><span>詢問後續問題</span></button>
+        <button class="share-action" type="button" data-share="t2" aria-label="分享這則新聞"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-share-2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" x2="15.42" y1="13.51" y2="17.49"/><line x1="15.41" x2="8.59" y1="6.51" y2="10.49"/></svg><span>分享</span></button>
+        <details class="full-report" id="report-t2">
+          <summary aria-controls="full-t2"><svg aria-hidden="true" focusable="false"
+  class="lucide lucide-file-text"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" />
+  <path d="M14 2v4a2 2 0 0 0 2 2h4" />
+  <path d="M10 9H8" />
+  <path d="M16 13H8" />
+  <path d="M16 17H8" />
+</svg><span class="when-closed">完整報告</span><span class="when-open">收合報告</span><svg aria-hidden="true" focusable="false"
+  class="lucide lucide-chevron-down"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="m6 9 6 6 6-6" />
+</svg></summary>
+          <div class="report-body" id="full-t2"><h3>事件背景與影響</h3><p>減少重複輸入可能改善長任務操作，但預測不代表使用者意圖，也不能當作排程失敗時的自動恢復機制。</p><h3>事件與發佈依據</h3><p>ChatGPT release notes 的 October 9, 2026「Composer predictions in Codex」段落；沒有可核實獨立時分，不補午夜時間。</p><h3>收錄紀錄</h3><p>最近14日日報查 Codex 與 Composer predictions／預測／建議訊息無命中；與10/9已收錄的執行中跟進指令加速是不同功能。</p><h3>尚待確認</h3><p>不是每次回覆都會出現建議；不能推論其他方案、網頁 Chat 或手機已支援，也不會自動接受或送出建議。</p><h3>相關實體與概念</h3><p>OpenAI、Codex、Pro、訊息預測、使用者確認、用量</p><div class="sources"><h4>原始來源</h4><a href="https://help.openai.com/en/articles/6825453-chatgpt-release-notes" target="_blank" rel="noopener noreferrer"><strong>OpenAI：10/9 release notes</strong><span>https://help.openai.com/en/articles/6825453-chatgpt-release-notes</span></a><a href="https://help.openai.com/en/articles/20001601-composer-predictions-in-codex" target="_blank" rel="noopener noreferrer"><strong>OpenAI：Composer predictions 支援說明</strong><span>https://help.openai.com/en/articles/20001601-composer-predictions-in-codex</span></a></div></div>
+        </details>
+      </div>
+    </article><article id="t3" class="story" data-category="tech" data-rank="T3" aria-labelledby="title-t3">
+      <p class="eyebrow">科技產品 <span>T3</span></p>
+
+      <h2 id="title-t3" tabindex="-1">Google Health 預告十月十二日揭曉健康裝置，使用「Edge」字樣但尚未公布完整規格</h2>
+      <div class="metadata"><span>發佈時間</span><time datetime="2026-10-09T22:28:43Z">2026-10-10 06:28:43（Asia/Taipei）</time></div>
+      <div class="byline"><span>出處</span><a class="source-label" href="https://www.engadget.com/2282887/google-teases-its-new-fitbit-edge-wearable-ahead-of-an-october-12-reveal/" target="_blank" rel="noopener noreferrer">Engadget：Google Health 官方預告與原始貼文嵌入</a><a class="source-label" href="https://www.theverge.com/tech/1008918/google-fitbit-edge-launch-next-week" target="_blank" rel="noopener noreferrer">The Verge：發布日期報導</a></div>
+      <p class="product">Google／Fitbit Edge 發布預告</p><p class="lead">Google Health 公開「Get an Edge on your health. 10.12.26」與局部裝置影像，讓新健康穿戴裝置有了具體揭曉時程。</p>
+      <ul class="key-facts"><li>預告日期為10/12，並非已經上市或開始出貨。</li><li>「Fitbit Edge」為媒體依官方 Edge 字樣及先前線索使用的名稱；價格、電池與功能細節仍待正式公告。</li></ul>
+      <div class="article-actions">
+        <button class="ask-action" type="button" data-ask="t3" aria-haspopup="dialog"><svg aria-hidden="true" focusable="false"
+  class="lucide lucide-message-circle"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" />
+</svg><span>詢問後續問題</span></button>
+        <button class="share-action" type="button" data-share="t3" aria-label="分享這則新聞"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-share-2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" x2="15.42" y1="13.51" y2="17.49"/><line x1="15.41" x2="8.59" y1="6.51" y2="10.49"/></svg><span>分享</span></button>
+        <details class="full-report" id="report-t3">
+          <summary aria-controls="full-t3"><svg aria-hidden="true" focusable="false"
+  class="lucide lucide-file-text"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" />
+  <path d="M14 2v4a2 2 0 0 0 2 2h4" />
+  <path d="M10 9H8" />
+  <path d="M16 13H8" />
+  <path d="M16 17H8" />
+</svg><span class="when-closed">完整報告</span><span class="when-open">收合報告</span><svg aria-hidden="true" focusable="false"
+  class="lucide lucide-chevron-down"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="m6 9 6 6 6-6" />
+</svg></summary>
+          <div class="report-body" id="full-t3"><h3>事件背景與影響</h3><p>官方預告比流出圖片更能確認發布方向，但距離產品正式發表仍有一步，現在不適合把傳聞規格當成購買依據。</p><h3>事件與發佈依據</h3><p>Google Health 10/9 官方社群預告；可精確定位的 Engadget 首次報導為 2026-10-09T22:28:43Z。</p><h3>收錄紀錄</h3><p>最近14日日報查 Fitbit.*Edge、Edge.*Fitbit 無命中；同窗表無此次發布日期預告。</p><h3>尚待確認</h3><p>不採未證實的歐洲售價、七天續航或健康感測器說法；不以 Charge 6 舊照片冒充新機。</p><h3>相關實體與概念</h3><p>Google Health、Fitbit、Edge、穿戴裝置、產品預告</p><div class="sources"><h4>原始來源</h4><a href="https://www.engadget.com/2282887/google-teases-its-new-fitbit-edge-wearable-ahead-of-an-october-12-reveal/" target="_blank" rel="noopener noreferrer"><strong>Engadget：Google Health 官方預告與原始貼文嵌入</strong><span>https://www.engadget.com/2282887/google-teases-its-new-fitbit-edge-wearable-ahead-of-an-october-12-reveal/</span></a><a href="https://www.theverge.com/tech/1008918/google-fitbit-edge-launch-next-week" target="_blank" rel="noopener noreferrer"><strong>The Verge：發布日期報導</strong><span>https://www.theverge.com/tech/1008918/google-fitbit-edge-launch-next-week</span></a></div></div>
+        </details>
+      </div>
+    </article><article id="1" class="story" data-category="world" data-rank="1" aria-labelledby="title-1">
+      <p class="eyebrow">全球焦點 <span>1</span></p>
+
+      <h2 id="title-1" tabindex="-1">Navi Pillay 獲諾貝爾和平獎，委員會肯定其推動和平與國際法</h2>
+      <div class="metadata"><span>發佈時間</span><time datetime="2026-10-09T09:00:00Z">2026-10-09 17:00:00（Asia/Taipei）</time></div>
+      <div class="byline"><span>出處</span><a class="source-label" href="https://www.nobelpeaceprize.org/press/press-releases/nobel-peace-prize-for-2026" target="_blank" rel="noopener noreferrer">挪威諾貝爾委員會：2026和平獎公告</a><a class="source-label" href="https://apnews.com/article/f60744c07df969e50e9e69786fdb7de1" target="_blank" rel="noopener noreferrer">AP：Pillay 得獎報導</a></div>
+      <p class="lead">前聯合國人權高專 Navi Pillay 獲2026年和平獎，國際司法在政治壓力下再成焦點。</p>
+      <ul class="key-facts"><li>委員會肯定其推動和平與國際法的工作。</li><li>她曾任國際刑事法院法官及聯合國人權高專。</li></ul>
+      <div class="article-actions">
+        <button class="ask-action" type="button" data-ask="1" aria-haspopup="dialog"><svg aria-hidden="true" focusable="false"
+  class="lucide lucide-message-circle"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" />
+</svg><span>詢問後續問題</span></button>
+        <button class="share-action" type="button" data-share="1" aria-label="分享這則新聞"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-share-2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" x2="15.42" y1="13.51" y2="17.49"/><line x1="15.41" x2="8.59" y1="6.51" y2="10.49"/></svg><span>分享</span></button>
+        <details class="full-report" id="report-1">
+          <summary aria-controls="full-1"><svg aria-hidden="true" focusable="false"
+  class="lucide lucide-file-text"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" />
+  <path d="M14 2v4a2 2 0 0 0 2 2h4" />
+  <path d="M10 9H8" />
+  <path d="M16 13H8" />
+  <path d="M16 17H8" />
+</svg><span class="when-closed">完整報告</span><span class="when-open">收合報告</span><svg aria-hidden="true" focusable="false"
+  class="lucide lucide-chevron-down"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="m6 9 6 6 6-6" />
+</svg></summary>
+          <div class="report-body" id="full-1"><h3>事件背景與影響</h3><p>獎項提高國際法與受害者權利的能見度；象徵性肯定與法院實際執行能力仍是兩回事。</p><h3>事件與發佈依據</h3><p>挪威諾貝爾委員會公告 metadata 2026-10-09T11:00:00+02:00；不使用 AP 滾動頁揭曉前建立時間。</p><h3>收錄紀錄</h3><p>最近14日日報查 Navi Pillay／皮萊無此得獎事件。</p><h3>尚待確認</h3><p>以色列反對她領導之調查委員會的加薩結論；該結論與法院終局判決不能混為一談。</p><h3>相關實體與概念</h3><p>Navi Pillay、諾貝爾和平獎、國際法、聯合國</p><div class="sources"><h4>原始來源</h4><a href="https://www.nobelpeaceprize.org/press/press-releases/nobel-peace-prize-for-2026" target="_blank" rel="noopener noreferrer"><strong>挪威諾貝爾委員會：2026和平獎公告</strong><span>https://www.nobelpeaceprize.org/press/press-releases/nobel-peace-prize-for-2026</span></a><a href="https://apnews.com/article/f60744c07df969e50e9e69786fdb7de1" target="_blank" rel="noopener noreferrer"><strong>AP：Pillay 得獎報導</strong><span>https://apnews.com/article/f60744c07df969e50e9e69786fdb7de1</span></a></div></div>
+        </details>
+      </div>
+    </article><article id="2" class="story" data-category="world" data-rank="2" aria-labelledby="title-2">
+      <p class="eyebrow">全球焦點 <span>2</span></p>
+
+      <h2 id="title-2" tabindex="-1">續報｜美國將制裁擴大至國際刑事法院機構本身</h2>
+      <div class="metadata"><span>發佈時間</span><time datetime="2026-10-09T14:33:42Z">2026-10-09 22:33:42（Asia/Taipei）</time></div>
+      <div class="byline"><span>出處</span><a class="source-label" href="https://apnews.com/article/4ea3555403e3c695d8f81dc473515d9b" target="_blank" rel="noopener noreferrer">AP：美國擴大制裁 ICC</a></div>
+      <p class="lead">美國把對 ICC 的施壓從個人層級推向整個法院，交易與服務供應面臨新限制。</p>
+      <ul class="key-facts"><li>國務卿 Rubio 宣布新措施。</li><li>AP 報導限制涉及金融及科技服務等交易。</li></ul>
+      <div class="article-actions">
+        <button class="ask-action" type="button" data-ask="2" aria-haspopup="dialog"><svg aria-hidden="true" focusable="false"
+  class="lucide lucide-message-circle"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" />
+</svg><span>詢問後續問題</span></button>
+        <button class="share-action" type="button" data-share="2" aria-label="分享這則新聞"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-share-2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" x2="15.42" y1="13.51" y2="17.49"/><line x1="15.41" x2="8.59" y1="6.51" y2="10.49"/></svg><span>分享</span></button>
+        <details class="full-report" id="report-2">
+          <summary aria-controls="full-2"><svg aria-hidden="true" focusable="false"
+  class="lucide lucide-file-text"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" />
+  <path d="M14 2v4a2 2 0 0 0 2 2h4" />
+  <path d="M10 9H8" />
+  <path d="M16 13H8" />
+  <path d="M16 17H8" />
+</svg><span class="when-closed">完整報告</span><span class="when-open">收合報告</span><svg aria-hidden="true" focusable="false"
+  class="lucide lucide-chevron-down"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="m6 9 6 6 6-6" />
+</svg></summary>
+          <div class="report-body" id="full-2"><h3>事件背景與影響</h3><p>制度能否維持運作取決於資金、供應商與合作網絡；制裁可能讓司法程序的實際成本增加。</p><h3>事件與發佈依據</h3><p>AP 首次發布 2026-10-09T14:33:42Z，報導美國當日機構層級制裁。</p><h3>收錄紀錄</h3><p>9/26收錄機構制裁風險、9/29收錄德國聲援；今日新增美方正式宣布措施，不再只是警告。</p><h3>尚待確認</h3><p>美方指法院越權，支持者重視司法獨立；實際供應中斷與法律豁免須看執行，不預設法院已停止工作。</p><h3>相關實體與概念</h3><p>美國、ICC、Marco Rubio、制裁、國際司法</p><div class="sources"><h4>原始來源</h4><a href="https://apnews.com/article/4ea3555403e3c695d8f81dc473515d9b" target="_blank" rel="noopener noreferrer"><strong>AP：美國擴大制裁 ICC</strong><span>https://apnews.com/article/4ea3555403e3c695d8f81dc473515d9b</span></a></div></div>
+        </details>
+      </div>
+    </article><article id="3" class="story" data-category="world" data-rank="3" aria-labelledby="title-3">
+      <p class="eyebrow">全球焦點 <span>3</span></p>
+
+      <h2 id="title-3" tabindex="-1">川普稱與普丁達成柴油供應安排，俄方交付與制裁執行仍待確認</h2>
+      <div class="metadata"><span>發佈時間</span><time datetime="2026-10-09T18:57:40Z">2026-10-10 02:57:40（Asia/Taipei）</time></div>
+      <div class="byline"><span>出處</span><a class="source-label" href="https://apnews.com/article/12baccc7aade559bf329079b0548c9da" target="_blank" rel="noopener noreferrer">AP：川普與普丁柴油安排</a></div>
+      <p class="lead">川普表示與普丁通話後，俄羅斯將立即提供30萬噸柴油，但聲明不是貨物已抵達的證據。</p>
+      <ul class="key-facts"><li>川普宣稱首批為30萬噸，並提出後續擴大量的計畫。</li><li>這是美方政治聲明階段，尚非本站核實的交貨紀錄。</li></ul>
+      <div class="article-actions">
+        <button class="ask-action" type="button" data-ask="3" aria-haspopup="dialog"><svg aria-hidden="true" focusable="false"
+  class="lucide lucide-message-circle"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" />
+</svg><span>詢問後續問題</span></button>
+        <button class="share-action" type="button" data-share="3" aria-label="分享這則新聞"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-share-2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" x2="15.42" y1="13.51" y2="17.49"/><line x1="15.41" x2="8.59" y1="6.51" y2="10.49"/></svg><span>分享</span></button>
+        <details class="full-report" id="report-3">
+          <summary aria-controls="full-3"><svg aria-hidden="true" focusable="false"
+  class="lucide lucide-file-text"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" />
+  <path d="M14 2v4a2 2 0 0 0 2 2h4" />
+  <path d="M10 9H8" />
+  <path d="M16 13H8" />
+  <path d="M16 17H8" />
+</svg><span class="when-closed">完整報告</span><span class="when-open">收合報告</span><svg aria-hidden="true" focusable="false"
+  class="lucide lucide-chevron-down"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="m6 9 6 6 6-6" />
+</svg></summary>
+          <div class="report-body" id="full-3"><h3>事件背景與影響</h3><p>燃料價格壓力正影響外交與能源政策；若實施，市場仍須評估供應速度與制裁安排。</p><h3>事件與發佈依據</h3><p>AP 首次發布 2026-10-09T18:57:40Z，報導川普當日通話與交易聲明。</p><h3>收錄紀錄</h3><p>最近14日日報的G7釋儲是不同事件；未見本次美俄柴油安排。</p><h3>尚待確認</h3><p>付款、航運、俄方落實與法律執行細節未完全確認；不把預定供應當成可用庫存。</p><h3>相關實體與概念</h3><p>Donald Trump、Vladimir Putin、柴油、能源安全、制裁</p><div class="sources"><h4>原始來源</h4><a href="https://apnews.com/article/12baccc7aade559bf329079b0548c9da" target="_blank" rel="noopener noreferrer"><strong>AP：川普與普丁柴油安排</strong><span>https://apnews.com/article/12baccc7aade559bf329079b0548c9da</span></a></div></div>
+        </details>
+      </div>
+    </article><article id="4" class="story" data-category="world" data-rank="4" aria-labelledby="title-4">
+      <p class="eyebrow">全球焦點 <span>4</span></p>
+
+      <h2 id="title-4" tabindex="-1">歐盟與中國達成初步貿易安排，混合動力車出口與市場准入成焦點</h2>
+      <div class="metadata"><span>發佈時間</span><time datetime="2026-10-09T07:48:41Z">2026-10-09 15:48:41（Asia/Taipei）</time></div>
+      <div class="byline"><span>出處</span><a class="source-label" href="https://apnews.com/article/54c9c71e85f92dc0003780fc53f0b250" target="_blank" rel="noopener noreferrer">AP：歐中初步貿易協議</a><a class="source-label" href="https://www.marketscreener.com/news/china-eu-strike-deal-to-halve-chinese-hybrid-exports-ce785ddcd88dff21" target="_blank" rel="noopener noreferrer">Reuters／MarketScreener：混合動力出口安排</a></div>
+      <p class="lead">雙方公布談判進展，歐方描述安排可能減少中國混合動力車出口，並改善歐企市場准入。</p>
+      <ul class="key-facts"><li>歐方稱中國混合動力車出口可能減半。</li><li>中方確認進展，但沒有同步確認全部量化細節。</li></ul>
+      <div class="article-actions">
+        <button class="ask-action" type="button" data-ask="4" aria-haspopup="dialog"><svg aria-hidden="true" focusable="false"
+  class="lucide lucide-message-circle"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" />
+</svg><span>詢問後續問題</span></button>
+        <button class="share-action" type="button" data-share="4" aria-label="分享這則新聞"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-share-2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" x2="15.42" y1="13.51" y2="17.49"/><line x1="15.41" x2="8.59" y1="6.51" y2="10.49"/></svg><span>分享</span></button>
+        <details class="full-report" id="report-4">
+          <summary aria-controls="full-4"><svg aria-hidden="true" focusable="false"
+  class="lucide lucide-file-text"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" />
+  <path d="M14 2v4a2 2 0 0 0 2 2h4" />
+  <path d="M10 9H8" />
+  <path d="M16 13H8" />
+  <path d="M16 17H8" />
+</svg><span class="when-closed">完整報告</span><span class="when-open">收合報告</span><svg aria-hidden="true" focusable="false"
+  class="lucide lucide-chevron-down"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="m6 9 6 6 6-6" />
+</svg></summary>
+          <div class="report-body" id="full-4"><h3>事件背景與影響</h3><p>汽車與關鍵原料牽動供應鏈；但談判框架、正式文本與實際通關效果需要分開看。</p><h3>事件與發佈依據</h3><p>AP 首次發布 2026-10-09T07:48:41Z；Reuters 同日報導初步協議內容。</p><h3>收錄紀錄</h3><p>最近14日日報未見本次初步安排；不把先前一般貿易摩擦當相同協議。</p><h3>尚待確認</h3><p>「減半」保留為歐方描述，不寫成雙方已公布的共同數字；落實條件仍需正式文本。</p><h3>相關實體與概念</h3><p>歐盟、中國、Maros Sefcovic、混合動力車、稀土、市場准入</p><div class="sources"><h4>原始來源</h4><a href="https://apnews.com/article/54c9c71e85f92dc0003780fc53f0b250" target="_blank" rel="noopener noreferrer"><strong>AP：歐中初步貿易協議</strong><span>https://apnews.com/article/54c9c71e85f92dc0003780fc53f0b250</span></a><a href="https://www.marketscreener.com/news/china-eu-strike-deal-to-halve-chinese-hybrid-exports-ce785ddcd88dff21" target="_blank" rel="noopener noreferrer"><strong>Reuters／MarketScreener：混合動力出口安排</strong><span>https://www.marketscreener.com/news/china-eu-strike-deal-to-halve-chinese-hybrid-exports-ce785ddcd88dff21</span></a></div></div>
+        </details>
+      </div>
+    </article><article id="5" class="story" data-category="world" data-rank="5" aria-labelledby="title-5">
+      <p class="eyebrow">全球焦點 <span>5</span></p>
+
+      <h2 id="title-5" tabindex="-1">續報｜Isaias 升為三級颶風，美國墨西哥灣沿岸面臨重大風暴威脅</h2>
+      <div class="metadata"><span>發佈時間</span><time datetime="2026-10-09T13:33:19Z">2026-10-09 21:33:19（Asia/Taipei）</time></div>
+      <div class="byline"><span>出處</span><a class="source-label" href="https://apnews.com/article/b647d3e93f2b7bcd41ed1843d5a2a0e9" target="_blank" rel="noopener noreferrer">AP：Isaias 升三級</a><a class="source-label" href="https://www.local10.com/news/2026/10/09/the-latest-hurricane-isaias-strengthens-to-category-3-ahead-of-expected-friday-evening-landfall/" target="_blank" rel="noopener noreferrer">Local10／AP：週五預測更新</a></div>
+      <p class="lead">Isaias 增強為三級，阿拉巴馬與佛羅里達沿岸須因應更高的風雨及風暴潮風險。</p>
+      <ul class="key-facts"><li>三級屬重大颶風。</li><li>報導預測週五晚間登陸；本項不宣稱截點前已登陸。</li></ul>
+      <div class="article-actions">
+        <button class="ask-action" type="button" data-ask="5" aria-haspopup="dialog"><svg aria-hidden="true" focusable="false"
+  class="lucide lucide-message-circle"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" />
+</svg><span>詢問後續問題</span></button>
+        <button class="share-action" type="button" data-share="5" aria-label="分享這則新聞"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-share-2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" x2="15.42" y1="13.51" y2="17.49"/><line x1="15.41" x2="8.59" y1="6.51" y2="10.49"/></svg><span>分享</span></button>
+        <details class="full-report" id="report-5">
+          <summary aria-controls="full-5"><svg aria-hidden="true" focusable="false"
+  class="lucide lucide-file-text"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" />
+  <path d="M14 2v4a2 2 0 0 0 2 2h4" />
+  <path d="M10 9H8" />
+  <path d="M16 13H8" />
+  <path d="M16 17H8" />
+</svg><span class="when-closed">完整報告</span><span class="when-open">收合報告</span><svg aria-hidden="true" focusable="false"
+  class="lucide lucide-chevron-down"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="m6 9 6 6 6-6" />
+</svg></summary>
+          <div class="report-body" id="full-5"><h3>事件背景與影響</h3><p>風力級別不是單一安全指標，沿岸淹水、降雨與撤離路線同樣決定災害後果。</p><h3>事件與發佈依據</h3><p>AP 首次發布 2026-10-09T13:33:19Z，更新為三級颶風。</p><h3>收錄紀錄</h3><p>10/9收錄二級與撤離準備；新增三級重大颶風強度與週五晚間預測登陸風險。</p><h3>尚待確認</h3><p>路徑與強度仍會變動；請以當地官方警報為準，不以本日報代替即時防災指令。</p><h3>相關實體與概念</h3><p>Isaias、三級颶風、墨西哥灣、風暴潮、撤離</p><div class="sources"><h4>原始來源</h4><a href="https://apnews.com/article/b647d3e93f2b7bcd41ed1843d5a2a0e9" target="_blank" rel="noopener noreferrer"><strong>AP：Isaias 升三級</strong><span>https://apnews.com/article/b647d3e93f2b7bcd41ed1843d5a2a0e9</span></a><a href="https://www.local10.com/news/2026/10/09/the-latest-hurricane-isaias-strengthens-to-category-3-ahead-of-expected-friday-evening-landfall/" target="_blank" rel="noopener noreferrer"><strong>Local10／AP：週五預測更新</strong><span>https://www.local10.com/news/2026/10/09/the-latest-hurricane-isaias-strengthens-to-category-3-ahead-of-expected-friday-evening-landfall/</span></a></div></div>
+        </details>
+      </div>
+    </article><article id="6" class="story" data-category="world" data-rank="6" aria-labelledby="title-6">
+      <p class="eyebrow">全球焦點 <span>6</span></p>
+
+      <h2 id="title-6" tabindex="-1">續報｜俄羅斯新一輪攻擊造成烏克蘭至少三死，多地住宅受損</h2>
+      <div class="metadata"><span>發佈時間</span><time datetime="2026-10-09T09:24:20Z">2026-10-09 17:24:20（Asia/Taipei）</time></div>
+      <div class="byline"><span>出處</span><a class="source-label" href="https://apnews.com/article/2c6c8b081e8e316c83af17a39bce7fe5" target="_blank" rel="noopener noreferrer">AP：週五烏克蘭攻擊與傷亡</a></div>
+      <p class="lead">烏方官員通報 Zaporizhzhia、Ivano-Frankivsk 與 Bucha 等地的新攻擊，至少三人死亡。</p>
+      <ul class="key-facts"><li>官員通報至少三死、八傷。</li><li>數字屬當時初步通報，不加入前一日巴士罹難者。</li></ul>
+      <div class="article-actions">
+        <button class="ask-action" type="button" data-ask="6" aria-haspopup="dialog"><svg aria-hidden="true" focusable="false"
+  class="lucide lucide-message-circle"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" />
+</svg><span>詢問後續問題</span></button>
+        <button class="share-action" type="button" data-share="6" aria-label="分享這則新聞"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-share-2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" x2="15.42" y1="13.51" y2="17.49"/><line x1="15.41" x2="8.59" y1="6.51" y2="10.49"/></svg><span>分享</span></button>
+        <details class="full-report" id="report-6">
+          <summary aria-controls="full-6"><svg aria-hidden="true" focusable="false"
+  class="lucide lucide-file-text"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" />
+  <path d="M14 2v4a2 2 0 0 0 2 2h4" />
+  <path d="M10 9H8" />
+  <path d="M16 13H8" />
+  <path d="M16 17H8" />
+</svg><span class="when-closed">完整報告</span><span class="when-open">收合報告</span><svg aria-hidden="true" focusable="false"
+  class="lucide lucide-chevron-down"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="m6 9 6 6 6-6" />
+</svg></summary>
+          <div class="report-body" id="full-6"><h3>事件背景與影響</h3><p>連續攻擊讓城市防空與民生修復同時承壓；需要按事件與地點分開記錄，避免重複累計。</p><h3>事件與發佈依據</h3><p>AP 首次發布 2026-10-09T09:24:20Z，彙整週五地方官員通報。</p><h3>收錄紀錄</h3><p>10/9日報收錄前一日巴士攻擊；今日為另一輪攻擊及不同地點傷亡，並非重刊巴士數字。</p><h3>尚待確認</h3><p>地方傷亡與目標性質尚無法逐項獨立核實，後續可能修正。</p><h3>相關實體與概念</h3><p>烏克蘭、俄羅斯、Zaporizhzhia、Bucha、平民保護</p><div class="sources"><h4>原始來源</h4><a href="https://apnews.com/article/2c6c8b081e8e316c83af17a39bce7fe5" target="_blank" rel="noopener noreferrer"><strong>AP：週五烏克蘭攻擊與傷亡</strong><span>https://apnews.com/article/2c6c8b081e8e316c83af17a39bce7fe5</span></a></div></div>
+        </details>
+      </div>
+    </article><article id="7" class="story" data-category="world" data-rank="7" aria-labelledby="title-7">
+      <p class="eyebrow">全球焦點 <span>7</span></p>
+
+      <h2 id="title-7" tabindex="-1">馬來西亞提出2027年預算，燃料壓力影響財政赤字規畫</h2>
+      <div class="metadata"><span>發佈時間</span><time datetime="2026-10-09T12:00:00Z">2026-10-09 20:00:00（Asia/Taipei）</time></div>
+      <div class="byline"><span>出處</span><a class="source-label" href="https://bernama.com/en/general/news.php?id=2617655" target="_blank" rel="noopener noreferrer">Bernama：2027預算重點</a><a class="source-label" href="https://www.marketscreener.com/news/malaysia-plans-112-5-billion-budget-for-2027-ahead-of-possible-election-ce785ddfde8ef022" target="_blank" rel="noopener noreferrer">Reuters／MarketScreener：預算規模與赤字</a></div>
+      <p class="lead">政府提出總額4,598億令吉的2027預算，約1,125億美元，同時面對燃料支出壓力。</p>
+      <ul class="key-facts"><li>Reuters 報導2026赤字目標由 GDP 的3.5%修正為3.6%。</li><li>美元換算是報導時估值，主要預算單位為令吉。</li></ul>
+      <div class="article-actions">
+        <button class="ask-action" type="button" data-ask="7" aria-haspopup="dialog"><svg aria-hidden="true" focusable="false"
+  class="lucide lucide-message-circle"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" />
+</svg><span>詢問後續問題</span></button>
+        <button class="share-action" type="button" data-share="7" aria-label="分享這則新聞"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-share-2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" x2="15.42" y1="13.51" y2="17.49"/><line x1="15.41" x2="8.59" y1="6.51" y2="10.49"/></svg><span>分享</span></button>
+        <details class="full-report" id="report-7">
+          <summary aria-controls="full-7"><svg aria-hidden="true" focusable="false"
+  class="lucide lucide-file-text"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" />
+  <path d="M14 2v4a2 2 0 0 0 2 2h4" />
+  <path d="M10 9H8" />
+  <path d="M16 13H8" />
+  <path d="M16 17H8" />
+</svg><span class="when-closed">完整報告</span><span class="when-open">收合報告</span><svg aria-hidden="true" focusable="false"
+  class="lucide lucide-chevron-down"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="m6 9 6 6 6-6" />
+</svg></summary>
+          <div class="report-body" id="full-7"><h3>事件背景與影響</h3><p>預算透露政府如何取捨民生支援與財政整頓，但提出方案並不等於國會已通過。</p><h3>事件與發佈依據</h3><p>Bernama highlights metadata「09/10/2026 08:00 PM」；國會當日提出預算，屬窗口內新政策程序。</p><h3>收錄紀錄</h3><p>最近14日日報查馬來西亞／Malaysia與預算／budget，無此2027預算命中。</p><h3>尚待確認</h3><p>方案仍須立法程序；選舉時機為政治背景，不是已確定選舉日期。</p><h3>相關實體與概念</h3><p>馬來西亞、Anwar Ibrahim、2027預算、財政赤字、燃料</p><div class="sources"><h4>原始來源</h4><a href="https://bernama.com/en/general/news.php?id=2617655" target="_blank" rel="noopener noreferrer"><strong>Bernama：2027預算重點</strong><span>https://bernama.com/en/general/news.php?id=2617655</span></a><a href="https://www.marketscreener.com/news/malaysia-plans-112-5-billion-budget-for-2027-ahead-of-possible-election-ce785ddfde8ef022" target="_blank" rel="noopener noreferrer"><strong>Reuters／MarketScreener：預算規模與赤字</strong><span>https://www.marketscreener.com/news/malaysia-plans-112-5-billion-budget-for-2027-ahead-of-possible-election-ce785ddfde8ef022</span></a></div></div>
+        </details>
+      </div>
+    </article><article id="8" class="story" data-category="world" data-rank="8" aria-labelledby="title-8">
+      <p class="eyebrow">全球焦點 <span>8</span></p>
+
+      <h2 id="title-8" tabindex="-1">智利首都豪雨引發土石流與道路混亂，至少六人受傷</h2>
+      <div class="metadata"><span>發佈時間</span><time datetime="2026-10-09T03:25:13Z">2026-10-09 11:25:13（Asia/Taipei）</time></div>
+      <div class="byline"><span>出處</span><a class="source-label" href="https://apnews.com/article/7f44b0f7271741c686c5a918a6581997" target="_blank" rel="noopener noreferrer">AP：Santiago 豪雨災情</a></div>
+      <p class="lead">Santiago 豪雨造成土石流及車輛受困，至少六人受傷，都市排水與坡地安全受到考驗。</p>
+      <ul class="key-facts"><li>AP 報導受傷及道路、車輛受衝擊。</li><li>災害發生於當地週四，本日採窗口內首次可靠報導，不聲稱全部在台灣10/9發生。</li></ul>
+      <div class="article-actions">
+        <button class="ask-action" type="button" data-ask="8" aria-haspopup="dialog"><svg aria-hidden="true" focusable="false"
+  class="lucide lucide-message-circle"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" />
+</svg><span>詢問後續問題</span></button>
+        <button class="share-action" type="button" data-share="8" aria-label="分享這則新聞"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-share-2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" x2="15.42" y1="13.51" y2="17.49"/><line x1="15.41" x2="8.59" y1="6.51" y2="10.49"/></svg><span>分享</span></button>
+        <details class="full-report" id="report-8">
+          <summary aria-controls="full-8"><svg aria-hidden="true" focusable="false"
+  class="lucide lucide-file-text"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" />
+  <path d="M14 2v4a2 2 0 0 0 2 2h4" />
+  <path d="M10 9H8" />
+  <path d="M16 13H8" />
+  <path d="M16 17H8" />
+</svg><span class="when-closed">完整報告</span><span class="when-open">收合報告</span><svg aria-hidden="true" focusable="false"
+  class="lucide lucide-chevron-down"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="m6 9 6 6 6-6" />
+</svg></summary>
+          <div class="report-body" id="full-8"><h3>事件背景與影響</h3><p>短時強降雨可以迅速打斷城市交通，災後除清理道路也須檢查坡地與排水設施。</p><h3>事件與發佈依據</h3><p>AP 首次可靠報導 2026-10-09T03:25:13Z；描述當地週四豪雨後災情，以本次首報入窗，不將累積雨量當新增單日值。</p><h3>收錄紀錄</h3><p>最近14日日報查智利洪災／Chile flood 無本次事件。</p><h3>尚待確認</h3><p>初步受傷人數不代表最終災損；沒有據此判定單一災害的氣候歸因。</p><h3>相關實體與概念</h3><p>智利、Santiago、Las Condes、豪雨、土石流、都市韌性</p><div class="sources"><h4>原始來源</h4><a href="https://apnews.com/article/7f44b0f7271741c686c5a918a6581997" target="_blank" rel="noopener noreferrer"><strong>AP：Santiago 豪雨災情</strong><span>https://apnews.com/article/7f44b0f7271741c686c5a918a6581997</span></a></div></div>
+        </details>
+      </div>
+    </article><article id="9" class="story" data-category="world" data-rank="9" aria-labelledby="title-9">
+      <p class="eyebrow">全球焦點 <span>9</span></p>
+
+      <h2 id="title-9" tabindex="-1">續報｜FBI 宣布逮捕與徵才網站外洩案相關的另一名 ShinyHunters 涉嫌共犯</h2>
+      <div class="metadata"><span>發佈時間</span><time datetime="2026-10-09T15:36:50Z">2026-10-09 23:36:50（Asia/Taipei）</time></div>
+      <div class="byline"><span>出處</span><a class="source-label" href="https://apnews.com/article/b27bad3059c9ab93d1d7006d3af13c0a" target="_blank" rel="noopener noreferrer">AP：FBI 宣布新逮捕</a></div>
+      <p class="lead">FBI 宣布與徵才入口遭入侵事件有關的新逮捕，案件涉及第三方管理平台。</p>
+      <ul class="key-facts"><li>局長 Kash Patel 說調查持續。</li><li>對方為涉嫌共犯，仍須司法程序，不預先認定有罪。</li></ul>
+      <div class="article-actions">
+        <button class="ask-action" type="button" data-ask="9" aria-haspopup="dialog"><svg aria-hidden="true" focusable="false"
+  class="lucide lucide-message-circle"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" />
+</svg><span>詢問後續問題</span></button>
+        <button class="share-action" type="button" data-share="9" aria-label="分享這則新聞"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-share-2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" x2="15.42" y1="13.51" y2="17.49"/><line x1="15.41" x2="8.59" y1="6.51" y2="10.49"/></svg><span>分享</span></button>
+        <details class="full-report" id="report-9">
+          <summary aria-controls="full-9"><svg aria-hidden="true" focusable="false"
+  class="lucide lucide-file-text"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" />
+  <path d="M14 2v4a2 2 0 0 0 2 2h4" />
+  <path d="M10 9H8" />
+  <path d="M16 13H8" />
+  <path d="M16 17H8" />
+</svg><span class="when-closed">完整報告</span><span class="when-open">收合報告</span><svg aria-hidden="true" focusable="false"
+  class="lucide lucide-chevron-down"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="m6 9 6 6 6-6" />
+</svg></summary>
+          <div class="report-body" id="full-9"><h3>事件背景與影響</h3><p>關鍵機構使用的外部系統同樣需要更新與存取管理；逮捕是調查進展，不代表資料風險已消失。</p><h3>事件與發佈依據</h3><p>AP 首次發布 2026-10-09T15:36:50Z，FBI局長當日宣布逮捕進展。</p><h3>收錄紀錄</h3><p>10/4收錄匿名來源指 Jordan 拘留涉案人物；今日新增 FBI 官方宣布另一涉嫌共犯被捕，不把兩人直接認定為同一人。</p><h3>尚待確認</h3><p>被捕者角色、完整外洩範圍與後續起訴仍待公開文件，不照單全收駭客所稱規模。</p><h3>相關實體與概念</h3><p>FBI、ShinyHunters、第三方供應商、個資、刑事調查</p><div class="sources"><h4>原始來源</h4><a href="https://apnews.com/article/b27bad3059c9ab93d1d7006d3af13c0a" target="_blank" rel="noopener noreferrer"><strong>AP：FBI 宣布新逮捕</strong><span>https://apnews.com/article/b27bad3059c9ab93d1d7006d3af13c0a</span></a></div></div>
+        </details>
+      </div>
+    </article><article id="10" class="story" data-category="world" data-rank="10" aria-labelledby="title-10">
+      <p class="eyebrow">全球焦點 <span>10</span></p>
+
+      <h2 id="title-10" tabindex="-1">NASA 正式徵求商業太空站提案，預定十二月收件、明春授約</h2>
+      <div class="metadata"><span>發佈時間</span><time datetime="2026-10-09T18:11:44Z">2026-10-10 02:11:44（Asia/Taipei）</time></div>
+      <div class="byline"><span>出處</span><a class="source-label" href="https://www.nasa.gov/news-release/nasa-seeks-us-industry-plans-for-commercial-space-stations/" target="_blank" rel="noopener noreferrer">NASA：商業太空站最終徵案公告</a></div>
+      <p class="lead">NASA 對國際太空站退役後的低軌服務提出正式採購程序，要求企業提供目的地與交通整合方案。</p>
+      <ul class="key-facts"><li>提案截止12/8，預計2027年春季授約。</li><li>規畫多家固定價格、IDIQ合約，早期開發選兩家以上，再競爭後續設計、認證與服務。</li></ul>
+      <div class="article-actions">
+        <button class="ask-action" type="button" data-ask="10" aria-haspopup="dialog"><svg aria-hidden="true" focusable="false"
+  class="lucide lucide-message-circle"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" />
+</svg><span>詢問後續問題</span></button>
+        <button class="share-action" type="button" data-share="10" aria-label="分享這則新聞"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-share-2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" x2="15.42" y1="13.51" y2="17.49"/><line x1="15.41" x2="8.59" y1="6.51" y2="10.49"/></svg><span>分享</span></button>
+        <details class="full-report" id="report-10">
+          <summary aria-controls="full-10"><svg aria-hidden="true" focusable="false"
+  class="lucide lucide-file-text"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" />
+  <path d="M14 2v4a2 2 0 0 0 2 2h4" />
+  <path d="M10 9H8" />
+  <path d="M16 13H8" />
+  <path d="M16 17H8" />
+</svg><span class="when-closed">完整報告</span><span class="when-open">收合報告</span><svg aria-hidden="true" focusable="false"
+  class="lucide lucide-chevron-down"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="m6 9 6 6 6-6" />
+</svg></summary>
+          <div class="report-body" id="full-10"><h3>事件背景與影響</h3><p>從政策願景進入徵案，企業必須交出技術與商業可行性，政府則需要降低過渡期間服務中斷風險。</p><h3>事件與發佈依據</h3><p>NASA 首次發布 metadata 2026-10-09T18:11:44Z；當日發布最終 Request for Proposals。</p><h3>收錄紀錄</h3><p>最近14日日報未見這次最終徵案；與Crew-12返航、早前徵詢或草案不同。</p><h3>尚待確認</h3><p>尚未決定得標者或證明太空站已可營運；授約時程是預期，不是保證。</p><h3>相關實體與概念</h3><p>NASA、低地球軌道、商業太空站、RFP、IDIQ、ISS</p><div class="sources"><h4>原始來源</h4><a href="https://www.nasa.gov/news-release/nasa-seeks-us-industry-plans-for-commercial-space-stations/" target="_blank" rel="noopener noreferrer"><strong>NASA：商業太空站最終徵案公告</strong><span>https://www.nasa.gov/news-release/nasa-seeks-us-industry-plans-for-commercial-space-stations/</span></a></div></div>
+        </details>
+      </div>
+    </article>
+    <section id="notes" class="research-notes" aria-labelledby="notes-title">
+      <p class="eyebrow">研究備註</p><h2 id="notes-title">時間、來源與後續追蹤</h2>
+      <p class="metadata">研究截點 2026-10-10 08:01:42（Asia/Taipei）</p><details class="note"><summary>研究時間與範圍<svg aria-hidden="true" focusable="false"
+  class="lucide lucide-chevron-down"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="m6 9 6 6 6-6" />
+</svg></summary><div class="note-body"><p>研究截點：2026-10-10 08:01:42（Asia/Taipei）。全球新聞：2026-10-09 08:01:42 至 2026-10-10 08:01:42（Asia/Taipei）。科技產品：2026-09-26 08:01:42 至 2026-10-10 08:01:42（Asia/Taipei）。</p><div class="sources"><h4>原始來源</h4><a href="https://lucaskk.github.io/daily-news/wiki/daily/2026/10/2026-10-10/daily-news-2026-10-10.md" target="_blank" rel="noopener noreferrer"><strong>每日報告</strong><span>https://lucaskk.github.io/daily-news/wiki/daily/2026/10/2026-10-10/daily-news-2026-10-10.md</span></a><a href="https://lucaskk.github.io/daily-news/wiki/daily/2026/10/2026-10-10/source-notes-2026-10-10.md" target="_blank" rel="noopener noreferrer"><strong>來源與時間筆記</strong><span>https://lucaskk.github.io/daily-news/wiki/daily/2026/10/2026-10-10/source-notes-2026-10-10.md</span></a></div></div></details>
+    </section>
+  </main>
+  <nav class="reader-nav" aria-label="逐篇導覽">
+    <button class="icon-button" id="prev" title="上一篇" aria-label="上一篇"><svg aria-hidden="true" focusable="false"
+  class="lucide lucide-chevron-left"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="m15 18-6-6 6-6" />
+</svg></button>
+    <span id="position" aria-live="polite"></span>
+    <button class="icon-button" id="next" title="下一篇" aria-label="下一篇"><svg aria-hidden="true" focusable="false"
+  class="lucide lucide-chevron-right"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="m9 18 6-6-6-6" />
+</svg></button>
+  </nav>
+  <dialog id="index-dialog" aria-labelledby="index-title">
+    <div class="dialog-head"><h2 id="index-title">今日目錄</h2><button class="icon-button" data-close title="關閉目錄" aria-label="關閉目錄"><svg aria-hidden="true" focusable="false"
+  class="lucide lucide-x"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M18 6 6 18" />
+  <path d="m6 6 12 12" />
+</svg></button></div>
+    <nav class="toc" aria-label="所有新聞"><a href="#t1" data-story-link="t1"><span>T1</span>Anthropic 推出免費 OSS Scanner，讓開源專案主動申請定期漏洞掃描</a><a href="#t2" data-story-link="t2"><span>T2</span>OpenAI 開放 Codex 訊息預測測試，先向成年個人 Pro 用戶提供下一則指令建議</a><a href="#t3" data-story-link="t3"><span>T3</span>Google Health 預告十月十二日揭曉健康裝置，使用「Edge」字樣但尚未公布完整規格</a><a href="#1" data-story-link="1"><span>1</span>Navi Pillay 獲諾貝爾和平獎，委員會肯定其推動和平與國際法</a><a href="#2" data-story-link="2"><span>2</span>續報｜美國將制裁擴大至國際刑事法院機構本身</a><a href="#3" data-story-link="3"><span>3</span>川普稱與普丁達成柴油供應安排，俄方交付與制裁執行仍待確認</a><a href="#4" data-story-link="4"><span>4</span>歐盟與中國達成初步貿易安排，混合動力車出口與市場准入成焦點</a><a href="#5" data-story-link="5"><span>5</span>續報｜Isaias 升為三級颶風，美國墨西哥灣沿岸面臨重大風暴威脅</a><a href="#6" data-story-link="6"><span>6</span>續報｜俄羅斯新一輪攻擊造成烏克蘭至少三死，多地住宅受損</a><a href="#7" data-story-link="7"><span>7</span>馬來西亞提出2027年預算，燃料壓力影響財政赤字規畫</a><a href="#8" data-story-link="8"><span>8</span>智利首都豪雨引發土石流與道路混亂，至少六人受傷</a><a href="#9" data-story-link="9"><span>9</span>續報｜FBI 宣布逮捕與徵才網站外洩案相關的另一名 ShinyHunters 涉嫌共犯</a><a href="#10" data-story-link="10"><span>10</span>NASA 正式徵求商業太空站提案，預定十二月收件、明春授約</a><a href="#notes">研究備註</a></nav>
+  </dialog>
+  <dialog id="ask-dialog" aria-labelledby="ask-title" aria-describedby="ask-story-title">
+    <div class="dialog-head"><h2 id="ask-title">詢問 ChatGPT</h2><button class="icon-button" data-close title="關閉" aria-label="關閉"><svg aria-hidden="true" focusable="false"
+  class="lucide lucide-x"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M18 6 6 18" />
+  <path d="m6 6 12 12" />
+</svg></button></div>
+    <p id="ask-story-title" class="ask-story-title"></p>
+    <label for="question">你的問題 <span>選填</span></label>
+    <textarea id="question" rows="3" maxlength="2000" placeholder="例如：這項消息對我有什麼影響？"></textarea>
+    <details class="context-details"><summary>隨附文章內容</summary><label class="sr-only" for="context-text">帶入 ChatGPT 的完整文字</label><textarea id="context-text" rows="8" readonly spellcheck="false"></textarea></details>
+    <p id="handoff-note" class="handoff-note">Safari 將依裝置設定開啟 ChatGPT App 或網頁。</p>
+    <div class="handoff-actions"><a id="chatgpt-link" class="primary-action" href="https://chatgpt.com/#native" rel="noreferrer">在 ChatGPT 詢問 <svg aria-hidden="true" focusable="false"
+  class="lucide lucide-arrow-up-right"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M7 7h10v10" />
+  <path d="M7 17 17 7" />
+</svg></a><button id="copy-context" class="icon-button" title="複製完整內容" aria-label="複製完整內容"><svg aria-hidden="true" focusable="false"
+  class="lucide lucide-copy"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <rect width="14" height="14" x="8" y="8" rx="2" ry="2" />
+  <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2" />
+</svg></button></div>
+    <p id="copy-status" class="status" role="status" aria-live="polite"></p>
+  </dialog>
+  <noscript><p class="noscript">完整報告可直接展開；ChatGPT 提問與逐篇導覽需要 JavaScript。</p></noscript>
+  <script type="application/json" id="report-data">{"date": "2026-10-10", "stories": [{"id": "t1", "rank": "T1", "title": "Anthropic 推出免費 OSS Scanner，讓開源專案主動申請定期漏洞掃描", "facts": ["報告由模型產生，傳送前未經人工審查，適合有能力處理大量發現的團隊。", "官方預期真陽性率超過九成，這是廠商預期，不是本站驗證結果；服務採主動加入，不代表所有開源專案已被納入。"], "category": "tech", "product": "Anthropic／OSS Scanner", "published": "2026-10-08 17:04:16（Asia/Taipei）", "time_basis": "官方 Cyber Mission 公告首次發布 metadata 為 2026-10-08T09:04:16.632Z；採首次發布，不採修改時間。", "history": "9/26–10/9 日報以 Anthropic、OSS Scanner、Cyber Mission 窄查無命中；同窗產品表亦無此服務推出事件。", "summary": "開源維護者可選擇加入免費掃描服務，取得漏洞說明、利用概念驗證與可提供的修補建議。", "why": "漏洞發現成本下降不等於修補完成；新服務把發現能力交給維護者，但也把驗證與排序工作帶進原本就人力有限的專案。", "entities": "Anthropic、Claude、OSS Scanner、開源維護、漏洞揭露、人工驗證", "uncertainty": "嚴重程度與修補建議可能出錯；免費不等於維護成本為零，也不保證找出所有漏洞。", "sources": [{"label": "Anthropic：Cyber Mission 與 OSS Scanner 公告", "url": "https://www.anthropic.com/news/anthropic-cyber-mission"}, {"label": "Anthropic：自願加入掃描服務技術說明", "url": "https://www.anthropic.com/research/launching-opt-in-vuln-finding-service-for-open-source"}], "datetime": "2026-10-08T09:04:16Z", "url": "https://lucaskk.github.io/daily-news/wiki/daily/2026/10/2026-10-10/slides-2026-10-10.html?story=t1#t1"}, {"id": "t2", "rank": "T2", "title": "OpenAI 開放 Codex 訊息預測測試，先向成年個人 Pro 用戶提供下一則指令建議", "facts": ["測試限18歲以上個人 Pro、最新桌面版的 local／SSH threads，支援 GPT-6 Astra 與 GPT-6.1 Sol。", "測試期間生成預測不計 Codex 額度或 credits；真正送出的訊息仍按一般規則計費與計量。可在設定關閉。"], "category": "tech", "product": "OpenAI／Codex Composer predictions", "published": "2026-10-09（官方發布日期）", "time_basis": "ChatGPT release notes 的 October 9, 2026「Composer predictions in Codex」段落；沒有可核實獨立時分，不補午夜時間。", "history": "最近14日日報查 Codex 與 Composer predictions／預測／建議訊息無命中；與10/9已收錄的執行中跟進指令加速是不同功能。", "summary": "Codex 回覆後可在輸入框建議下一則訊息，使用者接受、編輯並自行送出，不會自動延續工作。", "why": "減少重複輸入可能改善長任務操作，但預測不代表使用者意圖，也不能當作排程失敗時的自動恢復機制。", "entities": "OpenAI、Codex、Pro、訊息預測、使用者確認、用量", "uncertainty": "不是每次回覆都會出現建議；不能推論其他方案、網頁 Chat 或手機已支援，也不會自動接受或送出建議。", "sources": [{"label": "OpenAI：10/9 release notes", "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes"}, {"label": "OpenAI：Composer predictions 支援說明", "url": "https://help.openai.com/en/articles/20001601-composer-predictions-in-codex"}], "datetime": "2026-10-09", "url": "https://lucaskk.github.io/daily-news/wiki/daily/2026/10/2026-10-10/slides-2026-10-10.html?story=t2#t2"}, {"id": "t3", "rank": "T3", "title": "Google Health 預告十月十二日揭曉健康裝置，使用「Edge」字樣但尚未公布完整規格", "facts": ["預告日期為10/12，並非已經上市或開始出貨。", "「Fitbit Edge」為媒體依官方 Edge 字樣及先前線索使用的名稱；價格、電池與功能細節仍待正式公告。"], "category": "tech", "product": "Google／Fitbit Edge 發布預告", "published": "2026-10-10 06:28:43（Asia/Taipei）", "time_basis": "Google Health 10/9 官方社群預告；可精確定位的 Engadget 首次報導為 2026-10-09T22:28:43Z。", "history": "最近14日日報查 Fitbit.*Edge、Edge.*Fitbit 無命中；同窗表無此次發布日期預告。", "summary": "Google Health 公開「Get an Edge on your health. 10.12.26」與局部裝置影像，讓新健康穿戴裝置有了具體揭曉時程。", "why": "官方預告比流出圖片更能確認發布方向，但距離產品正式發表仍有一步，現在不適合把傳聞規格當成購買依據。", "entities": "Google Health、Fitbit、Edge、穿戴裝置、產品預告", "uncertainty": "不採未證實的歐洲售價、七天續航或健康感測器說法；不以 Charge 6 舊照片冒充新機。", "sources": [{"label": "Engadget：Google Health 官方預告與原始貼文嵌入", "url": "https://www.engadget.com/2282887/google-teases-its-new-fitbit-edge-wearable-ahead-of-an-october-12-reveal/"}, {"label": "The Verge：發布日期報導", "url": "https://www.theverge.com/tech/1008918/google-fitbit-edge-launch-next-week"}], "datetime": "2026-10-09T22:28:43Z", "url": "https://lucaskk.github.io/daily-news/wiki/daily/2026/10/2026-10-10/slides-2026-10-10.html?story=t3#t3"}, {"id": "1", "rank": "1", "title": "Navi Pillay 獲諾貝爾和平獎，委員會肯定其推動和平與國際法", "facts": ["委員會肯定其推動和平與國際法的工作。", "她曾任國際刑事法院法官及聯合國人權高專。"], "category": "world", "published": "2026-10-09 17:00:00（Asia/Taipei）", "time_basis": "挪威諾貝爾委員會公告 metadata 2026-10-09T11:00:00+02:00；不使用 AP 滾動頁揭曉前建立時間。", "history": "最近14日日報查 Navi Pillay／皮萊無此得獎事件。", "summary": "前聯合國人權高專 Navi Pillay 獲2026年和平獎，國際司法在政治壓力下再成焦點。", "why": "獎項提高國際法與受害者權利的能見度；象徵性肯定與法院實際執行能力仍是兩回事。", "entities": "Navi Pillay、諾貝爾和平獎、國際法、聯合國", "uncertainty": "以色列反對她領導之調查委員會的加薩結論；該結論與法院終局判決不能混為一談。", "sources": [{"label": "挪威諾貝爾委員會：2026和平獎公告", "url": "https://www.nobelpeaceprize.org/press/press-releases/nobel-peace-prize-for-2026"}, {"label": "AP：Pillay 得獎報導", "url": "https://apnews.com/article/f60744c07df969e50e9e69786fdb7de1"}], "datetime": "2026-10-09T09:00:00Z", "url": "https://lucaskk.github.io/daily-news/wiki/daily/2026/10/2026-10-10/slides-2026-10-10.html?story=1#1"}, {"id": "2", "rank": "2", "title": "續報｜美國將制裁擴大至國際刑事法院機構本身", "facts": ["國務卿 Rubio 宣布新措施。", "AP 報導限制涉及金融及科技服務等交易。"], "category": "world", "published": "2026-10-09 22:33:42（Asia/Taipei）", "time_basis": "AP 首次發布 2026-10-09T14:33:42Z，報導美國當日機構層級制裁。", "history": "9/26收錄機構制裁風險、9/29收錄德國聲援；今日新增美方正式宣布措施，不再只是警告。", "summary": "美國把對 ICC 的施壓從個人層級推向整個法院，交易與服務供應面臨新限制。", "why": "制度能否維持運作取決於資金、供應商與合作網絡；制裁可能讓司法程序的實際成本增加。", "entities": "美國、ICC、Marco Rubio、制裁、國際司法", "uncertainty": "美方指法院越權，支持者重視司法獨立；實際供應中斷與法律豁免須看執行，不預設法院已停止工作。", "sources": [{"label": "AP：美國擴大制裁 ICC", "url": "https://apnews.com/article/4ea3555403e3c695d8f81dc473515d9b"}], "datetime": "2026-10-09T14:33:42Z", "url": "https://lucaskk.github.io/daily-news/wiki/daily/2026/10/2026-10-10/slides-2026-10-10.html?story=2#2"}, {"id": "3", "rank": "3", "title": "川普稱與普丁達成柴油供應安排，俄方交付與制裁執行仍待確認", "facts": ["川普宣稱首批為30萬噸，並提出後續擴大量的計畫。", "這是美方政治聲明階段，尚非本站核實的交貨紀錄。"], "category": "world", "published": "2026-10-10 02:57:40（Asia/Taipei）", "time_basis": "AP 首次發布 2026-10-09T18:57:40Z，報導川普當日通話與交易聲明。", "history": "最近14日日報的G7釋儲是不同事件；未見本次美俄柴油安排。", "summary": "川普表示與普丁通話後，俄羅斯將立即提供30萬噸柴油，但聲明不是貨物已抵達的證據。", "why": "燃料價格壓力正影響外交與能源政策；若實施，市場仍須評估供應速度與制裁安排。", "entities": "Donald Trump、Vladimir Putin、柴油、能源安全、制裁", "uncertainty": "付款、航運、俄方落實與法律執行細節未完全確認；不把預定供應當成可用庫存。", "sources": [{"label": "AP：川普與普丁柴油安排", "url": "https://apnews.com/article/12baccc7aade559bf329079b0548c9da"}], "datetime": "2026-10-09T18:57:40Z", "url": "https://lucaskk.github.io/daily-news/wiki/daily/2026/10/2026-10-10/slides-2026-10-10.html?story=3#3"}, {"id": "4", "rank": "4", "title": "歐盟與中國達成初步貿易安排，混合動力車出口與市場准入成焦點", "facts": ["歐方稱中國混合動力車出口可能減半。", "中方確認進展，但沒有同步確認全部量化細節。"], "category": "world", "published": "2026-10-09 15:48:41（Asia/Taipei）", "time_basis": "AP 首次發布 2026-10-09T07:48:41Z；Reuters 同日報導初步協議內容。", "history": "最近14日日報未見本次初步安排；不把先前一般貿易摩擦當相同協議。", "summary": "雙方公布談判進展，歐方描述安排可能減少中國混合動力車出口，並改善歐企市場准入。", "why": "汽車與關鍵原料牽動供應鏈；但談判框架、正式文本與實際通關效果需要分開看。", "entities": "歐盟、中國、Maros Sefcovic、混合動力車、稀土、市場准入", "uncertainty": "「減半」保留為歐方描述，不寫成雙方已公布的共同數字；落實條件仍需正式文本。", "sources": [{"label": "AP：歐中初步貿易協議", "url": "https://apnews.com/article/54c9c71e85f92dc0003780fc53f0b250"}, {"label": "Reuters／MarketScreener：混合動力出口安排", "url": "https://www.marketscreener.com/news/china-eu-strike-deal-to-halve-chinese-hybrid-exports-ce785ddcd88dff21"}], "datetime": "2026-10-09T07:48:41Z", "url": "https://lucaskk.github.io/daily-news/wiki/daily/2026/10/2026-10-10/slides-2026-10-10.html?story=4#4"}, {"id": "5", "rank": "5", "title": "續報｜Isaias 升為三級颶風，美國墨西哥灣沿岸面臨重大風暴威脅", "facts": ["三級屬重大颶風。", "報導預測週五晚間登陸；本項不宣稱截點前已登陸。"], "category": "world", "published": "2026-10-09 21:33:19（Asia/Taipei）", "time_basis": "AP 首次發布 2026-10-09T13:33:19Z，更新為三級颶風。", "history": "10/9收錄二級與撤離準備；新增三級重大颶風強度與週五晚間預測登陸風險。", "summary": "Isaias 增強為三級，阿拉巴馬與佛羅里達沿岸須因應更高的風雨及風暴潮風險。", "why": "風力級別不是單一安全指標，沿岸淹水、降雨與撤離路線同樣決定災害後果。", "entities": "Isaias、三級颶風、墨西哥灣、風暴潮、撤離", "uncertainty": "路徑與強度仍會變動；請以當地官方警報為準，不以本日報代替即時防災指令。", "sources": [{"label": "AP：Isaias 升三級", "url": "https://apnews.com/article/b647d3e93f2b7bcd41ed1843d5a2a0e9"}, {"label": "Local10／AP：週五預測更新", "url": "https://www.local10.com/news/2026/10/09/the-latest-hurricane-isaias-strengthens-to-category-3-ahead-of-expected-friday-evening-landfall/"}], "datetime": "2026-10-09T13:33:19Z", "url": "https://lucaskk.github.io/daily-news/wiki/daily/2026/10/2026-10-10/slides-2026-10-10.html?story=5#5"}, {"id": "6", "rank": "6", "title": "續報｜俄羅斯新一輪攻擊造成烏克蘭至少三死，多地住宅受損", "facts": ["官員通報至少三死、八傷。", "數字屬當時初步通報，不加入前一日巴士罹難者。"], "category": "world", "published": "2026-10-09 17:24:20（Asia/Taipei）", "time_basis": "AP 首次發布 2026-10-09T09:24:20Z，彙整週五地方官員通報。", "history": "10/9日報收錄前一日巴士攻擊；今日為另一輪攻擊及不同地點傷亡，並非重刊巴士數字。", "summary": "烏方官員通報 Zaporizhzhia、Ivano-Frankivsk 與 Bucha 等地的新攻擊，至少三人死亡。", "why": "連續攻擊讓城市防空與民生修復同時承壓；需要按事件與地點分開記錄，避免重複累計。", "entities": "烏克蘭、俄羅斯、Zaporizhzhia、Bucha、平民保護", "uncertainty": "地方傷亡與目標性質尚無法逐項獨立核實，後續可能修正。", "sources": [{"label": "AP：週五烏克蘭攻擊與傷亡", "url": "https://apnews.com/article/2c6c8b081e8e316c83af17a39bce7fe5"}], "datetime": "2026-10-09T09:24:20Z", "url": "https://lucaskk.github.io/daily-news/wiki/daily/2026/10/2026-10-10/slides-2026-10-10.html?story=6#6"}, {"id": "7", "rank": "7", "title": "馬來西亞提出2027年預算，燃料壓力影響財政赤字規畫", "facts": ["Reuters 報導2026赤字目標由 GDP 的3.5%修正為3.6%。", "美元換算是報導時估值，主要預算單位為令吉。"], "category": "world", "published": "2026-10-09 20:00:00（Asia/Taipei）", "time_basis": "Bernama highlights metadata「09/10/2026 08:00 PM」；國會當日提出預算，屬窗口內新政策程序。", "history": "最近14日日報查馬來西亞／Malaysia與預算／budget，無此2027預算命中。", "summary": "政府提出總額4,598億令吉的2027預算，約1,125億美元，同時面對燃料支出壓力。", "why": "預算透露政府如何取捨民生支援與財政整頓，但提出方案並不等於國會已通過。", "entities": "馬來西亞、Anwar Ibrahim、2027預算、財政赤字、燃料", "uncertainty": "方案仍須立法程序；選舉時機為政治背景，不是已確定選舉日期。", "sources": [{"label": "Bernama：2027預算重點", "url": "https://bernama.com/en/general/news.php?id=2617655"}, {"label": "Reuters／MarketScreener：預算規模與赤字", "url": "https://www.marketscreener.com/news/malaysia-plans-112-5-billion-budget-for-2027-ahead-of-possible-election-ce785ddfde8ef022"}], "datetime": "2026-10-09T12:00:00Z", "url": "https://lucaskk.github.io/daily-news/wiki/daily/2026/10/2026-10-10/slides-2026-10-10.html?story=7#7"}, {"id": "8", "rank": "8", "title": "智利首都豪雨引發土石流與道路混亂，至少六人受傷", "facts": ["AP 報導受傷及道路、車輛受衝擊。", "災害發生於當地週四，本日採窗口內首次可靠報導，不聲稱全部在台灣10/9發生。"], "category": "world", "published": "2026-10-09 11:25:13（Asia/Taipei）", "time_basis": "AP 首次可靠報導 2026-10-09T03:25:13Z；描述當地週四豪雨後災情，以本次首報入窗，不將累積雨量當新增單日值。", "history": "最近14日日報查智利洪災／Chile flood 無本次事件。", "summary": "Santiago 豪雨造成土石流及車輛受困，至少六人受傷，都市排水與坡地安全受到考驗。", "why": "短時強降雨可以迅速打斷城市交通，災後除清理道路也須檢查坡地與排水設施。", "entities": "智利、Santiago、Las Condes、豪雨、土石流、都市韌性", "uncertainty": "初步受傷人數不代表最終災損；沒有據此判定單一災害的氣候歸因。", "sources": [{"label": "AP：Santiago 豪雨災情", "url": "https://apnews.com/article/7f44b0f7271741c686c5a918a6581997"}], "datetime": "2026-10-09T03:25:13Z", "url": "https://lucaskk.github.io/daily-news/wiki/daily/2026/10/2026-10-10/slides-2026-10-10.html?story=8#8"}, {"id": "9", "rank": "9", "title": "續報｜FBI 宣布逮捕與徵才網站外洩案相關的另一名 ShinyHunters 涉嫌共犯", "facts": ["局長 Kash Patel 說調查持續。", "對方為涉嫌共犯，仍須司法程序，不預先認定有罪。"], "category": "world", "published": "2026-10-09 23:36:50（Asia/Taipei）", "time_basis": "AP 首次發布 2026-10-09T15:36:50Z，FBI局長當日宣布逮捕進展。", "history": "10/4收錄匿名來源指 Jordan 拘留涉案人物；今日新增 FBI 官方宣布另一涉嫌共犯被捕，不把兩人直接認定為同一人。", "summary": "FBI 宣布與徵才入口遭入侵事件有關的新逮捕，案件涉及第三方管理平台。", "why": "關鍵機構使用的外部系統同樣需要更新與存取管理；逮捕是調查進展，不代表資料風險已消失。", "entities": "FBI、ShinyHunters、第三方供應商、個資、刑事調查", "uncertainty": "被捕者角色、完整外洩範圍與後續起訴仍待公開文件，不照單全收駭客所稱規模。", "sources": [{"label": "AP：FBI 宣布新逮捕", "url": "https://apnews.com/article/b27bad3059c9ab93d1d7006d3af13c0a"}], "datetime": "2026-10-09T15:36:50Z", "url": "https://lucaskk.github.io/daily-news/wiki/daily/2026/10/2026-10-10/slides-2026-10-10.html?story=9#9"}, {"id": "10", "rank": "10", "title": "NASA 正式徵求商業太空站提案，預定十二月收件、明春授約", "facts": ["提案截止12/8，預計2027年春季授約。", "規畫多家固定價格、IDIQ合約，早期開發選兩家以上，再競爭後續設計、認證與服務。"], "category": "world", "published": "2026-10-10 02:11:44（Asia/Taipei）", "time_basis": "NASA 首次發布 metadata 2026-10-09T18:11:44Z；當日發布最終 Request for Proposals。", "history": "最近14日日報未見這次最終徵案；與Crew-12返航、早前徵詢或草案不同。", "summary": "NASA 對國際太空站退役後的低軌服務提出正式採購程序，要求企業提供目的地與交通整合方案。", "why": "從政策願景進入徵案，企業必須交出技術與商業可行性，政府則需要降低過渡期間服務中斷風險。", "entities": "NASA、低地球軌道、商業太空站、RFP、IDIQ、ISS", "uncertainty": "尚未決定得標者或證明太空站已可營運；授約時程是預期，不是保證。", "sources": [{"label": "NASA：商業太空站最終徵案公告", "url": "https://www.nasa.gov/news-release/nasa-seeks-us-industry-plans-for-commercial-space-stations/"}], "datetime": "2026-10-09T18:11:44Z", "url": "https://lucaskk.github.io/daily-news/wiki/daily/2026/10/2026-10-10/slides-2026-10-10.html?story=10#10"}], "followups": [], "cutoff": "2026-10-10 08:01:42（Asia/Taipei）", "world_window": "2026-10-09 08:01:42 至 2026-10-10 08:01:42（Asia/Taipei）", "tech_window": "2026-09-26 08:01:42 至 2026-10-10 08:01:42（Asia/Taipei）", "tech_window_days": 14, "url": "https://lucaskk.github.io/daily-news/wiki/daily/2026/10/2026-10-10/slides-2026-10-10.html"}</script>
+  <script>(() => {
+  'use strict';
+  const report = JSON.parse(document.getElementById('report-data').textContent);
+  const stories = report.stories;
+  const byId = new Map(stories.map(story => [story.id, story]));
+  const articles = Array.from(document.querySelectorAll('article.story'));
+  const sections = [...articles, document.getElementById('notes')];
+  const askDialog = document.getElementById('ask-dialog');
+  const indexDialog = document.getElementById('index-dialog');
+  const question = document.getElementById('question');
+  const contextText = document.getElementById('context-text');
+  const chatLink = document.getElementById('chatgpt-link');
+  const note = document.getElementById('handoff-note');
+  const status = document.getElementById('copy-status');
+  const themeButton = document.getElementById('theme-toggle');
+  const prev = document.getElementById('prev');
+  const next = document.getElementById('next');
+  let current = 0;
+  let selected = null;
+  let opener = null;
+  let copiedContext = '';
+  let currentContext = '';
+  const MAX_LINK_LENGTH = 12000;
+
+  function setTheme(theme) {
+    document.documentElement.dataset.theme = theme;
+    const label = theme === 'dark' ? '切換淺色' : '切換深色';
+    themeButton.title = label;
+    themeButton.setAttribute('aria-label', label);
+  }
+  try { setTheme(localStorage.getItem('daily-reader-theme') === 'light' ? 'light' : 'dark'); } catch (_) { setTheme('dark'); }
+  themeButton.addEventListener('click', () => {
+    const theme = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+    setTheme(theme);
+    try { localStorage.setItem('daily-reader-theme', theme); } catch (_) { /* Private storage can be unavailable. */ }
+  });
+
+  function updatePosition() {
+    const threshold = document.querySelector('.masthead').getBoundingClientRect().height + 36;
+    let position = 0;
+    sections.forEach((section, i) => { if (section.getBoundingClientRect().top <= threshold) position = i; });
+    current = position;
+    const story = stories[current];
+    const label = story
+      ? `${story.category === 'tech' ? '科技' : '全球'} ${story.rank.replace('T', '')} / ${stories.filter(s => s.category === story.category).length}`
+      : '研究備註';
+    const counter = document.getElementById('position');
+    if (counter.textContent !== label) counter.textContent = label;
+    prev.disabled = current === 0;
+    next.disabled = current === sections.length - 1;
+    document.querySelectorAll('[data-section]').forEach(link => {
+      link.setAttribute('aria-current', String(link.dataset.section === (story ? story.category : 'notes')));
+    });
+  }
+
+  function jump(id, push = true) {
+    const target = sections.find(section => section.id === id);
+    if (!target) return;
+    if (push) {
+      const url = new URL(location.href);
+      if (byId.has(id)) url.searchParams.set('story', id);
+      else url.searchParams.delete('story');
+      url.hash = id;
+      if (url.href !== location.href) history.pushState(null, '', url);
+    }
+    target.scrollIntoView({ behavior: 'instant', block: 'start' });
+    const title = target.querySelector('h2');
+    if (title) { title.tabIndex = -1; title.focus({ preventScroll: true }); }
+    updatePosition();
+  }
+  document.querySelectorAll('a[href^="#"]').forEach(link => {
+    if (link.classList.contains('skip-link')) return;
+    link.addEventListener('click', event => {
+      const id = link.hash.slice(1);
+      if (!sections.some(section => section.id === id)) return;
+      event.preventDefault();
+      if (indexDialog.open) { opener = null; indexDialog.close(); }
+      jump(id);
+    });
+  });
+  prev.addEventListener('click', () => jump(sections[Math.max(0, current - 1)].id));
+  next.addEventListener('click', () => jump(sections[Math.min(sections.length - 1, current + 1)].id));
+  let scrollPending = false;
+  document.getElementById('content').addEventListener('scroll', () => {
+    if (!scrollPending) requestAnimationFrame(() => { updatePosition(); scrollPending = false; });
+    scrollPending = true;
+  }, { passive: true });
+  window.addEventListener('resize', updatePosition);
+  function locationTarget() {
+    const hashId = location.hash.slice(1);
+    if (sections.some(section => section.id === hashId)) return hashId;
+    const queryId = new URLSearchParams(location.search).get('story');
+    return sections.some(section => section.id === queryId) ? queryId : '';
+  }
+  window.addEventListener('hashchange', () => {
+    const id = locationTarget();
+    if (id) jump(id, false);
+  });
+  window.addEventListener('keydown', event => {
+    if (askDialog.open || indexDialog.open || event.altKey || event.ctrlKey || event.metaKey || event.shiftKey ||
+        event.target.closest('input, textarea, select, button, summary, [contenteditable]')) return;
+    if (event.key === 'ArrowLeft') { event.preventDefault(); prev.click(); }
+    if (event.key === 'ArrowRight') { event.preventDefault(); next.click(); }
+  });
+
+  function openDialog(dialog, source) {
+    opener = source;
+    dialog.showModal();
+    document.body.classList.add('modal-open');
+  }
+  for (const dialog of [askDialog, indexDialog]) {
+    dialog.querySelector('[data-close]').addEventListener('click', () => dialog.close());
+    dialog.addEventListener('close', () => {
+      document.body.classList.remove('modal-open');
+      if (opener && !indexDialog.open && !askDialog.open) opener.focus({ preventScroll: true });
+    });
+    dialog.addEventListener('click', event => {
+      if (event.target !== dialog) return;
+      const rect = dialog.getBoundingClientRect();
+      if (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom) dialog.close();
+    });
+  }
+  document.getElementById('open-index').addEventListener('click', event => openDialog(indexDialog, event.currentTarget));
+
+  function makeContext(story, userQuestion) {
+    const lines = [
+      '請使用繁體中文，根據下列新聞筆記協助我討論後續問題。區分已知事實、來源主張與推測；若需要最新資訊，請重新查證並附來源。',
+      '', `新聞標題：${story.title}`, `發佈時間：${story.published}`, `研究截點：${report.cutoff}`,
+      `本文連結：${story.url}`, '', `摘要：${story.summary || story.why}`, '', '關鍵事實：',
+      ...story.facts.map(fact => `- ${fact}`), '', `背景與影響：${story.why}`,
+      `事件與發佈依據：${story.time_basis}`, `不確定性：${story.uncertainty}`, `相關實體與概念：${story.entities}`,
+    ];
+    if (story.product) lines.push(`公司與產品：${story.product}`);
+    if (story.title.startsWith('續報｜')) lines.push(`前次收錄與新進展：${story.history}`);
+    lines.push('', '原始來源：', ...story.sources.map(source => `${source.label}\n${source.url}`), '',
+      `我的問題：${userQuestion.trim() || '這篇新聞還有哪些值得追問的重點？請列出後續問題，並指出回答它們需要哪些資料。'}`);
+    return lines.join('\n');
+  }
+
+  function updateHandoff() {
+    if (!selected) return;
+    currentContext = makeContext(selected, question.value);
+    contextText.value = currentContext;
+    const url = new URL('https://chatgpt.com/');
+    url.searchParams.set('prompt', currentContext);
+    const oversized = url.href.length > MAX_LINK_LENGTH;
+    chatLink.href = oversized ? 'https://chatgpt.com/#native' : url.href;
+    const ready = !oversized || copiedContext === currentContext;
+    chatLink.setAttribute('aria-disabled', String(!ready));
+    note.textContent = oversized
+      ? (ready ? '完整內容已複製。開啟 ChatGPT 後可貼上提問。' : '文章與問題較長，請先複製完整內容，再開啟 ChatGPT 貼上。')
+      : 'Safari 將依裝置設定開啟 ChatGPT App 或網頁。若未帶入文字，可使用右側複製按鈕。';
+  }
+  document.querySelectorAll('[data-ask]').forEach(button => {
+    button.addEventListener('click', () => {
+      selected = byId.get(button.dataset.ask);
+      document.getElementById('ask-story-title').textContent = selected.title;
+      question.value = '';
+      status.textContent = '';
+      copiedContext = '';
+      askDialog.querySelector('.context-details').open = false;
+      updateHandoff();
+      openDialog(askDialog, button);
+    });
+  });
+  document.querySelectorAll('[data-share]').forEach(button => {
+    button.addEventListener('click', async () => {
+      const story = byId.get(button.dataset.share);
+      if (!story) return;
+      const shareData = {
+        title: story.title,
+        text: `每日新聞｜${story.title}`,
+        url: story.url,
+      };
+      if (navigator.share) {
+        try {
+          await navigator.share(shareData);
+          return;
+        } catch (error) {
+          if (error && error.name === 'AbortError') return;
+        }
+      }
+      const label = button.querySelector('span');
+      try {
+        await navigator.clipboard.writeText(story.url);
+        label.textContent = '已複製';
+        button.setAttribute('aria-label', '新聞連結已複製');
+      } catch (_) {
+        const helper = document.createElement('textarea');
+        helper.value = story.url;
+        helper.setAttribute('readonly', '');
+        helper.style.position = 'fixed';
+        helper.style.opacity = '0';
+        document.body.appendChild(helper);
+        helper.select();
+        let copied = false;
+        try { copied = document.execCommand('copy'); } catch (_) { /* Keep the normal label when copying is blocked. */ }
+        helper.remove();
+        if (!copied) return;
+        label.textContent = '已複製';
+        button.setAttribute('aria-label', '新聞連結已複製');
+      }
+      setTimeout(() => {
+        label.textContent = '分享';
+        button.setAttribute('aria-label', '分享這則新聞');
+      }, 1800);
+    });
+  });
+  question.addEventListener('input', () => { status.textContent = ''; updateHandoff(); });
+  chatLink.addEventListener('click', event => {
+    if (chatLink.getAttribute('aria-disabled') === 'true') {
+      event.preventDefault();
+      status.textContent = '請先複製完整內容。';
+      document.getElementById('copy-context').focus();
+    }
+    // Keep a normal, user-initiated HTTPS navigation so Safari can hand off to iOS.
+  });
+  document.getElementById('copy-context').addEventListener('click', async () => {
+    const pending = currentContext;
+    let copied = false;
+    try { await navigator.clipboard.writeText(pending); copied = true; } catch (_) {
+      askDialog.querySelector('.context-details').open = true;
+      contextText.focus();
+      contextText.select();
+      contextText.setSelectionRange(0, contextText.value.length);
+      try { copied = document.execCommand('copy'); } catch (_) { /* Keep the text selected for manual copying. */ }
+    }
+    if (copied) {
+      copiedContext = pending;
+      status.textContent = '已複製完整文章與問題。';
+      updateHandoff();
+    } else {
+      status.textContent = '無法自動複製。完整文字已選取，可長按複製。';
+    }
+  });
+  contextText.addEventListener('copy', () => {
+    if (contextText.selectionStart === 0 && contextText.selectionEnd === contextText.value.length) {
+      copiedContext = contextText.value;
+      setTimeout(updateHandoff, 0);
+    }
+  });
+  document.querySelectorAll('.story-media img').forEach(img => {
+    const failure = () => {
+      const figure = img.closest('figure');
+      figure.classList.add('image-failed');
+      figure.querySelector('figcaption').prepend('圖片暫時無法載入。');
+    };
+    img.addEventListener('error', failure, { once: true });
+    if (img.complete && !img.naturalWidth) failure();
+  });
+  window.addEventListener('load', () => {
+    const id = locationTarget();
+    if (id) jump(id, false);
+    updatePosition();
+  });
+  updatePosition();
+})();
+</script>
+</body>
+</html>
