@@ -2,7 +2,7 @@
 title: "Overview"
 type: overview
 created: 2026-05-24
-updated: 2026-10-10
+updated: 2026-10-11
 status: seed
 tags: [overview]
 sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
@@ -19,6 +19,11 @@ sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
 - 抽出持續出現的人物、組織、事件、政策、技術與市場概念。
 - 維護跨來源的矛盾、時間線、趨勢與待查問題。
 - 將重要查詢結果回寫成可累積的 wiki 頁面。
+
+## 2026-10-11 Daily News Synthesis
+
+- [本日日報](daily/2026/10/2026-10-11/daily-news-2026-10-11.md)：決策模型的分類機率與生成模型用途不同；PS5預購與動態充電路測規劃不代表已上市或完成道路驗證。
+- 災害追蹤區分預測、實際登陸與新政府應變；戰事歸責、地震規模與槍擊死亡總數保留來源歧異，不以更新時間重收舊事件。
 
 ## 2026-10-10 Daily News Synthesis
 

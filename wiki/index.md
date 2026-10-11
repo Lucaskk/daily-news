@@ -2,7 +2,7 @@
 title: "Knowledge Base Index"
 type: overview
 created: 2026-05-24
-updated: 2026-10-10
+updated: 2026-10-11
 status: seed
 tags: [index]
 sources: []
@@ -21,6 +21,9 @@ sources: []
 - [[2026-04-04-llm-wiki]] - Karpathy 提出的 LLM-maintained personal wiki 模式，是本知識庫的設計來源。
 
 ## Daily News
+
+- [2026-10-11 Daily News](daily/2026/10/2026-10-11/daily-news-2026-10-11.md) - 3則科技產品：Microsoft決策模型、Forza PS5預購與Honda動態充電技術；全球正好10則。
+- [2026-10-11 Slides](daily/2026/10/2026-10-11/slides-2026-10-11.html) - 原頁展開與逐篇提問；Pages與LINE於08:13驗證完成。
 
 - [2026-10-10 Daily News](daily/2026/10/2026-10-10/daily-news-2026-10-10.md) - 3則科技：OSS Scanner、Codex訊息預測與Fitbit預告；全球10則涵蓋和平獎、ICC制裁、能源貿易與災害。
 - [2026-10-10 Slides](daily/2026/10/2026-10-10/slides-2026-10-10.html) - 原頁展開與逐篇提問；Pages與LINE於08:11驗證完成。
