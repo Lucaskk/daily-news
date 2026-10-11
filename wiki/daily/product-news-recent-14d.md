@@ -1,7 +1,7 @@
 ---
 title: "科技產品新聞最近 14 天比對表"
 type: product-news-ledger-recent
-updated: 2026-10-09
+updated: 2026-10-10
 status: generated
 tags: [daily-news, tech-products, deduplication, recent]
 ---
@@ -12,10 +12,13 @@ tags: [daily-news, tech-products, deduplication, recent]
 
 - 掃描日報：14 份。
 - 最近 14 天項目：70 則。
-- 日報日期範圍：2026-09-26 至 2026-10-09。
+- 日報日期範圍：2026-09-27 至 2026-10-10。
 
 | 公司 | 產品 | 更新內容 | 發佈時間 | 收錄日期 | 狀態 | 來源網址 | 比對鍵 |
 |---|---|---|---|---|---|---|---|
+| OpenAI | Codex 訊息預測測試 | OpenAI 開放 Codex 訊息預測測試，先向成年個人 Pro 用戶提供下一則指令建議 | 2026-10-09（官方發布日期） | 2026-10-10 | 首次收錄 | https://help.openai.com/en/articles/6825453-chatgpt-release-notes<br>https://help.openai.com/en/articles/20001601-composer-predictions-in-codex | 6d0641a75e02 |
+| Google | Health 預告十月十二日揭曉健康裝置 | Google Health 預告十月十二日揭曉健康裝置，使用「Edge」字樣但尚未公布完整規格 | 2026-10-10 06:28:43（Asia/Taipei） | 2026-10-10 | 首次收錄 | https://www.engadget.com/2282887/google-teases-its-new-fitbit-edge-wearable-ahead-of-an-october-12-reveal/<br>https://www.theverge.com/tech/1008918/google-fitbit-edge-launch-next-week | ab2462bcc11d |
+| Anthropic | 免費 OSS Scanner | Anthropic 推出免費 OSS Scanner，讓開源專案主動申請定期漏洞掃描 | 2026-10-08 17:04:16（Asia/Taipei） | 2026-10-10 | 首次收錄 | https://www.anthropic.com/news/anthropic-cyber-mission<br>https://www.anthropic.com/research/launching-opt-in-vuln-finding-service-for-open-source | 220f946657ac |
 | Sigma | 50–120mm F2.8 APS-C 望遠變焦鏡 | Sigma 發布 50–120mm F2.8 APS-C 望遠變焦鏡，預定十月下旬上市 | 2026-10-08（官方發布日期） | 2026-10-09 | 首次收錄 | https://www.sigma-global.com/jp/news/2026/10/08/012334/<br>https://www.cool3c.com/article/252801 | 12c3a99c3cfa |
 | Google | 公布 Gemini 通用工作代理 | Google 公布 Gemini 通用工作代理，整合企業工具與多種工作任務 | 2026-10-08（官方發布日期） | 2026-10-09 | 首次收錄 | https://blog.google/innovation-and-ai/infrastructure-and-cloud/google-cloud/gemini-at-work/<br>https://cloud.google.com/blog/products/ai-machine-learning/welcome-to-gemini-at-work-2026 | 8eefbbaaba30 |
 | Google | Drive 與 Docs 開始原生預覽、編輯及協作 Markdown 檔案 | Google Drive 與 Docs 開始原生預覽、編輯及協作 Markdown 檔案 | 2026-10-05（官方發布日期） | 2026-10-09 | 首次收錄 | https://workspaceupdates.googleblog.com/2026/10/preview-edit-and-collaborate-on-Markdown-files-natively-across-Drive-and-Docs.html<br>https://www.inside.com.tw/article/42582-google-drive-docs-native-markdown-files-preview-edit-collaborate | ef5e3fcf354a |
@@ -83,6 +86,3 @@ tags: [daily-news, tech-products, deduplication, recent]
 | Ando | Ando team messaging | Ando 公開推出 agent-native 團隊通訊平台，讓 AI 代理以成員身分參與頻道與通話 | 2026-09-24 21:00:00（Asia/Taipei；公司新聞稿 09:00 EDT） | 2026-09-28 | 首次收錄 | https://www.ando.so/blog/introducing-ando<br>https://www.globenewswire.com/news-release/2026/09/24/3368344/0/en/Ando-Launches-Agent-Native-Messaging-Platform-Announces-20-Million-Seed.html<br>https://techcrunch.com/2026/09/24/ando-eyes-slack-as-it-builds-team-messaging-platform-for-humans-and-agents-to-work-together/ | 22f2a34824fa |
 | WiCi | WiCi One | WiCi 發表 WiCi One，以 Wi-Fi 7 把獨立 GPU 共享給個人裝置與本地 AI | 2026-09-27 04:45（Asia/Taipei；Engadget 頁面標示 2026-09-26 15:45 EST，依字面換算） | 2026-09-27 | 首次收錄 | https://wici.ai/wici-one<br>https://www.engadget.com/2269877/this-external-gpu-uses-wi-fi-to-transform-any-device-into-a-gaming-rig/ | f24f872f104b |
 | Logitech G | PRO X3 SUPERSTRIKE、PRO X2 RAPID、PRO X3 LIGHTSPEED、PRO X CONTROL | Logitech G 推出新一代 PRO 電競系列，加入可調觸發滑鼠、磁軸鍵盤與 70 小時耳機 | 2026-09-23（Logitech 官方發布日期；未提供時分） | 2026-09-27 | 首次收錄 | https://www.logitech.com/blog/2026/09/23/logitech-g-marks-10-years-of-pro-with-a-new-generation-of-competitive-gear/<br>https://www.cool3c.com/article/252187 | 625c92314954 |
-| Microsoft | Copilot Home、Copilot Code、Copilot Autopilot | Microsoft 正式介紹 Copilot Home、Code 與 Autopilot，統一工作入口並加入持續自動化 | 2026-09-25 20:00（Asia/Taipei；Engadget metadata；Microsoft 官方同日發布） | 2026-09-26 | 續報 | https://www.microsoft.com/en-us/copilot/blog/content-type/news/<br>https://partner.microsoft.com/en-us/blog/article/ai-at-work-marketing-moment<br>https://www.engadget.com/2268096/microsofts-copilot-app-adds-office-natural-coding-and-automation/ | a394c7b00a98 |
-| Google | Gemini 3.8 Live with Live Avatar、Gemini Enterprise | Google 在 Gemini Enterprise 上線 Gemini 3.8 Live with Live Avatar | 2026-09-24（Google 官方發布日期；未提供時分） | 2026-09-26 | 首次收錄 | https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-live-with-live-avatar/<br>https://www.engadget.com/2268587/google-video-avatars-gemini-3-8-live-agent/ | d2f750a9530c |
-| Cricut | StickerPix Print、StickerPix Print + Cut | Cricut 發布 StickerPix Print 與 StickerPix Print + Cut，整合昇華列印、自動護膜與裁切 | 2026-09-24（Cricut 官方發布日期；未提供時分） | 2026-09-26 | 首次收錄 | https://cricut.com/blog/introducing-cricut-stickerpix/<br>https://www.engadget.com/2269278/cricuts-new-diy-machines-let-you-print-and-cut-your-own-stickers/ | 658f75d59635 |
