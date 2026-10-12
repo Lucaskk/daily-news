@@ -1,7 +1,7 @@
 ---
 title: "科技產品新聞最近 14 天比對表"
 type: product-news-ledger-recent
-updated: 2026-10-10
+updated: 2026-10-11
 status: generated
 tags: [daily-news, tech-products, deduplication, recent]
 ---
@@ -11,11 +11,14 @@ tags: [daily-news, tech-products, deduplication, recent]
 本檔只整理產製日前 14 天的日報，可完整讀取做去重確認；不搜尋更早日報、完整歷史表或來源筆記。實際發布窗仍以當日研究截點與來源筆記判定。
 
 - 掃描日報：14 份。
-- 最近 14 天項目：70 則。
-- 日報日期範圍：2026-09-27 至 2026-10-10。
+- 最近 14 天項目：71 則。
+- 日報日期範圍：2026-09-28 至 2026-10-11。
 
 | 公司 | 產品 | 更新內容 | 發佈時間 | 收錄日期 | 狀態 | 來源網址 | 比對鍵 |
 |---|---|---|---|---|---|---|---|
+| Microsoft | Decision-1 | Microsoft-Decision-1 開放公開預覽，讓應用以專用模型處理分類與路由 | 2026-10-09（官方發布日期） | 2026-10-11 | 首次收錄 | https://commandline.microsoft.com/microsoft-decision-1-model-foundry/<br>https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/introducing-microsoft-decision-1-in-microsoft-foundry-for-decision-and-classific/4562742 | 200036543b3d |
+| Honda 公布行駛中無線充電道路技術，預計二〇二七會計年度進入公路實證 | Honda 公布行駛中無線充電道路技術 | Honda 公布行駛中無線充電道路技術，預計二〇二七會計年度進入公路實證 | 2026-10-07 01:55:51（Asia/Taipei） | 2026-10-11 | 首次收錄 | https://hondanews.com/en-US/electrification/releases/release-9ded4afa56370babdac7c3fc7900e69d-honda-develops-underlaying-technology-for-in-motion-wireless-charging-of-evs-including-large-commercial-vehicles<br>https://techorange.com/2026/10/08/honda-electrification-2027-releases-e20/ | 3399b948a71f |
+| Forza Horizon 6 | PS5 預購 | Forza Horizon 6 開放 PS5 預購，確認明年一月上市與首個擴充內容時程 | 2026-10-08（官方發布日期） | 2026-10-11 | 首次收錄 | https://forza.net/news/forza-horizon-6-pre-order-ps5 | 5dab78312069 |
 | OpenAI | Codex 訊息預測測試 | OpenAI 開放 Codex 訊息預測測試，先向成年個人 Pro 用戶提供下一則指令建議 | 2026-10-09（官方發布日期） | 2026-10-10 | 首次收錄 | https://help.openai.com/en/articles/6825453-chatgpt-release-notes<br>https://help.openai.com/en/articles/20001601-composer-predictions-in-codex | 6d0641a75e02 |
 | Google | Health 預告十月十二日揭曉健康裝置 | Google Health 預告十月十二日揭曉健康裝置，使用「Edge」字樣但尚未公布完整規格 | 2026-10-10 06:28:43（Asia/Taipei） | 2026-10-10 | 首次收錄 | https://www.engadget.com/2282887/google-teases-its-new-fitbit-edge-wearable-ahead-of-an-october-12-reveal/<br>https://www.theverge.com/tech/1008918/google-fitbit-edge-launch-next-week | ab2462bcc11d |
 | Anthropic | 免費 OSS Scanner | Anthropic 推出免費 OSS Scanner，讓開源專案主動申請定期漏洞掃描 | 2026-10-08 17:04:16（Asia/Taipei） | 2026-10-10 | 首次收錄 | https://www.anthropic.com/news/anthropic-cyber-mission<br>https://www.anthropic.com/research/launching-opt-in-vuln-finding-service-for-open-source | 220f946657ac |
@@ -84,5 +87,3 @@ tags: [daily-news, tech-products, deduplication, recent]
 | Meta | Muse Charm | Meta 揭露 Muse Charm，把個人 AI 代理與即時語音模型放進口袋型裝置 | 2026-09-24（Meta 官方發布日期；未提供時分） | 2026-09-28 | 首次收錄 | https://about.fb.com/news/2026/09/the-biggest-news-from-connect-2026/<br>https://arstechnica.com/ai/2026/09/meta-puts-its-ai-assistant-on-a-keychain/ | 2b7fbd600ce0 |
 | F-Droid | F-Droid 2.0 | F-Droid 發布 2.0，十年來最大改版重寫介面、搜尋與安裝更新流程 | 2026-09-24（F-Droid 官方發布日期；未提供時分） | 2026-09-28 | 首次收錄 | https://f-droid.org/en/2026/09/24/f-droid-2.0-a-new-chapter-for-android-freedom.html<br>https://arstechnica.com/gadgets/2026/09/f-droid-gets-its-biggest-update-in-a-decade-with-new-ui-and-smoother-app-installs/ | 8f05540f204f |
 | Ando | Ando team messaging | Ando 公開推出 agent-native 團隊通訊平台，讓 AI 代理以成員身分參與頻道與通話 | 2026-09-24 21:00:00（Asia/Taipei；公司新聞稿 09:00 EDT） | 2026-09-28 | 首次收錄 | https://www.ando.so/blog/introducing-ando<br>https://www.globenewswire.com/news-release/2026/09/24/3368344/0/en/Ando-Launches-Agent-Native-Messaging-Platform-Announces-20-Million-Seed.html<br>https://techcrunch.com/2026/09/24/ando-eyes-slack-as-it-builds-team-messaging-platform-for-humans-and-agents-to-work-together/ | 22f2a34824fa |
-| WiCi | WiCi One | WiCi 發表 WiCi One，以 Wi-Fi 7 把獨立 GPU 共享給個人裝置與本地 AI | 2026-09-27 04:45（Asia/Taipei；Engadget 頁面標示 2026-09-26 15:45 EST，依字面換算） | 2026-09-27 | 首次收錄 | https://wici.ai/wici-one<br>https://www.engadget.com/2269877/this-external-gpu-uses-wi-fi-to-transform-any-device-into-a-gaming-rig/ | f24f872f104b |
-| Logitech G | PRO X3 SUPERSTRIKE、PRO X2 RAPID、PRO X3 LIGHTSPEED、PRO X CONTROL | Logitech G 推出新一代 PRO 電競系列，加入可調觸發滑鼠、磁軸鍵盤與 70 小時耳機 | 2026-09-23（Logitech 官方發布日期；未提供時分） | 2026-09-27 | 首次收錄 | https://www.logitech.com/blog/2026/09/23/logitech-g-marks-10-years-of-pro-with-a-new-generation-of-competitive-gear/<br>https://www.cool3c.com/article/252187 | 625c92314954 |

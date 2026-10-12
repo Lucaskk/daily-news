@@ -1,0 +1,34 @@
+{
+  "images": {
+    "t1": {
+      "src": "assets/vw-id-tiguan.jpg",
+      "original_url": "https://uploads.vw-mms.de/system/production/images/vwn/088/782/images/7cfb6cfc97c3f3a34f558271f47ba852342170e9/DB2026AU00899_web_1600.jpg?1791529001",
+      "source_url": "https://www.volkswagen-newsroom.com/en/press-releases/a-volkswagen-bestseller-goes-electric-world-premiere-of-the-new-id-tiguan-20728",
+      "alt": "Volkswagen官方ID. Tiguan新車圖片",
+      "caption": "ID. Tiguan官方產品圖，不是舊ID.4。",
+      "credit": "Volkswagen Newsroom",
+      "rights": "原廠公開新聞素材，版權歸Volkswagen；不宣稱自由授權。",
+      "fit": "contain"
+    },
+    "t2": {
+      "src": "assets/bmw-ix4.jpg",
+      "original_url": "https://mediapool.bmwgroup.com/cache/P9/202610/P90659612/P90659612-ix4-2250px.jpg",
+      "source_url": "https://www.press.bmwgroup.com/usa/article/detail/T0461507EN_US/the-bmw-ix4?showMedia=photo",
+      "alt": "BMW iX4官方新車影像",
+      "caption": "iX4官方產品影像，非獨立道路測試。",
+      "credit": "BMW Group PressClub",
+      "rights": "原廠公開新聞素材，版權歸BMW Group；不宣稱自由授權。",
+      "fit": "contain"
+    },
+    "t4": {
+      "src": "assets/gta-vi-music.jpg",
+      "original_url": "https://www.rockstargames.com/VI/_next/static/media/hero-background-ultrawide.14kyfs_8tksd8.jpg?akim=1&imdensity=1&imwidth=1600",
+      "source_url": "https://www.rockstargames.com/VI/music",
+      "alt": "GTA VI官方音樂頁的Vice City遊戲影像",
+      "caption": "官方音樂頁遊戲影像，非實際城市照片或電台操作截圖。",
+      "credit": "Rockstar Games",
+      "rights": "公開產品新聞素材，權利歸Rockstar Games；附原始來源，不宣稱自由授權。",
+      "fit": "contain"
+    }
+  }
+}
