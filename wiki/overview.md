@@ -2,7 +2,7 @@
 title: "Overview"
 type: overview
 created: 2026-05-24
-updated: 2026-10-11
+updated: 2026-10-12
 status: seed
 tags: [overview]
 sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
@@ -19,6 +19,12 @@ sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
 - 抽出持續出現的人物、組織、事件、政策、技術與市場概念。
 - 維護跨來源的矛盾、時間線、趨勢與待查問題。
 - 將重要查詢結果回寫成可累積的 wiki 頁面。
+
+## 2026-10-12 Daily News Synthesis
+
+- [本日日報](daily/2026/10/2026-10-12/daily-news-2026-10-12.md)：電動SUV首發與2027年供貨分開記錄；Let's Encrypt縮短憑證效期凸顯自動續期需求，GTA VI電台試聽不等於遊戲已上市。
+- 停火聲明不等於已落實；新傷亡確認、警戒範圍及公開政策表態須以各自時間依據收錄，不把舊事件重刊當成今日事件。
+- 時間矛盾、逐站來源與圖片權利限制見 [[daily/2026/10/2026-10-12/source-notes-2026-10-12]]。
 
 ## 2026-10-11 Daily News Synthesis
 

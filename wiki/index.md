@@ -2,7 +2,7 @@
 title: "Knowledge Base Index"
 type: overview
 created: 2026-05-24
-updated: 2026-10-11
+updated: 2026-10-12
 status: seed
 tags: [index]
 sources: []
@@ -21,6 +21,9 @@ sources: []
 - [[2026-04-04-llm-wiki]] - Karpathy 提出的 LLM-maintained personal wiki 模式，是本知識庫的設計來源。
 
 ## Daily News
+
+- [2026-10-12 Daily News](daily/2026/10/2026-10-12/daily-news-2026-10-12.md) - 4則科技產品：ID. Tiguan、BMW iX4、短效期憑證與GTA VI電台預覽；全球正好10則。
+- [2026-10-12 Slides](daily/2026/10/2026-10-12/slides-2026-10-12.html) - 原頁展開與逐篇提問；Pages與LINE於08:11驗證完成。
 
 - [2026-10-11 Daily News](daily/2026/10/2026-10-11/daily-news-2026-10-11.md) - 3則科技產品：Microsoft決策模型、Forza PS5預購與Honda動態充電技術；全球正好10則。
 - [2026-10-11 Slides](daily/2026/10/2026-10-11/slides-2026-10-11.html) - 原頁展開與逐篇提問；Pages與LINE於08:13驗證完成。
