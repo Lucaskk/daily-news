@@ -2,7 +2,7 @@
 title: "Overview"
 type: overview
 created: 2026-05-24
-updated: 2026-10-12
+updated: 2026-10-13
 status: seed
 tags: [overview]
 sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
@@ -19,6 +19,12 @@ sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
 - 抽出持續出現的人物、組織、事件、政策、技術與市場概念。
 - 維護跨來源的矛盾、時間線、趨勢與待查問題。
 - 將重要查詢結果回寫成可累積的 wiki 頁面。
+
+## 2026-10-13 Daily News Synthesis
+
+- [本日日報](daily/2026/10/2026-10-13/daily-news-2026-10-13.md)：代理模型的記憶與持續執行、端側會議助理及自研推理系統，代表不同層次的AI整合；API、訂戶入口、未來部署不能混稱全面可用。
+- 手機遊戲與空間收音擴展創作及娛樂，但預購、未來上市與未來4K支援仍須分開。全球追蹤區分正式制裁、政府歸責、工作組評估及戰場單方聲明；法國冷藏駭攻的受影響門市數字保留來源歧異。
+- 時間、十四日日報去重、逐站來源與圖片權利見 [[daily/2026/10/2026-10-13/source-notes-2026-10-13]]。
 
 ## 2026-10-12 Daily News Synthesis
 

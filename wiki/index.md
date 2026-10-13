@@ -2,7 +2,7 @@
 title: "Knowledge Base Index"
 type: overview
 created: 2026-05-24
-updated: 2026-10-12
+updated: 2026-10-13
 status: seed
 tags: [index]
 sources: []
@@ -21,6 +21,9 @@ sources: []
 - [[2026-04-04-llm-wiki]] - Karpathy 提出的 LLM-maintained personal wiki 模式，是本知識庫的設計來源。
 
 ## Daily News
+
+- [2026-10-13 Daily News](daily/2026/10/2026-10-13/daily-news-2026-10-13.md) - 5則科技：Muse Wonder、Maia 300、手機獨立遊戲、Foresight與Sony空間麥克風；全球正好10則。
+- [2026-10-13 Slides](daily/2026/10/2026-10-13/slides-2026-10-13.html) - 原頁完整報告與逐篇提問；Pages與LINE於08:20驗證完成。
 
 - [2026-10-12 Daily News](daily/2026/10/2026-10-12/daily-news-2026-10-12.md) - 4則科技產品：ID. Tiguan、BMW iX4、短效期憑證與GTA VI電台預覽；全球正好10則。
 - [2026-10-12 Slides](daily/2026/10/2026-10-12/slides-2026-10-12.html) - 原頁展開與逐篇提問；Pages與LINE於08:11驗證完成。

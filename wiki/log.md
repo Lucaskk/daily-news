@@ -1,5 +1,12 @@
 # Knowledge Base Log
 
+## [2026-10-13] ingest | Daily global and tech AI news
+
+- 凍結08:01:29 Asia/Taipei；科技336小時窗5則，全球24小時窗正好10則。僅比對9/29–10/12十四份日報與同窗72列產品表，維持legacy。
+- 12來源scan與逐站失敗補查、官方第二輪查證已記錄。兩張官方遊戲／產品圖片下載並目視核對；逐篇區分圖片存在、存取失敗與未取得授權。
+- 內容commit `d05254deb1aef032206e567f759e00a2186628b4`；Pages日期頁、latest與根入口完整雜湊驗證成功；唯一私人watchdog於08:20:06回報 `Sent LINE message`。
+- 強制check exit0；Playwright未安裝，不宣稱瀏覽器版面或實體iPhone測試；本機預覽為發布與配送後的非阻擋檢查，沒有重送。
+
 ## [2026-10-12] ingest | Daily global and tech AI news
 
 - 凍結08:01:53 Asia/Taipei；科技336小時窗4則、全球24小時窗正好10則。僅比對9/28–10/11的14份日報及同窗71列產品表。
