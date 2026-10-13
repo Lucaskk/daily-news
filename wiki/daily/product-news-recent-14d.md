@@ -1,7 +1,7 @@
 ---
 title: "科技產品新聞最近 14 天比對表"
 type: product-news-ledger-recent
-updated: 2026-10-11
+updated: 2026-10-12
 status: generated
 tags: [daily-news, tech-products, deduplication, recent]
 ---
@@ -11,11 +11,15 @@ tags: [daily-news, tech-products, deduplication, recent]
 本檔只整理產製日前 14 天的日報，可完整讀取做去重確認；不搜尋更早日報、完整歷史表或來源筆記。實際發布窗仍以當日研究截點與來源筆記判定。
 
 - 掃描日報：14 份。
-- 最近 14 天項目：71 則。
-- 日報日期範圍：2026-09-28 至 2026-10-11。
+- 最近 14 天項目：72 則。
+- 日報日期範圍：2026-09-29 至 2026-10-12。
 
 | 公司 | 產品 | 更新內容 | 發佈時間 | 收錄日期 | 狀態 | 來源網址 | 比對鍵 |
 |---|---|---|---|---|---|---|---|
+| Volkswagen | 純電 ID. Tiguan | Volkswagen 發表純電 ID. Tiguan，預計明年初接替 ID.4 與 ID.5 | 2026-10-09（官方發布日期） | 2026-10-12 | 首次收錄 | https://www.volkswagen-newsroom.com/en/press-releases/a-volkswagen-bestseller-goes-electric-world-premiere-of-the-new-id-tiguan-20728 | 7d2d72ffcf0a |
+| Rockstar | GTA VI 六個電台預覽 | Rockstar 開放 GTA VI 六個電台預覽，公布遊戲音樂內容的新細節 | 2026-10-08（官方發布日期） | 2026-10-12 | 首次收錄 | https://www.rockstargames.com/newswire/article/o3982oa93a23k4/the-music-of-grand-theft-auto-vi-in-game-radio-stations<br>https://www.rockstargames.com/VI/music<br>https://www.rockstargames.com/newswire?page=2 | b550af9bac45 |
+| Let’s Encrypt 公布憑證縮短為六十四天的時程，十月先 | Let’s Encrypt 公布憑證縮短為六十四天的時程 | Let’s Encrypt 公布憑證縮短為六十四天的時程，十月先開放測試 | 2026-10-07（官方發布日期） | 2026-10-12 | 首次收錄 | https://letsencrypt.org/2026/10/07/64-day-certs | e8d8630cbf09 |
+| BMW 公布 iX4 電動跑旅，將 | Neue Klasse 平台擴充至新車型 | BMW 公布 iX4 電動跑旅，將 Neue Klasse 平台擴充至新車型 | 2026-10-08（官方頁面發布日期） | 2026-10-12 | 首次收錄 | https://www.press.bmwgroup.com/usa/article/detail/T0461507EN_US/the-bmw-ix4?showMedia=photo | 6bced8e97c1f |
 | Microsoft | Decision-1 | Microsoft-Decision-1 開放公開預覽，讓應用以專用模型處理分類與路由 | 2026-10-09（官方發布日期） | 2026-10-11 | 首次收錄 | https://commandline.microsoft.com/microsoft-decision-1-model-foundry/<br>https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/introducing-microsoft-decision-1-in-microsoft-foundry-for-decision-and-classific/4562742 | 200036543b3d |
 | Honda 公布行駛中無線充電道路技術，預計二〇二七會計年度進入公路實證 | Honda 公布行駛中無線充電道路技術 | Honda 公布行駛中無線充電道路技術，預計二〇二七會計年度進入公路實證 | 2026-10-07 01:55:51（Asia/Taipei） | 2026-10-11 | 首次收錄 | https://hondanews.com/en-US/electrification/releases/release-9ded4afa56370babdac7c3fc7900e69d-honda-develops-underlaying-technology-for-in-motion-wireless-charging-of-evs-including-large-commercial-vehicles<br>https://techorange.com/2026/10/08/honda-electrification-2027-releases-e20/ | 3399b948a71f |
 | Forza Horizon 6 | PS5 預購 | Forza Horizon 6 開放 PS5 預購，確認明年一月上市與首個擴充內容時程 | 2026-10-08（官方發布日期） | 2026-10-11 | 首次收錄 | https://forza.net/news/forza-horizon-6-pre-order-ps5 | 5dab78312069 |
@@ -84,6 +88,3 @@ tags: [daily-news, tech-products, deduplication, recent]
 | GitHub | GitHub Copilot／Claude Sonnet 5.5 | GitHub Copilot 將 Claude Sonnet 5.5 推向一般可用，涵蓋 IDE、CLI 與 coding agent | 2026-09-28（GitHub 官方發布日期；未提供時分） | 2026-09-29 | 首次收錄 | https://github.blog/changelog/2026-09-28-claude-sonnet-5-5-in-github-copilot/ | 5f858fda29a7 |
 | Amazon Web Services | Amazon CloudWatch Omni | AWS 正式推出 Amazon CloudWatch Omni，以自然語言統整應用與 AI 代理遙測 | 2026-09-23（AWS 官方發布日期；未提供時分） | 2026-09-29 | 首次收錄 | https://aws.amazon.com/about-aws/whats-new/2026/09/amazon-cloudwatch-omni-ai/<br>https://aws.amazon.com/blogs/aws/introducing-amazon-cloudwatch-omni-ai-powered-observability-for-generative-ai-and-agentic-workloads/ | 9fdaf48f5817 |
 | Amazon Web Services | AWS End User Messaging Social | AWS End User Messaging 加入 WhatsApp 雙向即時語音通話 | 2026-09-25（AWS 官方發布日期；未提供時分） | 2026-09-29 | 首次收錄 | https://aws.amazon.com/about-aws/whats-new/2026/09/aws-end-user-messaging-voice-calling-whatsapp/ | e1e14a0e4e1a |
-| Meta | Muse Charm | Meta 揭露 Muse Charm，把個人 AI 代理與即時語音模型放進口袋型裝置 | 2026-09-24（Meta 官方發布日期；未提供時分） | 2026-09-28 | 首次收錄 | https://about.fb.com/news/2026/09/the-biggest-news-from-connect-2026/<br>https://arstechnica.com/ai/2026/09/meta-puts-its-ai-assistant-on-a-keychain/ | 2b7fbd600ce0 |
-| F-Droid | F-Droid 2.0 | F-Droid 發布 2.0，十年來最大改版重寫介面、搜尋與安裝更新流程 | 2026-09-24（F-Droid 官方發布日期；未提供時分） | 2026-09-28 | 首次收錄 | https://f-droid.org/en/2026/09/24/f-droid-2.0-a-new-chapter-for-android-freedom.html<br>https://arstechnica.com/gadgets/2026/09/f-droid-gets-its-biggest-update-in-a-decade-with-new-ui-and-smoother-app-installs/ | 8f05540f204f |
-| Ando | Ando team messaging | Ando 公開推出 agent-native 團隊通訊平台，讓 AI 代理以成員身分參與頻道與通話 | 2026-09-24 21:00:00（Asia/Taipei；公司新聞稿 09:00 EDT） | 2026-09-28 | 首次收錄 | https://www.ando.so/blog/introducing-ando<br>https://www.globenewswire.com/news-release/2026/09/24/3368344/0/en/Ando-Launches-Agent-Native-Messaging-Platform-Announces-20-Million-Seed.html<br>https://techcrunch.com/2026/09/24/ando-eyes-slack-as-it-builds-team-messaging-platform-for-humans-and-agents-to-work-together/ | 22f2a34824fa |

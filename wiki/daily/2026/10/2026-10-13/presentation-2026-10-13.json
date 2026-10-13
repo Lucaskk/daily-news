@@ -1,0 +1,24 @@
+{
+  "images": {
+    "t3": {
+      "src": "assets/apple-indie-games.jpg",
+      "original_url": "https://www.apple.com/newsroom/images/2026/10/app-store-indie-games-week-kicks-off-today/tile/Apple-App-Store-Indie-Games-Week-01-lp.jpg.og.jpg?202610121817",
+      "source_url": "https://www.apple.com/newsroom/2026/10/app-store-indie-games-week-kicks-off-today/",
+      "alt": "Apple獨立遊戲週七款遊戲官方拼圖",
+      "caption": "官方七款遊戲拼圖；各遊戲下載或預購狀態不同，不代表全部今日上市。",
+      "credit": "Apple Newsroom／各遊戲開發者",
+      "rights": "官方公開新聞素材，權利歸Apple及各遊戲權利人；不宣稱自由授權。",
+      "fit": "contain"
+    },
+    "t5": {
+      "src": "assets/sony-ecm-ax10.jpg",
+      "original_url": "https://mmx.prnewswire.com/media/MS2004873/Sony-Electronics-ECM-AX10_WithSmartphone_Windscreen.jpg?id=OA2994099&p=facebook",
+      "source_url": "https://www.prnewswire.com/news-releases/sony-electronics-announces-the-worlds-first-eclipsa-audio-certified-spatial-audio-microphone-for-smartphones-302902696.html",
+      "alt": "Sony ECM-AX10麥克風搭配手機與防風罩的官方產品圖",
+      "caption": "Sony官方ECM-AX10產品圖，非本站實測照片。",
+      "credit": "Sony Electronics／PRNewswire",
+      "rights": "公司發布的新聞素材，版權歸Sony；附原始來源，不宣稱自由授權。",
+      "fit": "contain"
+    }
+  }
+}
