@@ -2,7 +2,7 @@
 title: "Overview"
 type: overview
 created: 2026-05-24
-updated: 2026-10-13
+updated: 2026-10-14
 status: seed
 tags: [overview]
 sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
@@ -19,6 +19,12 @@ sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
 - 抽出持續出現的人物、組織、事件、政策、技術與市場概念。
 - 維護跨來源的矛盾、時間線、趨勢與待查問題。
 - 將重要查詢結果回寫成可累積的 wiki 頁面。
+
+## 2026-10-14 Daily News Synthesis
+
+- [本日日報](daily/2026/10/2026-10-14/daily-news-2026-10-14.md)：Apple家庭硬體擴張須區分預購、供貨及未來Siri AI；Google個人App的私人執行不等於免審查公開上架。Facebook明示偏好控制不等於取消推薦演算法。
+- 全球追蹤區分手術確認、政府疫情統計、情報聲明、法庭申請與實際裁決；F1新協議不代表賽道已完成。IMF的AI及能源假設仍是預測，不是已實現成長。
+- 時間、十四日日報去重、逐站失敗補查及圖片權利見 [[daily/2026/10/2026-10-14/source-notes-2026-10-14]]。
 
 ## 2026-10-13 Daily News Synthesis
 
