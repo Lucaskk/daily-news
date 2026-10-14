@@ -1,7 +1,7 @@
 ---
 title: "科技產品新聞最近 14 天比對表"
 type: product-news-ledger-recent
-updated: 2026-10-12
+updated: 2026-10-13
 status: generated
 tags: [daily-news, tech-products, deduplication, recent]
 ---
@@ -11,11 +11,16 @@ tags: [daily-news, tech-products, deduplication, recent]
 本檔只整理產製日前 14 天的日報，可完整讀取做去重確認；不搜尋更早日報、完整歷史表或來源筆記。實際發布窗仍以當日研究截點與來源筆記判定。
 
 - 掃描日報：14 份。
-- 最近 14 天項目：72 則。
-- 日報日期範圍：2026-09-29 至 2026-10-12。
+- 最近 14 天項目：71 則。
+- 日報日期範圍：2026-09-30 至 2026-10-13。
 
 | 公司 | 產品 | 更新內容 | 發佈時間 | 收錄日期 | 狀態 | 來源網址 | 比對鍵 |
 |---|---|---|---|---|---|---|---|
+| 微軟公布 Maia 300 推理系統，計畫二〇二七年開始正式部署 | 微軟公布 Maia 300 推理系統 | 微軟公布 Maia 300 推理系統，計畫二〇二七年開始正式部署 | 2026-10-12（官方發布日期） | 2026-10-13 | 首次收錄 | https://blogs.microsoft.com/blog/2026/10/12/microsoft-to-expand-azure-maia-system-to-multi-gigawatt-deployments/<br>https://technews.tw/2026/10/13/microsoft-maia-300-to-begin-production-deployments-in-2027/ | 304b6cd94ec4 |
+| Sony | ECM-AX10 手機空間音訊麥克風 | Sony 發布 ECM-AX10 手機空間音訊麥克風，以四個拾音單元搭配 USB-C | 2026-10-09 00:00:00（Asia/Taipei） | 2026-10-13 | 首次收錄 | https://www.prnewswire.com/news-releases/sony-electronics-announces-the-worlds-first-eclipsa-audio-certified-spatial-audio-microphone-for-smartphones-302902696.html<br>https://www.sony.com/en/ecm-ax10_SupportedModels/ | aec3b6d3f07e |
+| Meta | Muse Wonder 模型 | Meta 推出 Muse Wonder 模型，標準版開放 API、Full 版先供 Muse Code 訂戶使用 | 2026-10-12（官方發布日期） | 2026-10-13 | 首次收錄 | https://about.fb.com/news/2026/10/introducing-muse-wonder-models/<br>https://research.meta.ai/blog/muse-wonder | 4db7b2520e8a |
+| Google | Mac 本機會議助理 Foresight | Google 推出 Mac 本機會議助理 Foresight，支援離線筆記與個人文件檢索 | 2026-10-08 21:28:00（Asia/Taipei） | 2026-10-13 | 首次收錄 | https://developers.google.com/edge/foresight<br>https://techcrunch.com/2026/10/08/google-releases-a-new-local-first-granola-competitor/<br>https://www.inside.com.tw/article/42617-google-ai-edge-foresight-mac-offline-ai-meeting-notes | dabb372bf718 |
+| Apple | 啟動獨立遊戲週 | Apple 啟動獨立遊戲週，確認 No Man's Sky 十月二十八日登上 iPhone 與 iPad | 2026-10-12（官方發布日期） | 2026-10-13 | 首次收錄 | https://www.apple.com/newsroom/2026/10/app-store-indie-games-week-kicks-off-today/<br>https://apps.apple.com/us/app/no-mans-sky/id1615755735 | 9ea1adf00c60 |
 | Volkswagen | 純電 ID. Tiguan | Volkswagen 發表純電 ID. Tiguan，預計明年初接替 ID.4 與 ID.5 | 2026-10-09（官方發布日期） | 2026-10-12 | 首次收錄 | https://www.volkswagen-newsroom.com/en/press-releases/a-volkswagen-bestseller-goes-electric-world-premiere-of-the-new-id-tiguan-20728 | 7d2d72ffcf0a |
 | Rockstar | GTA VI 六個電台預覽 | Rockstar 開放 GTA VI 六個電台預覽，公布遊戲音樂內容的新細節 | 2026-10-08（官方發布日期） | 2026-10-12 | 首次收錄 | https://www.rockstargames.com/newswire/article/o3982oa93a23k4/the-music-of-grand-theft-auto-vi-in-game-radio-stations<br>https://www.rockstargames.com/VI/music<br>https://www.rockstargames.com/newswire?page=2 | b550af9bac45 |
 | Let’s Encrypt 公布憑證縮短為六十四天的時程，十月先 | Let’s Encrypt 公布憑證縮短為六十四天的時程 | Let’s Encrypt 公布憑證縮短為六十四天的時程，十月先開放測試 | 2026-10-07（官方發布日期） | 2026-10-12 | 首次收錄 | https://letsencrypt.org/2026/10/07/64-day-certs | e8d8630cbf09 |
@@ -82,9 +87,3 @@ tags: [daily-news, tech-products, deduplication, recent]
 | OpenAI、Amazon Web Services | GPT-6.1 Sol、Amazon Bedrock | OpenAI 推出 GPT-6.1 Sol，並在 Work、Codex、API 與 Amazon Bedrock 上線 | 2026-09-29（OpenAI 與 AWS 官方發布日期；未提供共同時分） | 2026-09-30 | 首次收錄 | https://deploymentsafety.openai.com/gpt-6-1-sol/respecting-auto-review<br>https://developers.openai.com/api/docs/models/gpt-6.1-sol<br>https://aws.amazon.com/about-aws/whats-new/2026/09/openai-gpt-6-1-sol-on-amazon-bedrock/ | f1e98b401713 |
 | NVIDIA | Open Agent Safety Platform、OpenShell、Sentry | NVIDIA 發布 Open Agent Safety Platform，以 OpenShell 與 Sentry 從軟體到 DPU 約束 AI 代理 | 2026-09-28（NVIDIA 官方發布日期；未提供時分） | 2026-09-30 | 首次收錄 | https://nvidianews.nvidia.com/news/open-agent-safety-platform<br>https://developer.nvidia.com/blog/nvidia-open-agent-safety-platform-a-reference-for-continuous-in-silicon-agent-monitoring/ | af712932b0f8 |
 | Google | Gemini Skills、Gems | Google 啟用 Gemini Skills 並公布 Gems 分階段退場與自動遷移時程 | 2026-09-29 01:29:00（Asia/Taipei；TechCrunch 2026-09-28 10:29 PDT） | 2026-09-30 | 首次收錄 | https://support.google.com/gemini/answer/18560919?hl=en<br>https://techcrunch.com/2026/09/28/google-is-killing-off-geminis-gems-in-favor-of-skills/ | 0cc448df679d |
-| SpaceX | Starship Flight 14 | SpaceX Starship Flight 14 首次進入地球軌道並部署 26 顆 Starlink V3 | 2026-09-28 20:50:00（Asia/Taipei；AP 12:50 UTC） | 2026-09-29 | 續報 | https://www.spacex.com/launches/sl-17-50%3A1008<br>https://tech.yahoo.com/science/articles/spacexs-supersized-starship-launches-toward-125036831.html<br>https://www.washingtonpost.com/health/2026/09/28/spacex-starship-orbit/5033407a-bb3b-11f1-81fc-9b76f8343b6c_story.html | 46e6ad6ae7bc |
-| OpenAI | Health in ChatGPT | OpenAI 為 Health in ChatGPT 新增依個人健康資料產生的摘要與洞察 | 2026-09-28（OpenAI release notes 段落日期；未提供時分） | 2026-09-29 | 續報 | https://help.openai.com/en/articles/6825453-chatgpt-release-notes | 68377496dc1a |
-| GitHub | CodeQL 2.27.1 | GitHub 發布 CodeQL 2.27.1，新增 C／C++、C# 查詢與 Kotlin 2.4.20 支援 | 2026-09-25（GitHub 官方發布日期；未提供時分） | 2026-09-29 | 首次收錄 | https://github.blog/changelog/2026-09-25-codeql-2-27-1-adds-c-and-c-query-and-kotlin-2-4-20-support/ | 128c03d37968 |
-| GitHub | GitHub Copilot／Claude Sonnet 5.5 | GitHub Copilot 將 Claude Sonnet 5.5 推向一般可用，涵蓋 IDE、CLI 與 coding agent | 2026-09-28（GitHub 官方發布日期；未提供時分） | 2026-09-29 | 首次收錄 | https://github.blog/changelog/2026-09-28-claude-sonnet-5-5-in-github-copilot/ | 5f858fda29a7 |
-| Amazon Web Services | Amazon CloudWatch Omni | AWS 正式推出 Amazon CloudWatch Omni，以自然語言統整應用與 AI 代理遙測 | 2026-09-23（AWS 官方發布日期；未提供時分） | 2026-09-29 | 首次收錄 | https://aws.amazon.com/about-aws/whats-new/2026/09/amazon-cloudwatch-omni-ai/<br>https://aws.amazon.com/blogs/aws/introducing-amazon-cloudwatch-omni-ai-powered-observability-for-generative-ai-and-agentic-workloads/ | 9fdaf48f5817 |
-| Amazon Web Services | AWS End User Messaging Social | AWS End User Messaging 加入 WhatsApp 雙向即時語音通話 | 2026-09-25（AWS 官方發布日期；未提供時分） | 2026-09-29 | 首次收錄 | https://aws.amazon.com/about-aws/whats-new/2026/09/aws-end-user-messaging-voice-calling-whatsapp/ | e1e14a0e4e1a |

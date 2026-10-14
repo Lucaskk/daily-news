@@ -1,0 +1,24 @@
+{
+  "images": {
+    "t1": {
+      "src": "assets/apple-homeview.jpg",
+      "original_url": "https://www.apple.com/newsroom/images/2026/10/meet-apple-homeview-a-new-way-to-enjoy-entertainment-and-manage-the-home/tile/Apple-HomeView-lineup-261013-lp.jpg.og.jpg?202610131304",
+      "source_url": "https://www.apple.com/newsroom/2026/10/meet-apple-homeview-a-new-way-to-enjoy-entertainment-and-manage-the-home/",
+      "alt": "Apple HomeView新產品的官方系列圖片",
+      "caption": "HomeView官方產品圖，非本站實測；首波市場與語言有限制。",
+      "credit": "Apple Newsroom",
+      "rights": "原廠公開新聞素材，版權歸Apple；不宣稱自由授權。",
+      "fit": "contain"
+    },
+    "t2": {
+      "src": "assets/homepod-mini2.jpg",
+      "original_url": "https://www.apple.com/newsroom/images/2026/10/apple-announces-the-next-generation-of-homepod-mini/tile/Apple-HomePod-mini-2-color-lineup-261013-lp.jpg.og.jpg?202610131304",
+      "source_url": "https://www.apple.com/newsroom/2026/10/apple-announces-the-next-generation-of-homepod-mini/",
+      "alt": "HomePod mini 2五種顏色官方圖片",
+      "caption": "第二代官方產品圖；Siri AI尚待後續軟體更新。",
+      "credit": "Apple Newsroom",
+      "rights": "原廠公開新聞素材，版權歸Apple；不宣稱自由授權。",
+      "fit": "contain"
+    }
+  }
+}
