@@ -2,7 +2,7 @@
 title: "Knowledge Base Index"
 type: overview
 created: 2026-05-24
-updated: 2026-10-14
+updated: 2026-10-15
 status: seed
 tags: [index]
 sources: []
@@ -21,6 +21,9 @@ sources: []
 - [[2026-04-04-llm-wiki]] - Karpathy 提出的 LLM-maintained personal wiki 模式，是本知識庫的設計來源。
 
 ## Daily News
+
+- [2026-10-15 Daily News](daily/2026/10/2026-10-15/daily-news-2026-10-15.md) - 6則科技：Grok Voice 3、Tamron B091、Fairbuds 2、Form Studio 1、API模型退場與Xbox Nano；全球正好10則。
+- [2026-10-15 Slides](daily/2026/10/2026-10-15/slides-2026-10-15.html) - 原頁完整報告與逐篇提問；Pages與LINE於08:12:59驗證完成。
 
 - [2026-10-14 Daily News](daily/2026/10/2026-10-14/daily-news-2026-10-14.md) - 4則科技：HomeView、HomePod mini2、Google Play個人App與Facebook推薦控制；全球正好10則。
 - [2026-10-14 Slides](daily/2026/10/2026-10-14/slides-2026-10-14.html) - 原頁完整報告與逐篇提問；Pages與LINE於08:11驗證完成。

@@ -2,7 +2,7 @@
 title: "Overview"
 type: overview
 created: 2026-05-24
-updated: 2026-10-14
+updated: 2026-10-15
 status: seed
 tags: [overview]
 sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
@@ -19,6 +19,12 @@ sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
 - 抽出持續出現的人物、組織、事件、政策、技術與市場概念。
 - 維護跨來源的矛盾、時間線、趨勢與待查問題。
 - 將重要查詢結果回寫成可累積的 wiki 頁面。
+
+## 2026-10-15 Daily News Synthesis
+
+- [本日日報](daily/2026/10/2026-10-15/daily-news-2026-10-15.md)：語音API自動升級與舊模型退場均需要應用重新驗證；可維修耳機與較低價樹脂列印機仍須把耗材、零件及安全配件納入評估。預購與實際供貨分開記錄。
+- 全球能源與供應鏈同時受航運損失、衛星服務依賴、通膨及設備產能影響。司法起訴不等於定罪；難民規則生效、監獄啟用與官媒軍事主張亦各有不同證據強度。
+- 時間矛盾、十四日日報去重、逐站存取補查及逐篇圖片權利見 [[daily/2026/10/2026-10-15/source-notes-2026-10-15]]。
 
 ## 2026-10-14 Daily News Synthesis
 

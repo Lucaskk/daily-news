@@ -1,5 +1,12 @@
 # Knowledge Base Log
 
+## [2026-10-15] ingest | Daily global and tech AI news
+
+- 凍結08:01:40 Asia/Taipei；科技336小時窗6則、全球24小時窗正好10則。僅比對10/01–10/14十四份日報及同窗70列產品表，維持legacy。
+- 12來源scan與逐站補查、官方第二輪及未採用候選已記錄。兩張Tamron與Fairphone官方產品圖下載並目視核對；其他逐篇區分圖片存在、存取失敗與權利限制。
+- 內容commit `81d37242dd3554899b35ff945bfb18d65e83fe7a`；Pages日期頁、latest與根入口完整雜湊驗證成功；唯一私人watchdog於08:12:59回報 `Sent LINE message`，沒有重送。
+- 強制check exit0；16篇、6科技、全球1–10、逐篇來源與JS語法通過。Playwright未安裝，不宣稱手機實機或瀏覽器版面測試；localhost為最後非阻擋檢查。
+
 ## [2026-10-14] ingest | Daily global and tech AI news
 
 - 凍結08:01:04 Asia/Taipei；科技336小時窗4則、全球24小時窗正好10則。僅比對9/30–10/13十四份日報及同窗71列產品表，維持legacy。
