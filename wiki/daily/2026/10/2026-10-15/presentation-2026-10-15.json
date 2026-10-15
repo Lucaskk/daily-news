@@ -1,0 +1,24 @@
+{
+  "images": {
+    "t2": {
+      "src": "assets/tamron-b091.jpg",
+      "original_url": "https://www.tamron.com/news/news_file/file/b091_ogp.jpg",
+      "source_url": "https://www.tamron.com/global/news/detail/b091_20261014.html",
+      "alt": "Tamron B091 16–50mm F2.8 A官方新品與四種接環",
+      "caption": "B091官方新品圖；各接環上市日期與重量不同。",
+      "credit": "Tamron Newsroom",
+      "rights": "原廠公開新聞素材，版權歸Tamron；不宣稱自由授權。",
+      "fit": "contain"
+    },
+    "t3": {
+      "src": "assets/fairbuds2.webp",
+      "original_url": "https://us.fairphone.com/web/image/10833",
+      "source_url": "https://us.fairphone.com/fairbuds-2",
+      "alt": "官方Fairbuds 2綠色耳機配戴照片",
+      "caption": "Fairbuds 2官方配戴圖，非本站實測。",
+      "credit": "Fairphone",
+      "rights": "原廠產品頁圖片，版權歸Fairphone；不宣稱自由授權。",
+      "fit": "contain"
+    }
+  }
+}

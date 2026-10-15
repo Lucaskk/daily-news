@@ -1,7 +1,7 @@
 ---
 title: "科技產品新聞最近 14 天比對表"
 type: product-news-ledger-recent
-updated: 2026-10-13
+updated: 2026-10-14
 status: generated
 tags: [daily-news, tech-products, deduplication, recent]
 ---
@@ -11,11 +11,15 @@ tags: [daily-news, tech-products, deduplication, recent]
 本檔只整理產製日前 14 天的日報，可完整讀取做去重確認；不搜尋更早日報、完整歷史表或來源筆記。實際發布窗仍以當日研究截點與來源筆記判定。
 
 - 掃描日報：14 份。
-- 最近 14 天項目：71 則。
-- 日報日期範圍：2026-09-30 至 2026-10-13。
+- 最近 14 天項目：70 則。
+- 日報日期範圍：2026-10-01 至 2026-10-14。
 
 | 公司 | 產品 | 更新內容 | 發佈時間 | 收錄日期 | 狀態 | 來源網址 | 比對鍵 |
 |---|---|---|---|---|---|---|---|
+| Apple | HomePod mini 2 | HomePod mini 2 開放預購，新增 S10 與環繞音效，Siri AI 尚待更新 | 2026-10-13（官方發布日期） | 2026-10-14 | 首次收錄 | https://www.apple.com/newsroom/2026/10/apple-announces-the-next-generation-of-homepod-mini/ | a1d7465c3cda |
+| Google | Play 開始讓成年使用者以一般帳號執行自製 App | Google Play 開始讓成年使用者以一般帳號執行自製 App，先在部分市場推出 | 2026-10-14 01:00:00（Asia/Taipei） | 2026-10-14 | 首次收錄 | https://blog.google/products-and-platforms/platforms/google-play/google-play-updates-october-2026/ | 08e1532d97f3 |
+| Meta | Facebook 推出 Your Algorithm | Facebook 推出 Your Algorithm，讓使用者以自然語言調整推薦內容 | 2026-10-14 00:00:29（Asia/Taipei） | 2026-10-14 | 首次收錄 | https://about.fb.com/news/2026/10/introducing-your-algorithm-facebook/ | 804c6fddc829 |
+| Apple | HomeView 智慧家庭螢幕 | Apple 發布 HomeView 智慧家庭螢幕，部分市場開放預購、十一月供貨 | 2026-10-13（官方發布日期） | 2026-10-14 | 首次收錄 | https://www.apple.com/newsroom/2026/10/meet-apple-homeview-a-new-way-to-enjoy-entertainment-and-manage-the-home/ | ec5a8f5d2f7c |
 | 微軟公布 Maia 300 推理系統，計畫二〇二七年開始正式部署 | 微軟公布 Maia 300 推理系統 | 微軟公布 Maia 300 推理系統，計畫二〇二七年開始正式部署 | 2026-10-12（官方發布日期） | 2026-10-13 | 首次收錄 | https://blogs.microsoft.com/blog/2026/10/12/microsoft-to-expand-azure-maia-system-to-multi-gigawatt-deployments/<br>https://technews.tw/2026/10/13/microsoft-maia-300-to-begin-production-deployments-in-2027/ | 304b6cd94ec4 |
 | Sony | ECM-AX10 手機空間音訊麥克風 | Sony 發布 ECM-AX10 手機空間音訊麥克風，以四個拾音單元搭配 USB-C | 2026-10-09 00:00:00（Asia/Taipei） | 2026-10-13 | 首次收錄 | https://www.prnewswire.com/news-releases/sony-electronics-announces-the-worlds-first-eclipsa-audio-certified-spatial-audio-microphone-for-smartphones-302902696.html<br>https://www.sony.com/en/ecm-ax10_SupportedModels/ | aec3b6d3f07e |
 | Meta | Muse Wonder 模型 | Meta 推出 Muse Wonder 模型，標準版開放 API、Full 版先供 Muse Code 訂戶使用 | 2026-10-12（官方發布日期） | 2026-10-13 | 首次收錄 | https://about.fb.com/news/2026/10/introducing-muse-wonder-models/<br>https://research.meta.ai/blog/muse-wonder | 4db7b2520e8a |
@@ -82,8 +86,3 @@ tags: [daily-news, tech-products, deduplication, recent]
 | OpenAI | ChatGPT Space、Pages | OpenAI 上線 ChatGPT Space，讓團隊、ChatGPT 與 Dots 共用知識和工作頁面 | 2026-09-29（OpenAI 官方發布日期；未提供獨立時分） | 2026-10-01 | 首次收錄 | https://openai.com/index/devday-2026-recap/ | dd0c7d8b17ed |
 | Instinct | Instinct Selections | Instinct 推出 Selections 主動推薦商品，引發未經要求推播與商業模式疑慮 | 2026-09-30 23:56:00（Asia/Taipei；TechCrunch 08:56 PDT） | 2026-10-01 | 首次收錄 | https://techcrunch.com/2026/09/30/instincts-new-product-recommendations-are-giving-some-users-the-ick/ | 4fcbb23c443c |
 | Google DeepMind | Gemini 4 Argon、Fairwind Program | Google 公布 Gemini 4 Argon，先向可信任資安團隊開放而非全面上市 | 2026-10-01 04:00:05（Asia/Taipei；Axios 2026-09-30 20:00:05 UTC） | 2026-10-01 | 首次收錄 | https://deepmind.google/models/gemini/<br>https://www.axios.com/2026/09/30/google-gemini-4<br>https://arstechnica.com/google/2026/09/google-announces-gemini-4-argon-ai-model-but-you-cant-use-it-yet/ | eb96660280a4 |
-| U.S. Government | America.gov | 美國政府正式啟用 America.gov，以 AI 問答整合聯邦服務入口 | 2026-09-29 23:18:33（Asia/Taipei；AP 15:18:33 UTC） | 2026-09-30 | 首次收錄 | https://www.whitehouse.gov/fact-sheets/2026/09/fact-sheet-president-donald-j-trump-streamlines-access-to-government-services-through-america-gov/<br>https://apnews.com/article/ff86fcb161c1fe89538d6ecb294ea353 | ab33d87ce2bc |
-| Shopify | WebMCP support for checkout | Shopify 將 WebMCP 延伸到 checkout，browser agents 可在買家確認後完成訂單 | 2026-09-29 03:33:00（Asia/Taipei；TechCrunch 2026-09-28 12:33 PDT） | 2026-09-30 | 首次收錄 | https://shopify.dev/changelog/posts/webmcp-support-for-checkout<br>https://techcrunch.com/2026/09/28/shopify-opens-checkout-to-browser-based-ai-agents/ | dcf83c71fd2f |
-| OpenAI、Amazon Web Services | GPT-6.1 Sol、Amazon Bedrock | OpenAI 推出 GPT-6.1 Sol，並在 Work、Codex、API 與 Amazon Bedrock 上線 | 2026-09-29（OpenAI 與 AWS 官方發布日期；未提供共同時分） | 2026-09-30 | 首次收錄 | https://deploymentsafety.openai.com/gpt-6-1-sol/respecting-auto-review<br>https://developers.openai.com/api/docs/models/gpt-6.1-sol<br>https://aws.amazon.com/about-aws/whats-new/2026/09/openai-gpt-6-1-sol-on-amazon-bedrock/ | f1e98b401713 |
-| NVIDIA | Open Agent Safety Platform、OpenShell、Sentry | NVIDIA 發布 Open Agent Safety Platform，以 OpenShell 與 Sentry 從軟體到 DPU 約束 AI 代理 | 2026-09-28（NVIDIA 官方發布日期；未提供時分） | 2026-09-30 | 首次收錄 | https://nvidianews.nvidia.com/news/open-agent-safety-platform<br>https://developer.nvidia.com/blog/nvidia-open-agent-safety-platform-a-reference-for-continuous-in-silicon-agent-monitoring/ | af712932b0f8 |
-| Google | Gemini Skills、Gems | Google 啟用 Gemini Skills 並公布 Gems 分階段退場與自動遷移時程 | 2026-09-29 01:29:00（Asia/Taipei；TechCrunch 2026-09-28 10:29 PDT） | 2026-09-30 | 首次收錄 | https://support.google.com/gemini/answer/18560919?hl=en<br>https://techcrunch.com/2026/09/28/google-is-killing-off-geminis-gems-in-favor-of-skills/ | 0cc448df679d |
