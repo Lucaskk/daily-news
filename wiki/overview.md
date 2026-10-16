@@ -2,7 +2,7 @@
 title: "Overview"
 type: overview
 created: 2026-05-24
-updated: 2026-10-15
+updated: 2026-10-16
 status: seed
 tags: [overview]
 sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
@@ -19,6 +19,12 @@ sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
 - 抽出持續出現的人物、組織、事件、政策、技術與市場概念。
 - 維護跨來源的矛盾、時間線、趨勢與待查問題。
 - 將重要查詢結果回寫成可累積的 wiki 頁面。
+
+## 2026-10-16 Daily News Synthesis
+
+- [本日日報](daily/2026/10/2026-10-16/daily-news-2026-10-16.md)：開放權重不等於不受限開源，Mac本機部署仍有高記憶體門檻；隨身AI需區分音訊刪除與文字保存。新品預購、即將上市與實際供應分開，語音自然度不等於安全全面改善。
+- 能源追蹤從G7釋儲承諾進入IEA加速執行，烏克蘭則由暫停轉向恢復攻擊。全球程序須分清修憲公布、民事傳票、研究歸因與正式定罪；廣告觸及不等於感染數。
+- 十四日日報去重、逐站補查、原廠段落及逐篇圖片限制見 [[daily/2026/10/2026-10-16/source-notes-2026-10-16]]。
 
 ## 2026-10-15 Daily News Synthesis
 

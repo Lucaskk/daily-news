@@ -1,5 +1,13 @@
 # Knowledge Base Log
 
+## [2026-10-16] ingest | Daily global and tech AI news
+
+- 凍結08:02:15 Asia/Taipei；科技336小時窗5則、全球24小時窗正好10則。僅比對10/02–10/15十四份日報與同窗71列產品表，維持legacy。
+- 十二來源scan、逐站補查、官方第二輪與未選候選已記錄；Bee與KDE兩張官方圖片下載並目視核對，其他逐篇區分圖片存在、存取與權利限制。
+- 初始內容commit `99b439b9dabd82f651e9d4142fb40be2251c854b`；唯一私人watchdog於08:14:15回報 `Sent LINE message`。補充G7／釋儲查詢命中10/03後，IEA加上續報與前次內容，修訂commit `f1ba137`、版本`20261016-081434-reader`。
+- 08:15:11使用verify-deliver確認新版日期頁、latest與根入口完整雜湊，watchdog回報 `already sent`，沒有重送。checkpoint保留初始commit／version欄位，實際公開URL與verified_hashes已由驗證器更新；不手改成功狀態。
+- 強制check exit0；15篇、5科技、全球1–10、逐篇來源與JS語法通過。渲染器12項及pipeline17項測試通過。Playwright未安裝，不宣稱瀏覽器版面或實體iPhone測試；本機預覽最後best-effort。
+
 ## [2026-10-15] ingest | Daily global and tech AI news
 
 - 凍結08:01:40 Asia/Taipei；科技336小時窗6則、全球24小時窗正好10則。僅比對10/01–10/14十四份日報及同窗70列產品表，維持legacy。
