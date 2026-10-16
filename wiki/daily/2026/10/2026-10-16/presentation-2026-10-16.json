@@ -1,0 +1,24 @@
+{
+  "images": {
+    "t2": {
+      "src": "assets/bee-frontier-eclipse.jpg",
+      "original_url": "https://assets.aboutamazon.com/20/14/9d6951844795a24f71e544c24dce/bee-frontier-eclipse-hero-amazonnews-ck101426.jpg",
+      "source_url": "https://www.aboutamazon.com/news/devices/amazon-personal-ai-bee-frontier-bee-eclipse",
+      "alt": "Amazon官方Bee Frontier穿戴裝置與Bee Eclipse手機配件新品圖",
+      "caption": "Bee Frontier與Eclipse官方新品圖；Eclipse尚標示即將推出。",
+      "credit": "Amazon Newsroom",
+      "rights": "原廠公開新聞素材，版權歸Amazon；不宣稱自由授權。",
+      "fit": "contain"
+    },
+    "t4": {
+      "src": "assets/plasma-6-8.png",
+      "original_url": "https://kde.org/announcements/plasma/6/6.8.0/fullscreen_with_apps.png",
+      "source_url": "https://kde.org/announcements/plasma/6/6.8.0/",
+      "alt": "KDE Plasma 6.8官方桌面與應用程式截圖",
+      "caption": "Plasma 6.8官方桌面截圖，非本站實機測試。",
+      "credit": "KDE",
+      "rights": "KDE官方版本公告截圖；相關桌面與應用標誌權利歸原作者，不另宣稱自由授權。",
+      "fit": "contain"
+    }
+  }
+}

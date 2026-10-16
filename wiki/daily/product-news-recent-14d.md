@@ -1,7 +1,7 @@
 ---
 title: "科技產品新聞最近 14 天比對表"
 type: product-news-ledger-recent
-updated: 2026-10-14
+updated: 2026-10-15
 status: generated
 tags: [daily-news, tech-products, deduplication, recent]
 ---
@@ -11,11 +11,17 @@ tags: [daily-news, tech-products, deduplication, recent]
 本檔只整理產製日前 14 天的日報，可完整讀取做去重確認；不搜尋更早日報、完整歷史表或來源筆記。實際發布窗仍以當日研究截點與來源筆記判定。
 
 - 掃描日報：14 份。
-- 最近 14 天項目：70 則。
-- 日報日期範圍：2026-10-01 至 2026-10-14。
+- 最近 14 天項目：71 則。
+- 日報日期範圍：2026-10-02 至 2026-10-15。
 
 | 公司 | 產品 | 更新內容 | 發佈時間 | 收錄日期 | 狀態 | 來源網址 | 比對鍵 |
 |---|---|---|---|---|---|---|---|
+| Microsoft | Xbox Nano 控制器開放預購 | Xbox Nano 控制器開放預購，十一月供應市場包含台灣 | 2026-10-14（官方發布日期） | 2026-10-15 | 首次收錄 | https://news.xbox.com/en-us/2026/10/14/xbox-nano-controller/<br>https://www.theverge.com/news/1011216/xbox-nano-controller-release-date-pricing | 253de11ca09a |
+| Tamron 公布 16–50mm F2.8 | A 鏡頭 | Tamron 公布 16–50mm F2.8 A 鏡頭，四種接環分批上市 | 2026-10-14（官方發布日期） | 2026-10-15 | 首次收錄 | https://www.tamron.com/global/news/detail/b091_20261014.html<br>https://www.cool3c.com/article/252999 | 40b67f71cba1 |
+| OpenAI | 公告部分 GPT-4 系列 API 模型將於明年一月停用 | OpenAI 公告部分 GPT-4 系列 API 模型將於明年一月停用 | 2026-10-14（官方公告日期） | 2026-10-15 | 首次收錄 | https://developers.openai.com/api/docs/deprecations | 074a855d304d |
+| Grok Voice 3.0 | API | Grok Voice 3.0 開放 API，既有 latest 別名自動切換至新模型 | 2026-10-14（官方發布日期） | 2026-10-15 | 首次收錄 | https://x.ai/news/grok-voice-3 | f3a4467f0d17 |
+| Formlabs | 訂購 US$699 的 Form Studio 1 | Formlabs 開放訂購 US$699 的 Form Studio 1，十一月開始出貨 | 2026-10-14（官方發布日期） | 2026-10-15 | 首次收錄 | https://formlabs.com/eu/company/press/formlabs-introduces-form-studio-1/<br>https://formlabs.com/3d-printers/form-studio-1/<br>https://www.wired.com/story/formlabs-has-a-3d-printer-for-normies/ | f811bd3720e1 |
+| Fairbuds 2 在英歐開賣，保留可換電池並縮小充電盒 | Fairbuds 2 在英歐開賣 | Fairbuds 2 在英歐開賣，保留可換電池並縮小充電盒 | 2026-10-14 19:00:00（Asia/Taipei） | 2026-10-15 | 首次收錄 | https://us.fairphone.com/fairbuds-2<br>https://www.theverge.com/tech/1010906/fairphone-fairbuds-2-price-release-audio-repairability | 904ffdab0ef6 |
 | Apple | HomePod mini 2 | HomePod mini 2 開放預購，新增 S10 與環繞音效，Siri AI 尚待更新 | 2026-10-13（官方發布日期） | 2026-10-14 | 首次收錄 | https://www.apple.com/newsroom/2026/10/apple-announces-the-next-generation-of-homepod-mini/ | a1d7465c3cda |
 | Google | Play 開始讓成年使用者以一般帳號執行自製 App | Google Play 開始讓成年使用者以一般帳號執行自製 App，先在部分市場推出 | 2026-10-14 01:00:00（Asia/Taipei） | 2026-10-14 | 首次收錄 | https://blog.google/products-and-platforms/platforms/google-play/google-play-updates-october-2026/ | 08e1532d97f3 |
 | Meta | Facebook 推出 Your Algorithm | Facebook 推出 Your Algorithm，讓使用者以自然語言調整推薦內容 | 2026-10-14 00:00:29（Asia/Taipei） | 2026-10-14 | 首次收錄 | https://about.fb.com/news/2026/10/introducing-your-algorithm-facebook/ | 804c6fddc829 |
@@ -81,8 +87,3 @@ tags: [daily-news, tech-products, deduplication, recent]
 | HP | OmniBook 5 14 AI PC、ProBook 4 G2iS 14 AI PC | HP 推出 OmniBook 5 與 ProBook 4，以 OLED 螢幕和輕薄設計擴充筆電系列 | 2026-10-01（HP 官方發布日期；未提供時分） | 2026-10-02 | 首次收錄 | https://www.hp.com/us-en/newsroom/press-releases/2026/hp-brings-premium-pc-experiences-to-more-consumers.html | 6a6892ce62ce |
 | Anthropic | Claude for Government、Claude Code CLI、Claude for Microsoft 365 | Anthropic 將 Claude for Government 轉為正式供應，另開放 CLI 與 Microsoft 365 早期存取 | 2026-09-30（Anthropic 官方發布日期；未提供時分） | 2026-10-02 | 首次收錄 | https://claude.com/blog/claude-for-government-is-now-generally-available | 998178e0055d |
 | Amazon | Kindle、Kindle Paperwhite、Kindle Colorsoft 2026 | Amazon 更新 Kindle 全系列，採平整螢幕並新增鋁製機身選項 | 2026-10-01 21:00:00（Asia/Taipei） | 2026-10-02 | 首次收錄 | https://www.aboutamazon.com/news/devices/new-kindle-lineup-2026<br>https://www.theverge.com/tech/1002811/amazon-kindle-paperwhite-colorsoft-accessory-refresh | 7c8235152b46 |
-| OpenAI | Codex in the cloud、reusable development environments | OpenAI 擴充 Codex cloud，以可重用環境支援手機與跨裝置接續程式任務 | 2026-09-29（OpenAI 官方發布日期；未提供獨立時分） | 2026-10-01 | 首次收錄 | https://openai.com/index/devday-2026-recap/<br>https://help.openai.com/en/articles/6825453-chatgpt-release-notes | 69c2fe103ce9 |
-| OpenAI | Dots | OpenAI 推出 Dots 常駐代理，讓 AI 在獨立雲端電腦持續執行工作 | 2026-09-30 02:51:35（Asia/Taipei；AP 2026-09-29 18:51:35 UTC） | 2026-10-01 | 首次收錄 | https://openai.com/index/introducing-dots/<br>https://apnews.com/article/77b6b8888145869206996d7509d24256 | fd0aa3fcdf82 |
-| OpenAI | ChatGPT Space、Pages | OpenAI 上線 ChatGPT Space，讓團隊、ChatGPT 與 Dots 共用知識和工作頁面 | 2026-09-29（OpenAI 官方發布日期；未提供獨立時分） | 2026-10-01 | 首次收錄 | https://openai.com/index/devday-2026-recap/ | dd0c7d8b17ed |
-| Instinct | Instinct Selections | Instinct 推出 Selections 主動推薦商品，引發未經要求推播與商業模式疑慮 | 2026-09-30 23:56:00（Asia/Taipei；TechCrunch 08:56 PDT） | 2026-10-01 | 首次收錄 | https://techcrunch.com/2026/09/30/instincts-new-product-recommendations-are-giving-some-users-the-ick/ | 4fcbb23c443c |
-| Google DeepMind | Gemini 4 Argon、Fairwind Program | Google 公布 Gemini 4 Argon，先向可信任資安團隊開放而非全面上市 | 2026-10-01 04:00:05（Asia/Taipei；Axios 2026-09-30 20:00:05 UTC） | 2026-10-01 | 首次收錄 | https://deepmind.google/models/gemini/<br>https://www.axios.com/2026/09/30/google-gemini-4<br>https://arstechnica.com/google/2026/09/google-announces-gemini-4-argon-ai-model-but-you-cant-use-it-yet/ | eb96660280a4 |
