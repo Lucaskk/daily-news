@@ -1,7 +1,7 @@
 ---
 title: "科技產品新聞最近 14 天比對表"
 type: product-news-ledger-recent
-updated: 2026-10-15
+updated: 2026-10-16
 status: generated
 tags: [daily-news, tech-products, deduplication, recent]
 ---
@@ -12,10 +12,15 @@ tags: [daily-news, tech-products, deduplication, recent]
 
 - 掃描日報：14 份。
 - 最近 14 天項目：71 則。
-- 日報日期範圍：2026-10-02 至 2026-10-15。
+- 日報日期範圍：2026-10-03 至 2026-10-16。
 
 | 公司 | 產品 | 更新內容 | 發佈時間 | 收錄日期 | 狀態 | 來源網址 | 比對鍵 |
 |---|---|---|---|---|---|---|---|
+| Sony | 三款新 Walkman 預購 | Sony 開放三款新 Walkman 預購，美國旗艦定價 US$5,899 | 2026-10-15（官方發布日期） | 2026-10-16 | 首次收錄 | https://sony.mediaroom.com/2026-10-15-Sony-Electronics-Updates-its-Premium-Walkman-R-Lineup-Including-New-Signature-Series-Walkman-R-NW-WM1ZM3%2C-NW-WM1AM3-and-NW-ZX900-Digital-Media-Players<br>https://www.cool3c.com/article/253065 | 4efa9975676e |
+| OpenAI | GPT-Live 1.1 與 Quip | OpenAI 推出 GPT-Live 1.1 與 Quip，更新語音對話模型 | 2026-10-15（官方發布日期） | 2026-10-16 | 首次收錄 | https://help.openai.com/en/articles/6825453-chatgpt-release-notes<br>https://deploymentsafety.openai.com/gpt-live-1-1/avoiding-deceptive-interactions-with-users | 201cd094e87c |
+| Meta | 釋出 Muse Spark Open 權重 | Meta 釋出 Muse Spark Open 權重，官方示範以兩台高記憶體 Mac 執行 | 2026-10-15（官方發布日期） | 2026-10-16 | 首次收錄 | https://research.meta.ai/blog/muse-spark-open<br>https://dev.meta.ai/docs/muse-spark-open | e1f4a2583289 |
+| KDE | Plasma 6.8 | KDE 發布 Plasma 6.8，更新遠端桌面並移除 X11 登入工作階段 | 2026-10-14（官方發布日期） | 2026-10-16 | 首次收錄 | https://kde.org/announcements/plasma/6/6.8.0/ | d8f9587ddb58 |
+| Amazon / AWS | Bee Frontier 與 Eclipse | Amazon 推出 Bee Frontier 與 Eclipse，個人 AI 裝置搭配分級訂閱 | 2026-10-15 19:55:24（Asia/Taipei） | 2026-10-16 | 首次收錄 | https://www.aboutamazon.com/news/devices/amazon-personal-ai-bee-frontier-bee-eclipse | b4a43898c21e |
 | Microsoft | Xbox Nano 控制器開放預購 | Xbox Nano 控制器開放預購，十一月供應市場包含台灣 | 2026-10-14（官方發布日期） | 2026-10-15 | 首次收錄 | https://news.xbox.com/en-us/2026/10/14/xbox-nano-controller/<br>https://www.theverge.com/news/1011216/xbox-nano-controller-release-date-pricing | 253de11ca09a |
 | Tamron 公布 16–50mm F2.8 | A 鏡頭 | Tamron 公布 16–50mm F2.8 A 鏡頭，四種接環分批上市 | 2026-10-14（官方發布日期） | 2026-10-15 | 首次收錄 | https://www.tamron.com/global/news/detail/b091_20261014.html<br>https://www.cool3c.com/article/252999 | 40b67f71cba1 |
 | OpenAI | 公告部分 GPT-4 系列 API 模型將於明年一月停用 | OpenAI 公告部分 GPT-4 系列 API 模型將於明年一月停用 | 2026-10-14（官方公告日期） | 2026-10-15 | 首次收錄 | https://developers.openai.com/api/docs/deprecations | 074a855d304d |
@@ -82,8 +87,3 @@ tags: [daily-news, tech-products, deduplication, recent]
 | OpenAI | ChatGPT shopping、virtual try-on、Favorites | ChatGPT 上線服飾虛擬試穿與 Favorites，購物流程從搜尋延伸到比較收藏 | 2026-10-02 03:21（Asia/Taipei） | 2026-10-03 | 首次收錄 | https://help.openai.com/en/articles/6825453-chatgpt-release-notes<br>https://help.openai.com/en/articles/11128490-shopping-with-chatgpt-search<br>https://techcrunch.com/2026/10/01/chatgpt-can-now-virtually-try-on-clothes-for-you/ | 05443330556c |
 | Audible | Character Guide、Interactive Story、Visual Explorer | Audible 測試角色辨識、AI 角色對話與視覺探索三項互動功能 | 2026-10-01 21:00（Asia/Taipei） | 2026-10-03 | 首次收錄 | https://www.audible.com/about/newsroom/the-next-chapter-in-listening-new-ways-to-interact-with-stories-on-audible<br>https://techcrunch.com/2026/10/01/audibles-new-features-let-you-explore-book-worlds-and-even-talk-to-characters/ | b45759a28b75 |
 | Apple | macOS Full Disk Access controls | Apple 預告提高 macOS Full Disk Access 的操作門檻，直接點名 AI agents 風險 | 2026-10-02（官方僅提供日期） | 2026-10-03 | 首次收錄 | https://developer.apple.com/news/?id=p6zjojqw | c66a255f3eb4 |
-| Sony、AMD | PS5 Quick Spectral Super Resolution（QSSR） | Sony 把 QSSR 人工智慧升頻帶到一般 PS5，兩款遊戲率先更新 | 2026-10-02 00:53:00（Asia/Taipei） | 2026-10-02 | 首次收錄 | https://blog.playstation.com/2026/10/01/ai-upscaling-is-coming-to-ps5/<br>https://www.theverge.com/games/1003549/sony-ps5-quick-spectral-super-resolution-qssr | 413bdc139f05 |
-| Reddit | RSS、public Data API、Developer Platform | Reddit 公布 RSS 與公開 API 退場時程，要求應用遷移至 Developer Platform | 2026-10-01 01:45:00（Asia/Taipei） | 2026-10-02 | 首次收錄 | https://www.reddit.com/r/modnews/comments/1wubgvt/continuing_our_infrastructure_updates_whats/<br>https://www.reddit.com/r/redditdev/comments/1wubcvf/moving_data_api_apps_to_the_developer_platform/<br>https://techcrunch.com/2026/09/30/reddit-is-killing-rss-feeds-ending-public-api-access-because-of-ai-bots/ | 80baf7882026 |
-| HP | OmniBook 5 14 AI PC、ProBook 4 G2iS 14 AI PC | HP 推出 OmniBook 5 與 ProBook 4，以 OLED 螢幕和輕薄設計擴充筆電系列 | 2026-10-01（HP 官方發布日期；未提供時分） | 2026-10-02 | 首次收錄 | https://www.hp.com/us-en/newsroom/press-releases/2026/hp-brings-premium-pc-experiences-to-more-consumers.html | 6a6892ce62ce |
-| Anthropic | Claude for Government、Claude Code CLI、Claude for Microsoft 365 | Anthropic 將 Claude for Government 轉為正式供應，另開放 CLI 與 Microsoft 365 早期存取 | 2026-09-30（Anthropic 官方發布日期；未提供時分） | 2026-10-02 | 首次收錄 | https://claude.com/blog/claude-for-government-is-now-generally-available | 998178e0055d |
-| Amazon | Kindle、Kindle Paperwhite、Kindle Colorsoft 2026 | Amazon 更新 Kindle 全系列，採平整螢幕並新增鋁製機身選項 | 2026-10-01 21:00:00（Asia/Taipei） | 2026-10-02 | 首次收錄 | https://www.aboutamazon.com/news/devices/new-kindle-lineup-2026<br>https://www.theverge.com/tech/1002811/amazon-kindle-paperwhite-colorsoft-accessory-refresh | 7c8235152b46 |

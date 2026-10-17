@@ -1,0 +1,1563 @@
+<!doctype html>
+<html lang="zh-Hant" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="color-scheme" content="dark light">
+  <meta name="referrer" content="no-referrer">
+  <meta name="reader-version" content="20261017-080830-reader">
+  <title>每日全球與科技 AI 新聞 2026-10-17</title>
+  <!-- Product/press images retain their owners' rights; each figure links to its source.
+       Other photographs are identified as thematic, not event evidence.
+       Icons: Lucide 0.468.0, ISC license, https://lucide.dev/license
+       Official iOS association checked 2026-09-08:
+       https://chatgpt.com/.well-known/apple-app-site-association
+       / with a nonempty prompt or q is an associated app link. Safari/iOS controls
+       the final handoff. No custom URL scheme, API key or automatic transmission. -->
+  <style>* { box-sizing: border-box; }
+:root { color-scheme: dark; --paper: #171717; --surface: #222222; --ink: #efeeeb; --muted: #aaa9a5; --line: #383838; --accent: #91cec5; --warm: #e6bd8a; }
+:root[data-theme="light"] { color-scheme: light; --paper: #fafafa; --surface: #eeeeec; --ink: #202221; --muted: #606660; --line: #d5d8d4; --accent: #216d64; --warm: #85571f; }
+html { height: 100%; }
+body { margin: 0; background: var(--paper); color: var(--ink); font-family: -apple-system, BlinkMacSystemFont, "PingFang TC", "Noto Sans TC", "Microsoft JhengHei", sans-serif; font-size: 18px; line-height: 1.8; letter-spacing: 0; -webkit-text-size-adjust: 100%; height: 100vh; height: 100dvh; display: flex; flex-direction: column; overflow: hidden; }
+body.modal-open { overflow: hidden; }
+button, textarea, a { -webkit-tap-highlight-color: transparent; }
+button, textarea { font: inherit; color: inherit; }
+button, summary, a { touch-action: manipulation; }
+a { color: var(--accent); text-underline-offset: 4px; }
+a, p, h1, h2, h3, li, time { overflow-wrap: anywhere; }
+button, summary { cursor: pointer; }
+button { border: 1px solid var(--line); background: transparent; border-radius: 8px; }
+button:disabled { opacity: .3; cursor: default; }
+button:hover:not(:disabled), summary:hover { background: var(--surface); }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 5px; }
+[tabindex="-1"]:focus { outline: none; }
+svg { width: 21px; height: 21px; flex: 0 0 21px; stroke-width: 1.7; }
+.icon-button { display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; flex: 0 0 44px; }
+.masthead { position: relative; flex: 0 0 auto; z-index: 5; background: var(--paper); border-bottom: 1px solid var(--line); padding-top: env(safe-area-inset-top); }
+.masthead-inner { max-width: 1056px; margin: auto; min-height: 74px; display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 12px 28px; }
+.brand { display: flex; align-items: baseline; gap: 14px; }
+h1 { font-size: 22px; line-height: 1.25; margin: 0; }
+.brand > span { font-size: 14px; color: var(--muted); }
+.header-tools { display: flex; gap: 8px; align-items: center; }
+.header-tools > time { font-size: 14px; color: var(--muted); margin-right: 10px; font-variant-numeric: tabular-nums; }
+.header-tools button { border: 0; }
+.sections { max-width: 760px; display: flex; gap: 32px; margin: auto; min-height: 44px; font-size: 15px; }
+.sections a { display: inline-flex; gap: 7px; align-items: center; padding: 6px 0 10px; color: var(--muted); text-decoration: none; border-bottom: 2px solid transparent; }
+.sections a[aria-current="true"] { color: var(--ink); border-color: var(--accent); }
+.sections a[aria-disabled="true"] { display: none; }
+.sections span { font-size: 13px; color: var(--accent); }
+main { width: 100%; flex: 1; min-height: 0; padding: 0 max(28px, calc((100% - 760px) / 2)) 42px; margin: 0 auto; overflow-y: auto; scroll-padding-top: 12px; scrollbar-width: thin; }
+.story { padding: 30px 0 52px; border-bottom: 1px solid var(--line); scroll-margin-top: 6px; }
+.story + .story { padding-top: 46px; }
+.eyebrow { color: var(--accent); font-size: 14px; font-weight: 600; margin: 0 0 16px; display: flex; align-items: center; gap: 12px; }
+.eyebrow span { color: var(--muted); font-weight: 400; }
+.story-media { margin: 0 0 24px; }
+.story-media img { display: block; width: 100%; height: auto; aspect-ratio: 5 / 3; object-fit: cover; background: #eee; border-radius: 8px; }
+.story-media.contain img { object-fit: contain; }
+.story-media figcaption { color: var(--muted); font-size: 12px; line-height: 1.5; margin-top: 8px; }
+.story-media figcaption a { color: inherit; }
+.story-media.image-failed img { display: none; }
+h2 { font-size: 32px; line-height: 1.45; font-weight: 650; margin: 0 0 18px; }
+.metadata { display: flex; flex-wrap: wrap; gap: 4px 10px; color: var(--muted); font-size: 14px; line-height: 1.6; }
+.metadata time { font-variant-numeric: tabular-nums; }
+.byline { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 10px; font-size: 14px; line-height: 1.6; margin-top: 7px; }
+.byline > span { color: var(--muted); }
+.source-label { color: var(--accent); text-decoration: none; }
+.source-label:hover { text-decoration: underline; }
+.product { color: var(--warm); font-size: 14px; margin: 18px 0 -10px; }
+.lead { font-size: 20px; line-height: 1.85; margin: 24px 0 20px; }
+.key-facts { padding-left: 24px; margin: 0 0 30px; }
+.key-facts li { padding-left: 6px; margin-bottom: 14px; }
+.key-facts li::marker { color: var(--muted); }
+.article-actions { position: relative; }
+.ask-action, .share-action, .full-report > summary { display: flex; align-items: center; justify-content: center; gap: 9px; min-height: 50px; padding: 10px 14px; font-size: 16px; line-height: 1.4; border: 1px solid var(--line); border-radius: 8px; }
+.ask-action { position: absolute; top: 0; left: 0; width: calc(33.333% - 8px); }
+.share-action { position: absolute; top: 0; right: 0; width: calc(33.333% - 8px); }
+summary { list-style: none; }
+summary::-webkit-details-marker { display: none; }
+.full-report > summary { width: calc(33.333% - 8px); margin: 0 auto; }
+.full-report > summary svg:last-child { width: 16px; height: 16px; flex-basis: 16px; }
+.full-report[open] > summary svg:last-child { transform: rotate(180deg); }
+.when-open, .full-report[open] .when-closed { display: none; }
+.full-report[open] .when-open { display: inline; }
+.report-body { margin-top: 28px; padding-top: 4px; border-top: 1px solid var(--line); font-size: 17px; }
+.report-body h3 { font-size: 17px; font-weight: 650; margin: 24px 0 8px; color: var(--warm); }
+.report-body p { margin: 0; }
+.sources { padding-top: 20px; margin-top: 28px; border-top: 1px solid var(--line); font-size: 14px; }
+.sources h4 { margin: 0 0 12px; font-size: 14px; font-weight: 600; color: var(--muted); }
+.sources a { display: block; margin-top: 14px; text-decoration: none; overflow-wrap: anywhere; }
+.sources a:hover span { text-decoration: underline; }
+.sources strong { display: block; font-weight: 600; }
+.sources span { display: block; color: var(--muted); line-height: 1.7; margin-top: 3px; }
+.research-notes { padding-top: 44px; }
+.research-notes h2 { font-size: 26px; }
+.note { border-bottom: 1px solid var(--line); }
+.note > summary { display: flex; align-items: center; justify-content: space-between; gap: 18px; padding: 18px 0; font-size: 17px; }
+.note[open] > summary svg { transform: rotate(180deg); }
+.note-body { padding-bottom: 24px; font-size: 16px; }
+.reader-nav { position: relative; flex: 0 0 auto; align-self: center; display: flex; align-items: center; gap: 8px; background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 4px; margin: 8px auto max(8px, env(safe-area-inset-bottom)); }
+.reader-nav button { border: 0; }
+#position { min-width: 112px; font-size: 14px; text-align: center; font-variant-numeric: tabular-nums; }
+dialog { border: 1px solid var(--line); border-radius: 8px; background: var(--paper); color: var(--ink); width: min(560px, calc(100% - 32px)); max-height: calc(100dvh - 48px); padding: 24px; overflow-y: auto; overscroll-behavior: contain; }
+dialog::backdrop { background: #0009; }
+.dialog-head { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 16px; }
+.dialog-head h2 { font-size: 23px; margin: 0; }
+.dialog-head button { border: 0; }
+.ask-story-title { font-size: 17px; line-height: 1.7; margin: 0 0 20px; }
+label { display: block; font-size: 15px; margin: 10px 0 8px; }
+label > span { color: var(--muted); font-size: 13px; margin-left: 6px; }
+textarea { display: block; width: 100%; resize: vertical; border: 1px solid var(--line); border-radius: 8px; background: var(--surface); padding: 12px; font-size: 16px; line-height: 1.7; }
+textarea::placeholder { color: var(--muted); }
+.context-details { margin-top: 16px; font-size: 14px; color: var(--muted); }
+.context-details > summary { padding: 8px 0; text-decoration: underline; text-underline-offset: 4px; }
+.context-details textarea { font-size: 14px; color: var(--ink); }
+.handoff-note { font-size: 13px; color: var(--muted); margin: 14px 0; line-height: 1.7; }
+.handoff-actions { display: flex; gap: 12px; align-items: center; }
+.primary-action { display: flex; align-items: center; justify-content: center; gap: 12px; flex: 1; min-height: 48px; padding: 10px 12px; border-radius: 8px; text-decoration: none; font-size: 16px; background: var(--accent); color: var(--paper); font-weight: 600; }
+.primary-action[aria-disabled="true"] { opacity: .45; cursor: not-allowed; }
+.status { color: var(--accent); min-height: 24px; margin: 12px 0 0; font-size: 14px; }
+.toc a { display: flex; gap: 14px; border-bottom: 1px solid var(--line); padding: 14px 0; text-decoration: none; font-size: 15px; line-height: 1.7; color: var(--ink); }
+.toc a span { color: var(--accent); flex: 0 0 26px; }
+.theme-toggle svg:last-child, [data-theme="light"] .theme-toggle svg:first-child { display: none; }
+[data-theme="light"] .theme-toggle svg:last-child { display: block; }
+.skip-link { position: fixed; left: 8px; top: -80px; z-index: 10; padding: 8px; background: var(--paper); }
+.skip-link:focus { top: 8px; }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.noscript { padding: 16px 24px 100px; font-size: 14px; }
+@media (max-width: 850px) { .sections { padding: 0 28px; } }
+@media (max-width: 600px) {
+  body { font-size: 17px; }
+  .masthead-inner { padding: 10px 18px; min-height: 66px; gap: 6px; }
+  .brand { display: block; }
+  .brand h1 { font-size: 20px; }
+  .brand > span { font-size: 12px; line-height: 1.3; display: block; margin-top: 3px; }
+  .header-tools { gap: 2px; }
+  .header-tools > time { font-size: 12px; margin-right: 4px; }
+  .header-tools .icon-button { width: 38px; height: 44px; flex-basis: 38px; }
+  .sections { padding: 0 18px; gap: 26px; font-size: 14px; }
+  main { padding: 0 18px 36px; }
+  .story { padding-top: 22px; }
+  .story + .story { padding-top: 36px; }
+  .eyebrow { margin-bottom: 12px; }
+  .story-media { margin-bottom: 20px; }
+  h2 { font-size: 26px; line-height: 1.5; margin-bottom: 14px; }
+  .lead { font-size: 18px; line-height: 1.9; margin-top: 22px; }
+  .key-facts { padding-left: 21px; }
+  .key-facts li { padding-left: 4px; margin-bottom: 16px; }
+  .ask-action, .share-action, .full-report > summary { padding: 10px 5px; font-size: 14px; gap: 5px; min-height: 50px; }
+  .full-report > summary svg:last-child { display: none; }
+  .report-body { font-size: 16px; }
+  dialog { padding: 20px; }
+}
+@media (max-width: 350px) {
+  .header-tools > time { display: none; }
+  .sections { gap: 20px; }
+  h2 { font-size: 24px; }
+  .ask-action, .share-action, .full-report > summary { font-size: 13px; gap: 4px; }
+  .ask-action svg, .share-action svg, .full-report > summary svg { width: 17px; height: 17px; flex-basis: 17px; }
+}
+@media print {
+  body { display: block; height: auto; overflow: visible; }
+  .masthead { position: static; }
+  .header-tools button, .reader-nav, .ask-action, .share-action, dialog { display: none; }
+  main { max-width: none; padding-bottom: 0; overflow: visible; }
+  body { color: #111; background: white; }
+  .story { break-inside: avoid; }
+}
+</style>
+</head>
+<body>
+  <a class="skip-link" href="#content">跳至新聞</a>
+  <header class="masthead">
+    <div class="masthead-inner">
+      <div class="brand"><h1>每日新聞</h1><span>全球與科技 AI</span></div>
+      <div class="header-tools"><time datetime="2026-10-17">2026-10-17</time>
+        <button class="icon-button theme-toggle" id="theme-toggle" title="切換淺色" aria-label="切換淺色"><svg aria-hidden="true" focusable="false"
+  class="lucide lucide-sun"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <circle cx="12" cy="12" r="4" />
+  <path d="M12 2v2" />
+  <path d="M12 20v2" />
+  <path d="m4.93 4.93 1.41 1.41" />
+  <path d="m17.66 17.66 1.41 1.41" />
+  <path d="M2 12h2" />
+  <path d="M20 12h2" />
+  <path d="m6.34 17.66-1.41 1.41" />
+  <path d="m19.07 4.93-1.41 1.41" />
+</svg><svg aria-hidden="true" focusable="false"
+  class="lucide lucide-moon"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
+</svg></button>
+        <button class="icon-button" id="open-index" title="新聞目錄" aria-label="新聞目錄" aria-haspopup="dialog"><svg aria-hidden="true" focusable="false"
+  class="lucide lucide-list"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M3 12h.01" />
+  <path d="M3 18h.01" />
+  <path d="M3 6h.01" />
+  <path d="M8 12h13" />
+  <path d="M8 18h13" />
+  <path d="M8 6h13" />
+</svg></button>
+      </div>
+    </div>
+    <nav class="sections" aria-label="新聞分類">
+      <a href="#t1" data-section="tech" >科技產品 <span>6</span></a>
+      <a href="#1" data-section="world">全球焦點 <span>10</span></a>
+      <a href="#notes" data-section="notes">研究備註</a>
+    </nav>
+  </header>
+  <main id="content">
+    <article id="t1" class="story" data-category="tech" data-rank="T1" aria-labelledby="title-t1">
+      <p class="eyebrow">科技產品 <span>T1</span></p>
+
+      <h2 id="title-t1" tabindex="-1">ChatGPT 開始推出 Slides，可在 Space 共同編輯與匯出簡報</h2>
+      <div class="metadata"><span>發佈時間</span><time datetime="2026-10-16">2026-10-16（官方發布日期）</time></div>
+      <div class="byline"><span>出處</span><a class="source-label" href="https://help.openai.com/en/articles/6825453-chatgpt-release-notes" target="_blank" rel="noopener noreferrer">OpenAI：ChatGPT release notes，October 16簡報段落</a></div>
+      <p class="product">OpenAI／ChatGPT Slides、Space</p><p class="lead">使用者可從對話、檔案或大綱建立簡報，在Space邀請團隊即時編輯與留言；功能正向符合資格的方案推出。</p>
+      <ul class="key-facts"><li>可直接編輯文字、圖片、形狀與圖表，亦可要求ChatGPT修改。</li><li>網頁版可匯出PowerPoint、PDF或Google Slides；桌面版可在已安裝的PowerPoint或Keynote開啟。</li><li>原廠列出具Space存取權的Pro、Business與Enterprise使用者，採漸進推出，不是所有帳號同時開放。</li></ul>
+      <div class="article-actions">
+        <button class="ask-action" type="button" data-ask="t1" aria-haspopup="dialog"><svg aria-hidden="true" focusable="false"
+  class="lucide lucide-message-circle"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" />
+</svg><span>詢問後續問題</span></button>
+        <button class="share-action" type="button" data-share="t1" aria-label="分享這則新聞"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-share-2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" x2="15.42" y1="13.51" y2="17.49"/><line x1="15.41" x2="8.59" y1="6.51" y2="10.49"/></svg><span>分享</span></button>
+        <details class="full-report" id="report-t1">
+          <summary aria-controls="full-t1"><svg aria-hidden="true" focusable="false"
+  class="lucide lucide-file-text"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" />
+  <path d="M14 2v4a2 2 0 0 0 2 2h4" />
+  <path d="M10 9H8" />
+  <path d="M16 13H8" />
+  <path d="M16 17H8" />
+</svg><span class="when-closed">完整報告</span><span class="when-open">收合報告</span><svg aria-hidden="true" focusable="false"
+  class="lucide lucide-chevron-down"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="m6 9 6 6 6-6" />
+</svg></summary>
+          <div class="report-body" id="full-t1"><h3>事件背景與影響</h3><p>AI簡報不再只有一次生成，後續修訂、團隊協作與輸出到常用格式成為同一流程；但仍需人工檢查內容與版面。</p><h3>事件與發佈依據</h3><p>官方release notes的October 16「Create and collaborate on slides」段落，未虛構首發時分。</p><h3>收錄紀錄</h3><p>10/03–10/16十四份日報與同窗產品表沒有本次Slides發布，與既有Space及其他文件工具不同。</p><h3>尚待確認</h3><p>帳號資格及受管理工作區設定仍影響供應；本文未實測使用者帳號或保證匯出後所有格式完全一致。</p><h3>相關實體與概念</h3><p>OpenAI、ChatGPT Slides、Space、協作、PowerPoint、Google Slides</p><div class="sources"><h4>原始來源</h4><a href="https://help.openai.com/en/articles/6825453-chatgpt-release-notes" target="_blank" rel="noopener noreferrer"><strong>OpenAI：ChatGPT release notes，October 16簡報段落</strong><span>https://help.openai.com/en/articles/6825453-chatgpt-release-notes</span></a></div></div>
+        </details>
+      </div>
+    </article><article id="t2" class="story" data-category="tech" data-rank="T2" aria-labelledby="title-t2">
+      <p class="eyebrow">科技產品 <span>T2</span></p>
+      <!-- Image original: https://www.analogue.co/super-nt/opengraph-image.jpg --><figure class="story-media contain"><img src="assets/analogue-super-nt-plus.jpg" alt="Analogue官方Super Nt+新品圖" width="1200" height="720" loading="lazy" decoding="async"><figcaption>Super Nt+官方產品圖；非Mega Sg+，預計十二月出貨。 <a href="https://www.analogue.co/super-nt" target="_blank" rel="noopener noreferrer">Analogue</a></figcaption></figure>
+      <h2 id="title-t2" tabindex="-1">Analogue 公布 Super Nt+ 與 Mega Sg+，十九日開放預購、十二月出貨</h2>
+      <div class="metadata"><span>發佈時間</span><time datetime="2026-10-16T17:03:29Z">2026-10-17 01:03:29（Asia/Taipei）</time></div>
+      <div class="byline"><span>出處</span><a class="source-label" href="https://www.analogue.co/super-nt" target="_blank" rel="noopener noreferrer">Analogue：Super Nt+規格、價格與限制</a><a class="source-label" href="https://www.analogue.co/mega-sg" target="_blank" rel="noopener noreferrer">Analogue：Mega Sg+規格與配件</a></div>
+      <p class="product">Analogue／Super Nt+、Mega Sg+</p><p class="lead">兩款FPGA復古主機各售US$219.99，新增內建Bluetooth、2.4GHz無線及USB-C供電，維持1080p輸出與實體卡匣取向。</p>
+      <ul class="key-facts"><li>預購為10/19 08:00PDT，即台北10/19 23:00；官方預計2026年12月出貨。</li><li>Super Nt+面向SNES／Super Famicom；Mega Sg+面向Sega系統，部分卡匣需另購轉接器。</li><li>不支援openFPGA，不含手把或遊戲，也不具Analogue 3D的4K顯示與即時存檔等全部功能。</li></ul>
+      <div class="article-actions">
+        <button class="ask-action" type="button" data-ask="t2" aria-haspopup="dialog"><svg aria-hidden="true" focusable="false"
+  class="lucide lucide-message-circle"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" />
+</svg><span>詢問後續問題</span></button>
+        <button class="share-action" type="button" data-share="t2" aria-label="分享這則新聞"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-share-2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" x2="15.42" y1="13.51" y2="17.49"/><line x1="15.41" x2="8.59" y1="6.51" y2="10.49"/></svg><span>分享</span></button>
+        <details class="full-report" id="report-t2">
+          <summary aria-controls="full-t2"><svg aria-hidden="true" focusable="false"
+  class="lucide lucide-file-text"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" />
+  <path d="M14 2v4a2 2 0 0 0 2 2h4" />
+  <path d="M10 9H8" />
+  <path d="M16 13H8" />
+  <path d="M16 17H8" />
+</svg><span class="when-closed">完整報告</span><span class="when-open">收合報告</span><svg aria-hidden="true" focusable="false"
+  class="lucide lucide-chevron-down"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="m6 9 6 6 6-6" />
+</svg></summary>
+          <div class="report-body" id="full-t2"><h3>事件背景與影響</h3><p>收藏者能用原卡匣搭配現代顯示器與無線手把，但新機不等於萬用模擬平台；另購配件與功能限制需一併考慮。</p><h3>事件與發佈依據</h3><p>10/16 17:03:29UTC首發報導確認新品，規格與供貨以兩個官方產品頁為準。</p><h3>收錄紀錄</h3><p>近十四份日報與同窗表無這次加號版本發布；不是舊Super Nt／Mega Sg單純補貨。</p><h3>尚待確認</h3><p>預計出貨不是保證交貨日；相容性與低延遲宣稱來自原廠，本站未以所有卡匣測試。USB-A不代表可直接接USB有線手把。</p><h3>相關實體與概念</h3><p>Analogue、FPGA、Super Nt+、Mega Sg+、實體卡匣、遊戲保存</p><div class="sources"><h4>原始來源</h4><a href="https://www.analogue.co/super-nt" target="_blank" rel="noopener noreferrer"><strong>Analogue：Super Nt+規格、價格與限制</strong><span>https://www.analogue.co/super-nt</span></a><a href="https://www.analogue.co/mega-sg" target="_blank" rel="noopener noreferrer"><strong>Analogue：Mega Sg+規格與配件</strong><span>https://www.analogue.co/mega-sg</span></a></div></div>
+        </details>
+      </div>
+    </article><article id="t3" class="story" data-category="tech" data-rank="T3" aria-labelledby="title-t3">
+      <p class="eyebrow">科技產品 <span>T3</span></p>
+      <!-- Image original: https://press.razer.com/wp-content/uploads/2026/10/KV-1024x576.png --><figure class="story-media contain"><img src="assets/razer-barracuda-v2-pro.png" alt="Razer官方Barracuda V2 Pro耳機新品圖" width="1200" height="720" loading="lazy" decoding="async"><figcaption>Barracuda V2 Pro官方新聞圖，非本站實測。 <a href="https://www.razer.com/newsroom/product-news/barracuda-v2-pro" target="_blank" rel="noopener noreferrer">Razer Newsroom</a></figcaption></figure>
+      <h2 id="title-t3" tabindex="-1">Razer 發布 Barracuda V2 Pro，以雙無線與降噪整合遊戲及日常通話</h2>
+      <div class="metadata"><span>發佈時間</span><time datetime="2026-10-15T14:25:31Z">2026-10-15 22:25:31（Asia/Taipei）</time></div>
+      <div class="byline"><span>出處</span><a class="source-label" href="https://www.razer.com/newsroom/product-news/barracuda-v2-pro" target="_blank" rel="noopener noreferrer">Razer：Barracuda V2 Pro正式發布與功能</a></div>
+      <p class="product">Razer／Barracuda V2 Pro</p><p class="lead">新耳機採40mm生物纖維單體、混合式主動降噪與雙模式麥克風，支援同時連接2.4GHz及Bluetooth。</p>
+      <ul class="key-facts"><li>原廠標示重量285克、可折疊，並有無線接收器收納位置。</li><li>可拆式吊桿麥克風與內建波束成形麥克風切換，提供AI麥克風降噪。</li><li>PC上的THX Spatial Audio+支援7.1.4虛擬環繞；最長70小時續航為原廠條件下數據。</li></ul>
+      <div class="article-actions">
+        <button class="ask-action" type="button" data-ask="t3" aria-haspopup="dialog"><svg aria-hidden="true" focusable="false"
+  class="lucide lucide-message-circle"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" />
+</svg><span>詢問後續問題</span></button>
+        <button class="share-action" type="button" data-share="t3" aria-label="分享這則新聞"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-share-2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" x2="15.42" y1="13.51" y2="17.49"/><line x1="15.41" x2="8.59" y1="6.51" y2="10.49"/></svg><span>分享</span></button>
+        <details class="full-report" id="report-t3">
+          <summary aria-controls="full-t3"><svg aria-hidden="true" focusable="false"
+  class="lucide lucide-file-text"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" />
+  <path d="M14 2v4a2 2 0 0 0 2 2h4" />
+  <path d="M10 9H8" />
+  <path d="M16 13H8" />
+  <path d="M16 17H8" />
+</svg><span class="when-closed">完整報告</span><span class="when-open">收合報告</span><svg aria-hidden="true" focusable="false"
+  class="lucide lucide-chevron-down"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="m6 9 6 6 6-6" />
+</svg></summary>
+          <div class="report-body" id="full-t3"><h3>事件背景與影響</h3><p>跨遊戲、行動裝置與會議的耳機可減少換設備，但麥克風品質、佩戴及平台相容性仍要按實際使用情境評估。</p><h3>事件與發佈依據</h3><p>Razer原廠發布metadata14:25:31UTC；不是10/16評測日期。</p><h3>收錄紀錄</h3><p>十四份日報與同窗表無Barracuda V2 Pro本次新機，評測新品線索已回查正式公告。</p><h3>尚待確認</h3><p>不以評測單一市場價格推算全球售價；續航與空間音訊支援依設定／平台而異，並非本站實測。</p><h3>相關實體與概念</h3><p>Razer、Barracuda、ANC、2.4GHz、Bluetooth、虛擬環繞、麥克風</p><div class="sources"><h4>原始來源</h4><a href="https://www.razer.com/newsroom/product-news/barracuda-v2-pro" target="_blank" rel="noopener noreferrer"><strong>Razer：Barracuda V2 Pro正式發布與功能</strong><span>https://www.razer.com/newsroom/product-news/barracuda-v2-pro</span></a></div></div>
+        </details>
+      </div>
+    </article><article id="t4" class="story" data-category="tech" data-rank="T4" aria-labelledby="title-t4">
+      <p class="eyebrow">科技產品 <span>T4</span></p>
+
+      <h2 id="title-t4" tabindex="-1">Steam 開放 Achievement Sets 測試，分開追蹤本體與 DLC 成就</h2>
+      <div class="metadata"><span>發佈時間</span><time datetime="2026-10-15T22:06:30Z">2026-10-16 06:06:30（Asia/Taipei）</time></div>
+      <div class="byline"><span>出處</span><a class="source-label" href="https://store.steampowered.com/news/app/593110/view/710037059469839141" target="_blank" rel="noopener noreferrer">Steam：Achievement Sets beta原始公告</a><a class="source-label" href="https://steamcommunity.com/groups/SteamClientBeta/discussions/3/573803804385027371/" target="_blank" rel="noopener noreferrer">Steam Client Beta：官方回饋討論</a></div>
+      <p class="product">Valve／Steam Achievement Sets</p><p class="lead">開發者可將成就分成不同集合，讓玩家看清本體與額外內容的進度；先前達成的集合完成紀錄可保留。</p>
+      <ul class="key-facts"><li>每個集合有自己的進度與完成獎盃；後續增加成就時，原完成紀錄仍保留。</li><li>DLC集合與本體分開；尚未取得的額外內容不直接納入整體遊戲進度。</li><li>功能目前在Steam Client Beta與相應網頁提供，並從已加入支援的遊戲開始。</li></ul>
+      <div class="article-actions">
+        <button class="ask-action" type="button" data-ask="t4" aria-haspopup="dialog"><svg aria-hidden="true" focusable="false"
+  class="lucide lucide-message-circle"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" />
+</svg><span>詢問後續問題</span></button>
+        <button class="share-action" type="button" data-share="t4" aria-label="分享這則新聞"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-share-2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" x2="15.42" y1="13.51" y2="17.49"/><line x1="15.41" x2="8.59" y1="6.51" y2="10.49"/></svg><span>分享</span></button>
+        <details class="full-report" id="report-t4">
+          <summary aria-controls="full-t4"><svg aria-hidden="true" focusable="false"
+  class="lucide lucide-file-text"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" />
+  <path d="M14 2v4a2 2 0 0 0 2 2h4" />
+  <path d="M10 9H8" />
+  <path d="M16 13H8" />
+  <path d="M16 17H8" />
+</svg><span class="when-closed">完整報告</span><span class="when-open">收合報告</span><svg aria-hidden="true" focusable="false"
+  class="lucide lucide-chevron-down"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="m6 9 6 6 6-6" />
+</svg></summary>
+          <div class="report-body" id="full-t4"><h3>事件背景與影響</h3><p>持續更新遊戲不必每次新增DLC就讓玩家難辨完成狀態，但開發者必須加入支援，不能假設所有遊戲立即改版。</p><h3>事件與發佈依據</h3><p>Steam官方10/15 15:06:30PDT公告beta，換算22:06:30UTC。</p><h3>收錄紀錄</h3><p>十四份日報與同窗表無Achievement Sets此次測試，不把其他Steam更新當同事件。</p><h3>尚待確認</h3><p>介面與完成度規則仍可能在測試中調整；各遊戲何時採用由開發者決定，不代表所有歷史成就都已重新分組。</p><h3>相關實體與概念</h3><p>Valve、Steam、成就、DLC、公開測試、遊戲完成度</p><div class="sources"><h4>原始來源</h4><a href="https://store.steampowered.com/news/app/593110/view/710037059469839141" target="_blank" rel="noopener noreferrer"><strong>Steam：Achievement Sets beta原始公告</strong><span>https://store.steampowered.com/news/app/593110/view/710037059469839141</span></a><a href="https://steamcommunity.com/groups/SteamClientBeta/discussions/3/573803804385027371/" target="_blank" rel="noopener noreferrer"><strong>Steam Client Beta：官方回饋討論</strong><span>https://steamcommunity.com/groups/SteamClientBeta/discussions/3/573803804385027371/</span></a></div></div>
+        </details>
+      </div>
+    </article><article id="t5" class="story" data-category="tech" data-rank="T5" aria-labelledby="title-t5">
+      <p class="eyebrow">科技產品 <span>T5</span></p>
+
+      <h2 id="title-t5" tabindex="-1">Gmail Live 擴展至付費 Workspace，以語音查詢信箱並顯示郵件來源</h2>
+      <div class="metadata"><span>發佈時間</span><time datetime="2026-10-15">2026-10-15（官方發布日期）</time></div>
+      <div class="byline"><span>出處</span><a class="source-label" href="https://workspaceupdates.googleblog.com/2026/10/gmail-live-is-rolling-out-to-paid-Workspace-users.html" target="_blank" rel="noopener noreferrer">Google Workspace Updates：Gmail Live部署、方案與地區</a></div>
+      <p class="product">Google／Gmail Live、Google Workspace</p><p class="lead">符合資格的Workspace使用者開始取得手機語音信箱查詢，回答可附郵件來源卡片，並可選擇聲音。</p>
+      <ul class="key-facts"><li>Android與iOS可在Gmail搜尋列進入，首次使用須授予麥克風權限。</li><li>Rapid與Scheduled Release從10/15起漸進部署，可能最多15天才可見。</li><li>官方限制為美國、EN-US，且依方案與組織Gemini／智慧功能設定供應，不等於台灣繁中已開放。</li></ul>
+      <div class="article-actions">
+        <button class="ask-action" type="button" data-ask="t5" aria-haspopup="dialog"><svg aria-hidden="true" focusable="false"
+  class="lucide lucide-message-circle"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" />
+</svg><span>詢問後續問題</span></button>
+        <button class="share-action" type="button" data-share="t5" aria-label="分享這則新聞"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-share-2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" x2="15.42" y1="13.51" y2="17.49"/><line x1="15.41" x2="8.59" y1="6.51" y2="10.49"/></svg><span>分享</span></button>
+        <details class="full-report" id="report-t5">
+          <summary aria-controls="full-t5"><svg aria-hidden="true" focusable="false"
+  class="lucide lucide-file-text"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" />
+  <path d="M14 2v4a2 2 0 0 0 2 2h4" />
+  <path d="M10 9H8" />
+  <path d="M16 13H8" />
+  <path d="M16 17H8" />
+</svg><span class="when-closed">完整報告</span><span class="when-open">收合報告</span><svg aria-hidden="true" focusable="false"
+  class="lucide lucide-chevron-down"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="m6 9 6 6 6-6" />
+</svg></summary>
+          <div class="report-body" id="full-t5"><h3>事件背景與影響</h3><p>行動中能用自然語言找信，但涉及私人工作資料與摘要正確性；可回到原信核對比單純聽到流暢答案更重要。</p><h3>事件與發佈依據</h3><p>Google Workspace Updates的10/15單篇公告；不以較晚媒體報導或週報日期當開始部署日。</p><h3>收錄紀錄</h3><p>近十四份日報與同窗表無此次Gmail Live企業供應擴充；不是重刊先前Google其他代理功能。</p><h3>尚待確認</h3><p>媒體稱企業版稍後推出，官方則已公告漸進部署，本期採官方。AI回答仍應核對原信，不保證帳號立即可用。</p><h3>相關實體與概念</h3><p>Google、Gmail Live、Gemini、Workspace、語音搜尋、來源卡片</p><div class="sources"><h4>原始來源</h4><a href="https://workspaceupdates.googleblog.com/2026/10/gmail-live-is-rolling-out-to-paid-Workspace-users.html" target="_blank" rel="noopener noreferrer"><strong>Google Workspace Updates：Gmail Live部署、方案與地區</strong><span>https://workspaceupdates.googleblog.com/2026/10/gmail-live-is-rolling-out-to-paid-Workspace-users.html</span></a></div></div>
+        </details>
+      </div>
+    </article><article id="t6" class="story" data-category="tech" data-rank="T6" aria-labelledby="title-t6">
+      <p class="eyebrow">科技產品 <span>T6</span></p>
+
+      <h2 id="title-t6" tabindex="-1">Apple 強化 App Store 審查規則，明確禁止非合意親密影像與審後變裝功能</h2>
+      <div class="metadata"><span>發佈時間</span><time datetime="2026-10-16">2026-10-16（官方發布日期）</time></div>
+      <div class="byline"><span>出處</span><a class="source-label" href="https://developer.apple.com/news/?id=vvzx6cul" target="_blank" rel="noopener noreferrer">Apple Developer：非合意親密影像與bait-and-switch審查更新</a></div>
+      <p class="product">Apple／App Store、App Review Guidelines</p><p class="lead">Apple進一步明示，利用AI生成真實人物非合意裸露影像的App，以及通過審核後才顯露有害隱藏功能的App，違反平台標準。</p>
+      <ul class="key-facts"><li>原廠強調色情內容長期受禁，本次是強化、延伸既有標準，不是首次發現此類風險。</li><li>含使用者生成內容的App須過濾不當內容、提供檢舉機制並讓使用者封鎖濫用帳號。</li><li>隱藏或未揭露功能，以及審核後才露出有害能力的bait-and-switch做法，同樣受到規範。</li></ul>
+      <div class="article-actions">
+        <button class="ask-action" type="button" data-ask="t6" aria-haspopup="dialog"><svg aria-hidden="true" focusable="false"
+  class="lucide lucide-message-circle"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" />
+</svg><span>詢問後續問題</span></button>
+        <button class="share-action" type="button" data-share="t6" aria-label="分享這則新聞"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-share-2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" x2="15.42" y1="13.51" y2="17.49"/><line x1="15.41" x2="8.59" y1="6.51" y2="10.49"/></svg><span>分享</span></button>
+        <details class="full-report" id="report-t6">
+          <summary aria-controls="full-t6"><svg aria-hidden="true" focusable="false"
+  class="lucide lucide-file-text"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" />
+  <path d="M14 2v4a2 2 0 0 0 2 2h4" />
+  <path d="M10 9H8" />
+  <path d="M16 13H8" />
+  <path d="M16 17H8" />
+</svg><span class="when-closed">完整報告</span><span class="when-open">收合報告</span><svg aria-hidden="true" focusable="false"
+  class="lucide lucide-chevron-down"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="m6 9 6 6 6-6" />
+</svg></summary>
+          <div class="report-body" id="full-t6"><h3>事件背景與影響</h3><p>規則影響App能否分發與開發者的內容治理責任，但文字更新不是所有違規內容已被偵測或移除的證據。</p><h3>事件與發佈依據</h3><p>Apple Developer當日規則更新公告，是可核實的分發／權限政策變更。</p><h3>收錄紀錄</h3><p>十四份日報與同窗表無此次規則更新；不是把過去下架個別App再刊一次。</p><h3>尚待確認</h3><p>實際審查與執法效果仍需觀察；本文不主張所有相關App已下架，也不以規則公告替個別案件作法律結論。</p><h3>相關實體與概念</h3><p>Apple、App Store、App Review、生成式AI、非合意影像、內容治理</p><div class="sources"><h4>原始來源</h4><a href="https://developer.apple.com/news/?id=vvzx6cul" target="_blank" rel="noopener noreferrer"><strong>Apple Developer：非合意親密影像與bait-and-switch審查更新</strong><span>https://developer.apple.com/news/?id=vvzx6cul</span></a></div></div>
+        </details>
+      </div>
+    </article><article id="1" class="story" data-category="world" data-rank="1" aria-labelledby="title-1">
+      <p class="eyebrow">全球焦點 <span>1</span></p>
+
+      <h2 id="title-1" tabindex="-1">續報｜俄軍再襲烏克蘭九個地區，造成大規模停電與至少十五人受傷</h2>
+      <div class="metadata"><span>發佈時間</span><time datetime="2026-10-16T10:06:59Z">2026-10-16 18:06:59（Asia/Taipei）</time></div>
+      <div class="byline"><span>出處</span><a class="source-label" href="https://apnews.com/article/025bdb5cebc0be727a6197ce37f2c365" target="_blank" rel="noopener noreferrer">Associated Press：週五九地區襲擊與停電</a></div>
+      <p class="lead">烏方官員通報新一輪俄軍攻擊使數十萬戶停電，至少十五人受傷。</p>
+      <ul class="key-facts"><li>本次通報涵蓋九個地區，與先前能源攻擊屬不同日期事件。</li><li>住宅與供電受損情況由烏方官員提供，戰時仍難全面獨立核實。</li></ul>
+      <div class="article-actions">
+        <button class="ask-action" type="button" data-ask="1" aria-haspopup="dialog"><svg aria-hidden="true" focusable="false"
+  class="lucide lucide-message-circle"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" />
+</svg><span>詢問後續問題</span></button>
+        <button class="share-action" type="button" data-share="1" aria-label="分享這則新聞"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-share-2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" x2="15.42" y1="13.51" y2="17.49"/><line x1="15.41" x2="8.59" y1="6.51" y2="10.49"/></svg><span>分享</span></button>
+        <details class="full-report" id="report-1">
+          <summary aria-controls="full-1"><svg aria-hidden="true" focusable="false"
+  class="lucide lucide-file-text"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" />
+  <path d="M14 2v4a2 2 0 0 0 2 2h4" />
+  <path d="M10 9H8" />
+  <path d="M16 13H8" />
+  <path d="M16 17H8" />
+</svg><span class="when-closed">完整報告</span><span class="when-open">收合報告</span><svg aria-hidden="true" focusable="false"
+  class="lucide lucide-chevron-down"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="m6 9 6 6 6-6" />
+</svg></summary>
+          <div class="report-body" id="full-1"><h3>事件背景與影響</h3><p>寒冬前電力與民生設施再次承壓，平民保護及修復能力成為戰事重要面向。</p><h3>事件與發佈依據</h3><p>AP週五10:06:59UTC首發，採本窗內新襲擊，不是前日文章更新。</p><h3>收錄紀錄</h3><p>10/16已收錄烏方恢復攻擊俄國煉油廠；新增週五俄軍對九地區攻擊及新傷亡、停電，不重述停火破裂聲明。</p><h3>尚待確認</h3><p>傷亡與修復規模可能更新，不將一方通報視為全部戰果。</p><h3>相關實體與概念</h3><p>Ukraine、Russia、電網、平民保護、能源安全</p><div class="sources"><h4>原始來源</h4><a href="https://apnews.com/article/025bdb5cebc0be727a6197ce37f2c365" target="_blank" rel="noopener noreferrer"><strong>Associated Press：週五九地區襲擊與停電</strong><span>https://apnews.com/article/025bdb5cebc0be727a6197ce37f2c365</span></a></div></div>
+        </details>
+      </div>
+    </article><article id="2" class="story" data-category="world" data-rank="2" aria-labelledby="title-2">
+      <p class="eyebrow">全球焦點 <span>2</span></p>
+
+      <h2 id="title-2" tabindex="-1">巴西公布亞馬遜年度砍伐面積降至 3,335 平方公里，創監測以來最低</h2>
+      <div class="metadata"><span>發佈時間</span><time datetime="2026-10-16T17:54:00Z">2026-10-17 01:54:00（Asia/Taipei）</time></div>
+      <div class="byline"><span>出處</span><a class="source-label" href="https://www.gov.br/mma/pt-br/noticias-defeso-eleitoral/brasil-alcanca-menores-taxas-de-desmatamento-da-serie-historica-na-amazonia-e-no-cerrado" target="_blank" rel="noopener noreferrer">巴西環境部：年度資料、比較基期與範圍</a><a class="source-label" href="https://data.inpe.br/biomasbr/estimativa-de-desmatamento-na-amazonia-legal-para-2026/" target="_blank" rel="noopener noreferrer">INPE：2026亞馬遜監測估計</a><a class="source-label" href="https://abcnews.com/International/wireStory/brazil-amazon-deforestation-fell-lowest-level-1988-137329441" target="_blank" rel="noopener noreferrer">AP／ABC：政策與風險背景</a></div>
+      <p class="lead">INPE監測顯示，2025年8月至2026年7月亞馬遜砍伐3,335平方公里，較前期5,731平方公里減少41.8%。</p>
+      <ul class="key-facts"><li>這是自1988年監測開始以來最低年度值，並非森林已沒有損失。</li><li>Cerrado同期為5,516.69平方公里，下降23.8%，兩種生態區數字不可互換。</li><li>統計截止7月，因此不包括今年10月的新野火。</li></ul>
+      <div class="article-actions">
+        <button class="ask-action" type="button" data-ask="2" aria-haspopup="dialog"><svg aria-hidden="true" focusable="false"
+  class="lucide lucide-message-circle"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" />
+</svg><span>詢問後續問題</span></button>
+        <button class="share-action" type="button" data-share="2" aria-label="分享這則新聞"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-share-2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" x2="15.42" y1="13.51" y2="17.49"/><line x1="15.41" x2="8.59" y1="6.51" y2="10.49"/></svg><span>分享</span></button>
+        <details class="full-report" id="report-2">
+          <summary aria-controls="full-2"><svg aria-hidden="true" focusable="false"
+  class="lucide lucide-file-text"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" />
+  <path d="M14 2v4a2 2 0 0 0 2 2h4" />
+  <path d="M10 9H8" />
+  <path d="M16 13H8" />
+  <path d="M16 17H8" />
+</svg><span class="when-closed">完整報告</span><span class="when-open">收合報告</span><svg aria-hidden="true" focusable="false"
+  class="lucide lucide-chevron-down"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="m6 9 6 6 6-6" />
+</svg></summary>
+          <div class="report-body" id="full-2"><h3>事件背景與影響</h3><p>森林損失降低有助碳儲存與生態保護，但年度砍伐數字不能涵蓋野火、乾旱與全部森林退化。</p><h3>事件與發佈依據</h3><p>巴西環境部10/16 14:54巴西利亞時間首發，即17:54UTC；不是10月當日砍伐量。</p><h3>收錄紀錄</h3><p>十四份日報無此次2026年度監測結果，巴西選舉與工時修憲屬不同事件。</p><h3>尚待確認</h3><p>官方估計與後續確定值可能調整；砍伐下降不等於所有環境壓力同幅改善。</p><h3>相關實體與概念</h3><p>Brazil、Amazon、Cerrado、INPE、森林砍伐、碳儲存</p><div class="sources"><h4>原始來源</h4><a href="https://www.gov.br/mma/pt-br/noticias-defeso-eleitoral/brasil-alcanca-menores-taxas-de-desmatamento-da-serie-historica-na-amazonia-e-no-cerrado" target="_blank" rel="noopener noreferrer"><strong>巴西環境部：年度資料、比較基期與範圍</strong><span>https://www.gov.br/mma/pt-br/noticias-defeso-eleitoral/brasil-alcanca-menores-taxas-de-desmatamento-da-serie-historica-na-amazonia-e-no-cerrado</span></a><a href="https://data.inpe.br/biomasbr/estimativa-de-desmatamento-na-amazonia-legal-para-2026/" target="_blank" rel="noopener noreferrer"><strong>INPE：2026亞馬遜監測估計</strong><span>https://data.inpe.br/biomasbr/estimativa-de-desmatamento-na-amazonia-legal-para-2026/</span></a><a href="https://abcnews.com/International/wireStory/brazil-amazon-deforestation-fell-lowest-level-1988-137329441" target="_blank" rel="noopener noreferrer"><strong>AP／ABC：政策與風險背景</strong><span>https://abcnews.com/International/wireStory/brazil-amazon-deforestation-fell-lowest-level-1988-137329441</span></a></div></div>
+        </details>
+      </div>
+    </article><article id="3" class="story" data-category="world" data-rank="3" aria-labelledby="title-3">
+      <p class="eyebrow">全球焦點 <span>3</span></p>
+
+      <h2 id="title-3" tabindex="-1">智利總統訪問玻利維亞，兩國發布貿易、能源與邊境合作聲明</h2>
+      <div class="metadata"><span>發佈時間</span><time datetime="2026-10-16T13:10:16Z">2026-10-16 21:10:16（Asia/Taipei）</time></div>
+      <div class="byline"><span>出處</span><a class="source-label" href="https://www.minrel.gob.cl/sala-de-prensa/declaracion-conjunta-de-los-presidentes-del-estado-plurinacional-de-bolivia" target="_blank" rel="noopener noreferrer">智利外交部：兩國總統聯合聲明</a><a class="source-label" href="https://www.aol.com/articles/presidente-chileno-visita-bolivia-d%C3%A9cadas-131016000.html" target="_blank" rel="noopener noreferrer">AP／AOL：正式到訪</a></div>
+      <p class="lead">智利總統José Antonio Kast在拉巴斯會晤玻利維亞總統Rodrigo Paz，兩國同意重啟對話機制並推進多領域合作。</p>
+      <ul class="key-facts"><li>官方列出ACE-22貿易協議現代化的參考條款及礦業合作備忘錄。</li><li>雙方提出能源互聯與跨洋光纖走廊合作，仍需後續落實。</li><li>安全合作涵蓋跨國犯罪、人口販運、走私及移民協調。</li></ul>
+      <div class="article-actions">
+        <button class="ask-action" type="button" data-ask="3" aria-haspopup="dialog"><svg aria-hidden="true" focusable="false"
+  class="lucide lucide-message-circle"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" />
+</svg><span>詢問後續問題</span></button>
+        <button class="share-action" type="button" data-share="3" aria-label="分享這則新聞"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-share-2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" x2="15.42" y1="13.51" y2="17.49"/><line x1="15.41" x2="8.59" y1="6.51" y2="10.49"/></svg><span>分享</span></button>
+        <details class="full-report" id="report-3">
+          <summary aria-controls="full-3"><svg aria-hidden="true" focusable="false"
+  class="lucide lucide-file-text"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" />
+  <path d="M14 2v4a2 2 0 0 0 2 2h4" />
+  <path d="M10 9H8" />
+  <path d="M16 13H8" />
+  <path d="M16 17H8" />
+</svg><span class="when-closed">完整報告</span><span class="when-open">收合報告</span><svg aria-hidden="true" focusable="false"
+  class="lucide lucide-chevron-down"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="m6 9 6 6 6-6" />
+</svg></summary>
+          <div class="report-body" id="full-3"><h3>事件背景與影響</h3><p>長期緊張的鄰國關係出現具體合作節點，可能影響跨境貿易、能源及交通，但不能把聲明等同歷史爭議已解決。</p><h3>事件與發佈依據</h3><p>AP西語首發13:10:16UTC確認到訪，官方聯合聲明確認10/16實際會晤與合作項目。</p><h3>收錄紀錄</h3><p>前十四份日報無此次到訪；早先準備會議不等於本次正式會晤已發生。</p><h3>尚待確認</h3><p>此行被稱為七十一年來首次此層級訪問，不代表已恢復所有外交安排；計畫、備忘錄與建設完工分開。</p><h3>相關實體與概念</h3><p>Chile、Bolivia、José Antonio Kast、Rodrigo Paz、ACE-22、能源互聯</p><div class="sources"><h4>原始來源</h4><a href="https://www.minrel.gob.cl/sala-de-prensa/declaracion-conjunta-de-los-presidentes-del-estado-plurinacional-de-bolivia" target="_blank" rel="noopener noreferrer"><strong>智利外交部：兩國總統聯合聲明</strong><span>https://www.minrel.gob.cl/sala-de-prensa/declaracion-conjunta-de-los-presidentes-del-estado-plurinacional-de-bolivia</span></a><a href="https://www.aol.com/articles/presidente-chileno-visita-bolivia-d%C3%A9cadas-131016000.html" target="_blank" rel="noopener noreferrer"><strong>AP／AOL：正式到訪</strong><span>https://www.aol.com/articles/presidente-chileno-visita-bolivia-d%C3%A9cadas-131016000.html</span></a></div></div>
+        </details>
+      </div>
+    </article><article id="4" class="story" data-category="world" data-rank="4" aria-labelledby="title-4">
+      <p class="eyebrow">全球焦點 <span>4</span></p>
+
+      <h2 id="title-4" tabindex="-1">續報｜衣索比亞設立提格雷六個月看守行政，準備選舉與公共服務復原</h2>
+      <div class="metadata"><span>發佈時間</span><time datetime="2026-10-16T16:24:00Z">2026-10-17 00:24:00（Asia/Taipei）</time></div>
+      <div class="byline"><span>出處</span><a class="source-label" href="https://abcnews.com/Business/wireStory/ethiopia-sets-tigray-caretaker-government-fighters-seek-return-137328515" target="_blank" rel="noopener noreferrer">AP／ABC：六個月行政與前戰士登記</a><a class="source-label" href="https://www.umdmedia.com/article/federal-government-establishes-six-month-federal-caretaker-administration-in-tigray-appoints-five-officials" target="_blank" rel="noopener noreferrer">UMD Media：官方任命與法源說明</a></div>
+      <p class="lead">衣索比亞政府為提格雷設立看守行政，目標包括恢復公共服務、協助流離失所者返家及六個月內準備選舉。</p>
+      <ul class="key-facts"><li>新行政受聯邦監督，與2022年和平協議後的原有安排不同。</li><li>前戰士持續登記參加重返平民生活計畫，登記不等於解除所有武裝。</li><li>當地衝突、招募壓力與報復恐懼仍存在，不能把任命公告寫成全面和平。</li></ul>
+      <div class="article-actions">
+        <button class="ask-action" type="button" data-ask="4" aria-haspopup="dialog"><svg aria-hidden="true" focusable="false"
+  class="lucide lucide-message-circle"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" />
+</svg><span>詢問後續問題</span></button>
+        <button class="share-action" type="button" data-share="4" aria-label="分享這則新聞"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-share-2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" x2="15.42" y1="13.51" y2="17.49"/><line x1="15.41" x2="8.59" y1="6.51" y2="10.49"/></svg><span>分享</span></button>
+        <details class="full-report" id="report-4">
+          <summary aria-controls="full-4"><svg aria-hidden="true" focusable="false"
+  class="lucide lucide-file-text"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" />
+  <path d="M14 2v4a2 2 0 0 0 2 2h4" />
+  <path d="M10 9H8" />
+  <path d="M16 13H8" />
+  <path d="M16 17H8" />
+</svg><span class="when-closed">完整報告</span><span class="when-open">收合報告</span><svg aria-hidden="true" focusable="false"
+  class="lucide lucide-chevron-down"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="m6 9 6 6 6-6" />
+</svg></summary>
+          <div class="report-body" id="full-4"><h3>事件背景與影響</h3><p>治理由軍事控制轉向行政重建，但新安排能否取得地方信任、確保安全與恢復政治程序仍是關鍵。</p><h3>事件與發佈依據</h3><p>AP／ABC10/16 12:24EDT，即16:24UTC，報導當日政府任命。</p><h3>收錄紀錄</h3><p>10/05已收錄Mekelle易手與TPLF撤出；本次新增聯邦監督的六個月行政安排，不是重刊軍隊進城。</p><h3>尚待確認</h3><p>六個月選舉為政府規畫，不是已完成承諾；各方對合法性與安全情勢仍可能有爭議。</p><h3>相關實體與概念</h3><p>Ethiopia、Tigray、Mekelle、Abiy Ahmed、TPLF、重建、解除武裝</p><div class="sources"><h4>原始來源</h4><a href="https://abcnews.com/Business/wireStory/ethiopia-sets-tigray-caretaker-government-fighters-seek-return-137328515" target="_blank" rel="noopener noreferrer"><strong>AP／ABC：六個月行政與前戰士登記</strong><span>https://abcnews.com/Business/wireStory/ethiopia-sets-tigray-caretaker-government-fighters-seek-return-137328515</span></a><a href="https://www.umdmedia.com/article/federal-government-establishes-six-month-federal-caretaker-administration-in-tigray-appoints-five-officials" target="_blank" rel="noopener noreferrer"><strong>UMD Media：官方任命與法源說明</strong><span>https://www.umdmedia.com/article/federal-government-establishes-six-month-federal-caretaker-administration-in-tigray-appoints-five-officials</span></a></div></div>
+        </details>
+      </div>
+    </article><article id="5" class="story" data-category="world" data-rank="5" aria-labelledby="title-5">
+      <p class="eyebrow">全球焦點 <span>5</span></p>
+
+      <h2 id="title-5" tabindex="-1">IPCC 會議未就新評估時程達成協議，主席宣布暫停並待續會</h2>
+      <div class="metadata"><span>發佈時間</span><time datetime="2026-10-16T16:38:00Z">2026-10-17 00:38:00（Asia/Taipei）</time></div>
+      <div class="byline"><span>出處</span><a class="source-label" href="https://enb.iisd.org/intergovernmental-panel-climate-change-ipcc-65-16Oct2026" target="_blank" rel="noopener noreferrer">IISD Earth Negotiations Bulletin：10/16會場紀錄</a><a class="source-label" href="https://www.al-monitor.com/originals/2026/10/top-global-climate-science-body-suspends-meeting-without-deal-major-review" target="_blank" rel="noopener noreferrer">Reuters／Al-Monitor：時程僵局與各方立場</a></div>
+      <p class="lead">IPCC第65次全會在部分發展中國家代表必須離場後暫停，下一輪氣候評估報告發布時程仍未取得共識。</p>
+      <ul class="key-facts"><li>主席Jim Skea宣布未來另行續會，並非取消所有IPCC科學工作。</li><li>報告時程與預算討論仍開放，未公布完整解決方案。</li><li>各國對是否應加快發布，或給科學家更多準備時間，有不同立場。</li></ul>
+      <div class="article-actions">
+        <button class="ask-action" type="button" data-ask="5" aria-haspopup="dialog"><svg aria-hidden="true" focusable="false"
+  class="lucide lucide-message-circle"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" />
+</svg><span>詢問後續問題</span></button>
+        <button class="share-action" type="button" data-share="5" aria-label="分享這則新聞"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-share-2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" x2="15.42" y1="13.51" y2="17.49"/><line x1="15.41" x2="8.59" y1="6.51" y2="10.49"/></svg><span>分享</span></button>
+        <details class="full-report" id="report-5">
+          <summary aria-controls="full-5"><svg aria-hidden="true" focusable="false"
+  class="lucide lucide-file-text"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" />
+  <path d="M14 2v4a2 2 0 0 0 2 2h4" />
+  <path d="M10 9H8" />
+  <path d="M16 13H8" />
+  <path d="M16 17H8" />
+</svg><span class="when-closed">完整報告</span><span class="when-open">收合報告</span><svg aria-hidden="true" focusable="false"
+  class="lucide lucide-chevron-down"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="m6 9 6 6 6-6" />
+</svg></summary>
+          <div class="report-body" id="full-5"><h3>事件背景與影響</h3><p>評估時程影響各國氣候政策與2028年全球盤點的科學依據；兼顧及時性與資源較少國家的參與，是本次爭議核心。</p><h3>事件與發佈依據</h3><p>IISD現場紀錄10/16 19:38衣索比亞時間，即16:38UTC的暫停宣布；Reuters同日交叉。</p><h3>收錄紀錄</h3><p>前十四份日報無此次IPCC會議結果，爭議持續多年只作背景。</p><h3>尚待確認</h3><p>尚無最終新版日程，不應寫成科學界對氣候變遷本身失去共識；會議程序與研究結論不同。</p><h3>相關實體與概念</h3><p>IPCC、Jim Skea、AR7、氣候評估、全球盤點、科學參與</p><div class="sources"><h4>原始來源</h4><a href="https://enb.iisd.org/intergovernmental-panel-climate-change-ipcc-65-16Oct2026" target="_blank" rel="noopener noreferrer"><strong>IISD Earth Negotiations Bulletin：10/16會場紀錄</strong><span>https://enb.iisd.org/intergovernmental-panel-climate-change-ipcc-65-16Oct2026</span></a><a href="https://www.al-monitor.com/originals/2026/10/top-global-climate-science-body-suspends-meeting-without-deal-major-review" target="_blank" rel="noopener noreferrer"><strong>Reuters／Al-Monitor：時程僵局與各方立場</strong><span>https://www.al-monitor.com/originals/2026/10/top-global-climate-science-body-suspends-meeting-without-deal-major-review</span></a></div></div>
+        </details>
+      </div>
+    </article><article id="6" class="story" data-category="world" data-rank="6" aria-labelledby="title-6">
+      <p class="eyebrow">全球焦點 <span>6</span></p>
+
+      <h2 id="title-6" tabindex="-1">續報｜亞丁機場遭兩枚飛彈擊中，警方暫未通報人員傷亡</h2>
+      <div class="metadata"><span>發佈時間</span><time datetime="2026-10-16T19:47:01Z">2026-10-17 03:47:01（Asia/Taipei）</time></div>
+      <div class="byline"><span>出處</span><a class="source-label" href="https://www.aol.com/articles/2-projectiles-strike-airport-yemens-194701000.html" target="_blank" rel="noopener noreferrer">AP／AOL：亞丁機場攻擊</a><a class="source-label" href="https://apnews.com/article/c39ea48032c0e8a76558b0296bb25244" target="_blank" rel="noopener noreferrer">Associated Press：後續原稿</a></div>
+      <p class="lead">警方稱葉門亞丁機場遭兩枚飛彈擊中，暫無傷亡通報，安全人員稱涉及政府盟軍使用區域。</p>
+      <ul class="key-facts"><li>警方歸責胡塞武裝；早稿尚無立即認領，後續AP引胡塞官員稱攻擊軍事設施。</li><li>目前無傷亡通報不等於已完成所有損害評估。</li></ul>
+      <div class="article-actions">
+        <button class="ask-action" type="button" data-ask="6" aria-haspopup="dialog"><svg aria-hidden="true" focusable="false"
+  class="lucide lucide-message-circle"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" />
+</svg><span>詢問後續問題</span></button>
+        <button class="share-action" type="button" data-share="6" aria-label="分享這則新聞"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-share-2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" x2="15.42" y1="13.51" y2="17.49"/><line x1="15.41" x2="8.59" y1="6.51" y2="10.49"/></svg><span>分享</span></button>
+        <details class="full-report" id="report-6">
+          <summary aria-controls="full-6"><svg aria-hidden="true" focusable="false"
+  class="lucide lucide-file-text"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" />
+  <path d="M14 2v4a2 2 0 0 0 2 2h4" />
+  <path d="M10 9H8" />
+  <path d="M16 13H8" />
+  <path d="M16 17H8" />
+</svg><span class="when-closed">完整報告</span><span class="when-open">收合報告</span><svg aria-hidden="true" focusable="false"
+  class="lucide lucide-chevron-down"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="m6 9 6 6 6-6" />
+</svg></summary>
+          <div class="report-body" id="full-6"><h3>事件背景與影響</h3><p>機場安全關係交通與政府運作，也顯示衝突擴及重要基礎設施。</p><h3>事件與發佈依據</h3><p>AP10/16 19:47:01UTC首發確認週五夜間機場攻擊。</p><h3>收錄紀錄</h3><p>10/16已刊Maashiq宮殿附近攻擊；今日新增機場地點與兩枚飛彈，不合併兩起事件傷亡。</p><h3>尚待確認</h3><p>部分安全消息人士匿名；目標、損害與攻擊方主張仍須獨立核實。</p><h3>相關實體與概念</h3><p>Yemen、Aden、Houthis、機場、飛彈、基礎設施</p><div class="sources"><h4>原始來源</h4><a href="https://www.aol.com/articles/2-projectiles-strike-airport-yemens-194701000.html" target="_blank" rel="noopener noreferrer"><strong>AP／AOL：亞丁機場攻擊</strong><span>https://www.aol.com/articles/2-projectiles-strike-airport-yemens-194701000.html</span></a><a href="https://apnews.com/article/c39ea48032c0e8a76558b0296bb25244" target="_blank" rel="noopener noreferrer"><strong>Associated Press：後續原稿</strong><span>https://apnews.com/article/c39ea48032c0e8a76558b0296bb25244</span></a></div></div>
+        </details>
+      </div>
+    </article><article id="7" class="story" data-category="world" data-rank="7" aria-labelledby="title-7">
+      <p class="eyebrow">全球焦點 <span>7</span></p>
+
+      <h2 id="title-7" tabindex="-1">摩爾多瓦稱五架俄製無人機墜境，譴責戰火危及鄰國</h2>
+      <div class="metadata"><span>發佈時間</span><time datetime="2026-10-16T22:15:00Z">2026-10-17 06:15:00（Asia/Taipei）</time></div>
+      <div class="byline"><span>出處</span><a class="source-label" href="https://uk.marketscreener.com/news/moldova-condemns-russia-after-five-drones-crash-on-its-territory-ce785cdadf81f220" target="_blank" rel="noopener noreferrer">Reuters／MarketScreener：五架無人機與官方聲明</a></div>
+      <p class="lead">摩爾多瓦當局表示，約十七小時內五架被辨識為俄方的無人機進入領空後墜落，造成一人輕傷與輕微損害。</p>
+      <ul class="key-facts"><li>事件分布在週四至週五，以北部與東部地區為主。</li><li>外交部稱事件威脅民眾安全，並指向俄羅斯對烏戰爭的區域後果。</li><li>當局先前多次要求俄國大使說明，但此次報導未證明外交抗議已換得具體改善。</li></ul>
+      <div class="article-actions">
+        <button class="ask-action" type="button" data-ask="7" aria-haspopup="dialog"><svg aria-hidden="true" focusable="false"
+  class="lucide lucide-message-circle"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" />
+</svg><span>詢問後續問題</span></button>
+        <button class="share-action" type="button" data-share="7" aria-label="分享這則新聞"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-share-2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" x2="15.42" y1="13.51" y2="17.49"/><line x1="15.41" x2="8.59" y1="6.51" y2="10.49"/></svg><span>分享</span></button>
+        <details class="full-report" id="report-7">
+          <summary aria-controls="full-7"><svg aria-hidden="true" focusable="false"
+  class="lucide lucide-file-text"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" />
+  <path d="M14 2v4a2 2 0 0 0 2 2h4" />
+  <path d="M10 9H8" />
+  <path d="M16 13H8" />
+  <path d="M16 17H8" />
+</svg><span class="when-closed">完整報告</span><span class="when-open">收合報告</span><svg aria-hidden="true" focusable="false"
+  class="lucide lucide-chevron-down"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="m6 9 6 6 6-6" />
+</svg></summary>
+          <div class="report-body" id="full-7"><h3>事件背景與影響</h3><p>俄烏戰事跨境外溢牽動非交戰鄰國的安全與外交；機體歸屬、飛行意圖與責任仍應分開判斷。</p><h3>事件與發佈依據</h3><p>Reuters／MarketScreener10/16 23:15BST，即22:15UTC，報導週五官方譴責。</p><h3>收錄紀錄</h3><p>前十四份日報無此次五架無人機事件，先前其他侵入只作背景。</p><h3>尚待確認</h3><p>俄方歸屬為摩爾多瓦當局判定，並非本站鑑識；不在缺乏證據時斷言各架有意攻擊摩國。</p><h3>相關實體與概念</h3><p>Moldova、Russia、Ukraine、Maia Sandu、領空、無人機</p><div class="sources"><h4>原始來源</h4><a href="https://uk.marketscreener.com/news/moldova-condemns-russia-after-five-drones-crash-on-its-territory-ce785cdadf81f220" target="_blank" rel="noopener noreferrer"><strong>Reuters／MarketScreener：五架無人機與官方聲明</strong><span>https://uk.marketscreener.com/news/moldova-condemns-russia-after-five-drones-crash-on-its-territory-ce785cdadf81f220</span></a></div></div>
+        </details>
+      </div>
+    </article><article id="8" class="story" data-category="world" data-rank="8" aria-labelledby="title-8">
+      <p class="eyebrow">全球焦點 <span>8</span></p>
+
+      <h2 id="title-8" tabindex="-1">續報｜肯亞確認第三例伊波拉，患者為已隔離的家庭接觸者</h2>
+      <div class="metadata"><span>發佈時間</span><time datetime="2026-10-16T15:45:00Z">2026-10-16 23:45:00（Asia/Taipei）</time></div>
+      <div class="byline"><span>出處</span><a class="source-label" href="https://kfgo.com/2026/10/16/kenya-confirms-third-ebola-case-a-close-relative-of-other-two-cases/" target="_blank" rel="noopener noreferrer">Reuters／KFGO：第三例與接觸者追蹤</a><a class="source-label" href="https://apnews.com/article/25f722f20d89e9cf8977a5080e9d575c" target="_blank" rel="noopener noreferrer">AP：衛生部當日通報</a></div>
+      <p class="lead">一名65歲女性確診伊波拉，與前兩名患者為近親；她自10/6已隔離，出現症狀後接受檢驗與支持性照護。</p>
+      <ul class="key-facts"><li>衛生部稱第二名患者狀況穩定，暫無更廣泛社區傳播證據。</li><li>已追蹤130名已知接觸者中的127人，另三人仍在追查。</li><li>與剛果疫情的旅行／家庭接觸鏈相關，病例數與跨境風險分開評估。</li></ul>
+      <div class="article-actions">
+        <button class="ask-action" type="button" data-ask="8" aria-haspopup="dialog"><svg aria-hidden="true" focusable="false"
+  class="lucide lucide-message-circle"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" />
+</svg><span>詢問後續問題</span></button>
+        <button class="share-action" type="button" data-share="8" aria-label="分享這則新聞"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-share-2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" x2="15.42" y1="13.51" y2="17.49"/><line x1="15.41" x2="8.59" y1="6.51" y2="10.49"/></svg><span>分享</span></button>
+        <details class="full-report" id="report-8">
+          <summary aria-controls="full-8"><svg aria-hidden="true" focusable="false"
+  class="lucide lucide-file-text"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" />
+  <path d="M14 2v4a2 2 0 0 0 2 2h4" />
+  <path d="M10 9H8" />
+  <path d="M16 13H8" />
+  <path d="M16 17H8" />
+</svg><span class="when-closed">完整報告</span><span class="when-open">收合報告</span><svg aria-hidden="true" focusable="false"
+  class="lucide lucide-chevron-down"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="m6 9 6 6 6-6" />
+</svg></summary>
+          <div class="report-body" id="full-8"><h3>事件背景與影響</h3><p>隔離中及早發現新病例有助切斷傳播，但接觸者追蹤仍有缺口，不能據此宣稱疫情已結束或已廣泛社區傳播。</p><h3>事件與發佈依據</h3><p>Reuters／KFGO10/16 10:45CDT，即15:45UTC，引用當日衛生部聲明。</p><h3>收錄紀錄</h3><p>10/07收錄肯亞首例與死亡，10/14追蹤剛果統計；新增肯亞隔離接觸者第三例，不把同一首例再次計數。</p><h3>尚待確認</h3><p>「未見證據」不是零風險保證，後續仍依正式監測更新；本文不提供個別醫療診斷。</p><h3>相關實體與概念</h3><p>Kenya、Ebola、DR Congo、隔離、接觸者追蹤、公共衛生</p><div class="sources"><h4>原始來源</h4><a href="https://kfgo.com/2026/10/16/kenya-confirms-third-ebola-case-a-close-relative-of-other-two-cases/" target="_blank" rel="noopener noreferrer"><strong>Reuters／KFGO：第三例與接觸者追蹤</strong><span>https://kfgo.com/2026/10/16/kenya-confirms-third-ebola-case-a-close-relative-of-other-two-cases/</span></a><a href="https://apnews.com/article/25f722f20d89e9cf8977a5080e9d575c" target="_blank" rel="noopener noreferrer"><strong>AP：衛生部當日通報</strong><span>https://apnews.com/article/25f722f20d89e9cf8977a5080e9d575c</span></a></div></div>
+        </details>
+      </div>
+    </article><article id="9" class="story" data-category="world" data-rank="9" aria-labelledby="title-9">
+      <p class="eyebrow">全球焦點 <span>9</span></p>
+
+      <h2 id="title-9" tabindex="-1">天水幼兒園鉛污染案一審宣判，實際負責人被判無期徒刑</h2>
+      <div class="metadata"><span>發佈時間</span><time datetime="2026-10-16T14:25:04Z">2026-10-16 22:25:04（Asia/Taipei）</time></div>
+      <div class="byline"><span>出處</span><a class="source-label" href="https://apnews.com/article/cd5f37cb0f4174ecf52705d2918b053f" target="_blank" rel="noopener noreferrer">Associated Press：六人判刑與官方媒體引述</a></div>
+      <p class="lead">蘭州中級法院對天水幼兒園有毒食品案六人判刑，李慧芳被判無期，執行園長朱敬琳被判十五年。</p>
+      <ul class="key-facts"><li>案件背景為2025年逾二百名幼兒血鉛異常。</li><li>另四名廚房人員被判六至八年。</li></ul>
+      <div class="article-actions">
+        <button class="ask-action" type="button" data-ask="9" aria-haspopup="dialog"><svg aria-hidden="true" focusable="false"
+  class="lucide lucide-message-circle"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" />
+</svg><span>詢問後續問題</span></button>
+        <button class="share-action" type="button" data-share="9" aria-label="分享這則新聞"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-share-2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" x2="15.42" y1="13.51" y2="17.49"/><line x1="15.41" x2="8.59" y1="6.51" y2="10.49"/></svg><span>分享</span></button>
+        <details class="full-report" id="report-9">
+          <summary aria-controls="full-9"><svg aria-hidden="true" focusable="false"
+  class="lucide lucide-file-text"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" />
+  <path d="M14 2v4a2 2 0 0 0 2 2h4" />
+  <path d="M10 9H8" />
+  <path d="M16 13H8" />
+  <path d="M16 17H8" />
+</svg><span class="when-closed">完整報告</span><span class="when-open">收合報告</span><svg aria-hidden="true" focusable="false"
+  class="lucide lucide-chevron-down"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="m6 9 6 6 6-6" />
+</svg></summary>
+          <div class="report-body" id="full-9"><h3>事件背景與影響</h3><p>案件涉及幼兒食品安全與機構責任；司法結果與兒童後續健康照護是不同追蹤事項。</p><h3>事件與發佈依據</h3><p>AP14:25:04UTC首發，引用當日下午法院一審宣判；污染發現於2025年，不是本日新事故。</p><h3>收錄紀錄</h3><p>近十四份日報未收錄此次裁判結果。</p><h3>尚待確認</h3><p>本次為一審，未核實上訴或判決已確定；刑期不代表健康損害已獲完整補救。</p><h3>相關實體與概念</h3><p>天水、蘭州中級法院、褐石培心幼兒園、食品安全、鉛污染</p><div class="sources"><h4>原始來源</h4><a href="https://apnews.com/article/cd5f37cb0f4174ecf52705d2918b053f" target="_blank" rel="noopener noreferrer"><strong>Associated Press：六人判刑與官方媒體引述</strong><span>https://apnews.com/article/cd5f37cb0f4174ecf52705d2918b053f</span></a></div></div>
+        </details>
+      </div>
+    </article><article id="10" class="story" data-category="world" data-rank="10" aria-labelledby="title-10">
+      <p class="eyebrow">全球焦點 <span>10</span></p>
+
+      <h2 id="title-10" tabindex="-1">伊斯坦堡洪災死亡增至四人，土耳其稱為八十多年來最嚴重</h2>
+      <div class="metadata"><span>發佈時間</span><time datetime="2026-10-16T11:14:09Z">2026-10-16 19:14:09（Asia/Taipei）</time></div>
+      <div class="byline"><span>出處</span><a class="source-label" href="https://infonews.ca/news/7955640/istanbuls-worst-floods-in-80-years-leave-4-dead/" target="_blank" rel="noopener noreferrer">AP／InfoNews：週五新死者、災損與氣象警告</a></div>
+      <p class="lead">暴雨引發伊斯坦堡嚴重淹水，週五找到一名66歲男性遺體後死亡增至四人，政府持續救援與清理。</p>
+      <ul class="key-facts"><li>土耳其內政部長稱是1942年以來最嚴重洪災，這是官方評估，不是本站重建歷史雨量。</li><li>官方稱收到9,850件災損與相關通報，約46,000人投入清理及協助。</li><li>氣象單位另警告週末伊斯坦堡與鄰近省分仍可能有強降雨。</li></ul>
+      <div class="article-actions">
+        <button class="ask-action" type="button" data-ask="10" aria-haspopup="dialog"><svg aria-hidden="true" focusable="false"
+  class="lucide lucide-message-circle"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" />
+</svg><span>詢問後續問題</span></button>
+        <button class="share-action" type="button" data-share="10" aria-label="分享這則新聞"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-share-2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" x2="15.42" y1="13.51" y2="17.49"/><line x1="15.41" x2="8.59" y1="6.51" y2="10.49"/></svg><span>分享</span></button>
+        <details class="full-report" id="report-10">
+          <summary aria-controls="full-10"><svg aria-hidden="true" focusable="false"
+  class="lucide lucide-file-text"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" />
+  <path d="M14 2v4a2 2 0 0 0 2 2h4" />
+  <path d="M10 9H8" />
+  <path d="M16 13H8" />
+  <path d="M16 17H8" />
+</svg><span class="when-closed">完整報告</span><span class="when-open">收合報告</span><svg aria-hidden="true" focusable="false"
+  class="lucide lucide-chevron-down"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="m6 9 6 6 6-6" />
+</svg></summary>
+          <div class="report-body" id="full-10"><h3>事件背景與影響</h3><p>水道周邊開發、排水與極端雨量共同考驗城市韌性；災後統計與未來降雨警報仍需持續核實。</p><h3>事件與發佈依據</h3><p>InfoNews／AP首次11:14:09UTC，採週五新增遺體發現及官方災情評估。</p><h3>收錄紀錄</h3><p>前十四份日報伊斯坦堡命中為10/09建築倒塌，並非本次洪災；不把地名相同誤認同事故。</p><h3>尚待確認</h3><p>失蹤者統計早於新遺體發現，不能直接相加；單一事件的氣候歸因仍需專門研究。</p><h3>相關實體與概念</h3><p>Türkiye、Istanbul、洪水、都市排水、救援、極端降雨</p><div class="sources"><h4>原始來源</h4><a href="https://infonews.ca/news/7955640/istanbuls-worst-floods-in-80-years-leave-4-dead/" target="_blank" rel="noopener noreferrer"><strong>AP／InfoNews：週五新死者、災損與氣象警告</strong><span>https://infonews.ca/news/7955640/istanbuls-worst-floods-in-80-years-leave-4-dead/</span></a></div></div>
+        </details>
+      </div>
+    </article>
+    <section id="notes" class="research-notes" aria-labelledby="notes-title">
+      <p class="eyebrow">研究備註</p><h2 id="notes-title">時間、來源與後續追蹤</h2>
+      <p class="metadata">研究截點 2026-10-17 08:02:21（Asia/Taipei）</p><details class="note"><summary>研究時間與範圍<svg aria-hidden="true" focusable="false"
+  class="lucide lucide-chevron-down"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="m6 9 6 6 6-6" />
+</svg></summary><div class="note-body"><p>研究截點：2026-10-17 08:02:21（Asia/Taipei）。全球新聞：2026-10-16 08:02:21 至 2026-10-17 08:02:21（Asia/Taipei）。科技產品：2026-10-03 08:02:21 至 2026-10-17 08:02:21（Asia/Taipei）。</p><div class="sources"><h4>原始來源</h4><a href="https://lucaskk.github.io/daily-news/wiki/daily/2026/10/2026-10-17/daily-news-2026-10-17.md" target="_blank" rel="noopener noreferrer"><strong>每日報告</strong><span>https://lucaskk.github.io/daily-news/wiki/daily/2026/10/2026-10-17/daily-news-2026-10-17.md</span></a><a href="https://lucaskk.github.io/daily-news/wiki/daily/2026/10/2026-10-17/source-notes-2026-10-17.md" target="_blank" rel="noopener noreferrer"><strong>來源與時間筆記</strong><span>https://lucaskk.github.io/daily-news/wiki/daily/2026/10/2026-10-17/source-notes-2026-10-17.md</span></a></div></div></details>
+    </section>
+  </main>
+  <nav class="reader-nav" aria-label="逐篇導覽">
+    <button class="icon-button" id="prev" title="上一篇" aria-label="上一篇"><svg aria-hidden="true" focusable="false"
+  class="lucide lucide-chevron-left"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="m15 18-6-6 6-6" />
+</svg></button>
+    <span id="position" aria-live="polite"></span>
+    <button class="icon-button" id="next" title="下一篇" aria-label="下一篇"><svg aria-hidden="true" focusable="false"
+  class="lucide lucide-chevron-right"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="m9 18 6-6-6-6" />
+</svg></button>
+  </nav>
+  <dialog id="index-dialog" aria-labelledby="index-title">
+    <div class="dialog-head"><h2 id="index-title">今日目錄</h2><button class="icon-button" data-close title="關閉目錄" aria-label="關閉目錄"><svg aria-hidden="true" focusable="false"
+  class="lucide lucide-x"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M18 6 6 18" />
+  <path d="m6 6 12 12" />
+</svg></button></div>
+    <nav class="toc" aria-label="所有新聞"><a href="#t1" data-story-link="t1"><span>T1</span>ChatGPT 開始推出 Slides，可在 Space 共同編輯與匯出簡報</a><a href="#t2" data-story-link="t2"><span>T2</span>Analogue 公布 Super Nt+ 與 Mega Sg+，十九日開放預購、十二月出貨</a><a href="#t3" data-story-link="t3"><span>T3</span>Razer 發布 Barracuda V2 Pro，以雙無線與降噪整合遊戲及日常通話</a><a href="#t4" data-story-link="t4"><span>T4</span>Steam 開放 Achievement Sets 測試，分開追蹤本體與 DLC 成就</a><a href="#t5" data-story-link="t5"><span>T5</span>Gmail Live 擴展至付費 Workspace，以語音查詢信箱並顯示郵件來源</a><a href="#t6" data-story-link="t6"><span>T6</span>Apple 強化 App Store 審查規則，明確禁止非合意親密影像與審後變裝功能</a><a href="#1" data-story-link="1"><span>1</span>續報｜俄軍再襲烏克蘭九個地區，造成大規模停電與至少十五人受傷</a><a href="#2" data-story-link="2"><span>2</span>巴西公布亞馬遜年度砍伐面積降至 3,335 平方公里，創監測以來最低</a><a href="#3" data-story-link="3"><span>3</span>智利總統訪問玻利維亞，兩國發布貿易、能源與邊境合作聲明</a><a href="#4" data-story-link="4"><span>4</span>續報｜衣索比亞設立提格雷六個月看守行政，準備選舉與公共服務復原</a><a href="#5" data-story-link="5"><span>5</span>IPCC 會議未就新評估時程達成協議，主席宣布暫停並待續會</a><a href="#6" data-story-link="6"><span>6</span>續報｜亞丁機場遭兩枚飛彈擊中，警方暫未通報人員傷亡</a><a href="#7" data-story-link="7"><span>7</span>摩爾多瓦稱五架俄製無人機墜境，譴責戰火危及鄰國</a><a href="#8" data-story-link="8"><span>8</span>續報｜肯亞確認第三例伊波拉，患者為已隔離的家庭接觸者</a><a href="#9" data-story-link="9"><span>9</span>天水幼兒園鉛污染案一審宣判，實際負責人被判無期徒刑</a><a href="#10" data-story-link="10"><span>10</span>伊斯坦堡洪災死亡增至四人，土耳其稱為八十多年來最嚴重</a><a href="#notes">研究備註</a></nav>
+  </dialog>
+  <dialog id="ask-dialog" aria-labelledby="ask-title" aria-describedby="ask-story-title">
+    <div class="dialog-head"><h2 id="ask-title">詢問 ChatGPT</h2><button class="icon-button" data-close title="關閉" aria-label="關閉"><svg aria-hidden="true" focusable="false"
+  class="lucide lucide-x"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M18 6 6 18" />
+  <path d="m6 6 12 12" />
+</svg></button></div>
+    <p id="ask-story-title" class="ask-story-title"></p>
+    <label for="question">你的問題 <span>選填</span></label>
+    <textarea id="question" rows="3" maxlength="2000" placeholder="例如：這項消息對我有什麼影響？"></textarea>
+    <details class="context-details"><summary>隨附文章內容</summary><label class="sr-only" for="context-text">帶入 ChatGPT 的完整文字</label><textarea id="context-text" rows="8" readonly spellcheck="false"></textarea></details>
+    <p id="handoff-note" class="handoff-note">Safari 將依裝置設定開啟 ChatGPT App 或網頁。</p>
+    <div class="handoff-actions"><a id="chatgpt-link" class="primary-action" href="https://chatgpt.com/#native" rel="noreferrer">在 ChatGPT 詢問 <svg aria-hidden="true" focusable="false"
+  class="lucide lucide-arrow-up-right"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M7 7h10v10" />
+  <path d="M7 17 17 7" />
+</svg></a><button id="copy-context" class="icon-button" title="複製完整內容" aria-label="複製完整內容"><svg aria-hidden="true" focusable="false"
+  class="lucide lucide-copy"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <rect width="14" height="14" x="8" y="8" rx="2" ry="2" />
+  <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2" />
+</svg></button></div>
+    <p id="copy-status" class="status" role="status" aria-live="polite"></p>
+  </dialog>
+  <noscript><p class="noscript">完整報告可直接展開；ChatGPT 提問與逐篇導覽需要 JavaScript。</p></noscript>
+  <script type="application/json" id="report-data">{"date": "2026-10-17", "stories": [{"id": "t1", "rank": "T1", "title": "ChatGPT 開始推出 Slides，可在 Space 共同編輯與匯出簡報", "facts": ["可直接編輯文字、圖片、形狀與圖表，亦可要求ChatGPT修改。", "網頁版可匯出PowerPoint、PDF或Google Slides；桌面版可在已安裝的PowerPoint或Keynote開啟。", "原廠列出具Space存取權的Pro、Business與Enterprise使用者，採漸進推出，不是所有帳號同時開放。"], "category": "tech", "product": "OpenAI／ChatGPT Slides、Space", "published": "2026-10-16（官方發布日期）", "time_basis": "官方release notes的October 16「Create and collaborate on slides」段落，未虛構首發時分。", "history": "10/03–10/16十四份日報與同窗產品表沒有本次Slides發布，與既有Space及其他文件工具不同。", "summary": "使用者可從對話、檔案或大綱建立簡報，在Space邀請團隊即時編輯與留言；功能正向符合資格的方案推出。", "why": "AI簡報不再只有一次生成，後續修訂、團隊協作與輸出到常用格式成為同一流程；但仍需人工檢查內容與版面。", "entities": "OpenAI、ChatGPT Slides、Space、協作、PowerPoint、Google Slides", "uncertainty": "帳號資格及受管理工作區設定仍影響供應；本文未實測使用者帳號或保證匯出後所有格式完全一致。", "sources": [{"label": "OpenAI：ChatGPT release notes，October 16簡報段落", "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes"}], "datetime": "2026-10-16", "url": "https://lucaskk.github.io/daily-news/wiki/daily/2026/10/2026-10-17/slides-2026-10-17.html?story=t1#t1"}, {"id": "t2", "rank": "T2", "title": "Analogue 公布 Super Nt+ 與 Mega Sg+，十九日開放預購、十二月出貨", "facts": ["預購為10/19 08:00PDT，即台北10/19 23:00；官方預計2026年12月出貨。", "Super Nt+面向SNES／Super Famicom；Mega Sg+面向Sega系統，部分卡匣需另購轉接器。", "不支援openFPGA，不含手把或遊戲，也不具Analogue 3D的4K顯示與即時存檔等全部功能。"], "category": "tech", "product": "Analogue／Super Nt+、Mega Sg+", "published": "2026-10-17 01:03:29（Asia/Taipei）", "time_basis": "10/16 17:03:29UTC首發報導確認新品，規格與供貨以兩個官方產品頁為準。", "history": "近十四份日報與同窗表無這次加號版本發布；不是舊Super Nt／Mega Sg單純補貨。", "summary": "兩款FPGA復古主機各售US$219.99，新增內建Bluetooth、2.4GHz無線及USB-C供電，維持1080p輸出與實體卡匣取向。", "why": "收藏者能用原卡匣搭配現代顯示器與無線手把，但新機不等於萬用模擬平台；另購配件與功能限制需一併考慮。", "entities": "Analogue、FPGA、Super Nt+、Mega Sg+、實體卡匣、遊戲保存", "uncertainty": "預計出貨不是保證交貨日；相容性與低延遲宣稱來自原廠，本站未以所有卡匣測試。USB-A不代表可直接接USB有線手把。", "sources": [{"label": "Analogue：Super Nt+規格、價格與限制", "url": "https://www.analogue.co/super-nt"}, {"label": "Analogue：Mega Sg+規格與配件", "url": "https://www.analogue.co/mega-sg"}], "datetime": "2026-10-16T17:03:29Z", "url": "https://lucaskk.github.io/daily-news/wiki/daily/2026/10/2026-10-17/slides-2026-10-17.html?story=t2#t2"}, {"id": "t3", "rank": "T3", "title": "Razer 發布 Barracuda V2 Pro，以雙無線與降噪整合遊戲及日常通話", "facts": ["原廠標示重量285克、可折疊，並有無線接收器收納位置。", "可拆式吊桿麥克風與內建波束成形麥克風切換，提供AI麥克風降噪。", "PC上的THX Spatial Audio+支援7.1.4虛擬環繞；最長70小時續航為原廠條件下數據。"], "category": "tech", "product": "Razer／Barracuda V2 Pro", "published": "2026-10-15 22:25:31（Asia/Taipei）", "time_basis": "Razer原廠發布metadata14:25:31UTC；不是10/16評測日期。", "history": "十四份日報與同窗表無Barracuda V2 Pro本次新機，評測新品線索已回查正式公告。", "summary": "新耳機採40mm生物纖維單體、混合式主動降噪與雙模式麥克風，支援同時連接2.4GHz及Bluetooth。", "why": "跨遊戲、行動裝置與會議的耳機可減少換設備，但麥克風品質、佩戴及平台相容性仍要按實際使用情境評估。", "entities": "Razer、Barracuda、ANC、2.4GHz、Bluetooth、虛擬環繞、麥克風", "uncertainty": "不以評測單一市場價格推算全球售價；續航與空間音訊支援依設定／平台而異，並非本站實測。", "sources": [{"label": "Razer：Barracuda V2 Pro正式發布與功能", "url": "https://www.razer.com/newsroom/product-news/barracuda-v2-pro"}], "datetime": "2026-10-15T14:25:31Z", "url": "https://lucaskk.github.io/daily-news/wiki/daily/2026/10/2026-10-17/slides-2026-10-17.html?story=t3#t3"}, {"id": "t4", "rank": "T4", "title": "Steam 開放 Achievement Sets 測試，分開追蹤本體與 DLC 成就", "facts": ["每個集合有自己的進度與完成獎盃；後續增加成就時，原完成紀錄仍保留。", "DLC集合與本體分開；尚未取得的額外內容不直接納入整體遊戲進度。", "功能目前在Steam Client Beta與相應網頁提供，並從已加入支援的遊戲開始。"], "category": "tech", "product": "Valve／Steam Achievement Sets", "published": "2026-10-16 06:06:30（Asia/Taipei）", "time_basis": "Steam官方10/15 15:06:30PDT公告beta，換算22:06:30UTC。", "history": "十四份日報與同窗表無Achievement Sets此次測試，不把其他Steam更新當同事件。", "summary": "開發者可將成就分成不同集合，讓玩家看清本體與額外內容的進度；先前達成的集合完成紀錄可保留。", "why": "持續更新遊戲不必每次新增DLC就讓玩家難辨完成狀態，但開發者必須加入支援，不能假設所有遊戲立即改版。", "entities": "Valve、Steam、成就、DLC、公開測試、遊戲完成度", "uncertainty": "介面與完成度規則仍可能在測試中調整；各遊戲何時採用由開發者決定，不代表所有歷史成就都已重新分組。", "sources": [{"label": "Steam：Achievement Sets beta原始公告", "url": "https://store.steampowered.com/news/app/593110/view/710037059469839141"}, {"label": "Steam Client Beta：官方回饋討論", "url": "https://steamcommunity.com/groups/SteamClientBeta/discussions/3/573803804385027371/"}], "datetime": "2026-10-15T22:06:30Z", "url": "https://lucaskk.github.io/daily-news/wiki/daily/2026/10/2026-10-17/slides-2026-10-17.html?story=t4#t4"}, {"id": "t5", "rank": "T5", "title": "Gmail Live 擴展至付費 Workspace，以語音查詢信箱並顯示郵件來源", "facts": ["Android與iOS可在Gmail搜尋列進入，首次使用須授予麥克風權限。", "Rapid與Scheduled Release從10/15起漸進部署，可能最多15天才可見。", "官方限制為美國、EN-US，且依方案與組織Gemini／智慧功能設定供應，不等於台灣繁中已開放。"], "category": "tech", "product": "Google／Gmail Live、Google Workspace", "published": "2026-10-15（官方發布日期）", "time_basis": "Google Workspace Updates的10/15單篇公告；不以較晚媒體報導或週報日期當開始部署日。", "history": "近十四份日報與同窗表無此次Gmail Live企業供應擴充；不是重刊先前Google其他代理功能。", "summary": "符合資格的Workspace使用者開始取得手機語音信箱查詢，回答可附郵件來源卡片，並可選擇聲音。", "why": "行動中能用自然語言找信，但涉及私人工作資料與摘要正確性；可回到原信核對比單純聽到流暢答案更重要。", "entities": "Google、Gmail Live、Gemini、Workspace、語音搜尋、來源卡片", "uncertainty": "媒體稱企業版稍後推出，官方則已公告漸進部署，本期採官方。AI回答仍應核對原信，不保證帳號立即可用。", "sources": [{"label": "Google Workspace Updates：Gmail Live部署、方案與地區", "url": "https://workspaceupdates.googleblog.com/2026/10/gmail-live-is-rolling-out-to-paid-Workspace-users.html"}], "datetime": "2026-10-15", "url": "https://lucaskk.github.io/daily-news/wiki/daily/2026/10/2026-10-17/slides-2026-10-17.html?story=t5#t5"}, {"id": "t6", "rank": "T6", "title": "Apple 強化 App Store 審查規則，明確禁止非合意親密影像與審後變裝功能", "facts": ["原廠強調色情內容長期受禁，本次是強化、延伸既有標準，不是首次發現此類風險。", "含使用者生成內容的App須過濾不當內容、提供檢舉機制並讓使用者封鎖濫用帳號。", "隱藏或未揭露功能，以及審核後才露出有害能力的bait-and-switch做法，同樣受到規範。"], "category": "tech", "product": "Apple／App Store、App Review Guidelines", "published": "2026-10-16（官方發布日期）", "time_basis": "Apple Developer當日規則更新公告，是可核實的分發／權限政策變更。", "history": "十四份日報與同窗表無此次規則更新；不是把過去下架個別App再刊一次。", "summary": "Apple進一步明示，利用AI生成真實人物非合意裸露影像的App，以及通過審核後才顯露有害隱藏功能的App，違反平台標準。", "why": "規則影響App能否分發與開發者的內容治理責任，但文字更新不是所有違規內容已被偵測或移除的證據。", "entities": "Apple、App Store、App Review、生成式AI、非合意影像、內容治理", "uncertainty": "實際審查與執法效果仍需觀察；本文不主張所有相關App已下架，也不以規則公告替個別案件作法律結論。", "sources": [{"label": "Apple Developer：非合意親密影像與bait-and-switch審查更新", "url": "https://developer.apple.com/news/?id=vvzx6cul"}], "datetime": "2026-10-16", "url": "https://lucaskk.github.io/daily-news/wiki/daily/2026/10/2026-10-17/slides-2026-10-17.html?story=t6#t6"}, {"id": "1", "rank": "1", "title": "續報｜俄軍再襲烏克蘭九個地區，造成大規模停電與至少十五人受傷", "facts": ["本次通報涵蓋九個地區，與先前能源攻擊屬不同日期事件。", "住宅與供電受損情況由烏方官員提供，戰時仍難全面獨立核實。"], "category": "world", "published": "2026-10-16 18:06:59（Asia/Taipei）", "time_basis": "AP週五10:06:59UTC首發，採本窗內新襲擊，不是前日文章更新。", "history": "10/16已收錄烏方恢復攻擊俄國煉油廠；新增週五俄軍對九地區攻擊及新傷亡、停電，不重述停火破裂聲明。", "summary": "烏方官員通報新一輪俄軍攻擊使數十萬戶停電，至少十五人受傷。", "why": "寒冬前電力與民生設施再次承壓，平民保護及修復能力成為戰事重要面向。", "entities": "Ukraine、Russia、電網、平民保護、能源安全", "uncertainty": "傷亡與修復規模可能更新，不將一方通報視為全部戰果。", "sources": [{"label": "Associated Press：週五九地區襲擊與停電", "url": "https://apnews.com/article/025bdb5cebc0be727a6197ce37f2c365"}], "datetime": "2026-10-16T10:06:59Z", "url": "https://lucaskk.github.io/daily-news/wiki/daily/2026/10/2026-10-17/slides-2026-10-17.html?story=1#1"}, {"id": "2", "rank": "2", "title": "巴西公布亞馬遜年度砍伐面積降至 3,335 平方公里，創監測以來最低", "facts": ["這是自1988年監測開始以來最低年度值，並非森林已沒有損失。", "Cerrado同期為5,516.69平方公里，下降23.8%，兩種生態區數字不可互換。", "統計截止7月，因此不包括今年10月的新野火。"], "category": "world", "published": "2026-10-17 01:54:00（Asia/Taipei）", "time_basis": "巴西環境部10/16 14:54巴西利亞時間首發，即17:54UTC；不是10月當日砍伐量。", "history": "十四份日報無此次2026年度監測結果，巴西選舉與工時修憲屬不同事件。", "summary": "INPE監測顯示，2025年8月至2026年7月亞馬遜砍伐3,335平方公里，較前期5,731平方公里減少41.8%。", "why": "森林損失降低有助碳儲存與生態保護，但年度砍伐數字不能涵蓋野火、乾旱與全部森林退化。", "entities": "Brazil、Amazon、Cerrado、INPE、森林砍伐、碳儲存", "uncertainty": "官方估計與後續確定值可能調整；砍伐下降不等於所有環境壓力同幅改善。", "sources": [{"label": "巴西環境部：年度資料、比較基期與範圍", "url": "https://www.gov.br/mma/pt-br/noticias-defeso-eleitoral/brasil-alcanca-menores-taxas-de-desmatamento-da-serie-historica-na-amazonia-e-no-cerrado"}, {"label": "INPE：2026亞馬遜監測估計", "url": "https://data.inpe.br/biomasbr/estimativa-de-desmatamento-na-amazonia-legal-para-2026/"}, {"label": "AP／ABC：政策與風險背景", "url": "https://abcnews.com/International/wireStory/brazil-amazon-deforestation-fell-lowest-level-1988-137329441"}], "datetime": "2026-10-16T17:54:00Z", "url": "https://lucaskk.github.io/daily-news/wiki/daily/2026/10/2026-10-17/slides-2026-10-17.html?story=2#2"}, {"id": "3", "rank": "3", "title": "智利總統訪問玻利維亞，兩國發布貿易、能源與邊境合作聲明", "facts": ["官方列出ACE-22貿易協議現代化的參考條款及礦業合作備忘錄。", "雙方提出能源互聯與跨洋光纖走廊合作，仍需後續落實。", "安全合作涵蓋跨國犯罪、人口販運、走私及移民協調。"], "category": "world", "published": "2026-10-16 21:10:16（Asia/Taipei）", "time_basis": "AP西語首發13:10:16UTC確認到訪，官方聯合聲明確認10/16實際會晤與合作項目。", "history": "前十四份日報無此次到訪；早先準備會議不等於本次正式會晤已發生。", "summary": "智利總統José Antonio Kast在拉巴斯會晤玻利維亞總統Rodrigo Paz，兩國同意重啟對話機制並推進多領域合作。", "why": "長期緊張的鄰國關係出現具體合作節點，可能影響跨境貿易、能源及交通，但不能把聲明等同歷史爭議已解決。", "entities": "Chile、Bolivia、José Antonio Kast、Rodrigo Paz、ACE-22、能源互聯", "uncertainty": "此行被稱為七十一年來首次此層級訪問，不代表已恢復所有外交安排；計畫、備忘錄與建設完工分開。", "sources": [{"label": "智利外交部：兩國總統聯合聲明", "url": "https://www.minrel.gob.cl/sala-de-prensa/declaracion-conjunta-de-los-presidentes-del-estado-plurinacional-de-bolivia"}, {"label": "AP／AOL：正式到訪", "url": "https://www.aol.com/articles/presidente-chileno-visita-bolivia-d%C3%A9cadas-131016000.html"}], "datetime": "2026-10-16T13:10:16Z", "url": "https://lucaskk.github.io/daily-news/wiki/daily/2026/10/2026-10-17/slides-2026-10-17.html?story=3#3"}, {"id": "4", "rank": "4", "title": "續報｜衣索比亞設立提格雷六個月看守行政，準備選舉與公共服務復原", "facts": ["新行政受聯邦監督，與2022年和平協議後的原有安排不同。", "前戰士持續登記參加重返平民生活計畫，登記不等於解除所有武裝。", "當地衝突、招募壓力與報復恐懼仍存在，不能把任命公告寫成全面和平。"], "category": "world", "published": "2026-10-17 00:24:00（Asia/Taipei）", "time_basis": "AP／ABC10/16 12:24EDT，即16:24UTC，報導當日政府任命。", "history": "10/05已收錄Mekelle易手與TPLF撤出；本次新增聯邦監督的六個月行政安排，不是重刊軍隊進城。", "summary": "衣索比亞政府為提格雷設立看守行政，目標包括恢復公共服務、協助流離失所者返家及六個月內準備選舉。", "why": "治理由軍事控制轉向行政重建，但新安排能否取得地方信任、確保安全與恢復政治程序仍是關鍵。", "entities": "Ethiopia、Tigray、Mekelle、Abiy Ahmed、TPLF、重建、解除武裝", "uncertainty": "六個月選舉為政府規畫，不是已完成承諾；各方對合法性與安全情勢仍可能有爭議。", "sources": [{"label": "AP／ABC：六個月行政與前戰士登記", "url": "https://abcnews.com/Business/wireStory/ethiopia-sets-tigray-caretaker-government-fighters-seek-return-137328515"}, {"label": "UMD Media：官方任命與法源說明", "url": "https://www.umdmedia.com/article/federal-government-establishes-six-month-federal-caretaker-administration-in-tigray-appoints-five-officials"}], "datetime": "2026-10-16T16:24:00Z", "url": "https://lucaskk.github.io/daily-news/wiki/daily/2026/10/2026-10-17/slides-2026-10-17.html?story=4#4"}, {"id": "5", "rank": "5", "title": "IPCC 會議未就新評估時程達成協議，主席宣布暫停並待續會", "facts": ["主席Jim Skea宣布未來另行續會，並非取消所有IPCC科學工作。", "報告時程與預算討論仍開放，未公布完整解決方案。", "各國對是否應加快發布，或給科學家更多準備時間，有不同立場。"], "category": "world", "published": "2026-10-17 00:38:00（Asia/Taipei）", "time_basis": "IISD現場紀錄10/16 19:38衣索比亞時間，即16:38UTC的暫停宣布；Reuters同日交叉。", "history": "前十四份日報無此次IPCC會議結果，爭議持續多年只作背景。", "summary": "IPCC第65次全會在部分發展中國家代表必須離場後暫停，下一輪氣候評估報告發布時程仍未取得共識。", "why": "評估時程影響各國氣候政策與2028年全球盤點的科學依據；兼顧及時性與資源較少國家的參與，是本次爭議核心。", "entities": "IPCC、Jim Skea、AR7、氣候評估、全球盤點、科學參與", "uncertainty": "尚無最終新版日程，不應寫成科學界對氣候變遷本身失去共識；會議程序與研究結論不同。", "sources": [{"label": "IISD Earth Negotiations Bulletin：10/16會場紀錄", "url": "https://enb.iisd.org/intergovernmental-panel-climate-change-ipcc-65-16Oct2026"}, {"label": "Reuters／Al-Monitor：時程僵局與各方立場", "url": "https://www.al-monitor.com/originals/2026/10/top-global-climate-science-body-suspends-meeting-without-deal-major-review"}], "datetime": "2026-10-16T16:38:00Z", "url": "https://lucaskk.github.io/daily-news/wiki/daily/2026/10/2026-10-17/slides-2026-10-17.html?story=5#5"}, {"id": "6", "rank": "6", "title": "續報｜亞丁機場遭兩枚飛彈擊中，警方暫未通報人員傷亡", "facts": ["警方歸責胡塞武裝；早稿尚無立即認領，後續AP引胡塞官員稱攻擊軍事設施。", "目前無傷亡通報不等於已完成所有損害評估。"], "category": "world", "published": "2026-10-17 03:47:01（Asia/Taipei）", "time_basis": "AP10/16 19:47:01UTC首發確認週五夜間機場攻擊。", "history": "10/16已刊Maashiq宮殿附近攻擊；今日新增機場地點與兩枚飛彈，不合併兩起事件傷亡。", "summary": "警方稱葉門亞丁機場遭兩枚飛彈擊中，暫無傷亡通報，安全人員稱涉及政府盟軍使用區域。", "why": "機場安全關係交通與政府運作，也顯示衝突擴及重要基礎設施。", "entities": "Yemen、Aden、Houthis、機場、飛彈、基礎設施", "uncertainty": "部分安全消息人士匿名；目標、損害與攻擊方主張仍須獨立核實。", "sources": [{"label": "AP／AOL：亞丁機場攻擊", "url": "https://www.aol.com/articles/2-projectiles-strike-airport-yemens-194701000.html"}, {"label": "Associated Press：後續原稿", "url": "https://apnews.com/article/c39ea48032c0e8a76558b0296bb25244"}], "datetime": "2026-10-16T19:47:01Z", "url": "https://lucaskk.github.io/daily-news/wiki/daily/2026/10/2026-10-17/slides-2026-10-17.html?story=6#6"}, {"id": "7", "rank": "7", "title": "摩爾多瓦稱五架俄製無人機墜境，譴責戰火危及鄰國", "facts": ["事件分布在週四至週五，以北部與東部地區為主。", "外交部稱事件威脅民眾安全，並指向俄羅斯對烏戰爭的區域後果。", "當局先前多次要求俄國大使說明，但此次報導未證明外交抗議已換得具體改善。"], "category": "world", "published": "2026-10-17 06:15:00（Asia/Taipei）", "time_basis": "Reuters／MarketScreener10/16 23:15BST，即22:15UTC，報導週五官方譴責。", "history": "前十四份日報無此次五架無人機事件，先前其他侵入只作背景。", "summary": "摩爾多瓦當局表示，約十七小時內五架被辨識為俄方的無人機進入領空後墜落，造成一人輕傷與輕微損害。", "why": "俄烏戰事跨境外溢牽動非交戰鄰國的安全與外交；機體歸屬、飛行意圖與責任仍應分開判斷。", "entities": "Moldova、Russia、Ukraine、Maia Sandu、領空、無人機", "uncertainty": "俄方歸屬為摩爾多瓦當局判定，並非本站鑑識；不在缺乏證據時斷言各架有意攻擊摩國。", "sources": [{"label": "Reuters／MarketScreener：五架無人機與官方聲明", "url": "https://uk.marketscreener.com/news/moldova-condemns-russia-after-five-drones-crash-on-its-territory-ce785cdadf81f220"}], "datetime": "2026-10-16T22:15:00Z", "url": "https://lucaskk.github.io/daily-news/wiki/daily/2026/10/2026-10-17/slides-2026-10-17.html?story=7#7"}, {"id": "8", "rank": "8", "title": "續報｜肯亞確認第三例伊波拉，患者為已隔離的家庭接觸者", "facts": ["衛生部稱第二名患者狀況穩定，暫無更廣泛社區傳播證據。", "已追蹤130名已知接觸者中的127人，另三人仍在追查。", "與剛果疫情的旅行／家庭接觸鏈相關，病例數與跨境風險分開評估。"], "category": "world", "published": "2026-10-16 23:45:00（Asia/Taipei）", "time_basis": "Reuters／KFGO10/16 10:45CDT，即15:45UTC，引用當日衛生部聲明。", "history": "10/07收錄肯亞首例與死亡，10/14追蹤剛果統計；新增肯亞隔離接觸者第三例，不把同一首例再次計數。", "summary": "一名65歲女性確診伊波拉，與前兩名患者為近親；她自10/6已隔離，出現症狀後接受檢驗與支持性照護。", "why": "隔離中及早發現新病例有助切斷傳播，但接觸者追蹤仍有缺口，不能據此宣稱疫情已結束或已廣泛社區傳播。", "entities": "Kenya、Ebola、DR Congo、隔離、接觸者追蹤、公共衛生", "uncertainty": "「未見證據」不是零風險保證，後續仍依正式監測更新；本文不提供個別醫療診斷。", "sources": [{"label": "Reuters／KFGO：第三例與接觸者追蹤", "url": "https://kfgo.com/2026/10/16/kenya-confirms-third-ebola-case-a-close-relative-of-other-two-cases/"}, {"label": "AP：衛生部當日通報", "url": "https://apnews.com/article/25f722f20d89e9cf8977a5080e9d575c"}], "datetime": "2026-10-16T15:45:00Z", "url": "https://lucaskk.github.io/daily-news/wiki/daily/2026/10/2026-10-17/slides-2026-10-17.html?story=8#8"}, {"id": "9", "rank": "9", "title": "天水幼兒園鉛污染案一審宣判，實際負責人被判無期徒刑", "facts": ["案件背景為2025年逾二百名幼兒血鉛異常。", "另四名廚房人員被判六至八年。"], "category": "world", "published": "2026-10-16 22:25:04（Asia/Taipei）", "time_basis": "AP14:25:04UTC首發，引用當日下午法院一審宣判；污染發現於2025年，不是本日新事故。", "history": "近十四份日報未收錄此次裁判結果。", "summary": "蘭州中級法院對天水幼兒園有毒食品案六人判刑，李慧芳被判無期，執行園長朱敬琳被判十五年。", "why": "案件涉及幼兒食品安全與機構責任；司法結果與兒童後續健康照護是不同追蹤事項。", "entities": "天水、蘭州中級法院、褐石培心幼兒園、食品安全、鉛污染", "uncertainty": "本次為一審，未核實上訴或判決已確定；刑期不代表健康損害已獲完整補救。", "sources": [{"label": "Associated Press：六人判刑與官方媒體引述", "url": "https://apnews.com/article/cd5f37cb0f4174ecf52705d2918b053f"}], "datetime": "2026-10-16T14:25:04Z", "url": "https://lucaskk.github.io/daily-news/wiki/daily/2026/10/2026-10-17/slides-2026-10-17.html?story=9#9"}, {"id": "10", "rank": "10", "title": "伊斯坦堡洪災死亡增至四人，土耳其稱為八十多年來最嚴重", "facts": ["土耳其內政部長稱是1942年以來最嚴重洪災，這是官方評估，不是本站重建歷史雨量。", "官方稱收到9,850件災損與相關通報，約46,000人投入清理及協助。", "氣象單位另警告週末伊斯坦堡與鄰近省分仍可能有強降雨。"], "category": "world", "published": "2026-10-16 19:14:09（Asia/Taipei）", "time_basis": "InfoNews／AP首次11:14:09UTC，採週五新增遺體發現及官方災情評估。", "history": "前十四份日報伊斯坦堡命中為10/09建築倒塌，並非本次洪災；不把地名相同誤認同事故。", "summary": "暴雨引發伊斯坦堡嚴重淹水，週五找到一名66歲男性遺體後死亡增至四人，政府持續救援與清理。", "why": "水道周邊開發、排水與極端雨量共同考驗城市韌性；災後統計與未來降雨警報仍需持續核實。", "entities": "Türkiye、Istanbul、洪水、都市排水、救援、極端降雨", "uncertainty": "失蹤者統計早於新遺體發現，不能直接相加；單一事件的氣候歸因仍需專門研究。", "sources": [{"label": "AP／InfoNews：週五新死者、災損與氣象警告", "url": "https://infonews.ca/news/7955640/istanbuls-worst-floods-in-80-years-leave-4-dead/"}], "datetime": "2026-10-16T11:14:09Z", "url": "https://lucaskk.github.io/daily-news/wiki/daily/2026/10/2026-10-17/slides-2026-10-17.html?story=10#10"}], "followups": [], "cutoff": "2026-10-17 08:02:21（Asia/Taipei）", "world_window": "2026-10-16 08:02:21 至 2026-10-17 08:02:21（Asia/Taipei）", "tech_window": "2026-10-03 08:02:21 至 2026-10-17 08:02:21（Asia/Taipei）", "tech_window_days": 14, "url": "https://lucaskk.github.io/daily-news/wiki/daily/2026/10/2026-10-17/slides-2026-10-17.html"}</script>
+  <script>(() => {
+  'use strict';
+  const report = JSON.parse(document.getElementById('report-data').textContent);
+  const stories = report.stories;
+  const byId = new Map(stories.map(story => [story.id, story]));
+  const articles = Array.from(document.querySelectorAll('article.story'));
+  const sections = [...articles, document.getElementById('notes')];
+  const askDialog = document.getElementById('ask-dialog');
+  const indexDialog = document.getElementById('index-dialog');
+  const question = document.getElementById('question');
+  const contextText = document.getElementById('context-text');
+  const chatLink = document.getElementById('chatgpt-link');
+  const note = document.getElementById('handoff-note');
+  const status = document.getElementById('copy-status');
+  const themeButton = document.getElementById('theme-toggle');
+  const prev = document.getElementById('prev');
+  const next = document.getElementById('next');
+  let current = 0;
+  let selected = null;
+  let opener = null;
+  let copiedContext = '';
+  let currentContext = '';
+  const MAX_LINK_LENGTH = 12000;
+
+  function setTheme(theme) {
+    document.documentElement.dataset.theme = theme;
+    const label = theme === 'dark' ? '切換淺色' : '切換深色';
+    themeButton.title = label;
+    themeButton.setAttribute('aria-label', label);
+  }
+  try { setTheme(localStorage.getItem('daily-reader-theme') === 'light' ? 'light' : 'dark'); } catch (_) { setTheme('dark'); }
+  themeButton.addEventListener('click', () => {
+    const theme = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+    setTheme(theme);
+    try { localStorage.setItem('daily-reader-theme', theme); } catch (_) { /* Private storage can be unavailable. */ }
+  });
+
+  function updatePosition() {
+    const threshold = document.querySelector('.masthead').getBoundingClientRect().height + 36;
+    let position = 0;
+    sections.forEach((section, i) => { if (section.getBoundingClientRect().top <= threshold) position = i; });
+    current = position;
+    const story = stories[current];
+    const label = story
+      ? `${story.category === 'tech' ? '科技' : '全球'} ${story.rank.replace('T', '')} / ${stories.filter(s => s.category === story.category).length}`
+      : '研究備註';
+    const counter = document.getElementById('position');
+    if (counter.textContent !== label) counter.textContent = label;
+    prev.disabled = current === 0;
+    next.disabled = current === sections.length - 1;
+    document.querySelectorAll('[data-section]').forEach(link => {
+      link.setAttribute('aria-current', String(link.dataset.section === (story ? story.category : 'notes')));
+    });
+  }
+
+  function jump(id, push = true) {
+    const target = sections.find(section => section.id === id);
+    if (!target) return;
+    if (push) {
+      const url = new URL(location.href);
+      if (byId.has(id)) url.searchParams.set('story', id);
+      else url.searchParams.delete('story');
+      url.hash = id;
+      if (url.href !== location.href) history.pushState(null, '', url);
+    }
+    target.scrollIntoView({ behavior: 'instant', block: 'start' });
+    const title = target.querySelector('h2');
+    if (title) { title.tabIndex = -1; title.focus({ preventScroll: true }); }
+    updatePosition();
+  }
+  document.querySelectorAll('a[href^="#"]').forEach(link => {
+    if (link.classList.contains('skip-link')) return;
+    link.addEventListener('click', event => {
+      const id = link.hash.slice(1);
+      if (!sections.some(section => section.id === id)) return;
+      event.preventDefault();
+      if (indexDialog.open) { opener = null; indexDialog.close(); }
+      jump(id);
+    });
+  });
+  prev.addEventListener('click', () => jump(sections[Math.max(0, current - 1)].id));
+  next.addEventListener('click', () => jump(sections[Math.min(sections.length - 1, current + 1)].id));
+  let scrollPending = false;
+  document.getElementById('content').addEventListener('scroll', () => {
+    if (!scrollPending) requestAnimationFrame(() => { updatePosition(); scrollPending = false; });
+    scrollPending = true;
+  }, { passive: true });
+  window.addEventListener('resize', updatePosition);
+  function locationTarget() {
+    const hashId = location.hash.slice(1);
+    if (sections.some(section => section.id === hashId)) return hashId;
+    const queryId = new URLSearchParams(location.search).get('story');
+    return sections.some(section => section.id === queryId) ? queryId : '';
+  }
+  window.addEventListener('hashchange', () => {
+    const id = locationTarget();
+    if (id) jump(id, false);
+  });
+  window.addEventListener('keydown', event => {
+    if (askDialog.open || indexDialog.open || event.altKey || event.ctrlKey || event.metaKey || event.shiftKey ||
+        event.target.closest('input, textarea, select, button, summary, [contenteditable]')) return;
+    if (event.key === 'ArrowLeft') { event.preventDefault(); prev.click(); }
+    if (event.key === 'ArrowRight') { event.preventDefault(); next.click(); }
+  });
+
+  function openDialog(dialog, source) {
+    opener = source;
+    dialog.showModal();
+    document.body.classList.add('modal-open');
+  }
+  for (const dialog of [askDialog, indexDialog]) {
+    dialog.querySelector('[data-close]').addEventListener('click', () => dialog.close());
+    dialog.addEventListener('close', () => {
+      document.body.classList.remove('modal-open');
+      if (opener && !indexDialog.open && !askDialog.open) opener.focus({ preventScroll: true });
+    });
+    dialog.addEventListener('click', event => {
+      if (event.target !== dialog) return;
+      const rect = dialog.getBoundingClientRect();
+      if (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom) dialog.close();
+    });
+  }
+  document.getElementById('open-index').addEventListener('click', event => openDialog(indexDialog, event.currentTarget));
+
+  function makeContext(story, userQuestion) {
+    const lines = [
+      '請使用繁體中文，根據下列新聞筆記協助我討論後續問題。區分已知事實、來源主張與推測；若需要最新資訊，請重新查證並附來源。',
+      '', `新聞標題：${story.title}`, `發佈時間：${story.published}`, `研究截點：${report.cutoff}`,
+      `本文連結：${story.url}`, '', `摘要：${story.summary || story.why}`, '', '關鍵事實：',
+      ...story.facts.map(fact => `- ${fact}`), '', `背景與影響：${story.why}`,
+      `事件與發佈依據：${story.time_basis}`, `不確定性：${story.uncertainty}`, `相關實體與概念：${story.entities}`,
+    ];
+    if (story.product) lines.push(`公司與產品：${story.product}`);
+    if (story.title.startsWith('續報｜')) lines.push(`前次收錄與新進展：${story.history}`);
+    lines.push('', '原始來源：', ...story.sources.map(source => `${source.label}\n${source.url}`), '',
+      `我的問題：${userQuestion.trim() || '這篇新聞還有哪些值得追問的重點？請列出後續問題，並指出回答它們需要哪些資料。'}`);
+    return lines.join('\n');
+  }
+
+  function updateHandoff() {
+    if (!selected) return;
+    currentContext = makeContext(selected, question.value);
+    contextText.value = currentContext;
+    const url = new URL('https://chatgpt.com/');
+    url.searchParams.set('prompt', currentContext);
+    const oversized = url.href.length > MAX_LINK_LENGTH;
+    chatLink.href = oversized ? 'https://chatgpt.com/#native' : url.href;
+    const ready = !oversized || copiedContext === currentContext;
+    chatLink.setAttribute('aria-disabled', String(!ready));
+    note.textContent = oversized
+      ? (ready ? '完整內容已複製。開啟 ChatGPT 後可貼上提問。' : '文章與問題較長，請先複製完整內容，再開啟 ChatGPT 貼上。')
+      : 'Safari 將依裝置設定開啟 ChatGPT App 或網頁。若未帶入文字，可使用右側複製按鈕。';
+  }
+  document.querySelectorAll('[data-ask]').forEach(button => {
+    button.addEventListener('click', () => {
+      selected = byId.get(button.dataset.ask);
+      document.getElementById('ask-story-title').textContent = selected.title;
+      question.value = '';
+      status.textContent = '';
+      copiedContext = '';
+      askDialog.querySelector('.context-details').open = false;
+      updateHandoff();
+      openDialog(askDialog, button);
+    });
+  });
+  document.querySelectorAll('[data-share]').forEach(button => {
+    button.addEventListener('click', async () => {
+      const story = byId.get(button.dataset.share);
+      if (!story) return;
+      const shareData = {
+        title: story.title,
+        text: `每日新聞｜${story.title}`,
+        url: story.url,
+      };
+      if (navigator.share) {
+        try {
+          await navigator.share(shareData);
+          return;
+        } catch (error) {
+          if (error && error.name === 'AbortError') return;
+        }
+      }
+      const label = button.querySelector('span');
+      try {
+        await navigator.clipboard.writeText(story.url);
+        label.textContent = '已複製';
+        button.setAttribute('aria-label', '新聞連結已複製');
+      } catch (_) {
+        const helper = document.createElement('textarea');
+        helper.value = story.url;
+        helper.setAttribute('readonly', '');
+        helper.style.position = 'fixed';
+        helper.style.opacity = '0';
+        document.body.appendChild(helper);
+        helper.select();
+        let copied = false;
+        try { copied = document.execCommand('copy'); } catch (_) { /* Keep the normal label when copying is blocked. */ }
+        helper.remove();
+        if (!copied) return;
+        label.textContent = '已複製';
+        button.setAttribute('aria-label', '新聞連結已複製');
+      }
+      setTimeout(() => {
+        label.textContent = '分享';
+        button.setAttribute('aria-label', '分享這則新聞');
+      }, 1800);
+    });
+  });
+  question.addEventListener('input', () => { status.textContent = ''; updateHandoff(); });
+  chatLink.addEventListener('click', event => {
+    if (chatLink.getAttribute('aria-disabled') === 'true') {
+      event.preventDefault();
+      status.textContent = '請先複製完整內容。';
+      document.getElementById('copy-context').focus();
+    }
+    // Keep a normal, user-initiated HTTPS navigation so Safari can hand off to iOS.
+  });
+  document.getElementById('copy-context').addEventListener('click', async () => {
+    const pending = currentContext;
+    let copied = false;
+    try { await navigator.clipboard.writeText(pending); copied = true; } catch (_) {
+      askDialog.querySelector('.context-details').open = true;
+      contextText.focus();
+      contextText.select();
+      contextText.setSelectionRange(0, contextText.value.length);
+      try { copied = document.execCommand('copy'); } catch (_) { /* Keep the text selected for manual copying. */ }
+    }
+    if (copied) {
+      copiedContext = pending;
+      status.textContent = '已複製完整文章與問題。';
+      updateHandoff();
+    } else {
+      status.textContent = '無法自動複製。完整文字已選取，可長按複製。';
+    }
+  });
+  contextText.addEventListener('copy', () => {
+    if (contextText.selectionStart === 0 && contextText.selectionEnd === contextText.value.length) {
+      copiedContext = contextText.value;
+      setTimeout(updateHandoff, 0);
+    }
+  });
+  document.querySelectorAll('.story-media img').forEach(img => {
+    const failure = () => {
+      const figure = img.closest('figure');
+      figure.classList.add('image-failed');
+      figure.querySelector('figcaption').prepend('圖片暫時無法載入。');
+    };
+    img.addEventListener('error', failure, { once: true });
+    if (img.complete && !img.naturalWidth) failure();
+  });
+  window.addEventListener('load', () => {
+    const id = locationTarget();
+    if (id) jump(id, false);
+    updatePosition();
+  });
+  updatePosition();
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+{
+  "images": {
+    "t2": {
+      "src": "assets/analogue-super-nt-plus.jpg",
+      "original_url": "https://www.analogue.co/super-nt/opengraph-image.jpg",
+      "source_url": "https://www.analogue.co/super-nt",
+      "alt": "Analogue官方Super Nt+新品圖",
+      "caption": "Super Nt+官方產品圖；非Mega Sg+，預計十二月出貨。",
+      "credit": "Analogue",
+      "rights": "官方產品頁圖片，版權歸Analogue；不宣稱自由授權。",
+      "fit": "contain"
+    },
+    "t3": {
+      "src": "assets/razer-barracuda-v2-pro.png",
+      "original_url": "https://press.razer.com/wp-content/uploads/2026/10/KV-1024x576.png",
+      "source_url": "https://www.razer.com/newsroom/product-news/barracuda-v2-pro",
+      "alt": "Razer官方Barracuda V2 Pro耳機新品圖",
+      "caption": "Barracuda V2 Pro官方新聞圖，非本站實測。",
+      "credit": "Razer Newsroom",
+      "rights": "原廠公開新聞素材，版權歸Razer；不宣稱自由授權。",
+      "fit": "contain"
+    }
+  }
+}
