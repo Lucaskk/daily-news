@@ -1,5 +1,12 @@
 # Knowledge Base Log
 
+## [2026-10-17] ingest | Daily global and tech AI news
+
+- 凍結08:02:21 Asia/Taipei；科技336小時窗6則、全球24小時窗正好10則。僅比對10/03–10/16十四份日報與同窗71列產品表，維持legacy。
+- 十二站scan與逐站補查、官方第二輪及未選候選已保存。Chrome文章未核實新部署日期不採；Razer評測回查10/15原廠新品。兩張官方產品圖下載並目視核對，其他逐篇區分圖片存在、存取失敗與權利限制。
+- 內容commit `47fd5c43bd2d696e39837c0af0a52220a52e0c0c`，版本`20261017-080830-reader`；Pages日期頁、latest及根入口完整雜湊驗證成功，唯一私人watchdog於08:09:33回報 `Sent LINE message`，沒有重送。
+- 強制check exit0；16篇、6科技、全球1–10、來源群組與JS語法通過。渲染器12項及pipeline17項測試通過；Playwright未安裝，不宣稱瀏覽器版面或實體iPhone測試，本機預覽最後best-effort。
+
 ## [2026-10-16] ingest | Daily global and tech AI news
 
 - 凍結08:02:15 Asia/Taipei；科技336小時窗5則、全球24小時窗正好10則。僅比對10/02–10/15十四份日報與同窗71列產品表，維持legacy。

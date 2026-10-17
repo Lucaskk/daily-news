@@ -2,7 +2,7 @@
 title: "Overview"
 type: overview
 created: 2026-05-24
-updated: 2026-10-16
+updated: 2026-10-17
 status: seed
 tags: [overview]
 sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
@@ -19,6 +19,12 @@ sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
 - 抽出持續出現的人物、組織、事件、政策、技術與市場概念。
 - 維護跨來源的矛盾、時間線、趨勢與待查問題。
 - 將重要查詢結果回寫成可累積的 wiki 頁面。
+
+## 2026-10-17 Daily News Synthesis
+
+- [本日日報](daily/2026/10/2026-10-17/daily-news-2026-10-17.md)：協作簡報、語音信箱及成就集合擴充既有工作／娛樂流程，但方案、地區與beta支援各異。復古主機預購與出貨日期分開，耳機續航與空間音訊仍依平台及條件。
+- 全球新資料與程序結果須和背景分開：巴西年度砍伐不是十月野火量；天水一審不是新污染事故；提格雷看守行政不代表戰事已止。IPCC時程爭議不同於氣候科學結論分歧，肯亞隔離病例亦不等於持續社區傳播。
+- 十四日日報去重、十二站補查、官方段落與逐篇圖片限制見 [[daily/2026/10/2026-10-17/source-notes-2026-10-17]]。
 
 ## 2026-10-16 Daily News Synthesis
 
