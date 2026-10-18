@@ -2,7 +2,7 @@
 title: "Overview"
 type: overview
 created: 2026-05-24
-updated: 2026-10-17
+updated: 2026-10-18
 status: seed
 tags: [overview]
 sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
@@ -19,6 +19,12 @@ sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
 - 抽出持續出現的人物、組織、事件、政策、技術與市場概念。
 - 維護跨來源的矛盾、時間線、趨勢與待查問題。
 - 將重要查詢結果回寫成可累積的 wiki 頁面。
+
+## 2026-10-18 Daily News Synthesis
+
+- [本日日報](daily/2026/10/2026-10-18/daily-news-2026-10-18.md)：視覺推理研究預覽不等同可靠的機器人直接控制，雙螢幕掌機預購也不等於已交貨。新品以事件日期及官方依據判斷，不以評測或購物文章日期刷新。
+- 全球追蹤區分制裁正式暫緩、示威新動員、警員停職調查、人道釋放及組閣探索共識；出院不等於治療結束、火場部分解除撤離不等於全面安全。
+- 十二站來源、十四日日報去重、時間欄位矛盾及逐篇圖片限制見 [[daily/2026/10/2026-10-18/source-notes-2026-10-18]]。
 
 ## 2026-10-17 Daily News Synthesis
 

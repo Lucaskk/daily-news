@@ -1,5 +1,13 @@
 # Knowledge Base Log
 
+## [2026-10-18] ingest | Daily global and tech AI news
+
+- 凍結08:01:26 Asia/Taipei；科技336小時窗2則、全球24小時窗正好10則。只查10/04–10/17十四份日報及同窗70列產品表，維持legacy；十二站scan、逐站補查、官方第二輪及候選取捨已保存。
+- Glimpse及RG DDS兩張官方發布／產品圖下載並目視核對，世界十則逐篇區分存取失敗、圖片存在與權利限制；未以舊型號或無關圖補位。
+- 系統Python／Git受Xcode授權阻擋；本次改用既有Homebrew Python及runtime Git，未接受授權或修改全域設定。本機HTTPS無登入憑證，乾淨clone推送失敗後使用GitHub connector發布限定檔案，保留股票與其他內容。
+- 內容commit `8368fa033cb12991c61646c742b9ccd42ef16c0d`、版本`20261018-080811-reader`。Pages日期頁、latest及根入口完整雜湊驗證成功，唯一私人watchdog於08:10:11回報 `Sent LINE message`；強制check exit0，沒有重送。
+- 12篇、2科技、全球1–10、逐篇來源與JS語法檢查通過；渲染器12項與pipeline17項測試通過。Playwright缺少，未宣稱瀏覽器版面或實體iPhone測試。環境登入與系統工具問題仍存在，不承諾以後每天必定送達。
+
 ## [2026-10-17] ingest | Daily global and tech AI news
 
 - 凍結08:02:21 Asia/Taipei；科技336小時窗6則、全球24小時窗正好10則。僅比對10/03–10/16十四份日報與同窗71列產品表，維持legacy。

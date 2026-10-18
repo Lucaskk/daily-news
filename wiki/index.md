@@ -2,7 +2,7 @@
 title: "Knowledge Base Index"
 type: overview
 created: 2026-05-24
-updated: 2026-10-17
+updated: 2026-10-18
 status: seed
 tags: [index]
 sources: []
@@ -21,6 +21,9 @@ sources: []
 - [[2026-04-04-llm-wiki]] - Karpathy 提出的 LLM-maintained personal wiki 模式，是本知識庫的設計來源。
 
 ## Daily News
+
+- [2026-10-18 Daily News](daily/2026/10/2026-10-18/daily-news-2026-10-18.md) - 2則科技：Elorian Glimpse研究預覽與Anbernic RG DDS預購；全球正好10則。
+- [2026-10-18 Slides](daily/2026/10/2026-10-18/slides-2026-10-18.html) - 原頁完整報告與逐篇提問；Pages與LINE於08:10:11驗證完成。
 
 - [2026-10-17 Daily News](daily/2026/10/2026-10-17/daily-news-2026-10-17.md) - 6則科技：ChatGPT Slides、Analogue新機、Razer耳機、Steam成就、Gmail Live與Apple審查規則；全球正好10則。
 - [2026-10-17 Slides](daily/2026/10/2026-10-17/slides-2026-10-17.html) - 原頁完整報告與逐篇提問；Pages與LINE於08:09:33驗證完成。
