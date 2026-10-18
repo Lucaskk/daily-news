@@ -1,0 +1,24 @@
+{
+  "images": {
+    "t1": {
+      "src": "assets/elorian-glimpse.jpg",
+      "original_url": "https://elorian.ai/assets/blog/glimpse/og-introducing-glimpse.jpg",
+      "source_url": "https://elorian.ai/blog/introducing-glimpse",
+      "alt": "Elorian Glimpse 官方研究預覽圖，含影像追蹤示意",
+      "caption": "官方研究預覽圖，非本站實測或機器人實際控制成果。",
+      "credit": "Elorian",
+      "rights": "官方公開發布素材，版權歸 Elorian；不宣稱自由授權。",
+      "fit": "contain"
+    },
+    "t2": {
+      "src": "assets/anbernic-rg-dds.jpg",
+      "original_url": "https://anbernic.com/cdn/shop/files/eg.jpg?v=1792131877&width=1200",
+      "source_url": "https://anbernic.com/products/rg-dds",
+      "alt": "Anbernic RG DDS 白色雙螢幕掌機官方產品圖",
+      "caption": "RG DDS 官方預購圖，非任天堂 3DS，非本站實測。",
+      "credit": "Anbernic",
+      "rights": "官方產品頁圖片，版權歸 Anbernic；不宣稱自由授權。",
+      "fit": "contain"
+    }
+  }
+}

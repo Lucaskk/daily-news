@@ -1,7 +1,7 @@
 ---
 title: "科技產品新聞最近 14 天比對表"
 type: product-news-ledger-recent
-updated: 2026-10-16
+updated: 2026-10-17
 status: generated
 tags: [daily-news, tech-products, deduplication, recent]
 ---
@@ -11,11 +11,17 @@ tags: [daily-news, tech-products, deduplication, recent]
 本檔只整理產製日前 14 天的日報，可完整讀取做去重確認；不搜尋更早日報、完整歷史表或來源筆記。實際發布窗仍以當日研究截點與來源筆記判定。
 
 - 掃描日報：14 份。
-- 最近 14 天項目：71 則。
-- 日報日期範圍：2026-10-03 至 2026-10-16。
+- 最近 14 天項目：70 則。
+- 日報日期範圍：2026-10-04 至 2026-10-17。
 
 | 公司 | 產品 | 更新內容 | 發佈時間 | 收錄日期 | 狀態 | 來源網址 | 比對鍵 |
 |---|---|---|---|---|---|---|---|
+| Steam | Achievement Sets 測試 | Steam 開放 Achievement Sets 測試，分開追蹤本體與 DLC 成就 | 2026-10-16 06:06:30（Asia/Taipei） | 2026-10-17 | 首次收錄 | https://store.steampowered.com/news/app/593110/view/710037059469839141<br>https://steamcommunity.com/groups/SteamClientBeta/discussions/3/573803804385027371/ | 8f5531b14831 |
+| Razer | Barracuda V2 Pro | Razer 發布 Barracuda V2 Pro，以雙無線與降噪整合遊戲及日常通話 | 2026-10-15 22:25:31（Asia/Taipei） | 2026-10-17 | 首次收錄 | https://www.razer.com/newsroom/product-news/barracuda-v2-pro | 936d443fa6ab |
+| Gmail Live 擴展至付費 Workspace，以語音查詢信箱並顯示郵件來源 | Gmail Live 擴展至付費 Workspace | Gmail Live 擴展至付費 Workspace，以語音查詢信箱並顯示郵件來源 | 2026-10-15（官方發布日期） | 2026-10-17 | 首次收錄 | https://workspaceupdates.googleblog.com/2026/10/gmail-live-is-rolling-out-to-paid-Workspace-users.html | 8cf7896be443 |
+| OpenAI | ChatGPT 開始推出 Slides | ChatGPT 開始推出 Slides，可在 Space 共同編輯與匯出簡報 | 2026-10-16（官方發布日期） | 2026-10-17 | 首次收錄 | https://help.openai.com/en/articles/6825453-chatgpt-release-notes | 7a98dbbeec45 |
+| Apple | 強化 App Store 審查規則 | Apple 強化 App Store 審查規則，明確禁止非合意親密影像與審後變裝功能 | 2026-10-16（官方發布日期） | 2026-10-17 | 首次收錄 | https://developer.apple.com/news/?id=vvzx6cul | d82941d81f6f |
+| Analogue 公布 Super Nt+ | 與 Mega Sg+ | Analogue 公布 Super Nt+ 與 Mega Sg+，十九日開放預購、十二月出貨 | 2026-10-17 01:03:29（Asia/Taipei） | 2026-10-17 | 首次收錄 | https://www.analogue.co/super-nt<br>https://www.analogue.co/mega-sg | e2eb519479d8 |
 | Sony | 三款新 Walkman 預購 | Sony 開放三款新 Walkman 預購，美國旗艦定價 US$5,899 | 2026-10-15（官方發布日期） | 2026-10-16 | 首次收錄 | https://sony.mediaroom.com/2026-10-15-Sony-Electronics-Updates-its-Premium-Walkman-R-Lineup-Including-New-Signature-Series-Walkman-R-NW-WM1ZM3%2C-NW-WM1AM3-and-NW-ZX900-Digital-Media-Players<br>https://www.cool3c.com/article/253065 | 4efa9975676e |
 | OpenAI | GPT-Live 1.1 與 Quip | OpenAI 推出 GPT-Live 1.1 與 Quip，更新語音對話模型 | 2026-10-15（官方發布日期） | 2026-10-16 | 首次收錄 | https://help.openai.com/en/articles/6825453-chatgpt-release-notes<br>https://deploymentsafety.openai.com/gpt-live-1-1/avoiding-deceptive-interactions-with-users | 201cd094e87c |
 | Meta | 釋出 Muse Spark Open 權重 | Meta 釋出 Muse Spark Open 權重，官方示範以兩台高記憶體 Mac 執行 | 2026-10-15（官方發布日期） | 2026-10-16 | 首次收錄 | https://research.meta.ai/blog/muse-spark-open<br>https://dev.meta.ai/docs/muse-spark-open | e1f4a2583289 |
@@ -80,10 +86,3 @@ tags: [daily-news, tech-products, deduplication, recent]
 | Google／YouTube | Shorts recommendations | YouTube Shorts 提高原創內容推薦權重，重傳與聚合頻道可能降低分發 | 2026-10-01（官方僅提供日期） | 2026-10-04 | 首次收錄 | https://support.google.com/youtube/blog/470890423/prioritizing-original-content-on-shorts?hl=en | 4d364d48cc14 |
 | Meta | Muse Gadgets、Home Link | Meta 開源 Muse Gadgets 韌體與 Linux SDK，並製作 5,000 個 Home Link | 2026-10-03 08:45（Asia/Taipei） | 2026-10-04 | 首次收錄 | https://techcrunch.com/2026/10/02/meta-wants-you-to-build-your-own-muse-gadget/<br>https://gadgets.muse.ai/ | 7dc77567b2ce |
 | Block／Bitchat | 印度地區可用性 | Bitchat 在印度 App Store 與 Google Play 下架，網站與 TestFlight 存取也受限 | 2026-10-03 23:02（Asia/Taipei） | 2026-10-04 | 首次收錄 | https://techcrunch.com/2026/10/03/jack-dorseys-bitchat-disappears-from-app-stores-in-india-after-government-order/<br>https://www.ndtv.com/india-news/bitchat-removed-from-apples-india-app-store-after-centres-order-12135008 | 0eb4e1c80517 |
-| Amazon／Strands Labs | Strands Decider 2B | Strands Labs 釋出 1.9B 參數 Strands Decider，讓 agent 在本地做選項評分 | 2026-10-02 00:49（Asia/Taipei） | 2026-10-03 | 首次收錄 | https://github.com/strands-labs/strands-decider<br>https://techcrunch.com/2026/10/01/amazon-releases-its-own-jev-clone-as-decision-models-flood-the-web/ | bfd086fe7b0f |
-| Shopify | Canvas、Sidekick | Shopify 推出 Canvas，以 Sidekick 對真實 theme code 即時設計整間網店 | 2026-10-02 00:44（Asia/Taipei） | 2026-10-03 | 首次收錄 | https://www.shopify.com/news/introducing-canvas<br>https://changelog.shopify.com/posts/design-a-fully-bespoke-store-with-canvas<br>https://techcrunch.com/2026/10/01/shopify-debuts-canvas-a-way-to-build-online-stores-by-chatting-with-ai/ | b8f997b0a6ef |
-| Legato | Legato Frames | Legato Frames 在美國開賣，把 AI 聽力處理放進無相機眼鏡 | 2026-10-01 21:00（Asia/Taipei） | 2026-10-03 | 首次收錄 | https://www.globenewswire.com/news-release/2026/10/01/3372968/0/en/legato-frames-the-world-s-first-ai-based-hearing-glasses-are-now-available-in-the-u-s.html<br>https://techcrunch.com/2026/10/01/hearing-tech-startup-legato-launches-its-ai-hearing-glasses/ | 41dca25d772a |
-| Waitery | Laytr | Laytr 把 read-it-later 擴充到影片、PDF、截圖與分頁，資料走使用者 iCloud | 2026-10-02 23:31（Asia/Taipei） | 2026-10-03 | 首次收錄 | https://laytr.app/<br>https://laytr.app/privacy<br>https://techcrunch.com/2026/10/02/laytrs-new-app-lets-you-save-anything-you-find-online-not-just-articles-to-read/ | ab43a76aae7a |
-| OpenAI | ChatGPT shopping、virtual try-on、Favorites | ChatGPT 上線服飾虛擬試穿與 Favorites，購物流程從搜尋延伸到比較收藏 | 2026-10-02 03:21（Asia/Taipei） | 2026-10-03 | 首次收錄 | https://help.openai.com/en/articles/6825453-chatgpt-release-notes<br>https://help.openai.com/en/articles/11128490-shopping-with-chatgpt-search<br>https://techcrunch.com/2026/10/01/chatgpt-can-now-virtually-try-on-clothes-for-you/ | 05443330556c |
-| Audible | Character Guide、Interactive Story、Visual Explorer | Audible 測試角色辨識、AI 角色對話與視覺探索三項互動功能 | 2026-10-01 21:00（Asia/Taipei） | 2026-10-03 | 首次收錄 | https://www.audible.com/about/newsroom/the-next-chapter-in-listening-new-ways-to-interact-with-stories-on-audible<br>https://techcrunch.com/2026/10/01/audibles-new-features-let-you-explore-book-worlds-and-even-talk-to-characters/ | b45759a28b75 |
-| Apple | macOS Full Disk Access controls | Apple 預告提高 macOS Full Disk Access 的操作門檻，直接點名 AI agents 風險 | 2026-10-02（官方僅提供日期） | 2026-10-03 | 首次收錄 | https://developer.apple.com/news/?id=p6zjojqw | c66a255f3eb4 |
