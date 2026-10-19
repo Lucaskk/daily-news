@@ -2,7 +2,7 @@
 title: "Overview"
 type: overview
 created: 2026-05-24
-updated: 2026-10-18
+updated: 2026-10-19
 status: seed
 tags: [overview]
 sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
@@ -19,6 +19,11 @@ sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
 - 抽出持續出現的人物、組織、事件、政策、技術與市場概念。
 - 維護跨來源的矛盾、時間線、趨勢與待查問題。
 - 將重要查詢結果回寫成可累積的 wiki 頁面。
+
+## 2026-10-19 Daily News Synthesis
+
+- [[daily/2026/10/2026-10-19/daily-news-2026-10-19]]：Claude新增資料儀表板與程式動畫工作流程，Plex把片單探索導向美國院線購票，兩者分別擴展工作及娛樂入口；保留測試、方案與地區限制，不外推全面可用。
+- 全球十則涵蓋加拿大基地火災、烏克蘭攻擊與情報共享、剛果疫情、法國維安、墨西哥颶風、美以選舉互動、MMX發射公告、Wichita司法程序及教宗恢復職務。區分官方傷亡與初報、軍方單方攔截數、程序更新與事件發生日；MMX仍是預定發射，不是已升空。
 
 ## 2026-10-18 Daily News Synthesis
 

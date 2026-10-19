@@ -1,5 +1,13 @@
 # Knowledge Base Log
 
+## [2026-10-19] ingest | Daily global and tech AI news
+
+- 凍結08:00:31 Asia/Taipei；科技336小時窗2則、全球24小時窗正好10則。只查10/05–10/18十四份日報與同窗68列產品表，沿用legacy；十二站scan、逐站補查、官方第二輪與取捨已保存。
+- Claude官方介面圖下載並目視核對；其餘逐篇記錄原圖存在、存取失敗、日期不符或權利限制，不用無關圖片補位。Wichita全文釐清10名創傷傷者另加1名非創傷醫療問題，合計11送醫。
+- 本機系統工具仍受Xcode授權阻擋，使用既有Homebrew Python與runtime Git；HTTPS推送無憑證，乾淨clone推送失敗後透過GitHub connector提交限定內容，未修改憑證、全域設定或股票內容。
+- 內容commit `8eeff566d6513454ca3d7024f7c995682565d21b`，版本`20261019-080923-reader`；Pages日期頁、latest與根入口完整雜湊驗證成功，唯一私人watchdog於08:12:02回報 `Sent LINE message`。最終check exit0，沒有重送。
+- 渲染器12項、pipeline17項測試通過，12篇／2科技／全球1–10與逐篇來源及JS語法檢查通過。Playwright缺少，未宣稱瀏覽器版面或實體iPhone測試；本機預覽最後best-effort。排程與防護不變。
+
 ## [2026-10-18] ingest | Daily global and tech AI news
 
 - 凍結08:01:26 Asia/Taipei；科技336小時窗2則、全球24小時窗正好10則。只查10/04–10/17十四份日報及同窗70列產品表，維持legacy；十二站scan、逐站補查、官方第二輪及候選取捨已保存。
