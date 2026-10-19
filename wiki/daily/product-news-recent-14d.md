@@ -1,7 +1,7 @@
 ---
 title: "科技產品新聞最近 14 天比對表"
 type: product-news-ledger-recent
-updated: 2026-10-17
+updated: 2026-10-18
 status: generated
 tags: [daily-news, tech-products, deduplication, recent]
 ---
@@ -11,11 +11,13 @@ tags: [daily-news, tech-products, deduplication, recent]
 本檔只整理產製日前 14 天的日報，可完整讀取做去重確認；不搜尋更早日報、完整歷史表或來源筆記。實際發布窗仍以當日研究截點與來源筆記判定。
 
 - 掃描日報：14 份。
-- 最近 14 天項目：70 則。
-- 日報日期範圍：2026-10-04 至 2026-10-17。
+- 最近 14 天項目：68 則。
+- 日報日期範圍：2026-10-05 至 2026-10-18。
 
 | 公司 | 產品 | 更新內容 | 發佈時間 | 收錄日期 | 狀態 | 來源網址 | 比對鍵 |
 |---|---|---|---|---|---|---|---|
+| Elorian | Glimpse 研究預覽 | Elorian 開放 Glimpse 研究預覽，以視覺推理處理物件追蹤與空間問題 | 2026-10-16（官方發布日期） | 2026-10-18 | 首次收錄 | https://elorian.ai/blog/introducing-glimpse | fa6f22d30c3b |
+| Google | Anbernic RG DDS | Anbernic RG DDS 開放預購，雙螢幕 Android 掌機預定十二月起出貨 | 2026-10-16（預購開始的可靠報導日期） | 2026-10-18 | 首次收錄 | https://anbernic.com/products/rg-dds<br>https://www.notebookcheck.net/Anbernic-RG-DDS-pre-order-is-live-but-there-s-a-long-wait-before-it-ships.1425957.0.html | 041c4e7e1c52 |
 | Steam | Achievement Sets 測試 | Steam 開放 Achievement Sets 測試，分開追蹤本體與 DLC 成就 | 2026-10-16 06:06:30（Asia/Taipei） | 2026-10-17 | 首次收錄 | https://store.steampowered.com/news/app/593110/view/710037059469839141<br>https://steamcommunity.com/groups/SteamClientBeta/discussions/3/573803804385027371/ | 8f5531b14831 |
 | Razer | Barracuda V2 Pro | Razer 發布 Barracuda V2 Pro，以雙無線與降噪整合遊戲及日常通話 | 2026-10-15 22:25:31（Asia/Taipei） | 2026-10-17 | 首次收錄 | https://www.razer.com/newsroom/product-news/barracuda-v2-pro | 936d443fa6ab |
 | Gmail Live 擴展至付費 Workspace，以語音查詢信箱並顯示郵件來源 | Gmail Live 擴展至付費 Workspace | Gmail Live 擴展至付費 Workspace，以語音查詢信箱並顯示郵件來源 | 2026-10-15（官方發布日期） | 2026-10-17 | 首次收錄 | https://workspaceupdates.googleblog.com/2026/10/gmail-live-is-rolling-out-to-paid-Workspace-users.html | 8cf7896be443 |
@@ -82,7 +84,3 @@ tags: [daily-news, tech-products, deduplication, recent]
 | Bose | Noise Cancelling Wired Earbuds | Bose 推出 USB-C 有線降噪耳機，開放預購並預定 10 月 15 日出貨 | 2026-09-28（官方發布日期） | 2026-10-05 | 首次收錄 | https://www.bose.com/pressroom/bose-unveils-new-noise-cancelling-wired-earbuds | 2b89675b8599 |
 | Amazon | Seller Central Multichannel Selling | Amazon 將多通路銷售管理整合進 Seller Central，串接外部平台訂單 | 2026-09-29（官方回顧確認日期） | 2026-10-05 | 首次收錄 | https://sellingpartners.aboutamazon.com/accelerate-2026-recap | c0b322c2164b |
 | Acumatica | 2026 R2 Cloud ERP | Acumatica 2026 R2 正式供應，新增內嵌 AI、資料倉儲與 MCP 連線 | 2026-10-01（官方發布日期） | 2026-10-05 | 首次收錄 | https://www.acumatica.com/corporate-newsroom/press-releases/acumatica-2026-r2-release-with-embedded-ai/ | cd91a943fc2b |
-| Apple／AT&T | iPhone 18 Pro Max、iOS 27.0.1 | iOS 27.0.1 可預防 iPhone 18 Pro Max 的 AT&T 斷網，但已失去服務的裝置需換機 | 2026-10-03 11:10（Asia/Taipei） | 2026-10-04 | 首次收錄 | https://www.att.com/support/article/wireless/KM1062174/<br>https://www.engadget.com/2276489/apple-att-network-bug-iphone-18-pro-max/<br>https://www.macrumors.com/2026/10/02/apple-statement-on-iphone-18-pro-max-att-issue/ | 87936ba2abc5 |
-| Google／YouTube | Shorts recommendations | YouTube Shorts 提高原創內容推薦權重，重傳與聚合頻道可能降低分發 | 2026-10-01（官方僅提供日期） | 2026-10-04 | 首次收錄 | https://support.google.com/youtube/blog/470890423/prioritizing-original-content-on-shorts?hl=en | 4d364d48cc14 |
-| Meta | Muse Gadgets、Home Link | Meta 開源 Muse Gadgets 韌體與 Linux SDK，並製作 5,000 個 Home Link | 2026-10-03 08:45（Asia/Taipei） | 2026-10-04 | 首次收錄 | https://techcrunch.com/2026/10/02/meta-wants-you-to-build-your-own-muse-gadget/<br>https://gadgets.muse.ai/ | 7dc77567b2ce |
-| Block／Bitchat | 印度地區可用性 | Bitchat 在印度 App Store 與 Google Play 下架，網站與 TestFlight 存取也受限 | 2026-10-03 23:02（Asia/Taipei） | 2026-10-04 | 首次收錄 | https://techcrunch.com/2026/10/03/jack-dorseys-bitchat-disappears-from-app-stores-in-india-after-government-order/<br>https://www.ndtv.com/india-news/bitchat-removed-from-apples-india-app-store-after-centres-order-12135008 | 0eb4e1c80517 |

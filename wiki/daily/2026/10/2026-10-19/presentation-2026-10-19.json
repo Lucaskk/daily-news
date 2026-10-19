@@ -1,0 +1,14 @@
+{
+  "images": {
+    "t1": {
+      "src": "assets/claude-dashboard.png",
+      "original_url": "https://assets.claude.com/7688d4d3b888c17cf4b3553f537f291882a92656.png",
+      "source_url": "https://claude.com/resources/articles/dashboards-and-motion",
+      "alt": "Claude官方自行車共享資料儀表板示範畫面",
+      "caption": "官方Dashboards示範，圖中數據為原廠展示，非本站或使用者的營運資料。",
+      "credit": "Anthropic／Claude",
+      "rights": "原廠公開產品發布素材，版權歸Anthropic；不宣稱自由授權。",
+      "fit": "contain"
+    }
+  }
+}
