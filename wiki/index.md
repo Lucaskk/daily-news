@@ -2,7 +2,7 @@
 title: "Knowledge Base Index"
 type: overview
 created: 2026-05-24
-updated: 2026-10-19
+updated: 2026-10-20
 status: seed
 tags: [index]
 sources: []
@@ -21,6 +21,9 @@ sources: []
 - [[2026-04-04-llm-wiki]] - Karpathy 提出的 LLM-maintained personal wiki 模式，是本知識庫的設計來源。
 
 ## Daily News
+
+- [2026-10-20 Daily News](daily/2026/10/2026-10-20/daily-news-2026-10-20.md) - 3則科技：TorchNeuron公開測試時程、DeepSeek搜尋API與NVIDIA多模態模型；全球正好10則。
+- [2026-10-20 Slides](daily/2026/10/2026-10-20/slides-2026-10-20.html) - 原頁完整報告與逐篇提問；Pages與LINE於08:10:54驗證完成。
 
 - [2026-10-19 Daily News](daily/2026/10/2026-10-19/daily-news-2026-10-19.md) - 2則科技：Claude儀表板／Motion測試與Plex串接Fandango購票；全球正好10則。
 - [2026-10-19 Slides](daily/2026/10/2026-10-19/slides-2026-10-19.html) - 原頁完整報告與逐篇提問；Pages與LINE於08:12:02驗證完成。

@@ -1,5 +1,14 @@
 # Knowledge Base Log
 
+## [2026-10-20] ingest | Daily global and tech AI news
+
+- 凍結08:02:07 Asia/Taipei，科技336小時3則、全球24小時正好10則。僅查10/06–10/19十四日報與同窗63列產品表，維持legacy；十二站scan、逐站查閱與失敗補查、官方第二輪及未選候選已保存。
+- TorchNeuron預告10/20公開測試，不冒稱截點時已全面可用；NVIDIA官方10/15 18:01Z換算台北10/16 02:01，不用媒體10/19文章日期重設事件。法國與MMX標續報，葉門時間欄位顛倒與傷亡更新、肯亞標題190／191兒童差異保留。
+- Hugging Face官方TorchNeuron發布插圖下載並目視核對，明標非實拍；逐篇圖片查核區分照片存在、存取失敗、舊照片與權利限制。公開圖片HTTP200。
+- 乾淨clone本機Git push128（HTTPS無憑證），以既有GitHub connector範圍提交，未修改憑證、Xcode授權或其他工作。內容commit `ff55ab3a77e8bbb524d73ec17846cfd25c2cf3ac`，版本`20261020-080908-reader`。
+- Pages日期頁、latest與根入口完整雜湊驗證通過，唯一私人watchdog於08:10:54回報 `Sent LINE message`，強制check exit0。沒有重送或修改防護／排程。
+- 渲染器12項與pipeline17項測試、13篇／3科技／全球1–10／逐篇來源及JS語法通過。Playwright缺少，未完成瀏覽器版面測試或實體iPhone測試；本機預覽最後best-effort。
+
 ## [2026-10-19] ingest | Daily global and tech AI news
 
 - 凍結08:00:31 Asia/Taipei；科技336小時窗2則、全球24小時窗正好10則。只查10/05–10/18十四份日報與同窗68列產品表，沿用legacy；十二站scan、逐站補查、官方第二輪與取捨已保存。

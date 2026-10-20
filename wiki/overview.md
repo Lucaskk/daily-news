@@ -2,7 +2,7 @@
 title: "Overview"
 type: overview
 created: 2026-05-24
-updated: 2026-10-19
+updated: 2026-10-20
 status: seed
 tags: [overview]
 sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
@@ -19,6 +19,11 @@ sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
 - 抽出持續出現的人物、組織、事件、政策、技術與市場概念。
 - 維護跨來源的矛盾、時間線、趨勢與待查問題。
 - 將重要查詢結果回寫成可累積的 wiki 頁面。
+
+## 2026-10-20 Daily News Synthesis
+
+- [[daily/2026/10/2026-10-20/daily-news-2026-10-20]]：TorchNeuron由私人測試走向預定公開化，DeepSeek開放搜尋／網頁擷取工具，NVIDIA開放多模態代理模型；分別對應硬體移植、即時資料與模型客製化。公布時程不等於已開放，原廠效能主張不等於所有工作負載實測。
+- WFP資金短缺轉化為具體減援，中國GDP回升仍伴隨內需與房地產疲弱；葉門傷亡、西班牙洪災與澳洲議員遇襲需保留消息歸屬。法國局部宵禁指示、MMX實際升空與前次公告分開標為續報；司法拒絕請求不等於判罪，行政命令也不等於醫療成果。
 
 ## 2026-10-19 Daily News Synthesis
 
