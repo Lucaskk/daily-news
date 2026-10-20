@@ -1,7 +1,7 @@
 ---
 title: "科技產品新聞最近 14 天比對表"
 type: product-news-ledger-recent
-updated: 2026-10-18
+updated: 2026-10-19
 status: generated
 tags: [daily-news, tech-products, deduplication, recent]
 ---
@@ -11,11 +11,13 @@ tags: [daily-news, tech-products, deduplication, recent]
 本檔只整理產製日前 14 天的日報，可完整讀取做去重確認；不搜尋更早日報、完整歷史表或來源筆記。實際發布窗仍以當日研究截點與來源筆記判定。
 
 - 掃描日報：14 份。
-- 最近 14 天項目：68 則。
-- 日報日期範圍：2026-10-05 至 2026-10-18。
+- 最近 14 天項目：63 則。
+- 日報日期範圍：2026-10-06 至 2026-10-19。
 
 | 公司 | 產品 | 更新內容 | 發佈時間 | 收錄日期 | 狀態 | 來源網址 | 比對鍵 |
 |---|---|---|---|---|---|---|---|
+| Plex 串接 Fandango 電影票，讓美國使用者從片名頁前往購票 | Plex 串接 Fandango 電影票 | Plex 串接 Fandango 電影票，讓美國使用者從片名頁前往購票 | 2026-10-15 23:00:00（Asia/Taipei） | 2026-10-19 | 首次收錄 | https://www.prnewswire.com/news-releases/plex-and-fandango-turn-movie-discovery-into-theatrical-ticket-sales-302909719.html | 328e3dbace56 |
+| Anthropic | Claude 推出 Dashboards 與 Motion 測試 | Claude 推出 Dashboards 與 Motion 測試，整合資料查詢與可編輯動畫 | 2026-10-08（官方發布日期） | 2026-10-19 | 首次收錄 | https://claude.com/resources/articles/dashboards-and-motion | 73d13a6d447f |
 | Elorian | Glimpse 研究預覽 | Elorian 開放 Glimpse 研究預覽，以視覺推理處理物件追蹤與空間問題 | 2026-10-16（官方發布日期） | 2026-10-18 | 首次收錄 | https://elorian.ai/blog/introducing-glimpse | fa6f22d30c3b |
 | Google | Anbernic RG DDS | Anbernic RG DDS 開放預購，雙螢幕 Android 掌機預定十二月起出貨 | 2026-10-16（預購開始的可靠報導日期） | 2026-10-18 | 首次收錄 | https://anbernic.com/products/rg-dds<br>https://www.notebookcheck.net/Anbernic-RG-DDS-pre-order-is-live-but-there-s-a-long-wait-before-it-ships.1425957.0.html | 041c4e7e1c52 |
 | Steam | Achievement Sets 測試 | Steam 開放 Achievement Sets 測試，分開追蹤本體與 DLC 成就 | 2026-10-16 06:06:30（Asia/Taipei） | 2026-10-17 | 首次收錄 | https://store.steampowered.com/news/app/593110/view/710037059469839141<br>https://steamcommunity.com/groups/SteamClientBeta/discussions/3/573803804385027371/ | 8f5531b14831 |
@@ -77,10 +79,3 @@ tags: [daily-news, tech-products, deduplication, recent]
 | Anthropic | Claude Cowork | Claude Cowork 將 Pro 與 Max 新任務改在雲端執行，移除本機限定選項 | 2026-10-06（官方變更日期） | 2026-10-07 | 首次收錄 | https://support.claude.com/en/articles/15520349-use-claude-cowork-on-web-desktop-and-mobile<br>https://www.inside.com.tw/article/42576-claude-cowork-cloud-only-pro-max-anthropic-server-october-2026 | d480714aad8c |
 | OpenAI | ChatGPT Audio uploads | ChatGPT 開放音訊檔上傳，將錄音轉成逐字稿、摘要與後續工作 | 2026-10-06（官方發布日期） | 2026-10-07 | 首次收錄 | https://help.openai.com/en/articles/6825453-chatgpt-release-notes | 55a4973c9a51 |
 | Reflection AI | Beam | Reflection 公布 Beam 模型預覽，開放早期存取登記並預告本月釋出權重 | 2026-10-05（官方發布日期） | 2026-10-06 | 首次收錄 | https://reflection.ai/blog/introducing-beam<br>https://techcrunch.com/2026/10/05/reflection-debuts-beam-a-open-weight-ai-model-to-rival-chinese-models-at-lower-compute-cost/ | 8765635a63bf |
-| 大同／大世科 | TTG AIDC CUBE | 大同發表 TTG AIDC CUBE，以預製模組整合電力、冷卻與 AI 算力 | 2026-09-30（官方確認的發表日期） | 2026-10-05 | 首次收錄 | https://www.etatung.com/Home/ShowProductionInfoIdea?ID=da604df5-2fb3-413b-892c-3507a8bf32b5 | 442bb54ebe98 |
-| OpenAI | openai-node 7.28.0 | OpenAI Node SDK 7.28.0 加入自訂語音建立與 agent session events 介面 | 2026-10-02（官方版本日期） | 2026-10-05 | 首次收錄 | https://github.com/openai/openai-node/releases/tag/v7.28.0 | 01da34afcf82 |
-| Cloudflare | Clef、Clef-flash、Workers AI | Cloudflare 開源 Clef 與 Clef-flash，讓 AI 工作流程直接取得決策機率 | 2026-10-01（官方發布日期） | 2026-10-05 | 首次收錄 | https://developers.cloudflare.com/changelog/post/2026-10-01-clef-workers-ai/<br>https://blog.cloudflare.com/clef-decision-models/ | 28cacc9c7a1a |
-| OpenAI | ChatGPT Enterprise Admin console | ChatGPT Enterprise 將外掛與 marketplace 管理加入 Admin console | 2026-10-01（官方發布日期） | 2026-10-05 | 首次收錄 | https://help.openai.com/en/articles/10128477-chatgpt-enterprise-and-edu-release-notes | 362081bd55ee |
-| Bose | Noise Cancelling Wired Earbuds | Bose 推出 USB-C 有線降噪耳機，開放預購並預定 10 月 15 日出貨 | 2026-09-28（官方發布日期） | 2026-10-05 | 首次收錄 | https://www.bose.com/pressroom/bose-unveils-new-noise-cancelling-wired-earbuds | 2b89675b8599 |
-| Amazon | Seller Central Multichannel Selling | Amazon 將多通路銷售管理整合進 Seller Central，串接外部平台訂單 | 2026-09-29（官方回顧確認日期） | 2026-10-05 | 首次收錄 | https://sellingpartners.aboutamazon.com/accelerate-2026-recap | c0b322c2164b |
-| Acumatica | 2026 R2 Cloud ERP | Acumatica 2026 R2 正式供應，新增內嵌 AI、資料倉儲與 MCP 連線 | 2026-10-01（官方發布日期） | 2026-10-05 | 首次收錄 | https://www.acumatica.com/corporate-newsroom/press-releases/acumatica-2026-r2-release-with-embedded-ai/ | cd91a943fc2b |

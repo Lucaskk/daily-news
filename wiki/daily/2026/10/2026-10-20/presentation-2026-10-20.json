@@ -1,0 +1,14 @@
+{
+  "images": {
+    "t1": {
+      "src": "assets/torchneuron.png",
+      "alt": "Hugging Face官方TorchNeuron宣傳示意，角色手持Trainium圖樣晶片",
+      "caption": "TorchNeuron合作方發布示意；不是實際晶片照片或效能測試畫面。",
+      "credit": "Hugging Face 官方部落格",
+      "source_url": "https://huggingface.co/blog/hf-torchneuron",
+      "original_url": "https://huggingface.co/blog/assets/hf-torchneuron/thumbnail.png",
+      "rights": "Hugging Face官方發布插圖，著作權屬原權利人；新聞來源署名引用，不宣稱自由授權。",
+      "fit": "contain"
+    }
+  }
+}
