@@ -1,5 +1,13 @@
 # Knowledge Base Log
 
+## [2026-10-21] ingest | Daily global and tech AI news
+
+- 凍結08:01:08 Asia/Taipei，科技336小時2則、全球24小時正好10則。僅查10/07–10/20十四份日報與同窗65列產品表，維持legacy；十二站scan、逐站查閱／補查與官方第二輪已記錄。未選且尚未確認的新品不寫成不存在。
+- Synaptics與Antigravity兩張官方圖下載且目視核對，逐篇保留全球新聞圖片存在、舊照、存取與權利限制。阿爾巴尼亞標10/18續報；排除舊中國AI出口公告、重複烏克蘭預警與首次時間不明的緬甸照片。
+- 系統工具仍受Xcode授權限制，使用既有Homebrew Python與runtime Git；乾淨clone HTTPS推送128無憑證，以既有GitHub connector限定提交，不改憑證、全域設定、無關工作或防護。內容commit `df960c354799cbb1979cf12a8972d2ce87f92497`，版本`20261021-081049-reader`。
+- 日期頁、latest及根入口完整雜湊驗證成功，兩張公開資產HTTP200。唯一私人watchdog於08:12:45回報 `Sent LINE message`；強制check exit0 complete，沒有重送。
+- 渲染器12項及pipeline17項測試、12篇／2科技／全球1–10／逐篇來源與JS語法通過。Playwright缺少，未宣稱瀏覽器版面或實體iPhone測試；localhost預覽維持最後best-effort，不影響公開發布與配送。
+
 ## [2026-10-20] ingest | Daily global and tech AI news
 
 - 凍結08:02:07 Asia/Taipei，科技336小時3則、全球24小時正好10則。僅查10/06–10/19十四日報與同窗63列產品表，維持legacy；十二站scan、逐站查閱與失敗補查、官方第二輪及未選候選已保存。
