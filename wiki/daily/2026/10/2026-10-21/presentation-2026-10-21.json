@@ -1,0 +1,24 @@
+{
+  "images": {
+    "t1": {
+      "src": "assets/astra-sr200.jpg",
+      "alt": "Synaptics Astra SR200晶片示意與穿戴、攝影、工業應用情境拼圖",
+      "caption": "官方應用情境及晶片示意，不代表圖中終端產品已搭載上市。",
+      "credit": "Synaptics 官方部落格",
+      "source_url": "https://www.synaptics.com/company/blog/sr200-xmcu-mcu-efficiency-mpu-performance",
+      "original_url": "https://cdn.bfldr.com/ZU41R0OK/at/vk3ct6nwvk5cb5fs75h76g/astra-sr200-xmcu-multimodal-ai-1200x704.jpg?format=jpg",
+      "rights": "Synaptics官方發布圖，著作權屬原權利人；新聞署名引用，不宣稱自由授權。",
+      "fit": "contain"
+    },
+    "t2": {
+      "src": "assets/antigravity-a1.jpg",
+      "alt": "Antigravity A1跟拍手錶、無人機與控制器的官方拼圖",
+      "caption": "A1新配件官方情境拼圖；原圖解析度有限。",
+      "credit": "Antigravity／PR Newswire",
+      "source_url": "https://www.prnewswire.co.uk/news-releases/a1-becomes-more-antigravity-reveals-three-new-ways-to-fly-create-and-explore-with-a1-302913895.html",
+      "original_url": "https://mmx.prnewswire.com/media/MS2016170/20261019115636EDT_image_1.jpg?id=OA3028970",
+      "rights": "Antigravity官方新聞稿圖片，著作權屬原權利人；新聞署名引用，不宣稱自由授權。",
+      "fit": "contain"
+    }
+  }
+}
