@@ -1,7 +1,7 @@
 ---
 title: "科技產品新聞最近 14 天比對表"
 type: product-news-ledger-recent
-updated: 2026-10-20
+updated: 2026-10-21
 status: generated
 tags: [daily-news, tech-products, deduplication, recent]
 ---
@@ -11,11 +11,13 @@ tags: [daily-news, tech-products, deduplication, recent]
 本檔只整理產製日前 14 天的日報，可完整讀取做去重確認；不搜尋更早日報、完整歷史表或來源筆記。實際發布窗仍以當日研究截點與來源筆記判定。
 
 - 掃描日報：14 份。
-- 最近 14 天項目：65 則。
-- 日報日期範圍：2026-10-07 至 2026-10-20。
+- 最近 14 天項目：60 則。
+- 日報日期範圍：2026-10-08 至 2026-10-21。
 
 | 公司 | 產品 | 更新內容 | 發佈時間 | 收錄日期 | 狀態 | 來源網址 | 比對鍵 |
 |---|---|---|---|---|---|---|---|
+| OpenAI | Synaptics 發布 Astra SR200 邊緣 AI 處理器 | Synaptics 發布 Astra SR200 邊緣 AI 處理器，結合微控制器效率與多模態運算 | 2026-10-20（官方發布日期） | 2026-10-21 | 首次收錄 | https://www.synaptics.com/company/blog/sr200-xmcu-mcu-efficiency-mpu-performance<br>https://www.globenewswire.com/news-release/2026/10/20/3384402/35894/en/synaptics-launches-the-xmcu-era-with-the-astra-sr200-series-of-multimodal-edge-ai-processors.html | 7554bd401a9a |
+| Antigravity 為 A1 | 跟拍套組、雙搖桿控制器與 4G 備援模組 | Antigravity 為 A1 推出跟拍套組、雙搖桿控制器與 4G 備援模組 | 2026-10-20 21:00:00（Asia/Taipei） | 2026-10-21 | 首次收錄 | https://www.prnewswire.co.uk/news-releases/a1-becomes-more-antigravity-reveals-three-new-ways-to-fly-create-and-explore-with-a1-302913895.html<br>https://www.engadget.com/2289029/antigravity-a1-drone-follow-me-bundle-hands-on/ | 493472c2af81 |
 | NVIDIA | 釋出 Nemotron 3.5 Super VL | NVIDIA 釋出 Nemotron 3.5 Super VL，整合多模態理解與企業代理工作 | 2026-10-16 02:01:00（Asia/Taipei） | 2026-10-20 | 首次收錄 | https://developer.nvidia.com/blog/nvidia-nemotron-3-5-super-vl-powers-specialized-agents-with-multimodal-reasoning/ | 858dd917a7c4 |
 | DeepSeek | 搜尋與網頁擷取 API | DeepSeek 開放搜尋與網頁擷取 API，讓代理取得即時網頁內容 | 2026-10-17（官方發布日期） | 2026-10-20 | 首次收錄 | https://api-docs.deepseek.com/updates<br>https://api-docs.deepseek.com/guides/search | fb054ac40e95 |
 | Amazon / AWS | 公布 TorchNeuron 公開測試時程 | Amazon 公布 TorchNeuron 公開測試時程，讓 PyTorch 程式轉向 Trainium | 2026-10-19 21:00:10（Asia/Taipei） | 2026-10-20 | 首次收錄 | https://www.aboutamazon.com/news/innovation-at-amazon/torchneuron-pytorch-aws-trainium-chips-ai<br>https://huggingface.co/blog/hf-torchneuron | 3f6717d65e97 |
@@ -74,10 +76,3 @@ tags: [daily-news, tech-products, deduplication, recent]
 | Cisco 公布 Webex Dialog | 路線 | Cisco 公布 Webex Dialog 路線，預計明年第一季測試長期客服代理 | 2026-10-07 22:00:00（Asia/Taipei） | 2026-10-08 | 首次收錄 | https://newsroom.cisco.com/c/r/newsroom/en/us/a/y2026/m10/cisco-unveils-new-agentic-collaboration-experiences.html<br>https://blog.webex.com/customer-experience/webexone-2026-disconnected-customer-interactions-one-continuous-relationship/ | 32af2304b81a |
 | OpenAI | ChatGPT 開始推出互動式回覆 | ChatGPT 開始推出互動式回覆，圖表與操作元件不再只是靜態附圖 | 2026-10-07（官方發布日期） | 2026-10-08 | 首次收錄 | https://openai.com/index/gpt-6-for-everyone/<br>https://help.openai.com/en/articles/6825453-chatgpt-release-notes | 5f241ed16823 |
 | Anthropic | Claude Haiku 5.5 | Anthropic 發布 Claude Haiku 5.5，擴充低成本模型的長上下文與推理控制 | 2026-10-07（官方發布日期） | 2026-10-08 | 首次收錄 | https://www.anthropic.com/claude/haiku<br>https://platform.claude.com/docs/en/models/haiku-5-5/overview<br>https://support.claude.com/en/articles/12138966-release-notes | 14ff33dd4469 |
-| QALO | SL-1 Smart Band | QALO 推出 SL-1 無螢幕智慧手環，與智慧戒指共用免訂閱健康資料平台 | 2026-09-29 21:00（Asia/Taipei） | 2026-10-07 | 首次收錄 | https://qalo.com/products/qalo-sl-1-smart-band<br>https://markets.financialcontent.com/thepilotnews/article/bizwire-2026-9-29-qalo-launches-the-sl-1-smart-band-a-next-generation-wearable-to-expand-its-health-tech-platform<br>https://www.businesswire.com/news/home/20260929697373/en/ | 5cae8686825f |
-| OpenAI | textGrain、ChatGPT、Codex、API | OpenAI 啟用 textGrain API 自願水印，預告歐盟 ChatGPT 與 Codex 後續導入 | 2026-10-05（官方發布日期） | 2026-10-07 | 首次收錄 | https://openai.com/index/eu-text-provenance/ | a80a349b79f1 |
-| Mistral AI | Mistral Large 4、Le Chonk | Mistral Large 4 開放公開 API 預覽，模型權重預計月底釋出 | 2026-10-06（官方發布日期） | 2026-10-07 | 首次收錄 | https://mistral.ai/news/mistral-large-4/<br>https://docs.mistral.ai/models/mistral-large-4-0 | 6a5e3b70150c |
-| Google | Gemini Apps模型存取 | Google 預告 10 月 9 日調整 Gemini 模型權限，免費方案將僅提供 Flash-Lite | 2026-10-06（首次可靠報導日期） | 2026-10-07 | 首次收錄 | https://support.google.com/gemini/answer/17004136<br>https://www.bnext.com.tw/article/92519/gemini-free-plan-flash-lite-ai-plus-pro-changes | 06d179a9c728 |
-| Google Japan | Gboard くるくるバージョン | Google 日本公開 Gboard 輸送帶鍵盤設計，讓按鍵移向手指而非量產販售 | 2026-10-01（官方發布日期） | 2026-10-07 | 首次收錄 | https://blog.google/intl/ja-jp/products/android-chrome-play/gboard-2026/<br>https://www.cool3c.com/article/252573 | dadee3418444 |
-| Anthropic | Claude Cowork | Claude Cowork 將 Pro 與 Max 新任務改在雲端執行，移除本機限定選項 | 2026-10-06（官方變更日期） | 2026-10-07 | 首次收錄 | https://support.claude.com/en/articles/15520349-use-claude-cowork-on-web-desktop-and-mobile<br>https://www.inside.com.tw/article/42576-claude-cowork-cloud-only-pro-max-anthropic-server-october-2026 | d480714aad8c |
-| OpenAI | ChatGPT Audio uploads | ChatGPT 開放音訊檔上傳，將錄音轉成逐字稿、摘要與後續工作 | 2026-10-06（官方發布日期） | 2026-10-07 | 首次收錄 | https://help.openai.com/en/articles/6825453-chatgpt-release-notes | 55a4973c9a51 |

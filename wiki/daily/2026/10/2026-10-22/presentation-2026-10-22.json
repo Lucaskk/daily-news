@@ -1,0 +1,24 @@
+{
+  "images": {
+    "t2": {
+      "src": "assets/openshell.jpg",
+      "alt": "NVIDIA OpenShell參照架構官方硬體示意，展示三組晶片及安全功能符號",
+      "caption": "官方架構硬體示意，非實際部署現場或安全測試結果。",
+      "credit": "NVIDIA 官方新聞稿",
+      "source_url": "https://nvidianews.nvidia.com/news/openshell-reference-architecture",
+      "original_url": "https://iprsoftwaremedia.com/219/files/202610/b61bfda00ad668f9890d5b5b0d775b1e/6ad693aa3d63324483072858_NVIDIA-OpenShell-Reference-Architecture/NVIDIA-OpenShell-Reference-Architecture_21af43b3-e9a2-4b8b-a792-e5382e40f9aa-prv.jpg?v=21af43b3-e9a2-4b8b-a792-e5382e40f9aa",
+      "rights": "NVIDIA官方發布圖，著作權屬原權利人；新聞署名引用，不宣稱自由授權。",
+      "fit": "contain"
+    },
+    "t4": {
+      "src": "assets/gr-world.png",
+      "alt": "Ricoh GR WORLD備份與還原日文示範畫面，註明照片不包含於雲端備份",
+      "caption": "官方日文備份介面示範；內部樣本日期不代表功能公開日期。",
+      "credit": "Ricoh Imaging 官方支援頁",
+      "source_url": "https://www.ricoh-imaging.co.jp/japan/products/app/gr-world/",
+      "original_url": "https://www.ricoh-imaging.co.jp/resources/japan/products/app/gr-world/top/img/update_img_04.png",
+      "rights": "Ricoh Imaging官方示範畫面，著作權屬原權利人；新聞署名引用，不宣稱自由授權。",
+      "fit": "contain"
+    }
+  }
+}
