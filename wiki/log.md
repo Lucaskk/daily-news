@@ -1,5 +1,14 @@
 # Knowledge Base Log
 
+## [2026-10-22] ingest | Daily global and tech AI news
+
+- 凍結07:57:13 Asia/Taipei，科技336小時4則、全球24小時正好10則。僅查10/08–10/21十四份日報與同窗60列產品表，維持legacy；十二站scan、逐站文章／候選、官方第二輪及未選待查項目已保存，不把未查證寫成不存在。
+- Claude Duet美國候補及共享額度、OpenShell參照架構可用性、Xbox時數不含遊戲授權、Ricoh照片不備份均保留限制。PHP以10/21正式修補為新事件；伊波拉標10/19續報。轉載時間欄顛倒、感染來源與海界法律主張不抹平歧異。
+- NVIDIA架構示意與Ricoh實際備份畫面下載並目視核對；十四篇逐篇圖片稽核分開記錄照片存在、資料照、403與再利用權利。兩張公開資產HTTP200，未把Duet og403或通訊社照片未下載稱為沒有圖片。
+- 首次finish因來源筆記只含ISO格式而未匹配固定截點文字被擋，補上等值可讀日期格式後通過，未重設截點或修改驗證器。乾淨clone推送128無HTTPS憑證，改用既有GitHub connector限定提交，保留其他工作。內容commit `6a0e0e0e3111d6cbd9b8d9ac0bfb21068e264503`，版本`20261022-080351-reader`。
+- Pages日期頁、latest及根入口完整雜湊驗證成功，唯一私人watchdog於08:05:41回報 `Sent LINE message`，強制check exit0 complete。沒有重送或更動排程、防護、全域設定、憑證與Xcode授權。
+- 渲染器12項、pipeline17項測試及14篇／4科技／全球1–10／逐篇來源／JS語法通過。Playwright缺少，未完成瀏覽器版面或實體iPhone測試；最後localhost:4173預覽無server，公開發布及LINE不受影響。
+
 ## [2026-10-21] ingest | Daily global and tech AI news
 
 - 凍結08:01:08 Asia/Taipei，科技336小時2則、全球24小時正好10則。僅查10/07–10/20十四份日報與同窗65列產品表，維持legacy；十二站scan、逐站查閱／補查與官方第二輪已記錄。未選且尚未確認的新品不寫成不存在。

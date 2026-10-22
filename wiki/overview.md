@@ -2,7 +2,7 @@
 title: "Overview"
 type: overview
 created: 2026-05-24
-updated: 2026-10-21
+updated: 2026-10-22
 status: seed
 tags: [overview]
 sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
@@ -19,6 +19,12 @@ sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
 - 抽出持續出現的人物、組織、事件、政策、技術與市場概念。
 - 維護跨來源的矛盾、時間線、趨勢與待查問題。
 - 將重要查詢結果回寫成可累積的 wiki 頁面。
+
+## 2026-10-22 Daily News Synthesis
+
+- [[daily/2026/10/2026-10-22/daily-news-2026-10-22]]：背景工作代理與外部治理架構同時發展；候補預覽不等於全球可用，背景檢查也耗額度，安全設計不代表絕對防護。Xbox運算時數與遊戲授權分開，GR WORLD設定備份不包含照片。
+- PHP從預告進入實際緊急修補，舊版原始碼回補不等於恢復一般維護。談判意向不是停火、法院開庭不是禁黨裁決、撤離部分外交人員不是使館全關；伊波拉以10/19為前次標示區域會議召集續報。台灣結合管制顯示少數持股也可能影響平台競爭誘因。
+- 十二來源取捨、僅十四日日報去重、官方更新段落與逐篇圖片限制見 [[daily/2026/10/2026-10-22/source-notes-2026-10-22]]；感染來源、時間metadata矛盾及各國主張均保留不確定性。
 
 ## 2026-10-21 Daily News Synthesis
 
