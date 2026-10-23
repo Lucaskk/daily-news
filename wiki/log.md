@@ -1,5 +1,14 @@
 # Knowledge Base Log
 
+## [2026-10-23] ingest | Daily global and tech AI news
+
+- 凍結08:01:49 Asia/Taipei，科技336小時3則、全球24小時正好10則。僅查10/09–10/22十四份日報與同窗54列產品表，legacy不變。十二站scan／逐站文章及官方第二輪已保存，OpenAI首頁失敗改官方限定搜尋；未確認候選保留待查，不當沒有新聞。
+- Bluesky以官方公開feed核對v1.136及iPad beta時間；1Password新多代理平台不同於七月既有整合，合作夥伴進度不一；Arc桌面與行動版時程分開。荷莫茲、基輔、ICC及法國標示前次日期與新進展，戰果、司法程序、預估與撥款階段不抹平不確定性。
+- 官方Bluesky歡迎插畫及NASA／NOAA10/11衛星圖下載並目視核對，13篇逐篇圖片稽核分開記錄圖片存在、403、舊照與權利不足。兩張公開資產HTTP200，沒有用舊照冒充新事件。
+- finish渲染驗證通過，乾淨clone本機push128無HTTPS憑證，改既有GitHub connector限範圍提交；內容commit `dc6c6adffaa89fa203fe1cbbfb8c1b42919e5b4b`，版本`20261023-081234-reader`。不更動股票內容、憑證、Xcode授權、排程或防護。
+- verify-deliver確認Pages日期頁、latest與根入口HTTP200及完整雜湊，唯一私人watchdog於08:15:12回報 `Sent LINE message`；強制check exit0 complete，沒有重送。
+- 渲染器12項、pipeline17項、13篇／3科技／全球1–10／逐篇來源及JS語法通過。臨時驗證指令起初因script屬性順序假設誤讀JSON，修正檢查指令後通過，未修改reader。Playwright缺少，未完成瀏覽器版面或實體iPhone測試；localhost預覽最後best-effort。
+
 ## [2026-10-22] ingest | Daily global and tech AI news
 
 - 凍結07:57:13 Asia/Taipei，科技336小時4則、全球24小時正好10則。僅查10/08–10/21十四份日報與同窗60列產品表，維持legacy；十二站scan、逐站文章／候選、官方第二輪及未選待查項目已保存，不把未查證寫成不存在。

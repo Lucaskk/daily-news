@@ -2,7 +2,7 @@
 title: "Overview"
 type: overview
 created: 2026-05-24
-updated: 2026-10-22
+updated: 2026-10-23
 status: seed
 tags: [overview]
 sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
@@ -19,6 +19,12 @@ sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
 - 抽出持續出現的人物、組織、事件、政策、技術與市場概念。
 - 維護跨來源的矛盾、時間線、趨勢與待查問題。
 - 將重要查詢結果回寫成可累積的 wiki 頁面。
+
+## 2026-10-23 Daily News Synthesis
+
+- [[daily/2026/10/2026-10-23/daily-news-2026-10-23]]：Bluesky擴充創作者入口與平板測試，1Password嘗試將代理登入秘密與模型分離，Arc則從維護轉入明確終止時程。beta、合作整合預告、各平台停用日期不同，不應統稱全部立即可用或全部同日終止。
+- 荷莫茲油輪數與俄方攔截數保留單方聲稱；ICC授獎不等於解除制裁，法院保障投票不等於交通已到位，翁山母子通話不等於獲釋。尼泊爾資金分配不是已撥付；NASA新評估與舊衛星影像分開，碳與二氧化碳單位不混用。
+- 十二站候選、官方段落、十四日日報去重、四則全球續報與逐篇圖片權利／存取限制見 [[daily/2026/10/2026-10-23/source-notes-2026-10-23]]。其他待查新品不被寫成不存在。
 
 ## 2026-10-22 Daily News Synthesis
 
