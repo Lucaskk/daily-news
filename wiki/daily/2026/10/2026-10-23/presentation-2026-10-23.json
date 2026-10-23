@@ -1,0 +1,24 @@
+{
+  "images": {
+    "t1": {
+      "src": "assets/bluesky-ipad.jpg",
+      "alt": "Bluesky官方iPad測試公告中的歡迎插畫，包含公園場景與蝴蝶標誌",
+      "caption": "官方iPad beta公告歡迎插畫，非個人檔案連結操作介面。",
+      "credit": "Bluesky 官方公告影片縮圖",
+      "source_url": "https://bsky.app/profile/bsky.app/post/3myi3k45jh22z",
+      "original_url": "https://video.bsky.app/watch/did%3Aplc%3Az72i7hdynmk6r22z27h6tvur/bafkreiew3laj2to7km3kli6g5dmb7xbqygqa7otzirszqvnousjallw6eq/thumbnail.jpg",
+      "rights": "Bluesky官方發布插畫，著作權屬原權利人；新聞署名引用，不宣稱自由授權。",
+      "fit": "contain"
+    },
+    "10": {
+      "src": "assets/new-guinea.jpg",
+      "alt": "2026年10月11日NOAA-20衛星所見新幾內亞南部火災煙霾",
+      "caption": "10月11日衛星影像；10月22日發布的評估使用較早影像，非發布當日現場。",
+      "credit": "NASA Earth Observatory／Michala Garrison；NOAA-20 VIIRS、EOSDIS LANCE／GIBS、JPSS",
+      "source_url": "https://science.nasa.gov/earth/earth-observatory/fires-char-new-guinea/",
+      "original_url": "https://assets.science.nasa.gov/dynamicimage/assets/science/esd/eo/images/iotd/2026/new-guinea-on-fire/papuanewguinea_vir_20261011.jpg",
+      "rights": "NASA／NOAA美國政府衛星影像與NASA Earth Observatory署名製圖；保留原始來源及製圖人，不將此描述延伸為所有第三方素材的授權。",
+      "fit": "contain"
+    }
+  }
+}

@@ -1,7 +1,7 @@
 ---
 title: "科技產品新聞最近 14 天比對表"
 type: product-news-ledger-recent
-updated: 2026-10-21
+updated: 2026-10-22
 status: generated
 tags: [daily-news, tech-products, deduplication, recent]
 ---
@@ -11,11 +11,15 @@ tags: [daily-news, tech-products, deduplication, recent]
 本檔只整理產製日前 14 天的日報，可完整讀取做去重確認；不搜尋更早日報、完整歷史表或來源筆記。實際發布窗仍以當日研究截點與來源筆記判定。
 
 - 掃描日報：14 份。
-- 最近 14 天項目：60 則。
-- 日報日期範圍：2026-10-08 至 2026-10-21。
+- 最近 14 天項目：54 則。
+- 日報日期範圍：2026-10-09 至 2026-10-22。
 
 | 公司 | 產品 | 更新內容 | 發佈時間 | 收錄日期 | 狀態 | 來源網址 | 比對鍵 |
 |---|---|---|---|---|---|---|---|
+| Microsoft | Xbox | Xbox 開放無 Game Pass 訂閱者測試購買雲端遊戲時數 | 2026-10-22 02:00:03（Asia/Taipei） | 2026-10-22 | 首次收錄 | https://news.xbox.com/en-us/2026/10/21/cloud-playtime-now-available-to-test-with-xbox-insiders/ | 12244c1f71f4 |
+| Ricoh | GR WORLD 2.0 | Ricoh 推出 GR WORLD 2.0，加入設定雲端備份及 GR IV 影像控制分享 | 2026-10-21（官方發布日期） | 2026-10-22 | 首次收錄 | https://www.ricoh-imaging.co.jp/japan/products/app/gr-world/<br>https://www.ricoh-imaging.co.jp/japan/support/download/digital/gr4_s.html<br>https://www.cool3c.com/article/253231 | 74f405bf7c6b |
+| NVIDIA | OpenShell 參照架構 | NVIDIA 發布 OpenShell 參照架構，把 AI 代理治理延伸至獨立硬體監測 | 2026-10-21（官方發布日期） | 2026-10-22 | 首次收錄 | https://nvidianews.nvidia.com/news/openshell-reference-architecture<br>https://developer.nvidia.com/blog/how-nvidia-openshell-reference-architecture-secures-and-governs-ai-agent-workloads-at-scale/ | e9664c38ced2 |
+| Anthropic | Claude Duet 候補研究預覽 | Anthropic 開放 Claude Duet 候補研究預覽，讓代理在背景整理及執行工作 | 2026-10-21（官方發布日期） | 2026-10-22 | 首次收錄 | https://claude.com/resources/articles/claude-duet | 41b367bad1eb |
 | OpenAI | Synaptics 發布 Astra SR200 邊緣 AI 處理器 | Synaptics 發布 Astra SR200 邊緣 AI 處理器，結合微控制器效率與多模態運算 | 2026-10-20（官方發布日期） | 2026-10-21 | 首次收錄 | https://www.synaptics.com/company/blog/sr200-xmcu-mcu-efficiency-mpu-performance<br>https://www.globenewswire.com/news-release/2026/10/20/3384402/35894/en/synaptics-launches-the-xmcu-era-with-the-astra-sr200-series-of-multimodal-edge-ai-processors.html | 7554bd401a9a |
 | Antigravity 為 A1 | 跟拍套組、雙搖桿控制器與 4G 備援模組 | Antigravity 為 A1 推出跟拍套組、雙搖桿控制器與 4G 備援模組 | 2026-10-20 21:00:00（Asia/Taipei） | 2026-10-21 | 首次收錄 | https://www.prnewswire.co.uk/news-releases/a1-becomes-more-antigravity-reveals-three-new-ways-to-fly-create-and-explore-with-a1-302913895.html<br>https://www.engadget.com/2289029/antigravity-a1-drone-follow-me-bundle-hands-on/ | 493472c2af81 |
 | NVIDIA | 釋出 Nemotron 3.5 Super VL | NVIDIA 釋出 Nemotron 3.5 Super VL，整合多模態理解與企業代理工作 | 2026-10-16 02:01:00（Asia/Taipei） | 2026-10-20 | 首次收錄 | https://developer.nvidia.com/blog/nvidia-nemotron-3-5-super-vl-powers-specialized-agents-with-multimodal-reasoning/ | 858dd917a7c4 |
@@ -66,13 +70,3 @@ tags: [daily-news, tech-products, deduplication, recent]
 | Google | Drive 與 Docs 開始原生預覽、編輯及協作 Markdown 檔案 | Google Drive 與 Docs 開始原生預覽、編輯及協作 Markdown 檔案 | 2026-10-05（官方發布日期） | 2026-10-09 | 首次收錄 | https://workspaceupdates.googleblog.com/2026/10/preview-edit-and-collaborate-on-Markdown-files-natively-across-Drive-and-Docs.html<br>https://www.inside.com.tw/article/42582-google-drive-docs-native-markdown-files-preview-edit-collaborate | ef5e3fcf354a |
 | OpenAI | Codex 桌面版開始推出更快的跟進指令回應 | Codex 桌面版開始推出更快的跟進指令回應，讓執行中的任務更快轉向 | 2026-10-08（官方發布日期） | 2026-10-09 | 首次收錄 | https://help.openai.com/en/articles/6825453-chatgpt-release-notes | 5c8ea3bb9990 |
 | Amazon / AWS | Alexa Tablet 新系列 | Amazon 推出 Alexa Tablet 新系列，首次完整支援 Google Play 並開放訂購 | 2026-10-08 20:55:12（Asia/Taipei） | 2026-10-09 | 首次收錄 | https://www.aboutamazon.com/news/devices/new-amazon-alexa-tablets-alexa-plus<br>https://www.engadget.com/2280917/amazon-alexa-tablets-october-2026/ | 85c029d1b846 |
-| NVIDIA | 微軟開放 Surface Laptop Ultra 與 RTX Spark Dev Box 預購 | 微軟開放 Surface Laptop Ultra 與 RTX Spark Dev Box 預購，分別安排十月與十一月供貨 | 2026-10-07（官方發布日期） | 2026-10-08 | 首次收錄 | https://blogs.windows.com/devices/2026/10/07/pre-order-our-most-powerful-surface-devices-ever/ | 1ae5c73c8492 |
-| XREAL AURA 公布 US$1,279 | 起價 | XREAL AURA 公布 US$1,279 起價，先讓預約者在四個市場購買 | 2026-10-07 20:00:00（Asia/Taipei） | 2026-10-08 | 首次收錄 | https://www.prnewswire.com/news-releases/xreal-aura-starts-at-1-279--bringing-wired-xr-glasses-with-android-xr-to-customers-this-year-302900445.html<br>https://www.xreal.com/us/aura | e493b2e36c58 |
-| Microsoft | Windows MXC 正式可用 | Windows MXC 正式可用，為本機 AI 代理提供受控執行環境 | 2026-10-07（官方發布日期） | 2026-10-08 | 首次收錄 | https://blogs.windows.com/windowsexperience/2026/10/07/building-windows-for-hybrid-intelligence/ | b9168016064e |
-| Google | 釋出 EmbeddingGemma 2 | Google 釋出 EmbeddingGemma 2，讓文字、圖片及影音在裝置端共用搜尋向量 | 2026-10-06（官方發布日期） | 2026-10-08 | 首次收錄 | https://blog.google/innovation-and-ai/technology/developers-tools/embeddinggemma-2/<br>https://ai.google.dev/gemma/docs/embeddinggemma/model_card_2<br>https://developers.googleblog.com/embeddinggemma-2-the-developer-guide/ | f16a9024c5d1 |
-| Google | Playground 實驗平台 | Google 推出 Playground 實驗平台，讓美國成年使用者以提示建立與分享遊戲 | 2026-10-07（官方發布日期） | 2026-10-08 | 首次收錄 | https://blog.google/innovation-and-ai/technology/ai/playground-experimental-gaming-platform/ | 810b62f46e73 |
-| Google | 向全球開放 SynthID Detector 英文網站 | Google 向全球開放 SynthID Detector 英文網站，讓一般使用者查驗支援的 AI 水印 | 2026-10-07（官方發布日期） | 2026-10-08 | 首次收錄 | https://blog.google/innovation-and-ai/models-and-research/google-deepmind/synth-id-ai-content/<br>https://deepmind.google/models/synthid/ | 177c98a0c25d |
-| Google | Gemini API 正式提供 Nano Banana 2.1 | Gemini API 正式提供 Nano Banana 2.1，改善圖片編輯與全景比例生成 | 2026-10-06（官方發布日期） | 2026-10-08 | 首次收錄 | https://ai.google.dev/gemini-api/docs/changelog<br>https://deepmind.google/models/model-cards/nano-banana-2-1/ | 21fc9d7ebafe |
-| Cisco 公布 Webex Dialog | 路線 | Cisco 公布 Webex Dialog 路線，預計明年第一季測試長期客服代理 | 2026-10-07 22:00:00（Asia/Taipei） | 2026-10-08 | 首次收錄 | https://newsroom.cisco.com/c/r/newsroom/en/us/a/y2026/m10/cisco-unveils-new-agentic-collaboration-experiences.html<br>https://blog.webex.com/customer-experience/webexone-2026-disconnected-customer-interactions-one-continuous-relationship/ | 32af2304b81a |
-| OpenAI | ChatGPT 開始推出互動式回覆 | ChatGPT 開始推出互動式回覆，圖表與操作元件不再只是靜態附圖 | 2026-10-07（官方發布日期） | 2026-10-08 | 首次收錄 | https://openai.com/index/gpt-6-for-everyone/<br>https://help.openai.com/en/articles/6825453-chatgpt-release-notes | 5f241ed16823 |
-| Anthropic | Claude Haiku 5.5 | Anthropic 發布 Claude Haiku 5.5，擴充低成本模型的長上下文與推理控制 | 2026-10-07（官方發布日期） | 2026-10-08 | 首次收錄 | https://www.anthropic.com/claude/haiku<br>https://platform.claude.com/docs/en/models/haiku-5-5/overview<br>https://support.claude.com/en/articles/12138966-release-notes | 14ff33dd4469 |
