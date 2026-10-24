@@ -2,7 +2,7 @@
 title: "Overview"
 type: overview
 created: 2026-05-24
-updated: 2026-10-23
+updated: 2026-10-24
 status: seed
 tags: [overview]
 sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
@@ -19,6 +19,12 @@ sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
 - 抽出持續出現的人物、組織、事件、政策、技術與市場概念。
 - 維護跨來源的矛盾、時間線、趨勢與待查問題。
 - 將重要查詢結果回寫成可累積的 wiki 頁面。
+
+## 2026-10-24 Daily News Synthesis
+
+- [[daily/2026/10/2026-10-24/daily-news-2026-10-24]]：HTC將AI陪伴做成具實體麥克風控制的生活配件，Sigma以模組化全片幅機身銜接照片與影片工作流程。預購、上市與區域供貨分開；隱私承諾及原廠效能不當成獨立測試。
+- 全球區分西藏較早主震與新救援統計、尼泊爾舊基金分配與當日真正新事件；黑海新船難、法國閉館／警力及南韓新會談提議各標前次背景。約旦與肯亞傷亡仍待更新，西岸封鎖準備不是已執行；Vance可能成大型颶風不代表已達三級。紐西蘭辭職與監察轉介不等於定罪。
+- 十二站文章與未確認候選、十四日日報去重、官方版本及逐篇圖片結果見 [[daily/2026/10/2026-10-24/source-notes-2026-10-24]]；Sigma公告配圖無法排除舊FP而省略，不拿不確定型號補圖。
 
 ## 2026-10-23 Daily News Synthesis
 

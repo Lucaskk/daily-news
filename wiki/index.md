@@ -2,7 +2,7 @@
 title: "Knowledge Base Index"
 type: overview
 created: 2026-05-24
-updated: 2026-10-23
+updated: 2026-10-24
 status: seed
 tags: [index]
 sources: []
@@ -21,6 +21,9 @@ sources: []
 - [[2026-04-04-llm-wiki]] - Karpathy 提出的 LLM-maintained personal wiki 模式，是本知識庫的設計來源。
 
 ## Daily News
+
+- [2026-10-24 Daily News](daily/2026/10/2026-10-24/daily-news-2026-10-24.md) - 2則科技：HTC VIVEE預購與Sigma FP2發布；全球正好10則。
+- [2026-10-24 Slides](daily/2026/10/2026-10-24/slides-2026-10-24.html) - 原頁完整報告與逐篇提問；Pages與LINE於08:06:49驗證完成。
 
 - [2026-10-23 Daily News](daily/2026/10/2026-10-23/daily-news-2026-10-23.md) - 3則科技：Bluesky平板beta與連結、1Password代理登入、Arc停用；全球正好10則。
 - [2026-10-23 Slides](daily/2026/10/2026-10-23/slides-2026-10-23.html) - 原頁完整報告與逐篇提問；Pages與LINE於08:15:12驗證完成。

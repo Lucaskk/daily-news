@@ -1,5 +1,14 @@
 # Knowledge Base Log
 
+## [2026-10-24] ingest | Daily global and tech AI news
+
+- 凍結07:56:54 Asia/Taipei（本日heartbeat較早，排程不變），科技336小時2則、全球24小時正好10則。僅查10/10–10/23十四份日報與同窗52列產品表，legacy不變。十二站scan全部retrieved，逐站文章／時間／候選取捨及官方第二輪入檔；未核實候選不寫成不存在。
+- HTC VIVEE正式預購與Sigma FP2新機發布經官方核對，保留出貨／配件／地區與安全承諾限制。西藏收錄視窗內新救援與傷亡，不把主震日期刷新；黑海、法國及南韓標續報。NHC第10報取代互相矛盾的二手登陸說法，保留原始固定時間快照。
+- VIVEE官方宣傳圖下載、目視及署名，Sigma公告圖無法排除舊FP，本次下載檔刪除、不發布。12篇逐篇圖片稽核區分照片存在、403、舊照及權利不足，未把未下載稱為無圖片。
+- finish渲染及驗證通過；乾淨clone本機push128無HTTPS憑證，改GitHub connector限定提交。內容commit `84e2a69a2f8654f9487075657524f4b643036234`，版本`20261024-080456-reader`；連接器tree與本機限定commit相同，保留其他工作。
+- verify-deliver確認Pages日期頁、latest及根入口HTTP200與完整雜湊，唯一私人watchdog於08:06:49回報 `Sent LINE message`；強制check exit0 complete，沒有重送或更動憑證、Xcode授權、防護與排程。
+- 渲染器12項、pipeline17項、12篇／2科技／全球1–10／逐篇來源與JS語法通過。Playwright缺少，未宣稱瀏覽器版面或實體iPhone測試；localhost預覽保留最後best-effort。
+
 ## [2026-10-23] ingest | Daily global and tech AI news
 
 - 凍結08:01:49 Asia/Taipei，科技336小時3則、全球24小時正好10則。僅查10/09–10/22十四份日報與同窗54列產品表，legacy不變。十二站scan／逐站文章及官方第二輪已保存，OpenAI首頁失敗改官方限定搜尋；未確認候選保留待查，不當沒有新聞。
