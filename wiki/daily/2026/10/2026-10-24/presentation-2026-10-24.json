@@ -1,0 +1,14 @@
+{
+  "images": {
+    "t1": {
+      "src": "assets/vivee.jpg",
+      "alt": "HTC VIVEE官方產品宣傳圖，展示金色、銀色與紅色裝置及螢幕表情",
+      "caption": "HTC官方產品宣傳合成圖，非實物操作測試或現場照片。",
+      "credit": "HTC／VIVEE 官方產品頁",
+      "source_url": "https://www.hivivee.com/",
+      "original_url": "https://www.hivivee.com/media/filer_public/fed-assets/pdp-vivee/images/meta-image.jpg",
+      "rights": "HTC官方發布產品圖，著作權屬原權利人；新聞署名引用，不宣稱自由授權。",
+      "fit": "contain"
+    }
+  }
+}

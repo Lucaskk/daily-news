@@ -1,7 +1,7 @@
 ---
 title: "科技產品新聞最近 14 天比對表"
 type: product-news-ledger-recent
-updated: 2026-10-22
+updated: 2026-10-23
 status: generated
 tags: [daily-news, tech-products, deduplication, recent]
 ---
@@ -11,11 +11,14 @@ tags: [daily-news, tech-products, deduplication, recent]
 本檔只整理產製日前 14 天的日報，可完整讀取做去重確認；不搜尋更早日報、完整歷史表或來源筆記。實際發布窗仍以當日研究截點與來源筆記判定。
 
 - 掃描日報：14 份。
-- 最近 14 天項目：54 則。
-- 日報日期範圍：2026-10-09 至 2026-10-22。
+- 最近 14 天項目：52 則。
+- 日報日期範圍：2026-10-10 至 2026-10-23。
 
 | 公司 | 產品 | 更新內容 | 發佈時間 | 收錄日期 | 狀態 | 來源網址 | 比對鍵 |
 |---|---|---|---|---|---|---|---|
+| Apple | Bluesky 推出 v1.136 | Bluesky 推出 v1.136，加入個人檔案連結與 iPad 測試支援 | 2026-10-23 00:11:13（Asia/Taipei） | 2026-10-23 | 首次收錄 | https://bsky.app/profile/bsky.app/post/3myi2ihquwk26<br>https://bsky.app/profile/bsky.app/post/3myi3k45jh22z<br>https://www.engadget.com/2294583/bluesky-adds-ipad-support-in-latest-feature-update/ | c9120b303897 |
+| Arc 公布十二月二十二日停止桌面瀏覽器服務，立即關閉新帳號 | Arc 公布十二月二十二日停止桌面瀏覽器服務 | Arc 公布十二月二十二日停止桌面瀏覽器服務，立即關閉新帳號 | 2026-10-22（官方公告日期） | 2026-10-23 | 首次收錄 | https://arc.net/<br>https://www.engadget.com/2294643/the-browser-company-is-officially-killing-arc-on-december-22/ | 527e8976e00a |
+| 1Password | 多代理登入信任層 | 1Password 發布多代理登入信任層，讓使用者核准後填入憑證 | 2026-10-22 21:00:00（Asia/Taipei） | 2026-10-23 | 首次收錄 | https://1password.com/press/2026/october/1password-for-agents-trust-layer-personal-ai-agents<br>https://techcrunch.com/2026/10/22/1password-launches-a-way-for-ai-agents-to-log-in-on-your-behalf-without-seeing-your-password/ | 579821d979d0 |
 | Microsoft | Xbox | Xbox 開放無 Game Pass 訂閱者測試購買雲端遊戲時數 | 2026-10-22 02:00:03（Asia/Taipei） | 2026-10-22 | 首次收錄 | https://news.xbox.com/en-us/2026/10/21/cloud-playtime-now-available-to-test-with-xbox-insiders/ | 12244c1f71f4 |
 | Ricoh | GR WORLD 2.0 | Ricoh 推出 GR WORLD 2.0，加入設定雲端備份及 GR IV 影像控制分享 | 2026-10-21（官方發布日期） | 2026-10-22 | 首次收錄 | https://www.ricoh-imaging.co.jp/japan/products/app/gr-world/<br>https://www.ricoh-imaging.co.jp/japan/support/download/digital/gr4_s.html<br>https://www.cool3c.com/article/253231 | 74f405bf7c6b |
 | NVIDIA | OpenShell 參照架構 | NVIDIA 發布 OpenShell 參照架構，把 AI 代理治理延伸至獨立硬體監測 | 2026-10-21（官方發布日期） | 2026-10-22 | 首次收錄 | https://nvidianews.nvidia.com/news/openshell-reference-architecture<br>https://developer.nvidia.com/blog/how-nvidia-openshell-reference-architecture-secures-and-governs-ai-agent-workloads-at-scale/ | e9664c38ced2 |
@@ -65,8 +68,3 @@ tags: [daily-news, tech-products, deduplication, recent]
 | OpenAI | Codex 訊息預測測試 | OpenAI 開放 Codex 訊息預測測試，先向成年個人 Pro 用戶提供下一則指令建議 | 2026-10-09（官方發布日期） | 2026-10-10 | 首次收錄 | https://help.openai.com/en/articles/6825453-chatgpt-release-notes<br>https://help.openai.com/en/articles/20001601-composer-predictions-in-codex | 6d0641a75e02 |
 | Google | Health 預告十月十二日揭曉健康裝置 | Google Health 預告十月十二日揭曉健康裝置，使用「Edge」字樣但尚未公布完整規格 | 2026-10-10 06:28:43（Asia/Taipei） | 2026-10-10 | 首次收錄 | https://www.engadget.com/2282887/google-teases-its-new-fitbit-edge-wearable-ahead-of-an-october-12-reveal/<br>https://www.theverge.com/tech/1008918/google-fitbit-edge-launch-next-week | ab2462bcc11d |
 | Anthropic | 免費 OSS Scanner | Anthropic 推出免費 OSS Scanner，讓開源專案主動申請定期漏洞掃描 | 2026-10-08 17:04:16（Asia/Taipei） | 2026-10-10 | 首次收錄 | https://www.anthropic.com/news/anthropic-cyber-mission<br>https://www.anthropic.com/research/launching-opt-in-vuln-finding-service-for-open-source | 220f946657ac |
-| Sigma | 50–120mm F2.8 APS-C 望遠變焦鏡 | Sigma 發布 50–120mm F2.8 APS-C 望遠變焦鏡，預定十月下旬上市 | 2026-10-08（官方發布日期） | 2026-10-09 | 首次收錄 | https://www.sigma-global.com/jp/news/2026/10/08/012334/<br>https://www.cool3c.com/article/252801 | 12c3a99c3cfa |
-| Google | 公布 Gemini 通用工作代理 | Google 公布 Gemini 通用工作代理，整合企業工具與多種工作任務 | 2026-10-08（官方發布日期） | 2026-10-09 | 首次收錄 | https://blog.google/innovation-and-ai/infrastructure-and-cloud/google-cloud/gemini-at-work/<br>https://cloud.google.com/blog/products/ai-machine-learning/welcome-to-gemini-at-work-2026 | 8eefbbaaba30 |
-| Google | Drive 與 Docs 開始原生預覽、編輯及協作 Markdown 檔案 | Google Drive 與 Docs 開始原生預覽、編輯及協作 Markdown 檔案 | 2026-10-05（官方發布日期） | 2026-10-09 | 首次收錄 | https://workspaceupdates.googleblog.com/2026/10/preview-edit-and-collaborate-on-Markdown-files-natively-across-Drive-and-Docs.html<br>https://www.inside.com.tw/article/42582-google-drive-docs-native-markdown-files-preview-edit-collaborate | ef5e3fcf354a |
-| OpenAI | Codex 桌面版開始推出更快的跟進指令回應 | Codex 桌面版開始推出更快的跟進指令回應，讓執行中的任務更快轉向 | 2026-10-08（官方發布日期） | 2026-10-09 | 首次收錄 | https://help.openai.com/en/articles/6825453-chatgpt-release-notes | 5c8ea3bb9990 |
-| Amazon / AWS | Alexa Tablet 新系列 | Amazon 推出 Alexa Tablet 新系列，首次完整支援 Google Play 並開放訂購 | 2026-10-08 20:55:12（Asia/Taipei） | 2026-10-09 | 首次收錄 | https://www.aboutamazon.com/news/devices/new-amazon-alexa-tablets-alexa-plus<br>https://www.engadget.com/2280917/amazon-alexa-tablets-october-2026/ | 85c029d1b846 |
