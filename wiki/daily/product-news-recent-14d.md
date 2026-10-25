@@ -1,7 +1,7 @@
 ---
 title: "科技產品新聞最近 14 天比對表"
 type: product-news-ledger-recent
-updated: 2026-10-23
+updated: 2026-10-24
 status: generated
 tags: [daily-news, tech-products, deduplication, recent]
 ---
@@ -11,11 +11,13 @@ tags: [daily-news, tech-products, deduplication, recent]
 本檔只整理產製日前 14 天的日報，可完整讀取做去重確認；不搜尋更早日報、完整歷史表或來源筆記。實際發布窗仍以當日研究截點與來源筆記判定。
 
 - 掃描日報：14 份。
-- 最近 14 天項目：52 則。
-- 日報日期範圍：2026-10-10 至 2026-10-23。
+- 最近 14 天項目：51 則。
+- 日報日期範圍：2026-10-11 至 2026-10-24。
 
 | 公司 | 產品 | 更新內容 | 發佈時間 | 收錄日期 | 狀態 | 來源網址 | 比對鍵 |
 |---|---|---|---|---|---|---|---|
+| Sigma | FP2 全片幅相機 | Sigma 發表 FP2 全片幅相機，確認十一月十一日上市 | 2026-10-23（官方發布日期） | 2026-10-24 | 首次收錄 | https://www.sigma-global.com/en/news/2026/10/23/012378/<br>https://www.sigma-global.com/jp/news/2026/10/23/012376/<br>https://www.sigma-global.com/en/cameras/fp2/<br>https://www.cool3c.com/article/253334 | 7f6a25598ad4 |
+| HTC | VIVEE AI 陪伴裝置預購 | HTC 開放 VIVEE AI 陪伴裝置預購，預計十二月上旬出貨 | 2026-10-22 21:00:00（Asia/Taipei） | 2026-10-24 | 首次收錄 | https://www.businesswire.com/news/home/20261022888626/en/<br>https://finance.yahoo.com/technology/ai/articles/htc-introduces-vivee-interactive-digital-130000564.html<br>https://www.hivivee.com/<br>https://www.cool3c.com/article/253328 | 6fcd5436750e |
 | Apple | Bluesky 推出 v1.136 | Bluesky 推出 v1.136，加入個人檔案連結與 iPad 測試支援 | 2026-10-23 00:11:13（Asia/Taipei） | 2026-10-23 | 首次收錄 | https://bsky.app/profile/bsky.app/post/3myi2ihquwk26<br>https://bsky.app/profile/bsky.app/post/3myi3k45jh22z<br>https://www.engadget.com/2294583/bluesky-adds-ipad-support-in-latest-feature-update/ | c9120b303897 |
 | Arc 公布十二月二十二日停止桌面瀏覽器服務，立即關閉新帳號 | Arc 公布十二月二十二日停止桌面瀏覽器服務 | Arc 公布十二月二十二日停止桌面瀏覽器服務，立即關閉新帳號 | 2026-10-22（官方公告日期） | 2026-10-23 | 首次收錄 | https://arc.net/<br>https://www.engadget.com/2294643/the-browser-company-is-officially-killing-arc-on-december-22/ | 527e8976e00a |
 | 1Password | 多代理登入信任層 | 1Password 發布多代理登入信任層，讓使用者核准後填入憑證 | 2026-10-22 21:00:00（Asia/Taipei） | 2026-10-23 | 首次收錄 | https://1password.com/press/2026/october/1password-for-agents-trust-layer-personal-ai-agents<br>https://techcrunch.com/2026/10/22/1password-launches-a-way-for-ai-agents-to-log-in-on-your-behalf-without-seeing-your-password/ | 579821d979d0 |
@@ -65,6 +67,3 @@ tags: [daily-news, tech-products, deduplication, recent]
 | Microsoft | Decision-1 | Microsoft-Decision-1 開放公開預覽，讓應用以專用模型處理分類與路由 | 2026-10-09（官方發布日期） | 2026-10-11 | 首次收錄 | https://commandline.microsoft.com/microsoft-decision-1-model-foundry/<br>https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/introducing-microsoft-decision-1-in-microsoft-foundry-for-decision-and-classific/4562742 | 200036543b3d |
 | Honda 公布行駛中無線充電道路技術，預計二〇二七會計年度進入公路實證 | Honda 公布行駛中無線充電道路技術 | Honda 公布行駛中無線充電道路技術，預計二〇二七會計年度進入公路實證 | 2026-10-07 01:55:51（Asia/Taipei） | 2026-10-11 | 首次收錄 | https://hondanews.com/en-US/electrification/releases/release-9ded4afa56370babdac7c3fc7900e69d-honda-develops-underlaying-technology-for-in-motion-wireless-charging-of-evs-including-large-commercial-vehicles<br>https://techorange.com/2026/10/08/honda-electrification-2027-releases-e20/ | 3399b948a71f |
 | Forza Horizon 6 | PS5 預購 | Forza Horizon 6 開放 PS5 預購，確認明年一月上市與首個擴充內容時程 | 2026-10-08（官方發布日期） | 2026-10-11 | 首次收錄 | https://forza.net/news/forza-horizon-6-pre-order-ps5 | 5dab78312069 |
-| OpenAI | Codex 訊息預測測試 | OpenAI 開放 Codex 訊息預測測試，先向成年個人 Pro 用戶提供下一則指令建議 | 2026-10-09（官方發布日期） | 2026-10-10 | 首次收錄 | https://help.openai.com/en/articles/6825453-chatgpt-release-notes<br>https://help.openai.com/en/articles/20001601-composer-predictions-in-codex | 6d0641a75e02 |
-| Google | Health 預告十月十二日揭曉健康裝置 | Google Health 預告十月十二日揭曉健康裝置，使用「Edge」字樣但尚未公布完整規格 | 2026-10-10 06:28:43（Asia/Taipei） | 2026-10-10 | 首次收錄 | https://www.engadget.com/2282887/google-teases-its-new-fitbit-edge-wearable-ahead-of-an-october-12-reveal/<br>https://www.theverge.com/tech/1008918/google-fitbit-edge-launch-next-week | ab2462bcc11d |
-| Anthropic | 免費 OSS Scanner | Anthropic 推出免費 OSS Scanner，讓開源專案主動申請定期漏洞掃描 | 2026-10-08 17:04:16（Asia/Taipei） | 2026-10-10 | 首次收錄 | https://www.anthropic.com/news/anthropic-cyber-mission<br>https://www.anthropic.com/research/launching-opt-in-vuln-finding-service-for-open-source | 220f946657ac |

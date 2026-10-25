@@ -1,0 +1,26 @@
+{
+  "date": "2026-10-25",
+  "images": {
+    "t1": {
+      "src": "assets/steam-calendar.png",
+      "alt": "Steam官方標誌與遊戲拼圖主題圖，非個人日曆操作介面",
+      "caption": "Steam官方主題圖；不是個人日曆介面截圖。",
+      "credit": "Valve／Steam；遊戲圖像屬各原權利人",
+      "source_url": "https://steamcommunity.com/gid/103582791457287600/announcements/detail/710037059469839719",
+      "original_url": "https://clan.akamai.steamstatic.com/images/27766192/1c92bdb017fb48adb602d4e3e1ddffd9301bcd8a.png",
+      "rights": "官方公告主題圖，版權屬Valve及相關權利人，非自由授權；僅標明出處作新聞說明。",
+      "fit": "contain"
+    },
+    "t2": {
+      "src": "assets/dessa.jpg",
+      "alt": "Dessa官方語音展示畫面，含抽象標誌與語音字幕",
+      "caption": "Block官方Dessa展示畫面；不代表模型已公開下載。",
+      "credit": "Block／Dessa",
+      "source_url": "https://block.xyz/dessa",
+      "original_url": "https://block.xyz/dessa/_media/d4d3658729d667432ad9/assets/marketing/variants/v3.jpg",
+      "rights": "Block官方產品展示素材，版權屬Block，非自由授權；附原始頁面與影像來源。",
+      "fit": "contain"
+    }
+  },
+  "no_images_reason": "全球十則均已分別查原文與og，部分是商業通訊社照片、限制再散布資料照或僅站台標誌，另有403經替代來源補查；個別結果與原圖見來源筆記，未將未授權或未核實日期寫成無圖。"
+}
