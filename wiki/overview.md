@@ -2,7 +2,7 @@
 title: "Overview"
 type: overview
 created: 2026-05-24
-updated: 2026-10-24
+updated: 2026-10-25
 status: seed
 tags: [overview]
 sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
@@ -19,6 +19,12 @@ sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
 - 抽出持續出現的人物、組織、事件、政策、技術與市場概念。
 - 維護跨來源的矛盾、時間線、趨勢與待查問題。
 - 將重要查詢結果回寫成可累積的 wiki 頁面。
+
+## 2026-10-25 Daily News Synthesis
+
+- [[daily/2026/10/2026-10-25/daily-news-2026-10-25]]：Steam個人日曆由實驗轉為正式商店功能，Block Dessa則仍是少數安全研究者早期存取；個人化推薦不保證曝光，自然語音不等於有情感或已全面開放。
+- 法國實際示威結果、薔琵新全國統計與Starlink恢復分別標示前次日期。400km/h是終端移動速度而非網速；金正恩訪問不等於橋梁今日啟用；菲律賓停飛及德國警方調查與前一天事故分開。海嘯警報解除不代表無餘震，拘留與貪腐指控不等於定罪，漏油與戰爭背景也不能直接連為因果。
+- 十二站查閱、官方補查、十四日日報去重與逐篇圖片限制見 [[daily/2026/10/2026-10-25/source-notes-2026-10-25]]。未確認新品保留待查，Steam主題圖不是日曆介面，通訊社資料照未冒充今日現場。
 
 ## 2026-10-24 Daily News Synthesis
 

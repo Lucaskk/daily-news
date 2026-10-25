@@ -1,5 +1,14 @@
 # Knowledge Base Log
 
+## [2026-10-25] ingest | Daily global and tech AI news
+
+- 凍結07:55:29 Asia/Taipei，維持legacy與既有排程；科技336小時2則、全球24小時正好10則。僅查10/11–10/24十四份日報及同窗51列產品表。十二站scan、逐站文章、Yahoo補查、官方第二輪與未確認候選分批入檔，不把待查稱為不存在。
+- Steam由Labs轉正式功能、Dessa少數研究者早期存取經官方核對，未稱全部公開。法國、薔琵與Starlink標前次日期及實質新進展；菲律賓採新確認／停飛、德國採新拘留調查，不刷新事故日期。巴西辯論當地晚間換算UTC已是10/24；Starlink完整後續加入Musk指控與烏方反駁。
+- 兩張官方主題／展示圖下載且目視，未稱Steam圖為日曆介面；十二篇個別圖片稽核區分商業圖、限制再散布、舊照、標誌與403補查。未取得再用權不等於沒有圖。
+- finish渲染驗證成功，乾淨clone push128無HTTPS憑證，改GitHub connector限定提交；內容commit `67d9f6d4d610cea0a8519ee8bf50af8d4e3021aa`，tree `600f516e9b54bb75a2a8477535fe6bd5f9649b73`與本機限定commit完全相同，版本`20261025-080512-reader`。保留股票等其他工作，不修改憑證、Xcode授權、防護或排程。
+- verify-deliver確認Pages日期頁、latest及根入口HTTP200與雜湊一致，唯一私人watchdog於08:07:18回報 `Sent LINE message`；強制check exit0 complete，沒有重送。
+- 渲染器12項、pipeline17項、12篇／2科技／全球1–10／逐篇來源與JS語法通過。Playwright缺少，未完成瀏覽器版面及實體iPhone測試；本機預覽最後best-effort，不影響已完成配送。
+
 ## [2026-10-24] ingest | Daily global and tech AI news
 
 - 凍結07:56:54 Asia/Taipei（本日heartbeat較早，排程不變），科技336小時2則、全球24小時正好10則。僅查10/10–10/23十四份日報與同窗52列產品表，legacy不變。十二站scan全部retrieved，逐站文章／時間／候選取捨及官方第二輪入檔；未核實候選不寫成不存在。
