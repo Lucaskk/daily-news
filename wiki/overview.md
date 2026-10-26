@@ -2,7 +2,7 @@
 title: "Overview"
 type: overview
 created: 2026-05-24
-updated: 2026-10-25
+updated: 2026-10-26
 status: seed
 tags: [overview]
 sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
@@ -19,6 +19,12 @@ sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
 - 抽出持續出現的人物、組織、事件、政策、技術與市場概念。
 - 維護跨來源的矛盾、時間線、趨勢與待查問題。
 - 將重要查詢結果回寫成可累積的 wiki 頁面。
+
+## 2026-10-26 Daily News Synthesis
+
+- [[daily/2026/10/2026-10-26/daily-news-2026-10-26]]：8BitDo由早期揭露進入預購，UTM由測試版轉正式系列；預購與出貨、穩定版本與實驗圖形驅動分開，不能把支援API視為所有遊戲相容。
+- 塞爾維亞認敗與席次最終認證不同，巴西延長投票及恢復計票不是勝者認定。西岸通行限制、Vance降級各標前次日期；加彭事故以當日新確認收錄，保留公司五人失聯與媒體一死四失聯的口徑差異。風暴減弱、洪水退去、反對派領袖返國，均不代表各自風險已解除。
+- 十二站取得／補查、僅十四日日報去重、固定release段落、滾動頁時間歧異及逐篇圖片結果見 [[daily/2026/10/2026-10-26/source-notes-2026-10-26]]。UTM採10/17實際release日期，不用今日轉載時間刷新；未確認候選留待查。
 
 ## 2026-10-25 Daily News Synthesis
 

@@ -1,5 +1,14 @@
 # Knowledge Base Log
 
+## [2026-10-26] ingest | Daily global and tech AI news
+
+- 凍結08:03:35 Asia/Taipei，維持legacy及原排程；科技336小時2則、全球24小時正好10則。僅查10/12–10/25十四份日報與50列同窗產品表。十二站scan為11成功、OpenAI失敗，後者已以官方限定搜尋補查；逐站候選與待查、官方第二輪入檔，不把取得成功當全站窮盡。
+- 8BitDo正式預購不同於六月揭露，UTM v5.0.8的10/17 release與prerelease=false經官方API核實；不把10/26轉載刷新成發布日。巴西、西岸及Vance標前次日期；加彭較早事故以今日新確認／搜救收錄，保留傷亡歧異，不跟進截點後選舉結果。
+- 兩張官方產品／示範圖下載並目視，控制器明標Pro型號，UTM畫面不是本報測試。十二篇個別圖片稽核記錄舊照、商業權利、標誌、403／429與補查；未用AI地圖冒充加彭現場。兩張公開資產HTTP200。
+- finish渲染及結構驗證通過；乾淨clone本機push128無HTTPS憑證，以GitHub connector限定提交。內容commit `84bb0c56a05cddaa015aa6994cfa639dca28fac2`，tree `fb0f2a58d3a32449a95b7985a853039bb125a264`與本機限定commit相同，版本`20261026-081330-reader`。未更動股票等無關工作、憑證、Xcode授權、防護與排程。
+- verify-deliver確認日期頁、latest及根入口HTTP200與完整雜湊一致，唯一私人watchdog於08:15:26回報 `Sent LINE message`；強制check exit0 complete，不重送。
+- 渲染器12項、pipeline17項、12篇／2科技／全球1–10／逐篇來源、時間依據、不確定性及JS語法通過。Playwright缺少，未完成瀏覽器版面與實體iPhone測試；localhost預覽最後best-effort，不影響已完成發布與配送。
+
 ## [2026-10-25] ingest | Daily global and tech AI news
 
 - 凍結07:55:29 Asia/Taipei，維持legacy與既有排程；科技336小時2則、全球24小時正好10則。僅查10/11–10/24十四份日報及同窗51列產品表。十二站scan、逐站文章、Yahoo補查、官方第二輪與未確認候選分批入檔，不把待查稱為不存在。
