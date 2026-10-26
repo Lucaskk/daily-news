@@ -1,0 +1,26 @@
+{
+  "date": "2026-10-26",
+  "images": {
+    "t1": {
+      "src": "assets/arcade-controller-pro.jpg",
+      "alt": "8BitDo Arcade Controller Pro官方產品圖，可見機身螢幕與磁吸腕托",
+      "caption": "Arcade Controller Pro官方產品圖，非舊款Arcade Controller。",
+      "credit": "8BitDo",
+      "source_url": "https://shop.8bitdo.com/products/8bitdo-arcade-controller-pro",
+      "original_url": "https://shop.8bitdo.com/cdn/shop/files/911.jpg?v=1792643978",
+      "rights": "8BitDo官方宣傳產品圖，版權屬8BitDo，非自由授權；附來源作新聞說明。",
+      "fit": "contain"
+    },
+    "t2": {
+      "src": "assets/utm-windows11.webp",
+      "alt": "UTM官方Windows 11虛擬機示範畫面，非本報效能測試",
+      "caption": "UTM官方Windows 11示範畫面；不是本報實測，也不是遊戲相容性保證。",
+      "credit": "UTM專案；Windows圖像屬相關權利人",
+      "source_url": "https://getutm.app/",
+      "original_url": "https://getutm.app/assets/img/windows11.webp",
+      "rights": "UTM官方網站示範素材；軟體開源不等於所有系統圖像均無版權，保留出處及權利人。",
+      "fit": "contain"
+    }
+  },
+  "no_images_reason": "全球十則已逐篇查原文與og：商業圖、較早資料照、站台標誌或來源403／429經補查，個別結果與原圖見來源筆記；未把未下載、未取得權利或讀取失敗寫成無圖片。"
+}

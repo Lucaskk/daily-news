@@ -1,7 +1,7 @@
 ---
 title: "科技產品新聞最近 14 天比對表"
 type: product-news-ledger-recent
-updated: 2026-10-24
+updated: 2026-10-25
 status: generated
 tags: [daily-news, tech-products, deduplication, recent]
 ---
@@ -11,11 +11,13 @@ tags: [daily-news, tech-products, deduplication, recent]
 本檔只整理產製日前 14 天的日報，可完整讀取做去重確認；不搜尋更早日報、完整歷史表或來源筆記。實際發布窗仍以當日研究截點與來源筆記判定。
 
 - 掃描日報：14 份。
-- 最近 14 天項目：51 則。
-- 日報日期範圍：2026-10-11 至 2026-10-24。
+- 最近 14 天項目：50 則。
+- 日報日期範圍：2026-10-12 至 2026-10-25。
 
 | 公司 | 產品 | 更新內容 | 發佈時間 | 收錄日期 | 狀態 | 來源網址 | 比對鍵 |
 |---|---|---|---|---|---|---|---|
+| Steam 個人日曆結束實驗，正式納入商店的遊戲探索功能 | Steam 個人日曆結束實驗 | Steam 個人日曆結束實驗，正式納入商店的遊戲探索功能 | 2026-10-24 04:10:32（Asia/Taipei） | 2026-10-25 | 首次收錄 | https://steamcommunity.com/gid/103582791457287600/announcements/detail/710037059469839719<br>https://steamcommunity.com/app/593110<br>https://partner.steamgames.com/doc/marketing/visibility/personalcalendar<br>https://www.engadget.com/2296237/steam-rolls-out-personal-calendar-feature-that-constantly-updates-recommended-games/ | 065eed9a3c42 |
+| Block 公布 Dessa 語音模型，先向少數 | AI 安全研究者提供早期存取 | Block 公布 Dessa 語音模型，先向少數 AI 安全研究者提供早期存取 | 2026-10-23（官方發布日期） | 2026-10-25 | 首次收錄 | https://block.xyz/dessa<br>https://www.coindesk.com/tech/2026/10/24/block-s-new-voice-ai-sounds-eerily-human-sparking-awe-and-scam-fears<br>https://techcrunch.com/2026/10/24/blocks-new-voice-model-sounds-eerily-human/ | 9473cc48c1c0 |
 | Sigma | FP2 全片幅相機 | Sigma 發表 FP2 全片幅相機，確認十一月十一日上市 | 2026-10-23（官方發布日期） | 2026-10-24 | 首次收錄 | https://www.sigma-global.com/en/news/2026/10/23/012378/<br>https://www.sigma-global.com/jp/news/2026/10/23/012376/<br>https://www.sigma-global.com/en/cameras/fp2/<br>https://www.cool3c.com/article/253334 | 7f6a25598ad4 |
 | HTC | VIVEE AI 陪伴裝置預購 | HTC 開放 VIVEE AI 陪伴裝置預購，預計十二月上旬出貨 | 2026-10-22 21:00:00（Asia/Taipei） | 2026-10-24 | 首次收錄 | https://www.businesswire.com/news/home/20261022888626/en/<br>https://finance.yahoo.com/technology/ai/articles/htc-introduces-vivee-interactive-digital-130000564.html<br>https://www.hivivee.com/<br>https://www.cool3c.com/article/253328 | 6fcd5436750e |
 | Apple | Bluesky 推出 v1.136 | Bluesky 推出 v1.136，加入個人檔案連結與 iPad 測試支援 | 2026-10-23 00:11:13（Asia/Taipei） | 2026-10-23 | 首次收錄 | https://bsky.app/profile/bsky.app/post/3myi2ihquwk26<br>https://bsky.app/profile/bsky.app/post/3myi3k45jh22z<br>https://www.engadget.com/2294583/bluesky-adds-ipad-support-in-latest-feature-update/ | c9120b303897 |
@@ -64,6 +66,3 @@ tags: [daily-news, tech-products, deduplication, recent]
 | Rockstar | GTA VI 六個電台預覽 | Rockstar 開放 GTA VI 六個電台預覽，公布遊戲音樂內容的新細節 | 2026-10-08（官方發布日期） | 2026-10-12 | 首次收錄 | https://www.rockstargames.com/newswire/article/o3982oa93a23k4/the-music-of-grand-theft-auto-vi-in-game-radio-stations<br>https://www.rockstargames.com/VI/music<br>https://www.rockstargames.com/newswire?page=2 | b550af9bac45 |
 | Let’s Encrypt 公布憑證縮短為六十四天的時程，十月先 | Let’s Encrypt 公布憑證縮短為六十四天的時程 | Let’s Encrypt 公布憑證縮短為六十四天的時程，十月先開放測試 | 2026-10-07（官方發布日期） | 2026-10-12 | 首次收錄 | https://letsencrypt.org/2026/10/07/64-day-certs | e8d8630cbf09 |
 | BMW 公布 iX4 電動跑旅，將 | Neue Klasse 平台擴充至新車型 | BMW 公布 iX4 電動跑旅，將 Neue Klasse 平台擴充至新車型 | 2026-10-08（官方頁面發布日期） | 2026-10-12 | 首次收錄 | https://www.press.bmwgroup.com/usa/article/detail/T0461507EN_US/the-bmw-ix4?showMedia=photo | 6bced8e97c1f |
-| Microsoft | Decision-1 | Microsoft-Decision-1 開放公開預覽，讓應用以專用模型處理分類與路由 | 2026-10-09（官方發布日期） | 2026-10-11 | 首次收錄 | https://commandline.microsoft.com/microsoft-decision-1-model-foundry/<br>https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/introducing-microsoft-decision-1-in-microsoft-foundry-for-decision-and-classific/4562742 | 200036543b3d |
-| Honda 公布行駛中無線充電道路技術，預計二〇二七會計年度進入公路實證 | Honda 公布行駛中無線充電道路技術 | Honda 公布行駛中無線充電道路技術，預計二〇二七會計年度進入公路實證 | 2026-10-07 01:55:51（Asia/Taipei） | 2026-10-11 | 首次收錄 | https://hondanews.com/en-US/electrification/releases/release-9ded4afa56370babdac7c3fc7900e69d-honda-develops-underlaying-technology-for-in-motion-wireless-charging-of-evs-including-large-commercial-vehicles<br>https://techorange.com/2026/10/08/honda-electrification-2027-releases-e20/ | 3399b948a71f |
-| Forza Horizon 6 | PS5 預購 | Forza Horizon 6 開放 PS5 預購，確認明年一月上市與首個擴充內容時程 | 2026-10-08（官方發布日期） | 2026-10-11 | 首次收錄 | https://forza.net/news/forza-horizon-6-pre-order-ps5 | 5dab78312069 |
