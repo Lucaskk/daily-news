@@ -1,7 +1,7 @@
 ---
 title: "科技產品新聞最近 14 天比對表"
 type: product-news-ledger-recent
-updated: 2026-10-25
+updated: 2026-10-26
 status: generated
 tags: [daily-news, tech-products, deduplication, recent]
 ---
@@ -11,11 +11,13 @@ tags: [daily-news, tech-products, deduplication, recent]
 本檔只整理產製日前 14 天的日報，可完整讀取做去重確認；不搜尋更早日報、完整歷史表或來源筆記。實際發布窗仍以當日研究截點與來源筆記判定。
 
 - 掃描日報：14 份。
-- 最近 14 天項目：50 則。
-- 日報日期範圍：2026-10-12 至 2026-10-25。
+- 最近 14 天項目：48 則。
+- 日報日期範圍：2026-10-13 至 2026-10-26。
 
 | 公司 | 產品 | 更新內容 | 發佈時間 | 收錄日期 | 狀態 | 來源網址 | 比對鍵 |
 |---|---|---|---|---|---|---|---|
+| Microsoft | UTM 5.0 系列推出正式版 | UTM 5.0 系列推出正式版，Windows 圖形加速仍保留實驗性限制 | 2026-10-17 10:44:56（Asia/Taipei） | 2026-10-26 | 首次收錄 | https://github.com/utmapp/UTM/releases/tag/v5.0.8<br>https://api.github.com/repos/utmapp/UTM/releases?per_page=10<br>https://getutm.app/<br>https://tw.news.yahoo.com/utm-5-0%E6%AD%A3%E5%BC%8F%E7%89%88%E9%87%8B%E5%87%BA-windows-11-223345370.html | 365d9779fb2b |
+| 8BitDo | Arcade Controller Pro 預購 | 8BitDo 開放 Arcade Controller Pro 預購，官方商店標示十一月三十日出貨 | 2026-10-23（開始預購的可靠報導日期） | 2026-10-26 | 首次收錄 | https://www.8bitdo.com/arcade-controller-pro/<br>https://shop.8bitdo.com/products/8bitdo-arcade-controller-pro<br>https://www.engadget.com/2296362/8bitdos-latest-button-only-arcade-controller-is-now-up-for-preorder/<br>https://ixbt.games/en/news/2026/10/23/8bitdo-otkryla-predzakaz-na-kontroller-dlia-faitingov-arcade-controller-pro.html | 02b4e2d405e1 |
 | Steam 個人日曆結束實驗，正式納入商店的遊戲探索功能 | Steam 個人日曆結束實驗 | Steam 個人日曆結束實驗，正式納入商店的遊戲探索功能 | 2026-10-24 04:10:32（Asia/Taipei） | 2026-10-25 | 首次收錄 | https://steamcommunity.com/gid/103582791457287600/announcements/detail/710037059469839719<br>https://steamcommunity.com/app/593110<br>https://partner.steamgames.com/doc/marketing/visibility/personalcalendar<br>https://www.engadget.com/2296237/steam-rolls-out-personal-calendar-feature-that-constantly-updates-recommended-games/ | 065eed9a3c42 |
 | Block 公布 Dessa 語音模型，先向少數 | AI 安全研究者提供早期存取 | Block 公布 Dessa 語音模型，先向少數 AI 安全研究者提供早期存取 | 2026-10-23（官方發布日期） | 2026-10-25 | 首次收錄 | https://block.xyz/dessa<br>https://www.coindesk.com/tech/2026/10/24/block-s-new-voice-ai-sounds-eerily-human-sparking-awe-and-scam-fears<br>https://techcrunch.com/2026/10/24/blocks-new-voice-model-sounds-eerily-human/ | 9473cc48c1c0 |
 | Sigma | FP2 全片幅相機 | Sigma 發表 FP2 全片幅相機，確認十一月十一日上市 | 2026-10-23（官方發布日期） | 2026-10-24 | 首次收錄 | https://www.sigma-global.com/en/news/2026/10/23/012378/<br>https://www.sigma-global.com/jp/news/2026/10/23/012376/<br>https://www.sigma-global.com/en/cameras/fp2/<br>https://www.cool3c.com/article/253334 | 7f6a25598ad4 |
@@ -62,7 +64,3 @@ tags: [daily-news, tech-products, deduplication, recent]
 | Meta | Muse Wonder 模型 | Meta 推出 Muse Wonder 模型，標準版開放 API、Full 版先供 Muse Code 訂戶使用 | 2026-10-12（官方發布日期） | 2026-10-13 | 首次收錄 | https://about.fb.com/news/2026/10/introducing-muse-wonder-models/<br>https://research.meta.ai/blog/muse-wonder | 4db7b2520e8a |
 | Google | Mac 本機會議助理 Foresight | Google 推出 Mac 本機會議助理 Foresight，支援離線筆記與個人文件檢索 | 2026-10-08 21:28:00（Asia/Taipei） | 2026-10-13 | 首次收錄 | https://developers.google.com/edge/foresight<br>https://techcrunch.com/2026/10/08/google-releases-a-new-local-first-granola-competitor/<br>https://www.inside.com.tw/article/42617-google-ai-edge-foresight-mac-offline-ai-meeting-notes | dabb372bf718 |
 | Apple | 啟動獨立遊戲週 | Apple 啟動獨立遊戲週，確認 No Man's Sky 十月二十八日登上 iPhone 與 iPad | 2026-10-12（官方發布日期） | 2026-10-13 | 首次收錄 | https://www.apple.com/newsroom/2026/10/app-store-indie-games-week-kicks-off-today/<br>https://apps.apple.com/us/app/no-mans-sky/id1615755735 | 9ea1adf00c60 |
-| Volkswagen | 純電 ID. Tiguan | Volkswagen 發表純電 ID. Tiguan，預計明年初接替 ID.4 與 ID.5 | 2026-10-09（官方發布日期） | 2026-10-12 | 首次收錄 | https://www.volkswagen-newsroom.com/en/press-releases/a-volkswagen-bestseller-goes-electric-world-premiere-of-the-new-id-tiguan-20728 | 7d2d72ffcf0a |
-| Rockstar | GTA VI 六個電台預覽 | Rockstar 開放 GTA VI 六個電台預覽，公布遊戲音樂內容的新細節 | 2026-10-08（官方發布日期） | 2026-10-12 | 首次收錄 | https://www.rockstargames.com/newswire/article/o3982oa93a23k4/the-music-of-grand-theft-auto-vi-in-game-radio-stations<br>https://www.rockstargames.com/VI/music<br>https://www.rockstargames.com/newswire?page=2 | b550af9bac45 |
-| Let’s Encrypt 公布憑證縮短為六十四天的時程，十月先 | Let’s Encrypt 公布憑證縮短為六十四天的時程 | Let’s Encrypt 公布憑證縮短為六十四天的時程，十月先開放測試 | 2026-10-07（官方發布日期） | 2026-10-12 | 首次收錄 | https://letsencrypt.org/2026/10/07/64-day-certs | e8d8630cbf09 |
-| BMW 公布 iX4 電動跑旅，將 | Neue Klasse 平台擴充至新車型 | BMW 公布 iX4 電動跑旅，將 Neue Klasse 平台擴充至新車型 | 2026-10-08（官方頁面發布日期） | 2026-10-12 | 首次收錄 | https://www.press.bmwgroup.com/usa/article/detail/T0461507EN_US/the-bmw-ix4?showMedia=photo | 6bced8e97c1f |

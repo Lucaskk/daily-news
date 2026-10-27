@@ -1,0 +1,26 @@
+{
+  "date": "2026-10-27",
+  "images": {
+    "t1": {
+      "src": "assets/ipad-mini.jpg",
+      "alt": "Apple新一代iPad mini官方產品圖，手持OLED平板",
+      "caption": "Apple 10/26官方新款iPad mini產品圖，非舊型號。",
+      "credit": "Apple",
+      "source_url": "https://www.apple.com/newsroom/2026/10/apple-gives-ipad-mini-its-biggest-update-ever/",
+      "original_url": "https://www.apple.com/newsroom/images/2026/10/apple-gives-ipad-mini-its-biggest-update-ever/article/Apple-iPad-mini-hero-261026_big.jpg.large.jpg",
+      "rights": "Apple新聞稿宣傳圖片，版權屬Apple，非自由授權，保留來源。",
+      "fit": "contain"
+    },
+    "t2": {
+      "src": "assets/terra.jpg",
+      "alt": "GPT-6.1 Terra官方宣傳示意圖，非操作介面",
+      "caption": "OpenAI官方模型宣傳示意圖，不是本報實測或使用介面。",
+      "credit": "OpenAI",
+      "source_url": "https://openai.com/index/introducing-gpt-6-1-terra/",
+      "original_url": "https://cdn.openai.com/mdx-assets/71f084db-a08b-48c5-b96e-5fbdc21a1a00/terra-art-card-16x9.0394724b.png",
+      "rights": "OpenAI官方宣傳素材，版權保留，僅轉JPEG壓縮不變更內容，非自由授權。",
+      "fit": "contain"
+    }
+  },
+  "no_images_reason": "全球十則逐篇圖片稽核見當日來源筆記：原文403、轉載標誌、商業新聞照片及較早資料照分開記錄；不把未下載或未取得權利說成原文無圖。本版採兩張已目視驗證的官方科技圖片。"
+}
