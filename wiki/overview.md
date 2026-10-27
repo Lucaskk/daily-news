@@ -2,7 +2,7 @@
 title: "Overview"
 type: overview
 created: 2026-05-24
-updated: 2026-10-26
+updated: 2026-10-27
 status: seed
 tags: [overview]
 sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
@@ -19,6 +19,12 @@ sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
 - 抽出持續出現的人物、組織、事件、政策、技術與市場概念。
 - 維護跨來源的矛盾、時間線、趨勢與待查問題。
 - 將重要查詢結果回寫成可累積的 wiki 頁面。
+
+## 2026-10-27 Daily News Synthesis
+
+- [[daily/2026/10/2026-10-27/daily-news-2026-10-27]]：Apple正式發布OLED iPad mini，但10/28才預購、11/6供貨；GPT-6.1 Terra開放與API價格經官方核實，公司評測不當成通用正確率。
+- 巴西由投票轉勝選結果、約旦由教堂襲擊轉跨境空襲、教宗由出院轉確認出訪，均標前次日期及新增事實。保留約旦與敘利亞對協調及平民傷亡的矛盾；埃及授權非已部署，微軟六萬為方案資格非已裁員，Anthropic申報非完成上市。
+- 僅10/13–10/26十四份日報與48列同窗表去重，十二站發現與待核線索、官方補查及逐篇圖片限制見 [[daily/2026/10/2026-10-27/source-notes-2026-10-27]]。塞爾維亞認敗、四角洪災不重列，UNEP舊報告不因更新時間刷新。
 
 ## 2026-10-26 Daily News Synthesis
 

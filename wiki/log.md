@@ -1,5 +1,14 @@
 # Knowledge Base Log
 
+## [2026-10-27] ingest | Daily global and tech AI news
+
+- 凍結08:01:09 Asia/Taipei，legacy與既有排程不變。科技336小時2則、全球24小時正好10則，僅10/13–10/26十四份日報及48列同窗產品表去重。十二站scan與發現範圍、官方定向補查及未確認候選分批入檔；不把待查稱為不存在。
+- OLED iPad mini與GPT-6.1 Terra以官方發布／文件查核；預購供貨分開，模型效能保留公司評估限制。巴西、約旦、Kharkiv、北韓及教宗標續報，區分前次背景與新行動。約敘協調與平民傷亡說法相左，兩說並存；微軟資格數不當實際離職數。
+- 兩張官方科技圖已下載目視，Terra是宣傳示意非介面；十二篇個別圖片結果保留原圖、舊照、商業權利及403補查，不把未取得再刊權稱無圖。
+- 首次finish因頁首時間窗欄位格式未通過，修正報告後固定renderer及驗證成功，沒有改防護。乾淨clone push128，以GitHub connector限定提交`3e49334854597ce436d11a4f66bcb8ecb0abd4af`，tree `6813f5491350d5d555fb22fabf45ed115431147d`與本機限定commit完全相同，版本`20261027-081100-reader`。保留股票等無關工作與遠端source-requests，不修改憑證、Xcode或排程。
+- verify-deliver確認日期頁、latest及根入口HTTP200與雜湊一致；唯一私人watchdog於08:13:14回報`Sent LINE message`，check exit0 complete，沒有強制重送。
+- 29項渲染／pipeline單元測試、12篇順序／來源／時間依據／不確定性及JavaScript語法通過。Playwright缺少，未完成瀏覽器版面或實體iPhone測試；localhost為配送後best-effort。
+
 ## [2026-10-26] ingest | Daily global and tech AI news
 
 - 凍結08:03:35 Asia/Taipei，維持legacy及原排程；科技336小時2則、全球24小時正好10則。僅查10/12–10/25十四份日報與50列同窗產品表。十二站scan為11成功、OpenAI失敗，後者已以官方限定搜尋補查；逐站候選與待查、官方第二輪入檔，不把取得成功當全站窮盡。
