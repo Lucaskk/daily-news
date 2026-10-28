@@ -1,5 +1,14 @@
 # Knowledge Base Log
 
+## [2026-10-28] ingest | Daily global and tech AI news
+
+- 凍結07:58:50 Asia/Taipei（本次heartbeat稍早，排程不改），legacy不變。科技336小時2則、全球24小時正好10則；僅10/14–10/27十四份日報及45列同窗表去重。十二站scan均取得，The Verge截斷以官方公告補核；逐站範圍、文章／已知日期、候選與未核線索、官方第二輪分批入檔，不把待查稱沒有。
+- MacBook Pro／iMac以10/27獨立官方公告，BlueChip以Qualcomm正式新聞稿核2027接單。以色列出口民調與AP清晨原頁首發分開，約敘採晚間聯合調查段日期而非早稿時刻；局部停火開始不同於先前協議。剛果、約敘及選舉標前次；南韓GDP及衣索比亞因首次可靠發布在窗外排除。
+- 兩張官方圖下載目視：七色M6 iMac與BlueChip原型，後者非量產最終規格。十二篇原文與og稽核記錄AP403、WV429、可靠轉載／搜尋補查、商業照片及資料照，不把權利不足或擷取失敗當無圖。
+- 首次finish因來源筆記只有ISO截點而未通過字面檢查，補上相同台北時間格式後固定renderer／結構驗證成功；不改截點或防護。乾淨clone push128，GitHub connector限定提交`2601de5e1513daab1890b86d837ebbccc7887f20`，tree `5faeeaa597a5b4817bc31517c6c007eea005dcab`與本機限定commit完全一致，版本`20261028-080605-reader`。無關工作、憑證、Xcode與排程未改。
+- verify-deliver確認日期頁、latest及根入口HTTP200與雜湊一致；唯一私人watchdog於08:08:07回報`Sent LINE message`，強制check exit0 complete，不重送。
+- 29項渲染／pipeline單元測試、12篇順序／必填來源與時間依據／不確定性及JS語法通過。Playwright缺少，未完成手機／桌面瀏覽器版面或實體iPhone測試；本機預覽只作配送後best-effort。
+
 ## [2026-10-27] ingest | Daily global and tech AI news
 
 - 凍結08:01:09 Asia/Taipei，legacy與既有排程不變。科技336小時2則、全球24小時正好10則，僅10/13–10/26十四份日報及48列同窗產品表去重。十二站scan與發現範圍、官方定向補查及未確認候選分批入檔；不把待查稱為不存在。
