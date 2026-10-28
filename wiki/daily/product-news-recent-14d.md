@@ -1,7 +1,7 @@
 ---
 title: "科技產品新聞最近 14 天比對表"
 type: product-news-ledger-recent
-updated: 2026-10-26
+updated: 2026-10-27
 status: generated
 tags: [daily-news, tech-products, deduplication, recent]
 ---
@@ -11,11 +11,13 @@ tags: [daily-news, tech-products, deduplication, recent]
 本檔只整理產製日前 14 天的日報，可完整讀取做去重確認；不搜尋更早日報、完整歷史表或來源筆記。實際發布窗仍以當日研究截點與來源筆記判定。
 
 - 掃描日報：14 份。
-- 最近 14 天項目：48 則。
-- 日報日期範圍：2026-10-13 至 2026-10-26。
+- 最近 14 天項目：45 則。
+- 日報日期範圍：2026-10-14 至 2026-10-27。
 
 | 公司 | 產品 | 更新內容 | 發佈時間 | 收錄日期 | 狀態 | 來源網址 | 比對鍵 |
 |---|---|---|---|---|---|---|---|
+| OpenAI | GPT-6.1 Terra | OpenAI 推出 GPT-6.1 Terra，開放付費方案與 API 使用 | 2026-10-26（官方發布日期） | 2026-10-27 | 首次收錄 | https://openai.com/index/introducing-gpt-6-1-terra/<br>https://developers.openai.com/api/docs/models/gpt-6.1-terra<br>https://developers.openai.com/api/docs/pricing | e09a19ef340e |
+| Apple | OLED 版 iPad mini | Apple 發表 OLED 版 iPad mini，十月二十八日開放預購 | 2026-10-26（官方發布日期） | 2026-10-27 | 首次收錄 | https://www.apple.com/newsroom/2026/10/apple-gives-ipad-mini-its-biggest-update-ever/<br>https://www.engadget.com/2296637/apple-updates-the-ipad-mini-with-an-a20-processor-and-oled-display/ | 383f99a4d841 |
 | Microsoft | UTM 5.0 系列推出正式版 | UTM 5.0 系列推出正式版，Windows 圖形加速仍保留實驗性限制 | 2026-10-17 10:44:56（Asia/Taipei） | 2026-10-26 | 首次收錄 | https://github.com/utmapp/UTM/releases/tag/v5.0.8<br>https://api.github.com/repos/utmapp/UTM/releases?per_page=10<br>https://getutm.app/<br>https://tw.news.yahoo.com/utm-5-0%E6%AD%A3%E5%BC%8F%E7%89%88%E9%87%8B%E5%87%BA-windows-11-223345370.html | 365d9779fb2b |
 | 8BitDo | Arcade Controller Pro 預購 | 8BitDo 開放 Arcade Controller Pro 預購，官方商店標示十一月三十日出貨 | 2026-10-23（開始預購的可靠報導日期） | 2026-10-26 | 首次收錄 | https://www.8bitdo.com/arcade-controller-pro/<br>https://shop.8bitdo.com/products/8bitdo-arcade-controller-pro<br>https://www.engadget.com/2296362/8bitdos-latest-button-only-arcade-controller-is-now-up-for-preorder/<br>https://ixbt.games/en/news/2026/10/23/8bitdo-otkryla-predzakaz-na-kontroller-dlia-faitingov-arcade-controller-pro.html | 02b4e2d405e1 |
 | Steam 個人日曆結束實驗，正式納入商店的遊戲探索功能 | Steam 個人日曆結束實驗 | Steam 個人日曆結束實驗，正式納入商店的遊戲探索功能 | 2026-10-24 04:10:32（Asia/Taipei） | 2026-10-25 | 首次收錄 | https://steamcommunity.com/gid/103582791457287600/announcements/detail/710037059469839719<br>https://steamcommunity.com/app/593110<br>https://partner.steamgames.com/doc/marketing/visibility/personalcalendar<br>https://www.engadget.com/2296237/steam-rolls-out-personal-calendar-feature-that-constantly-updates-recommended-games/ | 065eed9a3c42 |
@@ -59,8 +61,3 @@ tags: [daily-news, tech-products, deduplication, recent]
 | Google | Play 開始讓成年使用者以一般帳號執行自製 App | Google Play 開始讓成年使用者以一般帳號執行自製 App，先在部分市場推出 | 2026-10-14 01:00:00（Asia/Taipei） | 2026-10-14 | 首次收錄 | https://blog.google/products-and-platforms/platforms/google-play/google-play-updates-october-2026/ | 08e1532d97f3 |
 | Meta | Facebook 推出 Your Algorithm | Facebook 推出 Your Algorithm，讓使用者以自然語言調整推薦內容 | 2026-10-14 00:00:29（Asia/Taipei） | 2026-10-14 | 首次收錄 | https://about.fb.com/news/2026/10/introducing-your-algorithm-facebook/ | 804c6fddc829 |
 | Apple | HomeView 智慧家庭螢幕 | Apple 發布 HomeView 智慧家庭螢幕，部分市場開放預購、十一月供貨 | 2026-10-13（官方發布日期） | 2026-10-14 | 首次收錄 | https://www.apple.com/newsroom/2026/10/meet-apple-homeview-a-new-way-to-enjoy-entertainment-and-manage-the-home/ | ec5a8f5d2f7c |
-| 微軟公布 Maia 300 推理系統，計畫二〇二七年開始正式部署 | 微軟公布 Maia 300 推理系統 | 微軟公布 Maia 300 推理系統，計畫二〇二七年開始正式部署 | 2026-10-12（官方發布日期） | 2026-10-13 | 首次收錄 | https://blogs.microsoft.com/blog/2026/10/12/microsoft-to-expand-azure-maia-system-to-multi-gigawatt-deployments/<br>https://technews.tw/2026/10/13/microsoft-maia-300-to-begin-production-deployments-in-2027/ | 304b6cd94ec4 |
-| Sony | ECM-AX10 手機空間音訊麥克風 | Sony 發布 ECM-AX10 手機空間音訊麥克風，以四個拾音單元搭配 USB-C | 2026-10-09 00:00:00（Asia/Taipei） | 2026-10-13 | 首次收錄 | https://www.prnewswire.com/news-releases/sony-electronics-announces-the-worlds-first-eclipsa-audio-certified-spatial-audio-microphone-for-smartphones-302902696.html<br>https://www.sony.com/en/ecm-ax10_SupportedModels/ | aec3b6d3f07e |
-| Meta | Muse Wonder 模型 | Meta 推出 Muse Wonder 模型，標準版開放 API、Full 版先供 Muse Code 訂戶使用 | 2026-10-12（官方發布日期） | 2026-10-13 | 首次收錄 | https://about.fb.com/news/2026/10/introducing-muse-wonder-models/<br>https://research.meta.ai/blog/muse-wonder | 4db7b2520e8a |
-| Google | Mac 本機會議助理 Foresight | Google 推出 Mac 本機會議助理 Foresight，支援離線筆記與個人文件檢索 | 2026-10-08 21:28:00（Asia/Taipei） | 2026-10-13 | 首次收錄 | https://developers.google.com/edge/foresight<br>https://techcrunch.com/2026/10/08/google-releases-a-new-local-first-granola-competitor/<br>https://www.inside.com.tw/article/42617-google-ai-edge-foresight-mac-offline-ai-meeting-notes | dabb372bf718 |
-| Apple | 啟動獨立遊戲週 | Apple 啟動獨立遊戲週，確認 No Man's Sky 十月二十八日登上 iPhone 與 iPad | 2026-10-12（官方發布日期） | 2026-10-13 | 首次收錄 | https://www.apple.com/newsroom/2026/10/app-store-indie-games-week-kicks-off-today/<br>https://apps.apple.com/us/app/no-mans-sky/id1615755735 | 9ea1adf00c60 |

@@ -1,0 +1,26 @@
+{
+  "date": "2026-10-28",
+  "images": {
+    "t1": {
+      "src": "assets/imac-m6.jpg",
+      "alt": "Apple新款M6 iMac七種顏色的官方產品圖",
+      "caption": "本篇同批更新中的M6 iMac官方圖，非舊型號或觸控MacBook傳聞。",
+      "credit": "Apple",
+      "source_url": "https://www.apple.com/newsroom/2026/10/apple-unveils-new-imac-with-m6/",
+      "original_url": "https://www.apple.com/newsroom/images/2026/10/apple-unveils-new-imac-with-m6/article/Apple-iMac-with-M6-hero-261027_big.jpg.large.jpg",
+      "rights": "Apple官方新聞稿產品圖，版權保留，非自由授權。",
+      "fit": "contain"
+    },
+    "t2": {
+      "src": "assets/bluechip.jpg",
+      "alt": "Anduril官方BlueChip原型筆電閉合機身展示",
+      "caption": "官方BlueChip原型展示圖，不代表最終量產規格或本報耐用測試。",
+      "credit": "Anduril",
+      "source_url": "https://www.anduril.com/bluechip",
+      "original_url": "https://cdn.sanity.io/images/61nocsj5/production/7f9ca798d5a12bf8ded850f79b2ad0b2aaafeb1c-1026x778.png",
+      "rights": "Anduril官方宣傳素材，版權保留，非自由授權；轉JPEG僅壓縮未改內容。",
+      "fit": "contain"
+    }
+  },
+  "no_images_reason": "全球十篇各自原文／og與轉載補查結果見來源筆記；403／429、商業圖、資料照及未核對照片分開記錄，未下載或未取得權利不等於原文無圖。本版採兩張已目視驗證的官方產品圖。"
+}
