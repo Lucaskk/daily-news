@@ -1,0 +1,26 @@
+{
+  "date": "2026-10-29",
+  "images": {
+    "t1": {
+      "src": "assets/macbook-pro-proled.jpg",
+      "alt": "Apple新款PROLED XDR MacBook Pro正面官方產品圖",
+      "caption": "MacBook Pro with PROLED XDR Display，Apple官方產品圖，非本站實測。",
+      "credit": "Apple Newsroom",
+      "source_url": "https://www.apple.com/newsroom/2026/10/apple-unveils-groundbreaking-macbook-pro-with-proled-xdr-display/",
+      "original_url": "https://www.apple.com/newsroom/images/2026/10/apple-unveils-groundbreaking-macbook-pro-with-proled-xdr-display/article/Apple-MacBook-Pro-with-PROLED-XDR-Display-QuickTime-261028_big.jpg.large.jpg",
+      "rights": "Copyright Apple；官方新聞素材，僅配合產品報導並保留歸屬。",
+      "fit": "contain"
+    },
+    "t2": {
+      "src": "assets/galaxy-buds-on.jpg",
+      "alt": "Samsung Galaxy Buds On耳夾耳機及佩戴方式官方示意圖",
+      "caption": "Galaxy Buds On官方產品與佩戴示意，非本站實測。",
+      "credit": "Samsung Newsroom U.S.",
+      "source_url": "https://news.samsung.com/us/samsung-galaxy-buds-on-us-comfortable-open-ear-listening/",
+      "original_url": "https://img.us.news.samsung.com/us/wp-content/uploads/2026/10/28101617/Buds-On-1200x630.png",
+      "rights": "Copyright Samsung；官方新聞素材，僅配合產品報導並保留歸屬。",
+      "fit": "contain"
+    }
+  },
+  "no_images_reason": "全球十則已逐篇查原文及og:image，詳來源筆記圖片表；有新聞社事件照或資料照者因未取得再發布授權不複製，官方頁僅標誌或年報封面者不作事件照片；不是宣稱原文沒有圖片。"
+}

@@ -1,7 +1,7 @@
 ---
 title: "科技產品新聞最近 14 天比對表"
 type: product-news-ledger-recent
-updated: 2026-10-27
+updated: 2026-10-28
 status: generated
 tags: [daily-news, tech-products, deduplication, recent]
 ---
@@ -11,11 +11,13 @@ tags: [daily-news, tech-products, deduplication, recent]
 本檔只整理產製日前 14 天的日報，可完整讀取做去重確認；不搜尋更早日報、完整歷史表或來源筆記。實際發布窗仍以當日研究截點與來源筆記判定。
 
 - 掃描日報：14 份。
-- 最近 14 天項目：45 則。
-- 日報日期範圍：2026-10-14 至 2026-10-27。
+- 最近 14 天項目：43 則。
+- 日報日期範圍：2026-10-15 至 2026-10-28。
 
 | 公司 | 產品 | 更新內容 | 發佈時間 | 收錄日期 | 狀態 | 來源網址 | 比對鍵 |
 |---|---|---|---|---|---|---|---|
+| Apple | M6 版十四吋 MacBook Pro 與 iMac | Apple 發表 M6 版十四吋 MacBook Pro 與 iMac，十月二十八日開放預購 | 2026-10-27（官方發布日期） | 2026-10-28 | 首次收錄 | https://www.apple.com/newsroom/2026/10/apple-introduces-the-new-14-inch-macbook-pro-with-m6/<br>https://www.apple.com/newsroom/2026/10/apple-unveils-new-imac-with-m6/<br>https://www.cool3c.com/article/253471 | 33ea8677f0b9 |
+| Qualcomm | Anduril 與 Qualcomm 公布 BlueChip 筆電計畫 | Anduril 與 Qualcomm 公布 BlueChip 筆電計畫，預定二〇二七年開始接單 | 2026-10-27（官方發布日期） | 2026-10-28 | 首次收錄 | https://www.qualcomm.com/news/releases/2026/10/anduril-and-qualcomm-unveil-bluechip-to-rebuild-american-compute<br>https://www.anduril.com/bluechip<br>https://techcrunch.com/2026/10/27/anduril-qualcomm-launch-bluechip-a-new-kind-of-us-made-laptop/ | 98ebf3a27a11 |
 | OpenAI | GPT-6.1 Terra | OpenAI 推出 GPT-6.1 Terra，開放付費方案與 API 使用 | 2026-10-26（官方發布日期） | 2026-10-27 | 首次收錄 | https://openai.com/index/introducing-gpt-6-1-terra/<br>https://developers.openai.com/api/docs/models/gpt-6.1-terra<br>https://developers.openai.com/api/docs/pricing | e09a19ef340e |
 | Apple | OLED 版 iPad mini | Apple 發表 OLED 版 iPad mini，十月二十八日開放預購 | 2026-10-26（官方發布日期） | 2026-10-27 | 首次收錄 | https://www.apple.com/newsroom/2026/10/apple-gives-ipad-mini-its-biggest-update-ever/<br>https://www.engadget.com/2296637/apple-updates-the-ipad-mini-with-an-a20-processor-and-oled-display/ | 383f99a4d841 |
 | Microsoft | UTM 5.0 系列推出正式版 | UTM 5.0 系列推出正式版，Windows 圖形加速仍保留實驗性限制 | 2026-10-17 10:44:56（Asia/Taipei） | 2026-10-26 | 首次收錄 | https://github.com/utmapp/UTM/releases/tag/v5.0.8<br>https://api.github.com/repos/utmapp/UTM/releases?per_page=10<br>https://getutm.app/<br>https://tw.news.yahoo.com/utm-5-0%E6%AD%A3%E5%BC%8F%E7%89%88%E9%87%8B%E5%87%BA-windows-11-223345370.html | 365d9779fb2b |
@@ -57,7 +59,3 @@ tags: [daily-news, tech-products, deduplication, recent]
 | Grok Voice 3.0 | API | Grok Voice 3.0 開放 API，既有 latest 別名自動切換至新模型 | 2026-10-14（官方發布日期） | 2026-10-15 | 首次收錄 | https://x.ai/news/grok-voice-3 | f3a4467f0d17 |
 | Formlabs | 訂購 US$699 的 Form Studio 1 | Formlabs 開放訂購 US$699 的 Form Studio 1，十一月開始出貨 | 2026-10-14（官方發布日期） | 2026-10-15 | 首次收錄 | https://formlabs.com/eu/company/press/formlabs-introduces-form-studio-1/<br>https://formlabs.com/3d-printers/form-studio-1/<br>https://www.wired.com/story/formlabs-has-a-3d-printer-for-normies/ | f811bd3720e1 |
 | Fairbuds 2 在英歐開賣，保留可換電池並縮小充電盒 | Fairbuds 2 在英歐開賣 | Fairbuds 2 在英歐開賣，保留可換電池並縮小充電盒 | 2026-10-14 19:00:00（Asia/Taipei） | 2026-10-15 | 首次收錄 | https://us.fairphone.com/fairbuds-2<br>https://www.theverge.com/tech/1010906/fairphone-fairbuds-2-price-release-audio-repairability | 904ffdab0ef6 |
-| Apple | HomePod mini 2 | HomePod mini 2 開放預購，新增 S10 與環繞音效，Siri AI 尚待更新 | 2026-10-13（官方發布日期） | 2026-10-14 | 首次收錄 | https://www.apple.com/newsroom/2026/10/apple-announces-the-next-generation-of-homepod-mini/ | a1d7465c3cda |
-| Google | Play 開始讓成年使用者以一般帳號執行自製 App | Google Play 開始讓成年使用者以一般帳號執行自製 App，先在部分市場推出 | 2026-10-14 01:00:00（Asia/Taipei） | 2026-10-14 | 首次收錄 | https://blog.google/products-and-platforms/platforms/google-play/google-play-updates-october-2026/ | 08e1532d97f3 |
-| Meta | Facebook 推出 Your Algorithm | Facebook 推出 Your Algorithm，讓使用者以自然語言調整推薦內容 | 2026-10-14 00:00:29（Asia/Taipei） | 2026-10-14 | 首次收錄 | https://about.fb.com/news/2026/10/introducing-your-algorithm-facebook/ | 804c6fddc829 |
-| Apple | HomeView 智慧家庭螢幕 | Apple 發布 HomeView 智慧家庭螢幕，部分市場開放預購、十一月供貨 | 2026-10-13（官方發布日期） | 2026-10-14 | 首次收錄 | https://www.apple.com/newsroom/2026/10/meet-apple-homeview-a-new-way-to-enjoy-entertainment-and-manage-the-home/ | ec5a8f5d2f7c |
