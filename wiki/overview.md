@@ -2,7 +2,7 @@
 title: "Overview"
 type: overview
 created: 2026-05-24
-updated: 2026-10-28
+updated: 2026-10-29
 status: seed
 tags: [overview]
 sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
@@ -19,6 +19,12 @@ sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
 - 抽出持續出現的人物、組織、事件、政策、技術與市場概念。
 - 維護跨來源的矛盾、時間線、趨勢與待查問題。
 - 將重要查詢結果回寫成可累積的 wiki 頁面。
+
+## 2026-10-29 Daily News Synthesis
+
+- [[daily/2026/10/2026-10-29/daily-news-2026-10-29]]：Apple觸控PROLED MacBook Pro是與M6基本款不同的獨立新設計，M5 Pro／Max、10/28預購、11/6供應；Buds On以10/28美國可用性公告入選，不能把10/1首次介紹改成今日新品。續航為公司測試，美國價格不等於台灣售價。
+- 西班牙列車相撞傷亡仍屬初步數字；Fed維持3.75–4%不等於承諾十二月政策。伊朗斡旋保留「草案」與「不可接受構想」的矛盾；古巴聯大票決不會自行解除禁運；Oleshky三十小時局部停火不等於全線和平。DHS八月疑似入侵以今日首次可靠披露收錄，Okta客戶系統與平台入侵必須區分；微軟季度業績不當作新品發布。
+- 僅10/15–10/28十四份日報與43列同窗表去重，逐站發現、官方第二輪、未核候選及逐篇圖像限制見 [[daily/2026/10/2026-10-29/source-notes-2026-10-29]]。十二站scan均有取得紀錄，The Verge截斷，已以具體產品官方來源補核，不宣稱所有其他線索皆不合格。
 
 ## 2026-10-28 Daily News Synthesis
 

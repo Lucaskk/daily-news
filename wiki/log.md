@@ -1,5 +1,14 @@
 # Knowledge Base Log
 
+## [2026-10-29] ingest | Daily global and tech AI news
+
+- 凍結08:01:08 Asia/Taipei，legacy、原同對話08:00排程不改。科技336小時2則、全球24小時恰好10則；僅10/15–10/28十四份日報及43列同窗表去重。十二站scan均取得，The Verge截斷；逐站連結、已知日期、候選、待核線索及官方第二輪分批入檔，不把未完成其他線索稱為沒有。
+- 觸控PROLED MacBook Pro以Apple當日正式新聞稿、Buds On以Samsung美國市場新公告核實；不重刊M6／iPad mini／Terra／BlueChip。Iran、Cuba、Oleshky各標前次收錄及今日新進展。DHS入侵疑八月、本日首次可靠披露；微軟財報保留日期精度，GAAP與non-GAAP分開。
+- 兩張官方產品圖下載並目視確認，Samsung PNG僅壓縮為JPEG。全球十篇逐篇查正文／og，記錄AP／ToI403、官方標誌、新聞社照片及資料照權利，未授權不下載不等於無圖。首次lookup缺rg失敗，補回既有PATH後成功，未改設定或防護。
+- 固定renderer／驗證成功，乾淨clone push128後依既定connector限範圍發布`b70033fe886949063cbaafbabb1de1c99f621eb4`，tree `7730c5c6afd4a763155126d5749ca3a685ee4879`與本機限定commit一致；版本`20261029-080927-reader`。未納入無關工作、.env或私人配送設定。
+- verify-deliver核對日期頁、latest及根入口HTTP200且雜湊一致，唯一私人watchdog於08:12:38回報`Sent LINE message`；mandatory check exit0、stage complete，不重送或手改checkpoint。
+- renderer12及pipeline17共29項單元測試通過，12篇順序／逐篇來源／時間依據／實體／不確定性及JS語法通過。Playwright缺模組，未完成320／390／1440px瀏覽器版面或實體iPhone測試。配送後best-effort localhost4173 HTTP200。索引、綜合與私人memory於驗證完成後更新，另外限三份wiki檔發布。
+
 ## [2026-10-28] ingest | Daily global and tech AI news
 
 - 凍結07:58:50 Asia/Taipei（本次heartbeat稍早，排程不改），legacy不變。科技336小時2則、全球24小時正好10則；僅10/14–10/27十四份日報及45列同窗表去重。十二站scan均取得，The Verge截斷以官方公告補核；逐站範圍、文章／已知日期、候選與未核線索、官方第二輪分批入檔，不把待查稱沒有。
