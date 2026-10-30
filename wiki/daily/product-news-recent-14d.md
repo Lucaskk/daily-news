@@ -1,7 +1,7 @@
 ---
 title: "科技產品新聞最近 14 天比對表"
 type: product-news-ledger-recent
-updated: 2026-10-28
+updated: 2026-10-29
 status: generated
 tags: [daily-news, tech-products, deduplication, recent]
 ---
@@ -11,11 +11,13 @@ tags: [daily-news, tech-products, deduplication, recent]
 本檔只整理產製日前 14 天的日報，可完整讀取做去重確認；不搜尋更早日報、完整歷史表或來源筆記。實際發布窗仍以當日研究截點與來源筆記判定。
 
 - 掃描日報：14 份。
-- 最近 14 天項目：43 則。
-- 日報日期範圍：2026-10-15 至 2026-10-28。
+- 最近 14 天項目：39 則。
+- 日報日期範圍：2026-10-16 至 2026-10-29。
 
 | 公司 | 產品 | 更新內容 | 發佈時間 | 收錄日期 | 狀態 | 來源網址 | 比對鍵 |
 |---|---|---|---|---|---|---|---|
+| Samsung | 公布 Galaxy Buds On 美國上市安排 | Samsung 公布 Galaxy Buds On 美國上市安排，十一月初售價二百二十九美元 | 2026-10-28（官方發布日期） | 2026-10-29 | 首次收錄 | https://news.samsung.com/us/samsung-galaxy-buds-on-us-comfortable-open-ear-listening/<br>https://www.samsung.com/us/audio-sound/galaxy-buds-on/ | 01a964441cb2 |
+| Apple | 觸控 OLED MacBook Pro | Apple 發表觸控 OLED MacBook Pro，十月二十八日開放預購 | 2026-10-28（官方發布日期） | 2026-10-29 | 首次收錄 | https://www.apple.com/newsroom/2026/10/apple-unveils-groundbreaking-macbook-pro-with-proled-xdr-display/<br>https://developer.apple.com/news/?id=i9boeiqc<br>https://www.cool3c.com/article/253526 | 6c1903337dad |
 | Apple | M6 版十四吋 MacBook Pro 與 iMac | Apple 發表 M6 版十四吋 MacBook Pro 與 iMac，十月二十八日開放預購 | 2026-10-27（官方發布日期） | 2026-10-28 | 首次收錄 | https://www.apple.com/newsroom/2026/10/apple-introduces-the-new-14-inch-macbook-pro-with-m6/<br>https://www.apple.com/newsroom/2026/10/apple-unveils-new-imac-with-m6/<br>https://www.cool3c.com/article/253471 | 33ea8677f0b9 |
 | Qualcomm | Anduril 與 Qualcomm 公布 BlueChip 筆電計畫 | Anduril 與 Qualcomm 公布 BlueChip 筆電計畫，預定二〇二七年開始接單 | 2026-10-27（官方發布日期） | 2026-10-28 | 首次收錄 | https://www.qualcomm.com/news/releases/2026/10/anduril-and-qualcomm-unveil-bluechip-to-rebuild-american-compute<br>https://www.anduril.com/bluechip<br>https://techcrunch.com/2026/10/27/anduril-qualcomm-launch-bluechip-a-new-kind-of-us-made-laptop/ | 98ebf3a27a11 |
 | OpenAI | GPT-6.1 Terra | OpenAI 推出 GPT-6.1 Terra，開放付費方案與 API 使用 | 2026-10-26（官方發布日期） | 2026-10-27 | 首次收錄 | https://openai.com/index/introducing-gpt-6-1-terra/<br>https://developers.openai.com/api/docs/models/gpt-6.1-terra<br>https://developers.openai.com/api/docs/pricing | e09a19ef340e |
@@ -53,9 +55,3 @@ tags: [daily-news, tech-products, deduplication, recent]
 | Meta | 釋出 Muse Spark Open 權重 | Meta 釋出 Muse Spark Open 權重，官方示範以兩台高記憶體 Mac 執行 | 2026-10-15（官方發布日期） | 2026-10-16 | 首次收錄 | https://research.meta.ai/blog/muse-spark-open<br>https://dev.meta.ai/docs/muse-spark-open | e1f4a2583289 |
 | KDE | Plasma 6.8 | KDE 發布 Plasma 6.8，更新遠端桌面並移除 X11 登入工作階段 | 2026-10-14（官方發布日期） | 2026-10-16 | 首次收錄 | https://kde.org/announcements/plasma/6/6.8.0/ | d8f9587ddb58 |
 | Amazon / AWS | Bee Frontier 與 Eclipse | Amazon 推出 Bee Frontier 與 Eclipse，個人 AI 裝置搭配分級訂閱 | 2026-10-15 19:55:24（Asia/Taipei） | 2026-10-16 | 首次收錄 | https://www.aboutamazon.com/news/devices/amazon-personal-ai-bee-frontier-bee-eclipse | b4a43898c21e |
-| Microsoft | Xbox Nano 控制器開放預購 | Xbox Nano 控制器開放預購，十一月供應市場包含台灣 | 2026-10-14（官方發布日期） | 2026-10-15 | 首次收錄 | https://news.xbox.com/en-us/2026/10/14/xbox-nano-controller/<br>https://www.theverge.com/news/1011216/xbox-nano-controller-release-date-pricing | 253de11ca09a |
-| Tamron 公布 16–50mm F2.8 | A 鏡頭 | Tamron 公布 16–50mm F2.8 A 鏡頭，四種接環分批上市 | 2026-10-14（官方發布日期） | 2026-10-15 | 首次收錄 | https://www.tamron.com/global/news/detail/b091_20261014.html<br>https://www.cool3c.com/article/252999 | 40b67f71cba1 |
-| OpenAI | 公告部分 GPT-4 系列 API 模型將於明年一月停用 | OpenAI 公告部分 GPT-4 系列 API 模型將於明年一月停用 | 2026-10-14（官方公告日期） | 2026-10-15 | 首次收錄 | https://developers.openai.com/api/docs/deprecations | 074a855d304d |
-| Grok Voice 3.0 | API | Grok Voice 3.0 開放 API，既有 latest 別名自動切換至新模型 | 2026-10-14（官方發布日期） | 2026-10-15 | 首次收錄 | https://x.ai/news/grok-voice-3 | f3a4467f0d17 |
-| Formlabs | 訂購 US$699 的 Form Studio 1 | Formlabs 開放訂購 US$699 的 Form Studio 1，十一月開始出貨 | 2026-10-14（官方發布日期） | 2026-10-15 | 首次收錄 | https://formlabs.com/eu/company/press/formlabs-introduces-form-studio-1/<br>https://formlabs.com/3d-printers/form-studio-1/<br>https://www.wired.com/story/formlabs-has-a-3d-printer-for-normies/ | f811bd3720e1 |
-| Fairbuds 2 在英歐開賣，保留可換電池並縮小充電盒 | Fairbuds 2 在英歐開賣 | Fairbuds 2 在英歐開賣，保留可換電池並縮小充電盒 | 2026-10-14 19:00:00（Asia/Taipei） | 2026-10-15 | 首次收錄 | https://us.fairphone.com/fairbuds-2<br>https://www.theverge.com/tech/1010906/fairphone-fairbuds-2-price-release-audio-repairability | 904ffdab0ef6 |

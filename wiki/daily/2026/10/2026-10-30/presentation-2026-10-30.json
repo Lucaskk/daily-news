@@ -1,0 +1,26 @@
+{
+  "date": "2026-10-30",
+  "images": {
+    "t1": {
+      "src": "assets/claude-reports.png",
+      "alt": "Anthropic官方智慧報告主題插畫，並非產品操作畫面",
+      "caption": "Anthropic官方主題插畫，非產品介面或績效數據。",
+      "credit": "Claude by Anthropic",
+      "source_url": "https://claude.com/resources/articles/smart-reports-surveys-pooled-budgets",
+      "original_url": "https://claude.com/resources/articles/smart-reports-surveys-pooled-budgets/opengraph-image/og",
+      "rights": "Copyright Anthropic；官方產品發布主題素材，保留歸屬，非開放授權。",
+      "fit": "contain"
+    },
+    "t2": {
+      "src": "assets/echo-time.jpg",
+      "alt": "Echo Time官方產品圖，展示白天與夜間螢幕模式",
+      "caption": "Echo Time日夜模式官方產品示意，非本站實測；左側另售底座不包含於基本價格。",
+      "credit": "About Amazon",
+      "source_url": "https://www.aboutamazon.com/news/devices/echo-time-smart-alarm-clock",
+      "original_url": "https://assets.aboutamazon.com/9c/a5/b3ff2b024493b81e9a1ddae1f06e/echotime-dayandnight-inline-amazonnews-ck102526.png",
+      "rights": "Copyright Amazon；官方新聞產品圖，保留歸屬，非開放授權。",
+      "fit": "contain"
+    }
+  },
+  "no_images_reason": "全球十篇逐篇原文與og已查，詳來源筆記。新聞社照片未取得再發布授權不複製，官方標誌不冒充事件照；BEA圖表存在但本日不另下載，非稱無圖。"
+}
