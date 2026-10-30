@@ -2,7 +2,7 @@
 title: "Overview"
 type: overview
 created: 2026-05-24
-updated: 2026-10-29
+updated: 2026-10-30
 status: seed
 tags: [overview]
 sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
@@ -19,6 +19,12 @@ sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
 - 抽出持續出現的人物、組織、事件、政策、技術與市場概念。
 - 維護跨來源的矛盾、時間線、趨勢與待查問題。
 - 將重要查詢結果回寫成可累積的 wiki 頁面。
+
+## 2026-10-30 Daily News Synthesis
+
+- [[daily/2026/10/2026-10-30/daily-news-2026-10-30]]：Claude Enterprise管理工具一般可用不等於所有資料治理配置都支援；智慧報告按牌價、抽樣及模型判讀，不是員工績效指標。Echo Time是獨立新裝置，無相機、睡眠感測需選擇啟用，底座另售，不把睡眠功能當醫療診斷。
+- Dnipro車站新襲擊與Oleshky局部停火分開，北韓新齊射與先前邊界工事分開；西班牙74死是新官方確認，不把失聯通報相加。Lagarde是明年2/7離任、繼任者未定；美國GDP為初估季增年化；DoorDash正式協議仍待批准，Durban是國內申辦主城市而非已獲奧運主辦權。Binance損失與補償尚未核實，GM和解不等於新產品停止，Amazon現金流與營收成長須分看。
+- 僅10/16–10/29十四份日報及39列同窗表去重；逐站發現、舊頁／截斷補查、官方第二輪、其他未核線索及逐篇圖片稽核見 [[daily/2026/10/2026-10-30/source-notes-2026-10-30]]。不以未核候選補數，也不把存取、權利或未下載問題當作原文無圖。
 
 ## 2026-10-29 Daily News Synthesis
 

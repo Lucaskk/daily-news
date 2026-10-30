@@ -1,5 +1,14 @@
 # Knowledge Base Log
 
+## [2026-10-30] ingest | Daily global and tech AI news
+
+- 凍結07:57:40 Asia/Taipei，稍早heartbeat不改原08:00排程與legacy。科技336小時2則、全球24小時恰好10則；只讀10/16–10/29十四份日報及39列同窗表去重。十二站scan與逐站文章／日期範圍、截斷及舊頁補查、官方第二輪分批入檔；其他待核產品線索不宣稱全不合格。
+- Claude Enterprise以官方GA文章及Help Center核配置限制、預設關閉、10份/月、按牌價與不作人事判斷；Echo Time以官方首次時間、199.99美元開賣、opt-in感測及另售底座核實。未重列PROLED、Buds On或Xbox評測。Dnipro、北韓及西班牙續報均保留前次日期與本次實質新進展。
+- 逐篇查原文及og：Claude採官方主題插畫，明標非介面；Echo採此次新機日夜圖，下載目視後僅格式壓縮及縮圖，不裁主體。世界照片、資料照及官方標誌逐篇分開記，BEA圖表存在但未下載不等於沒有圖片。當前新聞保持截點前證據，損失、傷亡及申辦／交易條件不寫成確定完成。
+- 固定renderer／驗證成功；乾淨clone push128後依既定connector限範圍發布`c36eb71d3d30a0d7d87a2369380ff20f484bd006`，tree `ce750e5ecfc06a52620ade286f15af323a7de20a`與本機限定commit相同，版本`20261030-080504-reader`。不納入無關改動、.env或私人設定，不改Xcode、憑證、guard或排程。
+- verify-deliver核對日期頁、latest及根入口HTTP200與雜湊相符；唯一私人watchdog於08:06:48回報`Sent LINE message`，mandatory check exit0 complete。未重送、未手改成功狀態。知識庫索引／綜合／log及私人memory於完成後更新，另限三份wiki檔發布。
+- renderer12、pipeline17共29項單元測試通過；12篇、世界1–10順序、必填時間依據／事實／實體／不確定性／來源及JS語法通過。Playwright缺模組，未完成手機／桌面瀏覽器版面與實體iPhone測試；配送後best-effort localhost4173及兩張公開資產均HTTP200。
+
 ## [2026-10-29] ingest | Daily global and tech AI news
 
 - 凍結08:01:08 Asia/Taipei，legacy、原同對話08:00排程不改。科技336小時2則、全球24小時恰好10則；僅10/15–10/28十四份日報及43列同窗表去重。十二站scan均取得，The Verge截斷；逐站連結、已知日期、候選、待核線索及官方第二輪分批入檔，不把未完成其他線索稱為沒有。

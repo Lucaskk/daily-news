@@ -2,7 +2,7 @@
 title: "Knowledge Base Index"
 type: overview
 created: 2026-05-24
-updated: 2026-10-29
+updated: 2026-10-30
 status: seed
 tags: [index]
 sources: []
@@ -21,6 +21,9 @@ sources: []
 - [[2026-04-04-llm-wiki]] - Karpathy 提出的 LLM-maintained personal wiki 模式，是本知識庫的設計來源。
 
 ## Daily News
+
+- [2026-10-30 Daily News](daily/2026/10/2026-10-30/daily-news-2026-10-30.md) - 2則科技：Claude Enterprise管理工具與Echo Time；全球正好10則。
+- [2026-10-30 Slides](daily/2026/10/2026-10-30/slides-2026-10-30.html) - 原頁完整報告與逐篇提問；Pages及LINE於08:06:48驗證完成。
 
 - [2026-10-29 Daily News](daily/2026/10/2026-10-29/daily-news-2026-10-29.md) - 2則科技：觸控PROLED MacBook Pro與Buds On美國供應；全球正好10則。
 - [2026-10-29 Slides](daily/2026/10/2026-10-29/slides-2026-10-29.html) - 原頁完整報告與逐篇提問；Pages及LINE於08:12:38驗證完成。
