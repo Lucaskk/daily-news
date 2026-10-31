@@ -1,5 +1,14 @@
 # Knowledge Base Log
 
+## [2026-10-31] ingest | Daily global and tech AI news
+
+- 凍結07:56:57 Asia/Taipei，legacy與同對話08:00原排程不改；科技336小時2則、全球24小時恰好10則。只查10/17–10/30十四報與36列同窗表，未讀完整歷史。十二站scan、逐站文章／日期、截斷與舊首頁補查、官方第二輪分批落檔；未核候選不宣稱全不合格。
+- NVIDIA 10/28 Transcribe官方獨立語音模型釋出；三星10/30公告11/1 Wallet全支付，不誤稱當日全面可用。Googlebook／S95H評測先回官方首次發布，超窗排除；Mistral權重有新釋出線索但預覽頁不當最終LICENSE核對。世界Iran／Ebola／Binance續報標前次日期及實質變化，Ethiopia用首次可靠傷亡披露時間，排除窗外PCE／FCC／DOJ重刊。
+- 逐篇查原文及og，兩張官方產品圖與Eurostat原圖下載並目視核實；其他有圖未再授權、僅標誌、存取403分別記錄，不誤稱原文無圖。保留日期精度及來源矛盾。
+- 固定renderer及驗證成功；乾淨clone push128後connector限範圍發布`5136cc81fe6ba30f654832c684e405cbb5c0326b`，tree `59baff7e7d95f7b6826de04319dd3fd387f426cc`與本機限定commit相同，版本`20261031-080532-reader`。不納無關工作、私人快取或設定；不改憑證、Xcode、guard與排程。
+- verify-deliver核日期頁／latest／根入口HTTP200與雜湊一致；唯一私人watchdog於08:07:32回報`Sent LINE message`，mandatory check exit0 complete。不強制重送、不手改成功checkpoint；知識庫及私人memory於驗證完成後更新，另限三份wiki檔發布。
+- renderer12及pipeline17共29測試通過，12篇／世界1–10／逐篇非空來源及JS語法通過。Playwright缺模組，未完成320／390／桌面版面或實體iPhone測試；配送後best-effort localhost4173 HTTP200。
+
 ## [2026-10-30] ingest | Daily global and tech AI news
 
 - 凍結07:57:40 Asia/Taipei，稍早heartbeat不改原08:00排程與legacy。科技336小時2則、全球24小時恰好10則；只讀10/16–10/29十四份日報及39列同窗表去重。十二站scan與逐站文章／日期範圍、截斷及舊頁補查、官方第二輪分批入檔；其他待核產品線索不宣稱全不合格。
