@@ -1,7 +1,7 @@
 ---
 title: "科技產品新聞最近 14 天比對表"
 type: product-news-ledger-recent
-updated: 2026-10-29
+updated: 2026-10-30
 status: generated
 tags: [daily-news, tech-products, deduplication, recent]
 ---
@@ -11,11 +11,13 @@ tags: [daily-news, tech-products, deduplication, recent]
 本檔只整理產製日前 14 天的日報，可完整讀取做去重確認；不搜尋更早日報、完整歷史表或來源筆記。實際發布窗仍以當日研究截點與來源筆記判定。
 
 - 掃描日報：14 份。
-- 最近 14 天項目：39 則。
-- 日報日期範圍：2026-10-16 至 2026-10-29。
+- 最近 14 天項目：36 則。
+- 日報日期範圍：2026-10-17 至 2026-10-30。
 
 | 公司 | 產品 | 更新內容 | 發佈時間 | 收錄日期 | 狀態 | 來源網址 | 比對鍵 |
 |---|---|---|---|---|---|---|---|
+| Anthropic | Claude Enterprise 正式開放智慧報告、內建問卷及團隊共用預算 | Claude Enterprise 正式開放智慧報告、內建問卷及團隊共用預算 | 2026-10-28（官方發布日期） | 2026-10-30 | 首次收錄 | https://claude.com/resources/articles/smart-reports-surveys-pooled-budgets<br>https://support.claude.com/en/articles/16893491-get-started-with-smart-reports | 3881fc14713d |
+| Amazon / AWS | 無相機 Echo Time 智慧鬧鐘 | Amazon 推出無相機 Echo Time 智慧鬧鐘，可選擇啟用非穿戴式睡眠感測 | 2026-10-28 19:55:19（Asia/Taipei） | 2026-10-30 | 首次收錄 | https://www.aboutamazon.com/news/devices/echo-time-smart-alarm-clock<br>https://www.theverge.com/tech/1020352/amazon-echo-time-smart-alarm-clock-hands-on | 96b774d1462b |
 | Samsung | 公布 Galaxy Buds On 美國上市安排 | Samsung 公布 Galaxy Buds On 美國上市安排，十一月初售價二百二十九美元 | 2026-10-28（官方發布日期） | 2026-10-29 | 首次收錄 | https://news.samsung.com/us/samsung-galaxy-buds-on-us-comfortable-open-ear-listening/<br>https://www.samsung.com/us/audio-sound/galaxy-buds-on/ | 01a964441cb2 |
 | Apple | 觸控 OLED MacBook Pro | Apple 發表觸控 OLED MacBook Pro，十月二十八日開放預購 | 2026-10-28（官方發布日期） | 2026-10-29 | 首次收錄 | https://www.apple.com/newsroom/2026/10/apple-unveils-groundbreaking-macbook-pro-with-proled-xdr-display/<br>https://developer.apple.com/news/?id=i9boeiqc<br>https://www.cool3c.com/article/253526 | 6c1903337dad |
 | Apple | M6 版十四吋 MacBook Pro 與 iMac | Apple 發表 M6 版十四吋 MacBook Pro 與 iMac，十月二十八日開放預購 | 2026-10-27（官方發布日期） | 2026-10-28 | 首次收錄 | https://www.apple.com/newsroom/2026/10/apple-introduces-the-new-14-inch-macbook-pro-with-m6/<br>https://www.apple.com/newsroom/2026/10/apple-unveils-new-imac-with-m6/<br>https://www.cool3c.com/article/253471 | 33ea8677f0b9 |
@@ -50,8 +52,3 @@ tags: [daily-news, tech-products, deduplication, recent]
 | OpenAI | ChatGPT 開始推出 Slides | ChatGPT 開始推出 Slides，可在 Space 共同編輯與匯出簡報 | 2026-10-16（官方發布日期） | 2026-10-17 | 首次收錄 | https://help.openai.com/en/articles/6825453-chatgpt-release-notes | 7a98dbbeec45 |
 | Apple | 強化 App Store 審查規則 | Apple 強化 App Store 審查規則，明確禁止非合意親密影像與審後變裝功能 | 2026-10-16（官方發布日期） | 2026-10-17 | 首次收錄 | https://developer.apple.com/news/?id=vvzx6cul | d82941d81f6f |
 | Analogue 公布 Super Nt+ | 與 Mega Sg+ | Analogue 公布 Super Nt+ 與 Mega Sg+，十九日開放預購、十二月出貨 | 2026-10-17 01:03:29（Asia/Taipei） | 2026-10-17 | 首次收錄 | https://www.analogue.co/super-nt<br>https://www.analogue.co/mega-sg | e2eb519479d8 |
-| Sony | 三款新 Walkman 預購 | Sony 開放三款新 Walkman 預購，美國旗艦定價 US$5,899 | 2026-10-15（官方發布日期） | 2026-10-16 | 首次收錄 | https://sony.mediaroom.com/2026-10-15-Sony-Electronics-Updates-its-Premium-Walkman-R-Lineup-Including-New-Signature-Series-Walkman-R-NW-WM1ZM3%2C-NW-WM1AM3-and-NW-ZX900-Digital-Media-Players<br>https://www.cool3c.com/article/253065 | 4efa9975676e |
-| OpenAI | GPT-Live 1.1 與 Quip | OpenAI 推出 GPT-Live 1.1 與 Quip，更新語音對話模型 | 2026-10-15（官方發布日期） | 2026-10-16 | 首次收錄 | https://help.openai.com/en/articles/6825453-chatgpt-release-notes<br>https://deploymentsafety.openai.com/gpt-live-1-1/avoiding-deceptive-interactions-with-users | 201cd094e87c |
-| Meta | 釋出 Muse Spark Open 權重 | Meta 釋出 Muse Spark Open 權重，官方示範以兩台高記憶體 Mac 執行 | 2026-10-15（官方發布日期） | 2026-10-16 | 首次收錄 | https://research.meta.ai/blog/muse-spark-open<br>https://dev.meta.ai/docs/muse-spark-open | e1f4a2583289 |
-| KDE | Plasma 6.8 | KDE 發布 Plasma 6.8，更新遠端桌面並移除 X11 登入工作階段 | 2026-10-14（官方發布日期） | 2026-10-16 | 首次收錄 | https://kde.org/announcements/plasma/6/6.8.0/ | d8f9587ddb58 |
-| Amazon / AWS | Bee Frontier 與 Eclipse | Amazon 推出 Bee Frontier 與 Eclipse，個人 AI 裝置搭配分級訂閱 | 2026-10-15 19:55:24（Asia/Taipei） | 2026-10-16 | 首次收錄 | https://www.aboutamazon.com/news/devices/amazon-personal-ai-bee-frontier-bee-eclipse | b4a43898c21e |

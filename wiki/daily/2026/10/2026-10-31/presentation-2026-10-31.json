@@ -1,0 +1,36 @@
+{
+  "date": "2026-10-31",
+  "images": {
+    "t1": {
+      "src": "assets/nemotron-transcribe.png",
+      "alt": "Nemotron 3.5 Transcribe官方功能及輸出格式示意",
+      "caption": "官方功能示意，非實際使用者錄音；效能數字為NVIDIA測試。",
+      "credit": "NVIDIA",
+      "source_url": "https://research.nvidia.com/labs/nemotron/NVIDIA-Nemotron-3.5-Transcribe/",
+      "original_url": "https://research.nvidia.com/labs/nemotron/images/nvidia-nemotron-3.5-transcribe/overview.png",
+      "rights": "Copyright NVIDIA；署名新聞說明使用，未宣稱開放授權。",
+      "fit": "contain"
+    },
+    "t2": {
+      "src": "assets/samsung-wallet.jpg",
+      "alt": "Samsung Wallet手機畫面顯示全支付卡片",
+      "caption": "三星新聞稿提供的Wallet全支付服務示意。",
+      "credit": "Samsung Newsroom 台灣",
+      "source_url": "https://news.samsung.com/tw/%E4%B8%89%E6%98%9F%E6%94%9C%E6%89%8B%E5%85%A8%E6%94%AF%E4%BB%98",
+      "original_url": "https://img.global.news.samsung.com/tw/wp-content/uploads/2026/10/cover.jpg",
+      "rights": "Copyright Samsung；新聞稿署名說明使用，未宣稱開放授權。",
+      "fit": "contain"
+    },
+    "4": {
+      "src": "assets/eurostat-gdp.png",
+      "alt": "Eurostat歐元區與歐盟GDP季增率截至2026年第三季",
+      "caption": "官方快估圖：第三季歐元區0.4%、歐盟0.5%。",
+      "credit": "Eurostat／European Union",
+      "source_url": "https://ec.europa.eu/eurostat/en/web/products-euro-indicators/w/2-30102026-ap",
+      "original_url": "https://ec.europa.eu/eurostat/documents/2995521/24499490/2-30102026-ap-en-image-0001.png?t=1793293084456",
+      "rights": "© European Union／Eurostat；署名引用官方統計圖，非og的AdobeStock照片。",
+      "fit": "contain"
+    }
+  },
+  "no_images_reason": "世界1原文有Reuters照片未再授權；2有Reuters圖片但非確認現場且未再授權；3原文僅電台logo；5 AP通用預覽、Meduza有辦公室圖但未再授權；6 AP與Reuters原圖存取403；7會談圖存在但原圖403；8官方英國頁僅logo，加拿大圖未核原始權利；9有Anadolu/Getty品牌資料圖未再授權；10官方僅通用預覽、Reuters工廠資料照未再授權。逐項原圖與查證結果見當日來源筆記。"
+}
