@@ -2,7 +2,7 @@
 title: "Overview"
 type: overview
 created: 2026-05-24
-updated: 2026-10-31
+updated: 2026-11-01
 status: seed
 tags: [overview]
 sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
@@ -19,6 +19,12 @@ sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
 - 抽出持續出現的人物、組織、事件、政策、技術與市場概念。
 - 維護跨來源的矛盾、時間線、趨勢與待查問題。
 - 將重要查詢結果回寫成可累積的 wiki 頁面。
+
+## 2026-11-01 Daily News Synthesis
+
+- [[daily/2026/11/2026-11-01/daily-news-2026-11-01]]：Mistral Large 4的10/29改進權重與10/6預覽不同；MaaS商用有授權限制，專用資安版本不等於一般公開權重。台灣App Store標準佣金30%降26%不代表所有方案同率或消費售價自動下降。
+- 杜哈實際會談、奧列什基居民抵達、G20會後無共同公報分別是既有主線的新節點。中國PMI49.3不是GDP變動；UNTMIS結束不等於聯合國撤離索馬利亞；莫斯科是威脅警報而非已發生恐攻。Fairfield事件換算台北10/31上午，青年奧運與成人奧運不同，同志遊行17萬為主辦估計。
+- 只查10/18–10/31十四報及32列同窗表；逐站補查、官方核對、待查線索與逐篇圖片／權利見 [[daily/2026/11/2026-11-01/source-notes-2026-11-01]]。原文有圖未刊、通用標誌與403分開記錄，不以更新時間刷新事件。
 
 ## 2026-10-31 Daily News Synthesis
 

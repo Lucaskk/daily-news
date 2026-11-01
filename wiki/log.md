@@ -1,5 +1,14 @@
 # Knowledge Base Log
 
+## [2026-11-01] ingest | Daily global and tech AI news
+
+- 凍結07:58:14 Asia/Taipei；legacy及原同對話08:00排程不變。科技336小時2則、全球24小時恰好10則，僅查10/18–10/31十四報及32列同窗表，未讀完整歷史。十二站scan、逐站補查及官方第二輪分批落檔；未核候選保留待查，不宣稱全數不合格。
+- Mistral10/29權重釋出核對模型卡與實際LICENSE；Apple10/29正式台灣費率公告、10/31生效，不誤稱全面免佣金。Iran／Oleshky／G20續報標前次日期及實質新事實；排除黑海舊沉船與無法確認窗內事件的災害評論。
+- 逐篇原文及og檢視，模型卡圖及UN儀式照下載目視核實，UN圖明標10/30資料照；其他未另取得授權、通用標誌、來源403個別記錄。採用圖不宣稱公共領域。
+- finish完成渲染及結構驗證；乾淨clone git push128，改connector限範圍發布`6da9e13cff6c0558ddda034c192ae2866af16c86`，tree `7d42d132d89efda8b25c43eaf5f0dea815c983d9`與本機限定commit一致。版本`20261101-080801-reader`；未動無關工作、憑證、Xcode、防護或排程。
+- verify-deliver驗日期頁／latest／根入口HTTP200及雜湊；唯一私人watchdog08:09:48回報`Sent LINE message`，mandatory check exit0 complete。知識庫與私人memory在核實完成後更新，三份wiki檔另行窄範圍發布，不重送LINE。
+- renderer12及pipeline17共29測試通過；12篇、世界1–10、逐篇來源及JS語法通過（首個臨時檢查因script屬性順序假設失敗，修正檢查後通過，未改reader）。Playwright缺模組，未做320／390／桌面瀏覽器版面或實體iPhone測試。配送後localhost4173與兩張公開採用圖HTTP200。
+
 ## [2026-10-31] ingest | Daily global and tech AI news
 
 - 凍結07:56:57 Asia/Taipei，legacy與同對話08:00原排程不改；科技336小時2則、全球24小時恰好10則。只查10/17–10/30十四報與36列同窗表，未讀完整歷史。十二站scan、逐站文章／日期、截斷與舊首頁補查、官方第二輪分批落檔；未核候選不宣稱全不合格。

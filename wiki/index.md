@@ -2,7 +2,7 @@
 title: "Knowledge Base Index"
 type: overview
 created: 2026-05-24
-updated: 2026-10-31
+updated: 2026-11-01
 status: seed
 tags: [index]
 sources: []
@@ -21,6 +21,9 @@ sources: []
 - [[2026-04-04-llm-wiki]] - Karpathy 提出的 LLM-maintained personal wiki 模式，是本知識庫的設計來源。
 
 ## Daily News
+
+- [2026-11-01 Daily News](daily/2026/11/2026-11-01/daily-news-2026-11-01.md) - 科技2則：Mistral Large 4權重與台灣App Store佣金；全球恰好10則。
+- [2026-11-01 Slides](daily/2026/11/2026-11-01/slides-2026-11-01.html) - Pages驗證及唯一LINE watchdog於08:09:48完成，check通過。
 
 - [2026-10-31 Daily News](daily/2026/10/2026-10-31/daily-news-2026-10-31.md) - 2則科技：Nemotron 3.5 Transcribe與Wallet全支付；全球正好10則。
 - [2026-10-31 Slides](daily/2026/10/2026-10-31/slides-2026-10-31.html) - 原頁完整報告與逐篇提問；Pages及LINE於08:07:32驗證完成。
