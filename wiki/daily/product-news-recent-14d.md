@@ -1,7 +1,7 @@
 ---
 title: "科技產品新聞最近 14 天比對表"
 type: product-news-ledger-recent
-updated: 2026-10-30
+updated: 2026-10-31
 status: generated
 tags: [daily-news, tech-products, deduplication, recent]
 ---
@@ -11,11 +11,13 @@ tags: [daily-news, tech-products, deduplication, recent]
 本檔只整理產製日前 14 天的日報，可完整讀取做去重確認；不搜尋更早日報、完整歷史表或來源筆記。實際發布窗仍以當日研究截點與來源筆記判定。
 
 - 掃描日報：14 份。
-- 最近 14 天項目：36 則。
-- 日報日期範圍：2026-10-17 至 2026-10-30。
+- 最近 14 天項目：32 則。
+- 日報日期範圍：2026-10-18 至 2026-10-31。
 
 | 公司 | 產品 | 更新內容 | 發佈時間 | 收錄日期 | 狀態 | 來源網址 | 比對鍵 |
 |---|---|---|---|---|---|---|---|
+| Samsung | Wallet 公布十一月一日導入全支付掃碼付款 | Samsung Wallet 公布十一月一日導入全支付掃碼付款，須更新應用程式並使用指定機型 | 2026-10-30（官方發布日期） | 2026-10-31 | 首次收錄 | https://news.samsung.com/tw/%E4%B8%89%E6%98%9F%E6%94%9C%E6%89%8B%E5%85%A8%E6%94%AF%E4%BB%98<br>https://www.cool3c.com/article/253575 | a7ba2fe72a3c |
+| NVIDIA | 釋出 Nemotron 3.5 Transcribe | NVIDIA 釋出 Nemotron 3.5 Transcribe，以自然語言指令調整四十種語言的轉錄方式 | 2026-10-28（官方發布日期） | 2026-10-31 | 首次收錄 | https://research.nvidia.com/labs/nemotron/NVIDIA-Nemotron-3.5-Transcribe/<br>https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Transcribe-30B-A4B-NVFP4 | 768440beb664 |
 | Anthropic | Claude Enterprise 正式開放智慧報告、內建問卷及團隊共用預算 | Claude Enterprise 正式開放智慧報告、內建問卷及團隊共用預算 | 2026-10-28（官方發布日期） | 2026-10-30 | 首次收錄 | https://claude.com/resources/articles/smart-reports-surveys-pooled-budgets<br>https://support.claude.com/en/articles/16893491-get-started-with-smart-reports | 3881fc14713d |
 | Amazon / AWS | 無相機 Echo Time 智慧鬧鐘 | Amazon 推出無相機 Echo Time 智慧鬧鐘，可選擇啟用非穿戴式睡眠感測 | 2026-10-28 19:55:19（Asia/Taipei） | 2026-10-30 | 首次收錄 | https://www.aboutamazon.com/news/devices/echo-time-smart-alarm-clock<br>https://www.theverge.com/tech/1020352/amazon-echo-time-smart-alarm-clock-hands-on | 96b774d1462b |
 | Samsung | 公布 Galaxy Buds On 美國上市安排 | Samsung 公布 Galaxy Buds On 美國上市安排，十一月初售價二百二十九美元 | 2026-10-28（官方發布日期） | 2026-10-29 | 首次收錄 | https://news.samsung.com/us/samsung-galaxy-buds-on-us-comfortable-open-ear-listening/<br>https://www.samsung.com/us/audio-sound/galaxy-buds-on/ | 01a964441cb2 |
@@ -46,9 +48,3 @@ tags: [daily-news, tech-products, deduplication, recent]
 | Anthropic | Claude 推出 Dashboards 與 Motion 測試 | Claude 推出 Dashboards 與 Motion 測試，整合資料查詢與可編輯動畫 | 2026-10-08（官方發布日期） | 2026-10-19 | 首次收錄 | https://claude.com/resources/articles/dashboards-and-motion | 73d13a6d447f |
 | Elorian | Glimpse 研究預覽 | Elorian 開放 Glimpse 研究預覽，以視覺推理處理物件追蹤與空間問題 | 2026-10-16（官方發布日期） | 2026-10-18 | 首次收錄 | https://elorian.ai/blog/introducing-glimpse | fa6f22d30c3b |
 | Google | Anbernic RG DDS | Anbernic RG DDS 開放預購，雙螢幕 Android 掌機預定十二月起出貨 | 2026-10-16（預購開始的可靠報導日期） | 2026-10-18 | 首次收錄 | https://anbernic.com/products/rg-dds<br>https://www.notebookcheck.net/Anbernic-RG-DDS-pre-order-is-live-but-there-s-a-long-wait-before-it-ships.1425957.0.html | 041c4e7e1c52 |
-| Steam | Achievement Sets 測試 | Steam 開放 Achievement Sets 測試，分開追蹤本體與 DLC 成就 | 2026-10-16 06:06:30（Asia/Taipei） | 2026-10-17 | 首次收錄 | https://store.steampowered.com/news/app/593110/view/710037059469839141<br>https://steamcommunity.com/groups/SteamClientBeta/discussions/3/573803804385027371/ | 8f5531b14831 |
-| Razer | Barracuda V2 Pro | Razer 發布 Barracuda V2 Pro，以雙無線與降噪整合遊戲及日常通話 | 2026-10-15 22:25:31（Asia/Taipei） | 2026-10-17 | 首次收錄 | https://www.razer.com/newsroom/product-news/barracuda-v2-pro | 936d443fa6ab |
-| Gmail Live 擴展至付費 Workspace，以語音查詢信箱並顯示郵件來源 | Gmail Live 擴展至付費 Workspace | Gmail Live 擴展至付費 Workspace，以語音查詢信箱並顯示郵件來源 | 2026-10-15（官方發布日期） | 2026-10-17 | 首次收錄 | https://workspaceupdates.googleblog.com/2026/10/gmail-live-is-rolling-out-to-paid-Workspace-users.html | 8cf7896be443 |
-| OpenAI | ChatGPT 開始推出 Slides | ChatGPT 開始推出 Slides，可在 Space 共同編輯與匯出簡報 | 2026-10-16（官方發布日期） | 2026-10-17 | 首次收錄 | https://help.openai.com/en/articles/6825453-chatgpt-release-notes | 7a98dbbeec45 |
-| Apple | 強化 App Store 審查規則 | Apple 強化 App Store 審查規則，明確禁止非合意親密影像與審後變裝功能 | 2026-10-16（官方發布日期） | 2026-10-17 | 首次收錄 | https://developer.apple.com/news/?id=vvzx6cul | d82941d81f6f |
-| Analogue 公布 Super Nt+ | 與 Mega Sg+ | Analogue 公布 Super Nt+ 與 Mega Sg+，十九日開放預購、十二月出貨 | 2026-10-17 01:03:29（Asia/Taipei） | 2026-10-17 | 首次收錄 | https://www.analogue.co/super-nt<br>https://www.analogue.co/mega-sg | e2eb519479d8 |

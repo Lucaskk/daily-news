@@ -1,0 +1,26 @@
+{
+  "date": "2026-11-01",
+  "images": {
+    "t1": {
+      "src": "assets/mistral-coding.png",
+      "alt": "Mistral Large 4 官方模型卡引用的程式能力比較圖",
+      "caption": "官方模型卡引用的比較圖，非本報實測；測試結果不能泛化到所有任務。",
+      "credit": "Mistral AI／官方模型卡",
+      "source_url": "https://huggingface.co/mistralai/Mistral-Large-4-1T-A52B",
+      "original_url": "https://huggingface.co/mistralai/Mistral-Large-4-1T-A52B/resolve/main/images/coding_index.png",
+      "rights": "官方模型卡公開圖，署名作新聞說明；未宣稱圖片為公共領域。",
+      "fit": "contain"
+    },
+    "6": {
+      "src": "assets/untmis-closure.jpg",
+      "alt": "聯合國索馬利亞特派團結束任務儀式上的代表",
+      "caption": "10月30日結束任務儀式資料照，非10月31日現場。",
+      "credit": "UN Somalia／Adihamiid Mohamed",
+      "source_url": "https://news.un.org/en/story/2026/10/1168714",
+      "original_url": "https://global.unitednations.entermediadb.net/assets/mediadb/services/module/asset/downloads/preset/Collections/Embargoed/2026/10/30-10-2026-UN-Photo-Raisedon-Zenenga.jpg/image1170x530cropped.jpg",
+      "rights": "聯合國新聞配圖，保留攝影署名作新聞說明，非公共領域宣稱。",
+      "fit": "contain"
+    }
+  },
+  "no_images_reason": "T2僅通用Apple Developer社群圖；全球1、2、3、4、5、8、9、10有原文或og配圖，但本次未取得另外轉載授權而不刊；7為電台標誌非事件圖。逐篇原圖、資料照日期及存取失敗備援均記於來源筆記，未刊不代表沒有圖片。"
+}
