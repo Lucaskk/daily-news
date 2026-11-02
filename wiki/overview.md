@@ -2,7 +2,7 @@
 title: "Overview"
 type: overview
 created: 2026-05-24
-updated: 2026-11-01
+updated: 2026-11-02
 status: seed
 tags: [overview]
 sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
@@ -19,6 +19,12 @@ sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
 - 抽出持續出現的人物、組織、事件、政策、技術與市場概念。
 - 維護跨來源的矛盾、時間線、趨勢與待查問題。
 - 將重要查詢結果回寫成可累積的 wiki 頁面。
+
+## 2026-11-02 Daily News Synthesis
+
+- [[daily/2026/11/2026-11-02/daily-news-2026-11-02]]：Apple10/27公布CreatorStudio十一月更新，不代表11/1全面可用；助理beta與MCP有OS、硬體、語言限制，部分Freeform功能十二月。Google10/28 Carbon先向防禦者及Fairwind可信夥伴，非一般全面開放；官方評測不是本報實測或無漏洞保證。
+- OPEC+十二月配額正式維持不等於實際供應恢復。Binance補足資產不等於追回贓款，流出數據有口徑差異；加薩及英伊列名保留各方說法，韓國出口年增含工作日基期因素。孟加拉成立委員會不等於調薪通過，法蘭克福警方區分和平示威與搶掠，查德以週日部會披露為新節點；NoviSad問責不因選舉落幕，紐約馬拉松用賽後結果而非預測。
+- 僅查10/19–11/1十四報及32列同窗表，逐站補查、官方第二輪、未核線索及逐篇圖片／權利見 [[daily/2026/11/2026-11-02/source-notes-2026-11-02]]。不讀完整歷史，不以無法讀取等同無新聞。
 
 ## 2026-11-01 Daily News Synthesis
 
