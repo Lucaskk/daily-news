@@ -1,0 +1,26 @@
+{
+  "date": "2026-11-02",
+  "images": {
+    "t1": {
+      "src": "assets/creator-studio.jpg",
+      "alt": "Apple官方展示外部助理協助整理Keynote簡報",
+      "caption": "官方展示外部助理整理Keynote簡報的工作流程，非本報實測；更新預定十一月。",
+      "credit": "Apple Newsroom",
+      "source_url": "https://www.apple.com/newsroom/2026/10/apple-creator-studio-adds-powerful-new-ai-features-and-even-more-creative-tools/",
+      "original_url": "https://www.apple.com/newsroom/images/2026/10/apple-creator-studio-adds-powerful-new-ai-features-and-even-more-creative-tools/article/Apple-Creator-Studio-intelligent-assistant-in-Keynote-on-MacBook-Pro-261027_big.jpg.large.jpg",
+      "rights": "Apple官方新聞素材，保留署名作新聞說明，未宣稱公共領域。",
+      "fit": "contain"
+    },
+    "t2": {
+      "src": "assets/carbon-evals.webp",
+      "alt": "Google公布的Gemini4 Carbon模型評測比較表",
+      "caption": "Google官方評測表，非本報實測；不同任務及防護設定不可直接泛化。",
+      "credit": "Google／Google DeepMind",
+      "source_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/",
+      "original_url": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini_4_carbon__evals-table.width-1200.format-webp.webp",
+      "rights": "官方發布圖，保留署名作新聞說明，不宣稱公共領域或獨立實測。",
+      "fit": "contain"
+    }
+  },
+  "no_images_reason": "全球1、2、5、6、7、9、10原文有照片或圖表，本次未另取得照片轉載授權而不刊；3為通用社群替代圖，4為非當日資料圖，8為地圖。逐篇原圖及403備援檢查見來源筆記，不用統一無圖推論代替稽核。"
+}

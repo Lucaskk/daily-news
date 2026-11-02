@@ -1,7 +1,7 @@
 ---
 title: "科技產品新聞最近 14 天比對表"
 type: product-news-ledger-recent
-updated: 2026-10-31
+updated: 2026-11-01
 status: generated
 tags: [daily-news, tech-products, deduplication, recent]
 ---
@@ -12,10 +12,12 @@ tags: [daily-news, tech-products, deduplication, recent]
 
 - 掃描日報：14 份。
 - 最近 14 天項目：32 則。
-- 日報日期範圍：2026-10-18 至 2026-10-31。
+- 日報日期範圍：2026-10-19 至 2026-11-01。
 
 | 公司 | 產品 | 更新內容 | 發佈時間 | 收錄日期 | 狀態 | 來源網址 | 比對鍵 |
 |---|---|---|---|---|---|---|---|
+| Mistral AI | Mistral 釋出 Large 4 改進版開放權重 | Mistral 釋出 Large 4 改進版開放權重，商業代管仍須核對授權條件 | 2026-10-29（官方發布日期） | 2026-11-01 | 首次收錄 | https://mistral.ai/news/mistral-large-4-oss/<br>https://huggingface.co/mistralai/Mistral-Large-4-1T-A52B<br>https://huggingface.co/mistralai/Mistral-Large-4-1T-A52B/raw/main/LICENSE | 208a02b24d7e |
+| Apple | 台灣 App Store 標準佣金由30%降至26% | Apple 台灣 App Store 標準佣金由30%降至26%，10月31日起適用 | 2026-10-29（官方發布日期） | 2026-11-01 | 首次收錄 | https://developer.apple.com/news/?id=w9mxlhek<br>https://developer.apple.com/tw/support/adjustments-to-the-taiwan-storefront/<br>https://www.ey.gov.tw/Page/88F151FFCE5C741E/21914069-70cc-4efe-919a-e7f0057ecfd0 | 92602fe7d3e8 |
 | Samsung | Wallet 公布十一月一日導入全支付掃碼付款 | Samsung Wallet 公布十一月一日導入全支付掃碼付款，須更新應用程式並使用指定機型 | 2026-10-30（官方發布日期） | 2026-10-31 | 首次收錄 | https://news.samsung.com/tw/%E4%B8%89%E6%98%9F%E6%94%9C%E6%89%8B%E5%85%A8%E6%94%AF%E4%BB%98<br>https://www.cool3c.com/article/253575 | a7ba2fe72a3c |
 | NVIDIA | 釋出 Nemotron 3.5 Transcribe | NVIDIA 釋出 Nemotron 3.5 Transcribe，以自然語言指令調整四十種語言的轉錄方式 | 2026-10-28（官方發布日期） | 2026-10-31 | 首次收錄 | https://research.nvidia.com/labs/nemotron/NVIDIA-Nemotron-3.5-Transcribe/<br>https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Transcribe-30B-A4B-NVFP4 | 768440beb664 |
 | Anthropic | Claude Enterprise 正式開放智慧報告、內建問卷及團隊共用預算 | Claude Enterprise 正式開放智慧報告、內建問卷及團隊共用預算 | 2026-10-28（官方發布日期） | 2026-10-30 | 首次收錄 | https://claude.com/resources/articles/smart-reports-surveys-pooled-budgets<br>https://support.claude.com/en/articles/16893491-get-started-with-smart-reports | 3881fc14713d |
@@ -46,5 +48,3 @@ tags: [daily-news, tech-products, deduplication, recent]
 | Amazon / AWS | 公布 TorchNeuron 公開測試時程 | Amazon 公布 TorchNeuron 公開測試時程，讓 PyTorch 程式轉向 Trainium | 2026-10-19 21:00:10（Asia/Taipei） | 2026-10-20 | 首次收錄 | https://www.aboutamazon.com/news/innovation-at-amazon/torchneuron-pytorch-aws-trainium-chips-ai<br>https://huggingface.co/blog/hf-torchneuron | 3f6717d65e97 |
 | Plex 串接 Fandango 電影票，讓美國使用者從片名頁前往購票 | Plex 串接 Fandango 電影票 | Plex 串接 Fandango 電影票，讓美國使用者從片名頁前往購票 | 2026-10-15 23:00:00（Asia/Taipei） | 2026-10-19 | 首次收錄 | https://www.prnewswire.com/news-releases/plex-and-fandango-turn-movie-discovery-into-theatrical-ticket-sales-302909719.html | 328e3dbace56 |
 | Anthropic | Claude 推出 Dashboards 與 Motion 測試 | Claude 推出 Dashboards 與 Motion 測試，整合資料查詢與可編輯動畫 | 2026-10-08（官方發布日期） | 2026-10-19 | 首次收錄 | https://claude.com/resources/articles/dashboards-and-motion | 73d13a6d447f |
-| Elorian | Glimpse 研究預覽 | Elorian 開放 Glimpse 研究預覽，以視覺推理處理物件追蹤與空間問題 | 2026-10-16（官方發布日期） | 2026-10-18 | 首次收錄 | https://elorian.ai/blog/introducing-glimpse | fa6f22d30c3b |
-| Google | Anbernic RG DDS | Anbernic RG DDS 開放預購，雙螢幕 Android 掌機預定十二月起出貨 | 2026-10-16（預購開始的可靠報導日期） | 2026-10-18 | 首次收錄 | https://anbernic.com/products/rg-dds<br>https://www.notebookcheck.net/Anbernic-RG-DDS-pre-order-is-live-but-there-s-a-long-wait-before-it-ships.1425957.0.html | 041c4e7e1c52 |
