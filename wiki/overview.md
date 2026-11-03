@@ -2,7 +2,7 @@
 title: "Overview"
 type: overview
 created: 2026-05-24
-updated: 2026-11-02
+updated: 2026-11-03
 status: seed
 tags: [overview]
 sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
@@ -19,6 +19,12 @@ sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
 - 抽出持續出現的人物、組織、事件、政策、技術與市場概念。
 - 維護跨來源的矛盾、時間線、趨勢與待查問題。
 - 將重要查詢結果回寫成可累積的 wiki 頁面。
+
+## 2026-11-03 Daily News Synthesis
+
+- [[daily/2026/11/2026-11-03/daily-news-2026-11-03]]：DeepSeek公開的是MIT研究參考原型，不是正式產品；observe預設不接受推斷工作，auto仍需規則授權。Casio CT-FS1有新的Feel Sync而非單純換色，歐洲399歐元及11/11 App時程不能延伸為台灣上市；本機音檔不等於串流支援。
+- 比利時提出辭職不等於國王已接受。烏克蘭援助中心傷亡24到26是窗內修正；超市冷櫃駭客身分未知。警報App最初週日晚攻擊與週一恢復分開，英國定居公告不等於所有簽證即刻適用；烏干達首批返國非全部AUSSOM已撤。緬甸採週一首次可靠傷亡披露；加那利救援兩具遺體與五名海上死亡分開。RatingDog52.0與11/1官方PMI49.3為不同樣本，提前投票進度不預測紐西蘭大選結果。
+- 僅查10/20–11/2十四日報及32列同窗產品表；十二站掃描、逐站檢視、官方第二輪、來源受限與未核線索詳見 [[daily/2026/11/2026-11-03/source-notes-2026-11-03]]。數位時代補查仍受限，不宣稱無新品；各則圖片存在、權利及403分開記錄。
 
 ## 2026-11-02 Daily News Synthesis
 

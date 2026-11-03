@@ -2,7 +2,7 @@
 title: "Knowledge Base Index"
 type: overview
 created: 2026-05-24
-updated: 2026-11-02
+updated: 2026-11-03
 status: seed
 tags: [index]
 sources: []
@@ -21,6 +21,9 @@ sources: []
 - [[2026-04-04-llm-wiki]] - Karpathy 提出的 LLM-maintained personal wiki 模式，是本知識庫的設計來源。
 
 ## Daily News
+
+- [2026-11-03 Daily News](daily/2026/11/2026-11-03/daily-news-2026-11-03.md) - 科技2則：DeepSeek研究代理原型與Casio CT-FS1；全球恰好10則。
+- [2026-11-03 Slides](daily/2026/11/2026-11-03/slides-2026-11-03.html) - Pages驗證及唯一LINE watchdog於08:11:25完成，check通過。
 
 - [2026-11-02 Daily News](daily/2026/11/2026-11-02/daily-news-2026-11-02.md) - 科技2則：Creator Studio更新規畫與Gemini 4 Carbon受控存取；全球恰好10則。
 - [2026-11-02 Slides](daily/2026/11/2026-11-02/slides-2026-11-02.html) - Pages驗證及唯一LINE watchdog於08:12:05完成，check通過。
