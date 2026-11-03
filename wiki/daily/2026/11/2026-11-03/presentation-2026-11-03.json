@@ -1,0 +1,16 @@
+{
+  "date": "2026-11-03",
+  "images": {
+    "t2": {
+      "src": "assets/casio-ct-fs1bk.png",
+      "alt": "Casio CT-FS1BK全黑電子琴官方正面產品圖",
+      "caption": "CT-FS1BK官方產品圖，非演奏效果實測。",
+      "credit": "Casio",
+      "source_url": "https://www.casio.com/it/corporate/casio-corporate/news/2026/CASIOTONE-CT-FS1/",
+      "original_url": "https://www.casio.com/content/dam/casio/product-info/locales/it/it/emi/product/C/CT/ctf/CT-FS1BK/assets/CT-FS1BK_F.png.transform/main-visual-sp/image.png",
+      "rights": "Copyright Casio。官方公開產品宣傳圖，僅作有來源標示的新聞辨識；非CC或公有領域，未主張一般再利用授權。",
+      "fit": "contain"
+    }
+  },
+  "no_images_reason": "T1僅repo社群預覽，不冒充介面。世界1、2、4、5、9有配圖但未取得一般再用授權，7僅通用預覽，3、6、8、10直接來源受限；各則實際檢查及替代來源詳見同日來源筆記，不等同原文無圖。"
+}

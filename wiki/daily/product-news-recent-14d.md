@@ -1,7 +1,7 @@
 ---
 title: "科技產品新聞最近 14 天比對表"
 type: product-news-ledger-recent
-updated: 2026-11-01
+updated: 2026-11-02
 status: generated
 tags: [daily-news, tech-products, deduplication, recent]
 ---
@@ -12,10 +12,12 @@ tags: [daily-news, tech-products, deduplication, recent]
 
 - 掃描日報：14 份。
 - 最近 14 天項目：32 則。
-- 日報日期範圍：2026-10-19 至 2026-11-01。
+- 日報日期範圍：2026-10-20 至 2026-11-02。
 
 | 公司 | 產品 | 更新內容 | 發佈時間 | 收錄日期 | 狀態 | 來源網址 | 比對鍵 |
 |---|---|---|---|---|---|---|---|
+| Google | 公布 Gemini 4 Carbon | Google 公布 Gemini 4 Carbon，先向部分資安防禦者提供受控存取 | 2026-10-29 01:00:00（Asia/Taipei） | 2026-11-02 | 首次收錄 | https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/<br>https://www.inside.com.tw/article/42758-google-gemini-4-carbon-cybersecurity-long-horizon-fairwind | 62a0f6ba20c9 |
+| Apple | 公布 Creator Studio 十一月更新 | Apple 公布 Creator Studio 十一月更新，加入文件助理測試與 MCP 支援 | 2026-10-27（官方發布日期） | 2026-11-02 | 首次收錄 | https://www.apple.com/newsroom/2026/10/apple-creator-studio-adds-powerful-new-ai-features-and-even-more-creative-tools/<br>https://www.apple.com/newsroom/topics/mac/ | 4f16d981d710 |
 | Mistral AI | Mistral 釋出 Large 4 改進版開放權重 | Mistral 釋出 Large 4 改進版開放權重，商業代管仍須核對授權條件 | 2026-10-29（官方發布日期） | 2026-11-01 | 首次收錄 | https://mistral.ai/news/mistral-large-4-oss/<br>https://huggingface.co/mistralai/Mistral-Large-4-1T-A52B<br>https://huggingface.co/mistralai/Mistral-Large-4-1T-A52B/raw/main/LICENSE | 208a02b24d7e |
 | Apple | 台灣 App Store 標準佣金由30%降至26% | Apple 台灣 App Store 標準佣金由30%降至26%，10月31日起適用 | 2026-10-29（官方發布日期） | 2026-11-01 | 首次收錄 | https://developer.apple.com/news/?id=w9mxlhek<br>https://developer.apple.com/tw/support/adjustments-to-the-taiwan-storefront/<br>https://www.ey.gov.tw/Page/88F151FFCE5C741E/21914069-70cc-4efe-919a-e7f0057ecfd0 | 92602fe7d3e8 |
 | Samsung | Wallet 公布十一月一日導入全支付掃碼付款 | Samsung Wallet 公布十一月一日導入全支付掃碼付款，須更新應用程式並使用指定機型 | 2026-10-30（官方發布日期） | 2026-10-31 | 首次收錄 | https://news.samsung.com/tw/%E4%B8%89%E6%98%9F%E6%94%9C%E6%89%8B%E5%85%A8%E6%94%AF%E4%BB%98<br>https://www.cool3c.com/article/253575 | a7ba2fe72a3c |
@@ -46,5 +48,3 @@ tags: [daily-news, tech-products, deduplication, recent]
 | NVIDIA | 釋出 Nemotron 3.5 Super VL | NVIDIA 釋出 Nemotron 3.5 Super VL，整合多模態理解與企業代理工作 | 2026-10-16 02:01:00（Asia/Taipei） | 2026-10-20 | 首次收錄 | https://developer.nvidia.com/blog/nvidia-nemotron-3-5-super-vl-powers-specialized-agents-with-multimodal-reasoning/ | 858dd917a7c4 |
 | DeepSeek | 搜尋與網頁擷取 API | DeepSeek 開放搜尋與網頁擷取 API，讓代理取得即時網頁內容 | 2026-10-17（官方發布日期） | 2026-10-20 | 首次收錄 | https://api-docs.deepseek.com/updates<br>https://api-docs.deepseek.com/guides/search | fb054ac40e95 |
 | Amazon / AWS | 公布 TorchNeuron 公開測試時程 | Amazon 公布 TorchNeuron 公開測試時程，讓 PyTorch 程式轉向 Trainium | 2026-10-19 21:00:10（Asia/Taipei） | 2026-10-20 | 首次收錄 | https://www.aboutamazon.com/news/innovation-at-amazon/torchneuron-pytorch-aws-trainium-chips-ai<br>https://huggingface.co/blog/hf-torchneuron | 3f6717d65e97 |
-| Plex 串接 Fandango 電影票，讓美國使用者從片名頁前往購票 | Plex 串接 Fandango 電影票 | Plex 串接 Fandango 電影票，讓美國使用者從片名頁前往購票 | 2026-10-15 23:00:00（Asia/Taipei） | 2026-10-19 | 首次收錄 | https://www.prnewswire.com/news-releases/plex-and-fandango-turn-movie-discovery-into-theatrical-ticket-sales-302909719.html | 328e3dbace56 |
-| Anthropic | Claude 推出 Dashboards 與 Motion 測試 | Claude 推出 Dashboards 與 Motion 測試，整合資料查詢與可編輯動畫 | 2026-10-08（官方發布日期） | 2026-10-19 | 首次收錄 | https://claude.com/resources/articles/dashboards-and-motion | 73d13a6d447f |
