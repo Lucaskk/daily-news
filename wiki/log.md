@@ -1,5 +1,14 @@
 # Knowledge Base Log
 
+## [2026-11-04] ingest | Daily global and tech AI news
+
+- 凍結08:02:06 Asia/Taipei；legacy與同對話08:00原排程不變。科技336小時2則、全球24小時恰好10則；只查10/21–11/3十四報及31列同窗表。十二站scan、逐站補查與官方第二輪分批落檔；Verge截斷有逐篇補讀，數位時代舊首頁以當日具體文章補查，不宣稱沒有其他新品。
+- Sonos官方11/3更新27.3與27voice測試分開；Meta官方11/2具體停止功能開發路線，直接空殼由官方搜尋段落核對。ASUS全球首發標題與較早發布線索不一致，台灣可用性未核不補位。全球只用截點前投票、表決、官方決議與新披露，不填未確認美國選舉結果。
+- Sonos官方Presets畫面及PIB救援隨稿圖下載並目視，圖說不冒稱27voice或11/3現場；十二則各自查原圖／og，授權、資料照、通用圖、403分開保留。
+- 固定renderer與驗證完成，乾淨clone git push128後connector限範圍發布`e750677a1c586e2e42784f193ac2c7839c073558`，tree `0aba221e5ef78c692d5ba54aadd43d586c5ab500`與本機限定commit相同；版本`20261104-080955-reader`。未動無關工作、憑證、Xcode、排程與guard。
+- verify-deliver核日期頁／latest／根入口HTTP200與雜湊；唯一私人watchdog08:12:01回報`Sent LINE message`，mandatory check exit0 complete。知識庫及私人memory在核實完成後更新，三份wiki檔另行窄範圍發布，未重送LINE或手改成功紀錄。
+- renderer12及pipeline17共29測試、12篇／世界1–10／逐篇來源／JS語法通過；測試內already sent只是fixture，真實配送依上述watchdog。Playwright缺模組，未完成320／390／桌面版面或實體iPhone測試；配送後localhost4173及兩張公開圖HTTP200。
+
 ## [2026-11-03] ingest | Daily global and tech AI news
 
 - 凍結07:59:49 Asia/Taipei；legacy及原同對話08:00排程不變。科技336小時2則、全球24小時恰好10則；僅查10/20–11/2十四報及32列同窗表。十二站scan、逐站文章、官方第二輪與未核線索分批落檔；數位時代RSS404及逐站搜尋仍受限，不宣稱全站無新品。
