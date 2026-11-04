@@ -1,0 +1,26 @@
+{
+  "date": "2026-11-04",
+  "images": {
+    "t1": {
+      "src": "assets/sonos-presets.png",
+      "alt": "Sonos官方Presets介面，列出播放內容、房間及音量設定",
+      "caption": "Sonos 27.3 Presets官方操作畫面，並非27voice介面或本報實測。",
+      "credit": "Sonos官方社群更新帖",
+      "source_url": "https://en.community.sonos.com/product-updates/3rd-nov-2026-new-sonos-27-app-player-updates-now-available-6935155",
+      "original_url": "https://uploads-eu-west-1.insided.com/sonos-en/attachment/e0463339-df44-469a-a886-d1e550529b9d.png",
+      "rights": "Copyright Sonos。官方公開功能示範截圖，限有來源新聞辨識用途，未主張CC或一般再利用授權。",
+      "fit": "contain"
+    },
+    "9": {
+      "src": "assets/azini-official.jpeg",
+      "alt": "印度國防部隨Azini救援公告發布的船上人員及查獲武器影像",
+      "caption": "印度國防部隨救援公告發布的影像；未宣稱攝於11月3日。",
+      "credit": "印度國防部／PIB",
+      "source_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2331872&lang=1&reg=6",
+      "original_url": "https://static.pib.gov.in/WriteReadData/userfiles/image/2026/nov/Pic(1)(1)_20261103085727_c6f33c.jpeg",
+      "rights": "印度國防部公開新聞稿隨稿影像，保留官方來源及完整畫面；不主張公有領域或CC授權。",
+      "fit": "contain"
+    }
+  },
+  "no_images_reason": "其餘逐則稽核見source-notes：Meta原文空殼、Engadget有資料照未取得再用權；全球1、3、5、6、7、8有圖未重刊，2來源403、4官方release未見事件圖且直接fetch403、10僅通用預覽。不是整組世界新聞無圖。"
+}
