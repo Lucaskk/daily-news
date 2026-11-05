@@ -2,7 +2,7 @@
 title: "Knowledge Base Index"
 type: overview
 created: 2026-05-24
-updated: 2026-11-04
+updated: 2026-11-05
 status: seed
 tags: [index]
 sources: []
@@ -21,6 +21,9 @@ sources: []
 - [[2026-04-04-llm-wiki]] - Karpathy 提出的 LLM-maintained personal wiki 模式，是本知識庫的設計來源。
 
 ## Daily News
+
+- [2026-11-05 Daily News](daily/2026/11/2026-11-05/daily-news-2026-11-05.md) - 科技3則：FlashProve開源原型、Xbox雲端輸入預覽、vSphere Express；全球恰好10則。
+- [2026-11-05 Slides](daily/2026/11/2026-11-05/slides-2026-11-05.html) - Pages驗證與唯一LINE watchdog於08:14:35完成，check通過。
 
 - [2026-11-04 Daily News](daily/2026/11/2026-11-04/daily-news-2026-11-04.md) - 科技2則：Sonos27.3播放更新與Quest功能開發終點；全球恰好10則。
 - [2026-11-04 Slides](daily/2026/11/2026-11-04/slides-2026-11-04.html) - Pages驗證與唯一LINE watchdog於08:12:01完成，check通過。

@@ -1,5 +1,14 @@
 # Knowledge Base Log
 
+## [2026-11-05] ingest | Daily global and tech AI news
+
+- 凍結08:00:53 Asia/Taipei；legacy及原同對話08:00排程不變。科技336小時3則、全球24小時恰10則，僅10/22–11/4十四報及31列同窗表；十二站掃描、逐站補查與官方第二輪分批落檔，未核候選不宣稱全部不合格。
+- FlashProve為開源研究原型非答案真實性保證；Xbox兩項輸入預覽有市場與裝置限制；vSphere Express供貨日期衝突保留。美國選舉、烏克蘭新傷亡、北韓另次測試、以色列正式程序、西班牙新暫任均清楚標前次日期及新增事實。
+- 十三則逐篇原圖／og稽核；Microsoft功能示範與歐盟發布會影像下載目視，保存署名及權利。原文圖片存在、資料照、空殼、403與再用權分開，不換舊型號圖片。
+- 固定renderer產生版本`20261105-081233-reader`；乾淨clone git push128後以connector限定發布`9356cf8342f0650c33e8a22e54efa205a7407765`，tree `7bf2df65d3772bfee47a6e6980578343553d8249`與本機限定commit相同。未改無關工作、憑證、Xcode、排程或guard。
+- verify-deliver核日期頁／latest／根入口HTTP200與完整雜湊，唯一私人watchdog08:14:35回報`Sent LINE message`，mandatory check exit0 complete；索引／總覽／本log及私人memory於核實完成後更新，wiki維護另行發布，不重送LINE、不手改成功狀態。
+- renderer12及pipeline17共29測試、13篇／世界1–10／逐篇來源／JS語法通過；測試內already sent只是fixture。Playwright缺模組，未完成320／390／桌面版面或實體iPhone測試；配送後localhost4173及兩張公開圖HTTP200。
+
 ## [2026-11-04] ingest | Daily global and tech AI news
 
 - 凍結08:02:06 Asia/Taipei；legacy與同對話08:00原排程不變。科技336小時2則、全球24小時恰好10則；只查10/21–11/3十四報及31列同窗表。十二站scan、逐站補查與官方第二輪分批落檔；Verge截斷有逐篇補讀，數位時代舊首頁以當日具體文章補查，不宣稱沒有其他新品。
