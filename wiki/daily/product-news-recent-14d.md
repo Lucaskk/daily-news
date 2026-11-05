@@ -1,7 +1,7 @@
 ---
 title: "科技產品新聞最近 14 天比對表"
 type: product-news-ledger-recent
-updated: 2026-11-03
+updated: 2026-11-04
 status: generated
 tags: [daily-news, tech-products, deduplication, recent]
 ---
@@ -12,10 +12,12 @@ tags: [daily-news, tech-products, deduplication, recent]
 
 - 掃描日報：14 份。
 - 最近 14 天項目：31 則。
-- 日報日期範圍：2026-10-21 至 2026-11-03。
+- 日報日期範圍：2026-10-22 至 2026-11-04。
 
 | 公司 | 產品 | 更新內容 | 發佈時間 | 收錄日期 | 狀態 | 來源網址 | 比對鍵 |
 |---|---|---|---|---|---|---|---|
+| Sonos | 27.3 更新 | Sonos 推出 27.3 更新，新增房間與音量預設並改善日常播放操作 | 2026-11-03 22:47:00（Asia/Taipei） | 2026-11-04 | 首次收錄 | https://en.community.sonos.com/product-updates/3rd-nov-2026-new-sonos-27-app-player-updates-now-available-6935155<br>https://support.sonos.com/en-us/article/set-up-sonos-27voice | 9b8d9471409a |
+| Meta | 公布 Quest 2 與 Quest Pro 功能更新終點 | Meta 公布 Quest 2 與 Quest Pro 功能更新終點，安全修正延續至二〇二七年底 | 2026-11-02（官方發布日期） | 2026-11-04 | 首次收錄 | https://developers.meta.com/vr/blog/meta-quest-2-quest-pro-end-of-feature-development-what-to-know/ | 549f27ab4274 |
 | DeepSeek | 開源 SuperAgent 研究原型 | DeepSeek 開源 SuperAgent 研究原型，公開具授權邊界的主動編程代理架構 | 2026-10-31（原始程式碼發布日期依據） | 2026-11-03 | 首次收錄 | https://github.com/deepseek-ai/dsh-superagent-prototype<br>https://github.com/deepseek-ai/dsh-superagent-prototype/blob/main/docs/002-authorization.md<br>https://raw.githubusercontent.com/deepseek-ai/dsh-superagent-prototype/main/LICENSE<br>https://api.github.com/repos/deepseek-ai/dsh-superagent-prototype | d2d0627e18c4 |
 | Casio | CT-FS1 電子琴 | Casio 發表 CT-FS1 電子琴，Feel Sync 讓初學者跟隨本機歌曲和聲演奏 | 2026-10-30（官方發布日期） | 2026-11-03 | 首次收錄 | https://www.casio.com/it/corporate/casio-corporate/news/2026/CASIOTONE-CT-FS1/<br>https://www.casio.com/europe/electronic-musical-instruments/product.CT-FS1BK/ | 05934a456d64 |
 | Google | 公布 Gemini 4 Carbon | Google 公布 Gemini 4 Carbon，先向部分資安防禦者提供受控存取 | 2026-10-29 01:00:00（Asia/Taipei） | 2026-11-02 | 首次收錄 | https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/<br>https://www.inside.com.tw/article/42758-google-gemini-4-carbon-cybersecurity-long-horizon-fairwind | 62a0f6ba20c9 |
@@ -45,5 +47,3 @@ tags: [daily-news, tech-products, deduplication, recent]
 | Ricoh | GR WORLD 2.0 | Ricoh 推出 GR WORLD 2.0，加入設定雲端備份及 GR IV 影像控制分享 | 2026-10-21（官方發布日期） | 2026-10-22 | 首次收錄 | https://www.ricoh-imaging.co.jp/japan/products/app/gr-world/<br>https://www.ricoh-imaging.co.jp/japan/support/download/digital/gr4_s.html<br>https://www.cool3c.com/article/253231 | 74f405bf7c6b |
 | NVIDIA | OpenShell 參照架構 | NVIDIA 發布 OpenShell 參照架構，把 AI 代理治理延伸至獨立硬體監測 | 2026-10-21（官方發布日期） | 2026-10-22 | 首次收錄 | https://nvidianews.nvidia.com/news/openshell-reference-architecture<br>https://developer.nvidia.com/blog/how-nvidia-openshell-reference-architecture-secures-and-governs-ai-agent-workloads-at-scale/ | e9664c38ced2 |
 | Anthropic | Claude Duet 候補研究預覽 | Anthropic 開放 Claude Duet 候補研究預覽，讓代理在背景整理及執行工作 | 2026-10-21（官方發布日期） | 2026-10-22 | 首次收錄 | https://claude.com/resources/articles/claude-duet | 41b367bad1eb |
-| OpenAI | Synaptics 發布 Astra SR200 邊緣 AI 處理器 | Synaptics 發布 Astra SR200 邊緣 AI 處理器，結合微控制器效率與多模態運算 | 2026-10-20（官方發布日期） | 2026-10-21 | 首次收錄 | https://www.synaptics.com/company/blog/sr200-xmcu-mcu-efficiency-mpu-performance<br>https://www.globenewswire.com/news-release/2026/10/20/3384402/35894/en/synaptics-launches-the-xmcu-era-with-the-astra-sr200-series-of-multimodal-edge-ai-processors.html | 7554bd401a9a |
-| Antigravity 為 A1 | 跟拍套組、雙搖桿控制器與 4G 備援模組 | Antigravity 為 A1 推出跟拍套組、雙搖桿控制器與 4G 備援模組 | 2026-10-20 21:00:00（Asia/Taipei） | 2026-10-21 | 首次收錄 | https://www.prnewswire.co.uk/news-releases/a1-becomes-more-antigravity-reveals-three-new-ways-to-fly-create-and-explore-with-a1-302913895.html<br>https://www.engadget.com/2289029/antigravity-a1-drone-follow-me-bundle-hands-on/ | 493472c2af81 |

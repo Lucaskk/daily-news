@@ -1,0 +1,26 @@
+{
+  "date": "2026-11-05",
+  "images": {
+    "t2": {
+      "src": "assets/xbox-phone-controller.jpg",
+      "alt": "智慧電視顯示遊戲，旁邊手機畫面提供Xbox控制按鍵",
+      "caption": "Microsoft手機控制預覽示範；不是本報實機測試，也不是Nano硬體照片。",
+      "credit": "Microsoft／Engadget",
+      "source_url": "https://www.engadget.com/2307085/xbox-is-testing-two-new-controller-options-for-cloud-gaming/",
+      "original_url": "https://www.engadget.com/img/gallery/xbox-is-testing-two-new-cloud-gaming-controller-options/intro-1793822568.jpg",
+      "rights": "Copyright Microsoft。Engadget原稿署名Microsoft的公開功能示範，限有出處新聞辨識用途；未主張CC授權。",
+      "fit": "contain"
+    },
+    "6": {
+      "src": "assets/eu-enlargement.jpg",
+      "alt": "歐盟擴大事務執委Marta Kos在講台發言，背景是蒙特內哥羅國旗",
+      "caption": "來源標示為2026年11月4日歐盟年度擴大方案發布會。",
+      "credit": "Claudio Centonze／European Commission，© European Union 2026；2EU提供800px版本",
+      "source_url": "https://2eu.brussels/en/news/commission-sets-eu-enlargement-milestones-for-four-countries-as-montenegro-could-finish-negotiations-in-2026",
+      "original_url": "https://2eu.brussels/media/9360/conversions/2eu-4444-marta-kos-enlargement-ec-p0708750016-800.jpg",
+      "rights": "來源明列CC BY4.0 https://creativecommons.org/licenses/by/4.0/ ，原始官方圖集 https://audiovisual.ec.europa.eu/en/media/photo/P-070875/00-16 。保留署名，未另裁切或修改下載圖。",
+      "fit": "contain"
+    }
+  },
+  "no_images_reason": "其餘逐篇稽核見source-notes：T1僅標誌；T3泛主題／Getty資料照非介面。全球1影片預覽未核再用權、2有11/2 AP救援照非新攻擊、3有較早KCNA資料照、4通用預覽、5有Flash90／JPost圖未重刊、7有SAnews主題圖及AP當日照未重刊、8官方fetch逾時但搜尋有Pool Moncloa圖說、9原站403與JS challenge未核og、10有公會／Bankier圖未核拍攝及權利。並非聲稱整組無圖。"
+}
