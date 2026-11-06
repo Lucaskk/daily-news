@@ -2,7 +2,7 @@
 title: "Overview"
 type: overview
 created: 2026-05-24
-updated: 2026-11-05
+updated: 2026-11-06
 status: seed
 tags: [overview]
 sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
@@ -19,6 +19,12 @@ sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
 - 抽出持續出現的人物、組織、事件、政策、技術與市場概念。
 - 維護跨來源的矛盾、時間線、趨勢與待查問題。
 - 將重要查詢結果回寫成可累積的 wiki 頁面。
+
+## 2026-11-06 Daily News Synthesis
+
+- [[daily/2026/11/2026-11-06/daily-news-2026-11-06]]：Claude Personal Finance為美國付費方案漸進beta，唯讀不等於可移動資金，hub隱私不延伸到全部對話。GPT-6 Cyber先限核准DaybreakRed客戶，Critical是能力分類而非安全保證。Images2.6實際11/4首發，不用11/5重刊刷新；Sony MDR-3R是新USB-C型號，歐洲價與十一月供應不外推為台灣上市。
+- 黃之鋒今日判刑與既有服刑分開，官方立場與人權批評各自歸屬；美股以收盤而非盤中數字，AI監管疑慮不代表法規已生效。英國8票升25bp、1票升50bp不是1票主張不升；歐洲新航班威脅、伊朗新三船說法、法國新罷工標前次日報與新增事實。南韓計畫不等於進入海峽作戰，Fitburg地院判決仍可上訴；松下新死亡確認不改寫起火日，C羅國家隊公告不代表退出俱樂部或最後比賽日已一致。
+- 僅10/23–11/5十四份日報及30列產品表；十二站scan、Verge RSS、數位時代具體文章與Yahoo搜尋／RSS限制、官方第二輪及十四則原圖稽核見 [[daily/2026/11/2026-11-06/source-notes-2026-11-06]]。Claude示範與Sony新型號圖均下載目視，不將資料照、未核權利、403或空殼寫成來源無圖。
 
 ## 2026-11-05 Daily News Synthesis
 

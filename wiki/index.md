@@ -2,7 +2,7 @@
 title: "Knowledge Base Index"
 type: overview
 created: 2026-05-24
-updated: 2026-11-05
+updated: 2026-11-06
 status: seed
 tags: [index]
 sources: []
@@ -21,6 +21,9 @@ sources: []
 - [[2026-04-04-llm-wiki]] - Karpathy 提出的 LLM-maintained personal wiki 模式，是本知識庫的設計來源。
 
 ## Daily News
+
+- [2026-11-06 Daily News](daily/2026/11/2026-11-06/daily-news-2026-11-06.md) - 科技4則：Claude Personal Finance、GPT-6 Cyber、Images2.6、Sony MDR-3R；全球恰好10則。
+- [2026-11-06 Slides](daily/2026/11/2026-11-06/slides-2026-11-06.html) - Pages驗證與唯一LINE watchdog於08:17:01完成，check通過。
 
 - [2026-11-05 Daily News](daily/2026/11/2026-11-05/daily-news-2026-11-05.md) - 科技3則：FlashProve開源原型、Xbox雲端輸入預覽、vSphere Express；全球恰好10則。
 - [2026-11-05 Slides](daily/2026/11/2026-11-05/slides-2026-11-05.html) - Pages驗證與唯一LINE watchdog於08:14:35完成，check通過。

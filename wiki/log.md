@@ -1,5 +1,14 @@
 # Knowledge Base Log
 
+## [2026-11-06] ingest | Daily global and tech AI news
+
+- 凍結08:04:41 Asia/Taipei，legacy及原同對話08:00排程不變。科技336小時4則、全球24小時恰10則；只查10/23–11/5十四報及30列同窗表。十二站實際scan、逐站檢視及官方第二輪分批落檔，Verge截斷以RSS與文章補查，數位時代讀當日具體稿，Yahoo tech RSS404及逐站搜尋限制明列，不宣稱全站無新品。
+- Claude美國唯讀beta、GPT-6Cyber受控資格、Images2.6原始11/4事件日與Sony11/5新型號分開；全球三則續報列前次日期，新刑期、利率決議、收盤、部署計畫與搜救新披露各有時間基準。AP黃之鋒異常早時間不採作判決發布，法國人數、C羅生效時程等歧異保留。
+- 十四則逐篇原圖／og稽核；Anthropic官方財務示範介面與Sony署名新型號圖下載目視，保留來源與權利。不用1979耳機照冒充新款，不把來源403、通用預覽、未核再用權當作沒有圖片。
+- 固定renderer版本`20261106-081430-reader`；乾淨clone git push128後connector限範圍發布`9da4b1967ea8c91f6f4dee275756d7839270ba58`，tree `b97df8d2f044ff48dd6c3ada5542f1bb7671ec6e`與本機限定commit相同。未動無關工作、憑證、Xcode、排程或guard。
+- verify-deliver確認日期頁／latest／根入口HTTP200與完整雜湊，唯一私人watchdog08:17:01回報`Sent LINE message`，mandatory check exit0 complete。知識庫及私人memory於核實完成後更新，三份wiki維護另行發布，不重送LINE、不手改成功狀態。
+- renderer12及pipeline17共29測試、14篇／科技4／全球1–10／逐篇來源／JS語法通過；測試內already sent僅fixture。Playwright缺模組，未完成320／390／桌面版面或實體iPhone測試；配送後localhost4173及兩張公開素材HTTP200。
+
 ## [2026-11-05] ingest | Daily global and tech AI news
 
 - 凍結08:00:53 Asia/Taipei；legacy及原同對話08:00排程不變。科技336小時3則、全球24小時恰10則，僅10/22–11/4十四報及31列同窗表；十二站掃描、逐站補查與官方第二輪分批落檔，未核候選不宣稱全部不合格。
