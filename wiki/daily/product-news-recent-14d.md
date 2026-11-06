@@ -1,7 +1,7 @@
 ---
 title: "科技產品新聞最近 14 天比對表"
 type: product-news-ledger-recent
-updated: 2026-11-04
+updated: 2026-11-05
 status: generated
 tags: [daily-news, tech-products, deduplication, recent]
 ---
@@ -11,11 +11,14 @@ tags: [daily-news, tech-products, deduplication, recent]
 本檔只整理產製日前 14 天的日報，可完整讀取做去重確認；不搜尋更早日報、完整歷史表或來源筆記。實際發布窗仍以當日研究截點與來源筆記判定。
 
 - 掃描日報：14 份。
-- 最近 14 天項目：31 則。
-- 日報日期範圍：2026-10-22 至 2026-11-04。
+- 最近 14 天項目：30 則。
+- 日報日期範圍：2026-10-23 至 2026-11-05。
 
 | 公司 | 產品 | 更新內容 | 發佈時間 | 收錄日期 | 狀態 | 來源網址 | 比對鍵 |
 |---|---|---|---|---|---|---|---|
+| Microsoft | Xbox | Xbox 開放兩項雲端遊戲控制預覽，手機可當電視控制器並測試 Nano 直連 Wi-Fi | 2026-11-05 03:00:00（Asia/Taipei） | 2026-11-05 | 首次收錄 | https://news.xbox.com/en-us/2026/11/04/cloud-gaming-inputs-preview/<br>https://www.engadget.com/2307085/xbox-is-testing-two-new-controller-options-for-cloud-gaming/ | 4d8307a08eb2 |
+| Broadcom / VMware | vSphere Express | Broadcom 推出 vSphere Express，為總計不超過一百二十八核心的環境提供虛擬化方案 | 2026-11-05 01:00:00（Asia/Taipei） | 2026-11-05 | 首次收錄 | https://blogs.vmware.com/cloud-foundation/2026/11/04/broadcom-vcf-portfolio-updates/<br>https://arstechnica.com/information-technology/2026/11/vmware-releases-vsphere-express-for-virtualization-on-up-to-128-cores/<br>https://www.techtarget.com/news/broadcom-vsphere-express-brings-back-standalone-vmware-virtualization/873755/ | bcf52175be19 |
+| Anthropic | 開源 FlashProve 研究原型 | Anthropic 開源 FlashProve 研究原型，讓使用者驗證回答是否來自指定模型權重 | 2026-11-02（官方發布日期） | 2026-11-05 | 首次收錄 | https://www.anthropic.com/research/provable-inference<br>https://github.com/anthropics/FlashProve<br>https://github.com/anthropics/FlashProve/blob/main/docs/protocol.md | 9f1275e2ac25 |
 | Sonos | 27.3 更新 | Sonos 推出 27.3 更新，新增房間與音量預設並改善日常播放操作 | 2026-11-03 22:47:00（Asia/Taipei） | 2026-11-04 | 首次收錄 | https://en.community.sonos.com/product-updates/3rd-nov-2026-new-sonos-27-app-player-updates-now-available-6935155<br>https://support.sonos.com/en-us/article/set-up-sonos-27voice | 9b8d9471409a |
 | Meta | 公布 Quest 2 與 Quest Pro 功能更新終點 | Meta 公布 Quest 2 與 Quest Pro 功能更新終點，安全修正延續至二〇二七年底 | 2026-11-02（官方發布日期） | 2026-11-04 | 首次收錄 | https://developers.meta.com/vr/blog/meta-quest-2-quest-pro-end-of-feature-development-what-to-know/ | 549f27ab4274 |
 | DeepSeek | 開源 SuperAgent 研究原型 | DeepSeek 開源 SuperAgent 研究原型，公開具授權邊界的主動編程代理架構 | 2026-10-31（原始程式碼發布日期依據） | 2026-11-03 | 首次收錄 | https://github.com/deepseek-ai/dsh-superagent-prototype<br>https://github.com/deepseek-ai/dsh-superagent-prototype/blob/main/docs/002-authorization.md<br>https://raw.githubusercontent.com/deepseek-ai/dsh-superagent-prototype/main/LICENSE<br>https://api.github.com/repos/deepseek-ai/dsh-superagent-prototype | d2d0627e18c4 |
@@ -43,7 +46,3 @@ tags: [daily-news, tech-products, deduplication, recent]
 | Apple | Bluesky 推出 v1.136 | Bluesky 推出 v1.136，加入個人檔案連結與 iPad 測試支援 | 2026-10-23 00:11:13（Asia/Taipei） | 2026-10-23 | 首次收錄 | https://bsky.app/profile/bsky.app/post/3myi2ihquwk26<br>https://bsky.app/profile/bsky.app/post/3myi3k45jh22z<br>https://www.engadget.com/2294583/bluesky-adds-ipad-support-in-latest-feature-update/ | c9120b303897 |
 | Arc 公布十二月二十二日停止桌面瀏覽器服務，立即關閉新帳號 | Arc 公布十二月二十二日停止桌面瀏覽器服務 | Arc 公布十二月二十二日停止桌面瀏覽器服務，立即關閉新帳號 | 2026-10-22（官方公告日期） | 2026-10-23 | 首次收錄 | https://arc.net/<br>https://www.engadget.com/2294643/the-browser-company-is-officially-killing-arc-on-december-22/ | 527e8976e00a |
 | 1Password | 多代理登入信任層 | 1Password 發布多代理登入信任層，讓使用者核准後填入憑證 | 2026-10-22 21:00:00（Asia/Taipei） | 2026-10-23 | 首次收錄 | https://1password.com/press/2026/october/1password-for-agents-trust-layer-personal-ai-agents<br>https://techcrunch.com/2026/10/22/1password-launches-a-way-for-ai-agents-to-log-in-on-your-behalf-without-seeing-your-password/ | 579821d979d0 |
-| Microsoft | Xbox | Xbox 開放無 Game Pass 訂閱者測試購買雲端遊戲時數 | 2026-10-22 02:00:03（Asia/Taipei） | 2026-10-22 | 首次收錄 | https://news.xbox.com/en-us/2026/10/21/cloud-playtime-now-available-to-test-with-xbox-insiders/ | 12244c1f71f4 |
-| Ricoh | GR WORLD 2.0 | Ricoh 推出 GR WORLD 2.0，加入設定雲端備份及 GR IV 影像控制分享 | 2026-10-21（官方發布日期） | 2026-10-22 | 首次收錄 | https://www.ricoh-imaging.co.jp/japan/products/app/gr-world/<br>https://www.ricoh-imaging.co.jp/japan/support/download/digital/gr4_s.html<br>https://www.cool3c.com/article/253231 | 74f405bf7c6b |
-| NVIDIA | OpenShell 參照架構 | NVIDIA 發布 OpenShell 參照架構，把 AI 代理治理延伸至獨立硬體監測 | 2026-10-21（官方發布日期） | 2026-10-22 | 首次收錄 | https://nvidianews.nvidia.com/news/openshell-reference-architecture<br>https://developer.nvidia.com/blog/how-nvidia-openshell-reference-architecture-secures-and-governs-ai-agent-workloads-at-scale/ | e9664c38ced2 |
-| Anthropic | Claude Duet 候補研究預覽 | Anthropic 開放 Claude Duet 候補研究預覽，讓代理在背景整理及執行工作 | 2026-10-21（官方發布日期） | 2026-10-22 | 首次收錄 | https://claude.com/resources/articles/claude-duet | 41b367bad1eb |
