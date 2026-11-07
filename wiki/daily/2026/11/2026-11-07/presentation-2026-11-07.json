@@ -1,0 +1,26 @@
+{
+  "date": "2026-11-07",
+  "images": {
+    "t1": {
+      "src": "assets/alexa-text.jpg",
+      "alt": "Amazon官方示範Alexa Shopping以文字訊息辨識商品、確認並下單的三部手機畫面",
+      "caption": "Amazon官方產品示範圖；不是本報購物或付款實測。",
+      "credit": "Amazon／About Amazon",
+      "source_url": "https://www.aboutamazon.com/news/retail/alexa-for-shopping-text-to-shop",
+      "original_url": "https://assets.aboutamazon.com/57/b3/2bffbf4044cbbbe89d0e8d884a44/about-amazon-inline-alexa-text-to-shop-amazon-news-wl-20261104-1.jpg",
+      "rights": "Copyright Amazon。公開官方產品示範供有來源之新聞功能辨識，不主張CC或一般再利用授權。",
+      "fit": "contain"
+    },
+    "t2": {
+      "src": "assets/panasonic-rb-hj800.jpg",
+      "alt": "Panasonic新RB-HJ800耳機官方圖，並列梅染、白練與漆黑三色",
+      "caption": "Panasonic 11/6公告之RB-HJ800三色產品圖，非其他Technics型號。",
+      "credit": "Panasonic官方產品公告",
+      "source_url": "https://panasonic.jp/topics/2026/11/000001256.html",
+      "original_url": "https://panasonic.jp/topics/img/d24101-1256-dd6e33e80ca408c920f2-2.jpg",
+      "rights": "Copyright Panasonic。官方公開新品圖，保留來源供新聞產品辨識，未主張開放授權。",
+      "fit": "contain"
+    }
+  },
+  "no_images_reason": "全球逐篇稽核見來源筆記：1 Reuters有Miller資料照但直接403，2 Bernama有QNA通話主題圖未核再用權，3 BLS直接403而官方PDF有統計圖未下載，4 CNA有市場圖未核授權，5 Reuters為2023示意資料圖，6 Reuters直接403未取得可核原圖，7 Guardian有當日EPA及Reuters圖未重刊，8 AP有當日法院圖且附授權入口，9 Guardian有AP當日抗議圖未重刊，10 Fox官方只有logo。不是聲稱世界新聞原文皆無圖。"
+}

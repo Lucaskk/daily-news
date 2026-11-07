@@ -1,7 +1,7 @@
 ---
 title: "科技產品新聞最近 14 天比對表"
 type: product-news-ledger-recent
-updated: 2026-11-05
+updated: 2026-11-06
 status: generated
 tags: [daily-news, tech-products, deduplication, recent]
 ---
@@ -11,11 +11,15 @@ tags: [daily-news, tech-products, deduplication, recent]
 本檔只整理產製日前 14 天的日報，可完整讀取做去重確認；不搜尋更早日報、完整歷史表或來源筆記。實際發布窗仍以當日研究截點與來源筆記判定。
 
 - 掃描日報：14 份。
-- 最近 14 天項目：30 則。
-- 日報日期範圍：2026-10-23 至 2026-11-05。
+- 最近 14 天項目：31 則。
+- 日報日期範圍：2026-10-24 至 2026-11-06。
 
 | 公司 | 產品 | 更新內容 | 發佈時間 | 收錄日期 | 狀態 | 來源網址 | 比對鍵 |
 |---|---|---|---|---|---|---|---|
+| Sony | MDR-3R USB-C 有線耳機 | Sony 正式推出 MDR-3R USB-C 有線耳機，以新連接方式重現初代 Walkman 設計 | 2026-11-05（官方發布日期） | 2026-11-06 | 首次收錄 | https://www.sony.eu/presscentre/sony-introduces-usb-cr-wired-headphones-mdr-3r-a-modern-take-on-the-first-walkmanr-headphones-mdr-3<br>https://arstechnica.com/gadgets/2026/11/sony-adds-usb-c-to-its-70s-era-mdr-3-walkman-headphones/ | 02cf3da47a7a |
+| OpenAI | Images 2.6 | OpenAI 發布 Images 2.6，新增 GIF 創作並擴大 API 圖像編輯控制 | 2026-11-04（官方發布日期） | 2026-11-06 | 首次收錄 | https://openai.com/index/introducing-images-2-6/<br>https://www.inside.com.tw/article/42836-openai-chatgpt-images-2-6-gif-flare-sunburst | 7366f5867383 |
+| OpenAI | GPT-6 Cyber | OpenAI 推出 GPT-6 Cyber，先向經核准的 Daybreak Red 客戶提供受控存取 | 2026-11-05（官方發布日期） | 2026-11-06 | 首次收錄 | https://openai.com/index/introducing-gpt-6-cyber/<br>https://developers.openai.com/api/docs/models/gpt-6-cyber<br>https://deploymentsafety.openai.com/gpt-6-cyber | 5a352278f8a0 |
+| Anthropic | Claude Personal Finance 測試版 | Anthropic 推出 Claude Personal Finance 測試版，美國付費用戶可唯讀連結金融帳戶 | 2026-11-05（官方發布日期） | 2026-11-06 | 首次收錄 | https://claude.com/resources/articles/introducing-personal-finance-in-claude<br>https://support.claude.com/en/articles/18185620-use-personal-finance-in-claude<br>https://techcrunch.com/2026/11/05/claude-can-now-analyze-your-spending-with-its-new-personal-finance-tool/ | b6ae59711dfb |
 | Microsoft | Xbox | Xbox 開放兩項雲端遊戲控制預覽，手機可當電視控制器並測試 Nano 直連 Wi-Fi | 2026-11-05 03:00:00（Asia/Taipei） | 2026-11-05 | 首次收錄 | https://news.xbox.com/en-us/2026/11/04/cloud-gaming-inputs-preview/<br>https://www.engadget.com/2307085/xbox-is-testing-two-new-controller-options-for-cloud-gaming/ | 4d8307a08eb2 |
 | Broadcom / VMware | vSphere Express | Broadcom 推出 vSphere Express，為總計不超過一百二十八核心的環境提供虛擬化方案 | 2026-11-05 01:00:00（Asia/Taipei） | 2026-11-05 | 首次收錄 | https://blogs.vmware.com/cloud-foundation/2026/11/04/broadcom-vcf-portfolio-updates/<br>https://arstechnica.com/information-technology/2026/11/vmware-releases-vsphere-express-for-virtualization-on-up-to-128-cores/<br>https://www.techtarget.com/news/broadcom-vsphere-express-brings-back-standalone-vmware-virtualization/873755/ | bcf52175be19 |
 | Anthropic | 開源 FlashProve 研究原型 | Anthropic 開源 FlashProve 研究原型，讓使用者驗證回答是否來自指定模型權重 | 2026-11-02（官方發布日期） | 2026-11-05 | 首次收錄 | https://www.anthropic.com/research/provable-inference<br>https://github.com/anthropics/FlashProve<br>https://github.com/anthropics/FlashProve/blob/main/docs/protocol.md | 9f1275e2ac25 |
@@ -43,6 +47,3 @@ tags: [daily-news, tech-products, deduplication, recent]
 | Block 公布 Dessa 語音模型，先向少數 | AI 安全研究者提供早期存取 | Block 公布 Dessa 語音模型，先向少數 AI 安全研究者提供早期存取 | 2026-10-23（官方發布日期） | 2026-10-25 | 首次收錄 | https://block.xyz/dessa<br>https://www.coindesk.com/tech/2026/10/24/block-s-new-voice-ai-sounds-eerily-human-sparking-awe-and-scam-fears<br>https://techcrunch.com/2026/10/24/blocks-new-voice-model-sounds-eerily-human/ | 9473cc48c1c0 |
 | Sigma | FP2 全片幅相機 | Sigma 發表 FP2 全片幅相機，確認十一月十一日上市 | 2026-10-23（官方發布日期） | 2026-10-24 | 首次收錄 | https://www.sigma-global.com/en/news/2026/10/23/012378/<br>https://www.sigma-global.com/jp/news/2026/10/23/012376/<br>https://www.sigma-global.com/en/cameras/fp2/<br>https://www.cool3c.com/article/253334 | 7f6a25598ad4 |
 | HTC | VIVEE AI 陪伴裝置預購 | HTC 開放 VIVEE AI 陪伴裝置預購，預計十二月上旬出貨 | 2026-10-22 21:00:00（Asia/Taipei） | 2026-10-24 | 首次收錄 | https://www.businesswire.com/news/home/20261022888626/en/<br>https://finance.yahoo.com/technology/ai/articles/htc-introduces-vivee-interactive-digital-130000564.html<br>https://www.hivivee.com/<br>https://www.cool3c.com/article/253328 | 6fcd5436750e |
-| Apple | Bluesky 推出 v1.136 | Bluesky 推出 v1.136，加入個人檔案連結與 iPad 測試支援 | 2026-10-23 00:11:13（Asia/Taipei） | 2026-10-23 | 首次收錄 | https://bsky.app/profile/bsky.app/post/3myi2ihquwk26<br>https://bsky.app/profile/bsky.app/post/3myi3k45jh22z<br>https://www.engadget.com/2294583/bluesky-adds-ipad-support-in-latest-feature-update/ | c9120b303897 |
-| Arc 公布十二月二十二日停止桌面瀏覽器服務，立即關閉新帳號 | Arc 公布十二月二十二日停止桌面瀏覽器服務 | Arc 公布十二月二十二日停止桌面瀏覽器服務，立即關閉新帳號 | 2026-10-22（官方公告日期） | 2026-10-23 | 首次收錄 | https://arc.net/<br>https://www.engadget.com/2294643/the-browser-company-is-officially-killing-arc-on-december-22/ | 527e8976e00a |
-| 1Password | 多代理登入信任層 | 1Password 發布多代理登入信任層，讓使用者核准後填入憑證 | 2026-10-22 21:00:00（Asia/Taipei） | 2026-10-23 | 首次收錄 | https://1password.com/press/2026/october/1password-for-agents-trust-layer-personal-ai-agents<br>https://techcrunch.com/2026/10/22/1password-launches-a-way-for-ai-agents-to-log-in-on-your-behalf-without-seeing-your-password/ | 579821d979d0 |
