@@ -1,5 +1,14 @@
 # Knowledge Base Log
 
+## [2026-11-07] ingest | Daily global and tech AI news
+
+- 凍結07:59:28 Asia/Taipei，legacy與原同對話08:00排程不變；科技336小時2則、全球24小時恰10則。只查10/24–11/6十四報及31列同窗產品表。十二站scan實際取得、Verge截斷補Atom、數位時代改直接HTTP，Yahoo與TechNews不同存取版本限制明列；不宣稱只有兩則合格新品。
+- Alexa簡訊購物為受邀美國新通道，Panasonic新耳機續航條件及18／19日供應歧異保留；Sonos已提測試不補位，Sony九月全球發布與十一月台灣預購不同。全球卡達及航班標前次日期與當日新進展，未用美國詐騙起訴或麻疹死亡重刊刷新事件日。
+- 十二篇逐則圖片／og稽核；Amazon簡訊操作與Panasonic三色新型號官方圖下載目視，保存來源、版權及示範限制。AP／Reuters當日照片存在但未核再用權，與403、通用logo分開記錄。
+- 首次finish因來源筆記只寫ISO格式缺少可解析空白日期字串而未通過，補同一凍結截點呈現格式後續跑，未改截點或防護。固定renderer版本`20261107-080845-reader`；乾淨clone push128後connector限定發布`7a184f160112521a63f07e975e7390c6a4f451c7`，tree `8640ecce74cf20e6da86fccd697716ab3a9f353b`與本機限定commit相同。未動無關檔案、憑證、Xcode、排程或成功狀態。
+- verify-deliver確認日期頁／latest／根入口HTTP200及完整雜湊；唯一私人watchdog08:10:59回報`Sent LINE message`，mandatory check exit0 complete。索引、總覽、本log及私人memory於核實後更新，三份wiki另行發布，不重送LINE。
+- renderer12及pipeline17共29測試、12篇／世界1–10／逐篇來源／JS語法通過；測試already sent只是fixture。配送後localhost4173與兩張公開圖HTTP200。Playwright缺模組，未完成320／390／桌面版面或實體iPhone測試。
+
 ## [2026-11-06] ingest | Daily global and tech AI news
 
 - 凍結08:04:41 Asia/Taipei，legacy及原同對話08:00排程不變。科技336小時4則、全球24小時恰10則；只查10/23–11/5十四報及30列同窗表。十二站實際scan、逐站檢視及官方第二輪分批落檔，Verge截斷以RSS與文章補查，數位時代讀當日具體稿，Yahoo tech RSS404及逐站搜尋限制明列，不宣稱全站無新品。
