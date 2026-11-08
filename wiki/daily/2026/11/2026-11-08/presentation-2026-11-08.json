@@ -1,0 +1,16 @@
+{
+  "date": "2026-11-08",
+  "images": {
+    "t2": {
+      "src": "assets/spotify-united.jpg",
+      "alt": "Spotify與聯航官方示範，旅客以椅背螢幕使用Spotify個人串流內容",
+      "caption": "Spotify／United官方功能示範圖；不是本報搭機或帳號登入實測。",
+      "credit": "Spotify／United Airlines",
+      "source_url": "https://newsroom.spotify.com/2026-11-05/united-airlines-partnership-update/",
+      "original_url": "https://storage.googleapis.com/pr-newsroom-wp/1/2026/11/Spotify-x-United_PartnershipAssets_FTR-Banner_Desktop_1440x820_3384092834023.jpg",
+      "rights": "Copyright Spotify／United Airlines。公開官方功能圖供有來源之新聞辨識，不主張CC或一般再利用授權。",
+      "fit": "contain"
+    }
+  },
+  "no_images_reason": "逐篇記錄見來源筆記：T1官方社群預覽已目視為吉祥物宣傳，非介面。全球1 Reuters直接403且舊圖說不採；2選委會直接403；3 ThePrint只取得logo；4 Investing直接403；5 AP直接403且既有圖說為10/24資料照；6 Reuters直接403；7 AP直接403；8 Reuters直接403；9 AP直接403；10 Reuters直接403。均區分存取失敗與無圖片，不用舊圖冒充今日事件。"
+}
