@@ -2,7 +2,7 @@
 title: "Overview"
 type: overview
 created: 2026-05-24
-updated: 2026-11-07
+updated: 2026-11-08
 status: seed
 tags: [overview]
 sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
@@ -19,6 +19,12 @@ sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
 - 抽出持續出現的人物、組織、事件、政策、技術與市場概念。
 - 維護跨來源的矛盾、時間線、趨勢與待查問題。
 - 將重要查詢結果回寫成可累積的 wiki 頁面。
+
+## 2026-11-08 Daily News Synthesis
+
+- [[daily/2026/11/2026-11-08/daily-news-2026-11-08]]：Muse Spaces讓個人介面可建立、排程並連接App，分享仍在探索，不等於已開多人協作。Spotify聯航新增個人帳號串流，不是舊精選內容重刊；限合格Starlink航班，椅背Spotify免Wi-Fi pass不代表全部上網免費。
+- 克拉科廣場六死與住處三具遺體分開；紐西蘭初步結果不等於最終席次，基輔新攻擊不沿用前次傷亡。以色列總統選定人選與翌日正式授權分開；Huda單船開火和Iron Gate新組織是不同動作，均不代表全面陸路封鎖完成。葉門歸責與傷亡保留單方來源，瓜地馬拉採新死亡確認，教宗僅採截點前上午彌撒；德里兩種AQI方法與時點不混算。
+- 僅查10/25–11/7十四份日報與31列同窗產品表；十二站scan、逐站補查、官方第二輪及十二則圖片稽核見 [[daily/2026/11/2026-11-08/source-notes-2026-11-08]]。Spotify官方示範圖下載目視，Meta吉祥物預覽不冒充介面；其他原頁403不寫成無圖片，未核候選不宣稱全部不合格。
 
 ## 2026-11-07 Daily News Synthesis
 

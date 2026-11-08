@@ -2,7 +2,7 @@
 title: "Knowledge Base Index"
 type: overview
 created: 2026-05-24
-updated: 2026-11-07
+updated: 2026-11-08
 status: seed
 tags: [index]
 sources: []
@@ -21,6 +21,9 @@ sources: []
 - [[2026-04-04-llm-wiki]] - Karpathy 提出的 LLM-maintained personal wiki 模式，是本知識庫的設計來源。
 
 ## Daily News
+
+- [2026-11-08 Daily News](daily/2026/11/2026-11-08/daily-news-2026-11-08.md) - 科技2則：Meta Muse Spaces與Spotify聯航個人串流；全球恰好10則。
+- [2026-11-08 Slides](daily/2026/11/2026-11-08/slides-2026-11-08.html) - Pages驗證與唯一LINE watchdog於08:15:44完成，check通過。
 
 - [2026-11-07 Daily News](daily/2026/11/2026-11-07/daily-news-2026-11-07.md) - 科技2則：Alexa購物簡訊與Panasonic RB-HJ800；全球恰好10則。
 - [2026-11-07 Slides](daily/2026/11/2026-11-07/slides-2026-11-07.html) - Pages驗證與唯一LINE watchdog於08:10:59完成，check通過。

@@ -1,5 +1,14 @@
 # Knowledge Base Log
 
+## [2026-11-08] ingest | Daily global and tech AI news
+
+- 凍結08:03:45 Asia/Taipei，legacy與同對話08:00原排程不變；科技336小時2則、全球24小時恰好10則。僅10/25–11/7十四報及31列產品表，十二站scan、逐站備援、官方第二輪與事件去重分批落檔，未核候選不等於不合格。
+- Muse Spaces與Spotify聯航個人串流為新獨立功能；SonyXM4C台灣預購是可用性候選但本次未選。全球紐西蘭、基輔、以色列與教宗列前次日期及新進展；邀請組閣不冒稱已授權或新政府成立，瓜地馬拉採新死亡確認而非刷新案發日。
+- 十二則各自查圖與og：Spotify官方功能圖下載目視、署名及權利保留；Meta預覽是吉祥物宣傳而非介面，不刊。十篇世界新聞直接403或只取得logo分開記錄，不冒稱原文無圖。
+- 固定renderer版本`20261108-081358-reader`；乾淨clone push128後connector限定發布`2c83ec3715f711b5faed81efb33df665f272bcb8`，tree `35fc3d2dd746197aa356904c738b3246af7fefe7`與本機限定commit相同。未改無關工作、憑證、Xcode、排程、guard或成功狀態。
+- verify-deliver核日期頁／latest／根入口HTTP200與雜湊；唯一私人watchdog08:15:44回報`Sent LINE message`，mandatory check exit0 complete。索引、總覽、本log及私人memory在驗證後更新，三份wiki另行發布，不重送LINE。
+- renderer12與pipeline17共29測試通過，12篇、全球1–10、逐篇來源、日期型時間及JS語法檢查通過；測試already sent僅fixture。配送後localhost4173及公開Spotify圖HTTP200；Playwright缺模組，未完成320／390／桌面版面或實體iPhone測試。
+
 ## [2026-11-07] ingest | Daily global and tech AI news
 
 - 凍結07:59:28 Asia/Taipei，legacy與原同對話08:00排程不變；科技336小時2則、全球24小時恰10則。只查10/24–11/6十四報及31列同窗產品表。十二站scan實際取得、Verge截斷補Atom、數位時代改直接HTTP，Yahoo與TechNews不同存取版本限制明列；不宣稱只有兩則合格新品。
