@@ -2,7 +2,7 @@
 title: "Overview"
 type: overview
 created: 2026-05-24
-updated: 2026-11-08
+updated: 2026-11-09
 status: seed
 tags: [overview]
 sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
@@ -19,6 +19,12 @@ sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
 - 抽出持續出現的人物、組織、事件、政策、技術與市場概念。
 - 維護跨來源的矛盾、時間線、趨勢與待查問題。
 - 將重要查詢結果回寫成可累積的 wiki 頁面。
+
+## 2026-11-09 Daily News Synthesis
+
+- [[daily/2026/11/2026-11-09/daily-news-2026-11-09]]：Epic對SteamOS等Linux發行版的具名支援路線首發11/6，不是11/8重刊或10/14 Preview推出；本月恢復AppImage及Fortnite相容性仍有未完成部分。Sony XM4C採11/6台灣預購事件，非九月全球首發；官方6900與媒體6990並存，預計11/20不當已出貨。
+- 利雅德Aramco辦公樓損壞不等於原油產能中斷；核電廠早上失電、晚間已恢復，不漏掉截點前新狀態。法國出席會談不等於EU正式代表已確定，以色列實際授權才是昨日選定人選後的新節點。埃及傷者112／125保留來源差異，塞內加爾總乘員未知；台灣羈押非定罪，南非地方結果非總統更替，Harun被拘非已移交ICC，荷蘭遊行訴求非新制裁已生效。
+- 僅10/26–11/8十四報及31列同窗表；十二站scan、逐站補查、官方第二輪、時間及圖片稽核見 [[daily/2026/11/2026-11-09/source-notes-2026-11-09]]。Sony官方新型號圖已下載目視，舊Epic商標、外長資料照、示意圖、未核再用權及403分開，不把未完成候選一律判不合格。
 
 ## 2026-11-08 Daily News Synthesis
 

@@ -2,7 +2,7 @@
 title: "Knowledge Base Index"
 type: overview
 created: 2026-05-24
-updated: 2026-11-08
+updated: 2026-11-09
 status: seed
 tags: [index]
 sources: []
@@ -21,6 +21,9 @@ sources: []
 - [[2026-04-04-llm-wiki]] - Karpathy 提出的 LLM-maintained personal wiki 模式，是本知識庫的設計來源。
 
 ## Daily News
+
+- [2026-11-09 Daily News](daily/2026/11/2026-11-09/daily-news-2026-11-09.md) - 科技2則：Epic Linux支援路線與Sony WH-1000XM4C台灣預購；全球恰好10則。
+- [2026-11-09 Slides](daily/2026/11/2026-11-09/slides-2026-11-09.html) - Pages驗證及唯一LINE watchdog於08:05:24完成，check通過。
 
 - [2026-11-08 Daily News](daily/2026/11/2026-11-08/daily-news-2026-11-08.md) - 科技2則：Meta Muse Spaces與Spotify聯航個人串流；全球恰好10則。
 - [2026-11-08 Slides](daily/2026/11/2026-11-08/slides-2026-11-08.html) - Pages驗證與唯一LINE watchdog於08:15:44完成，check通過。

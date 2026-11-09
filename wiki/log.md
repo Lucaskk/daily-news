@@ -1,5 +1,14 @@
 # Knowledge Base Log
 
+## [2026-11-09] ingest | Daily global and tech AI news
+
+- 凍結07:56:03 Asia/Taipei，legacy及同對話08:00原排程不變；科技336小時2則、全球24小時恰好10則。僅10/26–11/8十四報、31列同窗表；十二站scan，Verge截斷補Atom十篇、其餘逐站具體文章與官方第二輪保留，未核線索不宣稱全不合格。
+- Epic路線回原始11/6具名採訪及官方release notes，不以11/8重刊刷新；Sony為台灣預購，全球九月首發與本地可用性分開。全球利雅德、以國、南非標前次日期及新增事實；核電廠19:54GMT恢復稿已納入，台灣／塞國採當日官方首次公開披露，非改寫搜索或沉沒日。ICC個人指控另核官方，未把媒體genocide概括詞當Harun個人罪名。
+- 十二則逐篇og及圖片稽核，Sony薰衣草XM4C原圖下載目視；Epic舊商標不冒充介面，Reuters資料照、埃及當日現場圖未核再用權、CNA示意及403分開記錄。
+- 固定renderer版本`20261109-080345-reader`；乾淨clone push128後connector限範圍發布`482a00fa4b0e9703f2d84ac08dc4f2cfd8d4f5f6`，tree `1cee28537cc26ae7aa8daa28b250007cc2aaba23`與本機限定commit相同。無關工作、憑證、Xcode、排程及guard未動。
+- verify-deliver核日期頁／latest／根入口HTTP200與完整雜湊；唯一私人watchdog08:05:24回報`Sent LINE message`，mandatory check exit0 complete。索引、總覽、log及私人memory於核實後更新，三份wiki另行發布，不重送LINE、不手改成功狀態。
+- renderer12及pipeline17共29測試、12篇／全球1–10／逐篇來源／日期型時間／JS語法通過；測試already sent只是fixture。配送後localhost4173及公開Sony圖HTTP200。Playwright缺模組，未完成320／390／桌面版面與實體iPhone測試。
+
 ## [2026-11-08] ingest | Daily global and tech AI news
 
 - 凍結08:03:45 Asia/Taipei，legacy與同對話08:00原排程不變；科技336小時2則、全球24小時恰好10則。僅10/25–11/7十四報及31列產品表，十二站scan、逐站備援、官方第二輪與事件去重分批落檔，未核候選不等於不合格。
