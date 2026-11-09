@@ -1,0 +1,16 @@
+{
+  "date": "2026-11-09",
+  "images": {
+    "t2": {
+      "src": "assets/sony-wh1000xm4c.jpg",
+      "alt": "Sony WH-1000XM4C 薰衣草色耳罩式耳機官方產品圖",
+      "caption": "Sony台灣Store之WH-1000XM4C官方圖；本次新聞是台灣預購，非九月全球首次發表。",
+      "credit": "Sony／Sony Store Taiwan",
+      "source_url": "https://store.sony.com.tw/product/WH-1000XM4C",
+      "original_url": "https://store.sony.com.tw/resource/product_files/WH-1000XM4C-V/WH-1000XM4C-V_pi.jpg",
+      "rights": "Copyright Sony。公開官方產品圖供有來源之新聞型號辨識，不主張CC或一般再利用授權。",
+      "fit": "contain"
+    }
+  },
+  "no_images_reason": "逐篇稽核見來源筆記。T1僅取得舊Epic商標圖而非新介面；全球1及2 Reuters直接403；3有9/3外長資料照未核再用權；4 AP直接403；5有Reuters當日列車現場圖未核再用權；6 Reuters直接403；7 CNA為Pixabay示意；8及9 Reuters直接403；10 AP直接403而NLTimes與AFP有署名當日圖，未核再用權。不是稱原文均無圖，未使用舊現場照替代。"
+}

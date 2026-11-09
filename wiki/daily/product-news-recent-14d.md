@@ -1,7 +1,7 @@
 ---
 title: "科技產品新聞最近 14 天比對表"
 type: product-news-ledger-recent
-updated: 2026-11-07
+updated: 2026-11-08
 status: generated
 tags: [daily-news, tech-products, deduplication, recent]
 ---
@@ -12,10 +12,12 @@ tags: [daily-news, tech-products, deduplication, recent]
 
 - 掃描日報：14 份。
 - 最近 14 天項目：31 則。
-- 日報日期範圍：2026-10-25 至 2026-11-07。
+- 日報日期範圍：2026-10-26 至 2026-11-08。
 
 | 公司 | 產品 | 更新內容 | 發佈時間 | 收錄日期 | 狀態 | 來源網址 | 比對鍵 |
 |---|---|---|---|---|---|---|---|
+| Spotify | 在聯航合格椅背螢幕登入個人帳號 | Spotify 開放在聯航合格椅背螢幕登入個人帳號，以手機掃碼收聽自己的音樂與Podcast | 2026-11-05 21:00:25（Asia/Taipei） | 2026-11-08 | 首次收錄 | https://newsroom.spotify.com/2026-11-05/united-airlines-partnership-update/<br>https://www.united.com/en/us/newsroom/announcements/cision-125493<br>https://www.inside.com.tw/article/42846-united-starlink-spotify-seatback-app | f9a560bbbad8 |
+| Meta | Muse Spaces | Meta 推出 Muse Spaces，讓使用者以自然語言建立可固定、排程與連接應用程式的個人空間 | 2026-11-07 02:00:58（Asia/Taipei） | 2026-11-08 | 首次收錄 | https://about.fb.com/news/2026/11/introducing-spaces-customize-muse-app/<br>https://www.inside.com.tw/article/42851-meta-muse-spaces | 9677c7d5847a |
 | Panasonic | RB-HJ800 無線耳機 | Panasonic 發表 RB-HJ800 無線耳機，標榜開啟降噪仍可播放約七十二小時 | 2026-11-06（官方發布日期） | 2026-11-07 | 首次收錄 | https://panasonic.jp/topics/2026/11/000001256.html<br>https://panasonic.jp/headphone/products/RB-HJ800.html<br>https://av.watch.impress.co.jp/docs/news/2153662.html<br>https://www.cool3c.com/article/253854 | ddd589c546a7 |
 | Amazon / AWS | 受邀美國用戶以簡訊操作 Alexa 購物 | Amazon 開放受邀美國用戶以簡訊操作 Alexa 購物，搜尋、重新下單與追蹤訂單可在同一對話完成 | 2026-11-06 21:55:08（Asia/Taipei） | 2026-11-07 | 首次收錄 | https://www.aboutamazon.com/news/retail/alexa-for-shopping-text-to-shop<br>https://techcrunch.com/2026/11/06/after-blocking-muse-amazon-now-lets-users-text-alexa-to-help-them-shop/ | c1a3049278f0 |
 | Sony | MDR-3R USB-C 有線耳機 | Sony 正式推出 MDR-3R USB-C 有線耳機，以新連接方式重現初代 Walkman 設計 | 2026-11-05（官方發布日期） | 2026-11-06 | 首次收錄 | https://www.sony.eu/presscentre/sony-introduces-usb-cr-wired-headphones-mdr-3r-a-modern-take-on-the-first-walkmanr-headphones-mdr-3<br>https://arstechnica.com/gadgets/2026/11/sony-adds-usb-c-to-its-70s-era-mdr-3-walkman-headphones/ | 02cf3da47a7a |
@@ -45,5 +47,3 @@ tags: [daily-news, tech-products, deduplication, recent]
 | Apple | OLED 版 iPad mini | Apple 發表 OLED 版 iPad mini，十月二十八日開放預購 | 2026-10-26（官方發布日期） | 2026-10-27 | 首次收錄 | https://www.apple.com/newsroom/2026/10/apple-gives-ipad-mini-its-biggest-update-ever/<br>https://www.engadget.com/2296637/apple-updates-the-ipad-mini-with-an-a20-processor-and-oled-display/ | 383f99a4d841 |
 | Microsoft | UTM 5.0 系列推出正式版 | UTM 5.0 系列推出正式版，Windows 圖形加速仍保留實驗性限制 | 2026-10-17 10:44:56（Asia/Taipei） | 2026-10-26 | 首次收錄 | https://github.com/utmapp/UTM/releases/tag/v5.0.8<br>https://api.github.com/repos/utmapp/UTM/releases?per_page=10<br>https://getutm.app/<br>https://tw.news.yahoo.com/utm-5-0%E6%AD%A3%E5%BC%8F%E7%89%88%E9%87%8B%E5%87%BA-windows-11-223345370.html | 365d9779fb2b |
 | 8BitDo | Arcade Controller Pro 預購 | 8BitDo 開放 Arcade Controller Pro 預購，官方商店標示十一月三十日出貨 | 2026-10-23（開始預購的可靠報導日期） | 2026-10-26 | 首次收錄 | https://www.8bitdo.com/arcade-controller-pro/<br>https://shop.8bitdo.com/products/8bitdo-arcade-controller-pro<br>https://www.engadget.com/2296362/8bitdos-latest-button-only-arcade-controller-is-now-up-for-preorder/<br>https://ixbt.games/en/news/2026/10/23/8bitdo-otkryla-predzakaz-na-kontroller-dlia-faitingov-arcade-controller-pro.html | 02b4e2d405e1 |
-| Steam 個人日曆結束實驗，正式納入商店的遊戲探索功能 | Steam 個人日曆結束實驗 | Steam 個人日曆結束實驗，正式納入商店的遊戲探索功能 | 2026-10-24 04:10:32（Asia/Taipei） | 2026-10-25 | 首次收錄 | https://steamcommunity.com/gid/103582791457287600/announcements/detail/710037059469839719<br>https://steamcommunity.com/app/593110<br>https://partner.steamgames.com/doc/marketing/visibility/personalcalendar<br>https://www.engadget.com/2296237/steam-rolls-out-personal-calendar-feature-that-constantly-updates-recommended-games/ | 065eed9a3c42 |
-| Block 公布 Dessa 語音模型，先向少數 | AI 安全研究者提供早期存取 | Block 公布 Dessa 語音模型，先向少數 AI 安全研究者提供早期存取 | 2026-10-23（官方發布日期） | 2026-10-25 | 首次收錄 | https://block.xyz/dessa<br>https://www.coindesk.com/tech/2026/10/24/block-s-new-voice-ai-sounds-eerily-human-sparking-awe-and-scam-fears<br>https://techcrunch.com/2026/10/24/blocks-new-voice-model-sounds-eerily-human/ | 9473cc48c1c0 |
