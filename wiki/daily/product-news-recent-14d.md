@@ -1,7 +1,7 @@
 ---
 title: "科技產品新聞最近 14 天比對表"
 type: product-news-ledger-recent
-updated: 2026-11-08
+updated: 2026-11-09
 status: generated
 tags: [daily-news, tech-products, deduplication, recent]
 ---
@@ -12,10 +12,12 @@ tags: [daily-news, tech-products, deduplication, recent]
 
 - 掃描日報：14 份。
 - 最近 14 天項目：31 則。
-- 日報日期範圍：2026-10-26 至 2026-11-08。
+- 日報日期範圍：2026-10-27 至 2026-11-09。
 
 | 公司 | 產品 | 更新內容 | 發佈時間 | 收錄日期 | 狀態 | 來源網址 | 比對鍵 |
 |---|---|---|---|---|---|---|---|
+| Sony | WH-1000XM4C 在台開放預購 | Sony WH-1000XM4C 在台開放預購，官方商店列六千九百元並預計十一月二十日上市 | 2026-11-06 11:28:00（Asia/Taipei） | 2026-11-09 | 首次收錄 | https://store.sony.com.tw/product/WH-1000XM4C?cpint=web%3Adsp%3Atwinfo%3Alinkevs%3A26_11__image<br>https://tech.udn.com/tech/story/123152/9861420<br>https://www.newspie.com.tw/sony-wh-1000xm4c-20261106/<br>https://www.cool3c.com/article/253837 | e2105c885504 |
+| Epic 確認新啟動器規劃支援 SteamOS 等 | Linux 發行版 | Epic 確認新啟動器規劃支援 SteamOS 等 Linux 發行版，並預定十一月恢復 AppImage | 2026-11-07 03:22:00（Asia/Taipei） | 2026-11-09 | 首次收錄 | https://www.gamingonlinux.com/2026/11/epic-games-comments-on-planned-linux-distribution-support/<br>https://launcher.epicgames.com/release-notes<br>https://www.epicgames.com/help/c-32735058/a12104725<br>https://www.theverge.com/games/1029557/epic-games-launcher-is-coming-to-steamos | 544bd29ed291 |
 | Spotify | 在聯航合格椅背螢幕登入個人帳號 | Spotify 開放在聯航合格椅背螢幕登入個人帳號，以手機掃碼收聽自己的音樂與Podcast | 2026-11-05 21:00:25（Asia/Taipei） | 2026-11-08 | 首次收錄 | https://newsroom.spotify.com/2026-11-05/united-airlines-partnership-update/<br>https://www.united.com/en/us/newsroom/announcements/cision-125493<br>https://www.inside.com.tw/article/42846-united-starlink-spotify-seatback-app | f9a560bbbad8 |
 | Meta | Muse Spaces | Meta 推出 Muse Spaces，讓使用者以自然語言建立可固定、排程與連接應用程式的個人空間 | 2026-11-07 02:00:58（Asia/Taipei） | 2026-11-08 | 首次收錄 | https://about.fb.com/news/2026/11/introducing-spaces-customize-muse-app/<br>https://www.inside.com.tw/article/42851-meta-muse-spaces | 9677c7d5847a |
 | Panasonic | RB-HJ800 無線耳機 | Panasonic 發表 RB-HJ800 無線耳機，標榜開啟降噪仍可播放約七十二小時 | 2026-11-06（官方發布日期） | 2026-11-07 | 首次收錄 | https://panasonic.jp/topics/2026/11/000001256.html<br>https://panasonic.jp/headphone/products/RB-HJ800.html<br>https://av.watch.impress.co.jp/docs/news/2153662.html<br>https://www.cool3c.com/article/253854 | ddd589c546a7 |
@@ -45,5 +47,3 @@ tags: [daily-news, tech-products, deduplication, recent]
 | Qualcomm | Anduril 與 Qualcomm 公布 BlueChip 筆電計畫 | Anduril 與 Qualcomm 公布 BlueChip 筆電計畫，預定二〇二七年開始接單 | 2026-10-27（官方發布日期） | 2026-10-28 | 首次收錄 | https://www.qualcomm.com/news/releases/2026/10/anduril-and-qualcomm-unveil-bluechip-to-rebuild-american-compute<br>https://www.anduril.com/bluechip<br>https://techcrunch.com/2026/10/27/anduril-qualcomm-launch-bluechip-a-new-kind-of-us-made-laptop/ | 98ebf3a27a11 |
 | OpenAI | GPT-6.1 Terra | OpenAI 推出 GPT-6.1 Terra，開放付費方案與 API 使用 | 2026-10-26（官方發布日期） | 2026-10-27 | 首次收錄 | https://openai.com/index/introducing-gpt-6-1-terra/<br>https://developers.openai.com/api/docs/models/gpt-6.1-terra<br>https://developers.openai.com/api/docs/pricing | e09a19ef340e |
 | Apple | OLED 版 iPad mini | Apple 發表 OLED 版 iPad mini，十月二十八日開放預購 | 2026-10-26（官方發布日期） | 2026-10-27 | 首次收錄 | https://www.apple.com/newsroom/2026/10/apple-gives-ipad-mini-its-biggest-update-ever/<br>https://www.engadget.com/2296637/apple-updates-the-ipad-mini-with-an-a20-processor-and-oled-display/ | 383f99a4d841 |
-| Microsoft | UTM 5.0 系列推出正式版 | UTM 5.0 系列推出正式版，Windows 圖形加速仍保留實驗性限制 | 2026-10-17 10:44:56（Asia/Taipei） | 2026-10-26 | 首次收錄 | https://github.com/utmapp/UTM/releases/tag/v5.0.8<br>https://api.github.com/repos/utmapp/UTM/releases?per_page=10<br>https://getutm.app/<br>https://tw.news.yahoo.com/utm-5-0%E6%AD%A3%E5%BC%8F%E7%89%88%E9%87%8B%E5%87%BA-windows-11-223345370.html | 365d9779fb2b |
-| 8BitDo | Arcade Controller Pro 預購 | 8BitDo 開放 Arcade Controller Pro 預購，官方商店標示十一月三十日出貨 | 2026-10-23（開始預購的可靠報導日期） | 2026-10-26 | 首次收錄 | https://www.8bitdo.com/arcade-controller-pro/<br>https://shop.8bitdo.com/products/8bitdo-arcade-controller-pro<br>https://www.engadget.com/2296362/8bitdos-latest-button-only-arcade-controller-is-now-up-for-preorder/<br>https://ixbt.games/en/news/2026/10/23/8bitdo-otkryla-predzakaz-na-kontroller-dlia-faitingov-arcade-controller-pro.html | 02b4e2d405e1 |
