@@ -1,5 +1,14 @@
 # Knowledge Base Log
 
+## [2026-11-10] ingest | Daily global and tech AI news
+
+- 凍結07:59:21 Asia/Taipei，legacy與同對話08:00原排程不變；科技336小時2則、全球24小時恰好10則。只查10/27–11/9十四報及31列同窗表。十二站scan皆取得，Verge截斷補Atom十篇，Yahoo混雜首頁補逐站11/9科技搜尋，數位時代補5040／5039／5021實際日期；未核候選不宣稱全部無效。
+- 模型發布合一則、不把Fable／Mythos拆成兩則填數；官方資格與公司測試分清，Instagram回Edits原文核免費、美國over18及每項送審。全球卡達、COP、克拉科及新交易日反彈有前次日期及新增事實；COP／G7早版時間不套晚間發言，奈國週一首次披露不改週末案發日，IMF16.7億為條件式融資非撥款完成。
+- 十二則逐篇og與img檢查；Instagram官方預覽介面下載目視，保存原圖、署名及權利；未以Anthropic標誌冒充介面，其他403、通用預覽、資料照與有圖未刊分開記錄。
+- 固定renderer版本`20261110-080727-reader`；乾淨clone push128後connector限定發布`23acb23a86813c48f0202854feee4c911761cee8`，tree `be75cf43a3f6f624fe3c065574e7955e36912b1c`與本機限定commit一致，保留遠端Queue source URL等無關工作；未改憑證、Xcode、模型、排程或guard。
+- verify-deliver在部署等待後核日期頁／latest／根入口HTTP200與完整雜湊；唯一私人watchdog08:11:36回報`Sent LINE message`，mandatory check exit0 complete。三份wiki及私人memory在核實後更新，另行限範圍發布，未重送LINE或手改成功狀態。
+- renderer12及pipeline17共29測試，12篇／全球1–10／逐篇來源／日期型時間／JS語法通過，測試already sent只是fixture。配送後localhost4173及公開Instagram圖HTTP200；Playwright缺模組，未完成320／390／桌面版面及實體iPhone測試。
+
 ## [2026-11-09] ingest | Daily global and tech AI news
 
 - 凍結07:56:03 Asia/Taipei，legacy及同對話08:00原排程不變；科技336小時2則、全球24小時恰好10則。僅10/26–11/8十四報、31列同窗表；十二站scan，Verge截斷補Atom十篇、其餘逐站具體文章與官方第二輪保留，未核線索不宣稱全不合格。

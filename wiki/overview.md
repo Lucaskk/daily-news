@@ -2,7 +2,7 @@
 title: "Overview"
 type: overview
 created: 2026-05-24
-updated: 2026-11-09
+updated: 2026-11-10
 status: seed
 tags: [overview]
 sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
@@ -19,6 +19,12 @@ sources: ["https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"]
 - 抽出持續出現的人物、組織、事件、政策、技術與市場概念。
 - 維護跨來源的矛盾、時間線、趨勢與待查問題。
 - 將重要查詢結果回寫成可累積的 wiki 頁面。
+
+## 2026-11-10 Daily News Synthesis
+
+- [[daily/2026/11/2026-11-10/daily-news-2026-11-10]]：Fable5.2與Mythos5.2同基礎模型但防護及資格不同，fast mode不豁免驗證；公司測試不當獨立實測。Instagram Effect Builder限美國成年使用者，免費不代表免審核或台灣可用，和Restyle、Edits macOS及Muse Spaces為不同事件。
+- 白宮會後暫不動武不代表解除封鎖或核協議成立；COP31實際開幕與舊預告日期分開，Massie正式提出八項指控非彈劾已通過。土耳其至少16死與早版失蹤不相加，G7會議啟動非最終共同公報；克拉科死亡與動機調查分開，奈國11死包含志工本人。中國CPI／PPI、同比／環比不混用，IMF審查不是16.7億美元已入帳，美股採11/9收盤而非盤中預測。
+- 只查10/27–11/9十四報及31列同窗表；十二站scan、VergeAtom與Yahoo逐站搜尋備援、官方第二輪及十二則圖像稽核見 [[daily/2026/11/2026-11-10/source-notes-2026-11-10]]。Instagram官方功能圖已下載目視；logo、403、資料照與有圖未刊分開，未完成候選不宣稱全部不合格。
 
 ## 2026-11-09 Daily News Synthesis
 
