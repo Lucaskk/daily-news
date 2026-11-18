@@ -1,7 +1,7 @@
 ---
 title: "科技產品新聞最近 14 天比對表"
 type: product-news-ledger-recent
-updated: 2026-11-09
+updated: 2026-11-10
 status: generated
 tags: [daily-news, tech-products, deduplication, recent]
 ---
@@ -10,12 +10,14 @@ tags: [daily-news, tech-products, deduplication, recent]
 
 本檔只整理產製日前 14 天的日報，可完整讀取做去重確認；不搜尋更早日報、完整歷史表或來源筆記。實際發布窗仍以當日研究截點與來源筆記判定。
 
-- 掃描日報：14 份。
-- 最近 14 天項目：31 則。
-- 日報日期範圍：2026-10-27 至 2026-11-09。
+- 掃描日報：7 份。
+- 最近 14 天項目：17 則。
+- 日報日期範圍：2026-11-04 至 2026-11-10。
 
 | 公司 | 產品 | 更新內容 | 發佈時間 | 收錄日期 | 狀態 | 來源網址 | 比對鍵 |
 |---|---|---|---|---|---|---|---|
+| Meta | Instagram 推出 Effect Builder | Instagram 推出 Effect Builder，美國成年使用者可用文字建立限時動態效果並送審公開 | 2026-11-10 02:07:23（Asia/Taipei） | 2026-11-10 | 首次收錄 | https://edits.instagram.com/blog/introducing-effect-builder/<br>https://edits.instagram.com/app/effects<br>https://www.theverge.com/tech/1030061/instagram-ai-effect-builder-filters | 747222b0990c |
+| Anthropic | Claude Fable 5.2 與 Mythos 5.2 | Anthropic 發布 Claude Fable 5.2 與 Mythos 5.2，公開模型與受驗證存取仍採不同防護安排 | 2026-11-09（官方發布日期） | 2026-11-10 | 首次收錄 | https://www.anthropic.com/claude-fable-and-mythos-5-2<br>https://www.anthropic.com/news/models<br>https://www.theverge.com/ai-artificial-intelligence/1030005/anthropic-claude-fable-mythos-5-2<br>https://techcrunch.com/2026/11/09/anthropic-releases-new-mythos-and-fable-models-amid-rsi-concerns/ | ab7388b9e3e8 |
 | Sony | WH-1000XM4C 在台開放預購 | Sony WH-1000XM4C 在台開放預購，官方商店列六千九百元並預計十一月二十日上市 | 2026-11-06 11:28:00（Asia/Taipei） | 2026-11-09 | 首次收錄 | https://store.sony.com.tw/product/WH-1000XM4C?cpint=web%3Adsp%3Atwinfo%3Alinkevs%3A26_11__image<br>https://tech.udn.com/tech/story/123152/9861420<br>https://www.newspie.com.tw/sony-wh-1000xm4c-20261106/<br>https://www.cool3c.com/article/253837 | e2105c885504 |
 | Epic 確認新啟動器規劃支援 SteamOS 等 | Linux 發行版 | Epic 確認新啟動器規劃支援 SteamOS 等 Linux 發行版，並預定十一月恢復 AppImage | 2026-11-07 03:22:00（Asia/Taipei） | 2026-11-09 | 首次收錄 | https://www.gamingonlinux.com/2026/11/epic-games-comments-on-planned-linux-distribution-support/<br>https://launcher.epicgames.com/release-notes<br>https://www.epicgames.com/help/c-32735058/a12104725<br>https://www.theverge.com/games/1029557/epic-games-launcher-is-coming-to-steamos | 544bd29ed291 |
 | Spotify | 在聯航合格椅背螢幕登入個人帳號 | Spotify 開放在聯航合格椅背螢幕登入個人帳號，以手機掃碼收聽自己的音樂與Podcast | 2026-11-05 21:00:25（Asia/Taipei） | 2026-11-08 | 首次收錄 | https://newsroom.spotify.com/2026-11-05/united-airlines-partnership-update/<br>https://www.united.com/en/us/newsroom/announcements/cision-125493<br>https://www.inside.com.tw/article/42846-united-starlink-spotify-seatback-app | f9a560bbbad8 |
@@ -31,19 +33,3 @@ tags: [daily-news, tech-products, deduplication, recent]
 | Anthropic | 開源 FlashProve 研究原型 | Anthropic 開源 FlashProve 研究原型，讓使用者驗證回答是否來自指定模型權重 | 2026-11-02（官方發布日期） | 2026-11-05 | 首次收錄 | https://www.anthropic.com/research/provable-inference<br>https://github.com/anthropics/FlashProve<br>https://github.com/anthropics/FlashProve/blob/main/docs/protocol.md | 9f1275e2ac25 |
 | Sonos | 27.3 更新 | Sonos 推出 27.3 更新，新增房間與音量預設並改善日常播放操作 | 2026-11-03 22:47:00（Asia/Taipei） | 2026-11-04 | 首次收錄 | https://en.community.sonos.com/product-updates/3rd-nov-2026-new-sonos-27-app-player-updates-now-available-6935155<br>https://support.sonos.com/en-us/article/set-up-sonos-27voice | 9b8d9471409a |
 | Meta | 公布 Quest 2 與 Quest Pro 功能更新終點 | Meta 公布 Quest 2 與 Quest Pro 功能更新終點，安全修正延續至二〇二七年底 | 2026-11-02（官方發布日期） | 2026-11-04 | 首次收錄 | https://developers.meta.com/vr/blog/meta-quest-2-quest-pro-end-of-feature-development-what-to-know/ | 549f27ab4274 |
-| DeepSeek | 開源 SuperAgent 研究原型 | DeepSeek 開源 SuperAgent 研究原型，公開具授權邊界的主動編程代理架構 | 2026-10-31（原始程式碼發布日期依據） | 2026-11-03 | 首次收錄 | https://github.com/deepseek-ai/dsh-superagent-prototype<br>https://github.com/deepseek-ai/dsh-superagent-prototype/blob/main/docs/002-authorization.md<br>https://raw.githubusercontent.com/deepseek-ai/dsh-superagent-prototype/main/LICENSE<br>https://api.github.com/repos/deepseek-ai/dsh-superagent-prototype | d2d0627e18c4 |
-| Casio | CT-FS1 電子琴 | Casio 發表 CT-FS1 電子琴，Feel Sync 讓初學者跟隨本機歌曲和聲演奏 | 2026-10-30（官方發布日期） | 2026-11-03 | 首次收錄 | https://www.casio.com/it/corporate/casio-corporate/news/2026/CASIOTONE-CT-FS1/<br>https://www.casio.com/europe/electronic-musical-instruments/product.CT-FS1BK/ | 05934a456d64 |
-| Google | 公布 Gemini 4 Carbon | Google 公布 Gemini 4 Carbon，先向部分資安防禦者提供受控存取 | 2026-10-29 01:00:00（Asia/Taipei） | 2026-11-02 | 首次收錄 | https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/<br>https://www.inside.com.tw/article/42758-google-gemini-4-carbon-cybersecurity-long-horizon-fairwind | 62a0f6ba20c9 |
-| Apple | 公布 Creator Studio 十一月更新 | Apple 公布 Creator Studio 十一月更新，加入文件助理測試與 MCP 支援 | 2026-10-27（官方發布日期） | 2026-11-02 | 首次收錄 | https://www.apple.com/newsroom/2026/10/apple-creator-studio-adds-powerful-new-ai-features-and-even-more-creative-tools/<br>https://www.apple.com/newsroom/topics/mac/ | 4f16d981d710 |
-| Mistral AI | Mistral 釋出 Large 4 改進版開放權重 | Mistral 釋出 Large 4 改進版開放權重，商業代管仍須核對授權條件 | 2026-10-29（官方發布日期） | 2026-11-01 | 首次收錄 | https://mistral.ai/news/mistral-large-4-oss/<br>https://huggingface.co/mistralai/Mistral-Large-4-1T-A52B<br>https://huggingface.co/mistralai/Mistral-Large-4-1T-A52B/raw/main/LICENSE | 208a02b24d7e |
-| Apple | 台灣 App Store 標準佣金由30%降至26% | Apple 台灣 App Store 標準佣金由30%降至26%，10月31日起適用 | 2026-10-29（官方發布日期） | 2026-11-01 | 首次收錄 | https://developer.apple.com/news/?id=w9mxlhek<br>https://developer.apple.com/tw/support/adjustments-to-the-taiwan-storefront/<br>https://www.ey.gov.tw/Page/88F151FFCE5C741E/21914069-70cc-4efe-919a-e7f0057ecfd0 | 92602fe7d3e8 |
-| Samsung | Wallet 公布十一月一日導入全支付掃碼付款 | Samsung Wallet 公布十一月一日導入全支付掃碼付款，須更新應用程式並使用指定機型 | 2026-10-30（官方發布日期） | 2026-10-31 | 首次收錄 | https://news.samsung.com/tw/%E4%B8%89%E6%98%9F%E6%94%9C%E6%89%8B%E5%85%A8%E6%94%AF%E4%BB%98<br>https://www.cool3c.com/article/253575 | a7ba2fe72a3c |
-| NVIDIA | 釋出 Nemotron 3.5 Transcribe | NVIDIA 釋出 Nemotron 3.5 Transcribe，以自然語言指令調整四十種語言的轉錄方式 | 2026-10-28（官方發布日期） | 2026-10-31 | 首次收錄 | https://research.nvidia.com/labs/nemotron/NVIDIA-Nemotron-3.5-Transcribe/<br>https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Transcribe-30B-A4B-NVFP4 | 768440beb664 |
-| Anthropic | Claude Enterprise 正式開放智慧報告、內建問卷及團隊共用預算 | Claude Enterprise 正式開放智慧報告、內建問卷及團隊共用預算 | 2026-10-28（官方發布日期） | 2026-10-30 | 首次收錄 | https://claude.com/resources/articles/smart-reports-surveys-pooled-budgets<br>https://support.claude.com/en/articles/16893491-get-started-with-smart-reports | 3881fc14713d |
-| Amazon / AWS | 無相機 Echo Time 智慧鬧鐘 | Amazon 推出無相機 Echo Time 智慧鬧鐘，可選擇啟用非穿戴式睡眠感測 | 2026-10-28 19:55:19（Asia/Taipei） | 2026-10-30 | 首次收錄 | https://www.aboutamazon.com/news/devices/echo-time-smart-alarm-clock<br>https://www.theverge.com/tech/1020352/amazon-echo-time-smart-alarm-clock-hands-on | 96b774d1462b |
-| Samsung | 公布 Galaxy Buds On 美國上市安排 | Samsung 公布 Galaxy Buds On 美國上市安排，十一月初售價二百二十九美元 | 2026-10-28（官方發布日期） | 2026-10-29 | 首次收錄 | https://news.samsung.com/us/samsung-galaxy-buds-on-us-comfortable-open-ear-listening/<br>https://www.samsung.com/us/audio-sound/galaxy-buds-on/ | 01a964441cb2 |
-| Apple | 觸控 OLED MacBook Pro | Apple 發表觸控 OLED MacBook Pro，十月二十八日開放預購 | 2026-10-28（官方發布日期） | 2026-10-29 | 首次收錄 | https://www.apple.com/newsroom/2026/10/apple-unveils-groundbreaking-macbook-pro-with-proled-xdr-display/<br>https://developer.apple.com/news/?id=i9boeiqc<br>https://www.cool3c.com/article/253526 | 6c1903337dad |
-| Apple | M6 版十四吋 MacBook Pro 與 iMac | Apple 發表 M6 版十四吋 MacBook Pro 與 iMac，十月二十八日開放預購 | 2026-10-27（官方發布日期） | 2026-10-28 | 首次收錄 | https://www.apple.com/newsroom/2026/10/apple-introduces-the-new-14-inch-macbook-pro-with-m6/<br>https://www.apple.com/newsroom/2026/10/apple-unveils-new-imac-with-m6/<br>https://www.cool3c.com/article/253471 | 33ea8677f0b9 |
-| Qualcomm | Anduril 與 Qualcomm 公布 BlueChip 筆電計畫 | Anduril 與 Qualcomm 公布 BlueChip 筆電計畫，預定二〇二七年開始接單 | 2026-10-27（官方發布日期） | 2026-10-28 | 首次收錄 | https://www.qualcomm.com/news/releases/2026/10/anduril-and-qualcomm-unveil-bluechip-to-rebuild-american-compute<br>https://www.anduril.com/bluechip<br>https://techcrunch.com/2026/10/27/anduril-qualcomm-launch-bluechip-a-new-kind-of-us-made-laptop/ | 98ebf3a27a11 |
-| OpenAI | GPT-6.1 Terra | OpenAI 推出 GPT-6.1 Terra，開放付費方案與 API 使用 | 2026-10-26（官方發布日期） | 2026-10-27 | 首次收錄 | https://openai.com/index/introducing-gpt-6-1-terra/<br>https://developers.openai.com/api/docs/models/gpt-6.1-terra<br>https://developers.openai.com/api/docs/pricing | e09a19ef340e |
-| Apple | OLED 版 iPad mini | Apple 發表 OLED 版 iPad mini，十月二十八日開放預購 | 2026-10-26（官方發布日期） | 2026-10-27 | 首次收錄 | https://www.apple.com/newsroom/2026/10/apple-gives-ipad-mini-its-biggest-update-ever/<br>https://www.engadget.com/2296637/apple-updates-the-ipad-mini-with-an-a20-processor-and-oled-display/ | 383f99a4d841 |
