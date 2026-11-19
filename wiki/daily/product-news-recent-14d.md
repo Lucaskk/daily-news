@@ -1,7 +1,7 @@
 ---
 title: "科技產品新聞最近 14 天比對表"
 type: product-news-ledger-recent
-updated: 2026-11-18
+updated: 2026-11-19
 status: generated
 tags: [daily-news, tech-products, deduplication, recent]
 ---
@@ -11,11 +11,12 @@ tags: [daily-news, tech-products, deduplication, recent]
 本檔只整理產製日前 14 天的日報，可完整讀取做去重確認；不搜尋更早日報、完整歷史表或來源筆記。實際發布窗仍以當日研究截點與來源筆記判定。
 
 - 掃描日報：7 份。
-- 最近 14 天項目：20 則。
-- 日報日期範圍：2026-11-05 至 2026-11-18。
+- 最近 14 天項目：18 則。
+- 日報日期範圍：2026-11-06 至 2026-11-19。
 
 | 公司 | 產品 | 更新內容 | 發佈時間 | 收錄日期 | 狀態 | 來源網址 | 比對鍵 |
 |---|---|---|---|---|---|---|---|
+| Google | 開始推出 Gemini 記憶摘要 | Google 開始推出 Gemini 記憶摘要，讓使用者檢視及修改個人化資訊 | 2026-11-12 00:55:05（Asia/Taipei） | 2026-11-19 | 首次收錄 | https://support.google.com/gemini/answer/18617127?hl=en-MA<br>https://www.engadget.com/2315475/google-gemini-memory-summary-see-what-remembers-about-you/<br>https://www.tomsguide.com/ai/google-geminis-new-memory-summary-shows-what-it-remembers-about-you-and-lets-you-change-it-heres-how-you-can-use-it | 719dafb73a9d |
 | Panasonic | LUMIX SHX1 電影機 | Panasonic 發表 LUMIX SHX1 電影機，預計十二月起分區供應 | 2026-11-17（官方發布日期） | 2026-11-18 | 首次收錄 | https://news.panasonic.com/global/press/en261117-1 | 840fd650cfe8 |
 | OpenAI | GPT-6.2 Astra 與 Sol | OpenAI 發布 GPT-6.2 Astra 與 Sol | 2026-11-17（官方發布日期） | 2026-11-18 | 首次收錄 | https://openai.com/index/introducing-gpt-6-2-astra-sol/ | dc5a1ed20c3b |
 | OpenAI | ChatGPT for Sales | OpenAI 推出 ChatGPT for Sales，整合銷售流程與合作夥伴外掛 | 2026-11-17（官方發布日期） | 2026-11-18 | 首次收錄 | https://openai.com/index/introducing-chatgpt-for-sales/ | c4f6e156c726 |
@@ -33,6 +34,3 @@ tags: [daily-news, tech-products, deduplication, recent]
 | OpenAI | Images 2.6 | OpenAI 發布 Images 2.6，新增 GIF 創作並擴大 API 圖像編輯控制 | 2026-11-04（官方發布日期） | 2026-11-06 | 首次收錄 | https://openai.com/index/introducing-images-2-6/<br>https://www.inside.com.tw/article/42836-openai-chatgpt-images-2-6-gif-flare-sunburst | 7366f5867383 |
 | OpenAI | GPT-6 Cyber | OpenAI 推出 GPT-6 Cyber，先向經核准的 Daybreak Red 客戶提供受控存取 | 2026-11-05（官方發布日期） | 2026-11-06 | 首次收錄 | https://openai.com/index/introducing-gpt-6-cyber/<br>https://developers.openai.com/api/docs/models/gpt-6-cyber<br>https://deploymentsafety.openai.com/gpt-6-cyber | 5a352278f8a0 |
 | Anthropic | Claude Personal Finance 測試版 | Anthropic 推出 Claude Personal Finance 測試版，美國付費用戶可唯讀連結金融帳戶 | 2026-11-05（官方發布日期） | 2026-11-06 | 首次收錄 | https://claude.com/resources/articles/introducing-personal-finance-in-claude<br>https://support.claude.com/en/articles/18185620-use-personal-finance-in-claude<br>https://techcrunch.com/2026/11/05/claude-can-now-analyze-your-spending-with-its-new-personal-finance-tool/ | b6ae59711dfb |
-| Microsoft | Xbox | Xbox 開放兩項雲端遊戲控制預覽，手機可當電視控制器並測試 Nano 直連 Wi-Fi | 2026-11-05 03:00:00（Asia/Taipei） | 2026-11-05 | 首次收錄 | https://news.xbox.com/en-us/2026/11/04/cloud-gaming-inputs-preview/<br>https://www.engadget.com/2307085/xbox-is-testing-two-new-controller-options-for-cloud-gaming/ | 4d8307a08eb2 |
-| Broadcom / VMware | vSphere Express | Broadcom 推出 vSphere Express，為總計不超過一百二十八核心的環境提供虛擬化方案 | 2026-11-05 01:00:00（Asia/Taipei） | 2026-11-05 | 首次收錄 | https://blogs.vmware.com/cloud-foundation/2026/11/04/broadcom-vcf-portfolio-updates/<br>https://arstechnica.com/information-technology/2026/11/vmware-releases-vsphere-express-for-virtualization-on-up-to-128-cores/<br>https://www.techtarget.com/news/broadcom-vsphere-express-brings-back-standalone-vmware-virtualization/873755/ | bcf52175be19 |
-| Anthropic | 開源 FlashProve 研究原型 | Anthropic 開源 FlashProve 研究原型，讓使用者驗證回答是否來自指定模型權重 | 2026-11-02（官方發布日期） | 2026-11-05 | 首次收錄 | https://www.anthropic.com/research/provable-inference<br>https://github.com/anthropics/FlashProve<br>https://github.com/anthropics/FlashProve/blob/main/docs/protocol.md | 9f1275e2ac25 |
