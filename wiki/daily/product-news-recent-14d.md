@@ -1,7 +1,7 @@
 ---
 title: "科技產品新聞最近 14 天比對表"
 type: product-news-ledger-recent
-updated: 2026-11-10
+updated: 2026-11-18
 status: generated
 tags: [daily-news, tech-products, deduplication, recent]
 ---
@@ -11,11 +11,16 @@ tags: [daily-news, tech-products, deduplication, recent]
 本檔只整理產製日前 14 天的日報，可完整讀取做去重確認；不搜尋更早日報、完整歷史表或來源筆記。實際發布窗仍以當日研究截點與來源筆記判定。
 
 - 掃描日報：7 份。
-- 最近 14 天項目：17 則。
-- 日報日期範圍：2026-11-04 至 2026-11-10。
+- 最近 14 天項目：20 則。
+- 日報日期範圍：2026-11-05 至 2026-11-18。
 
 | 公司 | 產品 | 更新內容 | 發佈時間 | 收錄日期 | 狀態 | 來源網址 | 比對鍵 |
 |---|---|---|---|---|---|---|---|
+| Panasonic | LUMIX SHX1 電影機 | Panasonic 發表 LUMIX SHX1 電影機，預計十二月起分區供應 | 2026-11-17（官方發布日期） | 2026-11-18 | 首次收錄 | https://news.panasonic.com/global/press/en261117-1 | 840fd650cfe8 |
+| OpenAI | GPT-6.2 Astra 與 Sol | OpenAI 發布 GPT-6.2 Astra 與 Sol | 2026-11-17（官方發布日期） | 2026-11-18 | 首次收錄 | https://openai.com/index/introducing-gpt-6-2-astra-sol/ | dc5a1ed20c3b |
+| OpenAI | ChatGPT for Sales | OpenAI 推出 ChatGPT for Sales，整合銷售流程與合作夥伴外掛 | 2026-11-17（官方發布日期） | 2026-11-18 | 首次收錄 | https://openai.com/index/introducing-chatgpt-for-sales/ | c4f6e156c726 |
+| Meta | 在土耳其與泰國測試獨立聊天 App Direct | Meta 在土耳其與泰國測試獨立聊天 App Direct | 2026-11-17 09:00:00（Asia/Taipei） | 2026-11-18 | 首次收錄 | https://about.fb.com/news/2026/11/introducing-direct-an-app-just-for-messaging/<br>https://www.engadget.com/2318452/meta-is-testing-direct-a-standalone-messaging-app-for-instagram/ | 3f68f98c9564 |
+| Anthropic | Claude Sheets 與 Whiteboards 測試版 | Anthropic 推出 Claude Sheets 與 Whiteboards 測試版，Claude Data 正式供應 | 2026-11-10（官方發布日期） | 2026-11-18 | 首次收錄 | https://claude.com/resources/articles/sheets-whiteboards-data | 661655232398 |
 | Meta | Instagram 推出 Effect Builder | Instagram 推出 Effect Builder，美國成年使用者可用文字建立限時動態效果並送審公開 | 2026-11-10 02:07:23（Asia/Taipei） | 2026-11-10 | 首次收錄 | https://edits.instagram.com/blog/introducing-effect-builder/<br>https://edits.instagram.com/app/effects<br>https://www.theverge.com/tech/1030061/instagram-ai-effect-builder-filters | 747222b0990c |
 | Anthropic | Claude Fable 5.2 與 Mythos 5.2 | Anthropic 發布 Claude Fable 5.2 與 Mythos 5.2，公開模型與受驗證存取仍採不同防護安排 | 2026-11-09（官方發布日期） | 2026-11-10 | 首次收錄 | https://www.anthropic.com/claude-fable-and-mythos-5-2<br>https://www.anthropic.com/news/models<br>https://www.theverge.com/ai-artificial-intelligence/1030005/anthropic-claude-fable-mythos-5-2<br>https://techcrunch.com/2026/11/09/anthropic-releases-new-mythos-and-fable-models-amid-rsi-concerns/ | ab7388b9e3e8 |
 | Sony | WH-1000XM4C 在台開放預購 | Sony WH-1000XM4C 在台開放預購，官方商店列六千九百元並預計十一月二十日上市 | 2026-11-06 11:28:00（Asia/Taipei） | 2026-11-09 | 首次收錄 | https://store.sony.com.tw/product/WH-1000XM4C?cpint=web%3Adsp%3Atwinfo%3Alinkevs%3A26_11__image<br>https://tech.udn.com/tech/story/123152/9861420<br>https://www.newspie.com.tw/sony-wh-1000xm4c-20261106/<br>https://www.cool3c.com/article/253837 | e2105c885504 |
@@ -31,5 +36,3 @@ tags: [daily-news, tech-products, deduplication, recent]
 | Microsoft | Xbox | Xbox 開放兩項雲端遊戲控制預覽，手機可當電視控制器並測試 Nano 直連 Wi-Fi | 2026-11-05 03:00:00（Asia/Taipei） | 2026-11-05 | 首次收錄 | https://news.xbox.com/en-us/2026/11/04/cloud-gaming-inputs-preview/<br>https://www.engadget.com/2307085/xbox-is-testing-two-new-controller-options-for-cloud-gaming/ | 4d8307a08eb2 |
 | Broadcom / VMware | vSphere Express | Broadcom 推出 vSphere Express，為總計不超過一百二十八核心的環境提供虛擬化方案 | 2026-11-05 01:00:00（Asia/Taipei） | 2026-11-05 | 首次收錄 | https://blogs.vmware.com/cloud-foundation/2026/11/04/broadcom-vcf-portfolio-updates/<br>https://arstechnica.com/information-technology/2026/11/vmware-releases-vsphere-express-for-virtualization-on-up-to-128-cores/<br>https://www.techtarget.com/news/broadcom-vsphere-express-brings-back-standalone-vmware-virtualization/873755/ | bcf52175be19 |
 | Anthropic | 開源 FlashProve 研究原型 | Anthropic 開源 FlashProve 研究原型，讓使用者驗證回答是否來自指定模型權重 | 2026-11-02（官方發布日期） | 2026-11-05 | 首次收錄 | https://www.anthropic.com/research/provable-inference<br>https://github.com/anthropics/FlashProve<br>https://github.com/anthropics/FlashProve/blob/main/docs/protocol.md | 9f1275e2ac25 |
-| Sonos | 27.3 更新 | Sonos 推出 27.3 更新，新增房間與音量預設並改善日常播放操作 | 2026-11-03 22:47:00（Asia/Taipei） | 2026-11-04 | 首次收錄 | https://en.community.sonos.com/product-updates/3rd-nov-2026-new-sonos-27-app-player-updates-now-available-6935155<br>https://support.sonos.com/en-us/article/set-up-sonos-27voice | 9b8d9471409a |
-| Meta | 公布 Quest 2 與 Quest Pro 功能更新終點 | Meta 公布 Quest 2 與 Quest Pro 功能更新終點，安全修正延續至二〇二七年底 | 2026-11-02（官方發布日期） | 2026-11-04 | 首次收錄 | https://developers.meta.com/vr/blog/meta-quest-2-quest-pro-end-of-feature-development-what-to-know/ | 549f27ab4274 |
