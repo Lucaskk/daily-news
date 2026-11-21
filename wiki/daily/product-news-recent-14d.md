@@ -1,7 +1,7 @@
 ---
 title: "科技產品新聞最近 14 天比對表"
 type: product-news-ledger-recent
-updated: 2026-11-19
+updated: 2026-11-20
 status: generated
 tags: [daily-news, tech-products, deduplication, recent]
 ---
@@ -11,11 +11,14 @@ tags: [daily-news, tech-products, deduplication, recent]
 本檔只整理產製日前 14 天的日報，可完整讀取做去重確認；不搜尋更早日報、完整歷史表或來源筆記。實際發布窗仍以當日研究截點與來源筆記判定。
 
 - 掃描日報：7 份。
-- 最近 14 天項目：18 則。
-- 日報日期範圍：2026-11-06 至 2026-11-19。
+- 最近 14 天項目：17 則。
+- 日報日期範圍：2026-11-07 至 2026-11-20。
 
 | 公司 | 產品 | 更新內容 | 發佈時間 | 收錄日期 | 狀態 | 來源網址 | 比對鍵 |
 |---|---|---|---|---|---|---|---|
+| Google | 三星與 Google 的 Gemini 智慧眼鏡開放預購 | 三星與 Google 的 Gemini 智慧眼鏡開放預購，公布十二月上市計畫 | 2026-11-12（官方發布日期） | 2026-11-20 | 首次收錄 | https://samsungmobilepress.com/articles/samsung-intelligent-eyewear-december-release-smarter-way-see-world | f172be3dc78c |
+| OpenAI | 核准機構申請使用兒少性剝削影像分類器 | OpenAI 開放核准機構申請使用兒少性剝削影像分類器 | 2026-11-16（官方發布日期） | 2026-11-20 | 首次收錄 | https://help.openai.com/en/articles/9624314-model-release-notes | a3f905333fe2 |
+| Google | Gemini 4 Neon | Google 發布 Gemini 4 Neon，分批開放付費 API 和 Gemini 應用 | 2026-11-18（官方發布日期） | 2026-11-20 | 首次收錄 | https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/ | 28a55ac246c5 |
 | Google | 開始推出 Gemini 記憶摘要 | Google 開始推出 Gemini 記憶摘要，讓使用者檢視及修改個人化資訊 | 2026-11-12 00:55:05（Asia/Taipei） | 2026-11-19 | 首次收錄 | https://support.google.com/gemini/answer/18617127?hl=en-MA<br>https://www.engadget.com/2315475/google-gemini-memory-summary-see-what-remembers-about-you/<br>https://www.tomsguide.com/ai/google-geminis-new-memory-summary-shows-what-it-remembers-about-you-and-lets-you-change-it-heres-how-you-can-use-it | 719dafb73a9d |
 | Panasonic | LUMIX SHX1 電影機 | Panasonic 發表 LUMIX SHX1 電影機，預計十二月起分區供應 | 2026-11-17（官方發布日期） | 2026-11-18 | 首次收錄 | https://news.panasonic.com/global/press/en261117-1 | 840fd650cfe8 |
 | OpenAI | GPT-6.2 Astra 與 Sol | OpenAI 發布 GPT-6.2 Astra 與 Sol | 2026-11-17（官方發布日期） | 2026-11-18 | 首次收錄 | https://openai.com/index/introducing-gpt-6-2-astra-sol/ | dc5a1ed20c3b |
@@ -30,7 +33,3 @@ tags: [daily-news, tech-products, deduplication, recent]
 | Meta | Muse Spaces | Meta 推出 Muse Spaces，讓使用者以自然語言建立可固定、排程與連接應用程式的個人空間 | 2026-11-07 02:00:58（Asia/Taipei） | 2026-11-08 | 首次收錄 | https://about.fb.com/news/2026/11/introducing-spaces-customize-muse-app/<br>https://www.inside.com.tw/article/42851-meta-muse-spaces | 9677c7d5847a |
 | Panasonic | RB-HJ800 無線耳機 | Panasonic 發表 RB-HJ800 無線耳機，標榜開啟降噪仍可播放約七十二小時 | 2026-11-06（官方發布日期） | 2026-11-07 | 首次收錄 | https://panasonic.jp/topics/2026/11/000001256.html<br>https://panasonic.jp/headphone/products/RB-HJ800.html<br>https://av.watch.impress.co.jp/docs/news/2153662.html<br>https://www.cool3c.com/article/253854 | ddd589c546a7 |
 | Amazon / AWS | 受邀美國用戶以簡訊操作 Alexa 購物 | Amazon 開放受邀美國用戶以簡訊操作 Alexa 購物，搜尋、重新下單與追蹤訂單可在同一對話完成 | 2026-11-06 21:55:08（Asia/Taipei） | 2026-11-07 | 首次收錄 | https://www.aboutamazon.com/news/retail/alexa-for-shopping-text-to-shop<br>https://techcrunch.com/2026/11/06/after-blocking-muse-amazon-now-lets-users-text-alexa-to-help-them-shop/ | c1a3049278f0 |
-| Sony | MDR-3R USB-C 有線耳機 | Sony 正式推出 MDR-3R USB-C 有線耳機，以新連接方式重現初代 Walkman 設計 | 2026-11-05（官方發布日期） | 2026-11-06 | 首次收錄 | https://www.sony.eu/presscentre/sony-introduces-usb-cr-wired-headphones-mdr-3r-a-modern-take-on-the-first-walkmanr-headphones-mdr-3<br>https://arstechnica.com/gadgets/2026/11/sony-adds-usb-c-to-its-70s-era-mdr-3-walkman-headphones/ | 02cf3da47a7a |
-| OpenAI | Images 2.6 | OpenAI 發布 Images 2.6，新增 GIF 創作並擴大 API 圖像編輯控制 | 2026-11-04（官方發布日期） | 2026-11-06 | 首次收錄 | https://openai.com/index/introducing-images-2-6/<br>https://www.inside.com.tw/article/42836-openai-chatgpt-images-2-6-gif-flare-sunburst | 7366f5867383 |
-| OpenAI | GPT-6 Cyber | OpenAI 推出 GPT-6 Cyber，先向經核准的 Daybreak Red 客戶提供受控存取 | 2026-11-05（官方發布日期） | 2026-11-06 | 首次收錄 | https://openai.com/index/introducing-gpt-6-cyber/<br>https://developers.openai.com/api/docs/models/gpt-6-cyber<br>https://deploymentsafety.openai.com/gpt-6-cyber | 5a352278f8a0 |
-| Anthropic | Claude Personal Finance 測試版 | Anthropic 推出 Claude Personal Finance 測試版，美國付費用戶可唯讀連結金融帳戶 | 2026-11-05（官方發布日期） | 2026-11-06 | 首次收錄 | https://claude.com/resources/articles/introducing-personal-finance-in-claude<br>https://support.claude.com/en/articles/18185620-use-personal-finance-in-claude<br>https://techcrunch.com/2026/11/05/claude-can-now-analyze-your-spending-with-its-new-personal-finance-tool/ | b6ae59711dfb |
