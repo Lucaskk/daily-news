@@ -1,7 +1,7 @@
 ---
 title: "科技產品新聞最近 14 天比對表"
 type: product-news-ledger-recent
-updated: 2026-11-20
+updated: 2026-11-21
 status: generated
 tags: [daily-news, tech-products, deduplication, recent]
 ---
@@ -11,11 +11,16 @@ tags: [daily-news, tech-products, deduplication, recent]
 本檔只整理產製日前 14 天的日報，可完整讀取做去重確認；不搜尋更早日報、完整歷史表或來源筆記。實際發布窗仍以當日研究截點與來源筆記判定。
 
 - 掃描日報：7 份。
-- 最近 14 天項目：17 則。
-- 日報日期範圍：2026-11-07 至 2026-11-20。
+- 最近 14 天項目：20 則。
+- 日報日期範圍：2026-11-08 至 2026-11-21。
 
 | 公司 | 產品 | 更新內容 | 發佈時間 | 收錄日期 | 狀態 | 來源網址 | 比對鍵 |
 |---|---|---|---|---|---|---|---|
+| GitHub | 微軟在 GitHub Copilot 與 Foundry 推出 MAI Code 2 系列 | 微軟在 GitHub Copilot 與 Foundry 推出 MAI Code 2 系列 | 2026-11-17（來源發布日期） | 2026-11-21 | 首次收錄 | https://blogs.microsoft.com/blog/2026/11/17/ignite-2026-building-the-frontier-ecosystem/ | 2987f11c7370 |
+| Sony | 公布三款高階 Walkman 的台灣售價及上市日 | Sony 公布三款高階 Walkman 的台灣售價及上市日 | 2026-11-18（來源發布日期） | 2026-11-21 | 首次收錄 | https://www.sony.com.tw/corporate/home/NewsCenter/Detail/2026Walkman | 4d4cde1eef94 |
+| Rockstar 正式 | Rockstar 正式推出《Grand Theft Auto VI》家用主機版 | Rockstar 正式推出《Grand Theft Auto VI》家用主機版 | 2026-11-19（來源發布日期） | 2026-11-21 | 首次收錄 | https://www.rockstargames.com/newswire/article/39akk424a9oo53/grand-theft-auto-vi-now-available | dd13dda330f5 |
+| Motorola signature 27 在美國 | Motorola signature 27 在美國開放預購 | Motorola signature 27 在美國開放預購 | 2026-11-19（來源發布日期） | 2026-11-21 | 首次收錄 | https://www.motorola.com/us/en/p/phones/signature/motorola-signature/pmipmka46mo?pn=PBEC0001US<br>https://blog.google/products-and-platforms/platforms/android/gemini-intelligence-november-features-devices/ | b7389b2de25d |
+| Google | 十一月 Pixel Drop 開始部署 Gemini Intelligence | Google 十一月 Pixel Drop 開始部署 Gemini Intelligence，並公布 Pixel Tag 供應 | 2026-11-10（來源發布日期） | 2026-11-21 | 首次收錄 | https://blog.google/products-and-platforms/devices/pixel/november-2026-pixel-drop/ | 9aff7eb63393 |
 | Google | 三星與 Google 的 Gemini 智慧眼鏡開放預購 | 三星與 Google 的 Gemini 智慧眼鏡開放預購，公布十二月上市計畫 | 2026-11-12（官方發布日期） | 2026-11-20 | 首次收錄 | https://samsungmobilepress.com/articles/samsung-intelligent-eyewear-december-release-smarter-way-see-world | f172be3dc78c |
 | OpenAI | 核准機構申請使用兒少性剝削影像分類器 | OpenAI 開放核准機構申請使用兒少性剝削影像分類器 | 2026-11-16（官方發布日期） | 2026-11-20 | 首次收錄 | https://help.openai.com/en/articles/9624314-model-release-notes | a3f905333fe2 |
 | Google | Gemini 4 Neon | Google 發布 Gemini 4 Neon，分批開放付費 API 和 Gemini 應用 | 2026-11-18（官方發布日期） | 2026-11-20 | 首次收錄 | https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/ | 28a55ac246c5 |
@@ -31,5 +36,3 @@ tags: [daily-news, tech-products, deduplication, recent]
 | Epic 確認新啟動器規劃支援 SteamOS 等 | Linux 發行版 | Epic 確認新啟動器規劃支援 SteamOS 等 Linux 發行版，並預定十一月恢復 AppImage | 2026-11-07 03:22:00（Asia/Taipei） | 2026-11-09 | 首次收錄 | https://www.gamingonlinux.com/2026/11/epic-games-comments-on-planned-linux-distribution-support/<br>https://launcher.epicgames.com/release-notes<br>https://www.epicgames.com/help/c-32735058/a12104725<br>https://www.theverge.com/games/1029557/epic-games-launcher-is-coming-to-steamos | 544bd29ed291 |
 | Spotify | 在聯航合格椅背螢幕登入個人帳號 | Spotify 開放在聯航合格椅背螢幕登入個人帳號，以手機掃碼收聽自己的音樂與Podcast | 2026-11-05 21:00:25（Asia/Taipei） | 2026-11-08 | 首次收錄 | https://newsroom.spotify.com/2026-11-05/united-airlines-partnership-update/<br>https://www.united.com/en/us/newsroom/announcements/cision-125493<br>https://www.inside.com.tw/article/42846-united-starlink-spotify-seatback-app | f9a560bbbad8 |
 | Meta | Muse Spaces | Meta 推出 Muse Spaces，讓使用者以自然語言建立可固定、排程與連接應用程式的個人空間 | 2026-11-07 02:00:58（Asia/Taipei） | 2026-11-08 | 首次收錄 | https://about.fb.com/news/2026/11/introducing-spaces-customize-muse-app/<br>https://www.inside.com.tw/article/42851-meta-muse-spaces | 9677c7d5847a |
-| Panasonic | RB-HJ800 無線耳機 | Panasonic 發表 RB-HJ800 無線耳機，標榜開啟降噪仍可播放約七十二小時 | 2026-11-06（官方發布日期） | 2026-11-07 | 首次收錄 | https://panasonic.jp/topics/2026/11/000001256.html<br>https://panasonic.jp/headphone/products/RB-HJ800.html<br>https://av.watch.impress.co.jp/docs/news/2153662.html<br>https://www.cool3c.com/article/253854 | ddd589c546a7 |
-| Amazon / AWS | 受邀美國用戶以簡訊操作 Alexa 購物 | Amazon 開放受邀美國用戶以簡訊操作 Alexa 購物，搜尋、重新下單與追蹤訂單可在同一對話完成 | 2026-11-06 21:55:08（Asia/Taipei） | 2026-11-07 | 首次收錄 | https://www.aboutamazon.com/news/retail/alexa-for-shopping-text-to-shop<br>https://techcrunch.com/2026/11/06/after-blocking-muse-amazon-now-lets-users-text-alexa-to-help-them-shop/ | c1a3049278f0 |
