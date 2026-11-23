@@ -1,7 +1,7 @@
 ---
 title: "科技產品新聞最近 14 天比對表"
 type: product-news-ledger-recent
-updated: 2026-11-22
+updated: 2026-11-23
 status: generated
 tags: [daily-news, tech-products, deduplication, recent]
 ---
@@ -11,11 +11,15 @@ tags: [daily-news, tech-products, deduplication, recent]
 本檔只整理產製日前 14 天的日報，可完整讀取做去重確認；不搜尋更早日報、完整歷史表或來源筆記。實際發布窗仍以當日研究截點與來源筆記判定。
 
 - 掃描日報：7 份。
-- 最近 14 天項目：21 則。
-- 日報日期範圍：2026-11-09 至 2026-11-22。
+- 最近 14 天項目：23 則。
+- 日報日期範圍：2026-11-10 至 2026-11-23。
 
 | 公司 | 產品 | 更新內容 | 發佈時間 | 收錄日期 | 狀態 | 來源網址 | 比對鍵 |
 |---|---|---|---|---|---|---|---|
+| 小米 18 Pro 系列在新加坡 | 小米 18 Pro 系列在新加坡開放預購 | 小米 18 Pro 系列在新加坡開放預購，首賣另訂 11 月 24 日 | 2026-11-18 00:00:00（Asia/Taipei） | 2026-11-23 | 首次收錄 | https://www.mi.com/sg/support/terms/xiaomi-18-pro-series-first-sale/<br>https://www.mi.com/tw/launch/xiaomi-launch-november-2026 | e8ab6f52faa7 |
+| 三星 P7 可攜 SSD | 在澳洲上市 | 三星 P7 可攜 SSD 在澳洲上市，提供 1TB 和 2TB | 2026-11-18（來源發布日期） | 2026-11-23 | 首次收錄 | https://news.samsung.com/au/samsung-portable-ssd-lineup-evolves-to-p-series-bringing-p7-featuring-usb4-to-australia | d48a0c617438 |
+| Apple | Signal 推出行動裝置畫面擷取限制 | Signal 推出行動裝置畫面擷取限制，iPhone 新增阻擋 Siri AI 的設定 | 2026-11-20（來源發布日期） | 2026-11-23 | 首次收錄 | https://signal.org/blog/protecting-your-privacy/<br>https://support.signal.org/hc/en-us/articles/11338514641306-Screen-security-blocking-Siri-AI | 7e3cec33fe68 |
+| OpenAI | ChatGPT Health 分批擴及 Android 與桌面 | ChatGPT Health 分批擴及 Android 與桌面，Android 加入 Health Connect | 2026-11-19（來源發布日期） | 2026-11-23 | 首次收錄 | https://help.openai.com/en/articles/6825453-chatgpt-release-notes<br>https://help.openai.com/en/articles/20001036-health-in-chatgpt | bfbeaf3373d4 |
 | OpenAI | ChatGPT 推出即時聽寫 | ChatGPT 推出即時聽寫，取消原有十分鐘錄音上限 | 2026-11-18（來源發布日期） | 2026-11-22 | 首次收錄 | https://help.openai.com/en/articles/6825453-chatgpt-release-notes | fc704efdb4cf |
 | OpenAI | ChatGPT Space 開始向年滿十八歲的 Plus 用戶推出 | ChatGPT Space 開始向年滿十八歲的 Plus 用戶推出 | 2026-11-20（來源發布日期） | 2026-11-22 | 首次收錄 | https://help.openai.com/en/articles/6825453-chatgpt-release-notes<br>https://www.engadget.com/2323016/openai-brings-its-collaborative-space-hubs-to-plus-users/ | 38e0ab8d9e9c |
 | Canva | 兩項 AI 控制 | Canva 開放兩項 AI 控制，可關閉生成式工具並減少素材庫的 AI 內容 | 2026-11-19（來源發布日期） | 2026-11-22 | 首次收錄 | https://www.canva.com/newsroom/news/ai-controls-canva/<br>https://www.canva.com/newsroom/news/?category=product | 7f3804b39904 |
@@ -35,5 +39,3 @@ tags: [daily-news, tech-products, deduplication, recent]
 | Anthropic | Claude Sheets 與 Whiteboards 測試版 | Anthropic 推出 Claude Sheets 與 Whiteboards 測試版，Claude Data 正式供應 | 2026-11-10（官方發布日期） | 2026-11-18 | 首次收錄 | https://claude.com/resources/articles/sheets-whiteboards-data | 661655232398 |
 | Meta | Instagram 推出 Effect Builder | Instagram 推出 Effect Builder，美國成年使用者可用文字建立限時動態效果並送審公開 | 2026-11-10 02:07:23（Asia/Taipei） | 2026-11-10 | 首次收錄 | https://edits.instagram.com/blog/introducing-effect-builder/<br>https://edits.instagram.com/app/effects<br>https://www.theverge.com/tech/1030061/instagram-ai-effect-builder-filters | 747222b0990c |
 | Anthropic | Claude Fable 5.2 與 Mythos 5.2 | Anthropic 發布 Claude Fable 5.2 與 Mythos 5.2，公開模型與受驗證存取仍採不同防護安排 | 2026-11-09（官方發布日期） | 2026-11-10 | 首次收錄 | https://www.anthropic.com/claude-fable-and-mythos-5-2<br>https://www.anthropic.com/news/models<br>https://www.theverge.com/ai-artificial-intelligence/1030005/anthropic-claude-fable-mythos-5-2<br>https://techcrunch.com/2026/11/09/anthropic-releases-new-mythos-and-fable-models-amid-rsi-concerns/ | ab7388b9e3e8 |
-| Sony | WH-1000XM4C 在台開放預購 | Sony WH-1000XM4C 在台開放預購，官方商店列六千九百元並預計十一月二十日上市 | 2026-11-06 11:28:00（Asia/Taipei） | 2026-11-09 | 首次收錄 | https://store.sony.com.tw/product/WH-1000XM4C?cpint=web%3Adsp%3Atwinfo%3Alinkevs%3A26_11__image<br>https://tech.udn.com/tech/story/123152/9861420<br>https://www.newspie.com.tw/sony-wh-1000xm4c-20261106/<br>https://www.cool3c.com/article/253837 | e2105c885504 |
-| Epic 確認新啟動器規劃支援 SteamOS 等 | Linux 發行版 | Epic 確認新啟動器規劃支援 SteamOS 等 Linux 發行版，並預定十一月恢復 AppImage | 2026-11-07 03:22:00（Asia/Taipei） | 2026-11-09 | 首次收錄 | https://www.gamingonlinux.com/2026/11/epic-games-comments-on-planned-linux-distribution-support/<br>https://launcher.epicgames.com/release-notes<br>https://www.epicgames.com/help/c-32735058/a12104725<br>https://www.theverge.com/games/1029557/epic-games-launcher-is-coming-to-steamos | 544bd29ed291 |
