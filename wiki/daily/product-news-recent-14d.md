@@ -1,7 +1,7 @@
 ---
 title: "科技產品新聞最近 14 天比對表"
 type: product-news-ledger-recent
-updated: 2026-11-21
+updated: 2026-11-22
 status: generated
 tags: [daily-news, tech-products, deduplication, recent]
 ---
@@ -11,11 +11,14 @@ tags: [daily-news, tech-products, deduplication, recent]
 本檔只整理產製日前 14 天的日報，可完整讀取做去重確認；不搜尋更早日報、完整歷史表或來源筆記。實際發布窗仍以當日研究截點與來源筆記判定。
 
 - 掃描日報：7 份。
-- 最近 14 天項目：20 則。
-- 日報日期範圍：2026-11-08 至 2026-11-21。
+- 最近 14 天項目：21 則。
+- 日報日期範圍：2026-11-09 至 2026-11-22。
 
 | 公司 | 產品 | 更新內容 | 發佈時間 | 收錄日期 | 狀態 | 來源網址 | 比對鍵 |
 |---|---|---|---|---|---|---|---|
+| OpenAI | ChatGPT 推出即時聽寫 | ChatGPT 推出即時聽寫，取消原有十分鐘錄音上限 | 2026-11-18（來源發布日期） | 2026-11-22 | 首次收錄 | https://help.openai.com/en/articles/6825453-chatgpt-release-notes | fc704efdb4cf |
+| OpenAI | ChatGPT Space 開始向年滿十八歲的 Plus 用戶推出 | ChatGPT Space 開始向年滿十八歲的 Plus 用戶推出 | 2026-11-20（來源發布日期） | 2026-11-22 | 首次收錄 | https://help.openai.com/en/articles/6825453-chatgpt-release-notes<br>https://www.engadget.com/2323016/openai-brings-its-collaborative-space-hubs-to-plus-users/ | 38e0ab8d9e9c |
+| Canva | 兩項 AI 控制 | Canva 開放兩項 AI 控制，可關閉生成式工具並減少素材庫的 AI 內容 | 2026-11-19（來源發布日期） | 2026-11-22 | 首次收錄 | https://www.canva.com/newsroom/news/ai-controls-canva/<br>https://www.canva.com/newsroom/news/?category=product | 7f3804b39904 |
 | GitHub | 微軟在 GitHub Copilot 與 Foundry 推出 MAI Code 2 系列 | 微軟在 GitHub Copilot 與 Foundry 推出 MAI Code 2 系列 | 2026-11-17（來源發布日期） | 2026-11-21 | 首次收錄 | https://blogs.microsoft.com/blog/2026/11/17/ignite-2026-building-the-frontier-ecosystem/ | 2987f11c7370 |
 | Sony | 公布三款高階 Walkman 的台灣售價及上市日 | Sony 公布三款高階 Walkman 的台灣售價及上市日 | 2026-11-18（來源發布日期） | 2026-11-21 | 首次收錄 | https://www.sony.com.tw/corporate/home/NewsCenter/Detail/2026Walkman | 4d4cde1eef94 |
 | Rockstar 正式 | Rockstar 正式推出《Grand Theft Auto VI》家用主機版 | Rockstar 正式推出《Grand Theft Auto VI》家用主機版 | 2026-11-19（來源發布日期） | 2026-11-21 | 首次收錄 | https://www.rockstargames.com/newswire/article/39akk424a9oo53/grand-theft-auto-vi-now-available | dd13dda330f5 |
@@ -34,5 +37,3 @@ tags: [daily-news, tech-products, deduplication, recent]
 | Anthropic | Claude Fable 5.2 與 Mythos 5.2 | Anthropic 發布 Claude Fable 5.2 與 Mythos 5.2，公開模型與受驗證存取仍採不同防護安排 | 2026-11-09（官方發布日期） | 2026-11-10 | 首次收錄 | https://www.anthropic.com/claude-fable-and-mythos-5-2<br>https://www.anthropic.com/news/models<br>https://www.theverge.com/ai-artificial-intelligence/1030005/anthropic-claude-fable-mythos-5-2<br>https://techcrunch.com/2026/11/09/anthropic-releases-new-mythos-and-fable-models-amid-rsi-concerns/ | ab7388b9e3e8 |
 | Sony | WH-1000XM4C 在台開放預購 | Sony WH-1000XM4C 在台開放預購，官方商店列六千九百元並預計十一月二十日上市 | 2026-11-06 11:28:00（Asia/Taipei） | 2026-11-09 | 首次收錄 | https://store.sony.com.tw/product/WH-1000XM4C?cpint=web%3Adsp%3Atwinfo%3Alinkevs%3A26_11__image<br>https://tech.udn.com/tech/story/123152/9861420<br>https://www.newspie.com.tw/sony-wh-1000xm4c-20261106/<br>https://www.cool3c.com/article/253837 | e2105c885504 |
 | Epic 確認新啟動器規劃支援 SteamOS 等 | Linux 發行版 | Epic 確認新啟動器規劃支援 SteamOS 等 Linux 發行版，並預定十一月恢復 AppImage | 2026-11-07 03:22:00（Asia/Taipei） | 2026-11-09 | 首次收錄 | https://www.gamingonlinux.com/2026/11/epic-games-comments-on-planned-linux-distribution-support/<br>https://launcher.epicgames.com/release-notes<br>https://www.epicgames.com/help/c-32735058/a12104725<br>https://www.theverge.com/games/1029557/epic-games-launcher-is-coming-to-steamos | 544bd29ed291 |
-| Spotify | 在聯航合格椅背螢幕登入個人帳號 | Spotify 開放在聯航合格椅背螢幕登入個人帳號，以手機掃碼收聽自己的音樂與Podcast | 2026-11-05 21:00:25（Asia/Taipei） | 2026-11-08 | 首次收錄 | https://newsroom.spotify.com/2026-11-05/united-airlines-partnership-update/<br>https://www.united.com/en/us/newsroom/announcements/cision-125493<br>https://www.inside.com.tw/article/42846-united-starlink-spotify-seatback-app | f9a560bbbad8 |
-| Meta | Muse Spaces | Meta 推出 Muse Spaces，讓使用者以自然語言建立可固定、排程與連接應用程式的個人空間 | 2026-11-07 02:00:58（Asia/Taipei） | 2026-11-08 | 首次收錄 | https://about.fb.com/news/2026/11/introducing-spaces-customize-muse-app/<br>https://www.inside.com.tw/article/42851-meta-muse-spaces | 9677c7d5847a |
