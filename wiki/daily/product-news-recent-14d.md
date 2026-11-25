@@ -1,7 +1,7 @@
 ---
 title: "科技產品新聞最近 14 天比對表"
 type: product-news-ledger-recent
-updated: 2026-11-23
+updated: 2026-11-24
 status: generated
 tags: [daily-news, tech-products, deduplication, recent]
 ---
@@ -11,11 +11,14 @@ tags: [daily-news, tech-products, deduplication, recent]
 本檔只整理產製日前 14 天的日報，可完整讀取做去重確認；不搜尋更早日報、完整歷史表或來源筆記。實際發布窗仍以當日研究截點與來源筆記判定。
 
 - 掃描日報：7 份。
-- 最近 14 天項目：23 則。
-- 日報日期範圍：2026-11-10 至 2026-11-23。
+- 最近 14 天項目：24 則。
+- 日報日期範圍：2026-11-18 至 2026-11-24。
 
 | 公司 | 產品 | 更新內容 | 發佈時間 | 收錄日期 | 狀態 | 來源網址 | 比對鍵 |
 |---|---|---|---|---|---|---|---|
+| 三星公布 Odyssey G6 G60H | 英國供應計畫 | 三星公布 Odyssey G6 G60H 英國供應計畫，雙模式分別支援高更新率與 QHD | 2026-11-23（來源發布日期） | 2026-11-24 | 首次收錄 | https://news.samsung.com/uk/samsung-launches-odyssey-g6-the-worlds-first-1100hz-gaming-monitor<br>https://www.engadget.com/2325384/samsung-odyssey-g6-g60h-is-the-worlds-first-1100hz-gaming-monitor/ | 5454bc59958c |
+| Anthropic | Claude Ship 測試 | Anthropic 開放 Claude Ship 測試，將 GitHub 程式碼審查與核准流程整合 | 2026-11-23（來源發布日期） | 2026-11-24 | 首次收錄 | https://claude.com/resources/articles/introducing-claude-ship<br>https://techcrunch.com/2026/11/23/anthropic-launches-claude-ship-letting-ai-agents-review-fix-and-approve-code-changes/ | b2372675df53 |
+| Anthropic | 公告 Claude Opus 4.5 API 預定於 2027 年 1 月退役 | Anthropic 公告 Claude Opus 4.5 API 預定於 2027 年 1 月退役 | 2026-11-23（來源發布日期） | 2026-11-24 | 首次收錄 | https://platform.claude.com/docs/en/about-claude/model-deprecations | 7657ffae03e4 |
 | 小米 18 Pro 系列在新加坡 | 小米 18 Pro 系列在新加坡開放預購 | 小米 18 Pro 系列在新加坡開放預購，首賣另訂 11 月 24 日 | 2026-11-18 00:00:00（Asia/Taipei） | 2026-11-23 | 首次收錄 | https://www.mi.com/sg/support/terms/xiaomi-18-pro-series-first-sale/<br>https://www.mi.com/tw/launch/xiaomi-launch-november-2026 | e8ab6f52faa7 |
 | 三星 P7 可攜 SSD | 在澳洲上市 | 三星 P7 可攜 SSD 在澳洲上市，提供 1TB 和 2TB | 2026-11-18（來源發布日期） | 2026-11-23 | 首次收錄 | https://news.samsung.com/au/samsung-portable-ssd-lineup-evolves-to-p-series-bringing-p7-featuring-usb4-to-australia | d48a0c617438 |
 | Apple | Signal 推出行動裝置畫面擷取限制 | Signal 推出行動裝置畫面擷取限制，iPhone 新增阻擋 Siri AI 的設定 | 2026-11-20（來源發布日期） | 2026-11-23 | 首次收錄 | https://signal.org/blog/protecting-your-privacy/<br>https://support.signal.org/hc/en-us/articles/11338514641306-Screen-security-blocking-Siri-AI | 7e3cec33fe68 |
@@ -37,5 +40,3 @@ tags: [daily-news, tech-products, deduplication, recent]
 | OpenAI | ChatGPT for Sales | OpenAI 推出 ChatGPT for Sales，整合銷售流程與合作夥伴外掛 | 2026-11-17（官方發布日期） | 2026-11-18 | 首次收錄 | https://openai.com/index/introducing-chatgpt-for-sales/ | c4f6e156c726 |
 | Meta | 在土耳其與泰國測試獨立聊天 App Direct | Meta 在土耳其與泰國測試獨立聊天 App Direct | 2026-11-17 09:00:00（Asia/Taipei） | 2026-11-18 | 首次收錄 | https://about.fb.com/news/2026/11/introducing-direct-an-app-just-for-messaging/<br>https://www.engadget.com/2318452/meta-is-testing-direct-a-standalone-messaging-app-for-instagram/ | 3f68f98c9564 |
 | Anthropic | Claude Sheets 與 Whiteboards 測試版 | Anthropic 推出 Claude Sheets 與 Whiteboards 測試版，Claude Data 正式供應 | 2026-11-10（官方發布日期） | 2026-11-18 | 首次收錄 | https://claude.com/resources/articles/sheets-whiteboards-data | 661655232398 |
-| Meta | Instagram 推出 Effect Builder | Instagram 推出 Effect Builder，美國成年使用者可用文字建立限時動態效果並送審公開 | 2026-11-10 02:07:23（Asia/Taipei） | 2026-11-10 | 首次收錄 | https://edits.instagram.com/blog/introducing-effect-builder/<br>https://edits.instagram.com/app/effects<br>https://www.theverge.com/tech/1030061/instagram-ai-effect-builder-filters | 747222b0990c |
-| Anthropic | Claude Fable 5.2 與 Mythos 5.2 | Anthropic 發布 Claude Fable 5.2 與 Mythos 5.2，公開模型與受驗證存取仍採不同防護安排 | 2026-11-09（官方發布日期） | 2026-11-10 | 首次收錄 | https://www.anthropic.com/claude-fable-and-mythos-5-2<br>https://www.anthropic.com/news/models<br>https://www.theverge.com/ai-artificial-intelligence/1030005/anthropic-claude-fable-mythos-5-2<br>https://techcrunch.com/2026/11/09/anthropic-releases-new-mythos-and-fable-models-amid-rsi-concerns/ | ab7388b9e3e8 |
