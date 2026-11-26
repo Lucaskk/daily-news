@@ -1,7 +1,7 @@
 ---
 title: "科技產品新聞最近 14 天比對表"
 type: product-news-ledger-recent
-updated: 2026-11-25
+updated: 2026-11-26
 status: generated
 tags: [daily-news, tech-products, deduplication, recent]
 ---
@@ -10,12 +10,14 @@ tags: [daily-news, tech-products, deduplication, recent]
 
 本檔只整理產製日前 14 天的日報，可完整讀取做去重確認；不搜尋更早日報、完整歷史表或來源筆記。實際發布窗仍以當日研究截點與來源筆記判定。
 
-- 掃描日報：8 份。
-- 最近 14 天項目：27 則。
-- 日報日期範圍：2026-11-18 至 2026-11-25。
+- 掃描日報：9 份。
+- 最近 14 天項目：29 則。
+- 日報日期範圍：2026-11-18 至 2026-11-26。
 
 | 公司 | 產品 | 更新內容 | 發佈時間 | 收錄日期 | 狀態 | 來源網址 | 比對鍵 |
 |---|---|---|---|---|---|---|---|
+| Lomography | Lomo 72 半格底片相機 | Lomography 發表 Lomo 72 半格底片相機，搭載玻璃鏡頭 | 2026-11-16（來源日期） | 2026-11-26 | 首次收錄 | https://www.lomography.com/?variant=a<br>https://note.com/lomography_jp/n/nf7b4e38340da | aeb6695f9454 |
+| KDDI | 預購 INFOBAR ZERO | KDDI 開放預購 INFOBAR ZERO，復刻手機只保留通話與簡訊 | 2026-11-18（來源日期） | 2026-11-26 | 首次收錄 | https://adp.au.com/infobar-zero/ | 1ef7520aed4e |
 | OpenAI | 開始向付費 ChatGPT 使用者推出 Chat 分頁專用 GPT-6.2 | OpenAI 開始向付費 ChatGPT 使用者推出 Chat 分頁專用 GPT-6.2 | 2026-11-23（來源發布日期） | 2026-11-25 | 首次收錄 | https://help-lb.openai.com/en/articles/6825453-chatgpt-release-notes | 52bba0f99db3 |
 | OceanBase | OceanLake 資料平台與開源 OceanSeek 資料庫 | OceanBase 發表 OceanLake 資料平台與開源 OceanSeek 資料庫 | 2026-11-24（來源發布日期） | 2026-11-25 | 首次收錄 | https://www.prnewswire.com/apac/news-releases/oceanbase-international-revenue-doubles-as-global-expansion-accelerates-launches-integrated-lakebase-ai-data-platform-302949155.html | e21aa3873e3f |
 | Bambu Lab | P3C 3D 印表機 | Bambu Lab 發表 P3C 3D 印表機，標配五個可自動更換的列印工具 | 2026-11-24（來源發布日期） | 2026-11-25 | 首次收錄 | https://blog.bambulab.com/bambu-lab-p3c-brings-home-its-h3c-technology-at-half-the-price/ | f5b182b0f212 |
