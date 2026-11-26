@@ -1,7 +1,7 @@
 ---
 title: "科技產品新聞最近 14 天比對表"
 type: product-news-ledger-recent
-updated: 2026-11-24
+updated: 2026-11-25
 status: generated
 tags: [daily-news, tech-products, deduplication, recent]
 ---
@@ -10,12 +10,15 @@ tags: [daily-news, tech-products, deduplication, recent]
 
 本檔只整理產製日前 14 天的日報，可完整讀取做去重確認；不搜尋更早日報、完整歷史表或來源筆記。實際發布窗仍以當日研究截點與來源筆記判定。
 
-- 掃描日報：7 份。
-- 最近 14 天項目：24 則。
-- 日報日期範圍：2026-11-18 至 2026-11-24。
+- 掃描日報：8 份。
+- 最近 14 天項目：27 則。
+- 日報日期範圍：2026-11-18 至 2026-11-25。
 
 | 公司 | 產品 | 更新內容 | 發佈時間 | 收錄日期 | 狀態 | 來源網址 | 比對鍵 |
 |---|---|---|---|---|---|---|---|
+| OpenAI | 開始向付費 ChatGPT 使用者推出 Chat 分頁專用 GPT-6.2 | OpenAI 開始向付費 ChatGPT 使用者推出 Chat 分頁專用 GPT-6.2 | 2026-11-23（來源發布日期） | 2026-11-25 | 首次收錄 | https://help-lb.openai.com/en/articles/6825453-chatgpt-release-notes | 52bba0f99db3 |
+| OceanBase | OceanLake 資料平台與開源 OceanSeek 資料庫 | OceanBase 發表 OceanLake 資料平台與開源 OceanSeek 資料庫 | 2026-11-24（來源發布日期） | 2026-11-25 | 首次收錄 | https://www.prnewswire.com/apac/news-releases/oceanbase-international-revenue-doubles-as-global-expansion-accelerates-launches-integrated-lakebase-ai-data-platform-302949155.html | e21aa3873e3f |
+| Bambu Lab | P3C 3D 印表機 | Bambu Lab 發表 P3C 3D 印表機，標配五個可自動更換的列印工具 | 2026-11-24（來源發布日期） | 2026-11-25 | 首次收錄 | https://blog.bambulab.com/bambu-lab-p3c-brings-home-its-h3c-technology-at-half-the-price/ | f5b182b0f212 |
 | 三星公布 Odyssey G6 G60H | 英國供應計畫 | 三星公布 Odyssey G6 G60H 英國供應計畫，雙模式分別支援高更新率與 QHD | 2026-11-23（來源發布日期） | 2026-11-24 | 首次收錄 | https://news.samsung.com/uk/samsung-launches-odyssey-g6-the-worlds-first-1100hz-gaming-monitor<br>https://www.engadget.com/2325384/samsung-odyssey-g6-g60h-is-the-worlds-first-1100hz-gaming-monitor/ | 5454bc59958c |
 | Anthropic | Claude Ship 測試 | Anthropic 開放 Claude Ship 測試，將 GitHub 程式碼審查與核准流程整合 | 2026-11-23（來源發布日期） | 2026-11-24 | 首次收錄 | https://claude.com/resources/articles/introducing-claude-ship<br>https://techcrunch.com/2026/11/23/anthropic-launches-claude-ship-letting-ai-agents-review-fix-and-approve-code-changes/ | b2372675df53 |
 | Anthropic | 公告 Claude Opus 4.5 API 預定於 2027 年 1 月退役 | Anthropic 公告 Claude Opus 4.5 API 預定於 2027 年 1 月退役 | 2026-11-23（來源發布日期） | 2026-11-24 | 首次收錄 | https://platform.claude.com/docs/en/about-claude/model-deprecations | 7657ffae03e4 |
