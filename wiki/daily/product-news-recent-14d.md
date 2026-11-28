@@ -1,7 +1,7 @@
 ---
 title: "科技產品新聞最近 14 天比對表"
 type: product-news-ledger-recent
-updated: 2026-11-26
+updated: 2026-11-27
 status: generated
 tags: [daily-news, tech-products, deduplication, recent]
 ---
@@ -10,12 +10,13 @@ tags: [daily-news, tech-products, deduplication, recent]
 
 本檔只整理產製日前 14 天的日報，可完整讀取做去重確認；不搜尋更早日報、完整歷史表或來源筆記。實際發布窗仍以當日研究截點與來源筆記判定。
 
-- 掃描日報：9 份。
-- 最近 14 天項目：29 則。
-- 日報日期範圍：2026-11-18 至 2026-11-26。
+- 掃描日報：10 份。
+- 最近 14 天項目：30 則。
+- 日報日期範圍：2026-11-18 至 2026-11-27。
 
 | 公司 | 產品 | 更新內容 | 發佈時間 | 收錄日期 | 狀態 | 來源網址 | 比對鍵 |
 |---|---|---|---|---|---|---|---|
+| Tesla | 開始推送需駕駛監督的 FSD v15 | Tesla 開始推送需駕駛監督的 FSD v15，加入 Reality View | 2026-11-21（來源日期） | 2026-11-27 | 首次收錄 | https://www.youtube.com/watch?v=eNBqkc7V1nU<br>https://www.notateslaapp.com/software-updates/version/2026.38.6.11/release-notes | 702e36e1c3f2 |
 | Lomography | Lomo 72 半格底片相機 | Lomography 發表 Lomo 72 半格底片相機，搭載玻璃鏡頭 | 2026-11-16（來源日期） | 2026-11-26 | 首次收錄 | https://www.lomography.com/?variant=a<br>https://note.com/lomography_jp/n/nf7b4e38340da | aeb6695f9454 |
 | KDDI | 預購 INFOBAR ZERO | KDDI 開放預購 INFOBAR ZERO，復刻手機只保留通話與簡訊 | 2026-11-18（來源日期） | 2026-11-26 | 首次收錄 | https://adp.au.com/infobar-zero/ | 1ef7520aed4e |
 | OpenAI | 開始向付費 ChatGPT 使用者推出 Chat 分頁專用 GPT-6.2 | OpenAI 開始向付費 ChatGPT 使用者推出 Chat 分頁專用 GPT-6.2 | 2026-11-23（來源發布日期） | 2026-11-25 | 首次收錄 | https://help-lb.openai.com/en/articles/6825453-chatgpt-release-notes | 52bba0f99db3 |
